@@ -1,0 +1,501 @@
+[
+  {
+    "company_name": "ai.io",
+    "website": "https://aiio.org",
+    "linkedin_company": "https://www.linkedin.com/company/ai-io",
+    "industry": "ai",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [
+      {
+        "name": "Terence Mills",
+        "designation": "Founder",
+        "linkedin": "https://www.linkedin.com/in/terencemills"
+      }
+    ],
+    "source": "LinkedIn",
+    "_source_file": "data-1.json",
+    "_flags": [
+      "sparse_no_contact_channel"
+    ],
+    "_enrichment": {
+      "domains_tried": [
+        "aiio.com",
+        "aiio.in",
+        "aiio.co.in",
+        "aiio.io",
+        "aiio.org"
+      ],
+      "domain_source": "guessed_and_verified",
+      "discovered_website": "https://aiio.org",
+      "whois": {
+        "registrar": "GoDaddy.com, LLC",
+        "creation_date": "2017-09-13 14:30:13+00:00",
+        "org": null,
+        "country": null
+      }
+    },
+    "_verified_emails": [],
+    "_verified_phones": [],
+    "_website_reachable": false,
+    "_verification_notes": {
+      "website": "ssl_error"
+    },
+    "_verification_passed": false
+  },
+  {
+    "company_name": "GenAI Works",
+    "website": null,
+    "linkedin_company": "https://www.linkedin.com/company/genai-works",
+    "industry": "ai",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [
+      {
+        "name": "Steve Nouri – The largest AI Community 14 Million Members",
+        "designation": null,
+        "linkedin": "https://ch.linkedin.com/in/stevenouri"
+      }
+    ],
+    "source": "LinkedIn",
+    "_source_file": "data-1.json",
+    "_flags": [
+      "sparse_no_contact_channel"
+    ],
+    "_enrichment": {
+      "domains_tried": [
+        "genaiworks.com",
+        "genaiworks.in",
+        "genaiworks.co.in",
+        "genaiworks.io",
+        "genaiworks.org"
+      ]
+    },
+    "_verified_emails": [],
+    "_verified_phones": [],
+    "_website_reachable": null,
+    "_verification_notes": {},
+    "_verification_passed": false
+  },
+  {
+    "company_name": "The AI Journal",
+    "website": null,
+    "linkedin_company": "https://www.linkedin.com/company/the-ai-journal",
+    "industry": "ai",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [
+      {
+        "name": "Tom Allen",
+        "designation": null,
+        "linkedin": "https://uk.linkedin.com/in/tom-allen-515058b7"
+      }
+    ],
+    "source": "LinkedIn",
+    "_source_file": "data-1.json",
+    "_flags": [
+      "sparse_no_contact_channel"
+    ],
+    "_enrichment": {
+      "domains_tried": [
+        "theaijournal.com",
+        "theaijournal.in",
+        "theaijournal.co.in",
+        "theaijournal.io",
+        "theaijournal.org"
+      ]
+    },
+    "_verified_emails": [],
+    "_verified_phones": [],
+    "_website_reachable": null,
+    "_verification_notes": {},
+    "_verification_passed": false
+  },
+  {
+    "company_name": "BCloud Global Services",
+    "website": null,
+    "linkedin_company": "https://in.linkedin.com/company/bcloud-global-services",
+    "location": "gurugram",
+    "industry": "cloud company",
+    "lead_type": "b2b",
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [
+      {
+        "name": "Bhushan Chhabra",
+        "designation": null,
+        "linkedin": "https://in.linkedin.com/in/bhushan-chhabra-86462024"
+      }
+    ],
+    "source": "LinkedIn",
+    "_source_file": "data-2.json",
+    "_flags": [
+      "sparse_no_contact_channel"
+    ],
+    "_enrichment": {
+      "domains_tried": [
+        "bcloudglobal.com",
+        "bcloudglobal.in",
+        "bcloudglobal.co.in",
+        "bcloudglobal.io",
+        "bcloudglobal.org"
+      ]
+    },
+    "_verified_emails": [],
+    "_verified_phones": [],
+    "_website_reachable": null,
+    "_verification_notes": {},
+    "_verification_passed": false
+  },
+  {
+    "company_name": "MPC Cloud Consulting Pvt Ltd",
+    "website": null,
+    "linkedin_company": "https://in.linkedin.com/company/mpccloudconsulting",
+    "location": "gurugram",
+    "industry": "cloud company",
+    "lead_type": "b2b",
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [
+      {
+        "name": "Mohit Goyal",
+        "designation": null,
+        "linkedin": "https://in.linkedin.com/in/mohitgoyal5762"
+      }
+    ],
+    "source": "LinkedIn",
+    "_source_file": "data-2.json",
+    "_flags": [
+      "sparse_no_contact_channel"
+    ],
+    "_enrichment": {
+      "domains_tried": [
+        "mpccloud.com",
+        "mpccloud.in",
+        "mpccloud.co.in",
+        "mpccloud.io",
+        "mpccloud.org"
+      ]
+    },
+    "_verified_emails": [],
+    "_verified_phones": [],
+    "_website_reachable": null,
+    "_verification_notes": {},
+    "_verification_passed": false
+  },
+  {
+    "company_name": "The 10 Best Companies to Work for in Delhi-NCR in 2026",
+    "website": null,
+    "linkedin_company": "https://www.linkedin.com/pulse/linkedin-top-companies-2026-10-leading-employers-grow-1zbcf",
+    "location": "delhi",
+    "industry": "it company",
+    "lead_type": "b2b",
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [
+      {
+        "name": "Akshay Chaturvedi",
+        "designation": "Founder",
+        "linkedin": "https://in.linkedin.com/in/akshaychaturvedi"
+      }
+    ],
+    "source": "LinkedIn",
+    "_source_file": "data-3.json",
+    "_flags": [
+      "sparse_no_contact_channel"
+    ],
+    "_enrichment": {
+      "domains_tried": [
+        "the10bestcompaniestoworkforindelhincrin2026.com",
+        "the10bestcompaniestoworkforindelhincrin2026.in",
+        "the10bestcompaniestoworkforindelhincrin2026.co.in",
+        "the10bestcompaniestoworkforindelhincrin2026.io",
+        "the10bestcompaniestoworkforindelhincrin2026.org"
+      ]
+    },
+    "_verified_emails": [],
+    "_verified_phones": [],
+    "_website_reachable": null,
+    "_verification_notes": {},
+    "_verification_passed": false
+  },
+  {
+    "company_name": "IT Company India",
+    "website": "https://itcompanyindia.com",
+    "linkedin_company": "https://in.linkedin.com/company/itcompanyindia",
+    "location": "delhi",
+    "industry": "it company",
+    "lead_type": "b2b",
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [
+      {
+        "name": "Kaushal Naresh",
+        "designation": "CEO",
+        "linkedin": "https://in.linkedin.com/in/kaushal-naresh-bb86976b"
+      }
+    ],
+    "source": "LinkedIn",
+    "_source_file": "data-3.json",
+    "_flags": [
+      "sparse_no_contact_channel"
+    ],
+    "_enrichment": {
+      "domains_tried": [
+        "itcompanyindia.com"
+      ],
+      "domain_source": "guessed_and_verified",
+      "discovered_website": "https://itcompanyindia.com",
+      "whois": {
+        "registrar": "GoDaddy.com, LLC",
+        "creation_date": "2011-08-20 17:02:30+00:00",
+        "org": null,
+        "country": null
+      }
+    },
+    "_verified_emails": [],
+    "_verified_phones": [],
+    "_website_reachable": false,
+    "_verification_notes": {
+      "website": "connection_failed"
+    },
+    "_verification_passed": false
+  },
+  {
+    "company_name": "IT company in noida delhi",
+    "website": null,
+    "linkedin_company": "https://www.linkedin.com/company/it-company-in-noida-delhi",
+    "location": "delhi",
+    "industry": "it company",
+    "lead_type": "b2b",
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [
+      {
+        "name": "Mohd Vashif",
+        "designation": "CEO",
+        "linkedin": "https://in.linkedin.com/in/mohdvashif"
+      }
+    ],
+    "source": "LinkedIn",
+    "_source_file": "data-3.json",
+    "_flags": [
+      "sparse_no_contact_channel"
+    ],
+    "_enrichment": {
+      "domains_tried": [
+        "itcompanyinnoidadelhi.com",
+        "itcompanyinnoidadelhi.in",
+        "itcompanyinnoidadelhi.co.in",
+        "itcompanyinnoidadelhi.io",
+        "itcompanyinnoidadelhi.org"
+      ]
+    },
+    "_verified_emails": [],
+    "_verified_phones": [],
+    "_website_reachable": null,
+    "_verification_notes": {},
+    "_verification_passed": false
+  },
+  {
+    "company_name": "NTPLWorld IT Company",
+    "website": null,
+    "linkedin_company": "https://in.linkedin.com/company/ntplworld",
+    "location": "delhi",
+    "industry": "it company",
+    "lead_type": "b2b",
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [
+      {
+        "name": "Aklesh Jareda",
+        "designation": "Founder",
+        "linkedin": "https://in.linkedin.com/in/ntplfounderaklesh"
+      }
+    ],
+    "source": "LinkedIn",
+    "_source_file": "data-3.json",
+    "_flags": [
+      "sparse_no_contact_channel"
+    ],
+    "_enrichment": {
+      "domains_tried": [
+        "ntplworlditcompany.com",
+        "ntplworlditcompany.in",
+        "ntplworlditcompany.co.in",
+        "ntplworlditcompany.io",
+        "ntplworlditcompany.org"
+      ]
+    },
+    "_verified_emails": [],
+    "_verified_phones": [],
+    "_website_reachable": null,
+    "_verification_notes": {},
+    "_verification_passed": false
+  },
+  {
+    "company_name": "WebZonal-IT-Company",
+    "website": null,
+    "linkedin_company": "https://in.linkedin.com/company/webzonal-it-company",
+    "location": "delhi",
+    "industry": "it company",
+    "lead_type": "b2b",
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [
+      {
+        "name": "Harshdeep Kaur",
+        "designation": "Founder",
+        "linkedin": "https://in.linkedin.com/in/harshdeep-kaur-9931a010a"
+      }
+    ],
+    "source": "LinkedIn",
+    "_source_file": "data-3.json",
+    "_flags": [
+      "sparse_no_contact_channel"
+    ],
+    "_enrichment": {
+      "domains_tried": [
+        "webzonalitcompany.com",
+        "webzonalitcompany.in",
+        "webzonalitcompany.co.in",
+        "webzonalitcompany.io",
+        "webzonalitcompany.org"
+      ]
+    },
+    "_verified_emails": [],
+    "_verified_phones": [],
+    "_website_reachable": null,
+    "_verification_notes": {},
+    "_verification_passed": false
+  },
+  {
+    "company_name": "Proactive Data Systems",
+    "website": "https://proactivedatasystems.com",
+    "linkedin_company": "https://in.linkedin.com/company/proactivedatasystems",
+    "location": "delhi",
+    "industry": "it company",
+    "lead_type": "b2b",
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [
+      {
+        "name": "Rajiv Kumar",
+        "designation": "CEO",
+        "linkedin": "https://in.linkedin.com/in/rajivkumar1000"
+      }
+    ],
+    "source": "LinkedIn",
+    "_source_file": "data-3.json",
+    "_flags": [
+      "sparse_no_contact_channel"
+    ],
+    "_enrichment": {
+      "domains_tried": [
+        "proactivedatasystems.com"
+      ],
+      "domain_source": "guessed_and_verified",
+      "discovered_website": "https://proactivedatasystems.com",
+      "whois": {
+        "registrar": "FastDomain Inc.",
+        "creation_date": "2011-08-22 16:22:07+00:00",
+        "org": "ORGANIZATION NAME MASKED",
+        "country": "US"
+      }
+    },
+    "_verified_emails": [],
+    "_verified_phones": [],
+    "_website_reachable": false,
+    "_verification_notes": {
+      "website": "timeout"
+    },
+    "_verification_passed": false
+  },
+  {
+    "company_name": "NEC Corporation India Pvt Ltd.",
+    "website": null,
+    "linkedin_company": "https://in.linkedin.com/company/nec-corporation-india",
+    "location": "delhi",
+    "industry": "it company",
+    "lead_type": "b2b",
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [
+      {
+        "name": "Aalok Kumar",
+        "designation": null,
+        "linkedin": "https://sg.linkedin.com/in/aalok-kumar"
+      }
+    ],
+    "source": "LinkedIn",
+    "_source_file": "data-3.json",
+    "_flags": [
+      "sparse_no_contact_channel"
+    ],
+    "_enrichment": {
+      "domains_tried": [
+        "neccorporationindia.com",
+        "neccorporationindia.in",
+        "neccorporationindia.co.in",
+        "neccorporationindia.io",
+        "neccorporationindia.org"
+      ]
+    },
+    "_verified_emails": [],
+    "_verified_phones": [],
+    "_website_reachable": null,
+    "_verification_notes": {},
+    "_verification_passed": false
+  }
+]
