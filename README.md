@@ -1,0 +1,22 @@
+# DATA CRAWLING OSINT PIPELINE
+
+This repository contains a Python-based lead cleaning and enrichment workflow for OSINT data processing.
+
+## Contents
+- Lead cleaning and validation scripts
+- JSON datasets used for processing
+- Final output files for Pillar 4 workflows
+
+## Getting Started
+1. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+2. Run the main cleaning pipeline:
+   ```bash
+   python clean_leads.py
+   ```
+
+## Notes
+- The repository includes intermediate and final JSON outputs for the pipeline.
+- Update the scripts as needed for your own lead-processing workflow.
