@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+dnspython
+phonenumbers
+requests
+python-whois
+=======
+google-search-results
+googlesearch-python
 requests
 beautifulsoup4
 httpx>=0.26.0
@@ -7,3 +15,4 @@ fake-useragent>=1.4.0
 tenacity>=8.2.3
 pydantic>=2.5.3
 pydantic-settings>=2.1.0
+>>>>>>> a0c0f5d1c5f4a18e206562fa7678a01415602e32

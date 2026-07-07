@@ -1,0 +1,1390 @@
+[
+  {
+    "company_name": "Google AI",
+    "website": "https://ai.google/",
+    "linkedin_company": null,
+    "industry": "ai",
+    "location": null,
+    "contact_page": null,
+    "about_page": "https://labs.google/flow/about?utm_source=ai.google&utm_medium=referral",
+    "team_page": null,
+    "emails": [
+      "ai-test-kitchen-data-export@google.com",
+      "egal-notices@google.com",
+      "genieTTsupport@google.com",
+      "labs-google-fx-data-export@google.com",
+      "legal-notices@google.com",
+      "marketing-governance@google.com"
+    ],
+    "phones": [],
+    "social_links": {
+      "x.com": "https://x.com/Googleai/?utm_source=ai.google&utm_medium=referral"
+    },
+    "people": [
+      {
+        "name": "Thomas Kurian",
+        "designation": "CEO",
+        "linkedin": "https://www.linkedin.com/in/thomas-kurian-469b6219"
+      }
+    ],
+    "source": "Google"
+  },
+  {
+    "company_name": "Google AI Studio",
+    "website": "https://aistudio.google.com/",
+    "linkedin_company": null,
+    "industry": "ai",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [
+      {
+        "name": "Logan Kilpatrick",
+        "designation": null,
+        "linkedin": "https://www.linkedin.com/in/logankilpatrick"
+      }
+    ],
+    "source": "Google"
+  },
+  {
+    "company_name": "OpenAI",
+    "website": "https://openai.com/",
+    "linkedin_company": "https://www.linkedin.com/company/openai",
+    "industry": "ai",
+    "location": null,
+    "contact_page": "https://openai.com/contact-sales/",
+    "about_page": "https://openai.com/about/",
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {
+      "x.com": "https://x.com/OpenAI",
+      "linkedin.com": "https://www.linkedin.com/company/openai",
+      "instagram.com": "https://www.instagram.com/openai/"
+    },
+    "people": [
+      {
+        "name": "Greg Brockman",
+        "designation": "Founder",
+        "linkedin": "https://www.linkedin.com/in/thegdb"
+      }
+    ],
+    "source": "Google"
+  },
+  {
+    "company_name": "Official AI",
+    "website": "https://www.theofficial.ai/",
+    "linkedin_company": null,
+    "industry": "ai",
+    "location": null,
+    "contact_page": "https://www.theofficial.ai/contact",
+    "about_page": "https://www.theofficial.ai/about",
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {
+      "instagram.com": "https://www.instagram.com/itstheofficial.ai",
+      "linkedin.com": "https://www.linkedin.com/company/official-ai"
+    },
+    "people": [
+      {
+        "name": "Pradeep sapkota",
+        "designation": null,
+        "linkedin": "https://np.linkedin.com/in/pradeep-sapkota-72377a16a"
+      }
+    ],
+    "source": "Google"
+  },
+  {
+    "company_name": "The Leading Web Search APIs for AI",
+    "website": "https://you.com/",
+    "linkedin_company": null,
+    "industry": "ai",
+    "location": null,
+    "contact_page": "https://you.com/book-a-demo",
+    "about_page": "https://you.com/docs/search/overview",
+    "team_page": null,
+    "emails": [
+      "api@you.com"
+    ],
+    "phones": [],
+    "social_links": {},
+    "people": [
+      {
+        "name": "Alex Yonetani",
+        "designation": null,
+        "linkedin": "https://www.linkedin.com/in/alex-yonetani"
+      }
+    ],
+    "source": "Google"
+  },
+  {
+    "company_name": "Microsoft AI",
+    "website": "https://microsoft.ai/",
+    "linkedin_company": "https://www.linkedin.com/company/microsoft-ai",
+    "industry": "ai",
+    "location": null,
+    "contact_page": "https://support.microsoft.com/contactus",
+    "about_page": "https://www.microsoft.com/about",
+    "team_page": "https://www.microsoft.com/en-us/microsoft-teams/group-chat-software",
+    "emails": [],
+    "phones": [],
+    "social_links": {
+      "x.com": "https://www.xbox.com/",
+      "linkedin.com": "https://www.linkedin.com/company/microsoft-ai/",
+      "instagram.com": "https://www.instagram.com/microsoftai/"
+    },
+    "people": [
+      {
+        "name": "Ehsan Azarnasab",
+        "designation": "Founder",
+        "linkedin": "https://www.linkedin.com/in/azarnasab"
+      }
+    ],
+    "source": "Google"
+  },
+  {
+    "company_name": "AI Contact Centers",
+    "website": "https://www.salesforce.com/service/contact-center/ai/",
+    "linkedin_company": null,
+    "industry": "ai",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [
+      {
+        "name": "Kirk Owen",
+        "designation": "Founder",
+        "linkedin": "https://www.linkedin.com/in/kirkowen"
+      }
+    ],
+    "source": "Google"
+  },
+  {
+    "company_name": "AI Contact Center",
+    "website": "https://www.brightpattern.com/ai-contact-center/",
+    "linkedin_company": null,
+    "industry": "ai",
+    "location": null,
+    "contact_page": "https://www.brightpattern.com/ccaas-bright-pattern/",
+    "about_page": "https://www.brightpattern.com/ai-contact-center/",
+    "team_page": "https://www.brightpattern.com/integrations/microsoft-teams-call-center-solution/",
+    "emails": [],
+    "phones": [],
+    "social_links": {
+      "linkedin.com": "https://www.linkedin.com/company/bright-pattern/",
+      "twitter.com": "https://twitter.com/BrightPatternUS",
+      "facebook.com": "https://www.facebook.com/BrightPatternUS/"
+    },
+    "people": [
+      {
+        "name": "Adam Peacock",
+        "designation": "Founder",
+        "linkedin": "https://www.linkedin.com/in/appeacock"
+      }
+    ],
+    "source": "Google"
+  },
+  {
+    "company_name": "AI Receptionist",
+    "website": "https://www.ringcentral.com/ai-receptionist.html",
+    "linkedin_company": null,
+    "industry": "ai",
+    "location": null,
+    "contact_page": "https://www.ringcentral.com/ai-receptionist.html#contact-sales-modal",
+    "about_page": null,
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [
+      {
+        "name": "Lauren Fernandez",
+        "designation": "Founder",
+        "linkedin": "https://www.linkedin.com/in/lifernandez"
+      }
+    ],
+    "source": "Google"
+  },
+  {
+    "company_name": "AI Email Writer",
+    "website": "https://mailmeteor.com/tools/ai-email-writer",
+    "linkedin_company": null,
+    "industry": "ai",
+    "location": null,
+    "contact_page": "https://mailmeteor.com/contact",
+    "about_page": "https://mailmeteor.com/about",
+    "team_page": "https://dashboard.mailmeteor.com",
+    "emails": [],
+    "phones": [],
+    "social_links": {
+      "linkedin.com": "https://www.linkedin.com/company/mailmeteor/"
+    },
+    "people": [
+      {
+        "name": "Kanad Bahalkar",
+        "designation": "Founder",
+        "linkedin": "https://www.linkedin.com/in/kanadbahalkar"
+      }
+    ],
+    "source": "Google"
+  },
+  {
+    "company_name": "AI Email Writer (Free)",
+    "website": "https://www.editpad.org/tool/email-writer",
+    "linkedin_company": null,
+    "industry": "ai",
+    "location": null,
+    "contact_page": "https://www.editpad.org/contact.html",
+    "about_page": null,
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {
+      "facebook.com": "https://www.facebook.com/Editpad.org/",
+      "x.com": "https://x.com/EditpadOrg",
+      "linkedin.com": "https://www.linkedin.com/company/editpad/"
+    },
+    "people": [
+      {
+        "name": "Brady Barner",
+        "designation": "Founder",
+        "linkedin": "https://www.linkedin.com/in/brady-barner"
+      }
+    ],
+    "source": "Google"
+  },
+  {
+    "company_name": "AI Email Writer to Generate High Conversion Emails",
+    "website": "https://www.mailmodo.com/tools/ai-email-writer/",
+    "linkedin_company": null,
+    "industry": "ai",
+    "location": null,
+    "contact_page": "https://www.mailmodo.com/contact-us/",
+    "about_page": "https://www.mailmodo.com/about/",
+    "team_page": null,
+    "emails": [
+      "enquiries@mailmodo.com",
+      "support@mailmodo.com"
+    ],
+    "phones": [],
+    "social_links": {
+      "facebook.com": "https://www.facebook.com/sharer/sharer.php?u=https%3A//www.mailmodo.com/tools/ai-email-writer/",
+      "twitter.com": "https://twitter.com/intent/tweet?text=Just%20generated%20some%20amazing%20emails%20with%20Mailmodo.%20All%20email%20marketers%20must%20check%20it%20out%20-%20https%3A%2F%2Fwww.mailmodo.com%2Ftools%2Fai-email-writer%2F",
+      "linkedin.com": "https://www.linkedin.com/shareArticle?mini=true&url=https%3A//www.mailmodo.com/tools/ai-email-writer/"
+    },
+    "people": [
+      {
+        "name": "Nathan Ojaokomo",
+        "designation": null,
+        "linkedin": "https://ng.linkedin.com/in/nathan-ojaokomo"
+      }
+    ],
+    "source": "Google"
+  },
+  {
+    "company_name": "Aiphone",
+    "website": "https://www.aiphone.com/",
+    "linkedin_company": null,
+    "industry": "ai",
+    "location": null,
+    "contact_page": "https://www.aiphone.com/contact-us-landing/",
+    "about_page": "https://www.aiphone.com/about/",
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {
+      "facebook.com": "https://www.facebook.com/aiphoneamericas/",
+      "linkedin.com": "https://www.linkedin.com/company/aiphoneofficial"
+    },
+    "people": [
+      {
+        "name": "Takeshi Kamijo",
+        "designation": "CEO",
+        "linkedin": "https://www.linkedin.com/in/takeshi-kamijo-05418682"
+      }
+    ],
+    "source": "Google"
+  },
+  {
+    "company_name": "AI on Android",
+    "website": "https://www.android.com/ai/",
+    "linkedin_company": null,
+    "industry": "ai",
+    "location": null,
+    "contact_page": "https://blog.google/press/",
+    "about_page": "https://play.google/about/howplayworks/",
+    "team_page": "https://blog.google/press/",
+    "emails": [
+      "press@google.com"
+    ],
+    "phones": [],
+    "social_links": {
+      "twitter.com": "https://twitter.com/android/",
+      "instagram.com": "https://www.instagram.com/android/",
+      "facebook.com": "https://www.facebook.com/AndroidOfficial/",
+      "linkedin.com": "https://www.linkedin.com/showcase/android_by_google/"
+    },
+    "people": [
+      {
+        "name": "Akshay Nandwana",
+        "designation": "Founder",
+        "linkedin": "https://in.linkedin.com/in/anandwana001"
+      }
+    ],
+    "source": "Google"
+  },
+  {
+    "company_name": "Shop Phones with AI",
+    "website": "https://www.att.com/buy/phones/browse/ai/",
+    "linkedin_company": null,
+    "industry": "ai",
+    "location": null,
+    "contact_page": null,
+    "about_page": "https://www.att.com/wireless/ai-features-for-smartphones/",
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [
+      {
+        "name": "Shyam Sunder",
+        "designation": "Founder",
+        "linkedin": "https://www.linkedin.com/in/beingshyam"
+      }
+    ],
+    "source": "Google"
+  },
+  {
+    "company_name": "AI Services",
+    "website": "https://www.oracle.com/artificial-intelligence/ai-services/",
+    "linkedin_company": null,
+    "industry": "ai",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [
+      {
+        "name": "Dj Das",
+        "designation": "Founder",
+        "linkedin": "https://www.linkedin.com/in/djdas"
+      }
+    ],
+    "source": "Google"
+  },
+  {
+    "company_name": "Cloud Software Group home",
+    "website": "https://www.cloud.com/",
+    "linkedin_company": null,
+    "location": "gurugram",
+    "industry": "cloud company",
+    "lead_type": "b2b",
+    "contact_page": null,
+    "about_page": "https://www.cloud.com/about-us",
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {
+      "x.com": "https://www.citrix.com/customer-success/atlantic-health-system.html"
+    },
+    "people": [
+      {
+        "name": "Sandip Kayande",
+        "designation": null,
+        "linkedin": "https://in.linkedin.com/in/sandip-kayande-36a06322"
+      }
+    ],
+    "source": "Google"
+  },
+  {
+    "company_name": "Cloud Computing Service",
+    "website": "https://dir.indiamart.com/gurgaon/cloud-computing-service.html",
+    "linkedin_company": null,
+    "location": "gurugram",
+    "industry": "cloud company",
+    "lead_type": "b2b",
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [
+      {
+        "name": "David Young",
+        "designation": "Founder",
+        "linkedin": "https://www.linkedin.com/in/davidpaulyoung"
+      }
+    ],
+    "source": "Google"
+  },
+  {
+    "company_name": "AWS Cloud Service Providers in Gurgaon",
+    "website": "https://www.sulekha.com/aws-cloud-services/gurgaon",
+    "linkedin_company": null,
+    "location": "gurugram",
+    "industry": "cloud company",
+    "lead_type": "b2b",
+    "contact_page": "https://www.sulekha.com/datanet-hosting-solutions-pvt-ltd-noida-extension-noida-11117517-contact-address",
+    "about_page": "https://www.sulekha.com/aws-cloud-services/gurgaon#About",
+    "team_page": null,
+    "emails": [
+      "deepaksharma559@gmail.com",
+      "hello@soumenduganguly.in"
+    ],
+    "phones": [
+      "08035426747",
+      "08035427274",
+      "08069670035",
+      "08069831556",
+      "08069869420",
+      "08069874594",
+      "08069875789",
+      "08069876638",
+      "1800 420 1212"
+    ],
+    "social_links": {
+      "instagram.com": "https://www.instagram.com/sulekhaindia/",
+      "facebook.com": "https://www.facebook.com/Sulekhadotcom",
+      "x.com": "https://x.com/Sulekhadotcom",
+      "linkedin.com": "https://www.linkedin.com/company/sulekha.com"
+    },
+    "people": [
+      {
+        "name": "Sandeep Dutta",
+        "designation": null,
+        "linkedin": "https://in.linkedin.com/in/sandeep-dutta-aws"
+      }
+    ],
+    "source": "Google"
+  },
+  {
+    "company_name": "NexGen Innovators",
+    "website": "https://www.nexgi.com/",
+    "linkedin_company": null,
+    "location": "delhi",
+    "industry": "it company",
+    "lead_type": "b2b",
+    "contact_page": "https://www.nexgi.com/contact-us/",
+    "about_page": "https://www.nexgi.com/about/",
+    "team_page": null,
+    "emails": [
+      "sales@nexgi.com"
+    ],
+    "phones": [],
+    "social_links": {
+      "facebook.com": "https://www.facebook.com/nexgeninnovators",
+      "twitter.com": "https://twitter.com/_nexgi",
+      "linkedin.com": "https://www.linkedin.com/company/nexgi/",
+      "instagram.com": "https://www.instagram.com/nexgi/"
+    },
+    "people": [
+      {
+        "name": "Anup Kumar",
+        "designation": "Founder",
+        "linkedin": "https://in.linkedin.com/in/ianup"
+      }
+    ],
+    "source": "Google"
+  },
+  {
+    "company_name": "Startups in Delhi",
+    "website": "https://www.startupindia.gov.in/content/sih/en/search.html/Delhi?states=5f48ce592a9bb065cdf9fb26&roles=Startup&page=0",
+    "linkedin_company": null,
+    "location": "delhi",
+    "industry": "it company",
+    "lead_type": "b2b",
+    "contact_page": "https://www.startupindia.gov.in/content/sih/en/about_us/contact-us.html",
+    "about_page": "https://www.startupindia.gov.in/content/sih/en/search.html/Delhi?states=5f48ce592a9bb065cdf9fb26&roles=Startup&page=0",
+    "team_page": null,
+    "emails": [
+      "CustomFormDevTesting@yopmail.com",
+      "Test80IAC07@gmail.com",
+      "ananya.kumar@investindia.org.in",
+      "dipp-startups@nic.in",
+      "nikita.kochhar@investindia.org.in",
+      "nsadashboard@investindia.org.in",
+      "pratiti.sharma@investindia.org.in",
+      "startupindiahub@investindia.org.in"
+    ],
+    "phones": [
+      "1-800-115-565",
+      "1800 115 565"
+    ],
+    "social_links": {
+      "facebook.com": "https://www.facebook.com/StartupIndia/",
+      "twitter.com": "https://twitter.com/startupindia?lang=en",
+      "linkedin.com": "https://in.linkedin.com/company/startup-india"
+    },
+    "people": [
+      {
+        "name": "Rohit Swerashi",
+        "designation": null,
+        "linkedin": "https://www.linkedin.com/in/rohitswerashi"
+      }
+    ],
+    "source": "Google"
+  },
+  {
+    "company_name": "ITSS",
+    "website": "https://itssin.com/",
+    "linkedin_company": null,
+    "location": "delhi",
+    "industry": "it company",
+    "lead_type": "b2b",
+    "contact_page": "https://www.itssin.com/contact-us/",
+    "about_page": "https://www.itssin.com/about-itss/",
+    "team_page": null,
+    "emails": [
+      "Support@itssin.co.in",
+      "info@itssin.co.in",
+      "youremail@example.com"
+    ],
+    "phones": [
+      "+91-7291076910",
+      "+91-8800419462",
+      "+91-8860403626"
+    ],
+    "social_links": {
+      "x.com": "https://itssin.supersite2.myorderbox.com/",
+      "facebook.com": "https://www.facebook.com/itssindia",
+      "twitter.com": "https://www.twitter.com/itssindia",
+      "linkedin.com": "https://www.linkedin.com/in/itssindia",
+      "instagram.com": "https://www.instagram.com/itsolutionsandservices"
+    },
+    "people": [
+      {
+        "name": "Selvakumar Thandavan",
+        "designation": "Founder",
+        "linkedin": "https://in.linkedin.com/in/selvakumar-thandavan-6b628932"
+      }
+    ],
+    "source": "Google"
+  },
+  {
+    "company_name": "Best Software Development Company in Delhi NCR & India",
+    "website": "https://www.011bq.com/services/software-development-services/",
+    "linkedin_company": null,
+    "location": "delhi",
+    "industry": "it company",
+    "lead_type": "b2b",
+    "contact_page": "https://www.011bq.com/contact-us/",
+    "about_page": "https://www.011bq.com/about-us/",
+    "team_page": null,
+    "emails": [
+      "info@011bq.com"
+    ],
+    "phones": [
+      "+1 406-946-5554",
+      "+1 6203159533",
+      "+44 7723559134",
+      "+971 54 342 9441"
+    ],
+    "social_links": {
+      "linkedin.com": "https://www.linkedin.com/company/011bq/?originalSubdomain=uk",
+      "instagram.com": "https://www.instagram.com/011bq_official/",
+      "facebook.com": "https://www.facebook.com/011bq",
+      "x.com": "https://x.com/011bq_official"
+    },
+    "people": [
+      {
+        "name": "Anuj Kumar",
+        "designation": "Founder",
+        "linkedin": "https://in.linkedin.com/in/ariseanuj"
+      }
+    ],
+    "source": "Google"
+  },
+  {
+    "company_name": "Together AI",
+    "website": "https://www.together.ai/",
+    "linkedin_company": null,
+    "industry": "ai",
+    "location": null,
+    "contact_page": "https://www.together.ai/contact-sales",
+    "about_page": "https://www.together.ai/about-us",
+    "team_page": "https://www.together.ai/blog/inside-the-together-ai-kernels-team",
+    "emails": [],
+    "phones": [],
+    "social_links": {
+      "x.com": "https://x.com/togethercompute",
+      "linkedin.com": "https://www.linkedin.com/company/togethercomputer/"
+    },
+    "people": [
+      {
+        "name": "AI Factory",
+        "designation": "CTO"
+      }
+    ],
+    "source": "Google"
+  },
+  {
+    "company_name": "Mails.ai — Email infrastructure for AI agents",
+    "website": "https://mails.ai/",
+    "linkedin_company": null,
+    "industry": "ai",
+    "location": null,
+    "contact_page": "https://mails.ai/contact",
+    "about_page": "https://mails.ai/about",
+    "team_page": null,
+    "emails": [
+      "security@mails.ai",
+      "support@mails.ai"
+    ],
+    "phones": [],
+    "social_links": {},
+    "people": [
+      {
+        "name": "Nate Herk",
+        "designation": "Founder",
+        "linkedin": "https://www.linkedin.com/in/nateherkelman"
+      }
+    ],
+    "source": "Google"
+  },
+  {
+    "company_name": "WriteMail.ai",
+    "website": "https://writemail.ai/",
+    "linkedin_company": null,
+    "industry": "ai",
+    "location": null,
+    "contact_page": "https://writemail.ai/contacts",
+    "about_page": "https://writemail.ai/about",
+    "team_page": "https://app.writemail.ai/register",
+    "emails": [
+      "info@writemail.ai"
+    ],
+    "phones": [],
+    "social_links": {
+      "facebook.com": "https://www.facebook.com/people/Writemailai/61570473188410/",
+      "twitter.com": "https://twitter.com/writemail_ai",
+      "instagram.com": "https://www.instagram.com/app.writemail/",
+      "linkedin.com": "https://www.linkedin.com/company/writemail-ai"
+    },
+    "people": [
+      {
+        "name": "Alen Pavalec",
+        "designation": null,
+        "linkedin": "https://si.linkedin.com/in/alen-pavalec-7b37b0aa"
+      }
+    ],
+    "source": "Google"
+  },
+  {
+    "company_name": "Meet the AI-first phones powered by small models",
+    "website": "https://www.ibm.com/think/news/ai-phones-small-language-models",
+    "linkedin_company": null,
+    "industry": "ai",
+    "location": null,
+    "contact_page": null,
+    "about_page": "https://www.ibm.com/watsonx/developer/get-started/models",
+    "team_page": "https://www.ibm.com/thought-leadership/institute-business-value/report/ceo-generative-ai/ceo-ai-model-optimization",
+    "emails": [
+      "Christian.Bieck@ibm.com",
+      "Maryam.Ashoori@ibm.com",
+      "arnas.siaudvytis@ibm.com",
+      "cindy.w.anderson@ibm.com"
+    ],
+    "phones": [],
+    "social_links": {
+      "linkedin.com": "https://www.linkedin.com/shareArticle?url=https://www.ibm.com/think/news/ai-phones-small-language-models&title=Meet%20the%20AI-first%20phones%20powered%20by%20small%20models",
+      "facebook.com": "https://www.facebook.com/share.php?u=https://www.ibm.com/think/news/ai-phones-small-language-models",
+      "x.com": "https://x.com/intent/tweet?text=Meet%20the%20AI-first%20phones%20powered%20by%20small%20models&url=https://www.ibm.com/think/news/ai-phones-small-language-models"
+    },
+    "people": [],
+    "source": "Google"
+  },
+  {
+    "company_name": "Phonely AI",
+    "website": "https://www.phonely.ai/",
+    "linkedin_company": null,
+    "industry": "ai",
+    "location": null,
+    "contact_page": "https://www.phonely.ai/contact",
+    "about_page": "https://www.phonely.ai/integration",
+    "team_page": "https://www.phonely.ai/careers",
+    "emails": [
+      "email@phonely.ai"
+    ],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google"
+  },
+  {
+    "company_name": "AI Services • Artificial Intelligence Services Company",
+    "website": "https://www.avenga.com/ai-services/",
+    "linkedin_company": null,
+    "industry": "ai",
+    "location": null,
+    "contact_page": "https://www.avenga.com/contact-avenga/",
+    "about_page": "https://www.avenga.com/ai-services/",
+    "team_page": "https://www.avenga.com/leadership/",
+    "emails": [
+      "hello@avenga.com"
+    ],
+    "phones": [
+      "+381 11 22 894 53",
+      "+381 18 4577 319",
+      "+381 21 6623075",
+      "+381 34 337 023",
+      "+389 2 3097 400",
+      "+421 917 333 997",
+      "2022031528"
+    ],
+    "social_links": {
+      "linkedin.com": "https://www.linkedin.com/company/avenga/about/",
+      "instagram.com": "https://www.instagram.com/avenga_global/",
+      "x.com": "https://x.com/avenga_global"
+    },
+    "people": [
+      {
+        "name": "Industries",
+        "designation": "CTO"
+      },
+      {
+        "name": "Management Team",
+        "designation": "CTO"
+      },
+      {
+        "name": "CEO Clay Van Doren",
+        "designation": "CEO"
+      },
+      {
+        "name": "CTO Juan  Villamil",
+        "designation": "CTO"
+      },
+      {
+        "name": "COO Slawomir Kupczyk",
+        "designation": "COO"
+      },
+      {
+        "name": "Marina Domazetovska",
+        "designation": "CTO"
+      }
+    ],
+    "source": "Google"
+  },
+  {
+    "company_name": "Artificial Intelligence (AI) Services & Solutions",
+    "website": "https://www.accenture.com/us-en/services/ai-data",
+    "linkedin_company": null,
+    "industry": "ai",
+    "location": null,
+    "contact_page": "https://www.accenture.com/us-en/about/contact-us",
+    "about_page": "https://www.accenture.com/us-en/about/company-index",
+    "team_page": "https://www.accenture.com/us-en/about/leadership",
+    "emails": [],
+    "phones": [],
+    "social_links": {
+      "linkedin.com": "https://www.linkedin.com/company/accenture",
+      "facebook.com": "https://www.facebook.com/accenture",
+      "instagram.com": "https://www.instagram.com/accenture/"
+    },
+    "people": [
+      {
+        "name": "Media & Investors",
+        "designation": "CTO"
+      },
+      {
+        "name": "Julie Sweet",
+        "designation": "CEO"
+      },
+      {
+        "name": "Ron Ash",
+        "designation": "CEO"
+      },
+      {
+        "name": "Atsushi Egawa",
+        "designation": "CEO"
+      },
+      {
+        "name": "Kate Kutay",
+        "designation": "CEO"
+      },
+      {
+        "name": "Mauro Macchi",
+        "designation": "CEO"
+      },
+      {
+        "name": "Ryoji Sekido",
+        "designation": "CEO"
+      },
+      {
+        "name": "John Walsh",
+        "designation": "CEO"
+      },
+      {
+        "name": "Like this content?",
+        "designation": "Head Of"
+      }
+    ],
+    "source": "Google"
+  },
+  {
+    "company_name": "Forbes 2026 AI 50 List",
+    "website": "https://www.forbes.com/lists/ai50/",
+    "linkedin_company": null,
+    "industry": "ai",
+    "location": null,
+    "contact_page": "https://www.forbes.com/contact/",
+    "about_page": null,
+    "team_page": "https://www.forbes.com/sites/forbesliveteam/2026/02/23/how-chief-marketing-officers-are-scaling-ai-at-speed---while-preserving-brand-trust/",
+    "emails": [
+      "corrections@forbes.com",
+      "dlopenzina@forbes.com",
+      "ebrier@forbes.com",
+      "feedback@forbes.com",
+      "iain.martin@forbes.com",
+      "permissions@forbes.com",
+      "pressinquiries@forbes.com",
+      "readers@forbes.com",
+      "reprints@forbes.com",
+      "rshrivastava@forbes.com",
+      "schierchio@forbes.com",
+      "security@forbes.com",
+      "spreadsheets@forbes.com"
+    ],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google"
+  },
+  {
+    "company_name": "AI Agents for Business Users at Enterprise Scale",
+    "website": "https://www.aible.com/",
+    "linkedin_company": null,
+    "industry": "ai",
+    "location": null,
+    "contact_page": "https://www.aible.com/contact-us/",
+    "about_page": "https://www.aible.com/about-us",
+    "team_page": "https://www.aible.com/about-us",
+    "emails": [],
+    "phones": [],
+    "social_links": {
+      "twitter.com": "https://twitter.com/iamAible",
+      "linkedin.com": "https://www.linkedin.com/company/aible/",
+      "facebook.com": "https://www.facebook.com/iamaible"
+    },
+    "people": [
+      {
+        "name": "Arijit Sengupta,",
+        "designation": "Founder"
+      },
+      {
+        "name": "Jonathan Wray, Co-Founder",
+        "designation": "Founder"
+      },
+      {
+        "name": "Jonathan Wray,",
+        "designation": "Founder"
+      },
+      {
+        "name": "Dylan Steeg,",
+        "designation": "VP"
+      }
+    ],
+    "source": "Google"
+  },
+  {
+    "company_name": "AI LA",
+    "website": "https://aila.in",
+    "linkedin_company": "https://www.linkedin.com/company/ai-la",
+    "industry": "ai",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [
+      {
+        "name": "Mariano Apodaca",
+        "designation": "Founder",
+        "linkedin": "https://www.linkedin.com/in/mariano-apodaca-45b07a16a"
+      }
+    ],
+    "source": "LinkedIn"
+  },
+  {
+    "company_name": "AI for Good",
+    "website": "https://aiforgood.in",
+    "linkedin_company": "https://www.linkedin.com/company/ai-for-good-global-summit-un/",
+    "industry": "ai",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [
+      {
+        "name": "James Hodson",
+        "designation": null,
+        "linkedin": "https://www.linkedin.com/in/jameshodson"
+      }
+    ],
+    "source": "LinkedIn"
+  },
+  {
+    "company_name": "Standard AI",
+    "website": "https://standardai.com",
+    "linkedin_company": "https://www.linkedin.com/company/standard-ai",
+    "industry": "ai",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [
+      {
+        "name": "Jordan Fisher",
+        "designation": "CEO",
+        "linkedin": "https://www.linkedin.com/in/jordan-fisher-81145025"
+      }
+    ],
+    "source": "LinkedIn"
+  },
+  {
+    "company_name": "Global AI",
+    "website": "https://globalai.com",
+    "linkedin_company": "https://www.linkedin.com/company/globalai",
+    "industry": "ai",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [
+      {
+        "name": "Richard Rothenberg",
+        "designation": null,
+        "linkedin": "https://www.linkedin.com/in/richardrothenberg"
+      }
+    ],
+    "source": "LinkedIn"
+  },
+  {
+    "company_name": "AI in Healthcare",
+    "website": "https://www.goodfirms.co/resources/ai-in-healthcare-future-patient-care-management",
+    "linkedin_company": null,
+    "industry": "ai",
+    "location": null,
+    "contact_page": "https://www.goodfirms.co/contact-us",
+    "about_page": "https://www.imperial.nhs.uk/about-us/news/ai-could-predict-type-2-diabetes-up-to-10-years-in-advance",
+    "team_page": "https://www.goodfirms.co/hr-software",
+    "emails": [
+      "info@goodfirms.co"
+    ],
+    "phones": [
+      "333 6089411"
+    ],
+    "social_links": {
+      "x.com": "https://indoqubix.com",
+      "linkedin.com": "https://www.linkedin.com/company/goodfirms",
+      "facebook.com": "https://www.facebook.com/goodfirms",
+      "instagram.com": "https://www.instagram.com/goodfirms_/"
+    },
+    "people": [
+      {
+        "name": "TriNet Reviews",
+        "designation": "CTO"
+      },
+      {
+        "name": "UltiPro Reviews",
+        "designation": "CEO"
+      },
+      {
+        "name": "HR Software",
+        "designation": "CTO"
+      }
+    ],
+    "source": "GoodFirms"
+  },
+  {
+    "company_name": "AI in Fashion",
+    "website": "https://www.goodfirms.co/blog/ways-ai-will-revolutionize-fashion-industry",
+    "linkedin_company": null,
+    "industry": "ai",
+    "location": null,
+    "contact_page": "https://www.goodfirms.co/contact-us",
+    "about_page": null,
+    "team_page": "https://www.goodfirms.co/hr-software",
+    "emails": [
+      "info@goodfirms.co"
+    ],
+    "phones": [
+      "333 6089411"
+    ],
+    "social_links": {
+      "instagram.com": "https://www.instagram.com/glitch_ai/?hl=en",
+      "linkedin.com": "https://www.linkedin.com/company/goodfirms",
+      "facebook.com": "https://www.facebook.com/goodfirms",
+      "x.com": "https://x.com/Goodfirms"
+    },
+    "people": [
+      {
+        "name": "TriNet Reviews",
+        "designation": "CTO"
+      },
+      {
+        "name": "UltiPro Reviews",
+        "designation": "CEO"
+      },
+      {
+        "name": "HR Software",
+        "designation": "CTO"
+      }
+    ],
+    "source": "GoodFirms"
+  },
+  {
+    "company_name": "AWS Cloud Services in Gurgaon",
+    "website": "https://squareops.com/knowledge/aws-cloud-services-in-gurgaon-a-comprehensive-guide-for-businesses/",
+    "linkedin_company": null,
+    "location": "gurugram",
+    "industry": "cloud company",
+    "lead_type": "b2b",
+    "contact_page": "https://squareops.com/contact-us/",
+    "about_page": "https://squareops.com/about-us/",
+    "team_page": null,
+    "emails": [
+      "consult@squareops.com",
+      "hr@squareops.com"
+    ],
+    "phones": [
+      "+91 88009 07226",
+      "+91 92055 54850"
+    ],
+    "social_links": {
+      "linkedin.com": "https://www.linkedin.com/company/squareops-tech/",
+      "twitter.com": "https://twitter.com/squareops",
+      "facebook.com": "https://facebook.com/squareops",
+      "instagram.com": "https://instagram.com/squareops"
+    },
+    "people": [],
+    "source": "Google"
+  },
+  {
+    "company_name": "TurningCloud Solutions Private Limited",
+    "website": "https://turningcloud.com",
+    "linkedin_company": "https://in.linkedin.com/company/turning-cloud-solutions",
+    "location": "gurugram",
+    "industry": "cloud company",
+    "lead_type": "b2b",
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [
+      {
+        "name": "Sumeet Agrawal",
+        "designation": "Founder",
+        "linkedin": "https://in.linkedin.com/in/agrawalsumeet"
+      }
+    ],
+    "source": "LinkedIn"
+  },
+  {
+    "company_name": "Cloud Certitude",
+    "website": "https://cloudcertitude.com",
+    "linkedin_company": "https://in.linkedin.com/company/cloudcertitude",
+    "location": "gurugram",
+    "industry": "cloud company",
+    "lead_type": "b2b",
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [
+      {
+        "name": "Rakesh Aggarwal",
+        "designation": null,
+        "linkedin": "https://in.linkedin.com/in/aggarwalrakesh"
+      }
+    ],
+    "source": "LinkedIn"
+  },
+  {
+    "company_name": "Ananta Cloud",
+    "website": "https://anantacloud.com",
+    "linkedin_company": "https://in.linkedin.com/company/anantacloud",
+    "location": "gurugram",
+    "industry": "cloud company",
+    "lead_type": "b2b",
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [
+      {
+        "name": "VIKRAM SINGH",
+        "designation": "Founder",
+        "linkedin": "https://www.linkedin.com/in/vikramsinghmalik2023"
+      }
+    ],
+    "source": "LinkedIn"
+  },
+  {
+    "company_name": "CloudZent Technology Services",
+    "website": "https://cloudzent.com",
+    "linkedin_company": "https://in.linkedin.com/company/cloudzenttechnologyservices",
+    "location": "gurugram",
+    "industry": "cloud company",
+    "lead_type": "b2b",
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [
+      {
+        "name": "Asif Iqbal",
+        "designation": null,
+        "linkedin": "https://in.linkedin.com/in/asif-iqbal007"
+      }
+    ],
+    "source": "LinkedIn"
+  },
+  {
+    "company_name": "AceCloud",
+    "website": "https://acecloud.in",
+    "linkedin_company": "https://in.linkedin.com/company/acecloudai",
+    "location": "gurugram",
+    "industry": "cloud company",
+    "lead_type": "b2b",
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [
+      {
+        "name": "Vinay Chhabra",
+        "designation": "Founder",
+        "linkedin": "https://in.linkedin.com/in/vinay-chhabra-4739a9b6"
+      }
+    ],
+    "source": "LinkedIn"
+  },
+  {
+    "company_name": "Progression",
+    "website": "https://progression.com",
+    "linkedin_company": "https://in.linkedin.com/company/progression-infonet",
+    "location": "gurugram",
+    "industry": "cloud company",
+    "lead_type": "b2b",
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [
+      {
+        "name": "Ryan Bellissimo",
+        "designation": "Founder",
+        "linkedin": "https://www.linkedin.com/in/ryan-bellissimo-562751147"
+      }
+    ],
+    "source": "LinkedIn"
+  },
+  {
+    "company_name": "CloudTechner",
+    "website": "https://cloudtechner.com",
+    "linkedin_company": "https://in.linkedin.com/company/cloud-techner",
+    "location": "gurugram",
+    "industry": "cloud company",
+    "lead_type": "b2b",
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [
+      {
+        "name": "Prabhakara Chappidi",
+        "designation": "Founder",
+        "linkedin": "https://www.linkedin.com/in/prabhakara-chappidi"
+      }
+    ],
+    "source": "LinkedIn"
+  },
+  {
+    "company_name": "GoMilestone",
+    "website": "https://www.gomilestone.com/",
+    "linkedin_company": null,
+    "location": "gurugram",
+    "industry": "cloud company",
+    "lead_type": "b2b",
+    "contact_page": "https://www.gomilestone.com/contact",
+    "about_page": "https://www.gomilestone.com/about",
+    "team_page": "https://www.gomilestone.com/hire-software-development-team",
+    "emails": [
+      "info@gomilestone.com"
+    ],
+    "phones": [
+      "+44 7887081915",
+      "+91 8447966431"
+    ],
+    "social_links": {
+      "facebook.com": "https://www.facebook.com/GoMilestone",
+      "linkedin.com": "https://www.linkedin.com/company/gomilestone-pvt.-ltd",
+      "instagram.com": "https://www.instagram.com/go.milestone"
+    },
+    "people": [],
+    "source": "Google"
+  },
+  {
+    "company_name": "24x7 IT Company in Delhi",
+    "website": "https://www.progressive.in/locations/it-company-delhi",
+    "linkedin_company": null,
+    "location": "delhi",
+    "industry": "it company",
+    "lead_type": "b2b",
+    "contact_page": "https://www.progressive.in/contact",
+    "about_page": null,
+    "team_page": "https://www.progressive.in/leadership",
+    "emails": [
+      "marketing@progressive.in",
+      "solutions@progressive.in"
+    ],
+    "phones": [
+      "+91 120 6373737"
+    ],
+    "social_links": {},
+    "people": [],
+    "source": "Google"
+  },
+  {
+    "company_name": "I.T. Solutions India Pvt Ltd",
+    "website": "https://itindia.com",
+    "linkedin_company": "https://in.linkedin.com/company/i-t-solutions-india-pvt-ltd",
+    "location": "delhi",
+    "industry": "it company",
+    "lead_type": "b2b",
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [
+      {
+        "name": "Nakul Chopra",
+        "designation": "Founder",
+        "linkedin": "https://in.linkedin.com/in/itsnakulchopra"
+      }
+    ],
+    "source": "LinkedIn"
+  },
+  {
+    "company_name": "Meentosys Private Limited",
+    "website": "https://meentosys.com",
+    "linkedin_company": "https://in.linkedin.com/company/meentosysprivatelimited",
+    "location": "delhi",
+    "industry": "it company",
+    "lead_type": "b2b",
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "LinkedIn"
+  },
+  {
+    "company_name": "Team Computers",
+    "website": "https://teamcomputers.com",
+    "linkedin_company": "https://in.linkedin.com/company/team-computers",
+    "location": "delhi",
+    "industry": "it company",
+    "lead_type": "b2b",
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [
+      {
+        "name": "Ranjan Chopra",
+        "designation": "CTO",
+        "linkedin": "https://in.linkedin.com/in/ranjan-chopra-8974016"
+      }
+    ],
+    "source": "LinkedIn"
+  },
+  {
+    "company_name": "Delhi Co.",
+    "website": "https://delhico.com",
+    "linkedin_company": "https://in.linkedin.com/company/delhi-co-",
+    "location": "delhi",
+    "industry": "it company",
+    "lead_type": "b2b",
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [
+      {
+        "name": "Palak Verma",
+        "designation": "Founder",
+        "linkedin": "https://in.linkedin.com/in/palak-verma-8a482199"
+      }
+    ],
+    "source": "LinkedIn"
+  },
+  {
+    "company_name": "Built In Delhi",
+    "website": "https://builtindelhi.in/",
+    "linkedin_company": null,
+    "location": "delhi",
+    "industry": "it company",
+    "lead_type": "b2b",
+    "contact_page": "https://knowledgebase.builtin.com/s/contactsupport",
+    "about_page": null,
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [
+      {
+        "name": "Dr Amit Vohra PhD MBA GAICD",
+        "designation": "Founder",
+        "linkedin": "https://au.linkedin.com/in/amitvohra1"
+      }
+    ],
+    "source": "Google"
+  }
+]

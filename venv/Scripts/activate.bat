@@ -8,7 +8,7 @@ if defined _OLD_CODEPAGE (
     "%SystemRoot%\System32\chcp.com" 65001 > nul
 )
 
-set VIRTUAL_ENV=C:\Users\yasha\Downloads\pillar1\venv
+set VIRTUAL_ENV=C:\Users\admin\Desktop\pillar2-lead_cleaning\venv
 
 if not defined PROMPT set PROMPT=$P$G
 
