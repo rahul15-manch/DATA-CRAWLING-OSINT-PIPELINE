@@ -34,6 +34,9 @@ class NetworkConfig(BaseSettings):
         description="Used if fake_useragent fails"
     )
 
+    # --- SSL ---
+    VERIFY_SSL: bool = Field(default=True, description="Verify SSL certificates")
+
     # Configure Pydantic to read from a .env file if it exists
     model_config = SettingsConfigDict(
         env_file=".env", 

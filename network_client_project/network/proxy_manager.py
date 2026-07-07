@@ -69,11 +69,26 @@ class ProxyManager:
         except Exception as e:
             logger.error(f"Failed to load proxies from file: {e}")
 
+    def remove_bad_proxies(self, max_failures: int = 5):
+        """Permanently remove proxies that have failed too many times."""
+        with self._lock:
+            initial_count = len(self._proxies)
+            self._proxies = [p for p in self._proxies if p.failure_count < max_failures]
+            removed = initial_count - len(self._proxies)
+            if removed > 0:
+                logger.info(f"Removed {removed} permanently dead proxies.")
+                # Also cleanup sticky sessions
+                keys_to_remove = [k for k, p in self._sticky_sessions.items() if p.failure_count >= max_failures]
+                for k in keys_to_remove:
+                    del self._sticky_sessions[k]
+
     def get_proxy(self, session_id: Optional[str] = None) -> Optional[Proxy]:
         """
         Get a healthy proxy.
         If session_id is provided, implements Sticky Sessions.
         """
+        self.remove_bad_proxies() # Auto-cleanup before picking
+        
         with self._lock:
             if not self._proxies:
                 return None
@@ -84,7 +99,7 @@ class ProxyManager:
                     proxy = self._sticky_sessions[session_id]
                     if not proxy.is_cooling_down:
                         return proxy
-                # If no sticky proxy exists or it died, we will pick a new one below
+                # If no sticky proxy exists, or it died, or it's cooling down, pick a new one below
 
             # Filter for healthy proxies
             healthy_proxies = [p for p in self._proxies if not p.is_cooling_down]
@@ -101,15 +116,6 @@ class ProxyManager:
                 self._sticky_sessions[session_id] = selected
 
             return selected
-
-    def remove_bad_proxies(self, max_failures: int = 5):
-        """Permanently remove proxies that have failed too many times."""
-        with self._lock:
-            initial_count = len(self._proxies)
-            self._proxies = [p for p in self._proxies if p.failure_count < max_failures]
-            removed = initial_count - len(self._proxies)
-            if removed > 0:
-                logger.info(f"Removed {removed} permanently dead proxies.")
 
     def get_stats(self) -> Dict:
         """Return analytics on the proxy pool."""

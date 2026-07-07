@@ -1,6 +1,6 @@
 import logging
-import requests
-from requests.exceptions import RequestException, Timeout, ConnectionError, HTTPError
+from curl_cffi import requests
+from curl_cffi.requests.exceptions import RequestException, Timeout, ConnectionError, HTTPError
 from tenacity import (
     retry,
     stop_after_attempt,
