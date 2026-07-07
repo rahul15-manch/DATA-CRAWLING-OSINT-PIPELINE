@@ -74,6 +74,9 @@ class NetworkClient:
         if 'headers' in kwargs:
             headers.update(kwargs.pop('headers'))
 
+        # Pop Accept-Encoding to let requests handle decompression automatically
+        headers.pop("Accept-Encoding", None)
+
         return {
             "session": session,
             "proxies": proxy_dict,
@@ -111,7 +114,8 @@ class NetworkClient:
         req_params = self._prepare_request(method, url, session_id, is_xhr, **kwargs)
         session: requests.Session = req_params.pop("session")
         
-        proxy_url = req_params.get("proxies", {}).get("http")
+        proxies = req_params.get("proxies") or {}
+        proxy_url = proxies.get("http")
         start_time = time.time()
         
         try:

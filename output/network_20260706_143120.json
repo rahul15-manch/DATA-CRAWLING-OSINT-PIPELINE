@@ -1,0 +1,605 @@
+[
+    {
+        "company_name": "Softwareworld",
+        "website": "https://www.softwareworld.co/network-management-software/",
+        "linkedin": null,
+        "industry": "network",
+        "location": null,
+        "contact_page": "https://www.softwareworld.co/contact-us/",
+        "about_page": "https://www.softwareworld.co/software/manageengine-opmanager-plus-reviews/",
+        "team_page": "https://www.softwareworld.co/top-learning-management-system-software/",
+        "emails": [],
+        "phones": [],
+        "social_links": {
+            "linkedin.com": "https://www.linkedin.com/company/softwareworld-co/",
+            "facebook.com": "https://www.facebook.com/softwareworldco/"
+        },
+        "people": [
+            {
+                "name": "Finance Teams",
+                "designation": "CFO",
+                "decision_maker_score": 70
+            },
+            {
+                "name": "Salesforce Sales Cloud",
+                "designation": "CTO",
+                "decision_maker_score": 80
+            },
+            {
+                "name": "SAP SuccessFactors",
+                "designation": "CTO",
+                "decision_maker_score": 80
+            },
+            {
+                "name": "SAP SuccessFactors",
+                "designation": "CTO",
+                "decision_maker_score": 80
+            },
+            {
+                "name": "Salesforce Sales Cloud",
+                "designation": "CTO",
+                "decision_maker_score": 80
+            },
+            {
+                "name": "SAP SuccessFactors",
+                "designation": "CTO",
+                "decision_maker_score": 80
+            },
+            {
+                "name": "SAP SuccessFactors",
+                "designation": "CTO",
+                "decision_maker_score": 80
+            },
+            {
+                "name": "Thought Industries",
+                "designation": "Partner",
+                "decision_maker_score": 55
+            },
+            {
+                "name": "HR Professionals",
+                "designation": "COO",
+                "decision_maker_score": 75
+            },
+            {
+                "name": "Popular Integrations",
+                "designation": "CTO",
+                "decision_maker_score": 80
+            },
+            {
+                "name": "Salesforce Sales Cloud",
+                "designation": "CTO",
+                "decision_maker_score": 80
+            },
+            {
+                "name": "SAP SuccessFactors",
+                "designation": "CTO",
+                "decision_maker_score": 80
+            },
+            {
+                "name": "SAP SuccessFactors",
+                "designation": "CTO",
+                "decision_maker_score": 80
+            },
+            {
+                "name": "Salesforce Sales Cloud",
+                "designation": "CTO",
+                "decision_maker_score": 80
+            },
+            {
+                "name": "SAP SuccessFactors",
+                "designation": "CTO",
+                "decision_maker_score": 80
+            },
+            {
+                "name": "SAP SuccessFactors",
+                "designation": "CTO",
+                "decision_maker_score": 80
+            },
+            {
+                "name": "Vector LMS for Industrial",
+                "designation": "CTO",
+                "decision_maker_score": 80
+            },
+            {
+                "name": "Vector LMS for Industrial",
+                "designation": "CTO",
+                "decision_maker_score": 80
+            },
+            {
+                "name": "Factors That Influence LMS Pricing",
+                "designation": "CTO",
+                "decision_maker_score": 80
+            }
+        ],
+        "source": "Google",
+        "confidence_score": 62,
+        "lead_quality": "Medium",
+        "company_type": "Software Company"
+    },
+    {
+        "company_name": "Softwareforsaas",
+        "website": "https://softwareforsaas.com/network/network-software/",
+        "linkedin": null,
+        "industry": "Artificial Intelligence",
+        "location": null,
+        "contact_page": null,
+        "about_page": null,
+        "team_page": null,
+        "emails": [
+            "Asset-1@2x-1.png"
+        ],
+        "phones": [],
+        "social_links": {},
+        "people": [],
+        "source": "Google",
+        "confidence_score": 46,
+        "lead_quality": "Medium",
+        "company_type": "Software Company"
+    },
+    {
+        "company_name": "Softwaretestinghelp",
+        "website": "https://www.softwaretestinghelp.com/network-management-software/",
+        "linkedin": null,
+        "industry": "Artificial Intelligence",
+        "location": null,
+        "contact_page": "https://www.softwaretestinghelp.com/contact/",
+        "about_page": "https://www.softwaretestinghelp.com/penetration-testing-company/",
+        "team_page": "https://www.softwaretestinghelp.com/15-best-test-management-tools-for-software-testers/",
+        "emails": [
+            "info@softwaretestinghelp.com",
+            "TestRail_Logo_Main_02@2x.png"
+        ],
+        "phones": [
+            "11.52.496",
+            "27001-2013"
+        ],
+        "social_links": {
+            "facebook.com": "https://www.facebook.com/SoftwareTestingHelp/",
+            "linkedin.com": "https://www.linkedin.com/company/softwaretestinghelp-com",
+            "twitter.com": "https://twitter.com/vijayshinde",
+            "x.com": "https://www.zabbix.com/"
+        },
+        "people": [
+            {
+                "name": "Daniel Ivanov",
+                "designation": "CTO",
+                "decision_maker_score": 80
+            },
+            {
+                "name": "Greedy Tester",
+                "designation": "CTO",
+                "decision_maker_score": 80
+            },
+            {
+                "name": "Bhaskar Reddy",
+                "designation": "CTO",
+                "decision_maker_score": 80
+            }
+        ],
+        "source": "Google",
+        "confidence_score": 82,
+        "lead_quality": "High",
+        "company_type": "Software Company"
+    },
+    {
+        "company_name": "NetworkAcademyIO",
+        "website": "https://www.networkacademy.io/",
+        "linkedin": null,
+        "industry": "Artificial Intelligence",
+        "location": null,
+        "contact_page": null,
+        "about_page": null,
+        "team_page": null,
+        "emails": [],
+        "phones": [],
+        "social_links": {
+            "facebook.com": "https://facebook.com/networkacademy.io",
+            "twitter.com": "https://twitter.com/NetworkacademyI",
+            "linkedin.com": "https://www.linkedin.com/company/networkacademy-io"
+        },
+        "people": [],
+        "source": "Google",
+        "confidence_score": 36,
+        "lead_quality": "Low",
+        "company_type": "Industrial"
+    },
+    {
+        "company_name": "Comptia",
+        "website": "https://www.comptia.org/en-us/certifications/network/",
+        "linkedin": null,
+        "industry": "Artificial Intelligence",
+        "location": null,
+        "contact_page": "https://www.comptia.org/en-us/contact-us/",
+        "about_page": "https://www.comptia.org/en-us/resources/certmaster-training/perform/",
+        "team_page": null,
+        "emails": [],
+        "phones": [],
+        "social_links": {
+            "facebook.com": "https://www.facebook.com/CompTIA/",
+            "instagram.com": "https://www.instagram.com/comptiaofficial/?hl=en",
+            "linkedin.com": "https://www.linkedin.com/company/comptia",
+            "x.com": "https://x.com/comptia"
+        },
+        "people": [],
+        "source": "Google",
+        "confidence_score": 46,
+        "lead_quality": "Medium",
+        "company_type": "Telecom"
+    },
+    {
+        "company_name": "Uniquesolutionsind",
+        "website": "https://www.uniquesolutionsind.com/",
+        "linkedin": null,
+        "industry": "Industrial Automation",
+        "location": null,
+        "contact_page": "https://www.uniquesolutionsind.com/#contact",
+        "about_page": "https://www.uniquesolutionsind.com/#about",
+        "team_page": null,
+        "emails": [
+            "info@uniquesolutionsind.com"
+        ],
+        "phones": [
+            "+91 7022524444"
+        ],
+        "social_links": {},
+        "people": [],
+        "source": "Google",
+        "confidence_score": 66,
+        "lead_quality": "Medium",
+        "company_type": "Industrial"
+    },
+    {
+        "company_name": "Networksolutions",
+        "website": "https://www.networksolutions.com/",
+        "linkedin": null,
+        "industry": "network",
+        "location": null,
+        "contact_page": null,
+        "about_page": null,
+        "team_page": null,
+        "emails": [],
+        "phones": [],
+        "social_links": {},
+        "people": [],
+        "source": "Google",
+        "confidence_score": 36,
+        "lead_quality": "Low",
+        "company_type": "Unknown"
+    },
+    {
+        "company_name": "Dnsstuff",
+        "website": "https://www.dnsstuff.com/network-tools",
+        "linkedin": null,
+        "industry": "Artificial Intelligence",
+        "location": null,
+        "contact_page": null,
+        "about_page": "https://www.dnsstuff.com/network-protocols",
+        "team_page": "https://www.dnsstuff.com/network-management",
+        "emails": [],
+        "phones": [],
+        "social_links": {
+            "facebook.com": "https://www.facebook.com/sharer/sharer.php?u=https://www.dnsstuff.com/network-tools&title=14 Top Network Tools and Software (Free and Paid)",
+            "instagram.com": "https://www.instagram.com/solarwindsinc",
+            "linkedin.com": "https://www.linkedin.com/shareArticle?mini=true&url=https://www.dnsstuff.com/network-tools",
+            "x.com": "https://x.com/intent/tweet?text=14 Top Network Tools and Software (Free and Paid) - https://www.dnsstuff.com/network-tools"
+        },
+        "people": [],
+        "source": "Google",
+        "confidence_score": 46,
+        "lead_quality": "Medium",
+        "company_type": "Software Company"
+    },
+    {
+        "company_name": "Mobile Signal Booster in Bengaluru Karnataka 2G 3G 4G 5G Airtel",
+        "website": "https://falconsurveillance.in/signalboosterbengaluru.in/",
+        "linkedin": null,
+        "industry": "Artificial Intelligence",
+        "location": null,
+        "contact_page": "https://falconsurveillance.in/signalboosterbengaluru.in/contact-us.html",
+        "about_page": null,
+        "team_page": null,
+        "emails": [
+            "signalboosterbengaluru@gmail.com"
+        ],
+        "phones": [
+            "+91-7715991232"
+        ],
+        "social_links": {},
+        "people": [],
+        "source": "Google",
+        "confidence_score": 60,
+        "lead_quality": "Medium",
+        "company_type": "Manufacturer"
+    },
+    {
+        "company_name": "Spit Tech",
+        "website": "https://spit-tech.com/solutions/network-security-solutions/mangaluru/",
+        "linkedin": null,
+        "industry": "Cybersecurity",
+        "location": null,
+        "contact_page": "https://spit-tech.com/contact",
+        "about_page": "https://spit-tech.com/about",
+        "team_page": null,
+        "emails": [
+            "sales@spit-tech.com",
+            "shauryaprabhatinfratech@gmail.com"
+        ],
+        "phones": [
+            "+91 522-4534330",
+            "+91 63917 55339"
+        ],
+        "social_links": {},
+        "people": [],
+        "source": "Google",
+        "confidence_score": 66,
+        "lead_quality": "Medium",
+        "company_type": "Software Company"
+    },
+    {
+        "company_name": "Paessler",
+        "website": "https://blog.paessler.com/types-and-features-of-common-network-services",
+        "linkedin": null,
+        "industry": "Artificial Intelligence",
+        "location": null,
+        "contact_page": null,
+        "about_page": null,
+        "team_page": "https://blog.paessler.com/why-network-change-management-matters-and-how-automation-saves-your-it-team-from-costly-outages",
+        "emails": [],
+        "phones": [],
+        "social_links": {
+            "facebook.com": "https://www.facebook.com/sharer.php?u=https://blog.paessler.com/types-and-features-of-common-network-services",
+            "twitter.com": "https://twitter.com/share?count=none&original_referer=https://blog.paessler.com/types-and-features-of-common-network-services&url=&text=Types%20and%20features%20of%20common%20network%20services&via=PaesslerAG",
+            "linkedin.com": "https://www.linkedin.com/shareArticle?mini=true&url=https://blog.paessler.com/types-and-features-of-common-network-services&title=&summary=&source=Paessler%20AG"
+        },
+        "people": [],
+        "source": "Google",
+        "confidence_score": 38,
+        "lead_quality": "Low",
+        "company_type": "Telecom"
+    },
+    {
+        "company_name": "Airspot",
+        "website": "https://airspot.in/",
+        "linkedin": null,
+        "industry": "Cybersecurity",
+        "location": null,
+        "contact_page": "https://airspot.in/contact.html",
+        "about_page": null,
+        "team_page": null,
+        "emails": [
+            "info@airspot.in",
+            "airspotnet@gmail.com"
+        ],
+        "phones": [
+            "+91 73596 68668"
+        ],
+        "social_links": {
+            "linkedin.com": "https://www.linkedin.com/in/airspot-networks-630ba126a/",
+            "instagram.com": "https://www.instagram.com/airspotn/",
+            "facebook.com": "https://www.facebook.com/people/Airspot-Networks/100090516154371"
+        },
+        "people": [],
+        "source": "Google",
+        "confidence_score": 60,
+        "lead_quality": "Medium",
+        "company_type": "Software Company"
+    },
+    {
+        "company_name": "Cambridge",
+        "website": "https://dictionary.cambridge.org/dictionary/english/industrial",
+        "linkedin": null,
+        "industry": "network",
+        "location": null,
+        "contact_page": null,
+        "about_page": "https://dictionary.cambridge.org/dictionary/english/company",
+        "team_page": "https://dictionary.cambridge.org/dictionary/english/people",
+        "emails": [
+            "a-logo-black-@1x.png"
+        ],
+        "phones": [],
+        "social_links": {
+            "facebook.com": "https://www.facebook.com/CUPCambridgeDictionary/",
+            "instagram.com": "https://www.instagram.com/cambridgewords",
+            "twitter.com": "https://twitter.com/CambridgeWords"
+        },
+        "people": [
+            {
+                "name": "From the Cambridge English Corpus",
+                "designation": "President",
+                "decision_maker_score": 85
+            }
+        ],
+        "source": "Google",
+        "confidence_score": 68,
+        "lead_quality": "Medium",
+        "company_type": "Industrial"
+    },
+    {
+        "company_name": "Hcltech",
+        "website": "https://www.hcltech.com/knowledge-library/network-services",
+        "linkedin": null,
+        "industry": "network",
+        "location": null,
+        "contact_page": null,
+        "about_page": null,
+        "team_page": null,
+        "emails": [],
+        "phones": [],
+        "social_links": {},
+        "people": [],
+        "source": "Google",
+        "confidence_score": 36,
+        "lead_quality": "Low",
+        "company_type": "Unknown"
+    },
+    {
+        "company_name": "Theindustrial",
+        "website": "https://www.theindustrial.in/",
+        "linkedin": null,
+        "industry": "Logistics",
+        "location": null,
+        "contact_page": "https://www.theindustrial.in/contact-us",
+        "about_page": "https://www.theindustrial.in/about-us",
+        "team_page": "https://www.theindustrial.in/news/a8e1b78728/Silvio-Napoli-Assumes-Role-as-CEO-of-Lucid-Following-Completion-of-Leadership-Transition",
+        "emails": [
+            "sales@theindustrial.in",
+            "support@theindustrial.in",
+            "investor@lucidmotors.com",
+            "editorials@theindustrial.in",
+            "abhijit@theindustrial.in",
+            "crm@theindustrial.in",
+            "shweta@kivaa.in",
+            "media@lucidmotors.com"
+        ],
+        "phones": [
+            "+91-9403000104",
+            "1080273",
+            "2991595",
+            "9403000104"
+        ],
+        "social_links": {
+            "facebook.com": "https://www.facebook.com/theindustrialofficial",
+            "twitter.com": "https://twitter.com/theindustrialfc",
+            "linkedin.com": "https://www.linkedin.com/showcase/theindustrialofficial",
+            "instagram.com": "https://www.instagram.com/theindustrialofficial"
+        },
+        "people": [],
+        "source": "Google",
+        "confidence_score": 70,
+        "lead_quality": "High",
+        "company_type": "Manufacturer"
+    },
+    {
+        "company_name": "Industrybuying",
+        "website": "https://www.industrybuying.com/",
+        "linkedin": null,
+        "industry": "network",
+        "location": null,
+        "contact_page": "https://www.industrybuying.com/contact-us",
+        "about_page": "https://www.industrybuying.com/about-us",
+        "team_page": "https://www.industrybuying.com/user/grievance-redressal",
+        "emails": [
+            "care@industrybuying.com"
+        ],
+        "phones": [
+            "+91 9650660070",
+            "6013 3.15"
+        ],
+        "social_links": {
+            "facebook.com": "https://www.facebook.com/industrybuying",
+            "twitter.com": "https://twitter.com/industrybuying",
+            "instagram.com": "https://www.instagram.com/industrybuyingofficial/",
+            "linkedin.com": "https://in.linkedin.com/company/industrybuying"
+        },
+        "people": [],
+        "source": "Google",
+        "confidence_score": 70,
+        "lead_quality": "High",
+        "company_type": "Industrial"
+    },
+    {
+        "company_name": "Industrialoutlook",
+        "website": "https://industrialoutlook.in/",
+        "linkedin": null,
+        "industry": "Artificial Intelligence",
+        "location": null,
+        "contact_page": "https://industrialoutlook.in/Contact-Us.html",
+        "about_page": "https://industrialoutlook.in/aboutus.html",
+        "team_page": null,
+        "emails": [
+            "info@industrialoutlook.in",
+            "editor@industrialoutlook.in",
+            "name@example.com"
+        ],
+        "phones": [
+            "+91 98921 06638"
+        ],
+        "social_links": {
+            "facebook.com": "https://www.facebook.com/indusoutlook/",
+            "x.com": "https://x.com/indusoutlook",
+            "linkedin.com": "https://www.linkedin.com/company/indusoutlook",
+            "instagram.com": "https://www.instagram.com/industrialoutlook"
+        },
+        "people": [],
+        "source": "Google",
+        "confidence_score": 66,
+        "lead_quality": "Medium",
+        "company_type": "Manufacturer"
+    },
+    {
+        "company_name": "Wallstreetmojo",
+        "website": "https://www.wallstreetmojo.com/industrials-sector/",
+        "linkedin": null,
+        "industry": "Artificial Intelligence",
+        "location": null,
+        "contact_page": "https://www.wallstreetmojo.com/contact-us/",
+        "about_page": "https://www.wallstreetmojo.com/about-us/",
+        "team_page": "https://www.wallstreetmojo.com/wallstreetmojo-team/rutan-bhattacharyya/",
+        "emails": [
+            "support@wallstreetmojo.com",
+            "you@example.com"
+        ],
+        "phones": [
+            "+91-8828012523"
+        ],
+        "social_links": {
+            "linkedin.com": "https://www.linkedin.com/company/wallstreetmojo/",
+            "x.com": "https://x.com/wallstreetmojo",
+            "facebook.com": "https://www.facebook.com/wallstreetmojo"
+        },
+        "people": [],
+        "source": "Google",
+        "confidence_score": 70,
+        "lead_quality": "High",
+        "company_type": "Industrial"
+    },
+    {
+        "company_name": "Isid",
+        "website": "https://isid.org.in/wp-content/uploads/2024/12/2024-25-IIDR-exe-summary.pdf",
+        "linkedin": null,
+        "industry": "network",
+        "location": null,
+        "contact_page": null,
+        "about_page": null,
+        "team_page": null,
+        "emails": [],
+        "phones": [],
+        "social_links": {},
+        "people": [],
+        "source": "Google",
+        "confidence_score": 36,
+        "lead_quality": "Low",
+        "company_type": "Unknown"
+    },
+    {
+        "company_name": "Hellolandmark",
+        "website": "https://hellolandmark.com/sidco-industrial-estate-kurichi-coimbatore-district-tamil-nadu/",
+        "linkedin": null,
+        "industry": "network",
+        "location": null,
+        "contact_page": "https://hellolandmark.com/contact-us/",
+        "about_page": "https://hellolandmark.com/about/",
+        "team_page": null,
+        "emails": [
+            "hello@hellolandmark.com"
+        ],
+        "phones": [
+            "437 9999",
+            "455 66 999",
+            "4952 5999",
+            "94 45 28 88 88",
+            "94452 88888"
+        ],
+        "social_links": {
+            "facebook.com": "http://facebook.com/hellolandmarkindia",
+            "x.com": "http://x.com/hellolandmark",
+            "instagram.com": "http://instagram.com/hellolandmarkindia",
+            "linkedin.com": "https://linkedin.com/in/hellolandmark"
+        },
+        "people": [],
+        "source": "Google",
+        "confidence_score": 66,
+        "lead_quality": "Medium",
+        "company_type": "Industrial"
+    }
+]
