@@ -24,7 +24,29 @@ from collections import defaultdict
 
 # ---------- Config ----------
 
-INPUT_FILES = sorted(glob.glob("data-*.json"))
+import sys
+import pathlib
+
+# --------------- Input / Output wiring ---------------
+# Usage:
+#   python clean_leads.py                                  (legacy: reads data-*.json)
+#   python clean_leads.py input.json                       (reads one file, writes to output/clean/)
+#   python clean_leads.py input.json output_clean.json     (explicit output path)
+
+if len(sys.argv) >= 2:
+    INPUT_FILES = [sys.argv[1]]
+else:
+    INPUT_FILES = sorted(glob.glob("data-*.json"))  # legacy fallback
+
+if len(sys.argv) >= 3:
+    _OUT_CLEAN   = pathlib.Path(sys.argv[2])
+    _OUT_FLAGGED = _OUT_CLEAN.parent / (_OUT_CLEAN.stem + "_flagged" + _OUT_CLEAN.suffix)
+    _OUT_REPORT  = _OUT_CLEAN.parent / (_OUT_CLEAN.stem + "_report.txt")
+else:
+    _stem        = pathlib.Path(INPUT_FILES[0]).stem if INPUT_FILES else "leads"
+    _OUT_CLEAN   = pathlib.Path("output") / "clean"    / f"{_stem}.json"
+    _OUT_FLAGGED = pathlib.Path("output") / "clean"    / f"{_stem}_flagged.json"
+    _OUT_REPORT  = pathlib.Path("output") / "clean"    / f"{_stem}_report.txt"
 
 # Article/directory page indicators in "company_name" (these are not companies)
 DIRECTORY_PATTERNS = [
@@ -172,10 +194,12 @@ def main():
     clean_records = [r for r in deduped if not r["_flags"]]
     flagged_records = [r for r in deduped if r["_flags"]]
 
-    with open("cleaned_leads.json", "w", encoding="utf-8") as fh:
+    _OUT_CLEAN.parent.mkdir(parents=True, exist_ok=True)
+
+    with open(_OUT_CLEAN, "w", encoding="utf-8") as fh:
         json.dump(clean_records, fh, indent=2, ensure_ascii=False)
 
-    with open("flagged_leads.json", "w", encoding="utf-8") as fh:
+    with open(_OUT_FLAGGED, "w", encoding="utf-8") as fh:
         json.dump(flagged_records, fh, indent=2, ensure_ascii=False)
 
     # Tally flag reasons
@@ -185,7 +209,7 @@ def main():
             tag = issue.split(":")[0]
             tally[tag] += 1
 
-    with open("report.txt", "w", encoding="utf-8") as fh:
+    with open(_OUT_REPORT, "w", encoding="utf-8") as fh:
         fh.write("PILLAR 2 — LEAD CLEANING REPORT\n")
         fh.write("=" * 40 + "\n")
         fh.write(f"Input files: {', '.join(INPUT_FILES)}\n")
@@ -200,7 +224,8 @@ def main():
         fh.write("\nNOTE: Live MX-record email verification was NOT run (no network\n")
         fh.write("access in this environment). See verify_mx() in the script for the hook.\n")
 
-    print(open("report.txt").read())
+    print(open(_OUT_REPORT).read())
+    print(f"Output -> {_OUT_CLEAN}")
 
 
 if __name__ == "__main__":

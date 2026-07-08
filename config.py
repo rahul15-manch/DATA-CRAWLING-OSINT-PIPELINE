@@ -31,7 +31,9 @@ load_dotenv()
 SEARCH_PROVIDER = os.getenv("SEARCH_PROVIDER", "auto").strip().lower()
 
 # Ordered list of providers to try (env: comma-separated string)
-_raw_priority   = os.getenv("SEARCH_PROVIDER_PRIORITY", "serpapi,google_cse,generic_api,bing")
+# google_html is primary — uses curl_cffi Chrome TLS impersonation (no API key needed).
+# bing is the final fallback — always available.
+_raw_priority   = os.getenv("SEARCH_PROVIDER_PRIORITY", "google_html,serpapi,google_cse,generic_api,bing")
 SEARCH_PROVIDER_PRIORITY: list[str] = [p.strip() for p in _raw_priority.split(",") if p.strip()]
 
 
@@ -98,7 +100,8 @@ MAX_CRAWL_WORKERS       = int(os.getenv("MAX_CRAWL_WORKERS",  "5"))
 # Paths
 # ─────────────────────────────────────────────────────────────────────────────
 
-OUTPUT_FOLDER           = "output"
+OUTPUT_FOLDER           = "output"                             # root — don't write files here directly
+RAW_OUTPUT_FOLDER       = os.path.join(OUTPUT_FOLDER, "raw")   # Pillar 1 lead cards land here
 DATA_FOLDER             = "data"
 
 

@@ -36,7 +36,23 @@ try:
 except ImportError:
     whois = None
 
-INPUT_FILE = "rescue_candidates.json"
+import sys
+import pathlib
+
+# --------------- Input / Output wiring ---------------
+# Usage:
+#   python enrichment_leads.py                          (legacy: reads rescue_candidates.json)
+#   python enrichment_leads.py input.json               (writes to output/enriched/)
+#   python enrichment_leads.py input.json output.json   (explicit output path)
+
+INPUT_FILE = sys.argv[1] if len(sys.argv) >= 2 else "rescue_candidates.json"
+
+if len(sys.argv) >= 3:
+    _OUT_ENRICHED = pathlib.Path(sys.argv[2])
+else:
+    _stem         = pathlib.Path(INPUT_FILE).stem
+    _OUT_ENRICHED = pathlib.Path("output") / "enriched" / f"{_stem}.json"
+
 REQUEST_TIMEOUT = 6
 CANDIDATE_TLDS = [".com", ".in", ".co.in", ".io", ".org"]
 
@@ -151,14 +167,16 @@ def main():
         if i % 10 == 0 or i == len(records):
             print(f"  processed {i}/{len(records)}")
 
-    with open("enriched_leads.json", "w", encoding="utf-8") as fh:
+    _OUT_ENRICHED.parent.mkdir(parents=True, exist_ok=True)
+
+    with open(_OUT_ENRICHED, "w", encoding="utf-8") as fh:
         json.dump(enriched, fh, indent=2, ensure_ascii=False)
 
     found_new_domain = sum(1 for r in enriched if r["_enrichment"].get("domain_source") == "guessed_and_verified")
     print("\n" + "=" * 40)
     print(f"Records processed: {len(enriched)}")
     print(f"New domains discovered via guessing: {found_new_domain}")
-    print("Output written to enriched_leads.json")
+    print(f"Output -> {_OUT_ENRICHED}")
     print("=" * 40)
 
 

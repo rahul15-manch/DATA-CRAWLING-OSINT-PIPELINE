@@ -1,31 +1,25 @@
 #!/usr/bin/env python3
-"""
-Pillar 2 — Finalize Script (v2, fixes the real bugs)
 
-Problems this fixes vs. the earlier merge_final.py:
-  1. merge_final.py kept the ORIGINAL noisy emails/phones fields — it only
-     stripped debug metadata. This script REPLACES emails/phones with the
-     verified-only lists (_verified_emails / _verified_phones), so garbage
-     like ISBN numbers, DOIs, and market-cap tables are actually gone.
-  2. The directory-page filter in clean_leads.py missed patterns like
-     "List of X", "What is X", bare topic pages ("Artificial intelligence"),
-     and wikipedia.org / definition-style URLs. This adds a stronger filter
-     as a final safety net.
-  3. Drops records where, after all this, there's nothing usable left
-     (no verified email, no verified phone, no reachable website).
-
-Input:  verified_leads_original.json, verified_leads_rescue.json
-Output: FINAL_leads_for_pillar4.json  (overwrites the old broken one)
-        dropped_at_finalize.json     (records cut at this last stage, for review)
-"""
 
 import json
 import re
 
-INPUT_FILES = [
-    "verified_leads_original.json",
-    "verified_leads_rescue.json",
-]
+import sys
+import pathlib
+
+
+if len(sys.argv) >= 2:
+    INPUT_FILES = [sys.argv[1]]
+else:
+    INPUT_FILES = ["verified_leads_original.json", "verified_leads_rescue.json"]  # legacy
+
+if len(sys.argv) >= 3:
+    _OUT_FINAL   = pathlib.Path(sys.argv[2])
+    _OUT_DROPPED = _OUT_FINAL.parent / (_OUT_FINAL.stem + "_dropped" + _OUT_FINAL.suffix)
+else:
+    _stem        = pathlib.Path(INPUT_FILES[0]).stem
+    _OUT_FINAL   = pathlib.Path("output") / "final" / f"{_stem}.json"
+    _OUT_DROPPED = pathlib.Path("output") / "final" / f"{_stem}_dropped.json"
 
 # Stronger article/definition/directory page patterns — final safety net
 ARTICLE_PATTERNS = [
@@ -126,17 +120,19 @@ def main():
         seen.add(key)
         final.append(rec)
 
-    with open("FINAL_leads_for_pillar4.json", "w", encoding="utf-8") as fh:
+    _OUT_FINAL.parent.mkdir(parents=True, exist_ok=True)
+
+    with open(_OUT_FINAL, "w", encoding="utf-8") as fh:
         json.dump(final, fh, indent=2, ensure_ascii=False)
 
-    with open("dropped_at_finalize.json", "w", encoding="utf-8") as fh:
+    with open(_OUT_DROPPED, "w", encoding="utf-8") as fh:
         json.dump(dropped, fh, indent=2, ensure_ascii=False)
 
     print("=" * 40)
     print(f"Total records loaded: {len(all_records)}")
     print(f"Dropped at finalize (article pages / nothing usable): {len(dropped)}")
     print(f"Final clean records: {len(final)}")
-    print("Output: FINAL_leads_for_pillar4.json (overwritten)")
+    print(f"Output -> {_OUT_FINAL}")
     print("=" * 40)
 
 

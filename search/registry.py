@@ -32,20 +32,22 @@ from search.providers.google_html_provider import GoogleHtmlProvider
 # value : provider class (NOT an instance — SearchManager instantiates lazily)
 
 PROVIDER_REGISTRY: dict[str, type] = {
-    "serpapi":     SerpApiProvider,
-    "google_cse":  GoogleCseProvider,
-    "bing":        BingProvider,
-    "generic_api": GenericApiProvider,   # formerly "custom"
-    "google_html": GoogleHtmlProvider,   # experimental — disabled by default
+    "google_html": GoogleHtmlProvider,   # Primary — Chrome TLS impersonation via curl_cffi
+    "serpapi":     SerpApiProvider,       # Optional — requires SERPAPI_KEY
+    "google_cse":  GoogleCseProvider,    # Optional — requires GOOGLE_CSE_KEY + GOOGLE_CSE_CX
+    "generic_api": GenericApiProvider,   # Optional — requires ENABLE_CUSTOM_PROVIDER + CUSTOM_PROVIDER_URL
+    "bing":        BingProvider,         # Final fallback — always available, no key required
 }
 
 # ── Default priority order ────────────────────────────────────────────────────
-# Overridden by SEARCH_PROVIDER_PRIORITY env var.
-# google_html deliberately excluded from defaults (experimental).
+# Overridden by SEARCH_PROVIDER_PRIORITY env var or config.py.
+# Google HTML is the primary provider (uses curl_cffi Chrome TLS impersonation).
+# Bing is the final fallback — always available, no key required.
 
 DEFAULT_PRIORITY: list[str] = [
-    "serpapi",
-    "google_cse",
-    "generic_api",
-    "bing",
+    "google_html",  # Primary: Google HTML via curl_cffi Chrome impersonation
+    "serpapi",      # Optional: API-based Google results (requires key)
+    "google_cse",   # Optional: Google Custom Search API (requires key)
+    "generic_api",  # Optional: any custom REST provider
+    "bing",         # Fallback: always available
 ]

@@ -321,12 +321,12 @@ def run_pipeline(keyword: str):
                 )
 
     # ── Write output ──────────────────────────────────────────────────────
-    os.makedirs(config.OUTPUT_FOLDER, exist_ok=True)
+    os.makedirs(config.RAW_OUTPUT_FOLDER, exist_ok=True)
 
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     filename = keyword.replace(" ", "_").lower()
     output_file = os.path.join(
-        config.OUTPUT_FOLDER,
+        config.RAW_OUTPUT_FOLDER,
         f"{filename}_{timestamp}.json",
     )
 
@@ -390,7 +390,9 @@ def run_pipeline(keyword: str):
     print(f"Saved {len(leads)} Lead Cards  ->  {output_file}")
     print(f"  High: {high}  |  Medium: {medium}  |  Low: {low}")
 
-    return leads
+    # Return the output file path so the orchestrator can pass it to Pillar 2
+    # without having to reconstruct or guess the filename.
+    return output_file
 
 
 # ─────────────────────────────────────────────────────────────────────────────

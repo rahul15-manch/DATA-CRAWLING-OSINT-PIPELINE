@@ -1,0 +1,1493 @@
+[
+  {
+    "company_name": "Smergers",
+    "website": "https://www.smergers.com/technology-businesses-for-sale-and-investment-opportunities-in-samalkha/c12319s1412b/",
+    "linkedin": null,
+    "industry": "Artificial Intelligence",
+    "location": null,
+    "contact_page": "https://www.smergers.com/contact-us/",
+    "about_page": "https://www.smergers.com/about/",
+    "team_page": "https://www.smergers.com/distributorship/daily-dump/j8f8o/",
+    "emails": [],
+    "phones": [
+      "500 - 1000"
+    ],
+    "social_links": {
+      "facebook.com": "http://facebook.com/smergers",
+      "linkedin.com": "http://linkedin.com/company/smergers",
+      "twitter.com": "http://twitter.com/smergers",
+      "instagram.com": "https://www.instagram.com/smergersofficial/"
+    },
+    "people": [
+      {
+        "name": "Preferred Locations",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Recycling sales partner in India",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Business for Sale Near Me",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Mid Market Investors",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      }
+    ],
+    "source": "Google",
+    "confidence_score": 72,
+    "lead_quality": "High",
+    "company_type": "Software Company",
+    "_source_file": "output\\raw\\technology_20260708_092743.json",
+    "_flags": []
+  },
+  {
+    "company_name": "F6s",
+    "website": "https://www.f6s.com/companies/technology/india/co",
+    "linkedin": null,
+    "industry": "technology",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "confidence_score": 36,
+    "lead_quality": "Low",
+    "company_type": "Unknown",
+    "_source_file": "output\\raw\\technology_20260708_092743.json",
+    "_flags": []
+  },
+  {
+    "company_name": "Groveus",
+    "website": "https://www.groveus.com/haryana/samalkha",
+    "linkedin": null,
+    "industry": "Software Development",
+    "location": null,
+    "contact_page": "https://www.groveus.com/contact",
+    "about_page": "https://www.groveus.com/about",
+    "team_page": "https://www.groveus.com/products/inventory-management-system",
+    "emails": [
+      "support@groveus.com"
+    ],
+    "phones": [
+      "+91 9064849054",
+      "+91 9093311022"
+    ],
+    "social_links": {
+      "x.com": "https://x.com/groveusinfo",
+      "facebook.com": "https://www.facebook.com/groveus/",
+      "linkedin.com": "https://www.linkedin.com/company/groveus-india/",
+      "instagram.com": "https://www.instagram.com/groveusinformatics/"
+    },
+    "people": [],
+    "source": "Google",
+    "confidence_score": 70,
+    "lead_quality": "High",
+    "company_type": "Software Company",
+    "_source_file": "output\\raw\\technology_20260708_092743.json",
+    "_flags": []
+  },
+  {
+    "company_name": "Raralogy",
+    "website": "https://raralogy.com/locations/haryana/samalkha",
+    "linkedin": null,
+    "industry": "technology",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "confidence_score": 36,
+    "lead_quality": "Low",
+    "company_type": "Unknown",
+    "_source_file": "output\\raw\\technology_20260708_092743.json",
+    "_flags": []
+  },
+  {
+    "company_name": "Technologyadvice",
+    "website": "https://technologyadvice.com/it-software/",
+    "linkedin": null,
+    "industry": "technology",
+    "location": null,
+    "contact_page": "https://technologyadvice.com/contact-us/",
+    "about_page": "https://technologyadvice.com/about-us/",
+    "team_page": "https://technologyadvice.com/project-management/",
+    "emails": [],
+    "phones": [
+      "877-702-2082"
+    ],
+    "social_links": {
+      "facebook.com": "https://www.facebook.com/aron.vaughan.1",
+      "linkedin.com": "https://www.linkedin.com/in/aron-vaughan-67730b21",
+      "twitter.com": "https://twitter.com/Technology_Adv",
+      "instagram.com": "https://www.instagram.com/technologyadvice/"
+    },
+    "people": [
+      {
+        "name": "Featured partners",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Our Brands",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      }
+    ],
+    "source": "Google",
+    "confidence_score": 69,
+    "lead_quality": "Medium",
+    "company_type": "Software Company",
+    "_source_file": "output\\raw\\technology_20260708_092743.json",
+    "_flags": []
+  },
+  {
+    "company_name": "Quantumtechdigital",
+    "website": "https://www.quantumtechdigital.com/samalkha/it-services",
+    "linkedin": null,
+    "industry": "Software Development",
+    "location": null,
+    "contact_page": "https://www.quantumtechdigital.com/contact",
+    "about_page": "https://www.quantumtechdigital.com/#about",
+    "team_page": null,
+    "emails": [
+      "connect@quantumtechdigital.com"
+    ],
+    "phones": [
+      "+91 79820-82271"
+    ],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "confidence_score": 66,
+    "lead_quality": "Medium",
+    "company_type": "Software Company",
+    "_source_file": "output\\raw\\technology_20260708_092743.json",
+    "_flags": []
+  },
+  {
+    "company_name": "Synarionit",
+    "website": "https://blog.synarionit.com/top-it-software-companies-in-india/",
+    "linkedin": null,
+    "industry": "technology",
+    "location": null,
+    "contact_page": null,
+    "about_page": "https://blog.synarionit.com/top-it-software-companies-in-india/#Key_Checklist_to_Follow_When_Hiring_an_IT_Company_in_India",
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {
+      "facebook.com": "https://www.facebook.com/synarionit",
+      "x.com": "https://x.com/synarionit",
+      "linkedin.com": "https://www.linkedin.com/company/synarion-it",
+      "instagram.com": "https://www.instagram.com/synarionit/",
+      "twitter.com": "https://twitter.com/share?url=https://blog.synarionit.com/top-it-software-companies-in-india/"
+    },
+    "people": [],
+    "source": "Google",
+    "confidence_score": 38,
+    "lead_quality": "Low",
+    "company_type": "Software Company",
+    "_source_file": "output\\raw\\technology_20260708_092743.json",
+    "_flags": []
+  },
+  {
+    "company_name": "Sciencedirect",
+    "website": "https://www.sciencedirect.com/topics/computer-science/software-technology",
+    "linkedin": null,
+    "industry": "technology",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "confidence_score": 36,
+    "lead_quality": "Low",
+    "company_type": "Unknown",
+    "_source_file": "output\\raw\\technology_20260708_092743.json",
+    "_flags": []
+  },
+  {
+    "company_name": "Techlist",
+    "website": "https://techlist.ai/country/in",
+    "linkedin": null,
+    "industry": "technology",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "confidence_score": 36,
+    "lead_quality": "Low",
+    "company_type": "Unknown",
+    "_source_file": "output\\raw\\technology_20260708_092743.json",
+    "_flags": []
+  },
+  {
+    "company_name": "Ey",
+    "website": "https://www.ey.com/en_in/services/technology-solutions",
+    "linkedin": null,
+    "industry": "Artificial Intelligence",
+    "location": null,
+    "contact_page": null,
+    "about_page": "https://www.ey.com/en_in/careers/parthenon",
+    "team_page": "https://www.ey.com/en_in/services/workforce",
+    "emails": [],
+    "phones": [],
+    "social_links": {
+      "facebook.com": "https://www.facebook.com/EYCareersIndia/",
+      "linkedin.com": "https://www.linkedin.com/company/ernstandyoung/mycompany/"
+    },
+    "people": [
+      {
+        "name": "Tata Steel",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      }
+    ],
+    "source": "Google",
+    "confidence_score": 58,
+    "lead_quality": "Medium",
+    "company_type": "Unknown",
+    "_source_file": "output\\raw\\technology_20260708_092743.json",
+    "_flags": []
+  },
+  {
+    "company_name": "Stpi",
+    "website": "https://stpi.in/en/about-stpi",
+    "linkedin": null,
+    "industry": "technology",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "confidence_score": 36,
+    "lead_quality": "Low",
+    "company_type": "Unknown",
+    "_source_file": "output\\raw\\technology_20260708_092743.json",
+    "_flags": []
+  },
+  {
+    "company_name": "Techspot",
+    "website": "https://www.techspot.com/downloads/",
+    "linkedin": null,
+    "industry": "Cybersecurity",
+    "location": null,
+    "contact_page": null,
+    "about_page": "https://www.techspot.com/about/",
+    "team_page": "https://www.techspot.com/news/113026-valve-releases-official-windows-drivers-steam-machine.html",
+    "emails": [],
+    "phones": [
+      "11.26.980",
+      "14.0.8.110",
+      "150.0.7871.101",
+      "152.0.7938.0",
+      "16.0.0.1332",
+      "2.2.694622.0",
+      "2.26.26.73",
+      "2.2623.3.0",
+      "26.07.27.4",
+      "26.6.11052",
+      "32.0.101.8860",
+      "8.1.4087.40"
+    ],
+    "social_links": {
+      "facebook.com": "https://www.facebook.com/techspot",
+      "x.com": "https://x.com/techspot"
+    },
+    "people": [],
+    "source": "Google",
+    "confidence_score": 56,
+    "lead_quality": "Medium",
+    "company_type": "Software Company",
+    "_source_file": "output\\raw\\technology_20260708_092743.json",
+    "_flags": []
+  },
+  {
+    "company_name": "Technologysolutions",
+    "website": "https://www.technologysolutions.in/",
+    "linkedin": null,
+    "industry": "technology",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "confidence_score": 36,
+    "lead_quality": "Low",
+    "company_type": "Unknown",
+    "_source_file": "output\\raw\\technology_20260708_092743.json",
+    "_flags": []
+  },
+  {
+    "company_name": "Trishikasolutions",
+    "website": "https://trishikasolutions.in/Samalkha/Digital-Product-Services.html",
+    "linkedin": null,
+    "industry": "technology",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "confidence_score": 36,
+    "lead_quality": "Low",
+    "company_type": "Unknown",
+    "_source_file": "output\\raw\\technology_20260708_092743.json",
+    "_flags": []
+  },
+  {
+    "company_name": "Technosoftsolutions",
+    "website": "https://technosoftsolutions.in/",
+    "linkedin": null,
+    "industry": "Civil Engineering",
+    "location": null,
+    "contact_page": "https://technosoftsolutions.in/contact-us.html",
+    "about_page": "https://technosoftsolutions.in/about-us.html",
+    "team_page": "https://technosoftsolutions.in/network-management.html",
+    "emails": [
+      "info@technosoftsolutions.in",
+      "shashank.khemani@technosoftsolutions.in"
+    ],
+    "phones": [
+      "+91-11-41027006",
+      "+91-9871975179"
+    ],
+    "social_links": {
+      "facebook.com": "https://www.facebook.com/Technosoft-Solutions-343303085737240/",
+      "linkedin.com": "https://www.linkedin.com/company/970769/admin/"
+    },
+    "people": [],
+    "source": "Google",
+    "confidence_score": 70,
+    "lead_quality": "High",
+    "company_type": "Software Company",
+    "_source_file": "output\\raw\\technology_20260708_092743.json",
+    "_flags": []
+  },
+  {
+    "company_name": "Advancedtechsol",
+    "website": "https://advancedtechsol.in/",
+    "linkedin": null,
+    "industry": "technology",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "confidence_score": 36,
+    "lead_quality": "Low",
+    "company_type": "Unknown",
+    "_source_file": "output\\raw\\technology_20260708_092743.json",
+    "_flags": []
+  },
+  {
+    "company_name": "Bbc",
+    "website": "https://www.bbc.com/technology",
+    "linkedin": null,
+    "industry": "Artificial Intelligence",
+    "location": null,
+    "contact_page": null,
+    "about_page": "https://www.bbc.com/news/articles/cql11969g2qo",
+    "team_page": "https://www.bbc.com/news/articles/cz758x04g83o",
+    "emails": [
+      "eastmidsnews@bbc.co.uk",
+      "eastmidsnews@bbc.co.uk"
+    ],
+    "phones": [
+      "0808 100 2210"
+    ],
+    "social_links": {
+      "x.com": "https://www.britbox.com/?utm_source=bbc.com&utm_medium=referral&utm_campaign=footer"
+    },
+    "people": [
+      {
+        "name": "Add as preferred on Google",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Victoria Hicks Leicester",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Victoria Hicks Leicester",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Victoria Hicks Leicester",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Victoria Hicks Leicester",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Privacy Policy",
+        "designation": "COO",
+        "decision_maker_score": 75
+      }
+    ],
+    "source": "Google",
+    "confidence_score": 78,
+    "lead_quality": "High",
+    "company_type": "AI Startup",
+    "_source_file": "output\\raw\\technology_20260708_092743.json",
+    "_flags": []
+  },
+  {
+    "company_name": "Indianexpress",
+    "website": "https://indianexpress.com/section/technology/",
+    "linkedin": null,
+    "industry": "Artificial Intelligence",
+    "location": null,
+    "contact_page": "https://indianexpress.com/contact-us/",
+    "about_page": "https://indianexpress.com/about/express-premium/",
+    "team_page": "https://indianexpress.com/article/technology/tech-reviews/iphone-17e-review-10643437/",
+    "emails": [
+      "newsubscribepreprod@mailinator.com",
+      "userfeedback@indianexpress.com",
+      "onlinesales@indianexpress.com",
+      "subscriptions@indianexpress.com",
+      "developregister@mailinator.com",
+      "feedback@indianexpress.com",
+      "developregister1@mailinator.com",
+      "subscribeharshitpreprod@mailinator.com"
+    ],
+    "phones": [],
+    "social_links": {
+      "facebook.com": "https://www.facebook.com/indianexpress",
+      "twitter.com": "https://twitter.com/IndianExpress",
+      "instagram.com": "https://www.instagram.com/indianexpress/",
+      "linkedin.com": "https://www.linkedin.com/company/indian-express/"
+    },
+    "people": [],
+    "source": "Google",
+    "confidence_score": 60,
+    "lead_quality": "Medium",
+    "company_type": "AI Startup",
+    "_source_file": "output\\raw\\technology_20260708_092743.json",
+    "_flags": []
+  },
+  {
+    "company_name": "Scientificamerican",
+    "website": "https://www.scientificamerican.com/technology/",
+    "linkedin": null,
+    "industry": "Artificial Intelligence",
+    "location": null,
+    "contact_page": "https://www.scientificamerican.com/page/contact-us/customer-service/",
+    "about_page": "https://www.scientificamerican.com/page/about-scientific-american/",
+    "team_page": null,
+    "emails": [
+      "scacustserv@cdsfulfillment.com",
+      "editors@sciam.com",
+      "randp@sciam.com",
+      "help@sciam.com"
+    ],
+    "phones": [
+      "+1-888-331-6288",
+      "+44-(0)20-7014-4113",
+      "+81-3-4533-8090",
+      "+86-10-8341-5022",
+      "001-515-248-7684",
+      "800-333-1199",
+      "978-750-8400"
+    ],
+    "social_links": {
+      "facebook.com": "https://www.facebook.com/ScientificAmerican",
+      "instagram.com": "https://www.instagram.com/scientific_american/?hl=en",
+      "linkedin.com": "https://www.linkedin.com/company/scientific-american"
+    },
+    "people": [],
+    "source": "Google",
+    "confidence_score": 66,
+    "lead_quality": "Medium",
+    "company_type": "Unknown",
+    "_source_file": "output\\raw\\technology_20260708_092743.json",
+    "_flags": []
+  },
+  {
+    "company_name": "Indiatoday",
+    "website": "https://www.indiatoday.in/technology/tech-today",
+    "linkedin": null,
+    "industry": "Artificial Intelligence",
+    "location": null,
+    "contact_page": null,
+    "about_page": "https://www.indiatoday.in/company-profile",
+    "team_page": "https://www.indiatoday.in/education-today/story/cbse-class-10-second-board-result-2026-live-direct-link-digilocker-toppers-pass-percentage-cbseresults-nic-in-2941643-2026-07-06?utm_source=hp_bottom_latest&utm_medium=it_web",
+    "emails": [],
+    "phones": [],
+    "social_links": {
+      "facebook.com": "https://www.facebook.com/IndiaToday/",
+      "twitter.com": "https://twitter.com/indiatoday",
+      "instagram.com": "https://www.instagram.com/indiatoday/"
+    },
+    "people": [],
+    "source": "Google",
+    "confidence_score": 46,
+    "lead_quality": "Medium",
+    "company_type": "Software Company",
+    "_source_file": "output\\raw\\technology_20260708_092743.json",
+    "_flags": []
+  },
+  {
+    "company_name": "Synoptics",
+    "website": "https://synoptics.co.in/",
+    "linkedin": null,
+    "industry": "Civil Engineering",
+    "location": null,
+    "contact_page": "https://synoptics.co.in/contact-us/",
+    "about_page": "https://synoptics.co.in/about-us/",
+    "team_page": "https://synoptics.co.in/careers/life-at-synoptics/",
+    "emails": [
+      "info@synoptics.co.in"
+    ],
+    "phones": [
+      "+91 22 - 4505 0000",
+      "022 - 4505 0000"
+    ],
+    "social_links": {
+      "facebook.com": "https://www.facebook.com/Synopticstech/",
+      "linkedin.com": "https://www.linkedin.com/company/synoptics-technologies-private-limited"
+    },
+    "people": [],
+    "source": "Google",
+    "confidence_score": 70,
+    "lead_quality": "High",
+    "company_type": "Telecom",
+    "_source_file": "output\\raw\\technology_20260708_092743.json",
+    "_flags": []
+  },
+  {
+    "company_name": "Datacipher",
+    "website": "https://datacipher.com/top-it-service-providers-in-india-enterprises/",
+    "linkedin": null,
+    "industry": "technology",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "confidence_score": 36,
+    "lead_quality": "Low",
+    "company_type": "Unknown",
+    "_source_file": "output\\raw\\technology_20260708_092743.json",
+    "_flags": []
+  },
+  {
+    "company_name": "Orientindia",
+    "website": "https://www.orientindia.in/",
+    "linkedin": null,
+    "industry": "Cloud Computing",
+    "location": null,
+    "contact_page": "https://www.orientindia.in/contact-us",
+    "about_page": "https://www.orientindia.in/about-us",
+    "team_page": "https://www.orientindia.in/bu-collections/end-user-computing",
+    "emails": [
+      "suraj@orientindia.net",
+      "inquiry@orientindia.net"
+    ],
+    "phones": [
+      "+91 22 4292 8888"
+    ],
+    "social_links": {
+      "linkedin.com": "https://www.linkedin.com/company/orienttechnologies/posts/?feedView=all",
+      "instagram.com": "https://www.instagram.com/orient_otl/",
+      "facebook.com": "https://www.facebook.com/orienttechnologies",
+      "x.com": "https://x.com/Orient_otpl"
+    },
+    "people": [],
+    "source": "Google",
+    "confidence_score": 70,
+    "lead_quality": "High",
+    "company_type": "Software Company",
+    "_source_file": "output\\raw\\technology_20260708_092743.json",
+    "_flags": []
+  },
+  {
+    "company_name": "Yash",
+    "website": "https://www.yash.com/",
+    "linkedin": null,
+    "industry": "Artificial Intelligence",
+    "location": null,
+    "contact_page": "https://www.yash.com/contact-us/",
+    "about_page": "https://www.yash.com/about-us/",
+    "team_page": "https://www.yash.com/services/data-analytics-services/data-management-services/",
+    "emails": [
+      "info@yash.com"
+    ],
+    "phones": [
+      "+20220 650144",
+      "0020220650147",
+      "210-340-0098",
+      "309-755-0433",
+      "31-621661989",
+      "31-651243655",
+      "314-720-6925",
+      "44-02074487000",
+      "46-763116825",
+      "49-1624097083",
+      "515-309-1948",
+      "61-450501299",
+      "647-438-8265",
+      "65-65332600",
+      "773-442-0125",
+      "781-503-9200",
+      "91-20-71258000",
+      "91-20-71918000",
+      "91-40-40403456",
+      "91-731-4261100",
+      "91-80-49043456",
+      "966-543340742",
+      "968-24476227",
+      "971-44332834",
+      "974-44470950",
+      "974-44471100"
+    ],
+    "social_links": {
+      "facebook.com": "https://www.facebook.com/YASHCorporate",
+      "twitter.com": "https://twitter.com/YASH_Tech",
+      "linkedin.com": "https://www.linkedin.com/company/yash-technologies/",
+      "instagram.com": "https://www.instagram.com/yash_technologies/"
+    },
+    "people": [],
+    "source": "Google",
+    "confidence_score": 70,
+    "lead_quality": "High",
+    "company_type": "Unknown",
+    "_source_file": "output\\raw\\technology_20260708_092743.json",
+    "_flags": []
+  },
+  {
+    "company_name": "Grantthornton",
+    "website": "https://www.grantthornton.in/industries/technology/",
+    "linkedin": null,
+    "industry": "technology",
+    "location": null,
+    "contact_page": "https://www.grantthornton.in/en/contact/",
+    "about_page": "https://www.grantthornton.in/en/about/golf/",
+    "team_page": "https://www.grantthornton.in/en/services/tax-regulatory-finance-consulting/global-people-solutions/",
+    "emails": [
+      "gtbharat@in.gt.com",
+      "someone@example.com",
+      "address@example.com",
+      "replytoaddress@example.com"
+    ],
+    "phones": [
+      "+91 11 4952 7400"
+    ],
+    "social_links": {
+      "linkedin.com": "https://in.linkedin.com/in/rajalahiri",
+      "facebook.com": "https://www.facebook.com/GrantThorntonBharat",
+      "twitter.com": "https://twitter.com/GrantThorntonIN",
+      "instagram.com": "https://www.instagram.com/grantthornton_bharat/"
+    },
+    "people": [
+      {
+        "name": "Akhil Chandna",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "View All Events",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Our leader",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Akhil Chandna",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      }
+    ],
+    "source": "Google",
+    "confidence_score": 79,
+    "lead_quality": "High",
+    "company_type": "Consultancy",
+    "_source_file": "output\\raw\\technology_20260708_092743.json",
+    "_flags": []
+  },
+  {
+    "company_name": "Pwc",
+    "website": "https://www.pwc.in/consulting/technology.html",
+    "linkedin": null,
+    "industry": "technology",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "confidence_score": 36,
+    "lead_quality": "Low",
+    "company_type": "Unknown",
+    "_source_file": "output\\raw\\technology_20260708_092743.json",
+    "_flags": []
+  },
+  {
+    "company_name": "Kpmg",
+    "website": "https://kpmg.com/in/en/services/advisory/consulting/technology-consulting.html",
+    "linkedin": null,
+    "industry": "technology",
+    "location": null,
+    "contact_page": "https://kpmg.com/in/en/misc/generic-contact-page.html",
+    "about_page": "https://kpmg.com/xx/en/about/industry-analyst-accolades.html",
+    "team_page": "https://kpmg.com/in/en/misc/kpmg-board-leadership-center.html",
+    "emails": [
+      "indiawebsite@kpmg.com",
+      "knickelanhalt@kpmg.com"
+    ],
+    "phones": [],
+    "social_links": {
+      "linkedin.com": "https://www.linkedin.com/shareArticle?mini=true&url=https://kpmg.com/in/en/services/advisory/consulting/technology-consulting.html&title=Technology%20Consulting",
+      "twitter.com": "http://twitter.com/share?text=Technology%20Consulting&url=https://kpmg.com/in/en/services/advisory/consulting/technology-consulting.html",
+      "facebook.com": "http://www.facebook.com/sharer.php?u=https://kpmg.com/in/en/services/advisory/consulting/technology-consulting.html&p[title]=Technology%20Consulting",
+      "x.com": "https://x.com/kpmgindia"
+    },
+    "people": [
+      {
+        "name": "Yezdi Nagporewalla",
+        "designation": null,
+        "linkedin": "https://in.linkedin.com/in/yezdinagporewalla",
+        "decision_maker_score": 0
+      }
+    ],
+    "source": "Google",
+    "confidence_score": 60,
+    "lead_quality": "Medium",
+    "company_type": "Consultancy",
+    "_source_file": "output\\raw\\technology_20260708_092743.json",
+    "_flags": []
+  },
+  {
+    "company_name": "Bain",
+    "website": "https://www.bain.com/industry-expertise/technology/",
+    "linkedin": null,
+    "industry": "Artificial Intelligence",
+    "location": null,
+    "contact_page": "https://www.bain.com/about/contact-us/",
+    "about_page": "https://www.bain.com/about/offices/",
+    "team_page": "https://www.bain.com/consulting-services/organization/",
+    "emails": [
+      "gary.duncan@bain.com",
+      "alumni.relations@bain.com",
+      "dan.pinkney@bain.com",
+      "ann.lee@bain.com"
+    ],
+    "phones": [
+      "+1 617 572 2000",
+      "+1 646 562 8102",
+      "+44 7788 163791",
+      "+65 6228 2960"
+    ],
+    "social_links": {
+      "linkedin.com": "https://www.linkedin.com/company/bain-and-company",
+      "x.com": "https://x.com/bainandcompany",
+      "facebook.com": "https://www.facebook.com/bainandcompany",
+      "instagram.com": "https://www.instagram.com/bainandcompany/"
+    },
+    "people": [
+      {
+        "name": "Sanjay Dhiri Partner London",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Sanjay Dhiri Partner London",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Sanjay Dhiri Partner London",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Sanjay Dhiri Partner London",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Sanjay Dhiri Partner London",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Sarah Elk Partner Houston",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Sarah Elk Partner Houston",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Sarah Elk Partner Houston",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Sarah Elk Partner Houston",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Sarah Elk Partner Houston",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Michael Withers Partner Melbourne",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Michael Withers Partner Melbourne",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Michael Withers Partner Melbourne",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Michael Withers Partner Melbourne",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Michael Withers Partner Melbourne",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Darrell Rigby Partner Boston",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Darrell Rigby Partner Boston",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Darrell Rigby Partner Boston",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Darrell Rigby Partner Boston",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Darrell Rigby Partner Boston",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Laura van Dijk Partner Boston",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Laura van Dijk Partner Boston",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Laura van Dijk Partner Boston",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Laura van Dijk Partner Boston",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Laura van Dijk Partner Boston",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Logan Stevens Partner Atlanta",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Logan Stevens Partner Atlanta",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Logan Stevens Partner Atlanta",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Logan Stevens Partner Atlanta",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Logan Stevens Partner Atlanta",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Rebecca Russell Partner Atlanta",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Rebecca Russell Partner Atlanta",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Rebecca Russell Partner Atlanta",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Rebecca Russell Partner Atlanta",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Rebecca Russell Partner Atlanta",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "John Hazan Partner Paris",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "John Hazan Partner Paris",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "John Hazan Partner Paris",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "John Hazan Partner Paris",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      }
+    ],
+    "source": "Google",
+    "confidence_score": 79,
+    "lead_quality": "High",
+    "company_type": "Consultancy",
+    "_source_file": "output\\raw\\technology_20260708_092743.json",
+    "_flags": []
+  },
+  {
+    "company_name": "Protiviti",
+    "website": "https://www.protiviti.com/in-en/technology-consulting-services",
+    "linkedin": null,
+    "industry": "Cybersecurity",
+    "location": null,
+    "contact_page": null,
+    "about_page": "https://www.protiviti.com/in-en/about-us",
+    "team_page": "https://www.protiviti.com/in-en/employee-experience",
+    "emails": [],
+    "phones": [],
+    "social_links": {
+      "linkedin.com": "https://www.linkedin.com/company/protiviti",
+      "twitter.com": "https://twitter.com/protiviti",
+      "facebook.com": "https://www.facebook.com/Protiviti"
+    },
+    "people": [
+      {
+        "name": "Nirmalya Gupta",
+        "designation": "CTO",
+        "linkedin": "https://in.linkedin.com/in/nirmalyagupta",
+        "decision_maker_score": 80
+      }
+    ],
+    "source": "Google",
+    "confidence_score": 58,
+    "lead_quality": "Medium",
+    "company_type": "Consultancy",
+    "_source_file": "output\\raw\\technology_20260708_092743.json",
+    "_flags": []
+  },
+  {
+    "company_name": "Itprofiles",
+    "website": "https://itprofiles.com/services/it-consulting/india",
+    "linkedin": null,
+    "industry": "technology",
+    "location": null,
+    "contact_page": "https://itprofiles.com/contact-us",
+    "about_page": "https://itprofiles.com/list-company",
+    "team_page": "https://itprofiles.com/services/it-management-support/india",
+    "emails": [
+      "support@itprofiles.com"
+    ],
+    "phones": [
+      "2-10 11-20 21-50 51-10"
+    ],
+    "social_links": {
+      "linkedin.com": "https://www.linkedin.com/in/jayanthi-devarajan-iyengar-927ab39"
+    },
+    "people": [
+      {
+        "name": "About ITProfiles",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      }
+    ],
+    "source": "Google",
+    "confidence_score": 82,
+    "lead_quality": "High",
+    "company_type": "Consultancy",
+    "_source_file": "output\\raw\\technology_20260708_092743.json",
+    "_flags": []
+  },
+  {
+    "company_name": "Thoughtworks",
+    "website": "https://www.thoughtworks.com/",
+    "linkedin": null,
+    "industry": "Artificial Intelligence",
+    "location": null,
+    "contact_page": "https://www.thoughtworks.com/contact-us",
+    "about_page": "https://www.thoughtworks.com/about-us",
+    "team_page": "https://www.thoughtworks.com/careers/benefits",
+    "emails": [
+      "peoplesupport-apac@thoughtworks.com",
+      "peoplesupport-china@thoughtworks.com",
+      "backgroundverification-india@thoughtworks.com",
+      "shared-services-americas-people-support@thoughtworks.com",
+      "ukpeoplesupport@thoughtworks.com",
+      "sg-th-sharedservices@thoughtworks.com",
+      "peoplesupport-na@thoughtworks.com"
+    ],
+    "phones": [],
+    "social_links": {
+      "linkedin.com": "https://www.linkedin.com/company/thoughtworks/",
+      "facebook.com": "https://www.facebook.com/Thoughtworks",
+      "x.com": "https://x.com/thoughtworks/",
+      "instagram.com": "https://www.instagram.com/thoughtworks/"
+    },
+    "people": [],
+    "source": "Google",
+    "confidence_score": 60,
+    "lead_quality": "Medium",
+    "company_type": "Software Company",
+    "_source_file": "output\\raw\\technology_20260708_092743.json",
+    "_flags": []
+  },
+  {
+    "company_name": "TCS",
+    "website": "https://www.tcs.com/",
+    "linkedin": null,
+    "industry": "technology",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "confidence_score": 36,
+    "lead_quality": "Low",
+    "company_type": "Unknown",
+    "_source_file": "output\\raw\\technology_20260708_092743.json",
+    "_flags": []
+  },
+  {
+    "company_name": "Technobind",
+    "website": "https://technobind.com/top-10-technology-distributors-in-india/",
+    "linkedin": null,
+    "industry": "Logistics",
+    "location": null,
+    "contact_page": "https://technobind.com/contact/",
+    "about_page": "https://technobind.com/core-dna/",
+    "team_page": "https://technobind.com/leadership-team/",
+    "emails": [
+      "info@technobind.com",
+      "rajesh.bm@technobind.com"
+    ],
+    "phones": [
+      "+91 8042154512",
+      "+91 81479 92307",
+      "+91- 9482537856"
+    ],
+    "social_links": {
+      "linkedin.com": "https://www.linkedin.com/company/technobind-solutions/",
+      "instagram.com": "https://www.instagram.com/technobind_solutions/?hl=en",
+      "facebook.com": "https://www.facebook.com/Technobind",
+      "twitter.com": "https://twitter.com/technobind"
+    },
+    "people": [
+      {
+        "name": "Prashanth G J",
+        "designation": "CEO",
+        "decision_maker_score": 90
+      },
+      {
+        "name": "Harikrishna Prabhu",
+        "designation": "COO",
+        "decision_maker_score": 75
+      },
+      {
+        "name": "Register Here",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      }
+    ],
+    "source": "Google",
+    "confidence_score": 84,
+    "lead_quality": "High",
+    "company_type": "Unknown",
+    "_source_file": "output\\raw\\technology_20260708_092743.json",
+    "_flags": []
+  },
+  {
+    "company_name": "Drsconsultancy",
+    "website": "https://drsconsultancy.in/",
+    "linkedin": null,
+    "industry": "technology",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "confidence_score": 36,
+    "lead_quality": "Low",
+    "company_type": "Unknown",
+    "_source_file": "output\\raw\\technology_20260708_092743.json",
+    "_flags": []
+  },
+  {
+    "company_name": "Failory",
+    "website": "https://www.failory.com/startups/india",
+    "linkedin": null,
+    "industry": "Artificial Intelligence",
+    "location": null,
+    "contact_page": null,
+    "about_page": "https://www.failory.com/about",
+    "team_page": "https://www.failory.com/startups/toronto-failures",
+    "emails": [
+      "nico@failory.com"
+    ],
+    "phones": [],
+    "social_links": {
+      "x.com": "https://www.vyometx.com/?ref=failory",
+      "twitter.com": "https://twitter.com/hellofailory"
+    },
+    "people": [],
+    "source": "Google",
+    "confidence_score": 56,
+    "lead_quality": "Medium",
+    "company_type": "Unknown",
+    "_source_file": "output\\raw\\technology_20260708_092743.json",
+    "_flags": []
+  },
+  {
+    "company_name": "Topstartups",
+    "website": "https://topstartups.io/?hq_location=india",
+    "linkedin": null,
+    "industry": "Artificial Intelligence",
+    "location": null,
+    "contact_page": null,
+    "about_page": "https://topstartups.io/?company_size=1-10+employees&company_size=11-50+employees",
+    "team_page": null,
+    "emails": [],
+    "phones": [
+      "501-1000"
+    ],
+    "social_links": {
+      "linkedin.com": "https://www.linkedin.com/company/innoviti-payment-solutions/",
+      "x.com": "http://scripbox.com?utm_source=topstartups.io"
+    },
+    "people": [],
+    "source": "Google",
+    "confidence_score": 50,
+    "lead_quality": "Medium",
+    "company_type": "Unknown",
+    "_source_file": "output\\raw\\technology_20260708_092743.json",
+    "_flags": []
+  },
+  {
+    "company_name": "Analyticsinsight",
+    "website": "https://www.analyticsinsight.net/startups/top-10-indian-tech-startups-to-watch-in-2026",
+    "linkedin": null,
+    "industry": "Artificial Intelligence",
+    "location": null,
+    "contact_page": "https://www.analyticsinsight.net/contact-us/",
+    "about_page": "https://www.analyticsinsight.net/about-us",
+    "team_page": "https://www.analyticsinsight.net/team",
+    "emails": [
+      "info@analyticsinsight.net",
+      "submissions@analyticsinsight.net",
+      "hr@analyticsinsight.net",
+      "humpy.a@analyticsinsight.net",
+      "press@analyticsinsight.net",
+      "manisha@analyticsinsight.net",
+      "ashishsukhadeve@analyticsinsight.net",
+      "soham@analyticsinsight.net",
+      "sankha@analyticsinsight.net"
+    ],
+    "phones": [
+      "+91 9000113973",
+      "+91 9100930793"
+    ],
+    "social_links": {
+      "x.com": "https://x.com/IamSoham07",
+      "twitter.com": "https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.analyticsinsight.net%2Fstartups%2Ftop-10-indian-tech-startups-to-watch-in-2026&text=Top%2010%20Indian%20Tech%20Startups%20to%20Watch%20in%202026&hashtags=",
+      "facebook.com": "https://www.facebook.com/sharer.php?u=https%3A%2F%2Fwww.analyticsinsight.net%2Fstartups%2Ftop-10-indian-tech-startups-to-watch-in-2026",
+      "linkedin.com": "https://www.linkedin.com/shareArticle?url=https%3A%2F%2Fwww.analyticsinsight.net%2Fstartups%2Ftop-10-indian-tech-startups-to-watch-in-2026&title=Top%2010%20Indian%20Tech%20Startups%20to%20Watch%20in%202026"
+    },
+    "people": [],
+    "source": "Google",
+    "confidence_score": 70,
+    "lead_quality": "High",
+    "company_type": "Software Company",
+    "_source_file": "output\\raw\\technology_20260708_092743.json",
+    "_flags": []
+  },
+  {
+    "company_name": "Nestlé IN",
+    "website": "https://www.nestle.in/about-us/our-factories",
+    "linkedin": null,
+    "industry": "technology",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "confidence_score": 36,
+    "lead_quality": "Low",
+    "company_type": "Unknown",
+    "_source_file": "output\\raw\\technology_20260708_092743.json",
+    "_flags": []
+  },
+  {
+    "company_name": "Digitalterminal",
+    "website": "https://digitalterminal.in/trending/indias-top-8-national-it-distribution-companies",
+    "linkedin": null,
+    "industry": "technology",
+    "location": null,
+    "contact_page": null,
+    "about_page": "https://digitalterminal.in/topic/it-distribution-company",
+    "team_page": null,
+    "emails": [],
+    "phones": [
+      "+91- 033-4037 1000",
+      "022 69410200",
+      "022- 6856 1001",
+      "022-61771771",
+      "022-62876901",
+      "124 4823500",
+      "8448344355",
+      "9940555925"
+    ],
+    "social_links": {
+      "twitter.com": "https://twitter.com/intent/tweet?url=https%3A%2F%2Fdigitalterminal.in%2Ftrending%2Findias-top-8-national-it-distribution-companies&text=India%E2%80%99s%20Top%208%20National%20IT%20Distribution%20Companies%20&hashtags=",
+      "facebook.com": "https://www.facebook.com/sharer.php?u=https%3A%2F%2Fdigitalterminal.in%2Ftrending%2Findias-top-8-national-it-distribution-companies",
+      "linkedin.com": "https://www.linkedin.com/shareArticle?url=https%3A%2F%2Fdigitalterminal.in%2Ftrending%2Findias-top-8-national-it-distribution-companies&title=India%E2%80%99s%20Top%208%20National%20IT%20Distribution%20Companies%20",
+      "instagram.com": "https://www.instagram.com/digitalterminal/"
+    },
+    "people": [],
+    "source": "Google",
+    "confidence_score": 50,
+    "lead_quality": "Medium",
+    "company_type": "Unknown",
+    "_source_file": "output\\raw\\technology_20260708_092743.json",
+    "_flags": []
+  },
+  {
+    "company_name": "Channelinsider",
+    "website": "https://www.channelinsider.com/tech-companies/top-tech-vendors/",
+    "linkedin": null,
+    "industry": "Industrial Automation",
+    "location": null,
+    "contact_page": null,
+    "about_page": "https://www.channelinsider.com/about/",
+    "team_page": "https://www.channelinsider.com/channel-business/vendor-leadership-and-partner-programs/",
+    "emails": [
+      "partnerpov@channelinsider.com",
+      "news@channelinsider.com"
+    ],
+    "phones": [],
+    "social_links": {
+      "facebook.com": "https://www.facebook.com/channelpartnersnews/",
+      "linkedin.com": "https://www.linkedin.com/company/channel-insider/about/?trk=company_name",
+      "twitter.com": "https://twitter.com/ChannelInsider"
+    },
+    "people": [],
+    "source": "Google",
+    "confidence_score": 56,
+    "lead_quality": "Medium",
+    "company_type": "Software Company",
+    "_source_file": "output\\raw\\technology_20260708_092743.json",
+    "_flags": []
+  },
+  {
+    "company_name": "Sameeeksha",
+    "website": "https://sameeeksha.org/index.php?option=com_content&view=article&id=181&Itemid=502",
+    "linkedin": null,
+    "industry": "technology",
+    "location": null,
+    "contact_page": "https://sameeeksha.org/index.php?option=com_content&view=article&id=101&Itemid=490",
+    "about_page": "https://sameeeksha.org/index.php?option=com_content&view=article&id=78&Itemid=493",
+    "team_page": null,
+    "emails": [
+      "sachink@teri.res.in",
+      "sameeeksha@teri.res.in"
+    ],
+    "phones": [
+      "+91 11 2468 2100",
+      "+91 11 2468 2144",
+      "2468 2111",
+      "2468 2145"
+    ],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "confidence_score": 66,
+    "lead_quality": "Medium",
+    "company_type": "Unknown",
+    "_source_file": "output\\raw\\technology_20260708_092743.json",
+    "_flags": []
+  },
+  {
+    "company_name": "Industrialtechnologies",
+    "website": "https://industrialtechnologies.co.in/",
+    "linkedin": null,
+    "industry": "technology",
+    "location": null,
+    "contact_page": "https://industrialtechnologies.co.in/contact.html",
+    "about_page": "https://industrialtechnologies.co.in/about.html",
+    "team_page": null,
+    "emails": [
+      "info@industrialtechnologies.co.in"
+    ],
+    "phones": [
+      "83106 00668"
+    ],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "confidence_score": 66,
+    "lead_quality": "Medium",
+    "company_type": "Industrial",
+    "_source_file": "output\\raw\\technology_20260708_092743.json",
+    "_flags": []
+  },
+  {
+    "company_name": "Builtin",
+    "website": "https://builtin.com/companies",
+    "linkedin": null,
+    "industry": "technology",
+    "location": null,
+    "contact_page": "https://builtin.com/companies/tech/constant-contact-companies",
+    "about_page": "https://builtin.com/node/add/company",
+    "team_page": "https://builtin.com/company/cencora/teams",
+    "emails": [],
+    "phones": [
+      "1 2 3 4 5 ... ... 489"
+    ],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "confidence_score": 60,
+    "lead_quality": "Medium",
+    "company_type": "Unknown",
+    "_source_file": "output\\raw\\technology_20260708_092743.json",
+    "_flags": []
+  },
+  {
+    "company_name": "Indisearch",
+    "website": "http://www.indisearch.com/city/samalkha/157",
+    "linkedin": null,
+    "industry": "technology",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "confidence_score": 36,
+    "lead_quality": "Low",
+    "company_type": "Unknown",
+    "_source_file": "output\\raw\\technology_20260708_092743.json",
+    "_flags": []
+  }
+]

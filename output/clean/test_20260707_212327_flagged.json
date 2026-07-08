@@ -1,0 +1,420 @@
+[
+  {
+    "company_name": "Esparkinfo",
+    "website": "https://www.esparkinfo.com/software-testing/top-companies/india",
+    "linkedin": null,
+    "industry": "Industrial Automation",
+    "location": null,
+    "contact_page": null,
+    "about_page": "https://www.esparkinfo.com/about",
+    "team_page": "https://www.esparkinfo.com/generative-ai/ai-agent/team",
+    "emails": [],
+    "phones": [
+      "+1 (323) 287-9242",
+      "+91 9974 759 287",
+      "+91) - 9023728517",
+      "+91) - 9023728518",
+      "650816981"
+    ],
+    "social_links": {
+      "x.com": "https://x.com/esparkbiz",
+      "facebook.com": "https://www.facebook.com/esparkbiz/",
+      "linkedin.com": "https://www.linkedin.com/company/esparkinfo/",
+      "instagram.com": "https://www.instagram.com/esparkbiz/"
+    },
+    "people": [
+      {
+        "name": "View Case Studies",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Engagement Model",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Engagement Model",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Engagement Model",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Scalability and growth support",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      }
+    ],
+    "source": "Google",
+    "confidence_score": 68,
+    "lead_quality": "Medium",
+    "company_type": "Software Company",
+    "_source_file": "output\\raw\\test_20260707_212327.json",
+    "_flags": [
+      "people_dropped:1"
+    ]
+  },
+  {
+    "company_name": "Speedtest by Ookla",
+    "website": "https://www.speedtest.net/",
+    "linkedin": null,
+    "industry": "test",
+    "location": null,
+    "contact_page": null,
+    "about_page": "https://www.speedtest.net/about/knowledge",
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {
+      "twitter.com": "https://twitter.com/speedtest",
+      "facebook.com": "https://www.facebook.com/speedtest"
+    },
+    "people": [],
+    "source": "Google",
+    "confidence_score": 50,
+    "lead_quality": "Medium",
+    "company_type": "Software Company",
+    "_source_file": "output\\raw\\test_20260707_212327.json",
+    "_flags": [
+      "email_junk:favicon@2x.png"
+    ]
+  },
+  {
+    "company_name": "Softwaretestinghelp",
+    "website": "https://www.softwaretestinghelp.com/best-test-management-tools/",
+    "linkedin": null,
+    "industry": "Artificial Intelligence",
+    "location": null,
+    "contact_page": "https://www.softwaretestinghelp.com/contact/",
+    "about_page": "https://www.softwaretestinghelp.com/penetration-testing-company/",
+    "team_page": "https://www.softwaretestinghelp.com/15-best-test-management-tools-for-software-testers/",
+    "emails": [
+      "info@softwaretestinghelp.com"
+    ],
+    "phones": [
+      "11.52.496",
+      "27001-2013"
+    ],
+    "social_links": {
+      "facebook.com": "https://www.facebook.com/SoftwareTestingHelp/",
+      "linkedin.com": "https://www.linkedin.com/in/shindevijaykr/",
+      "twitter.com": "https://twitter.com/vijayshinde",
+      "x.com": "https://x.com/intent/post?text=The%2020%20Popular%20Test%20Management%20Tools%20for%202026&url=https%3A%2F%2Fwww.softwaretestinghelp.com%2Fbest-test-management-tools%2F&related=VijayShinde&via=VijayShinde"
+    },
+    "people": [
+      {
+        "name": "Daniel Ivanov",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Greedy Tester",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Bhaskar Reddy",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      }
+    ],
+    "source": "Google",
+    "confidence_score": 82,
+    "lead_quality": "High",
+    "company_type": "Unknown",
+    "_source_file": "output\\raw\\test_20260707_212327.json",
+    "_flags": [
+      "email_junk:TestRail_Logo_Main_02@2x.png"
+    ]
+  },
+  {
+    "company_name": "Scnsoft",
+    "website": "https://www.scnsoft.com/software-testing/services",
+    "linkedin": null,
+    "industry": "test",
+    "location": null,
+    "contact_page": "https://www.scnsoft.com/software-testing/contact-us",
+    "about_page": "https://www.scnsoft.com/about/careers",
+    "team_page": "https://www.scnsoft.com/management-team",
+    "emails": [
+      "contact@scnsoft.com",
+      "gulf@scnsoft.com",
+      "ksa@scnsoft.com",
+      "eu@scnsoft.com",
+      "website-mon@scnsoft.com",
+      "nordics@scnsoft.com"
+    ],
+    "phones": [
+      "+1 214 306 68 37",
+      "+1 214 306 6837",
+      "+1 972 454 4730",
+      "+12143066837",
+      "+358 94 272 63 77",
+      "+370 52 07 97 07",
+      "+371 66 011 905",
+      "+48 22 162 18 13",
+      "+52 55 6952 0374",
+      "+966 800 880 3035",
+      "+971 600 57 59 69"
+    ],
+    "social_links": {
+      "linkedin.com": "https://www.linkedin.com/in/halleasterbadi",
+      "twitter.com": "https://twitter.com/ScienceSoft",
+      "facebook.com": "https://www.facebook.com/sciencesoft.solutions/"
+    },
+    "people": [
+      {
+        "name": "Tanya Lebedzeva",
+        "designation": "President",
+        "decision_maker_score": 85
+      },
+      {
+        "name": "Paul Ilyusenko",
+        "designation": "President",
+        "decision_maker_score": 85
+      },
+      {
+        "name": "Alex Zyil",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Mary Zayats",
+        "designation": "Head Of",
+        "decision_maker_score": 60
+      },
+      {
+        "name": "Julia Lebedeva",
+        "designation": "Head Of",
+        "decision_maker_score": 60
+      },
+      {
+        "name": "Alex Ramasheuski",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Vadim Belski",
+        "designation": "Head Of",
+        "decision_maker_score": 60
+      },
+      {
+        "name": "Andy Lipnitski",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Dmitry Kurskov",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Ann Andreyeva",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Paulina Ihnatovich",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Andrei Mikhailau",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Ulad Stsiapura",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      }
+    ],
+    "source": "Google",
+    "confidence_score": 83,
+    "lead_quality": "High",
+    "company_type": "Software Company",
+    "_source_file": "output\\raw\\test_20260707_212327.json",
+    "_flags": [
+      "email_junk:tanya-bessonova@2x.png",
+      "email_junk:rob-morgan-playlines@2x.jpg",
+      "email_junk:halle-asterbadi-clubrunner@2x.jpg",
+      "email_junk:franklin-mongiove-battlefly@2x.jpg",
+      "email_junk:hillary-slovak-iris-atlanta@2x.jpg",
+      "email_junk:norbert-nagy-guidevision@2x.jpg",
+      "email_junk:roderick-schipper-helpline-cto@2x.jpg",
+      "email_junk:nader-afshar-persis-consulting@2x.jpg",
+      "email_junk:dominic-bernacchi-digital-giant@2x.jpg",
+      "email_junk:media--92aa2fb2--query@2x.png",
+      "email_junk:justin-turner-chiron-health@2x.jpg",
+      "people_dropped:2"
+    ]
+  },
+  {
+    "company_name": "Accuratetestsolutions",
+    "website": "https://www.accuratetestsolutions.com/",
+    "linkedin": null,
+    "industry": "Civil Engineering",
+    "location": null,
+    "contact_page": "https://www.accuratetestsolutions.com/contact/",
+    "about_page": "https://www.accuratetestsolutions.com/about/",
+    "team_page": null,
+    "emails": [
+      "accuratetests@gmail.com",
+      "accuratetestsunit2@gmail.com"
+    ],
+    "phones": [
+      "+919810820552",
+      "9810820552"
+    ],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "confidence_score": 66,
+    "lead_quality": "Medium",
+    "company_type": "Construction",
+    "_source_file": "output\\raw\\test_20260707_212327.json",
+    "_flags": [
+      "people_dropped:1"
+    ]
+  },
+  {
+    "company_name": "Protestcorp",
+    "website": "https://protestcorp.com/",
+    "linkedin": null,
+    "industry": "Healthcare",
+    "location": null,
+    "contact_page": "https://protestcorp.com/contact-us",
+    "about_page": null,
+    "team_page": "https://protestcorp.com/leadership/",
+    "emails": [
+      "info@protestcorp.com"
+    ],
+    "phones": [
+      "080 62032508",
+      "080-6203-2508"
+    ],
+    "social_links": {
+      "linkedin.com": "https://in.linkedin.com/company/protest-consulting",
+      "twitter.com": "https://twitter.com/protestcorp?lang=en",
+      "instagram.com": "https://www.instagram.com/protestconsulting/",
+      "facebook.com": "https://www.facebook.com/ProTestconsulting/"
+    },
+    "people": [
+      {
+        "name": "Arun Kumar S",
+        "designation": "Founder",
+        "decision_maker_score": 100
+      },
+      {
+        "name": "Vijaykumar Panchagatti",
+        "designation": "Head Of",
+        "decision_maker_score": 60
+      }
+    ],
+    "source": "Google",
+    "confidence_score": 80,
+    "lead_quality": "High",
+    "company_type": "Software Company",
+    "_source_file": "output\\raw\\test_20260707_212327.json",
+    "_flags": [
+      "email_junk:example@email.com"
+    ]
+  },
+  {
+    "company_name": "Feedough",
+    "website": "https://www.feedough.com/startup-idea-validator/",
+    "linkedin": null,
+    "industry": "Artificial Intelligence",
+    "location": null,
+    "contact_page": "https://www.feedough.com/contact-us/",
+    "about_page": "https://www.feedough.com/about-me-generator/",
+    "team_page": "https://www.feedough.com/ai-tools-for-operations-and-management/",
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "confidence_score": 60,
+    "lead_quality": "Medium",
+    "company_type": "Unknown",
+    "_source_file": "output\\raw\\test_20260707_212327.json",
+    "_flags": [
+      "email_junk:cropped-sdAsset-1@4x-32x32.png",
+      "email_junk:cropped-sdAsset-1@4x-270x270.png",
+      "email_junk:cropped-sdAsset-1@4x-192x192.png",
+      "email_junk:cropped-sdAsset-1@4x-180x180.png"
+    ]
+  },
+  {
+    "company_name": "Validatorai",
+    "website": "https://validatorai.com/",
+    "linkedin": null,
+    "industry": "Artificial Intelligence",
+    "location": null,
+    "contact_page": "https://validatorai.com/contact",
+    "about_page": "https://validatorai.com/about",
+    "team_page": "https://validatorai.com/article/lean-startup-methods-vs-business-plans-which-is-faster",
+    "emails": [],
+    "phones": [],
+    "social_links": {
+      "linkedin.com": "https://www.linkedin.com/in/aronmeystedt/",
+      "x.com": "https://x.com/validatoraiapp"
+    },
+    "people": [],
+    "source": "Google",
+    "confidence_score": 60,
+    "lead_quality": "Medium",
+    "company_type": "Unknown",
+    "_source_file": "output\\raw\\test_20260707_212327.json",
+    "_flags": [
+      "email_junk:your@email.com"
+    ]
+  },
+  {
+    "company_name": "Global Lab",
+    "website": "https://globallabindia.com/",
+    "linkedin": null,
+    "industry": "Civil Engineering",
+    "location": null,
+    "contact_page": "https://globallabindia.com/contact-us/",
+    "about_page": "https://globallabindia.com/about/",
+    "team_page": null,
+    "emails": [
+      "info@globallab.co.in",
+      "contact@globallab.co.in",
+      "avadhesh@globallab.co.in",
+      "email@company.com",
+      "complaints@globallab.co.in",
+      "hiren@globallab.co.in"
+    ],
+    "phones": [
+      "+91 6295718157",
+      "+91 7596067780",
+      "+91 7596067781",
+      "+91 7861821898",
+      "+91 8108151764",
+      "+91 86559 58820",
+      "+91 8828318531",
+      "+91 9323712211",
+      "+91 9820004115",
+      "+91 9930280649"
+    ],
+    "social_links": {
+      "facebook.com": "https://www.facebook.com/GloballabIndia",
+      "linkedin.com": "https://www.linkedin.com/company/aarc-glmt/"
+    },
+    "people": [],
+    "source": "Google",
+    "confidence_score": 66,
+    "lead_quality": "Medium",
+    "company_type": "Unknown",
+    "_source_file": "output\\raw\\test_20260707_212327.json",
+    "_flags": [
+      "email_junk:your@email.com"
+    ]
+  }
+]

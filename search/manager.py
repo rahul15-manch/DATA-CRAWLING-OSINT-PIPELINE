@@ -257,22 +257,27 @@ class SearchManager:
                 self.stats[pname].total_latency_s += latency
                 self.stats[pname].failures += 1
 
-                # Mark unhealthy — won't be tried again this run
-                self.provider_health[pname] = False
-                print(f"[SearchManager] [{pname}] UNAVAILABLE — {exc.reason}. Failing over.")
+                # Mark unhealthy — won't be tried again this run, EXCEPT for google_html
+                if pname != "google_html":
+                    self.provider_health[pname] = False
+                
+                # Determine next provider for logging
+                current_idx = self._priority.index(pname) if pname in self._priority else -1
+                next_pname = "None (Exhausted)"
+                if current_idx != -1 and current_idx + 1 < len(self._priority):
+                    next_pname = self._priority[current_idx + 1]
 
-                # Increment fallback_count for every provider that comes AFTER
-                # this one in the priority list.  Those providers are being tried
-                # *because of* this failure — that's the definition of "fallback".
-                # Bug-fix: must index into self.stats (not .get which returns a
-                # throwaway object that was never stored).
+                print(f"[SearchManager] {pname} failed ({exc.reason})")
+                print(f"  v")
+                print(f"Trying {next_pname}...")
+
+                # Increment fallback_count
                 try:
-                    current_idx = self._priority.index(pname)
                     for next_name in self._priority[current_idx + 1:]:
                         if next_name in self.stats:
                             self.stats[next_name].fallback_count += 1
                 except ValueError:
-                    pass  # pname not in priority list — harmless
+                    pass
                 continue
 
 
@@ -280,18 +285,40 @@ class SearchManager:
                 latency = time.time() - t0
                 self.stats[pname].total_latency_s += latency
                 self.stats[pname].failures += 1
-                print(
-                    f"[SearchManager] [{pname}] PARSE ERROR — {exc.reason}."
-                    f" Continuing to next provider."
-                )
+                
+                current_idx = self._priority.index(pname) if pname in self._priority else -1
+                next_pname = "None (Exhausted)"
+                if current_idx != -1 and current_idx + 1 < len(self._priority):
+                    next_pname = self._priority[current_idx + 1]
+
+                print(f"[SearchManager] {pname} parsed zero results ({exc.reason})")
+                print(f"  v")
+                print(f"Trying {next_pname}...")
+                
+                try:
+                    for next_name in self._priority[current_idx + 1:]:
+                        if next_name in self.stats:
+                            self.stats[next_name].fallback_count += 1
+                except ValueError:
+                    pass
                 continue
 
             except Exception as exc:
                 latency = time.time() - t0
                 self.stats[pname].total_latency_s += latency
                 self.stats[pname].failures += 1
-                self.provider_health[pname] = False
-                print(f"[SearchManager] [{pname}] UNEXPECTED ERROR — {exc}. Marking unhealthy.")
+                
+                if pname != "google_html":
+                    self.provider_health[pname] = False
+                
+                current_idx = self._priority.index(pname) if pname in self._priority else -1
+                next_pname = "None (Exhausted)"
+                if current_idx != -1 and current_idx + 1 < len(self._priority):
+                    next_pname = self._priority[current_idx + 1]
+
+                print(f"[SearchManager] {pname} unexpected error ({exc})")
+                print(f"  v")
+                print(f"Trying {next_pname}...")
                 continue
 
         # Assign global ranks
@@ -370,13 +397,12 @@ class SearchManager:
                 "set ENABLE_CUSTOM_PROVIDER=True and CUSTOM_PROVIDER_URL=<url> in .env"
             ),
             "google_html": (
-                "ENABLE_GOOGLE_HTML",
-                "set ENABLE_GOOGLE_HTML=True in .env  "
-                "[experimental — Google actively blocks HTML scrapers]"
+                None,
+                "primary provider — uses curl_cffi Chrome TLS impersonation (always available)"
             ),
             "bing": (
                 None,
-                "always available — no key required"
+                "final fallback — always available, no key required"
             ),
         }
 
