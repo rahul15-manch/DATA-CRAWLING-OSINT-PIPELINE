@@ -41,15 +41,17 @@ This module provides a robust, anti-detect networking client for web scraping.
 ### 🚀 Quick Start (Usage Guide)
 
 #### 1. Configuration (`.env`)
-Create a `.env` file in the root directory:
-```env
-MAX_RETRIES=5
-CONNECT_TIMEOUT=5.0
-READ_TIMEOUT=15.0
-LOG_LEVEL=INFO
-# Supply proxies directly or via a file
-PROXIES=http://user:pass@proxy1.com:8000,http://user:pass@proxy2.com:8000
+Create a `.env` file in the root directory by copying the provided example:
+```bash
+cp .env.example .env
 ```
+Inside the `.env` file, you can configure your proxies in two ways:
+- **Single Proxy:** `PROXY_URL=http://user:pass@proxy1.com:8000`
+- **Multiple Proxies:** `PROXIES=http://proxy1:8000,http://proxy2:8000`
+
+If both are provided, they will be combined without duplicates. 
+
+**Proxy Rotation:** The `NetworkClient` automatically handles proxy rotation. When you perform requests without a `session_id`, a healthy proxy is randomly selected. If a WAF block or network failure occurs, the proxy is placed on cooldown and the request is retried with a new proxy. If a `session_id` is provided, the proxy is sticky to that session unless it fails.
 
 #### 2. Basic Synchronous Usage
 For stateful, multi-step scraping tasks (e.g., Logging into a website):

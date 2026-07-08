@@ -27,8 +27,9 @@ class NetworkClient:
     def __init__(self):
         # Initialize Managers
         self.proxy_manager = ProxyManager()
-        if config.PROXIES:
-            self.proxy_manager.load_from_list(config.PROXIES)
+        all_proxies = config.get_all_proxies
+        if all_proxies:
+            self.proxy_manager.load_from_list(all_proxies)
         elif config.PROXY_FILE:
             self.proxy_manager.load_from_file(config.PROXY_FILE)
             
