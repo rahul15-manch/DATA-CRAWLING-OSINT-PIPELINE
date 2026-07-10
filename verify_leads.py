@@ -1,23 +1,3 @@
-#!/usr/bin/env python3
-"""
-Pillar 2 — OSINT Stack Integration
-Verification Script (Step 2, after clean_leads.py)
-
-Install dependencies first:
-    pip install dnspython phonenumbers requests
-
-What it checks:
-  1. Email domain has valid MX records (i.e. the domain can actually receive mail)
-  2. Phone numbers are valid, real numbers (using Google's libphonenumber via
-     the `phonenumbers` package) — checks country code, length, format
-  3. Website URL is reachable (returns an HTTP status, not dead/parked)
-
-Input:  cleaned_leads.json  (output of clean_leads.py)
-Output:
-  verified_leads.json    -> records where ALL present channels checked out
-  unverified_leads.json  -> records where something failed verification,
-                            with a "_verification" field explaining what
-"""
 
 import json
 import re
