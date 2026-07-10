@@ -1,21 +1,4 @@
-#!/usr/bin/env python3
-"""
-Pillar 2 — OSINT Stack Integration
-Lead Cleaning & Verification Script
 
-Takes raw Pillar 1 (search/footprinting) output and produces:
-  1. cleaned_leads.json   -> records that pass all checks (ready for enrichment/handoff)
-  2. flagged_leads.json   -> records with issues, tagged with WHY they were flagged
-  3. report.txt           -> summary counts for a quick sanity check
-
-NOTE ON MX RECORDS:
-  Live MX-record / DNS lookups require outbound network access, which isn't
-  available in this environment. The script still validates email *format*
-  and filters obvious junk (image filenames, placeholders like your@email.com,
-  broken unicode-escape artifacts). The `verify_mx()` function below is wired
-  up and ready — run it in an environment with network access (or plug in an
-  email-verification API) to get live MX/deliverability checks.
-"""
 
 import json
 import re
