@@ -10,11 +10,6 @@ from collections import defaultdict
 import sys
 import pathlib
 
-# --------------- Input / Output wiring ---------------
-# Usage:
-#   python clean_leads.py                                  (legacy: reads data-*.json)
-#   python clean_leads.py input.json                       (reads one file, writes to output/clean/)
-#   python clean_leads.py input.json output_clean.json     (explicit output path)
 
 if len(sys.argv) >= 2:
     INPUT_FILES = [sys.argv[1]]
