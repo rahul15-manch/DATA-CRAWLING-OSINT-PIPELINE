@@ -3,8 +3,6 @@
 Pillar 2 — OSINT Stack Integration
 Verification Script (Step 2, after clean_leads.py)
 
-Requires internet access. Run this on your own machine, not in a sandbox.
-
 Install dependencies first:
     pip install dnspython phonenumbers requests
 
