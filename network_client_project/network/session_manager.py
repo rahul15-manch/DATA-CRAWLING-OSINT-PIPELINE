@@ -1,6 +1,4 @@
-import requests
-from requests.adapters import HTTPAdapter
-from urllib3.util.retry import Retry
+from curl_cffi import requests
 import logging
 from typing import Dict, Optional
 
@@ -8,34 +6,17 @@ logger = logging.getLogger(__name__)
 
 class SessionFactory:
     """
-    Creates and manages pre-configured, highly optimized requests.Session objects.
+    Creates and manages pre-configured, highly optimized requests.Session objects
+    using curl_cffi for browser TLS fingerprinting.
     """
     
     @staticmethod
-    def create_session(
-        pool_connections: int = 100, 
-        pool_maxsize: int = 100, 
-        max_retries: int = 0
-    ) -> requests.Session:
+    def create_session() -> requests.Session:
         """
-        Creates a session with customized connection pooling.
-        Note: We keep max_retries at 0 by default here because we will build
-        a much smarter, application-level Retry Engine in the next module.
+        Creates a session configured to impersonate a modern Chrome browser.
         """
-        session = requests.Session()
-        
-        # Configure urllib3 connection pooling
-        # This allows the session to keep `pool_maxsize` TCP connections alive in memory.
-        adapter = HTTPAdapter(
-            pool_connections=pool_connections,
-            pool_maxsize=pool_maxsize,
-            max_retries=max_retries
-        )
-        
-        # Mount the adapter for both HTTP and HTTPS protocols
-        session.mount("http://", adapter)
-        session.mount("https://", adapter)
-        
+        # impersonate="chrome124" ensures our TLS handshakes look exactly like Chrome 124
+        session = requests.Session(impersonate="chrome124")
         return session
 
 class SessionManager:
@@ -48,11 +29,15 @@ class SessionManager:
         # We don't necessarily need a strict lock here if sessions are created per-thread,
         # but in a shared context, you'd want to manage state carefully.
 
-    def get_or_create_session(self, session_id: str) -> requests.Session:
+    def get_or_create_session(self, session_id: Optional[str] = None) -> requests.Session:
         """
         Retrieves an existing session or creates a new one.
-        This is how we maintain state (Cookies) across multiple requests for a single crawler target.
+        If session_id is None, returns an ephemeral session.
         """
+        if session_id is None:
+            logger.debug("Creating new ephemeral session (no session_id provided)")
+            return SessionFactory.create_session()
+            
         if session_id not in self._sessions:
             logger.debug(f"Creating new isolated session for ID: {session_id}")
             self._sessions[session_id] = SessionFactory.create_session()

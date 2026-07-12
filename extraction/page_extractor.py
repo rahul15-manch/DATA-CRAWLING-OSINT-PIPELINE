@@ -1,13 +1,31 @@
 """
-Extracts publicly visible information from a company's own website:
-emails, phone numbers, social links, contact/about/team page URLs,
-and a best-effort list of named people with designations.
+extraction/page_extractor.py
+=============================
+Full public-data extraction pass for a company's website.
 
-Hard boundary: this module only reads whatever HTML a plain GET request
-returns. It does not log in, does not solve CAPTCHAs, does not bypass
-robots.txt-style access controls, and does not paginate through anything
-requiring auth. If a page needs a login to see, this module simply won't
-see it — that's by design, not a limitation to work around.
+Everything returned here was visible on a plain public page load
+— nothing behind a login.
+
+Changes in this revision (v3)
+------------------------------
+Task 5  — Graceful error handling on every fetch; non-HTML responses are
+           skipped; pipeline never crashes on a single bad website.
+           Extended PAGE_KEYWORDS to cover leadership / management /
+           founders / executives / our-team subpages.
+Task 6  — company_type: inferred from meta description + title via
+           utils.enrichment.detect_company_type().
+Task 7  — industry_detected: inferred from meta description + title + body
+           via utils.enrichment.detect_industry().
+Task 6  — Email ranking: junk (noreply, tracking, …) is filtered out;
+           remaining emails are sorted by business relevance via
+           utils.validators.rank_emails().
+Task 7  — Phone validation: replaced broad regex with is_valid_phone() which
+           rejects DD.MM.YYYY, YYYY-YYYY year ranges, multi-line table values.
+Task 8  — People extraction: every extracted person is validated with
+           is_valid_person_record() — bare designations without a realistic
+           human name are silently dropped.
+Task 12 — DESIGNATION_KEYWORDS and DESIGNATION_ACRONYMS imported from
+           utils.constants (no local duplication).
 """
 
 import re
@@ -17,174 +35,369 @@ import requests
 from bs4 import BeautifulSoup
 
 import config
+from utils.constants import DESIGNATION_KEYWORDS, DESIGNATION_ACRONYMS
+from utils.validators import is_valid_phone, is_valid_person_record, rank_emails
+from utils.enrichment import detect_company_type, detect_industry
+
+# ── Patterns ──────────────────────────────────────────────────────────────────
 
 EMAIL_PATTERN = re.compile(r"[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}")
-PHONE_PATTERN = re.compile(r"\+?\d[\d\-.\s]{6,14}\d")
+PHONE_CAPTURE_PATTERN = re.compile(r"(\+?[\d(][\d\s\-().]{5,20}[\d])")
 
-SOCIAL_DOMAINS = ["linkedin.com", "twitter.com", "x.com", "facebook.com", "instagram.com"]
-
-PAGE_KEYWORDS = {
-    "contact_page": ["contact"],
-    "about_page": ["about"],
-    "team_page": ["team", "people", "leadership", "founders"],
-}
-
-DESIGNATION_KEYWORDS = [
-    "founder", "co-founder", "ceo", "cto", "coo", "director",
-    "head of", "vp ", "president",
+SOCIAL_DOMAINS = [
+    "linkedin.com",
+    "twitter.com",
+    "x.com",
+    "facebook.com",
+    "instagram.com",
 ]
 
-ACRONYMS = {"ceo", "cto", "coo", "vp"}
+# ── Sub-page keyword map (Task 5 — expanded) ──────────────────────────────────
+
+PAGE_KEYWORDS = {
+    "contact_page": [
+        "contact",
+        "contact-us",
+        "get-in-touch",
+        "reach-us",
+    ],
+    "about_page": [
+        "about",
+        "about-us",
+        "company",
+        "who-we-are",
+    ],
+    "team_page": [
+        "team",
+        "our-team",
+        "people",
+        "leadership",
+        "management",
+        "founders",
+        "executives",
+        "board",
+        "directors",
+    ],
+}
+
+_HTML_CONTENT_TYPES = ("text/html", "application/xhtml")
 
 
-def _format_designation(kw: str) -> str:
-    kw = kw.strip()
-    if kw.lower() in ACRONYMS:
-        return kw.upper()
-    return kw.title()
-
+# ─────────────────────────────────────────────────────────────────────────────
+# Fetch helper
+# ─────────────────────────────────────────────────────────────────────────────
 
 def fetch_page(url: str):
     """
-    Fetches a page's public HTML via a plain GET. Returns None on any
-    failure. No retries, no proxy rotation here — that resilience layer
-    belongs to Pillar 3, this module just reads what's freely served.
+    Fetch a page's public HTML via a plain GET.
+
+    Returns the HTML text on success, None on any failure.
     """
     try:
         headers = {"User-Agent": "Mozilla/5.0 (compatible; FlowizLeadBot/1.0)"}
         resp = requests.get(url, headers=headers, timeout=config.REQUEST_TIMEOUT)
-        if resp.status_code == 200:
-            return resp.text
-    except requests.RequestException as e:
-        print(f"[page_extractor] failed to fetch {url}: {e}")
-    return None
 
+        if resp.status_code != 200:
+            return None
+
+        content_type = resp.headers.get("Content-Type", "").lower()
+        if not any(ct in content_type for ct in _HTML_CONTENT_TYPES):
+            print(f"[page_extractor] skipping non-HTML response from {url}")
+            return None
+
+        return resp.text
+
+    except Exception as exc:  # noqa: BLE001
+        print(f"[page_extractor] failed to fetch {url}: {exc}")
+        return None
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Meta extraction helpers (Tasks 6 & 7)
+# ─────────────────────────────────────────────────────────────────────────────
+
+def extract_meta_text(html: str) -> str:
+    """
+    Extract the most informative plain text from a page for enrichment.
+
+    Combines: <title>, <meta name="description">, first 5 <h1>/<h2> tags.
+    Returns a single plain-text string (no HTML).
+    """
+    if not html:
+        return ""
+    try:
+        soup = BeautifulSoup(html, "html.parser")
+        parts = []
+
+        # Title
+        if soup.title:
+            parts.append(soup.title.get_text(" ", strip=True))
+
+        # Meta description
+        for meta in soup.find_all("meta"):
+            name = (meta.get("name") or meta.get("property") or "").lower()
+            if "description" in name or "og:description" in name:
+                content = meta.get("content") or ""
+                if content:
+                    parts.append(content)
+
+        # First few headings
+        for tag in soup.find_all(["h1", "h2"], limit=5):
+            text = tag.get_text(" ", strip=True)
+            if text:
+                parts.append(text)
+
+        return " ".join(parts)
+
+    except Exception as exc:  # noqa: BLE001
+        print(f"[page_extractor] meta extraction error: {exc}")
+        return ""
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Extraction helpers
+# ─────────────────────────────────────────────────────────────────────────────
 
 def extract_emails(html: str) -> list:
+    """Extract all email addresses visible in raw HTML."""
     if not html:
         return []
-    return sorted(set(EMAIL_PATTERN.findall(html)))
+    return list(set(EMAIL_PATTERN.findall(html)))
 
 
 def extract_phone_numbers(html: str) -> list:
+    """
+    Extract and validate phone numbers from page text.
+
+    Each candidate is passed through is_valid_phone(), which rejects
+    dates (01.04.2026), year ranges (2025-2026), multi-line table values,
+    and time strings (10.30-12.00).
+    """
     if not html:
         return []
-    soup = BeautifulSoup(html, "html.parser")
-    text = soup.get_text(" ")
-    candidates = PHONE_PATTERN.findall(text)
-    cleaned = []
-    for c in candidates:
-        digits = re.sub(r"\D", "", c)
-        if len(digits) >= 7:  # crude filter to drop years, zip codes etc.
-            cleaned.append(c.strip())
-    return sorted(set(cleaned))
+    try:
+        soup = BeautifulSoup(html, "html.parser")
+        text = soup.get_text(" ")
+    except Exception as exc:  # noqa: BLE001
+        print(f"[page_extractor] HTML parse error in phone extraction: {exc}")
+        return []
+
+    candidates = PHONE_CAPTURE_PATTERN.findall(text)
+    validated = []
+    for raw in candidates:
+        cleaned = raw.strip()
+        if is_valid_phone(cleaned) and cleaned not in validated:
+            validated.append(cleaned)
+    return validated
 
 
 def extract_social_links(html: str, base_url: str) -> dict:
+    """Extract social media profile links from the page."""
     if not html:
         return {}
-    soup = BeautifulSoup(html, "html.parser")
+    try:
+        soup = BeautifulSoup(html, "html.parser")
+    except Exception as exc:  # noqa: BLE001
+        print(f"[page_extractor] HTML parse error in social extraction: {exc}")
+        return {}
     links = {}
     for a in soup.find_all("a", href=True):
-        href = urljoin(base_url, a["href"])
-        domain = urlparse(href).netloc.lower()
-        for social in SOCIAL_DOMAINS:
-            if social in domain and social not in links:
-                links[social] = href
+        try:
+            href = urljoin(base_url, a["href"])
+            domain = urlparse(href).netloc.lower()
+            for social in SOCIAL_DOMAINS:
+                if social in domain and social not in links:
+                    links[social] = href
+        except Exception:  # noqa: BLE001
+            continue
     return links
 
 
 def find_subpages(html: str, base_url: str) -> dict:
-    """Scans the homepage's own links for contact/about/team pages."""
+    """
+    Scan the homepage's own links for contact / about / team sub-pages.
+
+    Extended keyword set covers leadership, management, founders, executives.
+    """
     if not html:
         return {}
-    soup = BeautifulSoup(html, "html.parser")
+    try:
+        soup = BeautifulSoup(html, "html.parser")
+    except Exception as exc:  # noqa: BLE001
+        print(f"[page_extractor] HTML parse error in subpage discovery: {exc}")
+        return {}
+
     found = {}
+    base_netloc = urlparse(base_url).netloc.lower()
+
     for a in soup.find_all("a", href=True):
-        text = (a.get_text() or "").lower()
-        href = a["href"].lower()
-        for page_type, keywords in PAGE_KEYWORDS.items():
-            if page_type in found:
+        try:
+            raw_href = a["href"]
+            text = (a.get_text() or "").lower().strip()
+            href_lower = raw_href.lower()
+            abs_url = urljoin(base_url, raw_href)
+
+            if urlparse(abs_url).netloc.lower() != base_netloc:
                 continue
-            if any(kw in text or kw in href for kw in keywords):
-                found[page_type] = urljoin(base_url, a["href"])
+            if abs_url.rstrip("/") == base_url.rstrip("/"):
+                continue
+
+            for page_type, keywords in PAGE_KEYWORDS.items():
+                if page_type in found:
+                    continue
+                if any(kw in text or kw in href_lower for kw in keywords):
+                    found[page_type] = abs_url
+        except Exception:  # noqa: BLE001
+            continue
+
     return found
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# People extraction (Task 8)
+# ─────────────────────────────────────────────────────────────────────────────
+
+def _format_designation(kw: str) -> str:
+    """Format a designation keyword for output."""
+    kw = kw.strip()
+    if kw.lower() in DESIGNATION_ACRONYMS:
+        return kw.upper()
+    return kw.title()
 
 
 def extract_people(html: str) -> list:
     """
-    Best-effort extraction of (name, designation) pairs from a team/about
-    page. Crude heuristic by design — this is discovery, not verified
-    enrichment. Only pulls what's rendered in plain sight on the page.
+    Best-effort extraction of (name, designation) pairs from a team / about page.
+
+    Every extracted record is validated with is_valid_person_record().
+    Bare designations without a realistic human name are silently dropped.
     """
     if not html:
         return []
-    soup = BeautifulSoup(html, "html.parser")
+
+    try:
+        soup = BeautifulSoup(html, "html.parser")
+    except Exception as exc:  # noqa: BLE001
+        print(f"[page_extractor] HTML parse error in people extraction: {exc}")
+        return []
+
     people = []
     blocks = soup.find_all(["h1", "h2", "h3", "h4", "p", "span", "div"])
 
     for i, block in enumerate(blocks):
-        text = block.get_text(" ", strip=True)
-        if not text or len(text) > 120:
+        try:
+            text = block.get_text(" ", strip=True)
+            if not text or len(text) > 120:
+                continue
+
+            lowered = text.lower()
+            for kw in DESIGNATION_KEYWORDS:
+                if kw in lowered:
+                    name_candidate = None
+                    if i > 0:
+                        prev_text = blocks[i - 1].get_text(" ", strip=True)
+                        if prev_text and 1 <= len(prev_text.split()) <= 5:
+                            name_candidate = prev_text
+
+                    record = {
+                        "name": name_candidate,
+                        "designation": _format_designation(kw),
+                    }
+
+                    if is_valid_person_record(record):
+                        people.append(record)
+                    break
+
+        except Exception:  # noqa: BLE001
             continue
-        lowered = text.lower()
-        for kw in DESIGNATION_KEYWORDS:
-            if kw in lowered:
-                name_candidate = None
-                if i > 0:
-                    prev_text = blocks[i - 1].get_text(" ", strip=True)
-                    if prev_text and 1 <= len(prev_text.split()) <= 4:
-                        name_candidate = prev_text
-                people.append({"name": name_candidate, "designation": _format_designation(kw)})
-                break
+
     return people
 
 
+# ─────────────────────────────────────────────────────────────────────────────
+# Main extraction entry-point  (Tasks 5, 6, 7)
+# ─────────────────────────────────────────────────────────────────────────────
+
 def extract_from_website(homepage_url: str) -> dict:
     """
-    Full public-data extraction pass: homepage -> contact/about/team
-    subpages -> emails, phones, socials, people. Everything returned here
-    was visible on a plain public page load, nothing behind a login.
+    Full public-data extraction pass:
+    homepage → contact/about/team subpages → emails, phones, socials, people.
+
+    New fields added in this revision
+    ----------------------------------
+    company_type      (Task 6): Software Company / Consultancy / Agency / …
+    industry_detected (Task 7): Artificial Intelligence / Cloud Computing / …
+    meta_description  : raw meta description text for downstream use
+
+    Task 5: All fetch failures are caught; pipeline never crashes for one URL.
+    Task 6: Emails are ranked and deduplicated via rank_emails().
+    Task 7: Phones are validated; dates / year-ranges are excluded.
+    Task 8: People are filtered through is_valid_person_record().
     """
     result = {
-        "contact_page": None,
-        "about_page": None,
-        "team_page": None,
-        "emails": [],
-        "phones": [],
-        "social_links": {},
-        "people": [],
+        "contact_page":      None,
+        "about_page":        None,
+        "team_page":         None,
+        "emails":            [],
+        "phones":            [],
+        "social_links":      {},
+        "people":            [],
+        "company_type":      "Unknown",
+        "industry_detected": "Unknown",
+        "meta_description":  "",
     }
 
     homepage_html = fetch_page(homepage_url)
     if not homepage_html:
         return result
 
+    # ── Homepage pass ─────────────────────────────────────────────────────
     result["social_links"] = extract_social_links(homepage_html, homepage_url)
     result["emails"].extend(extract_emails(homepage_html))
     result["phones"].extend(extract_phone_numbers(homepage_html))
 
+    # ── Tasks 6 & 7: Enrichment from meta / headings ──────────────────────
+    meta_text = extract_meta_text(homepage_html)
+    result["meta_description"] = meta_text[:500] if meta_text else ""
+    result["company_type"] = detect_company_type(meta_text)
+    result["industry_detected"] = detect_industry(meta_text)
+
+    # ── Discover sub-pages ────────────────────────────────────────────────
     subpages = find_subpages(homepage_html, homepage_url)
     result["contact_page"] = subpages.get("contact_page")
     result["about_page"] = subpages.get("about_page")
     result["team_page"] = subpages.get("team_page")
 
-    for page_type in ["contact_page", "about_page", "team_page"]:
+    # ── Sub-page passes ───────────────────────────────────────────────────
+    for page_type in ("contact_page", "about_page", "team_page"):
         url = result[page_type]
         if not url:
             continue
         html = fetch_page(url)
+        if not html:
+            continue
         result["emails"].extend(extract_emails(html))
         result["phones"].extend(extract_phone_numbers(html))
+        # Improve enrichment if about page has more content
+        if page_type == "about_page" and result["industry_detected"] == "Unknown":
+            about_meta = extract_meta_text(html)
+            result["industry_detected"] = detect_industry(about_meta)
+            if result["company_type"] == "Unknown":
+                result["company_type"] = detect_company_type(about_meta)
         if page_type == "team_page":
             result["people"].extend(extract_people(html))
 
-    result["emails"] = sorted(set(result["emails"]))
+    # ── Final dedup + ranking ─────────────────────────────────────────────
+    result["emails"] = rank_emails(result["emails"])
     result["phones"] = sorted(set(result["phones"]))
+
     return result
 
 
+# ─────────────────────────────────────────────────────────────────────────────
+# Manual test entry-point
+# ─────────────────────────────────────────────────────────────────────────────
+
 if __name__ == "__main__":
-    # quick manual test: python -m extraction.page_extractor
     import json
     print(json.dumps(extract_from_website("https://anthropic.com"), indent=2))

@@ -1,6 +1,6 @@
 from pydantic_settings import BaseSettings, SettingsConfigDict
 from pydantic import Field, validator
-from typing import List, Optional
+from typing import List, Optional, Union
 import os
 
 class NetworkConfig(BaseSettings):
@@ -10,9 +10,26 @@ class NetworkConfig(BaseSettings):
     """
     
     # --- PROXY SETTINGS ---
-    # Can be a comma-separated string in the .env file, which Pydantic can parse into a list
-    PROXIES: List[str] = Field(default_factory=list, description="List of proxy URLs")
+    # Can be a comma-separated string in the .env file
+    PROXIES: Union[str, List[str]] = Field(default="", description="Comma-separated list or List of proxy URLs")
+    PROXY_URL: Optional[str] = Field(default=None, description="Single proxy URL")
     PROXY_FILE: Optional[str] = Field(default=None, description="Path to a file containing proxies")
+
+    @property
+    def get_all_proxies(self) -> List[str]:
+        """Combines PROXIES and PROXY_URL without duplicates."""
+        proxies_set = set()
+        if self.PROXIES:
+            if isinstance(self.PROXIES, str):
+                proxies_set.update([p.strip() for p in self.PROXIES.split(",") if p.strip()])
+            else:
+                proxies_set.update(self.PROXIES)
+        if self.PROXY_URL:
+            proxies_set.add(self.PROXY_URL)
+        return list(proxies_set)
+
+
+
     
     # --- RETRY & TIMEOUT SETTINGS ---
     MAX_RETRIES: int = Field(default=3, description="Maximum number of retry attempts per request")
@@ -33,6 +50,9 @@ class NetworkConfig(BaseSettings):
         default="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36",
         description="Used if fake_useragent fails"
     )
+
+    # --- SSL ---
+    VERIFY_SSL: bool = Field(default=True, description="Verify SSL certificates")
 
     # Configure Pydantic to read from a .env file if it exists
     model_config = SettingsConfigDict(

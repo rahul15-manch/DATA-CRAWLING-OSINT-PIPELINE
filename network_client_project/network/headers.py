@@ -35,7 +35,7 @@ class HeaderManager:
         """
         # The 'Grease' pattern: Browsers intentionally send a randomized brand 
         # to ensure servers don't hardcode specific browser names.
-        grease_brand = f'"Not A(Brand";v="99", "Google Chrome";v="{chrome_version}", "Chromium";v="{chrome_version}"'
+        grease_brand = f'"Chromium";v="{chrome_version}", "Not-A.Brand";v="99", "Google Chrome";v="{chrome_version}"'
         
         return {
             "sec-ch-ua": grease_brand,

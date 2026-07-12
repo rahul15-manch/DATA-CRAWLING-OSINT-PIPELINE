@@ -1,0 +1,382 @@
+[
+  {
+    "company_name": "Sagesoftware",
+    "website": "https://www.sagesoftware.co.in/",
+    "linkedin": null,
+    "industry": "software",
+    "location": null,
+    "contact_page": "https://www.sagesoftware.co.in/contact/",
+    "about_page": "https://www.sagesoftware.co.in/about-us/",
+    "team_page": "https://www.sagesoftware.co.in/sage-intacct/",
+    "emails": [
+      "sales@sagesoftware.co.in"
+    ],
+    "phones": [
+      "+91 84548 61144",
+      "+91 8454861144",
+      "+91 98671 19579",
+      "+91-78993 53366",
+      "+91-86553 06473",
+      "+91-9903774837",
+      "+91-99626 66339"
+    ],
+    "social_links": {
+      "facebook.com": "https://www.facebook.com/sagesoftwaresolutions",
+      "instagram.com": "https://www.instagram.com/sagesoftwareindia/?hl=en",
+      "linkedin.com": "https://www.linkedin.com/company/sagesoftware",
+      "x.com": "https://x.com/sageindia",
+      "twitter.com": "https://twitter.com/sageindia"
+    },
+    "people": [
+      {
+        "name": "About Us",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      }
+    ],
+    "source": "Google",
+    "confidence_score": 79,
+    "lead_quality": "High",
+    "company_type": "Software Company",
+    "_source_file": "output\\raw\\software_20260707_194123.json",
+    "_flags": [
+      "email_junk:flags@2x.png"
+    ]
+  },
+  {
+    "company_name": "Netsolutions",
+    "website": "https://www.netsolutions.com/",
+    "linkedin": null,
+    "industry": "Artificial Intelligence",
+    "location": null,
+    "contact_page": "https://www.netsolutions.com/contact-us/",
+    "about_page": "https://www.netsolutions.com/about/",
+    "team_page": "https://www.netsolutions.com/casestudy-img/",
+    "emails": [
+      "sales@netsolutions.com",
+      "info@netsolutions.com"
+    ],
+    "phones": [
+      "+1 (416) 720-1790",
+      "+44 (20) 3807-3803",
+      "+91 172 4315000"
+    ],
+    "social_links": {
+      "facebook.com": "https://www.facebook.com/NetSolutionsHQ/",
+      "linkedin.com": "https://www.linkedin.com/company/net-solutions",
+      "twitter.com": "https://twitter.com/netsolutions"
+    },
+    "people": [],
+    "source": "Google",
+    "confidence_score": 70,
+    "lead_quality": "High",
+    "company_type": "Software Company",
+    "_source_file": "output\\raw\\software_20260707_194123.json",
+    "_flags": [
+      "email_junk:flags@2x.png"
+    ]
+  },
+  {
+    "company_name": "Intellectsoft",
+    "website": "https://www.intellectsoft.net/services",
+    "linkedin": null,
+    "industry": "Software Development",
+    "location": null,
+    "contact_page": "https://www.intellectsoft.net/contacts",
+    "about_page": "https://www.intellectsoft.net/about",
+    "team_page": "https://www.intellectsoft.net/services/dedicated-development-team",
+    "emails": [
+      "info@intellectsoft.net"
+    ],
+    "phones": [
+      "+1 (650) 233-6196"
+    ],
+    "social_links": {
+      "linkedin.com": "https://www.linkedin.com/company/intellectsoft",
+      "facebook.com": "https://www.facebook.com/Intellectsoft/",
+      "twitter.com": "https://twitter.com/Intellectsoft"
+    },
+    "people": [
+      {
+        "name": "SUCCESS STORIES",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      }
+    ],
+    "source": "Google",
+    "confidence_score": 82,
+    "lead_quality": "High",
+    "company_type": "Software Company",
+    "_source_file": "output\\raw\\software_20260707_194123.json",
+    "_flags": [
+      "people_dropped:1"
+    ]
+  },
+  {
+    "company_name": "Embee",
+    "website": "https://embee.co.in/",
+    "linkedin": null,
+    "industry": "Cloud Computing",
+    "location": null,
+    "contact_page": "https://embee.co.in/contact-us/",
+    "about_page": "https://embee.co.in/about-us/",
+    "team_page": "https://embee.co.in/solutions/microsoft-teams-services/",
+    "emails": [
+      "support@embee.co.in",
+      "careers@embee.co.in",
+      "connect@embee.co.in"
+    ],
+    "phones": [
+      "+91 8335819700",
+      "+91 84478 77367",
+      "+91 8447877367"
+    ],
+    "social_links": {
+      "linkedin.com": "https://www.linkedin.com/company/embee-software/?utm_source=Organic-Social&utm_medium=Linkedin&utm_campaign=Social-Platform-Redirect",
+      "facebook.com": "https://www.facebook.com/EmbeeSoftware/?utm_source=Organic-Social&utm_medium=Facebook&utm_campaign=Social-Platform-Redirect",
+      "instagram.com": "https://www.instagram.com/embeesoftware/?utm_source=Organic-Social&utm_medium=Instgram&utm_campaign=Social-Platform-Redirect",
+      "x.com": "https://x.com/embeesoftware/?utm_source=Organic-Social&utm_medium=Twitter&utm_campaign=Social-Platform-Redirect"
+    },
+    "people": [
+      {
+        "name": "Assessing and strategizing IT needs",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Microsoft Advanced Specializations",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Years of Microsoft Partnership",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Years of Microsoft Partnership",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      }
+    ],
+    "source": "Google",
+    "confidence_score": 79,
+    "lead_quality": "High",
+    "company_type": "Software Company",
+    "_source_file": "output\\raw\\software_20260707_194123.json",
+    "_flags": [
+      "email_junk:rocket_launch_FILL0_wght300_GRAD0_opsz24@2x.png",
+      "email_junk:person_check_FILL0_wght300_GRAD0_opsz24@2x.png",
+      "email_junk:Mask-Group-11@2x.png",
+      "email_junk:product-management-3@2x.png",
+      "email_junk:code_blocks_FILL0_wght300_GRAD0_opsz24@2x.png",
+      "email_junk:local_police_FILL0_wght300_GRAD0_opsz24@2x.png",
+      "email_junk:settings_FILL0_wght300_GRAD0_opsz24@2x-1.png",
+      "email_junk:insert_chart_FILL0_wght300_GRAD0_opsz24@2x-1.png",
+      "email_junk:new_releases_FILL0_wght400_GRAD0_opsz24@2x.png",
+      "email_junk:travel_explore_FILL0_wght300_GRAD0_opsz24@2x.png",
+      "email_junk:speed_FILL0_wght300_GRAD0_opsz24@2x.png",
+      "people_dropped:6"
+    ]
+  },
+  {
+    "company_name": "Appdirect",
+    "website": "https://www.appdirect.com/resources/glossary/software-vendor",
+    "linkedin": null,
+    "industry": "software",
+    "location": null,
+    "contact_page": "https://www.appdirect.com/contact-sales",
+    "about_page": "https://www.appdirect.com/about",
+    "team_page": "https://www.appdirect.com/platform/appreseller",
+    "emails": [
+      "support@appdirect.com"
+    ],
+    "phones": [],
+    "social_links": {
+      "linkedin.com": "https://www.linkedin.com/company/appdirect/"
+    },
+    "people": [
+      {
+        "name": "Launch an App Store",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Scale a Partner Ecosystem",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Add-on Store Partner",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Register and Manage Your Channel",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Automate and Scale Partner Sales",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Register and Manage Your Channel",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Register and manage your channel",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Register and Manage Your Channel",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Subscription Billing",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "All Partnership Opportunities",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Launch an AppStore",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Scale a Partner Ecosystem",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      }
+    ],
+    "source": "Google",
+    "confidence_score": 69,
+    "lead_quality": "Medium",
+    "company_type": "Software Company",
+    "_source_file": "output\\raw\\software_20260707_194123.json",
+    "_flags": [
+      "people_dropped:1"
+    ]
+  },
+  {
+    "company_name": "Registerkaro",
+    "website": "https://www.registerkaro.in/post/top-it-software-companies-in-indore",
+    "linkedin": null,
+    "industry": "software",
+    "location": null,
+    "contact_page": "https://www.registerkaro.in/contact-us",
+    "about_page": "https://www.registerkaro.in/company-registration",
+    "team_page": "https://www.registerkaro.in/spice-board-registration",
+    "emails": [
+      "your.email@example.com"
+    ],
+    "phones": [
+      "+91 92173 26570",
+      "+919217326570",
+      "2023-08-31",
+      "2023-09-21",
+      "2023-11-24",
+      "2023-12-13",
+      "2024-01-31",
+      "2024-02-08",
+      "2024-07-29",
+      "2024-09-03",
+      "2024-09-21",
+      "2024-11-18",
+      "2025-01-25",
+      "2025-03-10",
+      "2025-03-29",
+      "2025-04-30",
+      "2025-05-22",
+      "2025-11-11",
+      "2026-04-21",
+      "2026-04-24",
+      "2026-05-20",
+      "2026-07-01",
+      "5 (8828) 4.0"
+    ],
+    "social_links": {
+      "linkedin.com": "https://in.linkedin.com/in/joel-dsouza1",
+      "facebook.com": "https://www.facebook.com/RegisterKaro1/",
+      "instagram.com": "https://www.instagram.com/registerkaro_/"
+    },
+    "people": [
+      {
+        "name": "Public Limited Company",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Dubai Free Zone Company Registration",
+        "designation": "CFO",
+        "decision_maker_score": 70
+      },
+      {
+        "name": "Annual Compliance for Society",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Trust Annual Compliance",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Change in Director",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Add Designated Partner",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Winding Up of a Company",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Increase Authorized Capital",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Transfer of Shares",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Convert Your Business",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Shareholder's Agreement",
+        "designation": "Founder",
+        "decision_maker_score": 100
+      },
+      {
+        "name": "Partnership Explore partnerships",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      }
+    ],
+    "source": "Google",
+    "confidence_score": 86,
+    "lead_quality": "High",
+    "company_type": "Software Company",
+    "_source_file": "output\\raw\\software_20260707_194123.json",
+    "_flags": [
+      "people_dropped:1"
+    ]
+  }
+]

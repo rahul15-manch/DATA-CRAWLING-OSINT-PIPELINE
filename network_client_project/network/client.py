@@ -1,8 +1,8 @@
 import time
 import logging
 from typing import Optional, Dict, Any, Union
-import requests
-from requests.exceptions import RequestException
+from curl_cffi import requests
+from curl_cffi.requests.exceptions import RequestException
 
 # Import our custom modules
 from .config import config
@@ -27,8 +27,9 @@ class NetworkClient:
     def __init__(self):
         # Initialize Managers
         self.proxy_manager = ProxyManager()
-        if config.PROXIES:
-            self.proxy_manager.load_from_list(config.PROXIES)
+        all_proxies = config.get_all_proxies
+        if all_proxies:
+            self.proxy_manager.load_from_list(all_proxies)
         elif config.PROXY_FILE:
             self.proxy_manager.load_from_file(config.PROXY_FILE)
             
@@ -43,7 +44,7 @@ class NetworkClient:
         self, 
         method: str, 
         url: str, 
-        session_id: str, 
+        session_id: Optional[str], 
         is_xhr: bool = False,
         **kwargs
     ) -> Dict[str, Any]:
@@ -58,11 +59,11 @@ class NetworkClient:
         proxy_dict = proxy.formatted if proxy else None
 
         # 3. Generate User-Agent and Headers
-        # If we have an existing UA for this session in the headers, keep it!
-        # Otherwise, generate a new one. (We want to stick to Chrome for modern WAFs)
-        ua = session.headers.get("User-Agent")
+        # Persist UA in sticky sessions to prevent rotation mid-session
+        ua = getattr(session, "_custom_ua", None)
         if not ua:
             ua = self.ua_manager.get_chrome_desktop()
+            session._custom_ua = ua
             
         headers = self.header_manager.generate_browser_headers(
             target_url=url, 
@@ -74,12 +75,16 @@ class NetworkClient:
         if 'headers' in kwargs:
             headers.update(kwargs.pop('headers'))
 
+        # Pop Accept-Encoding to let requests handle decompression automatically
+        headers.pop("Accept-Encoding", None)
+
         return {
             "session": session,
             "proxies": proxy_dict,
             "headers": headers,
-            "timeout": config.timeout_tuple,
-            "verify": False,  # Disable SSL verification for shady targets by default
+            "timeout": max(config.CONNECT_TIMEOUT, config.READ_TIMEOUT), # curl_cffi timeout format
+            "verify": config.VERIFY_SSL,
+            "_proxy_obj": proxy,
             **kwargs
         }
 
@@ -88,7 +93,7 @@ class NetworkClient:
         self, 
         method: str, 
         url: str, 
-        session_id: str, 
+        session_id: Optional[str], 
         is_xhr: bool = False,
         **kwargs
     ) -> requests.Response:
@@ -99,7 +104,6 @@ class NetworkClient:
         domain = urlparse(url).netloc
         
         # 1. Rate Limiting Check
-        # (Assuming we set a default limit for all domains if not specified)
         if domain not in self.rate_manager._domain_limiters:
             self.rate_manager.set_domain_limit(domain, config.GLOBAL_RATE_LIMIT)
         self.rate_manager.wait_for_domain(domain)
@@ -110,8 +114,12 @@ class NetworkClient:
         # 3. Prepare Camouflage
         req_params = self._prepare_request(method, url, session_id, is_xhr, **kwargs)
         session: requests.Session = req_params.pop("session")
+        current_proxy = req_params.pop("_proxy_obj", None)
         
-        proxy_url = req_params.get("proxies", {}).get("http")
+        proxies_dict = req_params.get("proxies")
+        proxy_url = proxies_dict.get("http") if proxies_dict else None
+        
+
         start_time = time.time()
         
         try:
@@ -119,46 +127,60 @@ class NetworkClient:
             response = session.request(method, url, **req_params)
             latency = (time.time() - start_time) * 1000
             
-            # 5. Log the result
-            NetworkLogger.log_request(logger, method, url, response.status_code, latency, proxy_url)
+            attempt = 0
+            if hasattr(self._execute, "retry") and hasattr(self._execute.retry, "statistics"):
+                attempt = getattr(self._execute.retry.statistics, "get", lambda x,y: 1)("attempt_number", 1) - 1
             
-            # 6. WAF / Error Detection
+            # 5. WAF / Error Detection
             waf_error = ErrorDetector.detect_waf_or_captcha(response)
             if waf_error:
-                # If we hit a WAF, log it, fail the proxy, and raise the error so Retry Engine kicks in
                 logger.warning(f"WAF Intercept on {domain}: {type(waf_error).__name__}")
-                # We need to tell the ProxyManager this proxy got blocked
-                current_proxy = self.proxy_manager.get_proxy(session_id)
                 if current_proxy:
-                    current_proxy.record_failure(cooldown_seconds=300) # 5 min cooldown for WAF block
+                    current_proxy.record_failure(cooldown_seconds=300)
+                NetworkLogger.log_request(
+                    logger, method, url, response.status_code, latency, proxy_url,
+                    retries=attempt, user_agent=req_params["headers"].get("User-Agent"),
+                    proxy_failed=True, cooldown=300, proxy_rotated=(attempt > 0)
+                )
                 raise waf_error
                 
-            # If we get here, it's a true success!
-            current_proxy = self.proxy_manager.get_proxy(session_id)
             if current_proxy:
                 current_proxy.record_success()
                 
-            # Will automatically trigger retry if status code is 500, 502, etc. (handled by tenacity config)
+            # Log success
+            NetworkLogger.log_request(
+                logger, method, url, response.status_code, latency, proxy_url,
+                retries=attempt, user_agent=req_params["headers"].get("User-Agent"), proxy_rotated=(attempt > 0)
+            )
+            
             response.raise_for_status() 
             return response
             
         except RequestException as e:
             latency = (time.time() - start_time) * 1000
             logger.error(f"Network Failure on {url}: {e}")
-            current_proxy = self.proxy_manager.get_proxy(session_id)
+            attempt = 0
+            if hasattr(self._execute, "retry") and hasattr(self._execute.retry, "statistics"):
+                attempt = getattr(self._execute.retry.statistics, "get", lambda x,y: 1)("attempt_number", 1) - 1
+                
             if current_proxy:
                 current_proxy.record_failure()
+                NetworkLogger.log_request(
+                    logger, method, url, 0, latency, proxy_url,
+                    retries=attempt, user_agent=req_params["headers"].get("User-Agent"),
+                    proxy_failed=True, cooldown=60, proxy_rotated=(attempt > 0)
+                )
             raise e
 
     # --- PUBLIC API FOR CRAWLER TEAMS ---
 
-    def get(self, url: str, session_id: str = "global", **kwargs) -> requests.Response:
+    def get(self, url: str, session_id: Optional[str] = None, **kwargs) -> requests.Response:
         return self._execute("GET", url, session_id, **kwargs)
 
-    def post(self, url: str, session_id: str = "global", **kwargs) -> requests.Response:
+    def post(self, url: str, session_id: Optional[str] = None, **kwargs) -> requests.Response:
         return self._execute("POST", url, session_id, **kwargs)
         
-    def download(self, url: str, filepath: str, session_id: str = "global"):
+    def download(self, url: str, filepath: str, session_id: Optional[str] = None):
         """Downloads a large file using streaming."""
         response = self._execute("GET", url, session_id, stream=True)
         with open(filepath, 'wb') as f:
