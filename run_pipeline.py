@@ -5,10 +5,6 @@ import pathlib
 import subprocess
 
 
-# ─────────────────────────────────────────────────────────────────────────────
-# Helpers
-# ─────────────────────────────────────────────────────────────────────────────
-
 def _step(n: int, total: int, label: str) -> None:
     print()
     print(f"[{n}/{total}] {label}...")
@@ -46,10 +42,6 @@ def _derive_next(current: pathlib.Path, subfolder: str) -> pathlib.Path:
     """Derive the output path for the next stage, keeping the same filename stem."""
     return pathlib.Path("output") / subfolder / current.name
 
-
-# ─────────────────────────────────────────────────────────────────────────────
-# Main orchestrator
-# ─────────────────────────────────────────────────────────────────────────────
 
 def run(keyword: str) -> None:
     TOTAL_STEPS = 5
@@ -142,10 +134,6 @@ def run(keyword: str) -> None:
     print("  The final file is ready for Pillar 3 / outreach.")
     print("=" * 60)
 
-
-# ─────────────────────────────────────────────────────────────────────────────
-# Entry point
-# ─────────────────────────────────────────────────────────────────────────────
 
 if __name__ == "__main__":
     if len(sys.argv) >= 2:
