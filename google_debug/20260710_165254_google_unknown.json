@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-07-10T16:52:54.213282",
+  "url": "https://www.google.com/search?q=%22Softonic%22+%22our+team%22+OR+%22about+us%22&num=5&hl=en&gl=us",
+  "status_code": 200,
+  "content_length": 28753,
+  "page_title": "No Title Tag",
+  "detected_language": "en",
+  "classification": "UNKNOWN_LAYOUT",
+  "layout_fingerprint": "f517d7fdf16aa42ea4c22b2f7977afed",
+  "reason": "All parsing strategies failed to return organic results",
+  "proxy": "34.134.231.117:3129",
+  "link_count": 0,
+  "div_g_count": 0,
+  "knowledge_panel": false,
+  "ai_overview": false,
+  "people_also_ask": false
+}

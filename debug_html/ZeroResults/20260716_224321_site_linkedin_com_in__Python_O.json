@@ -1,0 +1,24 @@
+{
+  "timestamp": "2026-07-16T22:43:21.272260",
+  "query": "site:linkedin.com/in \"Python Online Compiler Interpreter\" \"co-founder\"",
+  "classification": "ZERO_RESULTS_PAGE",
+  "url": "https://www.google.com/search?q=site%3Alinkedin.com%2Fin+%22Python+Online+Compiler+Interpreter%22+%22co-founder%22&num=5&hl=en&gl=us",
+  "status_code": 200,
+  "redirect_chain": [
+    "https://www.google.com/search?q=site%3Alinkedin.com%2Fin+%22Python+Online+Compiler+Interpreter%22+%22co-founder%22&num=5&hl=en&gl=us"
+  ],
+  "response_headers": {
+    "date": "Thu, 16 Jul 2026 17:13:17 GMT",
+    "server": "gws",
+    "last-modified": "Tue, 10 Aug 2021 15:10:37 GMT",
+    "content-type": "text/html; charset=UTF-8",
+    "cache-control": "public, max-age=2592000",
+    "content-length": "329812",
+    "x-xss-protection": "0",
+    "x-frame-options": "SAMEORIGIN"
+  },
+  "layout_fingerprint": "d7d3725bbc23f9c4a1b67cb6b0260da5",
+  "detected_signals": [
+    "did not match any documents"
+  ]
+}

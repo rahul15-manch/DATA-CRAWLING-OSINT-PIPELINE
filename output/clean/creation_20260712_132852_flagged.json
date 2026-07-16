@@ -1,0 +1,187 @@
+[
+  {
+    "company_name": "Ben Jerrys Israel debuts flavor celebrating local resilience",
+    "website": "https://www.timesofisrael.com/ben-jerrys-israel-debuts-flavor-celebrating-local-resilience/",
+    "linkedin": null,
+    "industry": "creation",
+    "location": null,
+    "contact_page": "https://www.timesofisrael.com/contact/",
+    "about_page": "https://www.timesofisrael.com/about/",
+    "team_page": "https://www.timesofisrael.com/liveblog_entry/trump-calls-graham-one-of-the-greatest-people-he-has-ever-known/",
+    "emails": [],
+    "phones": [
+      "(2004-2009",
+      "(2010- 2017",
+      "+972-2-648-1186",
+      "+972-2-648-1205",
+      "9418704"
+    ],
+    "social_links": {
+      "facebook.com": "https://www.facebook.com/timesofisrael",
+      "instagram.com": "https://www.instagram.com/timesofisrael/",
+      "twitter.com": "https://twitter.com/timesofisrael",
+      "x.com": "https://x.com/netanyahu/status/1417153071336067073"
+    },
+    "people": [],
+    "source": "Google",
+    "confidence_score": 70,
+    "lead_quality": "High",
+    "company_type": "Unknown",
+    "_source_file": "output\\raw\\creation_20260712_132852.json",
+    "_flags": [
+      "email_junk:example@domain.com"
+    ]
+  },
+  {
+    "company_name": "Creation Group",
+    "website": "https://www.creation-group.com/",
+    "linkedin": null,
+    "industry": "creation",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [
+      "info@creation-group.com"
+    ],
+    "phones": [
+      "+44 (0) 203 745 4550"
+    ],
+    "social_links": {
+      "instagram.com": "https://www.instagram.com/creationgroupuk?utm_source=creationlive&utm_medium=website",
+      "linkedin.com": "https://www.linkedin.com/company/creation-group-uk?utm_source=creationlive&utm_medium=website"
+    },
+    "people": [],
+    "source": "Google",
+    "confidence_score": 56,
+    "lead_quality": "Medium",
+    "company_type": "Agency",
+    "_source_file": "output\\raw\\creation_20260712_132852.json",
+    "_flags": [
+      "email_junk:210723_CREATIONGROUP_Latitude_JakeDavis_@jakephilipdavis-9352.jpg",
+      "email_junk:211021_CREATION_asos_JakeDavis_@jakephilipdavis-1876.jpg",
+      "email_junk:211118_CREATION_TasteOfLondon_JakeDavis_@jakephilipdavis-0193.jpg",
+      "email_junk:210830_CREATIONGROUP_AllPointsEast_JakeDavis_@jakephilipdavis-9509.jpg",
+      "email_junk:211118_CREATION_TasteOfLondon_JakeDavis_@jakephilipdavis-0091.jpg",
+      "email_junk:210806_GORILLAS_FinsburyPark_JakeDavis_@jakephilipdavis-5534.jpg",
+      "email_junk:210830_CREATIONGROUP_AllPointsEast_JakeDavis_@jakephilipdavis-9188.jpg",
+      "email_junk:191009_CREATIONLIVE_BoilerRoom_JakeDavis_@hungryvisuals-0758.jpg",
+      "email_junk:210806_GORILLAS_FinsburyPark_JakeDavis_@jakephilipdavis-5541.jpg"
+    ]
+  },
+  {
+    "company_name": "Creativepool",
+    "website": "https://creativepool.com/companies/",
+    "linkedin": null,
+    "industry": "Artificial Intelligence",
+    "location": null,
+    "contact_page": "https://creativepool.com/contactus.php",
+    "about_page": "https://creativepool.com/companies/company-directory",
+    "team_page": "https://creativepool.com/people/",
+    "emails": [
+      "sales@creativepool.com",
+      "business@creativepool.com",
+      "support@creativepool.com",
+      "press@creativepool.com",
+      "awards@creativepool.com"
+    ],
+    "phones": [],
+    "social_links": {},
+    "people": [
+      {
+        "name": "ENVIRONMENTALILLUSTRATION - Okinawa Rail",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Member quick links",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      }
+    ],
+    "source": "Google",
+    "confidence_score": 72,
+    "lead_quality": "High",
+    "company_type": "Consultancy",
+    "_source_file": "output\\raw\\creation_20260712_132852.json",
+    "_flags": [
+      "email_junk:mobile-spritesheet-v6@2x.png"
+    ]
+  },
+  {
+    "company_name": "Amchammyanmar",
+    "website": "https://www.amchammyanmar.com/membership-directory/corporate/366706",
+    "linkedin": null,
+    "industry": "Civil Engineering",
+    "location": null,
+    "contact_page": "https://www.amchammyanmar.com/contact",
+    "about_page": "https://www.amchammyanmar.com/mission-values-and-objectives",
+    "team_page": "https://www.amchammyanmar.com/board-governors",
+    "emails": [],
+    "phones": [
+      "+95 1 9253313",
+      "+95 1 9253315",
+      "115666037"
+    ],
+    "social_links": {
+      "facebook.com": "https://www.facebook.com/amchammyanmar/",
+      "linkedin.com": "https://www.linkedin.com/company/american-chamber-of-commerce-in-myanmar",
+      "x.com": "https://novotelyangonmax.com/"
+    },
+    "people": [
+      {
+        "name": "Khin Maung Win",
+        "designation": "President",
+        "decision_maker_score": 85
+      },
+      {
+        "name": "Myan Shwe Pyi Tractors Ltd.",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Kevin Murphy",
+        "designation": "President",
+        "decision_maker_score": 85
+      },
+      {
+        "name": "Vice President",
+        "designation": "President",
+        "decision_maker_score": 85
+      },
+      {
+        "name": "Vice President",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Andaman Capital Partners",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Thadoe Hein",
+        "designation": "President",
+        "decision_maker_score": 85
+      },
+      {
+        "name": "Vice President",
+        "designation": "President",
+        "decision_maker_score": 85
+      },
+      {
+        "name": "Victoria Win",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      }
+    ],
+    "source": "Google",
+    "confidence_score": 83,
+    "lead_quality": "High",
+    "company_type": "Unknown",
+    "_source_file": "output\\raw\\creation_20260712_132852.json",
+    "_flags": [
+      "email_junk:glueup-logo-white@2x.png"
+    ]
+  }
+]

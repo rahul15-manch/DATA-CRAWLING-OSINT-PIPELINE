@@ -3,6 +3,7 @@ import os
 import sys
 import pathlib
 import subprocess
+import time
 
 
 def _step(n: int, total: int, label: str) -> None:
@@ -43,8 +44,13 @@ def _derive_next(current: pathlib.Path, subfolder: str) -> pathlib.Path:
     return pathlib.Path("output") / subfolder / current.name
 
 
-def run(keyword: str) -> None:
-    TOTAL_STEPS = 5
+def run(keyword: str, disable_cache: bool = False) -> None:
+    TOTAL_STEPS = 7
+    start_time = time.time()
+
+    if disable_cache:
+        os.environ["ENABLE_SEARCH_CACHE"] = "False"
+        os.environ["DISCOVERY_DEBUG"] = "true"
 
     print()
     print("=" * 60)
@@ -117,27 +123,64 @@ def run(keyword: str) -> None:
     _require_file(final_file, "output")
     _ok("Final leads written", final_file)
 
-    # ── Summary ───────────────────────────────────────────────────────────────
-    print()
-    print("=" * 60)
-    print("  PIPELINE COMPLETE")
-    print("=" * 60)
-    print(f"  Keyword  : {keyword!r}")
-    print()
+    # ── Step 6: Pillar 4 ETL ──────────────────────────────────────────────────
+    _step(6, TOTAL_STEPS, "Pillar 4 ETL — validation, schema alignment, and historical deduplication")
+
+    try:
+        from pillar_4_pipeline.etl import process_file as run_etl
+        run_etl(str(final_file))
+        rc = 0
+    except Exception as e:
+        print(f"[ERROR] ETL run failed: {e}")
+        rc = 1
+
+    if rc != 0:
+        _fail("etl.py", rc)
+        sys.exit(rc)
+
+    cleaned_data_file = pathlib.Path("cleaned_data.json")
+    _require_file(cleaned_data_file, "cleaned_data.json")
+    _ok("ETL Cleaned data written", cleaned_data_file)
+
+    # ── Step 7: Pillar 4 Database Export ──────────────────────────────────────
+    _step(7, TOTAL_STEPS, "Pillar 4 Database Export — SQLite storage for voice/outreach synchronization")
+
+    rc = _run("export.py", [sys.executable, "pillar_4_pipeline/export.py"])
+    if rc != 0:
+        _fail("export.py", rc)
+        sys.exit(rc)
+
+    leads_db_file = pathlib.Path("leads.db")
+    _require_file(leads_db_file, "leads.db")
+    _ok("SQLite leads database written", leads_db_file)
+
+    # ── Summary & Dashboard ───────────────────────────────────────────────────
+    elapsed_time = time.time() - start_time
+    from stats.dashboard import render_dashboard
+    render_dashboard(elapsed_time, keyword)
+
+    print("-" * 60)
     print("  Folder map:")
     print(f"    raw      -> {raw_file}")
     print(f"    clean    -> {clean_file}")
     print(f"    verified -> {verified_file}")
     print(f"    enriched -> {enriched_file}")
     print(f"    final    -> {final_file}")
+    print(f"    master   -> {cleaned_data_file}")
+    print(f"    database -> {leads_db_file}")
     print()
-    print("  The final file is ready for Pillar 3 / outreach.")
+    print("  Pillar 4 synchronization successful. leads.db is updated.")
     print("=" * 60)
 
 
 if __name__ == "__main__":
-    if len(sys.argv) >= 2:
-        kw = " ".join(sys.argv[1:]).strip()
+    argv = sys.argv[1:]
+    disable_cache = "--no-cache" in argv
+    if disable_cache:
+        argv = [arg for arg in argv if arg != "--no-cache"]
+
+    if argv:
+        kw = " ".join(argv).strip()
     else:
         kw = input("Enter keyword: ").strip()
 
@@ -145,4 +188,4 @@ if __name__ == "__main__":
         print("Keyword required.")
         sys.exit(1)
 
-    run(kw)
+    run(kw, disable_cache=disable_cache)

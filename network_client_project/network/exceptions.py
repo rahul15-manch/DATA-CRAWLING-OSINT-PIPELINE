@@ -75,6 +75,14 @@ class ErrorDetector:
             if "g-recaptcha" in html or "hcaptcha" in html or "px-captcha" in html:
                 return CaptchaDetectedError("reCAPTCHA, hCaptcha, or PerimeterX detected in HTML.")
                 
+            # Google-specific checks
+            if "/httpservice/retry/enablejs" in html:
+                return CaptchaDetectedError("Google JS-redirection (enablejs) enforcer intercepted.")
+            if "consent.google.com" in html or "before you continue" in html:
+                # We could create a ConsentInterceptedError, but functionally we want to block the proxy 
+                # from Google because it failed to parse. Let's just treat it as a proxy exhaustion/ban.
+                return ProxyBannedError("Google Consent Page intercepted.")
+                
             # Common soft-ban strings
             if "access denied" in html and status == 403:
                 return ProxyBannedError("Generic 'Access Denied' soft-block detected.")

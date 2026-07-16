@@ -31,6 +31,7 @@ from abc import ABC, abstractmethod
 from dataclasses import dataclass
 
 from search.result import SearchResult
+from network_client_project.network.middleware.base import Request
 
 
 @dataclass(frozen=True)
@@ -82,7 +83,7 @@ class SearchProvider(ABC):
     @abstractmethod
     def search(
         self,
-        query: str,
+        request_or_query: Request | str,
         max_results: int = 10,
         page: int = 0,
     ) -> list[SearchResult]:
@@ -91,9 +92,9 @@ class SearchProvider(ABC):
 
         Parameters
         ----------
-        query       : Search query string
-        max_results : Maximum number of results to return
-        page        : Zero-based page index (offset = page * max_results)
+        request_or_query : Request object or raw search query string
+        max_results      : Maximum number of results to return
+        page             : Zero-based page index (offset = page * max_results)
 
         Raises
         ------

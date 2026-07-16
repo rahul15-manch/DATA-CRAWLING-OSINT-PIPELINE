@@ -1,0 +1,77 @@
+[
+  {
+    "company_name": "Softwaretestinghelp",
+    "website": "https://www.softwaretestinghelp.com/best-music-production-software/",
+    "linkedin": null,
+    "industry": "Artificial Intelligence",
+    "location": null,
+    "contact_page": "https://www.softwaretestinghelp.com/contact/",
+    "about_page": "https://www.softwaretestinghelp.com/penetration-testing-company/",
+    "team_page": "https://www.softwaretestinghelp.com/15-best-test-management-tools-for-software-testers/",
+    "emails": [
+      "info@softwaretestinghelp.com"
+    ],
+    "phones": [
+      "11.52.496",
+      "27001-2013"
+    ],
+    "social_links": {
+      "facebook.com": "https://www.facebook.com/SoftwareTestingHelp/",
+      "linkedin.com": "https://www.linkedin.com/company/softwaretestinghelp-com/",
+      "x.com": "https://x.com/intent/post?text=The%2015%20Best%20Music%20Production%20Software%20to%20Make%20Music%20in%202026&url=https%3A%2F%2Fwww.softwaretestinghelp.com%2Fbest-music-production-software%2F&related=VijayShinde&via=VijayShinde"
+    },
+    "people": [
+      {
+        "name": "Daniel Ivanov",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Greedy Tester",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Bhaskar Reddy",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      }
+    ],
+    "source": "Google",
+    "confidence_score": 82,
+    "lead_quality": "High",
+    "company_type": "Software Company",
+    "_source_file": "output\\raw\\production_20260712_081431.json",
+    "_flags": [
+      "email_junk:TestRail_Logo_Main_02@2x.png"
+    ]
+  },
+  {
+    "company_name": "Productionsolutions",
+    "website": "https://www.productionsolutions.com/contact/",
+    "linkedin": null,
+    "industry": "Artificial Intelligence",
+    "location": null,
+    "contact_page": "https://www.productionsolutions.com/contact/careers/",
+    "about_page": "https://www.productionsolutions.com/about/",
+    "team_page": null,
+    "emails": [],
+    "phones": [
+      "703.734.5700"
+    ],
+    "social_links": {
+      "facebook.com": "https://www.facebook.com/ProductionSolutions/",
+      "linkedin.com": "https://www.linkedin.com/company/production-solutions/",
+      "instagram.com": "https://www.instagram.com/productionsolutions/"
+    },
+    "people": [],
+    "source": "Google",
+    "confidence_score": 66,
+    "lead_quality": "Medium",
+    "company_type": "Manufacturer",
+    "_source_file": "output\\raw\\production_20260712_081431.json",
+    "_flags": [
+      "email_junk:chosen-sprite@2x.png"
+    ]
+  }
+]

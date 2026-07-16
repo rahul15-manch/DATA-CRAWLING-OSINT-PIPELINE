@@ -1,0 +1,1719 @@
+[
+  {
+    "company_name": "Google AI",
+    "website": "https://ai.google/",
+    "domain": "ai.google",
+    "industry": "AI",
+    "about_page": "https://labs.google/flow/about?utm_source=ai.google&utm_medium=referral",
+    "emails": [
+      "ai-test-kitchen-data-export@google.com",
+      "egal-notices@google.com",
+      "geniettsupport@google.com",
+      "labs-google-fx-data-export@google.com",
+      "legal-notices@google.com",
+      "marketing-governance@google.com"
+    ],
+    "phones": [],
+    "social_links": {
+      "x.com": "https://x.com/Googleai/?utm_source=ai.google&utm_medium=referral"
+    },
+    "people": [
+      {
+        "name": "Thomas Kurian",
+        "designation": "CEO",
+        "linkedin": "https://www.linkedin.com/in/thomas-kurian-469b6219"
+      }
+    ],
+    "source": "Google"
+  },
+  {
+    "company_name": "Google AI Studio",
+    "website": "https://aistudio.google.com/",
+    "domain": "aistudio.google.com",
+    "industry": "AI",
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [
+      {
+        "name": "Logan Kilpatrick",
+        "linkedin": "https://www.linkedin.com/in/logankilpatrick"
+      }
+    ],
+    "source": "Google"
+  },
+  {
+    "company_name": "OpenAI",
+    "website": "https://openai.com/",
+    "domain": "openai.com",
+    "industry": "AI",
+    "contact_page": "https://openai.com/contact-sales/",
+    "about_page": "https://openai.com/about/",
+    "emails": [],
+    "phones": [],
+    "social_links": {
+      "x.com": "https://x.com/OpenAI",
+      "linkedin.com": "https://www.linkedin.com/company/openai",
+      "instagram.com": "https://www.instagram.com/openai/"
+    },
+    "people": [
+      {
+        "name": "Greg Brockman",
+        "designation": "Founder",
+        "linkedin": "https://www.linkedin.com/in/thegdb"
+      }
+    ],
+    "source": "Google"
+  },
+  {
+    "company_name": "Official AI",
+    "website": "https://www.theofficial.ai/",
+    "domain": "theofficial.ai",
+    "industry": "AI",
+    "contact_page": "https://www.theofficial.ai/contact",
+    "about_page": "https://www.theofficial.ai/about",
+    "emails": [],
+    "phones": [],
+    "social_links": {
+      "instagram.com": "https://www.instagram.com/itstheofficial.ai",
+      "linkedin.com": "https://www.linkedin.com/company/official-ai"
+    },
+    "people": [
+      {
+        "name": "Pradeep sapkota",
+        "linkedin": "https://np.linkedin.com/in/pradeep-sapkota-72377a16a"
+      }
+    ],
+    "source": "Google"
+  },
+  {
+    "company_name": "The Leading Web Search APIs for AI",
+    "website": "https://you.com/",
+    "domain": "you.com",
+    "industry": "AI",
+    "contact_page": "https://you.com/book-a-demo",
+    "about_page": "https://you.com/docs/search/overview",
+    "emails": [
+      "api@you.com"
+    ],
+    "phones": [],
+    "social_links": {},
+    "people": [
+      {
+        "name": "Alex Yonetani",
+        "linkedin": "https://www.linkedin.com/in/alex-yonetani"
+      }
+    ],
+    "source": "Google"
+  },
+  {
+    "company_name": "Microsoft AI",
+    "website": "https://microsoft.ai/",
+    "domain": "microsoft.ai",
+    "industry": "AI",
+    "contact_page": "https://support.microsoft.com/contactus",
+    "about_page": "https://www.microsoft.com/about",
+    "emails": [],
+    "phones": [],
+    "social_links": {
+      "x.com": "https://www.xbox.com/",
+      "linkedin.com": "https://www.linkedin.com/company/microsoft-ai/",
+      "instagram.com": "https://www.instagram.com/microsoftai/"
+    },
+    "people": [
+      {
+        "name": "Ehsan Azarnasab",
+        "designation": "Founder",
+        "linkedin": "https://www.linkedin.com/in/azarnasab"
+      }
+    ],
+    "source": "Google"
+  },
+  {
+    "company_name": "AI Contact Centers",
+    "website": "https://www.salesforce.com/service/contact-center/ai/",
+    "domain": "salesforce.com",
+    "industry": "AI",
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [
+      {
+        "name": "Kirk Owen",
+        "designation": "Founder",
+        "linkedin": "https://www.linkedin.com/in/kirkowen"
+      }
+    ],
+    "source": "Google"
+  },
+  {
+    "company_name": "AI Contact Center",
+    "website": "https://www.brightpattern.com/ai-contact-center/",
+    "domain": "brightpattern.com",
+    "industry": "AI",
+    "contact_page": "https://www.brightpattern.com/ccaas-bright-pattern/",
+    "about_page": "https://www.brightpattern.com/ai-contact-center/",
+    "emails": [],
+    "phones": [],
+    "social_links": {
+      "linkedin.com": "https://www.linkedin.com/company/bright-pattern/",
+      "twitter.com": "https://twitter.com/BrightPatternUS",
+      "facebook.com": "https://www.facebook.com/BrightPatternUS/"
+    },
+    "people": [
+      {
+        "name": "Adam Peacock",
+        "designation": "Founder",
+        "linkedin": "https://www.linkedin.com/in/appeacock"
+      }
+    ],
+    "source": "Google"
+  },
+  {
+    "company_name": "AI Receptionist",
+    "website": "https://www.ringcentral.com/ai-receptionist.html",
+    "domain": "ringcentral.com",
+    "industry": "AI",
+    "contact_page": "https://www.ringcentral.com/ai-receptionist.html#contact-sales-modal",
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [
+      {
+        "name": "Lauren Fernandez",
+        "designation": "Founder",
+        "linkedin": "https://www.linkedin.com/in/lifernandez"
+      }
+    ],
+    "source": "Google"
+  },
+  {
+    "company_name": "AI Email Writer",
+    "website": "https://mailmeteor.com/tools/ai-email-writer",
+    "domain": "mailmeteor.com",
+    "industry": "AI",
+    "contact_page": "https://mailmeteor.com/contact",
+    "about_page": "https://mailmeteor.com/about",
+    "emails": [],
+    "phones": [],
+    "social_links": {
+      "linkedin.com": "https://www.linkedin.com/company/mailmeteor/"
+    },
+    "people": [
+      {
+        "name": "Kanad Bahalkar",
+        "designation": "Founder",
+        "linkedin": "https://www.linkedin.com/in/kanadbahalkar"
+      }
+    ],
+    "source": "Google"
+  },
+  {
+    "company_name": "AI Email Writer (Free)",
+    "website": "https://www.editpad.org/tool/email-writer",
+    "domain": "editpad.org",
+    "industry": "AI",
+    "contact_page": "https://www.editpad.org/contact.html",
+    "emails": [],
+    "phones": [],
+    "social_links": {
+      "facebook.com": "https://www.facebook.com/Editpad.org/",
+      "x.com": "https://x.com/EditpadOrg",
+      "linkedin.com": "https://www.linkedin.com/company/editpad/"
+    },
+    "people": [
+      {
+        "name": "Brady Barner",
+        "designation": "Founder",
+        "linkedin": "https://www.linkedin.com/in/brady-barner"
+      }
+    ],
+    "source": "Google"
+  },
+  {
+    "company_name": "AI Email Writer to Generate High Conversion Emails",
+    "website": "https://www.mailmodo.com/tools/ai-email-writer/",
+    "domain": "mailmodo.com",
+    "industry": "AI",
+    "contact_page": "https://www.mailmodo.com/contact-us/",
+    "about_page": "https://www.mailmodo.com/about/",
+    "emails": [
+      "enquiries@mailmodo.com",
+      "support@mailmodo.com"
+    ],
+    "phones": [],
+    "social_links": {
+      "facebook.com": "https://www.facebook.com/sharer/sharer.php?u=https%3A//www.mailmodo.com/tools/ai-email-writer/",
+      "twitter.com": "https://twitter.com/intent/tweet?text=Just%20generated%20some%20amazing%20emails%20with%20Mailmodo.%20All%20email%20marketers%20must%20check%20it%20out%20-%20https%3A%2F%2Fwww.mailmodo.com%2Ftools%2Fai-email-writer%2F",
+      "linkedin.com": "https://www.linkedin.com/shareArticle?mini=true&url=https%3A//www.mailmodo.com/tools/ai-email-writer/"
+    },
+    "people": [
+      {
+        "name": "Nathan Ojaokomo",
+        "linkedin": "https://ng.linkedin.com/in/nathan-ojaokomo"
+      }
+    ],
+    "source": "Google"
+  },
+  {
+    "company_name": "Aiphone",
+    "website": "https://www.aiphone.com/",
+    "domain": "aiphone.com",
+    "industry": "AI",
+    "contact_page": "https://www.aiphone.com/contact-us-landing/",
+    "about_page": "https://www.aiphone.com/about/",
+    "emails": [],
+    "phones": [],
+    "social_links": {
+      "facebook.com": "https://www.facebook.com/aiphoneamericas/",
+      "linkedin.com": "https://www.linkedin.com/company/aiphoneofficial"
+    },
+    "people": [
+      {
+        "name": "Takeshi Kamijo",
+        "designation": "CEO",
+        "linkedin": "https://www.linkedin.com/in/takeshi-kamijo-05418682"
+      }
+    ],
+    "source": "Google"
+  },
+  {
+    "company_name": "AI on Android",
+    "website": "https://www.android.com/ai/",
+    "domain": "android.com",
+    "industry": "AI",
+    "contact_page": "https://blog.google/press/",
+    "about_page": "https://play.google/about/howplayworks/",
+    "emails": [
+      "press@google.com"
+    ],
+    "phones": [],
+    "social_links": {
+      "twitter.com": "https://twitter.com/android/",
+      "instagram.com": "https://www.instagram.com/android/",
+      "facebook.com": "https://www.facebook.com/AndroidOfficial/",
+      "linkedin.com": "https://www.linkedin.com/showcase/android_by_google/"
+    },
+    "people": [
+      {
+        "name": "Akshay Nandwana",
+        "designation": "Founder",
+        "linkedin": "https://in.linkedin.com/in/anandwana001"
+      }
+    ],
+    "source": "Google"
+  },
+  {
+    "company_name": "Shop Phones with AI",
+    "website": "https://www.att.com/buy/phones/browse/ai/",
+    "domain": "att.com",
+    "industry": "AI",
+    "about_page": "https://www.att.com/wireless/ai-features-for-smartphones/",
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [
+      {
+        "name": "Shyam Sunder",
+        "designation": "Founder",
+        "linkedin": "https://www.linkedin.com/in/beingshyam"
+      }
+    ],
+    "source": "Google"
+  },
+  {
+    "company_name": "AI Services",
+    "website": "https://www.oracle.com/artificial-intelligence/ai-services/",
+    "domain": "oracle.com",
+    "industry": "AI",
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [
+      {
+        "name": "Dj Das",
+        "designation": "Founder",
+        "linkedin": "https://www.linkedin.com/in/djdas"
+      }
+    ],
+    "source": "Google"
+  },
+  {
+    "company_name": "Cloud Software Group home",
+    "website": "https://www.cloud.com/",
+    "domain": "cloud.com",
+    "industry": "Cloud Company",
+    "location": "gurugram",
+    "about_page": "https://www.cloud.com/about-us",
+    "emails": [],
+    "phones": [],
+    "social_links": {
+      "x.com": "https://www.citrix.com/customer-success/atlantic-health-system.html"
+    },
+    "people": [
+      {
+        "name": "Sandip Kayande",
+        "linkedin": "https://in.linkedin.com/in/sandip-kayande-36a06322"
+      }
+    ],
+    "source": "Google"
+  },
+  {
+    "company_name": "Cloud Computing Service",
+    "website": "https://dir.indiamart.com/gurgaon/cloud-computing-service.html",
+    "domain": "dir.indiamart.com",
+    "industry": "Cloud Company",
+    "location": "gurugram",
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [
+      {
+        "name": "David Young",
+        "designation": "Founder",
+        "linkedin": "https://www.linkedin.com/in/davidpaulyoung"
+      }
+    ],
+    "source": "Google"
+  },
+  {
+    "company_name": "AWS Cloud Service Providers in Gurgaon",
+    "website": "https://www.sulekha.com/aws-cloud-services/gurgaon",
+    "domain": "sulekha.com",
+    "industry": "Cloud Company",
+    "location": "gurugram",
+    "contact_page": "https://www.sulekha.com/datanet-hosting-solutions-pvt-ltd-noida-extension-noida-11117517-contact-address",
+    "about_page": "https://www.sulekha.com/aws-cloud-services/gurgaon#About",
+    "emails": [
+      "deepaksharma559@gmail.com",
+      "hello@soumenduganguly.in"
+    ],
+    "phones": [
+      "08035426747",
+      "08035427274",
+      "08069670035",
+      "08069831556",
+      "08069869420",
+      "08069874594",
+      "08069875789",
+      "08069876638",
+      "18004201212"
+    ],
+    "social_links": {
+      "instagram.com": "https://www.instagram.com/sulekhaindia/",
+      "facebook.com": "https://www.facebook.com/Sulekhadotcom",
+      "x.com": "https://x.com/Sulekhadotcom",
+      "linkedin.com": "https://www.linkedin.com/company/sulekha.com"
+    },
+    "people": [
+      {
+        "name": "Sandeep Dutta",
+        "linkedin": "https://in.linkedin.com/in/sandeep-dutta-aws"
+      }
+    ],
+    "source": "Google"
+  },
+  {
+    "company_name": "NexGen Innovators",
+    "website": "https://www.nexgi.com/",
+    "domain": "nexgi.com",
+    "industry": "It Company",
+    "location": "delhi",
+    "contact_page": "https://www.nexgi.com/contact-us/",
+    "about_page": "https://www.nexgi.com/about/",
+    "emails": [
+      "sales@nexgi.com"
+    ],
+    "phones": [],
+    "social_links": {
+      "facebook.com": "https://www.facebook.com/nexgeninnovators",
+      "twitter.com": "https://twitter.com/_nexgi",
+      "linkedin.com": "https://www.linkedin.com/company/nexgi/",
+      "instagram.com": "https://www.instagram.com/nexgi/"
+    },
+    "people": [
+      {
+        "name": "Anup Kumar",
+        "designation": "Founder",
+        "linkedin": "https://in.linkedin.com/in/ianup"
+      }
+    ],
+    "source": "Google"
+  },
+  {
+    "company_name": "Startups in Delhi",
+    "website": "https://www.startupindia.gov.in/content/sih/en/search.html/Delhi?states=5f48ce592a9bb065cdf9fb26&roles=Startup&page=0",
+    "domain": "startupindia.gov.in",
+    "industry": "It Company",
+    "location": "delhi",
+    "contact_page": "https://www.startupindia.gov.in/content/sih/en/about_us/contact-us.html",
+    "about_page": "https://www.startupindia.gov.in/content/sih/en/search.html/Delhi?states=5f48ce592a9bb065cdf9fb26&roles=Startup&page=0",
+    "emails": [
+      "customformdevtesting@yopmail.com",
+      "test80iac07@gmail.com",
+      "ananya.kumar@investindia.org.in",
+      "dipp-startups@nic.in",
+      "nikita.kochhar@investindia.org.in",
+      "nsadashboard@investindia.org.in",
+      "pratiti.sharma@investindia.org.in",
+      "startupindiahub@investindia.org.in"
+    ],
+    "phones": [
+      "1800115565",
+      "1800115565"
+    ],
+    "social_links": {
+      "facebook.com": "https://www.facebook.com/StartupIndia/",
+      "twitter.com": "https://twitter.com/startupindia?lang=en",
+      "linkedin.com": "https://in.linkedin.com/company/startup-india"
+    },
+    "people": [
+      {
+        "name": "Rohit Swerashi",
+        "linkedin": "https://www.linkedin.com/in/rohitswerashi"
+      }
+    ],
+    "source": "Google"
+  },
+  {
+    "company_name": "ITSS",
+    "website": "https://itssin.com/",
+    "domain": "itssin.com",
+    "industry": "It Company",
+    "location": "delhi",
+    "contact_page": "https://www.itssin.com/contact-us/",
+    "about_page": "https://www.itssin.com/about-itss/",
+    "emails": [
+      "support@itssin.co.in",
+      "info@itssin.co.in",
+      "youremail@example.com"
+    ],
+    "phones": [
+      "+917291076910",
+      "+918800419462",
+      "+918860403626"
+    ],
+    "social_links": {
+      "x.com": "https://itssin.supersite2.myorderbox.com/",
+      "facebook.com": "https://www.facebook.com/itssindia",
+      "twitter.com": "https://www.twitter.com/itssindia",
+      "linkedin.com": "https://www.linkedin.com/in/itssindia",
+      "instagram.com": "https://www.instagram.com/itsolutionsandservices"
+    },
+    "people": [
+      {
+        "name": "Selvakumar Thandavan",
+        "designation": "Founder",
+        "linkedin": "https://in.linkedin.com/in/selvakumar-thandavan-6b628932"
+      }
+    ],
+    "source": "Google"
+  },
+  {
+    "company_name": "Best Software Development Company in Delhi NCR & India",
+    "website": "https://www.011bq.com/services/software-development-services/",
+    "domain": "011bq.com",
+    "industry": "It Company",
+    "location": "delhi",
+    "contact_page": "https://www.011bq.com/contact-us/",
+    "about_page": "https://www.011bq.com/about-us/",
+    "emails": [
+      "info@011bq.com"
+    ],
+    "phones": [
+      "+14069465554",
+      "+16203159533",
+      "+447723559134",
+      "+971543429441"
+    ],
+    "social_links": {
+      "linkedin.com": "https://www.linkedin.com/company/011bq/?originalSubdomain=uk",
+      "instagram.com": "https://www.instagram.com/011bq_official/",
+      "facebook.com": "https://www.facebook.com/011bq",
+      "x.com": "https://x.com/011bq_official"
+    },
+    "people": [
+      {
+        "name": "Anuj Kumar",
+        "designation": "Founder",
+        "linkedin": "https://in.linkedin.com/in/ariseanuj"
+      }
+    ],
+    "source": "Google"
+  },
+  {
+    "company_name": "Together AI",
+    "website": "https://www.together.ai/",
+    "domain": "together.ai",
+    "industry": "AI",
+    "contact_page": "https://www.together.ai/contact-sales",
+    "about_page": "https://www.together.ai/about-us",
+    "emails": [],
+    "phones": [],
+    "social_links": {
+      "x.com": "https://x.com/togethercompute",
+      "linkedin.com": "https://www.linkedin.com/company/togethercomputer/"
+    },
+    "people": [
+      {
+        "name": "AI Factory",
+        "designation": "CTO"
+      }
+    ],
+    "source": "Google"
+  },
+  {
+    "company_name": "Mails.ai — Email infrastructure for AI agents",
+    "website": "https://mails.ai/",
+    "domain": "mails.ai",
+    "industry": "AI",
+    "contact_page": "https://mails.ai/contact",
+    "about_page": "https://mails.ai/about",
+    "emails": [
+      "security@mails.ai",
+      "support@mails.ai"
+    ],
+    "phones": [],
+    "social_links": {},
+    "people": [
+      {
+        "name": "Nate Herk",
+        "designation": "Founder",
+        "linkedin": "https://www.linkedin.com/in/nateherkelman"
+      }
+    ],
+    "source": "Google"
+  },
+  {
+    "company_name": "WriteMail.ai",
+    "website": "https://writemail.ai/",
+    "domain": "writemail.ai",
+    "industry": "AI",
+    "contact_page": "https://writemail.ai/contacts",
+    "about_page": "https://writemail.ai/about",
+    "emails": [
+      "info@writemail.ai"
+    ],
+    "phones": [],
+    "social_links": {
+      "facebook.com": "https://www.facebook.com/people/Writemailai/61570473188410/",
+      "twitter.com": "https://twitter.com/writemail_ai",
+      "instagram.com": "https://www.instagram.com/app.writemail/",
+      "linkedin.com": "https://www.linkedin.com/company/writemail-ai"
+    },
+    "people": [
+      {
+        "name": "Alen Pavalec",
+        "linkedin": "https://si.linkedin.com/in/alen-pavalec-7b37b0aa"
+      }
+    ],
+    "source": "Google"
+  },
+  {
+    "company_name": "Meet the AI-first phones powered by small models",
+    "website": "https://www.ibm.com/think/news/ai-phones-small-language-models",
+    "domain": "ibm.com",
+    "industry": "AI",
+    "about_page": "https://www.ibm.com/watsonx/developer/get-started/models",
+    "emails": [
+      "christian.bieck@ibm.com",
+      "maryam.ashoori@ibm.com",
+      "arnas.siaudvytis@ibm.com",
+      "cindy.w.anderson@ibm.com"
+    ],
+    "phones": [],
+    "social_links": {
+      "linkedin.com": "https://www.linkedin.com/shareArticle?url=https://www.ibm.com/think/news/ai-phones-small-language-models&title=Meet%20the%20AI-first%20phones%20powered%20by%20small%20models",
+      "facebook.com": "https://www.facebook.com/share.php?u=https://www.ibm.com/think/news/ai-phones-small-language-models",
+      "x.com": "https://x.com/intent/tweet?text=Meet%20the%20AI-first%20phones%20powered%20by%20small%20models&url=https://www.ibm.com/think/news/ai-phones-small-language-models"
+    },
+    "people": [],
+    "source": "Google"
+  },
+  {
+    "company_name": "Phonely AI",
+    "website": "https://www.phonely.ai/",
+    "domain": "phonely.ai",
+    "industry": "AI",
+    "contact_page": "https://www.phonely.ai/contact",
+    "about_page": "https://www.phonely.ai/integration",
+    "emails": [
+      "email@phonely.ai"
+    ],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google"
+  },
+  {
+    "company_name": "AI Services • Artificial Intelligence Services Company",
+    "website": "https://www.avenga.com/ai-services/",
+    "domain": "avenga.com",
+    "industry": "AI",
+    "contact_page": "https://www.avenga.com/contact-avenga/",
+    "about_page": "https://www.avenga.com/ai-services/",
+    "emails": [
+      "hello@avenga.com"
+    ],
+    "phones": [
+      "+381112289453",
+      "+381184577319",
+      "+381216623075",
+      "+38134337023",
+      "+38923097400",
+      "+421917333997",
+      "2022031528"
+    ],
+    "social_links": {
+      "linkedin.com": "https://www.linkedin.com/company/avenga/about/",
+      "instagram.com": "https://www.instagram.com/avenga_global/",
+      "x.com": "https://x.com/avenga_global"
+    },
+    "people": [
+      {
+        "name": "Industries",
+        "designation": "CTO"
+      },
+      {
+        "name": "Management Team",
+        "designation": "CTO"
+      },
+      {
+        "name": "CEO Clay Van Doren",
+        "designation": "CEO"
+      },
+      {
+        "name": "CTO Juan  Villamil",
+        "designation": "CTO"
+      },
+      {
+        "name": "COO Slawomir Kupczyk",
+        "designation": "COO"
+      },
+      {
+        "name": "Marina Domazetovska",
+        "designation": "CTO"
+      }
+    ],
+    "source": "Google"
+  },
+  {
+    "company_name": "Artificial Intelligence (AI) Services & Solutions",
+    "website": "https://www.accenture.com/us-en/services/ai-data",
+    "domain": "accenture.com",
+    "industry": "AI",
+    "contact_page": "https://www.accenture.com/us-en/about/contact-us",
+    "about_page": "https://www.accenture.com/us-en/about/company-index",
+    "emails": [],
+    "phones": [],
+    "social_links": {
+      "linkedin.com": "https://www.linkedin.com/company/accenture",
+      "facebook.com": "https://www.facebook.com/accenture",
+      "instagram.com": "https://www.instagram.com/accenture/"
+    },
+    "people": [
+      {
+        "name": "Media & Investors",
+        "designation": "CTO"
+      },
+      {
+        "name": "Julie Sweet",
+        "designation": "CEO"
+      },
+      {
+        "name": "Ron Ash",
+        "designation": "CEO"
+      },
+      {
+        "name": "Atsushi Egawa",
+        "designation": "CEO"
+      },
+      {
+        "name": "Kate Kutay",
+        "designation": "CEO"
+      },
+      {
+        "name": "Mauro Macchi",
+        "designation": "CEO"
+      },
+      {
+        "name": "Ryoji Sekido",
+        "designation": "CEO"
+      },
+      {
+        "name": "John Walsh",
+        "designation": "CEO"
+      },
+      {
+        "name": "Like this content?",
+        "designation": "Head Of"
+      }
+    ],
+    "source": "Google"
+  },
+  {
+    "company_name": "Forbes 2026 AI 50 List",
+    "website": "https://www.forbes.com/lists/ai50/",
+    "domain": "forbes.com",
+    "industry": "AI",
+    "contact_page": "https://www.forbes.com/contact/",
+    "emails": [
+      "corrections@forbes.com",
+      "dlopenzina@forbes.com",
+      "ebrier@forbes.com",
+      "feedback@forbes.com",
+      "iain.martin@forbes.com",
+      "permissions@forbes.com",
+      "pressinquiries@forbes.com",
+      "readers@forbes.com",
+      "reprints@forbes.com",
+      "rshrivastava@forbes.com",
+      "schierchio@forbes.com",
+      "security@forbes.com",
+      "spreadsheets@forbes.com"
+    ],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google"
+  },
+  {
+    "company_name": "AI Agents for Business Users at Enterprise Scale",
+    "website": "https://www.aible.com/",
+    "domain": "aible.com",
+    "industry": "AI",
+    "contact_page": "https://www.aible.com/contact-us/",
+    "about_page": "https://www.aible.com/about-us",
+    "emails": [],
+    "phones": [],
+    "social_links": {
+      "twitter.com": "https://twitter.com/iamAible",
+      "linkedin.com": "https://www.linkedin.com/company/aible/",
+      "facebook.com": "https://www.facebook.com/iamaible"
+    },
+    "people": [
+      {
+        "name": "Arijit Sengupta,",
+        "designation": "Founder"
+      },
+      {
+        "name": "Jonathan Wray, Co-Founder",
+        "designation": "Founder"
+      },
+      {
+        "name": "Jonathan Wray,",
+        "designation": "Founder"
+      },
+      {
+        "name": "Dylan Steeg,",
+        "designation": "VP"
+      }
+    ],
+    "source": "Google"
+  },
+  {
+    "company_name": "AI LA",
+    "website": "https://aila.in",
+    "domain": "aila.in",
+    "industry": "AI",
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [
+      {
+        "name": "Mariano Apodaca",
+        "designation": "Founder",
+        "linkedin": "https://www.linkedin.com/in/mariano-apodaca-45b07a16a"
+      }
+    ],
+    "source": "LinkedIn"
+  },
+  {
+    "company_name": "AI for Good",
+    "website": "https://aiforgood.in",
+    "domain": "aiforgood.in",
+    "industry": "AI",
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [
+      {
+        "name": "James Hodson",
+        "linkedin": "https://www.linkedin.com/in/jameshodson"
+      }
+    ],
+    "source": "LinkedIn"
+  },
+  {
+    "company_name": "Standard AI",
+    "website": "https://standardai.com",
+    "domain": "standardai.com",
+    "industry": "AI",
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [
+      {
+        "name": "Jordan Fisher",
+        "designation": "CEO",
+        "linkedin": "https://www.linkedin.com/in/jordan-fisher-81145025"
+      }
+    ],
+    "source": "LinkedIn"
+  },
+  {
+    "company_name": "Global AI",
+    "website": "https://globalai.com",
+    "domain": "globalai.com",
+    "industry": "AI",
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [
+      {
+        "name": "Richard Rothenberg",
+        "linkedin": "https://www.linkedin.com/in/richardrothenberg"
+      }
+    ],
+    "source": "LinkedIn"
+  },
+  {
+    "company_name": "AI in Healthcare",
+    "website": "https://www.goodfirms.co/resources/ai-in-healthcare-future-patient-care-management",
+    "domain": "goodfirms.co",
+    "industry": "AI",
+    "contact_page": "https://www.goodfirms.co/contact-us",
+    "about_page": "https://www.imperial.nhs.uk/about-us/news/ai-could-predict-type-2-diabetes-up-to-10-years-in-advance",
+    "emails": [
+      "info@goodfirms.co"
+    ],
+    "phones": [
+      "3336089411"
+    ],
+    "social_links": {
+      "x.com": "https://x.com/Goodfirms",
+      "linkedin.com": "https://www.linkedin.com/company/goodfirms",
+      "facebook.com": "https://www.facebook.com/goodfirms",
+      "instagram.com": "https://www.instagram.com/glitch_ai/?hl=en"
+    },
+    "people": [
+      {
+        "name": "TriNet Reviews",
+        "designation": "CTO"
+      },
+      {
+        "name": "UltiPro Reviews",
+        "designation": "CEO"
+      },
+      {
+        "name": "HR Software",
+        "designation": "CTO"
+      }
+    ],
+    "source": "GoodFirms"
+  },
+  {
+    "company_name": "AWS Cloud Services in Gurgaon",
+    "website": "https://squareops.com/knowledge/aws-cloud-services-in-gurgaon-a-comprehensive-guide-for-businesses/",
+    "domain": "squareops.com",
+    "industry": "Cloud Company",
+    "location": "gurugram",
+    "contact_page": "https://squareops.com/contact-us/",
+    "about_page": "https://squareops.com/about-us/",
+    "emails": [
+      "consult@squareops.com",
+      "hr@squareops.com"
+    ],
+    "phones": [
+      "+918800907226",
+      "+919205554850"
+    ],
+    "social_links": {
+      "linkedin.com": "https://www.linkedin.com/company/squareops-tech/",
+      "twitter.com": "https://twitter.com/squareops",
+      "facebook.com": "https://facebook.com/squareops",
+      "instagram.com": "https://instagram.com/squareops"
+    },
+    "people": [],
+    "source": "Google"
+  },
+  {
+    "company_name": "TurningCloud Solutions Private Limited",
+    "website": "https://turningcloud.com",
+    "domain": "turningcloud.com",
+    "industry": "Cloud Company",
+    "location": "gurugram",
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [
+      {
+        "name": "Sumeet Agrawal",
+        "designation": "Founder",
+        "linkedin": "https://in.linkedin.com/in/agrawalsumeet"
+      }
+    ],
+    "source": "LinkedIn"
+  },
+  {
+    "company_name": "Cloud Certitude",
+    "website": "https://cloudcertitude.com",
+    "domain": "cloudcertitude.com",
+    "industry": "Cloud Company",
+    "location": "gurugram",
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [
+      {
+        "name": "Rakesh Aggarwal",
+        "linkedin": "https://in.linkedin.com/in/aggarwalrakesh"
+      }
+    ],
+    "source": "LinkedIn"
+  },
+  {
+    "company_name": "Ananta Cloud",
+    "website": "https://anantacloud.com",
+    "domain": "anantacloud.com",
+    "industry": "Cloud Company",
+    "location": "gurugram",
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [
+      {
+        "name": "VIKRAM SINGH",
+        "designation": "Founder",
+        "linkedin": "https://www.linkedin.com/in/vikramsinghmalik2023"
+      }
+    ],
+    "source": "LinkedIn"
+  },
+  {
+    "company_name": "CloudZent Technology Services",
+    "website": "https://cloudzent.com",
+    "domain": "cloudzent.com",
+    "industry": "Cloud Company",
+    "location": "gurugram",
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [
+      {
+        "name": "Asif Iqbal",
+        "linkedin": "https://in.linkedin.com/in/asif-iqbal007"
+      }
+    ],
+    "source": "LinkedIn"
+  },
+  {
+    "company_name": "AceCloud",
+    "website": "https://acecloud.in",
+    "domain": "acecloud.in",
+    "industry": "Cloud Company",
+    "location": "gurugram",
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [
+      {
+        "name": "Vinay Chhabra",
+        "designation": "Founder",
+        "linkedin": "https://in.linkedin.com/in/vinay-chhabra-4739a9b6"
+      }
+    ],
+    "source": "LinkedIn"
+  },
+  {
+    "company_name": "Progression",
+    "website": "https://progression.com",
+    "domain": "progression.com",
+    "industry": "Cloud Company",
+    "location": "gurugram",
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [
+      {
+        "name": "Ryan Bellissimo",
+        "designation": "Founder",
+        "linkedin": "https://www.linkedin.com/in/ryan-bellissimo-562751147"
+      }
+    ],
+    "source": "LinkedIn"
+  },
+  {
+    "company_name": "CloudTechner",
+    "website": "https://cloudtechner.com",
+    "domain": "cloudtechner.com",
+    "industry": "Cloud Company",
+    "location": "gurugram",
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [
+      {
+        "name": "Prabhakara Chappidi",
+        "designation": "Founder",
+        "linkedin": "https://www.linkedin.com/in/prabhakara-chappidi"
+      }
+    ],
+    "source": "LinkedIn"
+  },
+  {
+    "company_name": "GoMilestone",
+    "website": "https://www.gomilestone.com/",
+    "domain": "gomilestone.com",
+    "industry": "Cloud Company",
+    "location": "gurugram",
+    "contact_page": "https://www.gomilestone.com/contact",
+    "about_page": "https://www.gomilestone.com/about",
+    "emails": [
+      "info@gomilestone.com"
+    ],
+    "phones": [
+      "+447887081915",
+      "+918447966431"
+    ],
+    "social_links": {
+      "facebook.com": "https://www.facebook.com/GoMilestone",
+      "linkedin.com": "https://www.linkedin.com/company/gomilestone-pvt.-ltd",
+      "instagram.com": "https://www.instagram.com/go.milestone"
+    },
+    "people": [],
+    "source": "Google"
+  },
+  {
+    "company_name": "24x7 IT Company in Delhi",
+    "website": "https://www.progressive.in/locations/it-company-delhi",
+    "domain": "progressive.in",
+    "industry": "It Company",
+    "location": "delhi",
+    "contact_page": "https://www.progressive.in/contact",
+    "emails": [
+      "marketing@progressive.in",
+      "solutions@progressive.in"
+    ],
+    "phones": [
+      "+911206373737"
+    ],
+    "social_links": {},
+    "people": [],
+    "source": "Google"
+  },
+  {
+    "company_name": "I.T. Solutions India Pvt Ltd",
+    "website": "https://itindia.com",
+    "domain": "itindia.com",
+    "industry": "It Company",
+    "location": "delhi",
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [
+      {
+        "name": "Nakul Chopra",
+        "designation": "Founder",
+        "linkedin": "https://in.linkedin.com/in/itsnakulchopra"
+      }
+    ],
+    "source": "LinkedIn"
+  },
+  {
+    "company_name": "Meentosys Private Limited",
+    "website": "https://meentosys.com",
+    "domain": "meentosys.com",
+    "industry": "It Company",
+    "location": "delhi",
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "LinkedIn"
+  },
+  {
+    "company_name": "Team Computers",
+    "website": "https://teamcomputers.com",
+    "domain": "teamcomputers.com",
+    "industry": "It Company",
+    "location": "delhi",
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [
+      {
+        "name": "Ranjan Chopra",
+        "designation": "CTO",
+        "linkedin": "https://in.linkedin.com/in/ranjan-chopra-8974016"
+      }
+    ],
+    "source": "LinkedIn"
+  },
+  {
+    "company_name": "Delhi Co.",
+    "website": "https://delhico.com",
+    "domain": "delhico.com",
+    "industry": "It Company",
+    "location": "delhi",
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [
+      {
+        "name": "Palak Verma",
+        "designation": "Founder",
+        "linkedin": "https://in.linkedin.com/in/palak-verma-8a482199"
+      }
+    ],
+    "source": "LinkedIn"
+  },
+  {
+    "company_name": "Built In Delhi",
+    "website": "https://builtindelhi.in/",
+    "domain": "builtindelhi.in",
+    "industry": "It Company",
+    "location": "delhi",
+    "contact_page": "https://knowledgebase.builtin.com/s/contactsupport",
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [
+      {
+        "name": "Dr Amit Vohra PhD MBA GAICD",
+        "designation": "Founder",
+        "linkedin": "https://au.linkedin.com/in/amitvohra1"
+      }
+    ],
+    "source": "Google"
+  },
+  {
+    "company_name": "Aiassistica",
+    "website": "https://aiassistica.com/it-companies-in-noida/",
+    "domain": "aiassistica.com",
+    "industry": "Software Companies Noida",
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google"
+  },
+  {
+    "company_name": "Andersenlab",
+    "website": "https://andersenlab.com/",
+    "domain": "andersenlab.com",
+    "industry": "Software Companies Noida",
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google"
+  },
+  {
+    "company_name": "Beststartup",
+    "website": "https://beststartup.in/101-noida-based-software-companies-the-most-innovative-software-companies/",
+    "domain": "beststartup.in",
+    "industry": "Software Companies Noida",
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google"
+  },
+  {
+    "company_name": "Intellectsoft",
+    "website": "https://www.intellectsoft.net/",
+    "domain": "intellectsoft.net",
+    "industry": "Software Companies Noida",
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google"
+  },
+  {
+    "company_name": "Daffodilsw",
+    "website": "https://www.daffodilsw.com/",
+    "domain": "daffodilsw.com",
+    "industry": "Software Companies Noida",
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google"
+  },
+  {
+    "company_name": "Tatvasoft",
+    "website": "https://www.tatvasoft.com/",
+    "domain": "tatvasoft.com",
+    "industry": "Software Companies Noida",
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google"
+  },
+  {
+    "company_name": "indo18com",
+    "website": "https://www.indo18.com/?s=Anal+Indonesia&filter=most-viewed",
+    "domain": "indo18.com",
+    "industry": "Software Companies Noida",
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google"
+  },
+  {
+    "company_name": "Bokeptime",
+    "website": "https://bokeptime.com/pid/cewek-anal/",
+    "domain": "bokeptime.com",
+    "industry": "Software Companies Noida",
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google"
+  },
+  {
+    "company_name": "Steampowered",
+    "website": "https://store.steampowered.com/app/293760/Automation__The_Car_Company_Tycoon_Game/",
+    "domain": "store.steampowered.com",
+    "industry": "Automation",
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google"
+  },
+  {
+    "company_name": "Rockwell Automation",
+    "website": "https://www.rockwellautomation.com/en-us.html",
+    "domain": "rockwellautomation.com",
+    "industry": "Automation",
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google"
+  },
+  {
+    "company_name": "Wes Tech",
+    "website": "https://wes-tech.com/",
+    "domain": "wes-tech.com",
+    "industry": "Automation",
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google"
+  },
+  {
+    "company_name": "Eclipseautomation",
+    "website": "https://www.eclipseautomation.com/",
+    "domain": "eclipseautomation.com",
+    "industry": "Automation",
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google"
+  },
+  {
+    "company_name": "Brooks",
+    "website": "https://www.brooks.com/",
+    "domain": "brooks.com",
+    "industry": "Automation",
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google"
+  },
+  {
+    "company_name": "Topautomazioni",
+    "website": "https://www.topautomazioni.com/en/",
+    "domain": "topautomazioni.com",
+    "industry": "Automation",
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google"
+  },
+  {
+    "company_name": "C3automation",
+    "website": "https://www.c3automation.com/",
+    "domain": "c3automation.com",
+    "industry": "Automation",
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google"
+  },
+  {
+    "company_name": "Automation Control",
+    "website": "https://automation-control.com/",
+    "domain": "automation-control.com",
+    "industry": "Automation",
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google"
+  },
+  {
+    "company_name": "Br Automation",
+    "website": "https://www.br-automation.com/en/",
+    "domain": "br-automation.com",
+    "industry": "Automation",
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google"
+  },
+  {
+    "company_name": "Cybo",
+    "website": "https://www.cybo.com/IN/sonipat/hardware-store/",
+    "domain": "cybo.com",
+    "industry": "Hardware",
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google"
+  },
+  {
+    "company_name": "Hardware store in Sonipat",
+    "website": "https://www.indiainfo.net/place/sahil-hardware-store-875345",
+    "domain": "indiainfo.net",
+    "industry": "Hardware",
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google"
+  },
+  {
+    "company_name": "Tomshardware",
+    "website": "https://www.tomshardware.com/",
+    "domain": "tomshardware.com",
+    "industry": "Hardware",
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google"
+  },
+  {
+    "company_name": "Acehardware",
+    "website": "https://www.acehardware.com/",
+    "domain": "acehardware.com",
+    "industry": "Hardware",
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google"
+  },
+  {
+    "company_name": "Topcompanieslist",
+    "website": "https://topcompanieslist.com/Bhopal-city/company.htm",
+    "domain": "topcompanieslist.com",
+    "industry": "Hardware",
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google"
+  },
+  {
+    "company_name": "Indias Leading Architectural Hardware Manufacturer",
+    "website": "https://www.ozone.in/",
+    "domain": "ozone.in",
+    "industry": "Hardware",
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google"
+  },
+  {
+    "company_name": "Builtin",
+    "website": "https://builtin.com/hardware/hardware-companies",
+    "domain": "builtin.com",
+    "industry": "Hardware",
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google"
+  },
+  {
+    "company_name": "Tophardware",
+    "website": "https://www.tophardware.com/",
+    "domain": "tophardware.com",
+    "industry": "Hardware",
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google"
+  },
+  {
+    "company_name": "Ebco",
+    "website": "https://ebco.in/",
+    "domain": "ebco.in",
+    "industry": "Hardware",
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google"
+  },
+  {
+    "company_name": "Mordorintelligence",
+    "website": "https://www.mordorintelligence.com/industry-reports/united-states-hardware-stores-retail-market/companies",
+    "domain": "mordorintelligence.com",
+    "industry": "Hardware",
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google"
+  },
+  {
+    "company_name": "BEST",
+    "website": "https://www.bestaccess.com/products/",
+    "domain": "bestaccess.com",
+    "industry": "Hardware",
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google"
+  },
+  {
+    "company_name": "Hardwareworld",
+    "website": "https://www.hardwareworld.com/",
+    "domain": "hardwareworld.com",
+    "industry": "Hardware",
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google"
+  },
+  {
+    "company_name": "Dhariwalbuildtech",
+    "website": "https://www.dhariwalbuildtech.com/",
+    "domain": "dhariwalbuildtech.com",
+    "industry": "Engineering",
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google"
+  },
+  {
+    "company_name": "Mahamarg",
+    "website": "https://mahamarg.com/",
+    "domain": "mahamarg.com",
+    "industry": "Engineering",
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google"
+  },
+  {
+    "company_name": "Engineeringcom",
+    "website": "https://www.engineering.com/",
+    "domain": "engineering.com",
+    "industry": "Engineering",
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google"
+  },
+  {
+    "company_name": "Rynow",
+    "website": "https://www.rynow.in/products/customize-software-in-sonipat",
+    "domain": "rynow.in",
+    "industry": "Software Gurugram",
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [
+      {
+        "name": "Pankaj Kumar",
+        "designation": "CTO",
+        "linkedin": "https://in.linkedin.com/in/pankaj-kumar-rynow"
+      }
+    ],
+    "source": "Google"
+  },
+  {
+    "company_name": "Karnatakatourism",
+    "website": "https://karnatakatourism.org/en/destinations/bengaluru",
+    "domain": "karnatakatourism.org",
+    "industry": "Software Gurugram",
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google"
+  },
+  {
+    "company_name": "Creativepath",
+    "website": "https://www.creativepath.in/",
+    "domain": "creativepath.in",
+    "industry": "Software Gurugram",
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google"
+  },
+  {
+    "company_name": "Builtinbengaluru",
+    "website": "https://builtinbengaluru.in/companies/type/software-companies",
+    "domain": "builtinbengaluru.in",
+    "industry": "Software Bangalore",
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google"
+  },
+  {
+    "company_name": "Jarmakautomation",
+    "website": "https://jarmakautomation.com/",
+    "domain": "jarmakautomation.com",
+    "industry": "Automation",
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google"
+  },
+  {
+    "company_name": "Depl",
+    "website": "https://www.depl.biz/",
+    "domain": "depl.biz",
+    "industry": "Automation",
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google"
+  },
+  {
+    "company_name": "Techvault",
+    "website": "https://www.techvault.co.in/",
+    "domain": "techvault.co.in",
+    "industry": "Automation",
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google"
+  },
+  {
+    "company_name": "Aeab",
+    "website": "https://www.aeab.in/",
+    "domain": "aeab.in",
+    "industry": "Automation",
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google"
+  },
+  {
+    "company_name": "Reckersautomation",
+    "website": "https://reckersautomation.com/",
+    "domain": "reckersautomation.com",
+    "industry": "Automation",
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google"
+  },
+  {
+    "company_name": "Jetbrains",
+    "website": "https://www.jetbrains.com/pycharm/",
+    "domain": "jetbrains.com",
+    "industry": "AI",
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [
+      {
+        "name": "Kirill Skrygan",
+        "designation": "CEO",
+        "linkedin": "https://nl.linkedin.com/in/kirill-skrygan-7b86073a"
+      }
+    ],
+    "source": "Google"
+  },
+  {
+    "company_name": "Programiz",
+    "website": "https://www.programiz.com/python-programming/online-compiler/",
+    "domain": "programiz.com",
+    "industry": "Python",
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google"
+  },
+  {
+    "company_name": "Welcome to Pythonorg",
+    "website": "https://www.python.org/",
+    "domain": "python.org",
+    "industry": "AI",
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google"
+  },
+  {
+    "company_name": "Awesome Python",
+    "website": "https://awesome-python.com/",
+    "domain": "awesome-python.com",
+    "industry": "AI",
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google"
+  },
+  {
+    "company_name": "Online Python",
+    "website": "https://www.online-python.com/",
+    "domain": "online-python.com",
+    "industry": "AI",
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google"
+  },
+  {
+    "company_name": "Python Online Compiler Interpreter",
+    "website": "https://onecompiler.com/python",
+    "domain": "onecompiler.com",
+    "industry": "Python Noida",
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google"
+  }
+]

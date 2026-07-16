@@ -1,0 +1,198 @@
+[
+  {
+    "company_name": "Scnsoft",
+    "website": "https://www.scnsoft.com/it-consulting",
+    "linkedin": null,
+    "industry": "Software Development",
+    "location": null,
+    "contact_page": "https://www.scnsoft.com/contact-us",
+    "about_page": "https://www.scnsoft.com/about/careers",
+    "team_page": "https://www.scnsoft.com/management-team",
+    "emails": [
+      "contact@scnsoft.com",
+      "nordics@scnsoft.com",
+      "ksa@scnsoft.com",
+      "eu@scnsoft.com",
+      "gulf@scnsoft.com",
+      "website-mon@scnsoft.com"
+    ],
+    "phones": [
+      "+1 214 306 68 37",
+      "+1 214 306 6837",
+      "+1 972 454 4730",
+      "+12143066837",
+      "+358 94 272 63 77",
+      "+370 52 07 97 07",
+      "+371 66 011 905",
+      "+48 22 162 18 13",
+      "+52 55 6952 0374",
+      "+966 800 880 3035",
+      "+971 600 57 59 69"
+    ],
+    "social_links": {
+      "linkedin.com": "https://www.linkedin.com/in/jarod-joyce-23a8613a",
+      "twitter.com": "https://twitter.com/ScienceSoft",
+      "facebook.com": "https://www.facebook.com/sciencesoft.solutions/"
+    },
+    "people": [
+      {
+        "name": "Tanya Lebedzeva",
+        "designation": "President",
+        "decision_maker_score": 85
+      },
+      {
+        "name": "Paul Ilyusenko",
+        "designation": "President",
+        "decision_maker_score": 85
+      },
+      {
+        "name": "Alex Zyil",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Mary Zayats",
+        "designation": "Head Of",
+        "decision_maker_score": 60
+      },
+      {
+        "name": "Julia Lebedeva",
+        "designation": "Head Of",
+        "decision_maker_score": 60
+      },
+      {
+        "name": "Alex Ramasheuski",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Vadim Belski",
+        "designation": "Head Of",
+        "decision_maker_score": 60
+      },
+      {
+        "name": "Andy Lipnitski",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Dmitry Kurskov",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Ann Andreyeva",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Paulina Ihnatovich",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Andrei Mikhailau",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Ulad Stsiapura",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      }
+    ],
+    "source": "Google",
+    "confidence_score": 83,
+    "lead_quality": "High",
+    "company_type": "Software Company",
+    "_source_file": "output\\raw\\it_20260709_140155.json",
+    "_flags": [
+      "email_junk:bader-alhamdan-deyarat-trading@2x.jpg",
+      "email_junk:mary-zayats@2x.png",
+      "email_junk:jarod-joyce-dot-it-125x125@2x.jpg",
+      "email_junk:wadih-pazos-paramount@2x.jpg",
+      "email_junk:daniil-svetlov-bpc@2x.jpg",
+      "email_junk:ryan-kress-integrated-security-group@2x.jpg",
+      "email_junk:david-torres@2x.jpg",
+      "email_junk:luke-walther-give-back-wireless@2x.jpg",
+      "email_junk:media--92aa2fb2--query@2x.png",
+      "email_junk:jen-dalton-brush-claims@2x.jpg",
+      "email_junk:denis-valcu-royal-keys@2x.jpg",
+      "people_dropped:2"
+    ]
+  },
+  {
+    "company_name": "Intellectsoft",
+    "website": "https://www.intellectsoft.net/services/it-consulting-services",
+    "linkedin": null,
+    "industry": "Software Development",
+    "location": null,
+    "contact_page": "https://www.intellectsoft.net/contacts",
+    "about_page": "https://www.intellectsoft.net/about",
+    "team_page": "https://www.intellectsoft.net/services/dedicated-development-team",
+    "emails": [
+      "info@intellectsoft.net"
+    ],
+    "phones": [
+      "+1 (650) 233-6196"
+    ],
+    "social_links": {
+      "linkedin.com": "https://www.linkedin.com/company/intellectsoft",
+      "facebook.com": "https://www.facebook.com/Intellectsoft/",
+      "twitter.com": "https://twitter.com/Intellectsoft"
+    },
+    "people": [
+      {
+        "name": "SUCCESS STORIES",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      }
+    ],
+    "source": "Google",
+    "confidence_score": 82,
+    "lead_quality": "High",
+    "company_type": "Software Company",
+    "_source_file": "output\\raw\\it_20260709_140155.json",
+    "_flags": [
+      "people_dropped:1"
+    ]
+  },
+  {
+    "company_name": "姜濤演唱會 2025丨1110公開售票 即睇搶飛攻略票價座位表",
+    "website": "https://hk.news.yahoo.com/%E5%A7%9C%E6%BF%A4-%E6%BC%94%E5%94%B1%E6%9C%832025-%E6%BC%94%E5%94%B1%E6%9C%83-%E9%A6%99%E6%B8%AF-lava-%E6%BC%94%E5%94%B1%E6%9C%83%E9%96%80%E7%A5%A8-%E7%A5%A8%E5%83%B9-073714696.html",
+    "linkedin": null,
+    "industry": "it",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": "https://hk.news.yahoo.com/%E9%84%AD%E5%AE%B9%E5%92%8C-%E6%BC%94%E5%94%B1%E6%9C%832025-%E6%BC%94%E5%94%B1%E6%9C%83-%E9%A6%99%E6%B8%AF-directors-cut-our-fine-days-%E6%BC%94%E5%94%B1%E6%9C%83%E9%96%80%E7%A5%A8-%E7%A5%A8%E5%83%B9-115248847.html",
+    "emails": [],
+    "phones": [
+      "45354.61"
+    ],
+    "social_links": {
+      "facebook.com": "https://www.facebook.com/dialog/feed?app_id=458584288257241&link=https%3A%2F%2Fhk.news.yahoo.com%2Fshare%2Fd07fdbc2-6527-47fd-9e9a-9b6d4e3210a0%3Fsoc_src%3Dsocial-sh%26soc_trk%3Dfb%26tsrc%3Dfb"
+    },
+    "people": [
+      {
+        "name": "Our Fine Days",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      }
+    ],
+    "source": "Google",
+    "confidence_score": 70,
+    "lead_quality": "High",
+    "company_type": "Unknown",
+    "_source_file": "output\\raw\\it_20260709_140155.json",
+    "_flags": [
+      "email_junk:apple-touch-icon@76x76.png",
+      "email_junk:Yahoo_News@2x.png",
+      "email_junk:apple-touch-icon@152x152.png",
+      "email_junk:apple-touch-icon@167x167.png",
+      "email_junk:apple-touch-icon@58x58.png",
+      "email_junk:apple-touch-icon@80x80.png",
+      "email_junk:apple-touch-icon@120x120.png"
+    ]
+  }
+]

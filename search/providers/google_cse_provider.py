@@ -46,6 +46,7 @@ from network_client_project.network.exceptions import NetworkClientError
 from search.exceptions import ProviderUnavailable
 from search.provider_base import Capabilities, SearchProvider
 from search.result import SearchResult
+from network_client_project.network.middleware.base import Request
 
 
 class GoogleCseProvider(SearchProvider):
@@ -78,10 +79,16 @@ class GoogleCseProvider(SearchProvider):
 
     def search(
         self,
-        query: str,
+        request_or_query: Request | str,
         max_results: int = 10,
         page: int = 0,
     ) -> list[SearchResult]:
+        if isinstance(request_or_query, Request):
+            query = request_or_query.query or ""
+            page = request_or_query.meta.get("page", 0)
+            max_results = request_or_query.meta.get("max_results", 10)
+        else:
+            query = request_or_query
 
         if not self.is_available():
             raise ProviderUnavailable(

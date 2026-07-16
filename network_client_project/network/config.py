@@ -15,6 +15,35 @@ class NetworkConfig(BaseSettings):
     PROXY_URL: Optional[str] = Field(default=None, description="Single proxy URL")
     PROXY_FILE: Optional[str] = Field(default=None, description="Path to a file containing proxies")
 
+    @validator("PROXY_FILE", pre=True, always=True)
+    def default_proxy_file(cls, v):
+        if not v:
+            if os.path.exists("working_proxies.txt"):
+                return "working_proxies.txt"
+            return "proxies.txt"
+        if v == "proxies.txt" and os.path.exists("working_proxies.txt"):
+            return "working_proxies.txt"
+        return v
+
+    # --- GOOGLE SCHEDULER SETTINGS ---
+    GOOGLE_MAX_CONCURRENT: int = Field(default=2)
+    GOOGLE_REQUEST_BUDGET: int = Field(default=6)
+    GOOGLE_DELAY_MIN: float = Field(default=2.0)
+    GOOGLE_DELAY_MAX: float = Field(default=6.0)
+    GOOGLE_CAPTCHA_COOLDOWN: float = Field(default=600.0)
+    GOOGLE_429_COOLDOWN: float = Field(default=300.0)
+    GOOGLE_PROXY_SCORE_THRESHOLD: float = Field(default=10.0)
+
+    # --- SEARCH CACHE SETTINGS ---
+    ENABLE_SEARCH_CACHE: bool = Field(default=True)
+    SEARCH_CACHE_TTL: int = Field(default=86400)
+    SEARCH_CACHE_FILE: str = Field(default="search_cache.json")
+    GOOGLE_MAX_PROXY_RETRIES: int = Field(default=5)
+    GOOGLE_FAILURE_CACHE_TTL: int = Field(default=600)
+    MIN_REUSE_INTERVALS: dict = Field(default_factory=lambda: {"google": 15.0, "bing": 3.0, "default": 0.0})
+
+
+
     @property
     def get_all_proxies(self) -> List[str]:
         """Combines PROXIES and PROXY_URL without duplicates."""

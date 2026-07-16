@@ -10,7 +10,7 @@ from curl_cffi.requests.exceptions import RequestException
 from .config import config
 from .logger import NetworkLogger
 from .exceptions import ErrorDetector, NetworkClientError
-from .proxy_manager import ProxyManager
+from .proxy_manager import get_proxy_manager
 from .user_agents import UserAgentManager
 from .headers import HeaderManager
 
@@ -22,7 +22,7 @@ class AsyncNetworkClient:
     Designed for massive concurrency with browser fingerprinting.
     """
     def __init__(self):
-        self.proxy_manager = ProxyManager()
+        self.proxy_manager = get_proxy_manager()
         if config.PROXIES:
             self.proxy_manager.load_from_list(config.PROXIES)
             

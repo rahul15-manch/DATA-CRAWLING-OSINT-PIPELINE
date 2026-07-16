@@ -260,3 +260,21 @@ def is_valid_person_record(person: dict) -> bool:
     name = (person.get("name") or "").strip()
     designation = (person.get("designation") or "").strip()
     return bool(designation) and is_valid_person_name(name)
+
+def is_valid_company_name(name: str) -> bool:
+    """
+    Return True if the company name is valid, rejecting common placeholders like 'About Us'.
+    """
+    from utils.constants import COMPANY_NAME_NOISE_WORDS
+    if not name:
+        return False
+    name = name.strip()
+    if not name or len(name) < 2:
+        return False
+    
+    # Fast reject if it exactly matches a noise word
+    lowered = name.lower()
+    if lowered in COMPANY_NAME_NOISE_WORDS:
+        return False
+        
+    return True

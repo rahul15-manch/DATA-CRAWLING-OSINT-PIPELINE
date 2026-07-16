@@ -281,6 +281,26 @@ _TECHNOLOGY_EXPANSION: dict[str, list[str]] = {
     ],
 }
 
+_INDUSTRY_CATEGORIES: dict[str, list[str]] = {
+    "software": ["software development company", "IT services", "software house", "SaaS company", "technology consulting", "digital transformation company"],
+    "ai": ["AI startup", "AI company", "AI software", "ML company", "generative AI company"],
+    "health": ["healthcare tech", "healthtech startup", "medical software company", "digital health company"],
+    "manufacturing": ["manufacturing company", "industrial manufacturer", "production factory"],
+    "fintech": ["fintech startup", "financial technology company", "financial software firm"],
+    "ecommerce": ["e-commerce company", "digital commerce agency", "retail tech company"],
+    "marketing": ["digital marketing agency", "SEO agency", "marketing firm", "creative agency"],
+    "real estate": ["proptech startup", "real estate technology company", "real estate agency"],
+    "logistics": ["logistics company", "supply chain tech", "freight forwarding company"],
+    "education": ["edtech startup", "education technology company", "e-learning company"],
+    "robotics": ["robotics company", "automation startup", "robotics engineering firm"],
+    "legal": ["legaltech startup", "law firm", "legal services company"],
+    "textile": ["textile manufacturing company", "apparel manufacturer"],
+    "agriculture": ["agritech startup", "agricultural technology company", "farming solutions company"],
+    "iot": ["IoT company", "internet of things startup", "connected devices company"],
+    "gaming": ["game development studio", "gaming company", "esports company"],
+    "insurance": ["insurtech startup", "insurance company", "insurance brokerage"],
+}
+
 # Generic fallback templates for job-role / technology intents
 # when no exact match exists in the maps above.
 # {keyword} is replaced with the original keyword stripped of role words.
@@ -297,6 +317,14 @@ _GENERIC_TECH_TEMPLATES = [
     "{keyword} software company",
     "{keyword} consulting company",
     "{keyword} services company",
+]
+
+_GENERIC_INDUSTRY_TEMPLATES = [
+    "{keyword} company",
+    "{keyword} startup",
+    "{keyword} solutions",
+    "{keyword} tech",
+    "{keyword} agency",
 ]
 
 
@@ -407,7 +435,21 @@ def expand_to_company_keywords(keyword: str) -> list[str]:
             f"{keyword} firm",
         ]
 
-    # "company" or "industry" — return as-is; dork generator handles it
+    # "company" or "industry"
+    # Semantic mapping first
+    for cat_key, expansions in _INDUSTRY_CATEGORIES.items():
+        if cat_key in lower.split():
+            return expansions
+
+    # If it's explicitly a company query with company words, just return as-is
+    if intent == "company":
+        return [keyword]
+
+    # Otherwise, it's an industry we don't have a mapping for, use generic templates
+    core = lower.replace("companies", "").replace("company", "").replace("firm", "").replace("firms", "").strip()
+    if core:
+        return [t.format(keyword=core) for t in _GENERIC_INDUSTRY_TEMPLATES]
+
     return [keyword]
 
 

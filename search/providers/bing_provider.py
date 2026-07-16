@@ -2,35 +2,27 @@
 search/providers/bing_provider.py
 ==================================
 Bing HTML scraper — the final, always-available fallback provider.
-
-This is a port of the original BingHtmlProvider from discovery/search_backend.py
-into the new provider architecture.
-
-Config keys
------------
-ENABLE_BING : bool flag (default True).  Set to False only in testing.
-
-Notes
------
-- No API key required.
-- Bing uses a 1-based `first` parameter for pagination.
-- URL decoding handles Bing's base64-encoded redirect hrefs.
 """
 
 from __future__ import annotations
 
+import random
 import time
+import logging
 from base64 import urlsafe_b64decode
 from urllib.parse import parse_qs, quote_plus, urlparse
 
 from bs4 import BeautifulSoup
 
 import config
-from network_client_project.network import NetworkClient
-from search.exceptions import ProviderUnavailable
+from network_client_project.network.client import get_network_client
+from search.exceptions import ProviderUnavailable, ProviderParseError
 from search.provider_base import Capabilities, SearchProvider
 from search.result import SearchResult
+from search.search_validator import validate_search_response
+from network_client_project.network.middleware.base import Request
 
+logger = logging.getLogger(__name__)
 
 class BingProvider(SearchProvider):
 
@@ -40,46 +32,131 @@ class BingProvider(SearchProvider):
         supports_pagination  = True,
         supports_snippets    = True,
         supports_titles      = True,
-        supports_rate_limit  = False,  # No quota; HTML scraper
+        supports_rate_limit  = False,
         max_results_per_page = 10,
     )
 
     _SEARCH_URL = "https://www.bing.com/search?q={query}"
 
-    def __init__(self, network_client: NetworkClient | None = None):
-        self._client = network_client or NetworkClient()
+    def __init__(self, network_client=None):
+        self._client = network_client or get_network_client()
+        self._cookie_session_id = "bing:search"
+        self._cooldown_until = 0.0
+        self._backoff_index = 0
 
-    # ── Availability ──────────────────────────────────────────────────────────
+    def _next_backoff(self) -> int:
+        sequence = [3, 6, 12, 24]
+        step = min(self._backoff_index, len(sequence) - 1)
+        self._backoff_index = min(self._backoff_index + 1, len(sequence) - 1)
+        return sequence[step]
+
+    def _reset_backoff(self) -> None:
+        self._cooldown_until = 0.0
+        self._backoff_index = 0
 
     def is_available(self) -> bool:
         return bool(getattr(config, "ENABLE_BING", True))
 
-    # ── Search ────────────────────────────────────────────────────────────────
-
     def search(
         self,
-        query: str,
+        request_or_query: Request | str,
         max_results: int = 10,
         page: int = 0,
     ) -> list[SearchResult]:
+        from search.search_validator import validate_search_response, SearchValidationResult
+
+        if isinstance(request_or_query, Request):
+            query = request_or_query.query or ""
+            page = request_or_query.meta.get("page", 0)
+            max_results = request_or_query.meta.get("max_results", 10)
+        else:
+            query = request_or_query
 
         if not self.is_available():
             raise ProviderUnavailable(self.name, "ENABLE_BING is False")
+
+        if time.time() < self._cooldown_until:
+            remaining = int(self._cooldown_until - time.time())
+            raise ProviderUnavailable(self.name, f"Bing cooling down for {remaining}s after anti-bot response")
 
         url = self._SEARCH_URL.format(query=quote_plus(query))
         if page > 0:
             url += f"&first={page * max_results + 1}"
 
-        try:
-            resp = self._client.get(url, headers={"Accept-Encoding": "identity"})
-            resp.raise_for_status()
-        except Exception as exc:
-            raise ProviderUnavailable(self.name, f"request failed: {exc}") from exc
+        headers = {
+            "Accept-Language": "en-US,en;q=0.9",
+            "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8",
+            "Cache-Control": "no-cache",
+        }
 
-        results = self._parse(resp.text, max_results, query, page)
-        return results
+        for attempt in range(1, 3):
+            html = ""
+            status_code = 200
+            url_actual = url
+            results = []
 
-    # ── Parser ────────────────────────────────────────────────────────────────
+            try:
+                # ProxyMiddleware handles direct_first policy via provider tag
+                print(f"[BingProvider] Attempt {attempt}/2")
+                resp = self._client.get(
+                    url,
+                    session_id=f"{self._cookie_session_id}_{attempt}",
+                    headers=headers,
+                    auto_score=False,
+                    provider="bing",
+                    timeout=15.0,
+                )
+                status_code = resp.status_code
+                url_actual = resp.url
+                html = resp.text
+                results = self._parse(html, max_results, query, page)
+                val_result = validate_search_response("bing", html, status_code, url_actual, results)
+            except Exception as exc:
+                val_result = SearchValidationResult(
+                    status="NETWORK_FAILURE",
+                    result_count=0,
+                    classification="NETWORK_ERROR",
+                    failure_reason=str(exc)
+                )
+
+            print(f"[BingProvider] Attempt {attempt}/2 - Request validation status: {val_result.status}")
+
+            # Update scoring exactly once per attempt
+            proxy = self._client.proxy_manager._sticky_sessions.get("bing")
+            if proxy:
+                if val_result.status in ["VALID_RESULTS", "VALID_ZERO_RESULTS"]:
+                    proxy.record_success(domain="www.bing.com", reason=val_result.status)
+                else:
+                    proxy.record_failure(domain="www.bing.com", reason=val_result.status)
+
+            if val_result.status in ["VALID_RESULTS", "VALID_ZERO_RESULTS"]:
+                self._reset_backoff()
+                return results
+
+            if val_result.status in ["CAPTCHA", "RATE_LIMIT"]:
+                if attempt < 2:
+                    # Rotate session and retry once quickly
+                    time.sleep(random.uniform(2.5, 4.5))
+                    continue
+                else:
+                    # Final attempt failed, now we cooldown
+                    wait_for = self._next_backoff()
+                    self._cooldown_until = time.time() + wait_for
+
+            if attempt == 2 or val_result.status == "CONSENT_PAGE":
+                # Bubble exceptions/errors cleanly on final attempt
+                if val_result.status == "CAPTCHA":
+                    raise ProviderUnavailable(self.name, val_result.failure_reason or "Bing CAPTCHA detected")
+                elif val_result.status == "RATE_LIMIT":
+                    raise ProviderUnavailable(self.name, val_result.failure_reason or "Bing rate-limited")
+                elif val_result.status == "CONSENT_PAGE":
+                    raise ProviderUnavailable(self.name, val_result.failure_reason or "Bing cookie consent page redirect")
+                elif val_result.status == "PARSER_FAILURE":
+                    raise ProviderParseError(self.name, val_result.failure_reason or "Bing parse failure")
+                elif val_result.status == "UNKNOWN_LAYOUT":
+                    raise ProviderParseError(self.name, val_result.failure_reason or "Bing unknown HTML layout signature")
+                else: # NETWORK_FAILURE / RATE_LIMIT
+                    raise ProviderUnavailable(self.name, val_result.failure_reason or "Bing request failed")
 
     def _parse(
         self,
@@ -92,8 +169,11 @@ class BingProvider(SearchProvider):
         results: list[SearchResult] = []
         ts = time.time()
 
-        for rank, result in enumerate(soup.select("li.b_algo"), start=1):
-            title_link = result.select_one("h2 a")
+        # Bing often A/B tests its DOM layout. We handle multiple variants.
+        elements = soup.select("li.b_algo, div.b_algo, .b_algo")
+        
+        for rank, result in enumerate(elements, start=1):
+            title_link = result.select_one("h2 a, .b_title h2 a")
             if not title_link:
                 continue
 
@@ -101,7 +181,7 @@ class BingProvider(SearchProvider):
             if not url:
                 continue
 
-            snippet_el = result.select_one(".b_caption p, p")
+            snippet_el = result.select_one(".b_caption p, .b_paractl, p")
             title   = title_link.get_text(" ", strip=True) or None
             snippet = snippet_el.get_text(" ", strip=True) if snippet_el else None
 
@@ -123,8 +203,6 @@ class BingProvider(SearchProvider):
                 break
 
         return results
-
-    # ── URL helpers ───────────────────────────────────────────────────────────
 
     def _normalize_url(self, href: str | None) -> str | None:
         if not href:

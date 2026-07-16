@@ -62,3 +62,24 @@ class AllProvidersExhausted(SearchError):
     either been marked unhealthy or raised ProviderUnavailable.
     Discovery modules receive an empty list, not an exception.
     """
+
+
+class CaptchaDetectedError(SearchError):
+    """Raised when Google detects unusual traffic and shows a CAPTCHA page."""
+
+
+class EnableJSDetectedError(SearchError):
+    """Raised when Google requests JavaScript execution before serving results."""
+
+
+class ConsentPageDetectedError(SearchError):
+    """Raised when Google redirects to a consent page ("before you continue")."""
+
+
+class GoogleSorryPageDetectedError(SearchError):
+    """Raised when Google displays the raw '/sorry/' page."""
+
+
+class ZeroSearchResults(SearchError):
+    """Raised (internally) when Google explicitly states that no documents match."""
+

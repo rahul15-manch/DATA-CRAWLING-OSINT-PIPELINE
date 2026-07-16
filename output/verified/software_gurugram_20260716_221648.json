@@ -1,0 +1,117 @@
+[
+  {
+    "company_name": "Rynow",
+    "website": "https://www.rynow.in/products/customize-software-in-sonipat",
+    "linkedin": null,
+    "industry": "software gurugram",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [
+      {
+        "name": "Pankaj Kumar",
+        "designation": "CTO",
+        "linkedin": "https://in.linkedin.com/in/pankaj-kumar-rynow",
+        "decision_maker_score": 80
+      }
+    ],
+    "source": "Google",
+    "confidence_score": 48,
+    "lead_quality": "Medium",
+    "company_type": "Unknown",
+    "_source_file": "output\\raw\\software_gurugram_20260716_221648.json",
+    "_flags": [],
+    "_verified_emails": [],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "website": "ok"
+    },
+    "_verification_passed": true
+  },
+  {
+    "company_name": "Daffodilsw",
+    "website": "https://www.daffodilsw.com/",
+    "linkedin": null,
+    "industry": "software gurugram",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "confidence_score": 36,
+    "lead_quality": "Low",
+    "company_type": "Unknown",
+    "_source_file": "output\\raw\\software_gurugram_20260716_221648.json",
+    "_flags": [],
+    "_verified_emails": [],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "website": "ok"
+    },
+    "_verification_passed": true
+  },
+  {
+    "company_name": "Karnatakatourism",
+    "website": "https://karnatakatourism.org/en/destinations/bengaluru",
+    "linkedin": null,
+    "industry": "software gurugram",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "confidence_score": 36,
+    "lead_quality": "Low",
+    "company_type": "Unknown",
+    "_source_file": "output\\raw\\software_gurugram_20260716_221648.json",
+    "_flags": [],
+    "_verified_emails": [],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "website": "ok"
+    },
+    "_verification_passed": true
+  },
+  {
+    "company_name": "Creativepath",
+    "website": "https://www.creativepath.in/",
+    "linkedin": null,
+    "industry": "software gurugram",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "confidence_score": 36,
+    "lead_quality": "Low",
+    "company_type": "Unknown",
+    "_source_file": "output\\raw\\software_gurugram_20260716_221648.json",
+    "_flags": [],
+    "_verified_emails": [],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "website": "ok"
+    },
+    "_verification_passed": true
+  }
+]

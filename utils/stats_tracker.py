@@ -29,6 +29,18 @@ _DEFAULT: dict = {
     "lead_cards_generated": 0,
     "avg_confidence":      0.0,
     "execution_time_sec":  0.0,
+    
+    # Funnel Metrics
+    "funnel_requests_sent":       0,
+    "funnel_http_success":        0,
+    "funnel_parser_success":      0,
+    "funnel_business_candidates": 0,
+    "funnel_business_accepted":   0,
+    "funnel_homepage_crawled":    0,
+    "funnel_contacts_extracted":  0,
+    "funnel_leads_exported":      0,
+    "cache_served_queries":       0,
+    "zero_result_serps":          0,
 }
 
 _stats: dict = {}
@@ -59,30 +71,8 @@ def get() -> dict:
         return dict(_stats)
 
 
-def print_report() -> None:
-    """Print a formatted pipeline statistics report."""
-    s = get()
-
-    lines = [
-        "",
-        "=" * 52,
-        "  PIPELINE STATISTICS",
-        "=" * 52,
-        f"  Queries Generated    : {s.get('queries_generated', 0)}",
-        f"  Queries Executed     : {s.get('queries_executed', 0)}",
-        f"  Search Results       : {s.get('search_results', 0)}",
-        f"  Rejected Results     : {s.get('rejected_results', 0)}",
-        f"  Duplicate Companies  : {s.get('duplicate_companies', 0)}",
-        f"  Validated Companies  : {s.get('validated_companies', 0)}",
-        f"  Companies Crawled    : {s.get('companies_crawled', 0)}",
-        f"  Lead Cards Generated : {s.get('lead_cards_generated', 0)}",
-        f"  Avg Confidence Score : {s.get('avg_confidence', 0.0):.1f}",
-        f"  Execution Time       : {s.get('execution_time_sec', 0.0):.2f}s",
-        "=" * 52,
-        "",
-    ]
-    print("\n".join(lines))
-
+# Note: Telemetry funnel printing has been moved to stats/dashboard.py
+# to ensure a single source of truth reading from ProviderStatsTracker.
 
 # Initialise on import so counters are always available
 reset()

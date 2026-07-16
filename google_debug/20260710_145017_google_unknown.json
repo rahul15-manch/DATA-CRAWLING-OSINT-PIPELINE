@@ -1,0 +1,9 @@
+{
+  "timestamp": "2026-07-10T14:50:17.254768",
+  "url": "https://www.google.com/search?q=site%3Alinkedin.com%2Fin+Software+Company+Noida+CEO&num=10&hl=en&gl=us",
+  "status_code": 200,
+  "content_length": 28753,
+  "classification": "UNKNOWN_LAYOUT",
+  "reason": "All parsers returned 0 results",
+  "proxy": "34.134.231.117:3129"
+}

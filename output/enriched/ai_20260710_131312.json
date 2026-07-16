@@ -1,0 +1,227 @@
+[
+  {
+    "company_name": "Detaljert informasjon og kartet",
+    "website": "https://www.iworldatlas.com/russland-verdensatlas-historie-statistikk-kart-no-13-2484",
+    "linkedin": null,
+    "industry": "AI",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [],
+    "phones": [
+      "(1939-1945",
+      "(1947-1991",
+      "(2000-2008",
+      "900 (2017"
+    ],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "confidence_score": 46,
+    "lead_quality": "Medium",
+    "company_type": "Unknown",
+    "_source_file": "output\\raw\\ai_20260710_131312.json",
+    "_flags": [],
+    "_verified_emails": [],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "phones": {
+        "(1939-1945": "not_valid_number",
+        "(1947-1991": "not_valid_number",
+        "(2000-2008": "not_valid_number",
+        "900 (2017": "not_valid_number"
+      },
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "domain_source": "existing_website",
+      "whois": {
+        "registrar": "WEDOS Internet, a.s.",
+        "creation_date": "2018-02-26 10:46:26+00:00",
+        "org": null,
+        "country": null
+      }
+    }
+  },
+  {
+    "company_name": "Satellite View Geographic Coordinates",
+    "website": "https://www.geocountries.com/map/russia",
+    "linkedin": null,
+    "industry": "Logistics",
+    "location": null,
+    "contact_page": "https://www.geocountries.com/contact",
+    "about_page": "https://www.geocountries.com/russia",
+    "team_page": null,
+    "emails": [],
+    "phones": [
+      "105.3188",
+      "2 )  8.86 (22.95",
+      "61.524 105.3188"
+    ],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "confidence_score": 56,
+    "lead_quality": "Medium",
+    "company_type": "Construction",
+    "_source_file": "output\\raw\\ai_20260710_131312.json",
+    "_flags": [],
+    "_verified_emails": [],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "phones": {
+        "105.3188": "not_valid_number",
+        "2 )  8.86 (22.95": "not_valid_number",
+        "61.524 105.3188": "not_valid_number"
+      },
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "domain_source": "existing_website",
+      "whois": {
+        "registrar": "gooddomainregistry.com",
+        "creation_date": "2018-01-28 05:05:02+00:00",
+        "org": "REDACTED FOR PRIVACY",
+        "country": "IN"
+      }
+    }
+  },
+  {
+    "company_name": "Collection of Russia Maps",
+    "website": "https://www.mapsofworld.com/russia/",
+    "linkedin": null,
+    "industry": "Artificial Intelligence",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {
+      "facebook.com": "https://www.facebook.com/sharer/sharer.php?u=https://www.mapsofworld.com/Enhanced%20Category/russia/",
+      "x.com": "https://x.com/intent/tweet?text=Check%20out%20this%20article:%20Russia%20Map%20-%20https://www.mapsofworld.com/Enhanced%20Category/russia/",
+      "twitter.com": "https://twitter.com/mapsofworld",
+      "linkedin.com": "https://www.linkedin.com/in/mapsofworld/"
+    },
+    "people": [],
+    "source": "Google",
+    "confidence_score": 36,
+    "lead_quality": "Low",
+    "company_type": "Unknown",
+    "_source_file": "output\\raw\\ai_20260710_131312.json",
+    "_flags": [],
+    "_verified_emails": [],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "domain_source": "existing_website",
+      "whois": {
+        "registrar": "GoDaddy.com, LLC",
+        "creation_date": "[datetime.datetime(1999, 8, 31, 5, 13, 2, tzinfo=tzoffset('UTC', 0)), datetime.datetime(1999, 8, 31, 0, 13, 2, tzinfo=tzoffset('UTC', 0))]",
+        "org": "Domains By Proxy, LLC",
+        "country": "US"
+      }
+    }
+  },
+  {
+    "company_name": "Gisgeography",
+    "website": "https://gisgeography.com/russia-map/",
+    "linkedin": null,
+    "industry": "AI",
+    "location": null,
+    "contact_page": "https://gisgeography.com/contact/",
+    "about_page": "https://gisgeography.com/about-us/",
+    "team_page": null,
+    "emails": [
+      "hello@gisgeography.com",
+      "Poplyansky@uregina.ca",
+      "john@example.com"
+    ],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "confidence_score": 56,
+    "lead_quality": "Medium",
+    "company_type": "Software Company",
+    "_source_file": "output\\raw\\ai_20260710_131312.json",
+    "_flags": [],
+    "_verified_emails": [
+      "hello@gisgeography.com",
+      "Poplyansky@uregina.ca",
+      "john@example.com"
+    ],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "emails": {
+        "hello@gisgeography.com": "ok",
+        "Poplyansky@uregina.ca": "ok",
+        "john@example.com": "ok"
+      },
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "domain_source": "existing_website",
+      "whois": {
+        "registrar": "Launchpad.com Inc.",
+        "creation_date": "2014-05-18 03:40:17+00:00",
+        "org": null,
+        "country": "US"
+      }
+    }
+  },
+  {
+    "company_name": "15 kart over Russland som forklarer økonomi folk og",
+    "website": "https://russlandway.com/russia-maps/",
+    "linkedin": null,
+    "industry": "AI",
+    "location": null,
+    "contact_page": "https://russlandway.com/contact/",
+    "about_page": "https://russlandway.com/about-me/",
+    "team_page": null,
+    "emails": [],
+    "phones": [
+      "152551520082"
+    ],
+    "social_links": {
+      "twitter.com": "https://twitter.com/hashtag/EU?src=hash&ref_src=twsrc%5Etfw"
+    },
+    "people": [],
+    "source": "Google",
+    "confidence_score": 56,
+    "lead_quality": "Medium",
+    "company_type": "Unknown",
+    "_source_file": "output\\raw\\ai_20260710_131312.json",
+    "_flags": [],
+    "_verified_emails": [],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "phones": {
+        "152551520082": "not_valid_number"
+      },
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "domain_source": "existing_website",
+      "whois": {
+        "registrar": "OVH, SAS",
+        "creation_date": "2018-10-30 09:05:41+00:00",
+        "org": "REDACTED FOR PRIVACY",
+        "country": "ES"
+      }
+    }
+  }
+]

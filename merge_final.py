@@ -1,7 +1,4 @@
-#!/usr/bin/env python3
-"""
-Pillar 2 — Final Merge Script
-"""
+
 
 import json
 

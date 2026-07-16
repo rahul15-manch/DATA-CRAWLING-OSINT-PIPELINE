@@ -17,6 +17,8 @@ logger = logging.getLogger(__name__)
 
 def is_retryable_exception(exception: BaseException) -> bool:
     """Determine if a network exception should trigger a retry."""
+    if getattr(exception, "retryable", True) is False:
+        return False
     if isinstance(exception, HTTPError) and exception.response is not None:
         # Only retry HTTPError if the status code is retryable
         return is_retryable_status_code(exception.response)

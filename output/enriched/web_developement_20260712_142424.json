@@ -1,0 +1,127 @@
+[
+  {
+    "company_name": "WhatsApp Web",
+    "website": "https://web.whatsapp.com/",
+    "linkedin": null,
+    "industry": "web developement",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {
+      "x.com": "http://www.firefox.com/"
+    },
+    "people": [],
+    "source": "Google",
+    "confidence_score": 36,
+    "lead_quality": "Low",
+    "company_type": "Software Company",
+    "_source_file": "output\\raw\\web_developement_20260712_142424.json",
+    "_flags": [],
+    "_verified_emails": [],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "domain_source": "existing_website",
+      "whois": {
+        "registrar": "RegistrarSafe, LLC",
+        "creation_date": "2008-09-04 12:39:12+00:00",
+        "org": "WhatsApp LLC",
+        "country": "US"
+      }
+    }
+  },
+  {
+    "company_name": "Snapchat for Web",
+    "website": "https://www.snapchat.com/web",
+    "linkedin": null,
+    "industry": "web developement",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "confidence_score": 36,
+    "lead_quality": "Low",
+    "company_type": "Unknown",
+    "_source_file": "output\\raw\\web_developement_20260712_142424.json",
+    "_flags": [],
+    "_verified_emails": [],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "domain_source": "existing_website",
+      "whois": {
+        "registrar": "MarkMonitor, Inc.",
+        "creation_date": "2012-02-28 19:29:26+00:00",
+        "org": "DNStination Inc.",
+        "country": "US"
+      }
+    }
+  },
+  {
+    "company_name": "Google",
+    "website": "https://chromewebstore.google.com/",
+    "linkedin": null,
+    "industry": "web developement",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [
+      "support@wordtune.com",
+      "google-translate-chrome-extension-owners@google.com",
+      "cat-gatekeeper@nagomi.designer",
+      "modest@guitar.com"
+    ],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "confidence_score": 46,
+    "lead_quality": "Medium",
+    "company_type": "Marketplace",
+    "_source_file": "output\\raw\\web_developement_20260712_142424.json",
+    "_flags": [],
+    "_verified_emails": [
+      "support@wordtune.com",
+      "google-translate-chrome-extension-owners@google.com",
+      "modest@guitar.com"
+    ],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "emails": {
+        "support@wordtune.com": "ok",
+        "google-translate-chrome-extension-owners@google.com": "ok",
+        "cat-gatekeeper@nagomi.designer": "domain_does_not_exist",
+        "modest@guitar.com": "ok"
+      },
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "domain_source": "existing_website",
+      "whois": {
+        "registrar": "MarkMonitor, Inc.",
+        "creation_date": "[datetime.datetime(1997, 9, 15, 4, 0, tzinfo=tzoffset('UTC', 0)), datetime.datetime(1997, 9, 15, 7, 0, tzinfo=tzoffset('UTC', 0))]",
+        "org": "Google LLC",
+        "country": "US"
+      }
+    }
+  }
+]

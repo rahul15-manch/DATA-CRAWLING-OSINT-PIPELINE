@@ -195,9 +195,31 @@ def _lead_quality_label(score: int) -> str:
 def build_lead_card(company: dict) -> dict | None:
     
     website = company.get("website")
+    homepage_html = None
 
     if website:
-        extracted = extract_from_website(website)
+        if company.get("classification") == "UNKNOWN":
+            # ── Task 15: Homepage Evaluation Budget ──
+            if stats.get().get("funnel_homepage_evaluated", 0) >= getattr(config, "HOMEPAGE_EVAL_BUDGET", 10):
+                print(f"[pipeline] Skipping homepage evaluation for {company.get('company')!r} — budget exhausted.")
+                return None
+
+            stats.increment("funnel_homepage_evaluated")
+            
+            from extraction.page_extractor import fetch_page
+            homepage_html = fetch_page(website)
+            if not homepage_html:
+                return None
+            from discovery.homepage_evaluator import evaluate_homepage
+            new_classification = evaluate_homepage(homepage_html, website, "UNKNOWN")
+            if new_classification == "REJECT":
+                print(f"[pipeline] rejected UNKNOWN candidate {company.get('company')!r} after homepage evaluation.")
+                return None
+            company["classification"] = new_classification
+            print(f"[pipeline] Upgraded UNKNOWN candidate {company.get('company')!r} to {new_classification}")
+
+        extracted = extract_from_website(website, homepage_html=homepage_html)
+        stats.increment("funnel_homepage_crawled")
     else:
         extracted = {
             "contact_page": None,
@@ -216,16 +238,26 @@ def build_lead_card(company: dict) -> dict | None:
     emails = list(extracted.get("emails", []))
 
     # ── Contact discovery fallback ────────────────────────────────────────
-    if not raw_people:
-        contact = discover_contact(company.get("company") or "")
-        if contact.get("contact_name"):
-            raw_people.append({
-                "name": contact.get("contact_name"),
-                "designation": contact.get("designation"),
-                "linkedin": contact.get("linkedin"),})
-        if contact.get("email"):
-            emails.append(contact["email"])
-            emails = sorted(set(emails))
+    # Optimize contact discovery to only run when:
+    # 1. Company website is present.
+    # 2. emails list is empty (no email has been extracted yet).
+    if website and not emails and not raw_people:
+        sm = get_search_manager()
+        if sm.providers_available():
+            contact = discover_contact(company.get("company") or "")
+            if contact.get("contact_name"):
+                raw_people.append({
+                    "name": contact.get("contact_name"),
+                    "designation": contact.get("designation"),
+                    "linkedin": contact.get("linkedin"),})
+            if contact.get("email"):
+                emails.append(contact["email"])
+                emails = sorted(set(emails))
+        else:
+            print(f"[pipeline] Skipping contact discovery for {company.get('company')!r} — providers exhausted.")
+
+    if emails or raw_people or extracted.get("phones"):
+        stats.increment("funnel_contacts_extracted")
 
     # ── Task 8: Score each person record ──────────────────────────────────
     people = []
@@ -257,7 +289,9 @@ def build_lead_card(company: dict) -> dict | None:
         "company_name":     company.get("company"),
         "website":          website,
         "linkedin":         company.get("linkedin"),
-        "industry":         detected_industry if (detected_industry and detected_industry != "Unknown") else company.get("industry"),
+        "industry":         detected_industry if (detected_industry and detected_industry != "Unknown")
+                            else (company.get("industry_detected") if company.get("industry_detected") != "Unknown"
+                            else company.get("industry")),
         "location":         company.get("location"),
         "contact_page":     extracted.get("contact_page"),
         "about_page":       extracted.get("about_page"),
@@ -267,9 +301,12 @@ def build_lead_card(company: dict) -> dict | None:
         "social_links":     extracted.get("social_links", {}),
         "people":           people,
         "source":           company.get("source"),
-        "confidence_score": completeness_score,  # backwards-compatible key name
-        "lead_quality":     _lead_quality_label(completeness_score),
+        "confidence_score": company.get("relevance_score", completeness_score),  # SRE relevance score
+        "lead_quality":     _lead_quality_label(company.get("relevance_score", completeness_score)),
         "company_type":     extracted.get("company_type", "Unknown"),
+        "relevance_score":  company.get("relevance_score", 0),
+        "relevance_tier":   company.get("relevance_tier", "LOW"),
+        "relevance_info":   company.get("relevance_info", {}),
     }
 
     # Include rejection reason when the lead is kept but flagged low-quality
@@ -314,11 +351,37 @@ def run_pipeline(keyword: str):
                 if lead is not None:
                     leads.append(lead)
                     stats.increment("lead_cards_generated")
+                    stats.increment("funnel_leads_exported")
+                    # Update search manager provider stats for ranking
+                    from search.manager import get_search_manager
+                    sm = get_search_manager()
+                    source = company.get("source")
+                    if source in sm.stats:
+                        sm.stats[source].leads_discovered += 1
+
+                    # Log feedback for SRE weight optimization: reward for High/Medium leads, penalize for Low leads
+                    sre_info = company.get("relevance_info", {})
+                    matched = sre_info.get("matched_signals", [])
+                    if matched:
+                        from discovery.semantic_ranking_engine import record_feedback
+                        is_high_quality = lead.get("lead_quality") in ("High", "Medium")
+                        record_feedback("reward" if is_high_quality else "penalize", matched)
+                else:
+                    # Penalize matched signals of the rejected candidate
+                    sre_info = company.get("relevance_info", {})
+                    matched = sre_info.get("matched_signals", [])
+                    if matched:
+                        from discovery.semantic_ranking_engine import record_feedback
+                        record_feedback("penalize", matched)
             except Exception as exc:
                 print(
                     f"Error building lead card for {company.get('company')!r}:"
                     f" {exc}"
                 )
+
+    # Apply batch weight learning exactly once at the end of the run
+    from discovery.semantic_ranking_engine import apply_batch_learning
+    apply_batch_learning()
 
     # ── Write output ──────────────────────────────────────────────────────
     os.makedirs(config.RAW_OUTPUT_FOLDER, exist_ok=True)
@@ -342,57 +405,24 @@ def run_pipeline(keyword: str):
     stats.set_value("avg_confidence", avg_conf)
     stats.set_value("execution_time_sec", execution_time)
 
-    # Print Task 12 statistics report
-    stats.print_report()
-
-   # Task 8: Print Search Layer Statistics
-
-    from search.manager import get_search_manager
-
-    manager = get_search_manager()
-
-    print("=" * 60)
-    print("SEARCH & DISCOVERY COMPLETION REPORT")
-    print("=" * 60)
-
-    print(f"Total Queries        : {manager.total_queries}")
-    print(f"Total Results        : {manager.total_results}")
-    print(f"Duplicates Removed   : {manager.total_duplicates_removed}")
-    print(f"Merged Results       : {manager.total_merged}")
-    print(f"Final Companies      : {len(companies)}")
-    print(f"Lead Cards Generated : {len(leads)}")
-    print(f"Execution Time       : {execution_time:.2f}s")
-
-    print("\nProvider Statistics")
-    print("-" * 60)
-
-    for provider_name, provider in manager.stats.items():
-
-        if provider.queries == 0:
-            continue
-
-        print(f"\nProvider : {provider_name}")
-        print(f"Queries        : {provider.queries}")
-        print(f"Results        : {provider.results_returned}")
-        print(f"Failures       : {provider.failures}")
-        print(f"Fallbacks      : {provider.fallback_count}")
-        print(f"Success Rate   : {provider.success_rate:.0%}")
-        print(f"Average Latency: {provider.avg_latency_s:.2f}s")
-
-        print("=" * 60)
-        print()
+    # Telemetry is handled centrally by run_pipeline.py -> dashboard.py
 
     # Summary
     high   = sum(1 for l in leads if l.get("lead_quality") == "High")
     medium = sum(1 for l in leads if l.get("lead_quality") == "Medium")
     low    = sum(1 for l in leads if l.get("lead_quality") == "Low")
 
-    print(f"Saved {len(leads)} Lead Cards  ->  {output_file}")
-    print(f"  High: {high}  |  Medium: {medium}  |  Low: {low}")
+    print("=" * 60)
+    print("FINAL PIPELINE EXECUTION REPORT")
+    print("=" * 60)
+    print(f"Execution Time       : {execution_time:.2f}s")
+    print(f"Leads Discovered     : {len(leads)}")
+    print(f"Lead Quality Dist.   : High={high} | Medium={medium} | Low={low}")
+    print(f"Output File          : {output_file}")
+    print("=" * 60 + "\n")
 
-    # Return the output file path so the orchestrator can pass it to Pillar 2
-    # without having to reconstruct or guess the filename.
     return output_file
+
 
 
 # ─────────────────────────────────────────────────────────────────────────────

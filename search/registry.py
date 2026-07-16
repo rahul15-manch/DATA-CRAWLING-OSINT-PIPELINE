@@ -1,53 +1,63 @@
-"""
-search/registry.py
-==================
-Provider Registry — the ONLY place where provider names are mapped to classes.
+import os
+import sys
+import logging
+import pkgutil
+import importlib
+from typing import Dict, Any, Type, Optional, List
 
-Design
-------
-- `PROVIDER_REGISTRY` is a plain dict: name → class.
-- SearchManager loops over it; no if/elif chains anywhere.
-- Adding a new provider = one import + one dict entry here.
-  Nothing else in the codebase needs to change.
+from search.provider_base import SearchProvider
 
-To add a new provider
----------------------
-1. Create search/providers/my_provider.py  (subclass SearchProvider)
-2. Add one line here:
-       from search.providers.my_provider import MyProvider
-       "my_provider": MyProvider,
-3. Add "my_provider" to SEARCH_PROVIDER_PRIORITY in config.py (or .env).
+logger = logging.getLogger(__name__)
 
-That's it.
-"""
+from search.base_registry import BaseRegistry
 
-from search.providers.serpapi_provider    import SerpApiProvider
-from search.providers.google_cse_provider import GoogleCseProvider
-from search.providers.bing_provider       import BingProvider
-from search.providers.generic_api_provider import GenericApiProvider
-from search.providers.google_html_provider import GoogleHtmlProvider
+# Concrete implementation for ProviderRegistry
+class ProviderRegistryClass(BaseRegistry):
+    def __init__(self):
+        scan_dir = os.path.join(os.path.dirname(__file__), "providers")
+        super().__init__(
+            base_class=SearchProvider,
+            module_prefix="search.providers",
+            scan_path=scan_dir
+        )
 
-# ── Master registry ───────────────────────────────────────────────────────────
-# key   : provider slug used in config / env vars
-# value : provider class (NOT an instance — SearchManager instantiates lazily)
+    def get_provider_class(self, name: str) -> Optional[Type]:
+        alias_map = {
+            "directory": "directory_provider",
+            "repository": "repository_provider",
+        }
+        resolved = alias_map.get(name, name)
+        return self.get(resolved)
 
-PROVIDER_REGISTRY: dict[str, type] = {
-    "google_html": GoogleHtmlProvider,   # Primary — Chrome TLS impersonation via curl_cffi
-    "serpapi":     SerpApiProvider,       # Optional — requires SERPAPI_KEY
-    "google_cse":  GoogleCseProvider,    # Optional — requires GOOGLE_CSE_KEY + GOOGLE_CSE_CX
-    "generic_api": GenericApiProvider,   # Optional — requires ENABLE_CUSTOM_PROVIDER + CUSTOM_PROVIDER_URL
-    "bing":        BingProvider,         # Final fallback — always available, no key required
-}
+ProviderRegistry = ProviderRegistryClass()
 
-# ── Default priority order ────────────────────────────────────────────────────
-# Overridden by SEARCH_PROVIDER_PRIORITY env var or config.py.
-# Google HTML is the primary provider (uses curl_cffi Chrome TLS impersonation).
-# Bing is the final fallback — always available, no key required.
+# Lazy dictionary for backward-compatibility wrapper
+class LazyProviderRegistryDict(dict):
+    def __getitem__(self, key):
+        cls = ProviderRegistry.get_provider_class(key)
+        if not cls:
+            raise KeyError(key)
+        return cls
+
+    def __contains__(self, key):
+        return ProviderRegistry.get_provider_class(key) is not None
+
+    def keys(self):
+        return ProviderRegistry.get_registered_names()
+
+    def __iter__(self):
+        return iter(ProviderRegistry.get_registered_names())
+
+    def items(self):
+        return [(name, ProviderRegistry.get_provider_class(name)) for name in ProviderRegistry.get_registered_names()]
+
+PROVIDER_REGISTRY = LazyProviderRegistryDict()
 
 DEFAULT_PRIORITY: list[str] = [
-    "google_html",  # Primary: Google HTML via curl_cffi Chrome impersonation
-    "serpapi",      # Optional: API-based Google results (requires key)
-    "google_cse",   # Optional: Google Custom Search API (requires key)
-    "generic_api",  # Optional: any custom REST provider
-    "bing",         # Fallback: always available
+    "google_html",
+    "duckduckgo",
+    "brave",
+    "bing",
+    "directory_provider",
+    "repository_provider",
 ]

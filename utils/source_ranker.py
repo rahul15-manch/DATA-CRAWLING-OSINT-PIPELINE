@@ -33,13 +33,22 @@ def best_company_record(existing: dict, candidate: dict) -> dict:
     The losing record's website/LinkedIn are merged into the winner if the
     winner does not have them, so no data is ever silently discarded.
     """
-    existing_score = get_source_score(existing.get("source", ""))
-    candidate_score = get_source_score(candidate.get("source", ""))
+    existing_rel = existing.get("relevance_score", 0)
+    candidate_rel = candidate.get("relevance_score", 0)
 
-    winner, loser = (
-        (existing, candidate) if existing_score >= candidate_score
-        else (candidate, existing)
-    )
+    if existing_rel != candidate_rel:
+        winner, loser = (
+            (existing, candidate) if existing_rel > candidate_rel
+            else (candidate, existing)
+        )
+    else:
+        existing_score = get_source_score(existing.get("source", ""))
+        candidate_score = get_source_score(candidate.get("source", ""))
+
+        winner, loser = (
+            (existing, candidate) if existing_score >= candidate_score
+            else (candidate, existing)
+        )
 
     # Preserve any data the loser has that the winner lacks
     merged = dict(winner)

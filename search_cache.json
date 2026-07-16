@@ -1,0 +1,1508 @@
+{
+  "default||site:linkedin.com/company \"Automation company\" -site:wikipedia.org -site:play.google.com -site:apps.apple.com -site:chromewebstore.google.com -site:whatsapp.com||20||0": {
+    "query": "site:linkedin.com/company \"Automation company\" -site:wikipedia.org -site:play.google.com -site:apps.apple.com -site:chromewebstore.google.com -site:whatsapp.com",
+    "provider": "duckduckgo",
+    "timestamp": 1784204815.6426883,
+    "result_count": 0,
+    "kind": "zero_result",
+    "results": []
+  },
+  "default||site:linkedin.com/company \"Automation development\" -site:wikipedia.org -site:play.google.com -site:apps.apple.com -site:chromewebstore.google.com -site:whatsapp.com||20||0": {
+    "query": "site:linkedin.com/company \"Automation development\" -site:wikipedia.org -site:play.google.com -site:apps.apple.com -site:chromewebstore.google.com -site:whatsapp.com",
+    "provider": "google_html",
+    "timestamp": 1784204837.0726283,
+    "result_count": 0,
+    "kind": "zero_result",
+    "results": []
+  },
+  "default||site:linkedin.com/company \"IT services\" -site:wikipedia.org -site:play.google.com -site:apps.apple.com -site:chromewebstore.google.com -site:whatsapp.com||20||0": {
+    "query": "site:linkedin.com/company \"IT services\" -site:wikipedia.org -site:play.google.com -site:apps.apple.com -site:chromewebstore.google.com -site:whatsapp.com",
+    "provider": "google_html",
+    "timestamp": 1784204845.4269905,
+    "result_count": 0,
+    "kind": "zero_result",
+    "results": []
+  },
+  "default||site:linkedin.com/company \"custom Automation\" -site:wikipedia.org -site:play.google.com -site:apps.apple.com -site:chromewebstore.google.com -site:whatsapp.com||20||0": {
+    "query": "site:linkedin.com/company \"custom Automation\" -site:wikipedia.org -site:play.google.com -site:apps.apple.com -site:chromewebstore.google.com -site:whatsapp.com",
+    "provider": "google_html",
+    "timestamp": 1784204853.1387239,
+    "result_count": 0,
+    "kind": "zero_result",
+    "results": []
+  },
+  "default||site:linkedin.com/company \"automation company\" -site:wikipedia.org -site:play.google.com -site:apps.apple.com -site:chromewebstore.google.com -site:whatsapp.com||20||0": {
+    "query": "site:linkedin.com/company \"automation company\" -site:wikipedia.org -site:play.google.com -site:apps.apple.com -site:chromewebstore.google.com -site:whatsapp.com",
+    "provider": "google_html",
+    "timestamp": 1784212502.3012574,
+    "result_count": 0,
+    "kind": "zero_result",
+    "results": []
+  },
+  "default||site:linkedin.com/company \"automation development\" -site:wikipedia.org -site:play.google.com -site:apps.apple.com -site:chromewebstore.google.com -site:whatsapp.com||20||0": {
+    "query": "site:linkedin.com/company \"automation development\" -site:wikipedia.org -site:play.google.com -site:apps.apple.com -site:chromewebstore.google.com -site:whatsapp.com",
+    "provider": "google_html",
+    "timestamp": 1784212526.517288,
+    "result_count": 0,
+    "kind": "zero_result",
+    "results": []
+  },
+  "default||site:linkedin.com/company \"automation services\" -site:wikipedia.org -site:play.google.com -site:apps.apple.com -site:chromewebstore.google.com -site:whatsapp.com||20||0": {
+    "query": "site:linkedin.com/company \"automation services\" -site:wikipedia.org -site:play.google.com -site:apps.apple.com -site:chromewebstore.google.com -site:whatsapp.com",
+    "provider": "google_html",
+    "timestamp": 1784212538.448891,
+    "result_count": 0,
+    "kind": "zero_result",
+    "results": []
+  },
+  "default||automation||20||0": {
+    "query": "automation",
+    "provider": "duckduckgo",
+    "timestamp": 1784214053.8898065,
+    "result_count": 4,
+    "kind": "success",
+    "results": [
+      {
+        "title": "Automation - The Car Company Tycoon Game on Steam",
+        "url": "https://store.steampowered.com/app/293760/Automation__The_Car_Company_Tycoon_Game/",
+        "snippet": "Make your dream cars a reality withAutomation'sunparalleled car and engine design tools. Gain a competitive edge through smart engineering and business decisions to help you build an automotive empire. Will you become an industry leader, or just a footnote in automotive history?",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784214053.887774
+      },
+      {
+        "title": "Smart Manufacturing Industrial Automation | Rockwell Automation | US",
+        "url": "https://www.rockwellautomation.com/en-us.html",
+        "snippet": "Accelerate your shift fromautomationto autonomy with a clear strategy and real-world examples that empower people, drive innovation, and build more resilient operations.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784214053.887774
+      },
+      {
+        "title": "Automation Solutions Provider | Brooks Automation",
+        "url": "https://www.brooks.com/",
+        "snippet": "BrooksAutomationis a globalautomationsolutions provider supporting semiconductor manufacturing, labautomation, and emerging industrial applications.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784214053.887774
+      },
+      {
+        "title": "Power Automate: Business Process Workflow Automation | Microsoft Power ...",
+        "url": "https://www.microsoft.com/en-us/power-platform/products/power-automate/",
+        "snippet": "Automate workflows and business processes across apps, systems, and websites with Microsoft Power Automate using AI, digital, and robotic processautomation.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784214053.887774
+      }
+    ]
+  },
+  "default||best automation||20||0": {
+    "query": "best automation",
+    "provider": "bing",
+    "timestamp": 1784214063.5226839,
+    "result_count": 0,
+    "kind": "zero_result",
+    "results": []
+  },
+  "default||top automation||20||0": {
+    "query": "top automation",
+    "provider": "duckduckgo",
+    "timestamp": 1784214066.7615232,
+    "result_count": 4,
+    "kind": "success",
+    "results": [
+      {
+        "title": "Automatic Bar Loader for Lathes | Top Automazioni",
+        "url": "https://www.topautomazioni.com/en/",
+        "snippet": "The completeautomationofTOPAutomazioni machines allows you to eliminate downtime and lighten workloads, automating the insertion and ejection process from beginning to end.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784214066.7589295
+      },
+      {
+        "title": "INDUSTRIAL ROBOTS | CNC robot loader | Top Automazioni",
+        "url": "https://www.topautomazioni.com/en/industrial-robots/",
+        "snippet": "INDUSTRIAL ROBOTS THE NEW LINE OF INDUSTRIAL ROBOTS BYTOPAUTOMAZIONI Roboticautomationhas been present for years in industrial processes, but its evolution has recently accelerated, introducing a greater number of flexible systems and collaborative robots.TopAutomazioni has always had a great view of the markets and its future orientations, having now obtained the leadership position in ...",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784214066.7589295
+      },
+      {
+        "title": "100 Top Automation Companies in United States · July 2026",
+        "url": "https://www.f6s.com/companies/automation/united-states/co",
+        "snippet": "Detailed info and reviews on 100topAutomationcompanies and startups in United States in 2026. Get the latest updates on their products, jobs, funding, investors, founders and more.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784214066.7589295
+      },
+      {
+        "title": "100 Top Automation Companies · July 2026 | F6S",
+        "url": "https://www.f6s.com/companies/automation/mo",
+        "snippet": "Detailed info and reviews on 100topAutomationcompanies and startups in 2026. Get the latest updates on their products, jobs, funding, investors, founders and more.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784214066.7589295
+      }
+    ]
+  },
+  "default||automation company||20||0": {
+    "query": "automation company",
+    "provider": "duckduckgo",
+    "timestamp": 1784214080.6990864,
+    "result_count": 8,
+    "kind": "success",
+    "results": [
+      {
+        "title": "HAHN Automation Group | Your Global Solution Partner",
+        "url": "https://www.hahnautomation.group/",
+        "snippet": "Discover innovativeautomationsolutions tailored to your needs with HAHNAutomationGroup. From assembly platforms to material handling solutions, we streamline production worldwide.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784214080.6970565
+      },
+      {
+        "title": "100 Top Automation Companies in India · July 2026 | F6S",
+        "url": "https://www.f6s.com/companies/automation/india/co",
+        "snippet": "Detailed info and reviews on 100 topAutomationcompanies and startups in India in 2026. Get the latest updates on their products, jobs, funding, investors, founders and more.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784214080.6970565
+      },
+      {
+        "title": "Factory Automation Company | Eclipse Automation",
+        "url": "https://www.eclipseautomation.com/",
+        "snippet": "EclipseAutomationbuilds reliable, intelligentautomationsystems for manufacturers of all sizes, delivering turnkeyautomationand solutions that work.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784214080.6970565
+      },
+      {
+        "title": "Wes-Tech Custom Automation Solutions",
+        "url": "https://wes-tech.com/",
+        "snippet": "Wes-Tech designs and builds customautomationsolutions, including assembly and test, machine tending, conveyor, and gantry systems.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784214080.6970565
+      },
+      {
+        "title": "Industrial Automation & Control Engineering Company - ACI",
+        "url": "https://automation-control.com/",
+        "snippet": "ACI delivers high-quality, turnkeyautomationand control engineering solutions designed for manufacturers and OEMs across the country. As a trustedautomationcontrolcompanyand full-service industrial system integrator, we act as an extension of your team—solving complex challenges, executing safely, and delivering measurable results.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784214080.6970565
+      },
+      {
+        "title": "Industrial automation | B&R Industrial Automation",
+        "url": "https://www.br-automation.com/en/",
+        "snippet": "B&R IndustrialAutomationprovides innovative solutions for industrialautomation, offering advanced technologies and services to optimize productivity and efficiency.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784214080.6970565
+      },
+      {
+        "title": "100 Top Automation Companies · July 2026 | F6S",
+        "url": "https://www.f6s.com/companies/automation/mo",
+        "snippet": "Detailed info and reviews on 100 topAutomationcompanies and startups in 2026. Get the latest updates on their products, jobs, funding, investors, founders and more.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784214080.6970565
+      },
+      {
+        "title": "Leading Industrial Automation Company | Smart Solutions for Modern ...",
+        "url": "https://www.c3automation.com/",
+        "snippet": "Discover cutting-edge industrialautomationcompanysolutions designed to boost efficiency, reduce downtime, and enhance productivity.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784214080.6970565
+      }
+    ]
+  },
+  "default||best automation company||20||0": {
+    "query": "best automation company",
+    "provider": "google_html",
+    "timestamp": 1784214091.9724007,
+    "result_count": 0,
+    "kind": "zero_result",
+    "results": []
+  },
+  "default||hardware||20||0": {
+    "query": "hardware",
+    "provider": "duckduckgo",
+    "timestamp": 1784214711.144256,
+    "result_count": 5,
+    "kind": "success",
+    "results": [
+      {
+        "title": "Top Hardware Tool Dealers in Sonipat near me - Justdial",
+        "url": "https://www.justdial.com/Sonipat/Hardware-Tool-Dealers/nct-10243534",
+        "snippet": "HardwareTool Dealers in Sonipat - Find the best deals on top-quality tools for your projects! Whether you need power tools, hand tools, or accessories, buy from trusted dealers nearby. Get the right equipment for home repairs, DIY projects, and professional jobs. Save time and money with unbeatable prices!",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784214711.1407013
+      },
+      {
+        "title": "Ace Hardware | The Helpful Place - Ace Hardware",
+        "url": "https://www.acehardware.com/",
+        "snippet": "Shop AceHardwarefor grills,hardware, home improvement, lawn and garden, and tools. Buy online & pickup today!",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784214711.1407013
+      },
+      {
+        "title": "Hardware stores in Sonipat - Cybo",
+        "url": "https://www.cybo.com/IN/sonipat/hardware-store/",
+        "snippet": "BestHardwarestores in Sonipat. PNB KITCHENMATE Retail Showroom (Kitchenware and Hotelware), Dev Rachna Kitchenware, Haryana Trading Company Bahalgarh, Surindra Batteries (Exide Amaron Battery Sonipat",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784214711.1407013
+      },
+      {
+        "title": "Sahil Hardware Store - Retailer from Sonipat, India | About Us",
+        "url": "https://www.indiamart.com/sahil-hardware-store/profile.html",
+        "snippet": "SahilHardwareStore - Retailer of 65m Transparent Cello Tape, 15Inch Shrink Film Roll, Red cello tape, 100m Packaging Air Bubbles Roll and Adhesive & Pressure Sensitive Tapes in Sonipat, Haryana",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784214711.1407013
+      },
+      {
+        "title": "Sahil Hardware Store, Jatheri - Hardware store in Sonipat",
+        "url": "https://www.indiainfo.net/place/sahil-hardware-store-875345",
+        "snippet": "SahilHardwareStore is located in Jatheri, Nathupur, P.S.Rai, Pritampura, Rai area of Sonipat, Haryana India. Complete address of SahilHardwareStore:Sector 38, Ferozepur Khadar, Haryana 131029.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784214711.1422021
+      }
+    ]
+  },
+  "default||best hardware||20||0": {
+    "query": "best hardware",
+    "provider": "duckduckgo",
+    "timestamp": 1784214720.783238,
+    "result_count": 1,
+    "kind": "success",
+    "results": [
+      {
+        "title": "Tom's Hardware: For The Hardcore PC Enthusiast",
+        "url": "https://www.tomshardware.com/",
+        "snippet": "Tom'sHardwarehelps you buy thebesthardwareand build thebestPC to play, create and work..",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784214720.7797847
+      }
+    ]
+  },
+  "default||top hardware||20||0": {
+    "query": "top hardware",
+    "provider": "bing",
+    "timestamp": 1784214723.9254835,
+    "result_count": 3,
+    "kind": "success",
+    "results": [
+      {
+        "title": "Tom's Hardware: For The Hardcore PC Enthusiast",
+        "url": "https://www.tomshardware.com/",
+        "snippet": "Tom's Hardware helps you buy the best hardware and build the best PC to play, create and work..",
+        "provider": "bing",
+        "source": "Bing",
+        "rank": 0,
+        "provider_rank": 1,
+        "query": "top hardware",
+        "page": 0,
+        "timestamp": 1784214723.9106543
+      },
+      {
+        "title": "100 Top Hardware Companies in India · July 2026 | F6S",
+        "url": "https://www.f6s.com/companies/hardware/india/co",
+        "snippet": "Jul 1, 2026 · Detailed info and reviews on 100 top Hardware companies and startups in India in 2026. Get the latest updates on their …",
+        "provider": "bing",
+        "source": "Bing",
+        "rank": 0,
+        "provider_rank": 4,
+        "query": "top hardware",
+        "page": 0,
+        "timestamp": 1784214723.9106543
+      },
+      {
+        "title": "Top Hardware – Top Hardware Inc. has been one of the …",
+        "url": "https://www.tophardware.com/",
+        "snippet": "Manufactured custom products available with customer drawing or sample. Available for all Categories! We …",
+        "provider": "bing",
+        "source": "Bing",
+        "rank": 0,
+        "provider_rank": 7,
+        "query": "top hardware",
+        "page": 0,
+        "timestamp": 1784214723.9106543
+      }
+    ]
+  },
+  "default||hardware company||20||0": {
+    "query": "hardware company",
+    "provider": "bing",
+    "timestamp": 1784214740.643531,
+    "result_count": 3,
+    "kind": "success",
+    "results": [
+      {
+        "title": "100 Top Hardware Companies in India · July 2026 | F6S",
+        "url": "https://www.f6s.com/companies/hardware/india/co",
+        "snippet": "Jul 1, 2026 · Detailed info and reviews on 100 top Hardware companies and startups in India in 2026. Get the latest updates on their …",
+        "provider": "bing",
+        "source": "Bing",
+        "rank": 0,
+        "provider_rank": 1,
+        "query": "hardware company",
+        "page": 0,
+        "timestamp": 1784214740.6224127
+      },
+      {
+        "title": "India's Leading Architectural Hardware Manufacturer",
+        "url": "https://www.ozone.in/",
+        "snippet": "Ozone is the leading manufacturer & supplier of Architectural Hardware Fittings & Security Solutions that …",
+        "provider": "bing",
+        "source": "Bing",
+        "rank": 0,
+        "provider_rank": 5,
+        "query": "hardware company",
+        "page": 0,
+        "timestamp": 1784214740.6224127
+      },
+      {
+        "title": "15 Top Computer Hardware Companies in India · July 2026 | F6S",
+        "url": "https://www.f6s.com/companies/computer-hardware/india/co",
+        "snippet": "Jul 1, 2026 · Detailed info and reviews on 15 top Computer Hardware companies and startups in India in 2026. Get the latest updates …",
+        "provider": "bing",
+        "source": "Bing",
+        "rank": 0,
+        "provider_rank": 6,
+        "query": "hardware company",
+        "page": 0,
+        "timestamp": 1784214740.6224127
+      }
+    ]
+  },
+  "default||best hardware company||20||0": {
+    "query": "best hardware company",
+    "provider": "duckduckgo",
+    "timestamp": 1784214745.5563352,
+    "result_count": 6,
+    "kind": "success",
+    "results": [
+      {
+        "title": "India's Leading Architectural Hardware Manufacturer & Supplier - Ozone ...",
+        "url": "https://www.ozone.in/",
+        "snippet": "Ozone is the leading manufacturer & supplier of ArchitecturalHardwareFittings & Security Solutions that include glass fittings, Smart Locks & Safes, doorhardware, etc.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784214745.5491836
+      },
+      {
+        "title": "List of Companies in Bhopal With Contact Details - 100+ Companies",
+        "url": "https://topcompanieslist.com/Bhopal-city/company.htm",
+        "snippet": "List of Companies in Bhopal, Top MNC Companies in Bhopal, Govt companies in Bhopal, Top 10 Companies in Bhopal, IT Companies in Bhopal ,Top Public and Private Companies in Bhopal, List of Companies in Bhopal PDF/XLS file will be provided on request.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784214745.5491836
+      },
+      {
+        "title": "52 Hardware Companies You Should Know - Built In",
+        "url": "https://builtin.com/hardware/hardware-companies",
+        "snippet": "From screens that fold to virtual reality headsets, here are thehardwarecompanies designing and developing the latest devices being used at home and in the workplace.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784214745.5491836
+      },
+      {
+        "title": "Online Hardware Store | Tools & Building Supplies | Hardware World",
+        "url": "https://www.hardwareworld.com/",
+        "snippet": "Great prices, same-day shipping, and 30-day returns on 34,000+hardwareproducts. Tools, building supplies, electrical, plumbing, paint, lawn & garden, and more.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784214745.5491836
+      },
+      {
+        "title": "Ebco - Furniture Fittings and Accessories",
+        "url": "https://ebco.in/",
+        "snippet": "Ebco's product range spans Drawer Slides, Hinges, Computer Furniture Fittings, Joinery Fittings, Wardrobe Fittings, Furniture Locks, Kitchen Systems and Accessories, Window and Door Fittings, Architectural Fittings, LED Lights and more.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784214745.5491836
+      },
+      {
+        "title": "Our Products - BEST",
+        "url": "https://www.bestaccess.com/products/",
+        "snippet": "From mechanical locks and doorhardwareto key cores and wireless systems, you'll find the right access control solution withBEST.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784214745.5491836
+      }
+    ]
+  },
+  "default||top hardware company||20||0": {
+    "query": "top hardware company",
+    "provider": "duckduckgo",
+    "timestamp": 1784214748.3987057,
+    "result_count": 6,
+    "kind": "success",
+    "results": [
+      {
+        "title": "Top Hardware - Top Hardware Inc. has been one of the faster growing ...",
+        "url": "https://www.tophardware.com/",
+        "snippet": "Calacatta Kitchen Sink TRUSTED QUALITY UP TO 25 % OFF Start Shopping Right Now * Get Extra Discount if Buying More",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784214748.3945937
+      },
+      {
+        "title": "52 Hardware Companies You Should Know - Built In",
+        "url": "https://builtin.com/hardware/hardware-companies",
+        "snippet": "From screens that fold to virtual reality headsets, here are thehardwarecompanies designing and developing the latest devices being used at home and in the workplace.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784214748.3945937
+      },
+      {
+        "title": "Top Hardware Companies 2026 | Built In",
+        "url": "https://builtin.com/companies/location/type/hardware-industry-companies",
+        "snippet": "Check out this list of thetopHardwarecompanies. Seecompanybenefits, info, interviews and more at Built In.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784214748.3945937
+      },
+      {
+        "title": "United States Hardware Stores Retail Companies - Top Players' List",
+        "url": "https://www.mordorintelligence.com/industry-reports/united-states-hardware-stores-retail-market/companies",
+        "snippet": "List of thetopUnited StatesHardwareStores Retail companies based on extensive research conducted by Mordor Intelligence analysts and expert advisors that identified these brands to be the leaders and major players in the United StatesHardwareStores Retail sector.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784214748.3945937
+      },
+      {
+        "title": "Top Hardware Tool Dealers in Sonipat near me - Justdial",
+        "url": "https://www.justdial.com/Sonipat/Hardware-Tool-Dealers/nct-10243534",
+        "snippet": "HardwareTool Dealers in Sonipat - Find the best deals ontop-quality tools for your projects! Whether you need power tools, hand tools, or accessories, buy from trusted dealers nearby. Get the right equipment for home repairs, DIY projects, and professional jobs. Save time and money with unbeatable prices!",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784214748.3955903
+      },
+      {
+        "title": "100 Top Hardware Companies · July 2026 | F6S",
+        "url": "https://www.f6s.com/companies/hardware/mo",
+        "snippet": "Detailed info and reviews on 100topHardwarecompanies and startups in 2026. Get the latest updates on their products, jobs, funding, investors, founders and more.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784214748.3955903
+      }
+    ]
+  },
+  "default||hardware startup||20||0": {
+    "query": "hardware startup",
+    "provider": "google_html",
+    "timestamp": 1784214759.272234,
+    "result_count": 0,
+    "kind": "zero_result",
+    "results": []
+  },
+  "default||engineering||20||0": {
+    "query": "engineering",
+    "provider": "duckduckgo",
+    "timestamp": 1784218322.0340085,
+    "result_count": 1,
+    "kind": "success",
+    "results": [
+      {
+        "title": "Engineering.com",
+        "url": "https://www.engineering.com/",
+        "snippet": "Engineeringinformation and connections for the global community of engineers. Findengineeringwebinars, research, articles, games, videos, jobs and calculators.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784218322.0287702
+      }
+    ]
+  },
+  "default||engineering company||20||0": {
+    "query": "engineering company",
+    "provider": "duckduckgo",
+    "timestamp": 1784218358.3188515,
+    "result_count": 8,
+    "kind": "success",
+    "results": [
+      {
+        "title": "List of Engineering Companies in Hisar (Haryana)",
+        "url": "https://topcompanieslist.com/Haryana-state/-Engineering-industry/Hisar-city/company.htm",
+        "snippet": "Universal Institute of Technology is located in Hisar at 12th K.M. Stone Delhi - Hansi Road (N.H-10 V.P.O Garhi, Hansi.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784218358.3124776
+      },
+      {
+        "title": "List of Companies in Hisar With Contact Details - 100+ Companies",
+        "url": "https://topcompanieslist.com/Hisar-city/company.htm",
+        "snippet": "List of Companies in Hisar, Top MNC Companies in Hisar, Govt companies in Hisar, Top 10 Companies in Hisar, IT Companies in Hisar ,Top Public and Private Companies in Hisar, List of Companies in Hisar PDF/XLS file will be provided on request.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784218358.3124776
+      },
+      {
+        "title": "Welcome to mahamarg | mahamarg",
+        "url": "https://mahamarg.com/",
+        "snippet": "Companyhas been established in September 21, 2018 by the professionals of civilengineering.Companyhas highly qualified and experience team with established track records.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784218358.3135004
+      },
+      {
+        "title": "Heavy and Civil Engineering Construction Companies in Hisar, Haryana, India",
+        "url": "https://www.dnb.com/business-directory/company-information.heavy_and_civil_engineering_construction.in.haryana.hisar.html",
+        "snippet": "Find info on Heavy and CivilEngineeringConstruction companies in Hisar, including financial statements, sales and marketing contacts, top competitors, and firmographic insights.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784218358.3135004
+      },
+      {
+        "title": "AI ENGINEERING SOLUTIONS Company Profile | Hisar, Haryana | Competitors ...",
+        "url": "https://www.dnb.com/business-directory/company-profiles.ai_engineering_solutions.8bc484b87104d18b7b41d09041d5a16e.html",
+        "snippet": "Findcompanyresearch, competitor information, contact details & financial data for AIENGINEERINGSOLUTIONS of Hisar, Haryana. Get the latest business insights from Dun & Bradstreet.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784218358.3135004
+      },
+      {
+        "title": "Hisar Engineering Works from Hisar, India | About Us",
+        "url": "https://www.indiamart.com/company/257348024/aboutus.html",
+        "snippet": "About Us HISARENGINEERINGWORKS is a premier manufacturer and supplier of Electric Wire Rope Hoists, Electric Chain Hoists, Overhead EOT Cranes, HOT Cranes, JIB Cranes, Gantry Cranes, and customized lifting solutions. With a strongengineeringfoundation and a commitment to excellence, we deliver precision-built, high-performance, and safety-certified lifting equipment for diverse industrial ...",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784218358.3135004
+      },
+      {
+        "title": "Home - Dhariwal Buildtech Limited",
+        "url": "https://www.dhariwalbuildtech.com/",
+        "snippet": "Paving Roads Bridging Horizons Dhariwal Buildtech Limited is one of the growing and leading road constructioncompanyin India. We are a Haryana (North India) based civil constructionCompanyengaged in and specializing in the construction of Highways, Bridges, and Railways Over Bridges (ROB), tunnels for the Border Roads Organization (BRO), State Highways, PMGSY roads, rural roads and ...",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784218358.3135004
+      },
+      {
+        "title": "Popular Construction Companies in Hisar Cantt, Hissar",
+        "url": "https://www.justdial.com/Hissar/Construction-Companies-in-Hisar-Cantt/nct-10128251",
+        "snippet": "331 Construction Companies in Hisar Cantt, Hissar. Find Civil Contractors, Commercial Builders, Building Contractors, CivilEngineeringCompanies in Hisar Cantt. Get Phone Numbers, Address, Reviews, Photos, Maps for top Construction Companies near me in Hisar Cantt, Hissar on Justdial.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784218358.3135004
+      }
+    ]
+  },
+  "default||best engineering||20||0": {
+    "query": "best engineering",
+    "provider": "bing",
+    "timestamp": 1784220217.4224741,
+    "result_count": 0,
+    "kind": "zero_result",
+    "results": []
+  },
+  "default||top engineering||20||0": {
+    "query": "top engineering",
+    "provider": "duckduckgo",
+    "timestamp": 1784220224.5040169,
+    "result_count": 0,
+    "kind": "zero_result",
+    "results": []
+  },
+  "default||site:linkedin.com/in \"Engineeringcom\" founder OR CEO OR director||5||0": {
+    "query": "site:linkedin.com/in \"Engineeringcom\" founder OR CEO OR director",
+    "provider": "duckduckgo",
+    "timestamp": 1784220251.3353431,
+    "result_count": 0,
+    "kind": "zero_result",
+    "results": []
+  },
+  "default||site:linkedin.com/in \"Engineeringcom\" \"co-founder\"||5||0": {
+    "query": "site:linkedin.com/in \"Engineeringcom\" \"co-founder\"",
+    "provider": "google_html",
+    "timestamp": 1784220263.7324398,
+    "result_count": 0,
+    "kind": "zero_result",
+    "results": []
+  },
+  "default||\"Engineeringcom\" site:linkedin.com||5||0": {
+    "query": "\"Engineeringcom\" site:linkedin.com",
+    "provider": "google_html",
+    "timestamp": 1784220270.4297907,
+    "result_count": 0,
+    "kind": "zero_result",
+    "results": []
+  },
+  "default||software gurugram||20||0": {
+    "query": "software gurugram",
+    "provider": "duckduckgo",
+    "timestamp": 1784220316.9963124,
+    "result_count": 3,
+    "kind": "success",
+    "results": [
+      {
+        "title": "Software Development Company | Daffodil Software",
+        "url": "https://www.daffodilsw.com/",
+        "snippet": "SoftwareDevelopment Company offering comprehensivesoftwaredevelopment services for all your business needs. Explore now.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784220316.9921284
+      },
+      {
+        "title": "100 Top Software Companies in Gurgaon · July 2026 | F6S",
+        "url": "https://www.f6s.com/companies/software/india/haryana/gurgaon/co",
+        "snippet": "Detailed info and reviews on 100 topSoftwarecompanies and startups in Gurgaon in 2026. Get the latest updates on their products, jobs, funding, investors, founders and more.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784220316.9932353
+      },
+      {
+        "title": "39 Top Software Development Companies in Gurgaon · July 2026",
+        "url": "https://www.f6s.com/companies/software-development/india/haryana/gurgaon/co",
+        "snippet": "Detailed info and reviews on 39 topSoftwareDevelopment companies and startups in Gurgaon in 2026. Get the latest updates on their products, jobs, funding, investors, founders and more.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784220316.9932353
+      }
+    ]
+  },
+  "default||best software gurugram||20||0": {
+    "query": "best software gurugram",
+    "provider": "bing",
+    "timestamp": 1784220323.1923947,
+    "result_count": 1,
+    "kind": "success",
+    "results": [
+      {
+        "title": "Bengaluru - Karnataka Tourism",
+        "url": "https://karnatakatourism.org/en/destinations/bengaluru",
+        "snippet": "Jul 8, 2026 · Practical Advice for Visiting Bengaluru Best Time to Visit All year round October to March is the most pleasant",
+        "provider": "bing",
+        "source": "Bing",
+        "rank": 0,
+        "provider_rank": 9,
+        "query": "best software gurugram",
+        "page": 0,
+        "timestamp": 1784220323.179614
+      }
+    ]
+  },
+  "default||top software gurugram||20||0": {
+    "query": "top software gurugram",
+    "provider": "duckduckgo",
+    "timestamp": 1784220327.431239,
+    "result_count": 3,
+    "kind": "success",
+    "results": [
+      {
+        "title": "100 Top Software Companies in Gurgaon · July 2026 | F6S",
+        "url": "https://www.f6s.com/companies/software/india/haryana/gurgaon/co",
+        "snippet": "Detailed info and reviews on 100topSoftwarecompanies and startups in Gurgaon in 2026. Get the latest updates on their products, jobs, funding, investors, founders and more.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784220327.4269803
+      },
+      {
+        "title": "Best-Rated Software Development Companies in Gurugram",
+        "url": "https://itprofiles.com/services/software-development/gurugram",
+        "snippet": "TopSoftwareDevelopment companies with authentic client reviews based out ofGurugram. Compare and hire the rightSoftwareDevelopment agency for your business.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784220327.4269803
+      },
+      {
+        "title": "39 Top Software Development Companies in Gurgaon · July 2026",
+        "url": "https://www.f6s.com/companies/software-development/india/haryana/gurgaon/co",
+        "snippet": "Detailed info and reviews on 39topSoftwareDevelopment companies and startups in Gurgaon in 2026. Get the latest updates on their products, jobs, funding, investors, founders and more.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784220327.4269803
+      }
+    ]
+  },
+  "default||software development company||20||0": {
+    "query": "software development company",
+    "provider": "duckduckgo",
+    "timestamp": 1784220342.0734193,
+    "result_count": 8,
+    "kind": "success",
+    "results": [
+      {
+        "title": "Sonipat's #1 Software Development Company | EifaSoft Technologies",
+        "url": "https://www.eifasoft.com/sonipat-software-development-company",
+        "snippet": "Top-rated customsoftwarecompanyin Sonipat, Haryana. Enterprise-grade customsoftwaresolutions for businesses of all sizes. Starting at ₹59,999. 12+ years experience. 500+ projects delivered across Haryana. Free consultation!",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784220342.0683522
+      },
+      {
+        "title": "Custom Software Development in Sonipat | Rynow Infotech",
+        "url": "https://www.rynow.in/products/customize-software-in-sonipat",
+        "snippet": "Looking for professional CustomSoftwareDevelopmentin Sonipat, Haryana, India? Rynow Infotech, a Delhi-based ITcompany, specializes in developing secure, scalable, and fully customizedsoftwaresolutions for startups, SMEs, enterprises, educational institutions, healthcare organizations, manufacturers, retailers, logistics companies, and service-based businesses. Although our headquarters ...",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784220342.069355
+      },
+      {
+        "title": "DigitalBitHub - A Software Development Company in Sonipat",
+        "url": "https://sonipat.idbf.in/4547853/digitalbithub-a-software-development-company",
+        "snippet": "DigitalBitHub - ASoftwareDevelopmentCompanyis a ,softwarecompanies , business located in Sonipat, Haryana, India. The office is situated at Mission Road, Dev Nagar, Sonipat - 131001.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784220342.069355
+      },
+      {
+        "title": "Software Development Company in Sonipat | Vikilinks",
+        "url": "https://vikilinks.com/software-development-company-in-sonipat",
+        "snippet": "Vikilinks is asoftwaredevelopmentcompanyin Sonipat, Haryana that builds customsoftware, web and mobile apps, dashboards, automations and system integrations. We replace spreadsheets and manual work with tools tailored to how your Sonipat business actually runs, from the Kundli industrial belt and manufacturers to universities like Ashoka and O P Jindal. Get a Free Audit or get a quote ...",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784220342.069355
+      },
+      {
+        "title": "Custom Software Development Company in Sonipat - Codework",
+        "url": "https://www.codeworktechnology.com/custom-software-development-sonipat",
+        "snippet": "Customsoftwaredevelopmentin Sonipat — ERP, CRM, billing & workflow automation to scale your business and increase profits.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784220342.069355
+      },
+      {
+        "title": "Software Development Company | Daffodil Software",
+        "url": "https://www.daffodilsw.com/",
+        "snippet": "SoftwareDevelopmentCompanyoffering comprehensivesoftwaredevelopmentservices for all your business needs. Explore now.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784220342.069355
+      },
+      {
+        "title": "Website Development Company in Sonipat | Creative Path Techno Solution",
+        "url": "https://www.creativepath.in/",
+        "snippet": "WebsiteDevelopment,SoftwareDevelopment& AI Solutions We provide modern, scalable and innovative digital solutions to help your business grow faster in the digital world. Creative Path Techno Solution is a leading websitedevelopmentandsoftwaredevelopmentcompanyin Sonipat, Haryana. We provide webdevelopment, mobile appdevelopment, AI solutions, SEO and digital marketing services for ...",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784220342.069355
+      },
+      {
+        "title": "Software Company in Sonipat | Custom Software & Web Apps — Codework",
+        "url": "https://www.codeworktechnology.com/software-company-sonipat",
+        "snippet": "Topsoftwarecompanyin Sonipat, Haryana — custom ERP, CRM, web & mobile apps. Scale operations, capture more leads & grow revenue. Free consultation.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784220342.069355
+      }
+    ]
+  },
+  "default||site:linkedin.com/in \"Rynow\" founder OR CEO OR director||5||0": {
+    "query": "site:linkedin.com/in \"Rynow\" founder OR CEO OR director",
+    "provider": "duckduckgo",
+    "timestamp": 1784220363.319152,
+    "result_count": 2,
+    "kind": "success",
+    "results": [
+      {
+        "title": "Pankaj Kumar - Managing Director at Rynow Infotech | LinkedIn",
+        "url": "https://in.linkedin.com/in/pankaj-kumar-rynow",
+        "snippet": "ManagingDirectoratRynowInfotech · Experience:RynowInfotech · Location: 110001 · 3 connections on LinkedIn. View Pankaj Kumar's profile on LinkedIn, a professional community of 1 billion members.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784220363.3071973
+      },
+      {
+        "title": "ROHIT KUMAR - Rynow Infotech | LinkedIn",
+        "url": "https://in.linkedin.com/in/rohit-kumar-41667414b",
+        "snippet": "Experience:RynowInfotech · Location: Moradabad. View ROHIT KUMAR's profile on LinkedIn, a professional community of 1 billion members.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784220363.3071973
+      }
+    ]
+  },
+  "default||site:linkedin.com/in \"Karnatakatourism\" founder OR CEO OR director||5||0": {
+    "query": "site:linkedin.com/in \"Karnatakatourism\" founder OR CEO OR director",
+    "provider": "google_html",
+    "timestamp": 1784220383.583144,
+    "result_count": 0,
+    "kind": "zero_result",
+    "results": []
+  },
+  "default||site:linkedin.com/in \"Creativepath\" founder OR CEO OR director||5||0": {
+    "query": "site:linkedin.com/in \"Creativepath\" founder OR CEO OR director",
+    "provider": "google_html",
+    "timestamp": 1784220388.8743289,
+    "result_count": 0,
+    "kind": "zero_result",
+    "results": []
+  },
+  "default||site:linkedin.com/in \"Daffodilsw\" founder OR CEO OR director||5||0": {
+    "query": "site:linkedin.com/in \"Daffodilsw\" founder OR CEO OR director",
+    "provider": "google_html",
+    "timestamp": 1784220398.0481043,
+    "result_count": 0,
+    "kind": "zero_result",
+    "results": []
+  },
+  "default||software bangalore||20||0": {
+    "query": "software bangalore",
+    "provider": "duckduckgo",
+    "timestamp": 1784220651.0300176,
+    "result_count": 4,
+    "kind": "success",
+    "results": [
+      {
+        "title": "100 Top Software Companies in Bangalore · July 2026 | F6S",
+        "url": "https://www.f6s.com/companies/software/india/karnataka/bangalore/co",
+        "snippet": "Detailed info and reviews on 100 topSoftwarecompanies and startups inBangalorein 2026. Get the latest updates on their products, jobs, funding, investors, founders and more.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784220651.0256848
+      },
+      {
+        "title": "100 Top Software Development Companies in Bangalore · July 2026",
+        "url": "https://www.f6s.com/companies/software-development/india/karnataka/bangalore/co",
+        "snippet": "Detailed info and reviews on 100 topSoftwareDevelopment companies and startups inBangalorein 2026. Get the latest updates on their products, jobs, funding, investors, founders and more.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784220651.0256848
+      },
+      {
+        "title": "Top Software Developers in Bengaluru",
+        "url": "https://clutch.co/in/developers/bengaluru",
+        "snippet": "Highly reviewedSoftwareDevelopers companies in Bengaluru include GeekyAnts, Aalpha Information Systems India Pvt. Ltd, Pace Wisdom Solutions, 7EDGE, Tech Exactly, TrigentSoftware- AI Development, Krazimo, 3minds, DigiMantra, DgCrux Technology.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784220651.0256848
+      },
+      {
+        "title": "Top Bengaluru, Karnataka Software Companies",
+        "url": "https://builtinbengaluru.in/companies/type/software-companies",
+        "snippet": "Check out this list of the topSoftwarecompanies in Bengaluru, Karnataka. See company benefits, info, interviews and more at Built In Bengaluru.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784220651.0256848
+      }
+    ]
+  },
+  "default||best software bangalore||20||0": {
+    "query": "best software bangalore",
+    "provider": "duckduckgo",
+    "timestamp": 1784220661.6557145,
+    "result_count": 3,
+    "kind": "success",
+    "results": [
+      {
+        "title": "100 Top Software Companies in Bangalore · July 2026 | F6S",
+        "url": "https://www.f6s.com/companies/software/india/karnataka/bangalore/co",
+        "snippet": "Detailed info and reviews on 100 topSoftwarecompanies and startups inBangalorein 2026. Get the latest updates on their products, jobs, funding, investors, founders and more.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784220661.6521194
+      },
+      {
+        "title": "100 Top Software Development Companies in Bangalore · July 2026",
+        "url": "https://www.f6s.com/companies/software-development/india/karnataka/bangalore/co",
+        "snippet": "Detailed info and reviews on 100 topSoftwareDevelopment companies and startups inBangalorein 2026. Get the latest updates on their products, jobs, funding, investors, founders and more.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784220661.6521194
+      },
+      {
+        "title": "Top Software Developers in Bengaluru",
+        "url": "https://clutch.co/in/developers/bengaluru",
+        "snippet": "Highly reviewedSoftwareDevelopers companies in Bengaluru include GeekyAnts, Aalpha Information Systems India Pvt. Ltd, Pace Wisdom Solutions, 7EDGE, Tech Exactly, TrigentSoftware- AI Development, Krazimo, 3minds, DigiMantra, DgCrux Technology.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784220661.6521194
+      }
+    ]
+  },
+  "default||top software bangalore||20||0": {
+    "query": "top software bangalore",
+    "provider": "duckduckgo",
+    "timestamp": 1784220671.1359453,
+    "result_count": 3,
+    "kind": "success",
+    "results": [
+      {
+        "title": "100 Top Software Companies in Bangalore · July 2026 | F6S",
+        "url": "https://www.f6s.com/companies/software/india/karnataka/bangalore/co",
+        "snippet": "Detailed info and reviews on 100topSoftwarecompanies and startups inBangalorein 2026. Get the latest updates on their products, jobs, funding, investors, founders and more.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784220671.1321177
+      },
+      {
+        "title": "100 Top Software Development Companies in Bangalore · July 2026",
+        "url": "https://www.f6s.com/companies/software-development/india/karnataka/bangalore/co",
+        "snippet": "Detailed info and reviews on 100topSoftwareDevelopment companies and startups inBangalorein 2026. Get the latest updates on their products, jobs, funding, investors, founders and more.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784220671.1321177
+      },
+      {
+        "title": "Top Software Developers in Bengaluru",
+        "url": "https://clutch.co/in/developers/bengaluru",
+        "snippet": "Highly reviewedSoftwareDevelopers companies in Bengaluru include GeekyAnts, Aalpha Information Systems India Pvt. Ltd, Pace Wisdom Solutions, 7EDGE, Tech Exactly, TrigentSoftware- AI Development, Krazimo, 3minds, DigiMantra, DgCrux Technology.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784220671.1321177
+      }
+    ]
+  },
+  "default||site:linkedin.com/in \"Builtinbengaluru\" founder OR CEO OR director||5||0": {
+    "query": "site:linkedin.com/in \"Builtinbengaluru\" founder OR CEO OR director",
+    "provider": "duckduckgo",
+    "timestamp": 1784220698.9558022,
+    "result_count": 0,
+    "kind": "zero_result",
+    "results": []
+  },
+  "default||site:linkedin.com/in \"Creativepath\" \"co-founder\"||5||0": {
+    "query": "site:linkedin.com/in \"Creativepath\" \"co-founder\"",
+    "provider": "google_html",
+    "timestamp": 1784220702.7715814,
+    "result_count": 0,
+    "kind": "zero_result",
+    "results": []
+  },
+  "default||site:linkedin.com/in \"Daffodilsw\" \"co-founder\"||5||0": {
+    "query": "site:linkedin.com/in \"Daffodilsw\" \"co-founder\"",
+    "provider": "google_html",
+    "timestamp": 1784220710.33628,
+    "result_count": 0,
+    "kind": "zero_result",
+    "results": []
+  },
+  "default||site:linkedin.com/in \"F6s\" founder OR CEO OR director||5||0": {
+    "query": "site:linkedin.com/in \"F6s\" founder OR CEO OR director",
+    "provider": "google_html",
+    "timestamp": 1784220720.4461524,
+    "result_count": 0,
+    "kind": "zero_result",
+    "results": []
+  },
+  "default||python||20||0": {
+    "query": "python",
+    "provider": "duckduckgo",
+    "timestamp": 1784221527.7045991,
+    "result_count": 6,
+    "kind": "success",
+    "results": [
+      {
+        "title": "Welcome to Python.org",
+        "url": "https://www.python.org/",
+        "snippet": "Intuitive Interpretation Calculations are simple withPython, and expression syntax is straightforward: the operators +, -, * and / work as expected; parentheses () can be used for grouping. More about simple math functions inPython3.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784221527.7005644
+      },
+      {
+        "title": "PyCharm: The only Python IDE you need - JetBrains",
+        "url": "https://www.jetbrains.com/pycharm/",
+        "snippet": "PyCharm The onlyPythonIDE you need Built for web, data, and AI/ML professionals. Supercharged with an AI-enhanced IDE experience.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784221527.7005644
+      },
+      {
+        "title": "PyPI · The Python Package Index",
+        "url": "https://pypi.org/",
+        "snippet": "ThePythonPackage Index (PyPI) is a repository of software for thePythonprogramming language.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784221527.7005644
+      },
+      {
+        "title": "Online Python - IDE, Editor, Compiler, Interpreter",
+        "url": "https://www.online-python.com/",
+        "snippet": "OnlinePythonIDE Build, run, and sharePythoncode online for free with the help of online-integratedpython'sdevelopment environment (IDE). It is one of the most efficient, dependable, and potent online compilers for thePythonprogramming language. It is not necessary for you to bother about establishing aPythonenvironment in your local.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784221527.7005644
+      },
+      {
+        "title": "Online Python Compiler (Interpreter) - Programiz",
+        "url": "https://www.programiz.com/python-programming/online-compiler/",
+        "snippet": "Write and run yourPythoncode using our online compiler. Enjoy additional features like code sharing, dark mode, and support for multiple programming languages.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784221527.7005644
+      },
+      {
+        "title": "Download Python | Python.org",
+        "url": "https://www.python.org/downloads/",
+        "snippet": "Looking forPythonwith a different OS?Pythonfor Windows, Linux/Unix, macOS, Android, iOS, other Want to help test development versions ofPython3.15? Pre-releases, Docker images",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784221527.7005644
+      }
+    ]
+  },
+  "default||best python||20||0": {
+    "query": "best python",
+    "provider": "duckduckgo",
+    "timestamp": 1784221547.3034394,
+    "result_count": 4,
+    "kind": "success",
+    "results": [
+      {
+        "title": "Download Python | Python.org",
+        "url": "https://www.python.org/downloads/",
+        "snippet": "The official home of thePythonProgramming Language",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784221547.2978966
+      },
+      {
+        "title": "Welcome to Python.org",
+        "url": "https://www.python.org/",
+        "snippet": "The mission of thePythonSoftware Foundation is to promote, protect, and advance thePythonprogramming language, and to support and facilitate the growth of a diverse and international community ofPythonprogrammers.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784221547.2978966
+      },
+      {
+        "title": "PyCharm: The only Python IDE you need - JetBrains",
+        "url": "https://www.jetbrains.com/pycharm/",
+        "snippet": "FeaturesBest-in-classPythonsupport PyCharm enhancesPythonwithbest-in-class support to ensure both speed and accuracy. Benefit from the smartest code completion, PEP 8 compliance checks, intelligent refactorings, and a variety of inspections to meet all of your coding needs.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784221547.2978966
+      },
+      {
+        "title": "Awesome Python",
+        "url": "https://awesome-python.com/",
+        "snippet": "An opinionated guide to thebestPythonframeworks, libraries, and tools. Explore 557 curated projects across 72 categories, from AI and agents to data science and web development.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784221547.2978966
+      }
+    ]
+  },
+  "default||site:linkedin.com/in \"Jetbrains\" founder OR CEO OR director||5||0": {
+    "query": "site:linkedin.com/in \"Jetbrains\" founder OR CEO OR director",
+    "provider": "duckduckgo",
+    "timestamp": 1784221568.2165422,
+    "result_count": 5,
+    "kind": "success",
+    "results": [
+      {
+        "title": "Kirill Skrygan - CEO, JetBrains | LinkedIn",
+        "url": "https://nl.linkedin.com/in/kirill-skrygan-7b86073a",
+        "snippet": "CEO,JetBrains·CEOofJetBrains. Making software development a more productive and enjoyable experience, leveraging AI and the latest innovations, to empower millions of developers, engineers, and software creators to build the future. · Ervaring:JetBrains· Opleiding: Saint Petersburg State University · Locatie: Amsterdam · 500+ connecties op LinkedIn. Bekijk het profiel van Kirill ...",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784221568.2123888
+      },
+      {
+        "title": "Eugene Belyaev - JetBrains | LinkedIn",
+        "url": "https://de.linkedin.com/in/eugene-belyaev-a7468764",
+        "snippet": "Entrepreneur,Founder,CEO· Berufserfahrung:JetBrains· Ausbildung: Stockholm School of Economics in St. Petersburg · Standort: Metropolregion München · 280 Kontakte auf LinkedIn. Sehen Sie sich das Profil von Eugene Belyaev auf LinkedIn, einer professionellen Community mit mehr als 1 Milliarde Mitgliedern, an.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784221568.2123888
+      },
+      {
+        "title": "Vladislav Tankov - Director of AI at JetBrains | LinkedIn",
+        "url": "https://nl.linkedin.com/in/vladislav-tankov",
+        "snippet": "Directorof AI atJetBrains· Senior AI leader with a track record of building and scaling high-performing technology organizations. AtJetBrains, I built the AI department from the ground up to a 150-person platform organization responsible for the company&#39;s core AI capabilities serving millions of customers. My expertise lies at the intersection of platform engineering, DevOps, and ...",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784221568.2123888
+      },
+      {
+        "title": "Sergey Ignatov - Director of Engineering @ JetBrains | Connecting ...",
+        "url": "https://nl.linkedin.com/in/sergey-ignatov",
+        "snippet": "Directorof Engineering atJetBrains* Created the very first tool that converts Java to Kotlin code * Co-created GoLand and DataGrip * Created Erlang plugin forJetBrainsIDEs * Built the core IntelliJ infrastructure in the early days * Was in charge of starting Fleet from the ground up as an internal startup * Organized series of camps insideJetBrainsfor the next generation of leaders ...",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784221568.2123888
+      },
+      {
+        "title": "Anton Arhipov - Developer Advocate at JetBrains. Kotlin, Java ...",
+        "url": "https://ee.linkedin.com/in/antonarhipov",
+        "snippet": "Developer Advocate atJetBrains. Kotlin, Java, IntellIJ IDEA, public speaking · 20+ years of software development experience. Switched various roles over the years: Developer, Team Lead, Product Manager, and Developer Advocate. Now employed atJetBrainsas a Developer Advocate, educating users and collecting feedback. Key activities in Developer Advocate role: * Presenting at conferences ...",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784221568.2123888
+      }
+    ]
+  },
+  "default||site:linkedin.com/in \"Pythonorg\" founder OR CEO OR director||5||0": {
+    "query": "site:linkedin.com/in \"Pythonorg\" founder OR CEO OR director",
+    "provider": "google_html",
+    "timestamp": 1784221577.4834998,
+    "result_count": 0,
+    "kind": "zero_result",
+    "results": []
+  },
+  "default||site:linkedin.com/in \"Online Python\" founder OR CEO OR director||5||0": {
+    "query": "site:linkedin.com/in \"Online Python\" founder OR CEO OR director",
+    "provider": "google_html",
+    "timestamp": 1784221583.8375552,
+    "result_count": 0,
+    "kind": "zero_result",
+    "results": []
+  },
+  "default||site:linkedin.com/in \"Programiz\" founder OR CEO OR director||5||0": {
+    "query": "site:linkedin.com/in \"Programiz\" founder OR CEO OR director",
+    "provider": "google_html",
+    "timestamp": 1784221589.6185286,
+    "result_count": 0,
+    "kind": "zero_result",
+    "results": []
+  },
+  "default||site:linkedin.com/in \"Welcome to Pythonorg\" founder OR CEO OR director||5||0": {
+    "query": "site:linkedin.com/in \"Welcome to Pythonorg\" founder OR CEO OR director",
+    "provider": "google_html",
+    "timestamp": 1784221595.8064735,
+    "result_count": 0,
+    "kind": "zero_result",
+    "results": []
+  },
+  "default||site:linkedin.com/in \"Pythonorg\" \"co-founder\"||5||0": {
+    "query": "site:linkedin.com/in \"Pythonorg\" \"co-founder\"",
+    "provider": "google_html",
+    "timestamp": 1784221603.1774678,
+    "result_count": 0,
+    "kind": "zero_result",
+    "results": []
+  }
+}

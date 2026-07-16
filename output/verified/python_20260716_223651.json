@@ -1,0 +1,381 @@
+[
+  {
+    "company_name": "Jetbrains",
+    "website": "https://www.jetbrains.com/pycharm/",
+    "linkedin": null,
+    "industry": "Ai",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [
+      {
+        "name": "Kirill Skrygan",
+        "designation": "CEO",
+        "linkedin": "https://nl.linkedin.com/in/kirill-skrygan-7b86073a",
+        "decision_maker_score": 90
+      }
+    ],
+    "source": "Google",
+    "confidence_score": 58,
+    "lead_quality": "Medium",
+    "company_type": "Unknown",
+    "relevance_score": 58,
+    "relevance_tier": "LOW",
+    "relevance_info": {
+      "score": 58,
+      "tier": "LOW",
+      "matched_signals": [
+        "Title",
+        "JSON-LD",
+        "Homepage body",
+        "About page",
+        "Services page"
+      ],
+      "rejected_signals": [
+        "Search snippet",
+        "Meta description",
+        "Employee roles",
+        "OpenGraph",
+        "Schema.org Organization"
+      ],
+      "score_breakdown": {
+        "title": 17.5,
+        "search_snippet": 0.0,
+        "meta_description": 0.0,
+        "roles": 0.0,
+        "og": 0.0,
+        "json_ld": 11.5,
+        "schema_org": 0.0,
+        "homepage_body": 17.5,
+        "about_page": 21.0,
+        "services_page": 22.5
+      },
+      "industry": "Ai",
+      "confidence": 0.58,
+      "aborted": false
+    },
+    "_source_file": "output\\raw\\python_20260716_223651.json",
+    "_flags": [],
+    "_verified_emails": [],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "website": "ok"
+    },
+    "_verification_passed": true
+  },
+  {
+    "company_name": "Programiz",
+    "website": "https://www.programiz.com/python-programming/online-compiler/",
+    "linkedin": null,
+    "industry": "python",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "confidence_score": 41,
+    "lead_quality": "Medium",
+    "company_type": "Unknown",
+    "relevance_score": 41,
+    "relevance_tier": "LOW",
+    "relevance_info": {
+      "score": 41,
+      "tier": "LOW",
+      "matched_signals": [
+        "Title",
+        "Meta description",
+        "OpenGraph",
+        "Homepage body"
+      ],
+      "rejected_signals": [
+        "Search snippet",
+        "Employee roles",
+        "JSON-LD",
+        "Schema.org Organization",
+        "About page",
+        "Services page"
+      ],
+      "score_breakdown": {
+        "title": 17.5,
+        "search_snippet": 0.0,
+        "meta_description": 22.5,
+        "roles": 0.0,
+        "og": 7.0,
+        "json_ld": 0.0,
+        "schema_org": 0.0,
+        "homepage_body": 17.5,
+        "about_page": 0.0,
+        "services_page": 0.0
+      },
+      "industry": "Unknown",
+      "confidence": 0.41,
+      "aborted": false
+    },
+    "_source_file": "output\\raw\\python_20260716_223651.json",
+    "_flags": [],
+    "_verified_emails": [],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "website": "ok"
+    },
+    "_verification_passed": true
+  },
+  {
+    "company_name": "Welcome to Pythonorg",
+    "website": "https://www.python.org/",
+    "linkedin": null,
+    "industry": "Ai",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "confidence_score": 62,
+    "lead_quality": "Medium",
+    "company_type": "Unknown",
+    "relevance_score": 62,
+    "relevance_tier": "MEDIUM",
+    "relevance_info": {
+      "score": 62,
+      "tier": "MEDIUM",
+      "matched_signals": [
+        "Title",
+        "Meta description",
+        "OpenGraph",
+        "JSON-LD",
+        "Homepage body",
+        "About page"
+      ],
+      "rejected_signals": [
+        "Search snippet",
+        "Employee roles",
+        "Schema.org Organization",
+        "Services page"
+      ],
+      "score_breakdown": {
+        "title": 17.5,
+        "search_snippet": 0.0,
+        "meta_description": 22.5,
+        "roles": 0.0,
+        "og": 7.0,
+        "json_ld": 11.5,
+        "schema_org": 0.0,
+        "homepage_body": 17.5,
+        "about_page": 21.0,
+        "services_page": 0.0
+      },
+      "industry": "Ai",
+      "confidence": 0.62,
+      "aborted": false
+    },
+    "_source_file": "output\\raw\\python_20260716_223651.json",
+    "_flags": [],
+    "_verified_emails": [],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "website": "ok"
+    },
+    "_verification_passed": true
+  },
+  {
+    "company_name": "Pythonorg",
+    "website": "https://www.python.org/downloads/",
+    "linkedin": null,
+    "industry": "Fintech",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "confidence_score": 62,
+    "lead_quality": "Medium",
+    "company_type": "Unknown",
+    "relevance_score": 62,
+    "relevance_tier": "MEDIUM",
+    "relevance_info": {
+      "score": 62,
+      "tier": "MEDIUM",
+      "matched_signals": [
+        "Title",
+        "Meta description",
+        "OpenGraph",
+        "JSON-LD",
+        "Homepage body",
+        "About page"
+      ],
+      "rejected_signals": [
+        "Search snippet",
+        "Employee roles",
+        "Schema.org Organization",
+        "Services page"
+      ],
+      "score_breakdown": {
+        "title": 17.5,
+        "search_snippet": 0.0,
+        "meta_description": 22.5,
+        "roles": 0.0,
+        "og": 7.0,
+        "json_ld": 11.5,
+        "schema_org": 0.0,
+        "homepage_body": 17.5,
+        "about_page": 21.0,
+        "services_page": 0.0
+      },
+      "industry": "Fintech",
+      "confidence": 0.62,
+      "aborted": false
+    },
+    "_source_file": "output\\raw\\python_20260716_223651.json",
+    "_flags": [],
+    "_verified_emails": [],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "website": "ok"
+    },
+    "_verification_passed": true
+  },
+  {
+    "company_name": "Awesome Python",
+    "website": "https://awesome-python.com/",
+    "linkedin": null,
+    "industry": "Ai",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "confidence_score": 63,
+    "lead_quality": "Medium",
+    "company_type": "Unknown",
+    "relevance_score": 63,
+    "relevance_tier": "MEDIUM",
+    "relevance_info": {
+      "score": 63,
+      "tier": "MEDIUM",
+      "matched_signals": [
+        "Title",
+        "Meta description",
+        "OpenGraph",
+        "JSON-LD",
+        "Homepage body",
+        "Services page"
+      ],
+      "rejected_signals": [
+        "Search snippet",
+        "Employee roles",
+        "Schema.org Organization",
+        "About page"
+      ],
+      "score_breakdown": {
+        "title": 17.5,
+        "search_snippet": 0.0,
+        "meta_description": 22.5,
+        "roles": 0.0,
+        "og": 7.0,
+        "json_ld": 11.5,
+        "schema_org": 0.0,
+        "homepage_body": 17.5,
+        "about_page": 0.0,
+        "services_page": 22.5
+      },
+      "industry": "Ai",
+      "confidence": 0.63,
+      "aborted": false
+    },
+    "_source_file": "output\\raw\\python_20260716_223651.json",
+    "_flags": [],
+    "_verified_emails": [],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "website": "ok"
+    },
+    "_verification_passed": true
+  },
+  {
+    "company_name": "Online Python",
+    "website": "https://www.online-python.com/",
+    "linkedin": null,
+    "industry": "Ai",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "confidence_score": 50,
+    "lead_quality": "Medium",
+    "company_type": "Unknown",
+    "relevance_score": 50,
+    "relevance_tier": "LOW",
+    "relevance_info": {
+      "score": 50,
+      "tier": "LOW",
+      "matched_signals": [
+        "Title",
+        "Meta description",
+        "Homepage body",
+        "About page"
+      ],
+      "rejected_signals": [
+        "Search snippet",
+        "Employee roles",
+        "OpenGraph",
+        "JSON-LD",
+        "Schema.org Organization",
+        "Services page"
+      ],
+      "score_breakdown": {
+        "title": 17.5,
+        "search_snippet": 0.0,
+        "meta_description": 22.5,
+        "roles": 0.0,
+        "og": 0.0,
+        "json_ld": 0.0,
+        "schema_org": 0.0,
+        "homepage_body": 17.5,
+        "about_page": 21.0,
+        "services_page": 0.0
+      },
+      "industry": "Ai",
+      "confidence": 0.5,
+      "aborted": false
+    },
+    "_source_file": "output\\raw\\python_20260716_223651.json",
+    "_flags": [],
+    "_verified_emails": [],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "website": "ok"
+    },
+    "_verification_passed": true
+  }
+]

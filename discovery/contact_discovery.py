@@ -15,7 +15,7 @@ from utils.constants (no local duplication).
 import re
 
 from query.query_generator import generate_contact_queries
-from discovery.search_backend import run_search
+from discovery.search_backend import run_search, get_search_manager
 from utils.constants import DESIGNATION_KEYWORDS, DESIGNATION_ACRONYMS
 from utils.validators import is_valid_person_name
 
@@ -48,7 +48,7 @@ def _extract_name_from_linkedin_title(title: str) -> str:
     """
     if not title:
         return ""
-    parts = title.split(" - ")
+    parts = re.split(r"\s+-\s+|\s+\|\s+|\s*,\s+", title)
     return parts[0].strip() if parts else ""
 
 
@@ -62,12 +62,30 @@ def discover_contact(company: str) -> dict:
     designation are present. Bare designations without a realistic name
     are silently skipped.
     """
+    sm = get_search_manager()
+    if not sm.providers_available():
+        print(f"[contact_discovery] Search providers exhausted — skipping discovery for '{company}'")
+        return {}
+        
     queries = generate_contact_queries(company)
+    consecutive_zeroes = 0
 
     for q in queries:
+        if not sm.providers_available():
+            print(f"[contact_discovery] Search providers exhausted/cooldown during discovery. Stopping.")
+            break
+
         print(f"[contact_discovery] running query: {q}")
         raw_results = run_search(q, max_results=5)
         print(f"[contact_discovery]   -> {len(raw_results)} raw results")
+        
+        if not raw_results:
+            consecutive_zeroes += 1
+            if consecutive_zeroes >= 3:
+                print(f"[contact_discovery] 3 consecutive zero results hit. Stopping contact discovery for '{company}'.")
+                break
+        else:
+            consecutive_zeroes = 0
 
         for r in raw_results:
             url = r.get("url") or ""

@@ -11,12 +11,23 @@ class SessionFactory:
     """
     
     @staticmethod
-    def create_session() -> requests.Session:
+    def create_session(provider: Optional[str] = None, domain: Optional[str] = None) -> requests.Session:
         """
         Creates a session configured to impersonate a modern Chrome browser.
+        The session keeps lightweight provider/domain metadata so requests can be
+        isolated and reused more realistically across providers.
         """
-        # impersonate="chrome124" ensures our TLS handshakes look exactly like Chrome 124
         session = requests.Session(impersonate="chrome124")
+        session._browser_profile = {
+            "provider": (provider or "default").lower(),
+            "domain": (domain or "generic").lower(),
+        }
+        session.headers.update({
+            "Accept-Language": "en-US,en;q=0.9",
+            "DNT": "1",
+            "Cache-Control": "max-age=0",
+            "Pragma": "no-cache",
+        })
         return session
 
 class SessionManager:
@@ -29,18 +40,18 @@ class SessionManager:
         # We don't necessarily need a strict lock here if sessions are created per-thread,
         # but in a shared context, you'd want to manage state carefully.
 
-    def get_or_create_session(self, session_id: Optional[str] = None) -> requests.Session:
+    def get_or_create_session(self, session_id: Optional[str] = None, provider: Optional[str] = None, domain: Optional[str] = None) -> requests.Session:
         """
         Retrieves an existing session or creates a new one.
         If session_id is None, returns an ephemeral session.
         """
         if session_id is None:
             logger.debug("Creating new ephemeral session (no session_id provided)")
-            return SessionFactory.create_session()
+            return SessionFactory.create_session(provider=provider, domain=domain)
             
         if session_id not in self._sessions:
             logger.debug(f"Creating new isolated session for ID: {session_id}")
-            self._sessions[session_id] = SessionFactory.create_session()
+            self._sessions[session_id] = SessionFactory.create_session(provider=provider, domain=domain)
         
         return self._sessions[session_id]
 

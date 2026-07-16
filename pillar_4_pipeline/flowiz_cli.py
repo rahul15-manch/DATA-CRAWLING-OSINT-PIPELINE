@@ -2,6 +2,10 @@ import sqlite3
 import argparse
 import json
 import os
+import sys
+
+if sys.platform == "win32":
+    sys.stdout.reconfigure(encoding="utf-8")
 
 DB_FILE = 'leads.db'
 

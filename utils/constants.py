@@ -26,6 +26,10 @@ NON_COMPANY_DOMAINS = frozenset({
     "investopedia",
     "encyclopedia",
     "merriam-webster",
+    "python.org",
+    "pypi.org",
+    "programiz",
+    "w3.org",
     # Tutorial / E-Learning
     "geeksforgeeks",
     "tutorialspoint",
@@ -43,6 +47,13 @@ NON_COMPANY_DOMAINS = frozenset({
     "udacity",
     "nptel",
     "javatpoint",
+    # Consumer / Ecosystem / Platform
+    "google",
+    "play",
+    "apple",
+    "microsoft",
+    "whatsapp",
+    "x",
     # Community / Q&A
     "quora",
     "reddit",
@@ -207,6 +218,10 @@ PLATFORM_DOMAINS = frozenset({
     "indiamart.com",
     "tradeindia.com",
     "sulekha.com",
+    "chromewebstore.google.com",
+    "play.google.com",
+    "apps.apple.com",
+    "workspace.google.com",
 })
 
 # ── Maps platform domain → human-readable source label ───────────────────────
@@ -369,6 +384,14 @@ PERSON_NAME_NOISE_WORDS = frozenset({
     # Address / structural fragments
     "address", "registered", "corporate", "communications",
     "floor", "building", "street", "office",
+})
+
+# Words that should never be used as a company name placeholder
+COMPANY_NAME_NOISE_WORDS = frozenset({
+    "about us", "contact", "contact us", "home", "homepage",
+    "products", "services", "founder", "ceo", "leadership",
+    "team", "our team", "about", "portfolio", "careers",
+    "privacy policy", "terms of service", "welcome", "about the company",
 })
 
 # ── Quality penalty weights ───────────────────────────────────────────────────

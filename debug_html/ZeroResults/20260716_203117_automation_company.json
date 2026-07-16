@@ -1,0 +1,24 @@
+{
+  "timestamp": "2026-07-16T20:31:17.978332",
+  "query": "automation company",
+  "classification": "ZERO_RESULTS_PAGE",
+  "url": "https://www.google.com/search?q=automation+company&num=10&hl=en&gl=us",
+  "status_code": 200,
+  "redirect_chain": [
+    "https://www.google.com/search?q=automation+company&num=10&hl=en&gl=us"
+  ],
+  "response_headers": {
+    "date": "Thu, 16 Jul 2026 15:01:14 GMT",
+    "server": "gws",
+    "last-modified": "Sun, 08 Aug 2021 23:46:59 GMT",
+    "content-type": "text/html; charset=UTF-8",
+    "cache-control": "public, max-age=2592000",
+    "content-length": "327004",
+    "x-xss-protection": "0",
+    "x-frame-options": "SAMEORIGIN"
+  },
+  "layout_fingerprint": "362810019eece548f83b4ff059e3096e",
+  "detected_signals": [
+    "did not match any documents"
+  ]
+}

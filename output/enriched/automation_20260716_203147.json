@@ -1,0 +1,326 @@
+[
+  {
+    "company_name": "Steampowered",
+    "website": "https://store.steampowered.com/app/293760/Automation__The_Car_Company_Tycoon_Game/",
+    "linkedin": null,
+    "industry": "automation",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "confidence_score": 36,
+    "lead_quality": "Low",
+    "company_type": "Unknown",
+    "_source_file": "output\\raw\\automation_20260716_203147.json",
+    "_flags": [],
+    "_verified_emails": [],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "domain_source": "existing_website",
+      "whois": {
+        "registrar": "MarkMonitor, Inc.",
+        "creation_date": "2000-08-09 16:03:56+00:00",
+        "org": "Valve Corporation",
+        "country": "US"
+      }
+    }
+  },
+  {
+    "company_name": "Rockwell Automation",
+    "website": "https://www.rockwellautomation.com/en-us.html",
+    "linkedin": null,
+    "industry": "automation",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "confidence_score": 36,
+    "lead_quality": "Low",
+    "company_type": "Unknown",
+    "_source_file": "output\\raw\\automation_20260716_203147.json",
+    "_flags": [],
+    "_verified_emails": [],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "domain_source": "existing_website",
+      "whois": {
+        "registrar": "CSC Corporate Domains, Inc.",
+        "creation_date": "1997-11-05 05:00:00+00:00",
+        "org": null,
+        "country": null
+      }
+    }
+  },
+  {
+    "company_name": "Wes Tech",
+    "website": "https://wes-tech.com/",
+    "linkedin": null,
+    "industry": "automation",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "confidence_score": 36,
+    "lead_quality": "Low",
+    "company_type": "Unknown",
+    "_source_file": "output\\raw\\automation_20260716_203147.json",
+    "_flags": [],
+    "_verified_emails": [],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "domain_source": "existing_website",
+      "whois": {
+        "registrar": "Network Solutions, LLC",
+        "creation_date": "1996-07-30 04:00:00+00:00",
+        "org": null,
+        "country": "US"
+      }
+    }
+  },
+  {
+    "company_name": "Eclipseautomation",
+    "website": "https://www.eclipseautomation.com/",
+    "linkedin": null,
+    "industry": "automation",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "confidence_score": 36,
+    "lead_quality": "Low",
+    "company_type": "Unknown",
+    "_source_file": "output\\raw\\automation_20260716_203147.json",
+    "_flags": [],
+    "_verified_emails": [],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "domain_source": "existing_website",
+      "whois": {
+        "registrar": "DYNADOT LLC",
+        "creation_date": "2001-12-03 23:13:23+00:00",
+        "org": "Super Privacy Service LTD c/o Dynadot",
+        "country": "US"
+      }
+    }
+  },
+  {
+    "company_name": "Brooks",
+    "website": "https://www.brooks.com/",
+    "linkedin": null,
+    "industry": "automation",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "confidence_score": 36,
+    "lead_quality": "Low",
+    "company_type": "Unknown",
+    "_source_file": "output\\raw\\automation_20260716_203147.json",
+    "_flags": [],
+    "_verified_emails": [],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "domain_source": "existing_website",
+      "whois": {
+        "registrar": "Amazon Registrar, Inc.",
+        "creation_date": "1995-03-01 05:00:00+00:00",
+        "org": "c/o whoisproxy.com",
+        "country": "US"
+      }
+    }
+  },
+  {
+    "company_name": "Topautomazioni",
+    "website": "https://www.topautomazioni.com/en/",
+    "linkedin": null,
+    "industry": "automation",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "confidence_score": 36,
+    "lead_quality": "Low",
+    "company_type": "Unknown",
+    "_source_file": "output\\raw\\automation_20260716_203147.json",
+    "_flags": [],
+    "_verified_emails": [],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "domain_source": "existing_website",
+      "whois": {
+        "registrar": "Server Plan Srl",
+        "creation_date": "2001-01-31 00:18:56+00:00",
+        "org": "Comodo lab s.r.l.",
+        "country": "SM"
+      }
+    }
+  },
+  {
+    "company_name": "C3automation",
+    "website": "https://www.c3automation.com/",
+    "linkedin": null,
+    "industry": "automation",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "confidence_score": 36,
+    "lead_quality": "Low",
+    "company_type": "Unknown",
+    "_source_file": "output\\raw\\automation_20260716_203147.json",
+    "_flags": [],
+    "_verified_emails": [],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "domain_source": "existing_website",
+      "whois": {
+        "registrar": "Register.com - Network Solutions, LLC",
+        "creation_date": "2002-12-17 18:52:16+00:00",
+        "org": null,
+        "country": "US"
+      }
+    }
+  },
+  {
+    "company_name": "Automation Control",
+    "website": "https://automation-control.com/",
+    "linkedin": null,
+    "industry": "automation",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "confidence_score": 36,
+    "lead_quality": "Low",
+    "company_type": "Unknown",
+    "_source_file": "output\\raw\\automation_20260716_203147.json",
+    "_flags": [],
+    "_verified_emails": [],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "domain_source": "existing_website",
+      "whois": {
+        "registrar": "Network Solutions, LLC",
+        "creation_date": "1997-04-22 04:00:00+00:00",
+        "org": null,
+        "country": "US"
+      }
+    }
+  },
+  {
+    "company_name": "Br Automation",
+    "website": "https://www.br-automation.com/en/",
+    "linkedin": null,
+    "industry": "automation",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "confidence_score": 36,
+    "lead_quality": "Low",
+    "company_type": "Unknown",
+    "_source_file": "output\\raw\\automation_20260716_203147.json",
+    "_flags": [],
+    "_verified_emails": [],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "domain_source": "existing_website",
+      "whois": {
+        "registrar": "Ascio Technologies, Inc",
+        "creation_date": "[datetime.datetime(1996, 11, 29, 5, 0, tzinfo=tzoffset('UTC', 0)), datetime.datetime(1996, 11, 29, 0, 0, tzinfo=tzoffset('UTC', 0))]",
+        "org": "Not Disclosed",
+        "country": "AT"
+      }
+    }
+  }
+]

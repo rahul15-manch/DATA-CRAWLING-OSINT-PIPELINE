@@ -96,4 +96,10 @@ class HeaderManager:
             # Emulate a standard URL bar navigation
             headers.update(self.get_sec_fetch_headers(mode="navigate", dest="document", site="none"))
 
+        # 4. Viewport & Timezone Fingerprint Rotation
+        vw = random.choice([1280, 1366, 1440, 1920])
+        headers["sec-ch-viewport-width"] = str(vw)
+        headers["viewport-width"] = str(vw)
+        headers["sec-ch-timezone-offset"] = random.choice(["-300", "0", "300", "-480"])
+
         return headers

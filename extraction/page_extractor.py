@@ -1,32 +1,4 @@
-"""
-extraction/page_extractor.py
-=============================
-Full public-data extraction pass for a company's website.
 
-Everything returned here was visible on a plain public page load
-— nothing behind a login.
-
-Changes in this revision (v3)
-------------------------------
-Task 5  — Graceful error handling on every fetch; non-HTML responses are
-           skipped; pipeline never crashes on a single bad website.
-           Extended PAGE_KEYWORDS to cover leadership / management /
-           founders / executives / our-team subpages.
-Task 6  — company_type: inferred from meta description + title via
-           utils.enrichment.detect_company_type().
-Task 7  — industry_detected: inferred from meta description + title + body
-           via utils.enrichment.detect_industry().
-Task 6  — Email ranking: junk (noreply, tracking, …) is filtered out;
-           remaining emails are sorted by business relevance via
-           utils.validators.rank_emails().
-Task 7  — Phone validation: replaced broad regex with is_valid_phone() which
-           rejects DD.MM.YYYY, YYYY-YYYY year ranges, multi-line table values.
-Task 8  — People extraction: every extracted person is validated with
-           is_valid_person_record() — bare designations without a realistic
-           human name are silently dropped.
-Task 12 — DESIGNATION_KEYWORDS and DESIGNATION_ACRONYMS imported from
-           utils.constants (no local duplication).
-"""
 
 import re
 from urllib.parse import urljoin, urlparse
@@ -78,9 +50,39 @@ PAGE_KEYWORDS = {
         "board",
         "directors",
     ],
+    "careers_page": [
+        "careers",
+        "jobs",
+        "join-us",
+        "work-with-us",
+    ],
+    "privacy_page": [
+        "privacy",
+        "privacy-policy",
+        "privacy-policy",
+        "data-protection",
+    ],
 }
 
 _HTML_CONTENT_TYPES = ("text/html", "application/xhtml")
+
+
+# Thread-local crawl budget tracking
+import threading
+import time
+
+_crawl_budgets = threading.local()
+
+def _get_domain_budget_state(domain: str):
+    if not hasattr(_crawl_budgets, "domains"):
+        _crawl_budgets.domains = {}
+    if domain not in _crawl_budgets.domains:
+        _crawl_budgets.domains[domain] = {
+            "pages_crawled": 0,
+            "bytes_downloaded": 0,
+            "start_time": time.time()
+        }
+    return _crawl_budgets.domains[domain]
 
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -89,26 +91,78 @@ _HTML_CONTENT_TYPES = ("text/html", "application/xhtml")
 
 def fetch_page(url: str):
     """
-    Fetch a page's public HTML via a plain GET.
-
-    Returns the HTML text on success, None on any failure.
+    Fetch a page's public HTML via a plain GET using NetworkClient.
+    Applies RobotsChecker compliance, canonicalization, crawl budget, and duplicate content hashing.
     """
+    from network_client_project.network import NetworkClient
+    from network_client_project.network.robots import RobotsChecker
+    from network_client_project.network.frontier import get_frontier
+
+    frontier = get_frontier()
+    robots_checker = RobotsChecker()
+
+    canonical_url = frontier.canonicalize_url(url)
+    if not canonical_url:
+        return None
+
+    if not robots_checker.allowed(canonical_url):
+        print(f"[Robots] Crawl of {canonical_url} disallowed by robots.txt")
+        return None
+
+    from urllib.parse import urlparse
+    domain = urlparse(canonical_url).netloc.lower()
+    state = _get_domain_budget_state(domain)
+
+    if state["pages_crawled"] >= 4:
+        print(f"[CrawlBudget] Aborted {canonical_url} - hit max 4 pages limit.")
+        return None
+    if state["bytes_downloaded"] >= 2 * 1024 * 1024:
+        print(f"[CrawlBudget] Aborted {canonical_url} - hit max 2 MB download limit.")
+        return None
+    if time.time() - state["start_time"] >= 20.0:
+        print(f"[CrawlBudget] Aborted {canonical_url} - hit max 20s time budget limit.")
+        return None
+
+    if not frontier.should_crawl(canonical_url):
+        return None
+
+    client = NetworkClient()
     try:
-        headers = {"User-Agent": "Mozilla/5.0 (compatible; FlowizLeadBot/1.0)"}
-        resp = requests.get(url, headers=headers, timeout=config.REQUEST_TIMEOUT)
+        # Try direct connection first
+        resp = client.get(canonical_url, require_proxy=False, timeout=config.REQUEST_TIMEOUT)
+        if resp.status_code in (403, 429) or str(resp.status_code).startswith("5"):
+            raise Exception(f"Direct connection failed with HTTP {resp.status_code}")
+    except Exception as exc:
+        print(f"[page_extractor] Direct fetch failed for {canonical_url} ({exc}), retrying with proxy...")
+        try:
+            resp = client.get(canonical_url, require_proxy=True, timeout=config.REQUEST_TIMEOUT)
+        except Exception as proxy_exc:
+            print(f"[page_extractor] Proxy fetch failed for {canonical_url}: {proxy_exc}")
+            return None
+
+    try:
+        # Track bytes and page counts
+        state["pages_crawled"] += 1
+        downloaded_bytes = len(resp.content or b"")
+        state["bytes_downloaded"] += downloaded_bytes
 
         if resp.status_code != 200:
             return None
 
         content_type = resp.headers.get("Content-Type", "").lower()
         if not any(ct in content_type for ct in _HTML_CONTENT_TYPES):
-            print(f"[page_extractor] skipping non-HTML response from {url}")
+            print(f"[page_extractor] skipping non-HTML response from {canonical_url}")
             return None
 
-        return resp.text
+        html = resp.text
+        
+        if not frontier.record_crawl(canonical_url, html):
+            return None
+
+        return html
 
     except Exception as exc:  # noqa: BLE001
-        print(f"[page_extractor] failed to fetch {url}: {exc}")
+        print(f"[page_extractor] failed to fetch {canonical_url}: {exc}")
         return None
 
 
@@ -318,7 +372,7 @@ def extract_people(html: str) -> list:
 # Main extraction entry-point  (Tasks 5, 6, 7)
 # ─────────────────────────────────────────────────────────────────────────────
 
-def extract_from_website(homepage_url: str) -> dict:
+def extract_from_website(homepage_url: str, homepage_html: str | None = None) -> dict:
     """
     Full public-data extraction pass:
     homepage → contact/about/team subpages → emails, phones, socials, people.
@@ -347,7 +401,20 @@ def extract_from_website(homepage_url: str) -> dict:
         "meta_description":  "",
     }
 
-    homepage_html = fetch_page(homepage_url)
+    from urllib.parse import urlparse
+    domain = urlparse(homepage_url).netloc.lower()
+    state = _get_domain_budget_state(domain)
+    state["pages_crawled"] = 0
+    state["bytes_downloaded"] = 0
+    state["start_time"] = time.time()
+
+    if not homepage_html:
+        homepage_html = fetch_page(homepage_url)
+    else:
+        # Pre-fetched homepage: record it as 1 page and estimate size
+        state["pages_crawled"] = 1
+        state["bytes_downloaded"] = len(homepage_html.encode("utf-8") if isinstance(homepage_html, str) else homepage_html)
+
     if not homepage_html:
         return result
 
