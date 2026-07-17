@@ -158,6 +158,11 @@ def main():
 
     _OUT_VERIFIED.parent.mkdir(parents=True, exist_ok=True)
 
+    # Persistent stage-specific verifier rejection logging
+    from utils.stats_tracker import record_rejection
+    if unverified:
+        record_rejection("verifier_failed", len(unverified))
+
     with open(_OUT_VERIFIED, "w", encoding="utf-8") as fh:
         json.dump(verified, fh, indent=2, ensure_ascii=False)
 

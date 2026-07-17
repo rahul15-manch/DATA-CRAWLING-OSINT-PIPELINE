@@ -140,66 +140,82 @@ def get_query_base_weight(query: str) -> float:
     return float(weights.get("generic", 1.0))
 
 
+OUTCOME_POINTS = {
+    "accepted_company":   +5,
+    "contact_found":      +3,
+    "homepage_crawled":   +2,
+    "search_hit":         +1,
+    "zero_result":        -1,
+    "unavailable":        -2,
+    "captcha":            -3,
+    "parser_failure":      0,
+}
+
+
 def record_query_outcome(
     query: str,
     outcome: str,
     result_count: int = 0,
+    provider: str = None,
 ) -> None:
-    """Store lightweight feedback and template ROI."""
+    """Store score-based feedback, template ROI, and provider metrics."""
     key = _normalize_query_key(query)
     if not key:
         return
+
+    points = OUTCOME_POINTS.get(outcome, 0)
+    # If search hit, count results but cap impact to avoid skewing
+    if outcome == "search_hit" and result_count > 0:
+        points = points * min(result_count, 10)
 
     import time
     with _QUERY_FEEDBACK_LOCK:
         stats = _QUERY_FEEDBACK[key]
         now = time.time()
         stats["last_updated"] = now
-        
-        if outcome == "success" and result_count > 0:
-            stats["success"] += 1
-            stats["leads_found"] = stats.get("leads_found", 0) + result_count
-            stats["failures"] = 0  # Reset consecutive failures on success
-        elif outcome == "zero_result":
-            stats["zero"] += 1
-            stats["failures"] = stats.get("failures", 0) + 1
-        elif outcome == "parser_failure":
-            stats["parser"] += 1
-        elif outcome == "unavailable":
-            stats["unavailable"] += 1
-            
+        stats["score"] = stats.get("score", 0) + points
         stats["queries_run"] = stats.get("queries_run", 0) + 1
+        
+        if outcome == "accepted_company":
+            stats["leads_found"] = stats.get("leads_found", 0) + 1
+
+        if outcome in {"zero_result", "unavailable", "captcha"}:
+            stats["failures"] = stats.get("failures", 0) + 1
+        elif outcome == "accepted_company":
+            stats["failures"] = 0
+
+        # Update provider/source level stats
+        if provider:
+            prov_key = f"source:{provider}"
+            p_stats = _QUERY_FEEDBACK[prov_key]
+            p_stats["score"] = p_stats.get("score", 0) + points
+            p_stats["queries_run"] = p_stats.get("queries_run", 0) + 1
 
         # Track template-level ROI
         template = find_matching_template(query)
         if template:
             t_stats = _QUERY_FEEDBACK.setdefault(f"template:{template}", {
-                "queries_run": 0, "leads_found": 0, "success": 0, "zero": 0, "parser": 0, "unavailable": 0, "last_updated": now, "failures": 0
+                "queries_run": 0, "leads_found": 0, "score": 0, "last_updated": now, "failures": 0
             })
             t_stats["last_updated"] = now
             t_stats["queries_run"] += 1
-            if outcome == "success" and result_count > 0:
-                t_stats["leads_found"] += result_count
-                t_stats["success"] += 1
-                t_stats["failures"] = 0
-            elif outcome == "zero_result":
-                t_stats["zero"] += 1
+            t_stats["score"] = t_stats.get("score", 0) + points
+            if outcome == "accepted_company":
+                t_stats["leads_found"] += 1
+            
+            if outcome in {"zero_result", "unavailable", "captcha"}:
                 t_stats["failures"] = t_stats.get("failures", 0) + 1
-            elif outcome == "parser_failure":
-                t_stats["parser"] += 1
-            elif outcome == "unavailable":
-                t_stats["unavailable"] += 1
+            elif outcome == "accepted_company":
+                t_stats["failures"] = 0
 
     _save_query_feedback()
 
 
 def get_query_feedback_weight(query: str) -> float:
     """Return a multiplicative weight derived from historical template ROI."""
-    template = find_matching_template(query)
-    if not template:
-        return 1.0
-
     import time
+    import math
+    
     with _QUERY_FEEDBACK_LOCK:
         # Negative query learning (exact query check)
         q_key = _normalize_query_key(query)
@@ -213,13 +229,18 @@ def get_query_feedback_weight(query: str) -> float:
                 penalty = 0.999 * decay # Max penalty 0.999, decays towards 0
                 return max(0.001, 1.0 - penalty)
 
+    template = find_matching_template(query)
+    if not template:
+        return 1.0
+
+    with _QUERY_FEEDBACK_LOCK:
         # Template ROI check
         t_stats = _QUERY_FEEDBACK.get(f"template:{template}")
         if not t_stats:
             return 1.0
 
         q_run = t_stats.get("queries_run", 0)
-        l_found = t_stats.get("leads_found", 0)
+        score = t_stats.get("score", 0)
         if q_run <= 0:
             return 1.0
             
@@ -230,10 +251,10 @@ def get_query_feedback_weight(query: str) -> float:
              penalty = 0.999 * decay
              return max(0.001, 1.0 - penalty)
 
-        # Calculate template ROI: average leads found per query
-        roi = l_found / q_run
+        # Calculate template ROI: average score per query run
+        roi = score / q_run
         # Scale the weight based on ROI (min 0.2, max 2.0)
-        weight = max(0.2, min(2.0, roi))
+        weight = max(0.2, min(2.0, 1.0 + roi * 0.1))
         return weight
 
 
@@ -248,6 +269,16 @@ def get_query_feedback_snapshot() -> dict[str, dict[str, int]]:
 
     with _QUERY_FEEDBACK_LOCK:
         return {key: dict(value) for key, value in _QUERY_FEEDBACK.items()}
+
+
+def get_source_discovery_score(provider: str) -> float:
+    """Compute average discovery score for a provider."""
+    with _QUERY_FEEDBACK_LOCK:
+        stats = _QUERY_FEEDBACK.get(f"source:{provider}")
+        if not stats or stats.get("queries_run", 0) == 0:
+            return 0.0
+        return stats.get("score", 0) / stats["queries_run"]
+
 
 # Load query feedback on startup
 _load_query_feedback()

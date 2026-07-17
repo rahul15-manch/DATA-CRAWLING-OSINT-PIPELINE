@@ -20,6 +20,8 @@ from query.company_template import COMPANY_TEMPLATES
 from query.expansion import build_semantic_company_variants, rank_query_candidate
 from models.search_task import SearchTask
 
+from query.query_planner import QueryPlanner
+
 def generate_search_tasks(keyword: str):
     """
     Generate SearchTask objects for a given keyword using Intent Expansion.
@@ -39,61 +41,28 @@ def generate_search_tasks(keyword: str):
     if not keyword:
         return
 
-    # ── Step 1: Semantic intent expansion ───────────────────────────────────
-    company_kws = build_semantic_company_variants(keyword)
-
-    # Heuristic location extraction
-    LOCATIONS = {"noida", "gurugram", "gurgaon", "chandigarh", "delhi", "ncr", "mumbai", "bangalore", "bengaluru", "pune", "hyderabad", "chennai", "kolkata", "jaipur", "ahmedabad"}
-
-    ranked_candidates: list[tuple[int, float, int, str, str]] = []
-    order = 0
-    seen_queries: set[str] = set()
-
-    def _add_candidate(source: str, query: str, priority_bonus: int) -> None:
-        nonlocal order
-        q_key = query.lower().strip()
-        if q_key in seen_queries:
-            return
-        seen_queries.add(q_key)
-        # Use priority_bonus as the primary sort key instead of just candidate rank
-        rank = rank_query_candidate(query)
-        ranked_candidates.append((priority_bonus, rank, order, source, query))
-        order += 1
-
-    # ── Step 2: Generate tasks applying source operators after semantics ──────
-    for kw in company_kws:
-        words = kw.strip().split()
-        location = ""
-        if len(words) > 1 and words[-1].lower() in LOCATIONS:
-            location = words[-1]
-            kw_no_loc = " ".join(words[:-1])
+    planner = QueryPlanner()
+    tasks = list(planner.plan_queries(keyword))
+    
+    import random
+    import config
+    scored_tasks = []
+    for idx, t in enumerate(tasks):
+        # Exploration logic: 15% chance to treat query with a high baseline exploration weight (e.g. 1.0)
+        # to prevent starvation of low-performing or new queries.
+        if random.random() < 0.15:
+            weight = 1.0 + (1.0 / (idx + 1.0)) # slightly prefer original planned order
         else:
-            kw_no_loc = kw
-
-        for src_dict in COMPANY_TEMPLATES:
-            source = src_dict["source"]
-            templates = src_dict["templates"]
-            source_priority = src_dict.get("priority", 50)
-            
-            for template in templates:
-                query = template.format(keyword=kw_no_loc, location=location).strip()
-                # Clean up multiple spaces if location was empty
-                query = " ".join(query.split())
-
-                if source in {"linkedin", "clutch", "goodfirms", "crunchbase", "wellfound", "apollo", "zoominfo", "justdial"}:
-                    query = f"{query} -site:wikipedia.org -site:play.google.com -site:apps.apple.com -site:chromewebstore.google.com -site:whatsapp.com"
-
-                # Incorporate source_priority into the candidate score
-                _add_candidate(source, _collapse_repeated_words(query), source_priority)
-
-    # Sort by priority_bonus (desc), rank (desc), order (asc)
-    for idx, (_, _, _, source, query) in enumerate(sorted(ranked_candidates, key=lambda item: (-item[0], -item[1], item[2])), start=1):
-        yield SearchTask(
-            source=source,
-            query=query,
-            priority=idx,
-            category="company",
-        )
+            weight = rank_query_candidate(t.query)
+        scored_tasks.append((weight, idx, t))
+        
+    # Sort tasks descending by weight
+    scored_tasks.sort(key=lambda x: (-x[0], x[1]))
+    
+    # Enforce budget limit
+    budget = getattr(config, "MAX_QUERIES_BUDGET", 20)
+    for _, _, task in scored_tasks[:budget]:
+        yield task
 
 
 # ─────────────────────────────────────────────────────────────────────────────

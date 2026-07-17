@@ -1,0 +1,14 @@
+PILLAR 2 — LEAD CLEANING REPORT
+========================================
+Input files: output\raw\python_noida_20260717_133056.json
+Total raw records: 0
+Duplicates removed: 0
+Records after dedup: 0
+
+CLEAN records (no issues): 0
+FLAGGED records (need review/enrichment): 0
+
+Flag breakdown:
+
+NOTE: Live MX-record email verification was NOT run (no network
+access in this environment). See verify_mx() in the script for the hook.

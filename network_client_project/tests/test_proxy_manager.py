@@ -72,7 +72,7 @@ def test_proxy_manager_normalizes_provider_keys():
     assert Proxy._normalize_provider_key(manager, provider="google_html") == "google"
     assert Proxy._normalize_provider_key(manager, provider="duckduckgo") == "duckduckgo"
     assert Proxy._normalize_provider_key(manager, provider="bing") == "bing"
-    assert Proxy._normalize_provider_key(manager, provider="directory_provider") == "default"
+    assert Proxy._normalize_provider_key(manager, provider="directory_provider") == "directory"
 
 
 def test_get_proxy_manager_returns_singleton():

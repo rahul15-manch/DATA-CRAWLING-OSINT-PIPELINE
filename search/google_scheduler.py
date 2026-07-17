@@ -32,6 +32,21 @@ _PARSER_FAIL_STATUSES = frozenset({
 })
 
 
+def get_query_expectation_score(query: str) -> float:
+    """Calculate query expectation score between 0.0 and 1.0.
+    - Generic/location queries (e.g. 'hardware software company'): 1.0
+    - Platform searches (e.g. 'site:linkedin.com/company python Noida'): 0.6
+    - Specific quoted/exclusion dorks (e.g. 'site:clutch.co "AI"'): 0.2
+    """
+    query_lower = (query or "").lower()
+    words = query_lower.split()
+    if "site:" not in query_lower and len(words) <= 4:
+        return 1.0
+    if "site:" in query_lower and '"' not in query_lower and len(words) <= 5:
+        return 0.6
+    return 0.2
+
+
 class GoogleRequestScheduler:
     _instance = None
     _lock = threading.Lock()
@@ -185,6 +200,7 @@ class GoogleRequestScheduler:
             max_retries = 2
 
         attempts = 0
+        zero_result_retries = 0
         last_error = None
         was_block = False
 
@@ -233,7 +249,7 @@ class GoogleRequestScheduler:
                 latency_s = time.time() - t_start
                 print(f"[GoogleScheduler] Request validation status: {val_result.status} | proxy={proxy.raw_url} | latency={latency_s:.2f}s")
 
-                if val_result.status in ("VALID_RESULTS", "VALID_ZERO_RESULTS"):
+                if val_result.status == "VALID_RESULTS":
                     proxy.record_google_request()
                     proxy.record_success(domain="www.google.com", reason=val_result.status, latency_s=latency_s)
                     proxy_manager.mark_successful(proxy)
@@ -246,6 +262,33 @@ class GoogleRequestScheduler:
                     logger.info(f"[GoogleScheduler] SUCCESS on attempt {attempts} via {proxy.raw_url} ({val_result.status}, {latency_s:.2f}s)")
                     return results
 
+                elif val_result.status == "VALID_ZERO_RESULTS":
+                    expectation_score = get_query_expectation_score(query)
+                    if expectation_score >= 0.5 and zero_result_retries < 2:
+                        zero_result_retries += 1
+                        logger.warning(
+                            f"[GoogleScheduler] Zero results on attempt {attempts} via {proxy.raw_url}. "
+                            f"Expectation is high ({expectation_score:.1f}). Verifying with another proxy (retry {zero_result_retries}/2)..."
+                        )
+                        # Downrate the proxy to rotate
+                        proxy.record_google_request()
+                        proxy.record_failure(domain="www.google.com", error=Exception("Zero results soft-block"), reason="RATE_LIMIT", latency_s=latency_s)
+                        self._record_cb_failure()
+                        was_block = True
+                        continue
+                    else:
+                        proxy.record_google_request()
+                        proxy.record_success(domain="www.google.com", reason=val_result.status, latency_s=latency_s)
+                        proxy_manager.mark_successful(proxy)
+                        self._record_success()
+
+                        from search.manager import get_search_manager
+                        sm = get_search_manager()
+                        sm.google_successes += 1
+
+                        logger.info(f"[GoogleScheduler] SUCCESS (Zero Results accepted) on attempt {attempts} via {proxy.raw_url} ({val_result.status}, {latency_s:.2f}s)")
+                        return results
+
                 elif val_result.status in _PARSER_FAIL_STATUSES:
                     proxy.record_google_request()
                     logger.warning(f"[GoogleScheduler] PARSER FAILURE ({val_result.status}) — NOT rotating proxy.")
@@ -253,7 +296,7 @@ class GoogleRequestScheduler:
 
                 else:
                     proxy.record_google_request()
-                    proxy.record_failure(domain="www.google.com", reason=val_result.status, latency_s=latency_s)
+                    proxy.record_failure(domain="www.google.com", error=Exception(val_result.failure_reason or val_result.status), reason=val_result.status, latency_s=latency_s)
                     self._record_cb_failure()
                     was_block = True
 

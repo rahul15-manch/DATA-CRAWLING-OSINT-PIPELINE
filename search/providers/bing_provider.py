@@ -84,12 +84,25 @@ class BingProvider(SearchProvider):
             url += f"&first={page * max_results + 1}"
 
         headers = {
-            "Accept-Language": "en-US,en;q=0.9",
             "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8",
+            "Accept-Language": "en-US,en;q=0.9",
+            "Accept-Encoding": "gzip, deflate, br",
             "Cache-Control": "no-cache",
+            "Referer": "https://www.bing.com/",
+            "Sec-Fetch-Dest": "document",
+            "Sec-Fetch-Mode": "navigate",
+            "Sec-Fetch-Site": "same-origin",
+            "Upgrade-Insecure-Requests": "1",
         }
 
+        # Stable session per query
+        q_session_id = f"bing:{abs(hash(query)) % 10000}"
+
         for attempt in range(1, 3):
+            # Pre-request delay to prevent aggressive bot flagging
+            if attempt == 1:
+                time.sleep(random.uniform(1.5, 3.5))
+            
             html = ""
             status_code = 200
             url_actual = url
@@ -100,7 +113,7 @@ class BingProvider(SearchProvider):
                 print(f"[BingProvider] Attempt {attempt}/2")
                 resp = self._client.get(
                     url,
-                    session_id=f"{self._cookie_session_id}_{attempt}",
+                    session_id=q_session_id,
                     headers=headers,
                     auto_score=False,
                     provider="bing",

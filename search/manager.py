@@ -264,7 +264,6 @@ class SearchManager:
 
         # ── Health tracking — providers are cooled down, not permanently disabled ──
         # provider_health tracks whether a provider is currently available.
-        # Non-Google providers use _provider_cooldowns for timed recovery.
         self.provider_health: dict[str, bool] = {
             name: True for name in PROVIDER_REGISTRY
         }
@@ -274,6 +273,13 @@ class SearchManager:
         
         self._bing_cooldown_step = 0
         self._bing_cooldown_sequence = [30, 60, 120, 300]
+
+        # Circuit Breaker states and failure score trackers
+        from collections import defaultdict
+        self._provider_breaker_states: dict[str, str] = {
+            name: "CLOSED" for name in PROVIDER_REGISTRY
+        }
+        self._provider_failure_scores: dict[str, float] = defaultdict(float)
 
         # ── Per-provider statistics ───────────────────────────────────────
         self.stats: dict[str, ProviderStats] = {
@@ -628,20 +634,40 @@ class SearchManager:
                     self.queries_zero_results += 1
                     self._consecutive_zero_results[(pname, family)] += 1
                     self._keyword_results[(pname, family)] += len(raw)
-                    record_query_outcome(query, "zero_result", 0)
+                    record_query_outcome(query, "zero_result", 0, provider=pname)
                     provider_stats.record_search_outcome(pname, zero_results=True)
                     if pname == "google_html":
                         self.google_zero_result_queries += 1
                         print(f"[SearchManager] GoogleHtml valid zero results.")
                     self.cache.set(query, max_results, page, pname, [], kind="zero_result")
+
+                    # Score suspicious zero results (expectation >= 0.5)
+                    try:
+                        from search.google_scheduler import get_query_expectation_score
+                        exp_score = get_query_expectation_score(query)
+                    except Exception:
+                        exp_score = 0.5
+
+                    if exp_score >= 0.5:
+                        self._record_provider_failure_score(pname, 1.0, f"VALID_ZERO_RESULTS for high expectation query ({exp_score:.2f})")
                 else:
                     self.stats[pname].successful_queries += 1
                     self._consecutive_zero_results[(pname, family)] = 0
                     self._keyword_accepted[(pname, family)] += accepted
                     self._keyword_results[(pname, family)] += len(raw)
-                    record_query_outcome(query, "success", accepted)
+                    record_query_outcome(query, "search_hit", len(raw), provider=pname)
                     provider_stats.record_search_outcome(pname, organic_results=len(raw), accepted_companies=accepted)
                     self.cache.set(query, max_results, page, pname, all_results, kind="success")
+
+                    # Handle success transition for circuit breaker
+                    breaker_state = self._provider_breaker_states.get(pname, "CLOSED")
+                    if breaker_state == "HALF_OPEN":
+                        self._provider_breaker_states[pname] = "CLOSED"
+                        self._provider_failure_scores[pname] = 0.0
+                        logger.info(f"[SearchManager] Probe query succeeded. {pname} breaker is now CLOSED (healthy).")
+                        print(f"[SearchManager] Probe query succeeded. {pname} breaker is now CLOSED (restored).")
+                    elif breaker_state == "CLOSED":
+                        self._provider_failure_scores[pname] = max(0.0, self._provider_failure_scores[pname] - 1.0)
 
                 if pname == "bing":
                     self.bing_successes += 1
@@ -666,7 +692,7 @@ class SearchManager:
                     self.stats[pname].total_latency_s += latency
                     self.stats[pname].latencies.append(latency)
                     self.stats[pname].failures += 1
-                    record_query_outcome(query, "unavailable", 0)
+                    record_query_outcome(query, "unavailable", 0, provider=pname)
 
                     if "No healthy" in exc.reason and "proxies" in exc.reason:
                         print(f"[SearchManager] Disabling {pname} globally due to proxy exhaustion.")
@@ -680,12 +706,26 @@ class SearchManager:
                         self.queries_bing_blocked += 1
                         if "captcha" in exc.reason.lower() or "block" in exc.reason.lower():
                             self._consecutive_captchas["bing"] += 1
-                        if "consent" in exc.reason.lower():
-                            print("[SearchManager] Bing hit a consent wall. Skipping cooldown for Bing.")
-                        else:
-                            self._enter_cooldown(pname)
+
+                    # General score-based circuit breaker scoring for ProviderUnavailable
+                    reason_lower = exc.reason.lower()
+                    points = 3.0
+                    reason_lbl = f"Unavailable ({exc.reason[:30]})"
+
+                    if "403" in reason_lower or "forbidden" in reason_lower:
+                        points = 5.0
+                        reason_lbl = "403 Forbidden"
+                    elif "429" in reason_lower or "too many requests" in reason_lower or "sorry" in reason_lower or "unusual traffic" in reason_lower:
+                        points = 4.0
+                        reason_lbl = "429 Rate Limit"
+                    elif "captcha" in reason_lower or "block" in reason_lower:
+                        points = 3.0
+                        reason_lbl = "Captcha/Block"
+
+                    if pname == "bing" and "consent" in reason_lower:
+                        print("[SearchManager] Bing hit a consent wall. Skipping failure score penalty.")
                     else:
-                        self._enter_cooldown(pname)
+                        self._record_provider_failure_score(pname, points, reason_lbl)
 
                 current_idx = self._priority.index(pname) if pname in self._priority else -1
                 next_pname = "None (Exhausted)"
@@ -722,7 +762,12 @@ class SearchManager:
                 elif pname == "bing":
                     self.queries_parser_fail += 1
                     print(f"[SearchManager] Bing parser failure (likely A/B layout). Not entering cooldown.")
-                    # We no longer cooldown Bing for parse errors, because it's usually an A/B layout test, not a block.
+
+                # Record parser failure score for circuit breaker
+                if pname == "bing":
+                    pass
+                else:
+                    self._record_provider_failure_score(pname, 3.0, f"Parser Failure ({exc.reason[:30]})")
 
                 current_idx = self._priority.index(pname) if pname in self._priority else -1
                 next_pname = "None (Exhausted)"
@@ -753,7 +798,7 @@ class SearchManager:
 
 
     def _enter_cooldown(self, pname: str) -> None:
-        """Put a provider into timed cooldown (not permanent disable)."""
+        """Put a provider into timed cooldown (transition breaker to OPEN)."""
         if pname == "bing":
             secs = self._bing_cooldown_sequence[min(self._bing_cooldown_step, len(self._bing_cooldown_sequence)-1)]
             self._bing_cooldown_step += 1
@@ -763,22 +808,51 @@ class SearchManager:
         until = time.time() + secs
         self._provider_cooldowns[pname] = until
         self.provider_health[pname] = False
+        self._provider_breaker_states[pname] = "OPEN"
         logger.info(
             f"[SearchManager] {pname} entered cooldown for {secs}s "
-            f"(until {int(until)})"
+            f"(until {int(until)}) | Breaker state is OPEN"
+        )
+        print(
+            f"[SearchManager] {pname} entered cooldown for {secs}s. "
+            f"Breaker is OPEN."
         )
 
     def _recover_cooled_providers(self) -> None:
-        """Re-enable providers whose cooldown has expired."""
+        """Transition providers from OPEN to HALF_OPEN state once cooldown expires."""
         now = time.time()
         for pname, until in list(self._provider_cooldowns.items()):
-            if now >= until:
+            # Only transition if breaker is OPEN and cooldown has elapsed
+            if self._provider_breaker_states.get(pname) == "OPEN" and now >= until:
                 self.provider_health[pname] = True
+                self._provider_breaker_states[pname] = "HALF_OPEN"
                 del self._provider_cooldowns[pname]
                 if pname == "bing":
                     self.bing_recovery_count += 1
-                logger.info(f"[SearchManager] {pname} recovered from cooldown.")
-                print(f"[SearchManager] {pname} automatically recovered from cooldown.")
+                logger.info(f"[SearchManager] {pname} recovered from cooldown. Breaker is HALF_OPEN.")
+                print(f"[SearchManager] {pname} recovered from cooldown. Breaker is HALF_OPEN (next request is a probe).")
+
+    def _record_provider_failure_score(self, pname: str, points: float, reason: str) -> None:
+        """Accumulate failure points for a provider and trip breaker if threshold exceeded."""
+        state = self._provider_breaker_states.get(pname, "CLOSED")
+        
+        if state == "HALF_OPEN":
+            # Any failure during HALF_OPEN immediately trips the breaker back to OPEN
+            logger.warning(f"[SearchManager] {pname} failed probe query (Reason: {reason}). Tripping breaker back to OPEN.")
+            print(f"[SearchManager] {pname} failed probe query (Reason: {reason}). Tripping breaker back to OPEN.")
+            self._enter_cooldown(pname)
+            return
+
+        if state == "CLOSED":
+            self._provider_failure_scores[pname] += points
+            current_score = self._provider_failure_scores[pname]
+            logger.info(f"[SearchManager] {pname} recorded {points} failure points (Reason: {reason}). Total: {current_score:.1f}/10.0")
+            print(f"[SearchManager] {pname} recorded {points} failure points (Reason: {reason}). Total: {current_score:.1f}/10.0")
+            
+            if current_score >= 10.0:
+                logger.warning(f"[SearchManager] {pname} failure score reached {current_score:.1f}. Tripping breaker to OPEN.")
+                print(f"[SearchManager] {pname} failure score reached {current_score:.1f}. Tripping breaker to OPEN (cooldown active).")
+                self._enter_cooldown(pname)
 
     def _track_source(self, url: str) -> None:
         """Track which domain a result came from for source ranking."""
@@ -1094,6 +1168,7 @@ class SearchManager:
         if not stats or stats.queries == 0:
             return 100.0
 
+        import math
         q = stats.queries
         # Lead Yield: 45% (leads_discovered / max(1, queries))
         lead_yield = (stats.leads_discovered / q) * 100.0
@@ -1113,7 +1188,15 @@ class SearchManager:
         safety_score = max(0.0, 100.0 - block_rate)
 
         # Blend them: 45% Lead Yield, 20% Business Acceptance, 15% HTTP Success, 10% Latency, 10% Block Rate
-        score = (0.45 * lead_yield) + (0.20 * biz_acceptance) + (0.15 * http_success) + (0.10 * latency_score) + (0.10 * safety_score)
+        base_score = (0.45 * lead_yield) + (0.20 * biz_acceptance) + (0.15 * http_success) + (0.10 * latency_score) + (0.10 * safety_score)
+        
+        # Floor score for low sample size to prevent early tanking
+        if q < 3:
+            base_score = max(20.0, base_score)
+
+        # Exploration bonus
+        exploration_bonus = 15.0 / math.sqrt(q)
+        score = base_score + exploration_bonus
         
         return max(1.0, min(100.0, score))
 
@@ -1175,6 +1258,14 @@ class SearchManager:
 
         # Dynamically sort based on best numeric health score
         ordered.sort(key=lambda p: self._get_provider_score(p.name), reverse=True)
+
+        # Epsilon-Greedy Exploration: 10% chance to move a random provider to the front
+        import random
+        if len(ordered) > 1 and random.random() < 0.10:
+            explore_idx = random.randint(1, len(ordered) - 1)
+            explored_provider = ordered.pop(explore_idx)
+            ordered.insert(0, explored_provider)
+            print(f"[SearchManager] Epsilon-Greedy: Exploring provider {explored_provider.name!r} by moving it to the front.")
 
         return ordered
 

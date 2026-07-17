@@ -172,6 +172,13 @@ def main():
     clean_records = [r for r in deduped if not r["_flags"]]
     flagged_records = [r for r in deduped if r["_flags"]]
 
+    # Persistent stage-specific cleaner rejection logging
+    from utils.stats_tracker import record_rejection
+    for r in flagged_records:
+        for f_tag in r["_flags"]:
+            tag = f_tag.split(":")[0]
+            record_rejection(f"cleaner_flagged:{tag}")
+
     _OUT_CLEAN.parent.mkdir(parents=True, exist_ok=True)
 
     with open(_OUT_CLEAN, "w", encoding="utf-8") as fh:

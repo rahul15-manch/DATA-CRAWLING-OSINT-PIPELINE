@@ -51,9 +51,12 @@ class ThrottleMiddleware(BaseMiddleware):
         new_rate = current_rate
 
         # AutoThrottle logic:
-        # Check if response is blocked/WAF
+        # Check if response is blocked/WAF or rate-limited
         waf_error = ErrorDetector.detect_waf_or_captcha(response)
-        if waf_error:
+        if response.status_code == 429:
+            new_rate = max(0.05, current_rate * 0.4)
+            logger.warning(f"[AutoThrottle] 429 Rate Limit hit on {domain}. Reducing rate: {current_rate:.2f} rps -> {new_rate:.2f} rps.")
+        elif waf_error:
             # WAF block: Throttle down severely
             new_rate = max(0.05, current_rate * 0.5)
             logger.warning(f"[AutoThrottle] Block detected on {domain}. Reducing rate: {current_rate:.2f} rps -> {new_rate:.2f} rps.")

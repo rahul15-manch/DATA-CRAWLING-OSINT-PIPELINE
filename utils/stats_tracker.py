@@ -74,5 +74,37 @@ def get() -> dict:
 # Note: Telemetry funnel printing has been moved to stats/dashboard.py
 # to ensure a single source of truth reading from ProviderStatsTracker.
 
+import os
+import json
+
+REJECTION_STATS_PATH = "data/rejection_stats.json"
+
+def record_rejection(reason: str, count: int = 1) -> None:
+    """Record a rejection count under a specific reason in a persistent JSON file."""
+    with _lock:
+        data = {}
+        if os.path.exists(REJECTION_STATS_PATH):
+            try:
+                with open(REJECTION_STATS_PATH, "r", encoding="utf-8") as f:
+                    data = json.load(f)
+            except Exception:
+                data = {}
+        data[reason] = data.get(reason, 0) + count
+        os.makedirs(os.path.dirname(REJECTION_STATS_PATH), exist_ok=True)
+        try:
+            with open(REJECTION_STATS_PATH, "w", encoding="utf-8") as f:
+                json.dump(data, f, indent=2)
+        except Exception:
+            pass
+
+def clear_rejections() -> None:
+    """Delete or reset the persistent rejection stats file."""
+    with _lock:
+        if os.path.exists(REJECTION_STATS_PATH):
+            try:
+                os.remove(REJECTION_STATS_PATH)
+            except Exception:
+                pass
+
 # Initialise on import so counters are always available
 reset()

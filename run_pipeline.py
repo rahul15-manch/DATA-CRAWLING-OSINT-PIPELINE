@@ -59,6 +59,10 @@ def run(keyword: str, disable_cache: bool = False) -> None:
     print(f"  Keyword : {keyword!r}")
     print("=" * 60)
 
+    # Clear previous rejection stats
+    from utils.stats_tracker import clear_rejections
+    clear_rejections()
+
     # ── Step 1: Pillar 1 ──────────────────────────────────────────────────────
     _step(1, TOTAL_STEPS, "Pillar 1 — Discover companies & build lead cards")
 

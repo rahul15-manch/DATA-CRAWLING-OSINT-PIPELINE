@@ -133,6 +133,39 @@ def render_dashboard(execution_time_s: float, keyword: str) -> None:
     print(f"     Cache Served Queries: {cache_served_queries}")
     print("-" * 60)
 
+    # 4.5 Semantic metrics
+    intent_cache_hits = funnel.get('intent_cache_hits', 0)
+    intent_cache_misses = funnel.get('intent_cache_misses', 0)
+    company_cache_hits = funnel.get('company_cache_hits', 0)
+    company_cache_misses = funnel.get('company_cache_misses', 0)
+    
+    from semantic.ontology_manager import OntologyManager
+    om = OntologyManager()
+    promotions = getattr(om, "_promotions", 0)
+    rejections = getattr(om, "_rejections", 0)
+
+    print("SEMANTIC LAYER METRICS:")
+    # Compute profiling averages
+    res_t = funnel.get("time_intent_resolver_ms", 0)
+    res_c = max(1, funnel.get("count_intent_resolver", 0))
+    ext_t = funnel.get("time_company_extractor_ms", 0)
+    ext_c = max(1, funnel.get("count_company_extractor", 0))
+    mat_t = funnel.get("time_semantic_matcher_ms", 0)
+    mat_c = max(1, funnel.get("count_semantic_matcher", 0))
+    val_t = funnel.get("time_company_validator_ms", 0)
+    val_c = max(1, funnel.get("count_company_validator", 0))
+    
+    avg_res = res_t / res_c
+    avg_ext = ext_t / ext_c
+    avg_mat = mat_t / mat_c
+    avg_val = val_t / val_c
+
+    print(f"  - Intent Cache Hits  : {intent_cache_hits:<12} | Intent Cache Misses : {intent_cache_misses}")
+    print(f"  - Company Cache Hits : {company_cache_hits:<12} | Company Cache Misses: {company_cache_misses}")
+    print(f"  - Ontology Version   : {om.version:<12} | Promotions/Rejections: {promotions}/{rejections}")
+    print(f"  - Profiling Latency  : Resolver={avg_res:.1f}ms | Extractor={avg_ext:.1f}ms | Matcher={avg_mat:.1f}ms | Validator={avg_val:.1f}ms")
+    print("-" * 60)
+
     # 5. Source Attribution
     if pipeline_stats.source_breakdown:
         print("TOP SOURCES DISCOVERED:")
@@ -162,5 +195,82 @@ def render_dashboard(execution_time_s: float, keyword: str) -> None:
                 print(f"  - {query:<40} Runs: {runs:<4} Leads: {leads:<4} ROI: {roi:.0%}")
     except Exception:
         pass
+    print("-" * 60)
+
+    # Render discovery source rankings
+    try:
+        from query.expansion import get_source_discovery_score, get_query_feedback_snapshot
+        feedback = get_query_feedback_snapshot()
+        providers = ["google_html", "brave", "duckduckgo", "bing", "linkedin", "clutch", "goodfirms", "github"]
+        scores = []
+        for p in providers:
+            score = get_source_discovery_score(p)
+            if score >= 3.0:
+                stars = "★★★★★"
+            elif score >= 1.0:
+                stars = "★★★★☆"
+            elif score >= 0.0:
+                stars = "★★★☆☆"
+            elif score >= -1.0:
+                stars = "★★☆☆☆"
+            else:
+                stars = "★☆☆☆☆"
+            scores.append((p, score, stars))
+        
+        # Count total runs across providers
+        total_runs = sum(feedback.get(f"source:{p}", {}).get("queries_run", 0) for p in providers if f"source:{p}" in feedback)
+        if total_runs > 0:
+            print("DISCOVERY SOURCE RANKINGS:")
+            for p, score, stars in sorted(scores, key=lambda x: -x[1]):
+                source_stats = feedback.get(f"source:{p}", {})
+                runs = source_stats.get("queries_run", 0)
+                if runs > 0:
+                    print(f"  - {p:<20} Score: {score:>5.2f} | Ratings: {stars} ({runs} runs)")
+            print("-" * 60)
+    except Exception as e:
+        pass
+
+    # Render stage-based persistent Rejection Analytics
+    import os
+    import json
+    rejections_file = "data/rejection_stats.json"
+    print("REJECTION ANALYTICS:")
+    if os.path.exists(rejections_file):
+        try:
+            with open(rejections_file, "r", encoding="utf-8") as f:
+                rejections = json.load(f)
+            if rejections:
+                # Group rejections into conceptual categories/stages
+                stages = {
+                    "Search / Pre-filtering": ["search_missing_url", "search_ignored_by_rule"],
+                    "Semantic Evaluation": ["semantic_low_score"],
+                    "Validator Rules": [],
+                    "Cleaner Flags": [],
+                    "Verifier / Contact Reachability": ["verifier_failed"]
+                }
+                # Gather dynamic keys
+                for key in rejections:
+                    if key.startswith("validator_"):
+                        stages["Validator Rules"].append(key)
+                    elif key.startswith("cleaner_"):
+                        stages["Cleaner Flags"].append(key)
+                
+                total_rejections = sum(rejections.values())
+                print(f"  Total Filtered Leads: {total_rejections}")
+                for stage_name, keys in stages.items():
+                    stage_count = sum(rejections.get(k, 0) for k in keys)
+                    if stage_count > 0:
+                        print(f"  - {stage_name:<30}: {stage_count} leads ({stage_count / max(1, total_rejections):.1%})")
+                        for k in keys:
+                            cnt = rejections.get(k, 0)
+                            if cnt > 0:
+                                label = k.replace("validator_rule_violation:", "").replace("cleaner_flagged:", "")
+                                print(f"      * {label:<35}: {cnt}")
+            else:
+                print("  No leads were rejected or filtered during this run.")
+        except Exception as e:
+            print(f"  Error loading rejection metrics: {e}")
+    else:
+        print("  No leads were rejected or filtered during this run.")
     print("=" * 60)
     print()

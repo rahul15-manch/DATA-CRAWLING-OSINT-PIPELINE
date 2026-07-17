@@ -29,10 +29,26 @@ class RetryMiddleware(BaseMiddleware):
 
         # 3. 429 Too Many Requests
         if response.status_code == 429:
-            # Increase delay, keep session/cookies, and reuse current proxy
-            request.meta["keep_proxy"] = True
-            request.meta["retry_delay"] = 15.0
-            return self._retry(request, response, reason="429 Rate Limit (Same Proxy)", status_code=429, keep_proxy=True)
+            from urllib.parse import urlparse
+            domain = urlparse(request.url).netloc.lower()
+            is_directory = any(p in domain for p in ("clutch.co", "goodfirms.co", "crunchbase.com", "linkedin.com", "f6s.com"))
+            
+            if is_directory:
+                session_id = request.meta.get("session_id")
+                if session_id:
+                    with client.proxy_manager._lock:
+                        client.proxy_manager._sticky_sessions.pop(session_id, None)
+                proxy_obj = request.meta.get("_proxy_obj")
+                if proxy_obj:
+                    request.meta["exclude_urls"] = request.meta.get("exclude_urls", set()) | {proxy_obj.raw_url}
+                request.meta["retry_delay"] = 5.0
+                logger.warning(f"[Retry] 429 rate limit hit on directory {domain}. Rotating proxy.")
+                return self._retry(request, response, reason="429 Rate Limit (Rotate Proxy)", status_code=429, keep_proxy=False)
+            else:
+                # Increase delay, keep session/cookies, and reuse current proxy
+                request.meta["keep_proxy"] = True
+                request.meta["retry_delay"] = 15.0
+                return self._retry(request, response, reason="429 Rate Limit (Same Proxy)", status_code=429, keep_proxy=True)
 
         # 4. CAPTCHA / 403 WAF blocks
         waf_error = ErrorDetector.detect_waf_or_captcha(response)
@@ -69,7 +85,7 @@ class RetryMiddleware(BaseMiddleware):
         err_str = str(exception).lower()
         
         # Connection reset / dead connection: retry once, different proxy
-        if any(x in err_str for x in ["connection closed", "connection reset", "connection refused", "connect failed", "proxy connect aborted"]):
+        if any(x in err_str for x in ["connection closed", "connection reset", "connection refused", "connect failed", "proxy connect aborted", "network error"]):
             retry_times = request.meta.get("retry_times", 0)
             if retry_times < 1:
                 session_id = request.meta.get("session_id")

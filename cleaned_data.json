@@ -1715,5 +1715,27 @@
     "social_links": {},
     "people": [],
     "source": "Google"
+  },
+  {
+    "company_name": "Python Developer",
+    "website": "https://pybuddy.com",
+    "domain": "pybuddy.com",
+    "industry": "Logistics",
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "LinkedIn"
+  },
+  {
+    "company_name": "Django",
+    "website": "https://www.djangoproject.com/",
+    "domain": "djangoproject.com",
+    "industry": "Software_Development",
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google"
   }
 ]

@@ -1,0 +1,35 @@
+{
+  "timestamp": "2026-07-17T17:34:20.816752",
+  "query": "Hardware Development software company",
+  "classification": "ENABLE_JS_PAGE",
+  "url": "https://www.google.com/search?q=Hardware+Development+software+company&num=10&hl=en&gl=us",
+  "status_code": 200,
+  "redirect_chain": [
+    "https://www.google.com/search?q=Hardware+Development+software+company&num=10&hl=en&gl=us"
+  ],
+  "response_headers": {
+    "content-type": "text/html; charset=UTF-8",
+    "strict-transport-security": "max-age=31536000",
+    "content-security-policy": "object-src 'none';base-uri 'self';script-src 'nonce-eG5MGIocwsWbtheJGr-mwQ' 'strict-dynamic' 'report-sample' 'unsafe-eval' 'unsafe-inline' https: http:;report-uri https://csp.withgoogle.com/csp/gws/cdt1",
+    "cross-origin-opener-policy": "same-origin-allow-popups; report-to=\"gws\"",
+    "report-to": "{\"group\":\"gws\",\"max_age\":2592000,\"endpoints\":[{\"url\":\"https://csp.withgoogle.com/csp/report-to/gws/cdt1\"}]}",
+    "accept-ch": "Sec-CH-Prefers-Color-Scheme, Downlink, RTT, Sec-CH-UA-Form-Factors, Sec-CH-UA-Platform, Sec-CH-UA-Platform-Version, Sec-CH-UA-Full-Version, Sec-CH-UA-Arch, Sec-CH-UA-Model, Sec-CH-UA-Bitness, Sec-CH-UA-Full-Version-List, Sec-CH-UA-WoW64",
+    "x-content-type-options": "nosniff",
+    "permissions-policy": "unload=()",
+    "p3p": "CP=\"This is not a P3P policy! See g.co/p3phelp for more info.\"",
+    "content-encoding": "br",
+    "date": "Fri, 17 Jul 2026 12:04:19 GMT",
+    "server": "gws",
+    "x-xss-protection": "0",
+    "x-frame-options": "SAMEORIGIN",
+    "expires": "Fri, 17 Jul 2026 12:04:19 GMT",
+    "cache-control": "private",
+    "set-cookie": "__Secure-STRP=ANmZwa1Y9QpqP7M1rLn2DgZrU5qdyddCUsnMGC-fdPGJHVppGRfTQhiy_QOx2ytvT0sXvSmvrUQkIkb409izPhKgSojxDJMXZg; expires=Fri, 17-Jul-2026 12:09:19 GMT; path=/; domain=.google.com; Secure; SameSite=strict, AEC=AdJVEavp1mrtmt48VrbuZI8GuWhXteu7oeV36LH48CpCymuljKMmOcOWcw8; expires=Wed, 13-Jan-2027 12:04:19 GMT; path=/; domain=.google.com; Secure; HttpOnly; SameSite=lax, NID=533=XzdRiPKDhlCc_QiDzU-BwD5z5HvwEDJIGjpq7QvaOUZ7aSqdb0lEcGU2m6e-9hYmielGDokLOq5H-joygIAMnxefc3ygqiiwF43TygmXQkpcMS0qX4twg_RRBCvcUUYANUdDQfdOTBlp5hbpIIMH1ocYy_TfEcZFuvyIxbHcsqbBjVeTvmOiBh8Y3F9MVChC8-GqoR3ZIdT727VJYbif_vE; expires=Sat, 16-Jan-2027 12:04:19 GMT; path=/; domain=.google.com; Secure; HttpOnly; SameSite=none",
+    "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+  },
+  "layout_fingerprint": "2d776c7f0f4d13d3ca0db766ca6ecf79",
+  "detected_signals": [
+    "/httpservice/retry/enablejs",
+    "enablejs"
+  ]
+}

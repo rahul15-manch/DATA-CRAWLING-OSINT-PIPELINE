@@ -1,0 +1,19 @@
+{
+  "timestamp": "2026-07-17T16:46:17.948683",
+  "query": "python development company",
+  "classification": "UNKNOWN_LAYOUT",
+  "url": "https://api.brightdata.com/request",
+  "status_code": 200,
+  "redirect_chain": [
+    "https://api.brightdata.com/request"
+  ],
+  "response_headers": {
+    "date": "Fri, 17 Jul 2026 11:16:16 GMT",
+    "server": "squid/3.5.28",
+    "last-modified": "Tue, 10 Aug 2021 19:13:45 GMT",
+    "content-length": "1200",
+    "content-type": "text/html"
+  },
+  "layout_fingerprint": "377db23e87f4367fd6b2737892986ab3",
+  "detected_signals": []
+}

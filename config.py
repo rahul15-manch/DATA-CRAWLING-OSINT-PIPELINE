@@ -16,7 +16,7 @@ SEARCH_PROVIDER = os.getenv("SEARCH_PROVIDER", "auto").strip().lower()
 # Ordered list of providers to try (env: comma-separated string)
 # google_html is primary — uses curl_cffi Chrome TLS impersonation (no API key needed).
 # bing is the final fallback — always available.
-_raw_priority   = os.getenv("SEARCH_PROVIDER_PRIORITY", "google_html,duckduckgo,bing")
+_raw_priority   = os.getenv("SEARCH_PROVIDER_PRIORITY", "google_html,brave,duckduckgo,bing")
 SEARCH_PROVIDER_PRIORITY: list[str] = [p.strip() for p in _raw_priority.split(",") if p.strip()]
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -39,7 +39,7 @@ GOOGLE_MAX_CONCURRENT = int(os.getenv("GOOGLE_MAX_CONCURRENT", "2"))
 # Provider enable / disable flags
 # ─────────────────────────────────────────────────────────────────────────────
 
-#ENABLE_SERPAPI          = os.getenv("ENABLE_SERPAPI",          "true").lower()  == "true"
+ENABLE_SERPAPI          = os.getenv("ENABLE_SERPAPI",          "true").lower()  == "true"
 ENABLE_GOOGLE_CSE       = os.getenv("ENABLE_GOOGLE_CSE",       "true").lower()  == "true"
 #ENABLE_CUSTOM_PROVIDER  = os.getenv("ENABLE_CUSTOM_PROVIDER",  "false").lower() == "true"
 ENABLE_GOOGLE_HTML      = os.getenv("ENABLE_GOOGLE_HTML",      "false").lower() == "true"  # experimental
@@ -48,7 +48,12 @@ ENABLE_BING             = os.getenv("ENABLE_BING",             "true").lower()  
 
 
 # SerpAPI
-#SERPAPI_KEY             = os.getenv("SERPAPI_KEY", "")
+SERPAPI_KEY             = os.getenv("SERPAPI_KEY", "")
+
+# Bright Data
+ENABLE_BRIGHTDATA       = os.getenv("ENABLE_BRIGHTDATA",       "true").lower()  == "true"
+BRIGHTDATA_KEY          = os.getenv("BRIGHTDATA_KEY", "")
+BRIGHTDATA_ZONE         = os.getenv("BRIGHTDATA_ZONE", "serp_api1")
 
 # Google Custom Search Engine
 GOOGLE_CSE_KEY          = os.getenv("GOOGLE_CSE_KEY", "")
@@ -155,3 +160,23 @@ DATA_FOLDER             = "data"
 
 # Old code used SEARCH_ENGINE — map it to SEARCH_PROVIDER so nothing breaks.
 SEARCH_ENGINE = SEARCH_PROVIDER
+
+# Configurable Cache Key Strategy for directory/platform domains
+CACHE_KEY_STRATEGY = {
+    "linkedin.com": "url",
+    "clutch.co": "url",
+    "goodfirms.co": "url",
+    "github.com": "url",
+    "yellowpages.com": "url",
+    "indiamart.com": "url",
+    "justdial.com": "url",
+    "*": "domain"
+}
+
+# Enforced query budget (physical search queries limit)
+MAX_QUERIES_BUDGET = int(os.getenv("MAX_QUERIES_BUDGET", "20"))
+
+# Brave Search settings
+ENABLE_BRAVE = os.getenv("ENABLE_BRAVE", "true").lower() == "true"
+BRAVE_SEARCH_API_KEY = os.getenv("BRAVE_SEARCH_API_KEY", "")
+

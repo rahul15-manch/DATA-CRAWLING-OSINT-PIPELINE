@@ -1,0 +1,24 @@
+{
+  "timestamp": "2026-07-17T14:47:53.278722",
+  "query": "site:linkedin.com/in \"Python Developer\" founder OR CEO OR director",
+  "classification": "ZERO_RESULTS_PAGE",
+  "url": "https://www.google.com/search?q=site%3Alinkedin.com%2Fin+%22Python+Developer%22+founder+OR+CEO+OR+director&num=5&hl=en&gl=us",
+  "status_code": 200,
+  "redirect_chain": [
+    "https://www.google.com/search?q=site%3Alinkedin.com%2Fin+%22Python+Developer%22+founder+OR+CEO+OR+director&num=5&hl=en&gl=us"
+  ],
+  "response_headers": {
+    "date": "Fri, 17 Jul 2026 09:17:49 GMT",
+    "server": "gws",
+    "last-modified": "Tue, 10 Aug 2021 19:13:45 GMT",
+    "content-type": "text/html; charset=UTF-8",
+    "cache-control": "public, max-age=2592000",
+    "content-length": "329596",
+    "x-xss-protection": "0",
+    "x-frame-options": "SAMEORIGIN"
+  },
+  "layout_fingerprint": "45436513194919d0c4b275976672dc7d",
+  "detected_signals": [
+    "did not match any documents"
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "python noida": {
+    "Python": {
+      "seen": 3,
+      "accepted": 3,
+      "confidence": 1.0,
+      "target_field": "concepts",
+      "last_seen": "2026-07-17"
+    }
+  },
+  "python": {
+    "Python": {
+      "seen": 4,
+      "accepted": 2,
+      "confidence": 0.5,
+      "first_seen": "2026-07-17",
+      "last_seen": "2026-07-17",
+      "target_field": "concepts"
+    }
+  },
+  "hardware": {}
+}

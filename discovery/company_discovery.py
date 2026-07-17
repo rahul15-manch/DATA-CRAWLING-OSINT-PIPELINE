@@ -283,104 +283,182 @@ def _url_path_looks_like_listing(url: str) -> bool:
     return any(signal in full_path for signal in listing_signals)
 
 
-def classify_company_page(url: str, title: str = "") -> str:
-    """Classify a candidate page before final validation.
+def get_root_company_url(url: str) -> str:
+    parsed = urlparse(url)
+    domain = parsed.netloc.lower()
+    if _is_platform_domain(url):
+        return url
+    return f"{parsed.scheme}://{parsed.netloc}"
 
-    Returns one of: DIRECT_COMPANY, DIRECTORY_COMPANY, DIRECTORY_LIST,
-    ARTICLE, BLOG, CATEGORY, LANDING_PAGE.
+
+def classify_page_type_with_confidence(url: str, title: str = "") -> tuple[str, float]:
+    """
+    Classify page kind into expanded taxonomy:
+    - COMPANY_HOMEPAGE
+    - COMPANY_PROFILE
+    - DIRECTORY_LIST
+    - MARKETPLACE
+    - BLOG
+    - ARTICLE
+    - NEWS
+    - SOCIAL
+    - DOCUMENTATION
+    - FORUM
+    - JOB_POSTING
+    - CAREERS
+    - UNKNOWN
+
+    Returns (page_type, confidence_score)
     """
     url = url or ""
     title = title or ""
     lowered_url = url.lower()
     lowered_title = title.lower()
+    parsed = urlparse(lowered_url)
+    domain = parsed.netloc
+    path = parsed.path
 
-    if not url:
-        return "CATEGORY"
+    def is_platform():
+        return any(platform in domain for platform in PLATFORM_DOMAINS)
 
-    if _title_contains_informational_term(title) or _url_path_contains_educational_signal(url):
-        if "blog" in lowered_url or "news" in lowered_url or "article" in lowered_url:
+    # 1. SOCIAL
+    social_domains = {"linkedin.com", "facebook.com", "twitter.com", "x.com", "instagram.com", "youtube.com", "reddit.com", "pinterest.com"}
+    if any(sd in domain for sd in social_domains):
+        if "linkedin.com/company" in lowered_url:
+            return "COMPANY_PROFILE", 0.98
+        return "SOCIAL", 0.99
+
+    # 2. COMPANY_PROFILE
+    if "clutch.co/profile/" in lowered_url:
+        return "COMPANY_PROFILE", 0.98
+    if "goodfirms.co/company/" in lowered_url:
+        return "COMPANY_PROFILE", 0.98
+    if "crunchbase.com/organization/" in lowered_url:
+        return "COMPANY_PROFILE", 0.98
+    if "wellfound.com/company/" in lowered_url:
+        return "COMPANY_PROFILE", 0.98
+    if "zoominfo.com/c/" in lowered_url:
+        return "COMPANY_PROFILE", 0.98
+    if "apollo.io/companies/" in lowered_url:
+        return "COMPANY_PROFILE", 0.98
+    
+    if "github.com/" in lowered_url:
+        parts = [p for p in path.split("/") if p]
+        if len(parts) == 1 and parts[0] not in {"features", "marketplace", "pricing", "trending", "explore", "topics", "collections", "login", "join", "search", "about"}:
+            return "COMPANY_PROFILE", 0.95
+        if len(parts) == 2 and parts[0] == "orgs":
+            return "COMPANY_PROFILE", 0.95
+
+    # 3. DIRECTORY_LIST
+    if "clutch.co" in domain and ("/search" in path or "/companies" in path or "/directory" in path):
+        return "DIRECTORY_LIST", 0.97
+    if "goodfirms.co" in domain and ("/search" in path or "/directory" in path or "/companies" in path):
+        return "DIRECTORY_LIST", 0.97
+    if "crunchbase.com" in domain and "/discover/" in path:
+        return "DIRECTORY_LIST", 0.97
+    if _url_path_looks_like_listing(lowered_url):
+        return "DIRECTORY_LIST", 0.95
+    if any(term in lowered_title for term in ("top companies", "best companies", "top software", "best software", "directories", "directory list", "list of best")):
+        return "DIRECTORY_LIST", 0.92
+
+    # 4. MARKETPLACE
+    if any(token in domain for token in ("play.google.com", "apps.apple.com", "chromewebstore.google.com")):
+        return "MARKETPLACE", 0.99
+    if "amazon.com" in domain or "ebay.com" in domain:
+        return "MARKETPLACE", 0.95
+
+    # 5. JOB_POSTING / CAREERS
+    if "indeed.com" in domain or "glassdoor.com" in domain:
+        if "job" in path or "viewjob" in lowered_url:
+            return "JOB_POSTING", 0.95
+        return "CAREERS", 0.90
+    if "/job/" in path or "/jobs/" in path or "/careers/" in path or "/join-us" in path or "/careers-at/" in path:
+        if re.search(r'\d+$', path) or "jobid" in lowered_url or "job_id" in lowered_url:
+            return "JOB_POSTING", 0.90
+        return "CAREERS", 0.95
+
+    # 6. DOCUMENTATION
+    if "docs." in domain or "/docs/" in path or "/documentation/" in path or "/api-reference/" in path:
+        return "DOCUMENTATION", 0.92
+
+    # 7. FORUM
+    if any(fd in domain for fd in ("stackoverflow.com", "quora.com", "discourse", "reddit.com")) or "forum" in path or "forums" in path:
+        return "FORUM", 0.95
+
+    # 8. BLOG / ARTICLE / NEWS
+    if "blog" in domain or "/blog" in path or "/blogs/" in path or "/post/" in path:
+        return "BLOG", 0.95
+    if "wikipedia.org" in domain:
+        return "ARTICLE", 0.99
+    if any(term in domain for term in ("techcrunch.com", "forbes.com", "nytimes.com", "bloomberg.com", "reuters.com", "medium.com")):
+        return "NEWS", 0.95
+    if _url_path_contains_educational_signal(lowered_url) or _title_contains_informational_term(lowered_title):
+        if "news" in lowered_url or "press" in lowered_url:
+            return "NEWS", 0.90
+        if "blog" in lowered_url:
+            return "BLOG", 0.90
+        return "ARTICLE", 0.90
+
+    # 9. COMPANY_HOMEPAGE
+    if not is_platform() and not _is_non_company_domain(lowered_url):
+        if path in {"", "/", "/index.html", "/index.php", "/home"}:
+            return "COMPANY_HOMEPAGE", 0.90
+
+    return "UNKNOWN", 0.40
+
+
+def classify_company_page(url: str, title: str = "") -> str:
+    """Classify a candidate page before final validation."""
+    page_type, _ = classify_page_type_with_confidence(url, title)
+    if page_type == "COMPANY_HOMEPAGE":
+        return "DIRECT_COMPANY"
+    elif page_type == "COMPANY_PROFILE":
+        return "DIRECTORY_COMPANY"
+    elif page_type == "DIRECTORY_LIST":
+        return "DIRECTORY_LIST"
+    elif page_type in {"BLOG", "ARTICLE", "NEWS"}:
+        lowered_url = (url or "").lower()
+        if "blog" in lowered_url or "news" in lowered_url:
             return "BLOG"
         return "ARTICLE"
-
-    if _is_platform_domain(url):
-        if _url_path_looks_like_company_profile(url):
-            return "DIRECTORY_COMPANY"
-        if _url_path_looks_like_listing(url):
-            return "DIRECTORY_LIST"
-        if any(term in lowered_title for term in ("company", "firm", "agency", "profile")):
-            return "DIRECTORY_COMPANY"
-        return "LANDING_PAGE"
-
-    if _is_non_company_domain(url):
-        if "blog" in lowered_url or "news" in lowered_url or "article" in lowered_url:
-            return "BLOG"
+    elif page_type == "CAREERS":
         return "CATEGORY"
-
-    if _url_path_looks_like_listing(url):
-        return "CATEGORY"
-
-    return "DIRECT_COMPANY"
+    return "CATEGORY"
 
 
 def classify_result(result: dict) -> tuple[str, str | None]:
-    """Classify search result into ALLOW, LIKELY_COMPANY, UNKNOWN, REJECT."""
-    title = (result.get("title") or "").lower()
+    """Classify search result into ALLOW, LIKELY_COMPANY, UNKNOWN, REJECT, DIRECTORY_LIST."""
     url = (result.get("url") or "").lower()
-
+    title = (result.get("title") or "").lower()
+    
     if not url:
         return "REJECT", "INVALID_URL"
 
-    # Social/app store rules (standard REJECT)
-    if any(token in url for token in ("play.google.com", "apps.apple.com", "chromewebstore.google.com")):
-        return "REJECT", "APP_STORE"
+    page_type, conf = classify_page_type_with_confidence(url, title)
 
-    if any(token in url for token in ("wikipedia.org", "youtube.com", "facebook.com", "instagram.com", "twitter.com", "reddit.com", "medium.com", "blogspot", "wordpress", "githubusercontent", "gist.github")):
-        return "REJECT", "SOCIAL_MEDIA"
-
-    # Check listing / category patterns first (standard REJECT)
-    if _url_path_looks_like_listing(url):
-        return "REJECT", "LISTING_PAGE"
-
-    if _url_path_contains_educational_signal(url) or _title_contains_informational_term(title):
-        return "REJECT", "INFORMATIONAL"
-
-    # Profile overrides (ALLOW)
-    if "linkedin.com/company" in url or "linkedin.com/school" in url:
-        return "ALLOW", "LINKEDIN_COMPANY"
-    if "clutch.co/profile/" in url:
-        return "ALLOW", "CLUTCH_PROFILE"
-    if "goodfirms.co/company/" in url:
-        return "ALLOW", "GOODFIRMS_PROFILE"
-    if "crunchbase.com/organization/" in url:
-        return "ALLOW", "CRUNCHBASE_ORG"
-    if "github.com/" in url:
-        parts = [p for p in urlparse(url).path.split("/") if p]
-        if len(parts) == 1 and parts[0] not in {"features", "marketplace", "pricing", "trending", "explore", "topics", "collections", "login", "join", "search", "about"}:
-            return "ALLOW", "GITHUB_ORG"
-        if len(parts) == 2 and parts[0] == "orgs":
-            return "ALLOW", "GITHUB_ORG"
-
-    # LIKELY_COMPANY signals
-    path = urlparse(url).path.lower()
-    if any(sig in path for sig in ("/company/", "/about", "/contact", "/team", "/careers", "/profile/")):
-        return "LIKELY_COMPANY", "COMPANY_PATH_SIGNAL"
-
-    # If it is a generic private website (non-platform, non-social, etc.)
-    if not _is_platform_domain(url) and not _is_non_company_domain(url):
-        if path in {"", "/", "/index.html", "/index.php"}:
-            return "ALLOW", "COMPANY_ROOT_WEBSITE"
-        return "LIKELY_COMPANY", "COMPANY_WEBSITE"
+    if conf >= 0.8:
+        if page_type == "COMPANY_HOMEPAGE":
+            return "ALLOW", "COMPANY_HOMEPAGE"
+        if page_type == "COMPANY_PROFILE":
+            return "ALLOW", "COMPANY_PROFILE"
+        if page_type == "DIRECTORY_LIST":
+            return "DIRECTORY_LIST", "DIRECTORY_LIST"
+        if page_type in {"CAREERS", "JOB_POSTING"} and not _is_platform_domain(url) and not _is_non_company_domain(url):
+            return "ALLOW", "CAREERS_HOMEPAGE_REDIRECT"
+        return "REJECT", f"HIGH_CONF_{page_type}"
 
     return "UNKNOWN", "AMBIGUOUS"
 
 
 def should_ignore_result(result: dict) -> bool:
     """Filter search results based on the new classification categories."""
+    url = result.get("url", "")
+    if "crunchbase.com" in url:
+        return True
+        
     classification, reason = classify_result(result)
     
-    # We accept ALLOW, LIKELY_COMPANY.
-    # UNKNOWN candidates will be evaluated later via light homepage crawl.
-    if classification in {"ALLOW", "LIKELY_COMPANY", "UNKNOWN"}:
+    if classification in {"ALLOW", "LIKELY_COMPANY", "UNKNOWN", "DIRECTORY_LIST"}:
         result["classification"] = classification
         if DEBUG:
             print(f"[Discovery] Candidate: {result.get('url')} | Category: {classification} ({reason})")
@@ -389,6 +467,144 @@ def should_ignore_result(result: dict) -> bool:
     if DEBUG:
         print(f"[Discovery] Rejected: {result.get('url')} | Category: {classification} ({reason})")
     return True
+
+
+def evaluate_direct_homepage(homepage_url: str, title: str, snippet: str, query_or_keyword: str, provider: str, ranker) -> dict | None:
+    from discovery.homepage_evaluator import _fetch_homepage
+    html = _fetch_homepage(homepage_url)
+    if html:
+        from query.expansion import record_query_outcome
+        record_query_outcome(query_or_keyword, "homepage_crawled", provider=provider)
+        sre_res = ranker.score_snippet(title, snippet, query_or_keyword, url=homepage_url)
+        sre_res = ranker.score_html(html, query_or_keyword, sre_res, url=homepage_url)
+        if sre_res["score"] >= config.RELEVANCE_THRESHOLD_LOW:
+            return {
+                "url": homepage_url,
+                "relevance_score": sre_res["score"],
+                "relevance_tier": sre_res["tier"],
+                "relevance_info": sre_res
+            }
+    return None
+
+
+def score_html_content(html: str, url: str, title: str, snippet: str, query_or_keyword: str, provider: str, ranker) -> dict | None:
+    from query.expansion import record_query_outcome
+    record_query_outcome(query_or_keyword, "homepage_crawled", provider=provider)
+    sre_res = ranker.score_snippet(title, snippet, query_or_keyword, url=url)
+    sre_res = ranker.score_html(html, query_or_keyword, sre_res, url=url)
+    if sre_res["score"] >= config.RELEVANCE_THRESHOLD_LOW:
+        return {
+            "url": url,
+            "relevance_score": sre_res["score"],
+            "relevance_tier": sre_res["tier"],
+            "relevance_info": sre_res
+        }
+    return None
+
+
+def evaluate_url(url: str, title: str, snippet: str, query_or_keyword: str, provider: str) -> dict | None:
+    from discovery.semantic_ranking_engine import SemanticRanker
+    ranker = SemanticRanker()
+
+    page_type, page_conf = classify_page_type_with_confidence(url, title)
+
+    # 1. CAREERS / JOB_POSTING -> Root Homepage redirection
+    if page_type in {"CAREERS", "JOB_POSTING"} and not _is_platform_domain(url) and not _is_non_company_domain(url):
+        root_url = get_root_company_url(url)
+        if root_url and root_url != url:
+            url = root_url
+            page_type = "COMPANY_HOMEPAGE"
+            page_conf = 0.90
+
+    # 2. Early rejection gate for high confidence non-company pages
+    if page_conf >= 0.8 and page_type in {"ARTICLE", "BLOG", "NEWS", "SOCIAL", "DOCUMENTATION", "FORUM", "MARKETPLACE", "JOB_POSTING", "CAREERS"}:
+        from utils.stats_tracker import record_rejection
+        record_rejection(f"page_type_{page_type.lower()}")
+        return None
+
+    # 3. COMPANY_PROFILE -> Homepage Extraction & Evaluation with profile fallback
+    if page_type == "COMPANY_PROFILE":
+        from discovery.homepage_evaluator import _fetch_homepage
+        profile_html = _fetch_homepage(url)
+        if profile_html:
+            from bs4 import BeautifulSoup
+            soup = BeautifulSoup(profile_html, "html.parser")
+            homepage_url, _ = ranker.extractor._extract_website(soup, profile_html, url)
+            if homepage_url and homepage_url.strip() and not _is_platform_domain(homepage_url):
+                homepage_res = evaluate_direct_homepage(homepage_url, title, snippet, query_or_keyword, provider, ranker)
+                if homepage_res:
+                    return homepage_res
+            profile_res = score_html_content(profile_html, url, title, snippet, query_or_keyword, provider, ranker)
+            if profile_res:
+                return profile_res
+
+    # 4. DIRECT_COMPANY / COMPANY_HOMEPAGE / or general page type
+    sre_res = ranker.score_snippet(title, snippet, query_or_keyword, url=url)
+    relevance_score = sre_res["score"]
+    tier = sre_res["tier"]
+
+    if relevance_score >= config.RELEVANCE_THRESHOLD_HIGH:
+        from semantic.semantic_cache import get_cached_company
+        cached_profile = get_cached_company(url)
+        if cached_profile:
+            sre_res["website"] = cached_profile.website
+            sre_res["website_source"] = cached_profile.website_source
+            sre_res["industry"] = ranker.detect_industry(
+                cached_profile.sections.get("homepage", "") + " " + cached_profile.description.get("value", "")
+            )
+            return {
+                "url": url,
+                "relevance_score": relevance_score,
+                "relevance_tier": "HIGH",
+                "relevance_info": sre_res
+            }
+        else:
+            from discovery.homepage_evaluator import _fetch_homepage
+            html = _fetch_homepage(url)
+            if html:
+                from query.expansion import record_query_outcome
+                record_query_outcome(query_or_keyword, "homepage_crawled", provider=provider)
+                sre_res = ranker.score_html(html, query_or_keyword, sre_res, url=url)
+                if sre_res["score"] >= config.RELEVANCE_THRESHOLD_LOW:
+                    return {
+                        "url": url,
+                        "relevance_score": sre_res["score"],
+                        "relevance_tier": sre_res["tier"],
+                        "relevance_info": sre_res
+                    }
+            else:
+                return {
+                    "url": url,
+                    "relevance_score": relevance_score,
+                    "relevance_tier": "HIGH",
+                    "relevance_info": sre_res
+                }
+    elif relevance_score >= config.RELEVANCE_THRESHOLD_LOW:
+        from discovery.homepage_evaluator import _fetch_homepage
+        html = _fetch_homepage(url)
+        if html:
+            from query.expansion import record_query_outcome
+            record_query_outcome(query_or_keyword, "homepage_crawled", provider=provider)
+            sre_res = ranker.score_html(html, query_or_keyword, sre_res, url=url)
+            if sre_res["score"] >= config.RELEVANCE_THRESHOLD_LOW:
+                return {
+                    "url": url,
+                    "relevance_score": sre_res["score"],
+                    "relevance_tier": sre_res["tier"],
+                    "relevance_info": sre_res
+                }
+        else:
+            return {
+                "url": url,
+                "relevance_score": relevance_score,
+                "relevance_tier": tier,
+                "relevance_info": sre_res
+            }
+    else:
+        from utils.stats_tracker import record_rejection
+        record_rejection("semantic_low_score")
+
+    return None
 
 
 def validate_company_record(company: dict) -> tuple:
@@ -541,6 +757,27 @@ def guess_company_name(result: dict) -> str:
     return guessed_name
 
 
+def interleave_urls_by_domain(candidate_tuples: list) -> list:
+    """Interleave tuples of (url, dir_title, dir_family) by the domain of the url.
+    Allows round-robin scheduling across directory domains.
+    """
+    from urllib.parse import urlparse
+    from collections import defaultdict
+    domain_map = defaultdict(list)
+    for tup in candidate_tuples:
+        url = tup[0]
+        domain = urlparse(url).netloc.lower()
+        domain_map[domain].append(tup)
+    
+    interleaved = []
+    # Round-robin retrieval
+    while any(domain_map.values()):
+        for domain in list(domain_map.keys()):
+            if domain_map[domain]:
+                interleaved.append(domain_map[domain].pop(0))
+    return interleaved
+
+
 # ─────────────────────────────────────────────────────────────────────────────
 # Main discovery function  (Tasks 2, 4, 5, 11, 12)
 # ─────────────────────────────────────────────────────────────────────────────
@@ -615,6 +852,9 @@ def discover_companies(keyword: str) -> list:
 
     # key → company dict (dedup by company name during accumulation)
     accumulator: dict[str, dict] = {}
+    directory_urls_to_mine = []
+    mined_directory_urls = set()
+    processed_company_urls = set()
     consecutive_zero_queries = 0
     family_zeroes: dict[str, int] = defaultdict(int)
     homepage_evals = 0
@@ -714,6 +954,14 @@ def discover_companies(keyword: str) -> list:
             if should_ignore_result(result):
                 stats.increment("rejected_results")
                 rejected_count_total += 1
+                continue
+
+            # Route DIRECTORY_LIST results to the secondary mining queue
+            if result.get("classification") == "DIRECTORY_LIST":
+                directory_urls_to_mine.append((url, result.get("title", ""), family))
+                stats.increment("directory_queued")
+                if DEBUG:
+                    print(f"[Discovery] Queued directory for mining: {url}")
                 continue
 
             from discovery.semantic_ranking_engine import SemanticRanker
@@ -924,6 +1172,101 @@ def discover_companies(keyword: str) -> list:
         # Refill batch if scheduler is empty
         if scheduler.is_empty():
             enqueue_next_batch(5)
+
+    # ── Process Directory Queue (Secondary Queue) ──────────────────────────────
+    if directory_urls_to_mine:
+        print(f"\n[Discovery] Processing directory queue: {len(directory_urls_to_mine)} directories collected")
+        from discovery.directory_extractor import extract_company_links
+        from discovery.homepage_evaluator import _fetch_homepage
+        import random
+        
+        all_candidate_profiles = []
+        for dir_url, dir_title, dir_family in directory_urls_to_mine:
+            print(f"[Discovery] Mining directory: {dir_url}")
+            dir_html = _fetch_homepage(dir_url)
+            if not dir_html:
+                print(f"[Discovery] Failed to fetch directory page: {dir_url}")
+                continue
+                
+            extracted_links = extract_company_links(dir_html, dir_url)
+            print(f"[Discovery] Extracted {len(extracted_links)} links from directory {dir_url}")
+            stats.increment("directory_mined", len(extracted_links))
+            
+            for ext_url in extracted_links:
+                if ext_url not in processed_company_urls:
+                    all_candidate_profiles.append((ext_url, dir_title, dir_family))
+                    
+        # Interleave candidates by domain
+        interleaved_candidates = interleave_urls_by_domain(all_candidate_profiles)
+        print(f"[Discovery] Interleaved {len(interleaved_candidates)} directory candidate profiles across domains.")
+        
+        last_domain = None
+        for ext_url, dir_title, dir_family in interleaved_candidates:
+            if "crunchbase.com" in ext_url:
+                continue
+            if ext_url in processed_company_urls:
+                continue
+                
+            # Extra gentle spacing between requests to same domain
+            from urllib.parse import urlparse
+            current_domain = urlparse(ext_url).netloc.lower()
+            if current_domain == last_domain:
+                delay = random.uniform(1.0, 2.5)
+                time.sleep(delay)
+            last_domain = current_domain
+            
+            # Evaluate company profile or direct URL
+            eval_res = evaluate_url(ext_url, "", "", keyword, dir_family)
+            if not eval_res:
+                continue
+                
+            processed_company_urls.add(eval_res["url"])
+            
+            # Guess company name
+            result_mock = {"title": "", "snippet": "", "url": eval_res["url"]}
+            company_name = guess_company_name(result_mock)
+            if not company_name:
+                continue
+                
+            sre_res = eval_res["relevance_info"]
+            relevance_score = eval_res["relevance_score"]
+            tier = eval_res["relevance_tier"]
+            
+            print(f"[SRE Directory Lead] Company: {company_name} | Score: {relevance_score} | Tier: {tier} | Industry: {sre_res.get('industry')}")
+            
+            stats.increment("funnel_business_accepted")
+            accepted_count_total += 1
+            key = company_name.lower()
+            source = detect_source(eval_res["url"])
+            
+            new_record = {
+                "company": company_name,
+                "website": sre_res.get("website") or None,
+                "website_source": sre_res.get("website_source") or None,
+                "linkedin": None,
+                "source_url": eval_res["url"],
+                "industry": keyword,
+                "query": dir_title or keyword,
+                "location": None,
+                "source": source,
+                "classification": "UNKNOWN",
+                "relevance_score": relevance_score,
+                "relevance_tier": tier,
+                "relevance_info": sre_res,
+                "industry_detected": sre_res.get("industry", "Unknown"),
+            }
+
+            if "linkedin.com" in eval_res["url"]:
+                new_record["linkedin"] = eval_res["url"]
+            elif not _is_platform_domain(ext_url):
+                new_record["website"] = eval_res["url"]
+            
+            if key in accumulator:
+                accumulator[key] = best_company_record(accumulator[key], new_record)
+                unique_sources.add(accumulator[key]["source"])
+            else:
+                accumulator[key] = new_record
+                unique_sources.add(source)
 
     # ── Task Preservation ──────────────────────────────────────────────────
     remaining = []

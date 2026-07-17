@@ -1,144 +1,72 @@
-"""
-discovery/semantic_ranking_engine.py
-====================================
-Explainable Semantic Ranking Engine (SRE) for Pillar 1.
-Implements dynamic concept expansion, normalized scoring, metadata-only parse optimization,
-and online weight learning.
-"""
-
 import os
 import json
 import re
+import time
+import math
 from abc import ABC, abstractmethod
-from bs4 import BeautifulSoup
 
-# ---------- Constants & Default Configurations ----------
+import utils.stats_tracker as stats
+from semantic.semantic_profile import IntentProfile, CompanyProfile
+from semantic.ontology_manager import OntologyManager, ONTOLOGY_VERSION
+from semantic.semantic_intent_resolver import SemanticIntentResolver
+from semantic.company_semantic_extractor import CompanySemanticExtractor
+from semantic.semantic_matcher import WeightedMatcher, load_semantic_weights
+from semantic.semantic_cache import get_cached_intent, set_cached_intent, get_cached_company, set_cached_company
 
-DEFAULT_WEIGHTS = {
-    "title": 15.0,
-    "meta_description": 20.0,
-    "search_snippet": 15.0,
-    "roles": 10.0,
-    "about_page": 20.0,
-    "services_page": 20.0,
-    "homepage_body": 15.0,
-    "schema_org": 10.0,
-    "og": 5.0,
-    "json_ld": 10.0,
-}
+# ---------- Legacy / Online Weights Learning Wrapper ----------
 
-BOOTSTRAP_SEMANTICS = {
-    "automation": [
-        "automation", "plc", "scada", "industrial control", "factory automation", 
-        "robotics", "rpa", "uipath", "blue prism", "industrial automation",
-        "siemens", "abb", "rockwell", "fanuc", "kuka", "iiot", "mechatronics"
-    ],
-    "ai": [
-        "ai", "artificial intelligence", "machine learning", "ml", "nlp", "llm", 
-        "deep learning", "computer vision", "generative ai", "neural network", 
-        "natural language processing", "langchain", "rag", "ollama", "vector db", 
-        "pytorch", "tensorflow", "transformers", "gpt"
-    ],
-    "fintech": [
-        "payment gateway", "blockchain", "billing", "accounting", "invoicing", 
-        "finance", "banking", "cryptocurrency", "smart contract", "credit", 
-        "microfinance", "trading", "ledger", "fintech"
-    ],
-    "healthcare": [
-        "medical software", "digital health", "telemedicine", "electronic health records", 
-        "ehr", "clinical trials", "healthcare technology", "patient care", 
-        "medical devices", "healthtech", "clinic"
-    ],
-    "ecommerce": [
-        "ecommerce", "digital commerce", "retail tech", "payment gateway", 
-        "shopping cart", "shopify", "online store", "marketplace", "d2c", 
-        "b2c", "retailer"
-    ],
-    "logistics": [
-        "supply chain", "freight forwarding", "shipping", "tracking", 
-        "warehouse management", "fleet management", "delivery solutions", "logistics"
-    ],
-    "marketing": [
-        "seo", "digital marketing", "content marketing", "lead generation", 
-        "branding", "media buying", "social media marketing", "advertising", "adtech"
-    ],
-    "cybersecurity": [
-        "threat detection", "network security", "penetration testing", "firewall", 
-        "encryption", "identity access", "endpoint protection", "zero trust", 
-        "cybersecurity", "infosec"
-    ],
-    "iot": [
-        "internet of things", "connected devices", "smart hardware", "sensors", 
-        "embedded systems", "firmware", "iot"
-    ],
-    "gaming": [
-        "game studio", "esports", "unity", "unreal engine", "console gaming", 
-        "mobile gaming", "game dev"
-    ],
-    "legal": [
-        "legal software", "contract management", "case management", "document review", 
-        "e-discovery", "legaltech", "law firm"
-    ],
-    "edtech": [
-        "e-learning", "lms", "virtual classroom", "online courses", 
-        "educational technology", "training platform", "edtech"
-    ],
-    "agriculture": [
-        "smart farming", "crop monitoring", "agricultural technology", 
-        "precision agriculture", "irrigation solutions", "agritech"
-    ]
-}
-
-# In-memory batch feedback log
 _batch_feedback = []
 
-# ---------- Semantics & Weights IO Loader ----------
+def record_feedback(action: str, matched_signals: list[str]) -> None:
+    """Queue weight learning feedback logs."""
+    _batch_feedback.append((action, matched_signals))
 
-def load_industry_semantics() -> dict:
-    path = "data/industry_semantics.json"
-    os.makedirs("data", exist_ok=True)
-    if not os.path.exists(path):
-        with open(path, "w", encoding="utf-8") as f:
-            json.dump(BOOTSTRAP_SEMANTICS, f, indent=2, ensure_ascii=False)
-        return BOOTSTRAP_SEMANTICS
-    try:
-        with open(path, "r", encoding="utf-8") as f:
-            return json.load(f)
-    except Exception:
-        return BOOTSTRAP_SEMANTICS
+def apply_batch_learning() -> None:
+    """Save batch feedback logs to JSON weights exactly once at end-of-run."""
+    if not _batch_feedback:
+        return
 
-def load_relevance_weights() -> dict:
-    path = "data/relevance_weights.json"
-    os.makedirs("data", exist_ok=True)
-    if not os.path.exists(path):
-        with open(path, "w", encoding="utf-8") as f:
-            json.dump(DEFAULT_WEIGHTS, f, indent=2, ensure_ascii=False)
-        return DEFAULT_WEIGHTS
-    try:
-        with open(path, "r", encoding="utf-8") as f:
-            return json.load(f)
-    except Exception:
-        return DEFAULT_WEIGHTS
+    weights = load_semantic_weights()
+    for action, signals in _batch_feedback:
+        for sig in signals:
+            key = _signal_to_key(sig)
+            if key in weights:
+                if action == "reward":
+                    weights[key] = min(50.0, weights[key] + 0.5)
+                elif action == "penalize":
+                    weights[key] = max(1.0, weights[key] - 0.5)
 
-def save_relevance_weights(weights: dict) -> None:
-    path = "data/relevance_weights.json"
-    os.makedirs("data", exist_ok=True)
+    path = "data/semantic_weights.json"
     try:
         with open(path, "w", encoding="utf-8") as f:
             json.dump(weights, f, indent=2, ensure_ascii=False)
+        print("[SemanticRankingEngine] Configured B2B semantic weights updated.")
     except Exception as e:
         print(f"[SemanticRankingEngine] Error saving weights: {e}")
+        
+    _batch_feedback.clear()
+
+def _signal_to_key(signal_name: str) -> str:
+    mapping = {
+        "Description": "description",
+        "Services": "services",
+        "Technologies": "technologies",
+        "Products": "products",
+        "Positions": "positions",
+        "Blog/Articles": "blog"
+    }
+    return mapping.get(signal_name, "")
 
 # ---------- Ranking Base Class ----------
 
 class BaseRanker(ABC):
     @abstractmethod
-    def score_snippet(self, title: str, snippet: str, keyword: str) -> dict:
+    def score_snippet(self, title: str, snippet: str, keyword: str, url: str = "") -> dict:
         """Evaluate snippet-level relevance score."""
         pass
 
     @abstractmethod
-    def score_html(self, html: str, keyword: str, snippet_res: dict) -> dict:
+    def score_html(self, html: str, keyword: str, snippet_res: dict, url: str = "") -> dict:
         """Evaluate HTML-level deep relevance score."""
         pass
 
@@ -146,238 +74,54 @@ class BaseRanker(ABC):
 
 class SemanticRanker(BaseRanker):
     def __init__(self):
-        self.semantics = load_industry_semantics()
-        self.weights = load_relevance_weights()
-
-    def get_concepts(self, keyword: str) -> set[str]:
-        """Dynamically extract semantic concepts based on the keyword."""
-        keyword_clean = keyword.lower().strip()
-        concepts = {keyword_clean}
-
-        # Check in semantics values
-        for domain, terms in self.semantics.items():
-            if keyword_clean == domain or any(keyword_clean in t for t in terms):
-                concepts.update(terms)
-
-        # Word-split fallback
-        for w in keyword_clean.split():
-            if len(w) > 3:
-                concepts.add(w)
-
-        return concepts
-
-    def _matches_concept(self, text: str, concepts: set[str]) -> bool:
-        if not text:
-            return False
-        text_lower = text.lower()
-        for concept in concepts:
-            pattern = r'\b' + re.escape(concept) + r'\b'
-            if re.search(pattern, text_lower):
-                return True
-        return False
+        self.om = OntologyManager()
+        self.resolver = SemanticIntentResolver(self.om)
+        self.extractor = CompanySemanticExtractor()
+        self.matcher = WeightedMatcher()
 
     def detect_industry(self, text: str) -> str:
         if not text:
             return "Unknown"
         text_lower = text.lower()
-
         scores = {}
-        for domain, terms in self.semantics.items():
-            count = 0
-            for term in terms:
-                count += len(re.findall(r'\b' + re.escape(term) + r'\b', text_lower))
+        for domain, channels in self.om.ontology.items():
+            count = 0.0
+            matched_unique = set()
+            
+            for term in channels.get("concepts", []):
+                matches = len(re.findall(r'\b' + re.escape(term.lower()) + r'\b', text_lower))
+                if matches > 0:
+                    count += 2.0 * matches
+                    matched_unique.add(term.lower())
+            for term in channels.get("products", []):
+                matches = len(re.findall(r'\b' + re.escape(term.lower()) + r'\b', text_lower))
+                if matches > 0:
+                    count += 1.5 * matches
+                    matched_unique.add(term.lower())
+            for term in channels.get("services", []):
+                matches = len(re.findall(r'\b' + re.escape(term.lower()) + r'\b', text_lower))
+                if matches > 0:
+                    count += 1.5 * matches
+                    matched_unique.add(term.lower())
+            for term in channels.get("positions", []):
+                matches = len(re.findall(r'\b' + re.escape(term.lower()) + r'\b', text_lower))
+                if matches > 0:
+                    count += 1.0 * matches
+                    matched_unique.add(term.lower())
+                    
             if count > 0:
-                scores[domain] = count
-
+                total_terms = (
+                    len(channels.get("concepts", [])) +
+                    len(channels.get("products", [])) +
+                    len(channels.get("services", [])) +
+                    len(channels.get("positions", []))
+                )
+                # Normalize using square root of domain ontology size to balance specificity vs coverage
+                scores[domain] = count / math.sqrt(max(1, total_terms))
+                
         if not scores:
             return "Unknown"
-
         return max(scores, key=scores.get).title()
-
-    def score_snippet(self, title: str, snippet: str, keyword: str) -> dict:
-        concepts = self.get_concepts(keyword)
-
-        matched_signals = []
-        rejected_signals = []
-        score_breakdown = {}
-
-        # 1. Title
-        title_matched = self._matches_concept(title, concepts)
-        matched_signals.append("Title") if title_matched else rejected_signals.append("Title")
-        score_breakdown["title"] = self.weights["title"] if title_matched else 0.0
-
-        # 2. Search snippet
-        snippet_matched = self._matches_concept(snippet, concepts)
-        matched_signals.append("Search snippet") if snippet_matched else rejected_signals.append("Search snippet")
-        score_breakdown["search_snippet"] = self.weights["search_snippet"] if snippet_matched else 0.0
-
-        # 3. Meta description (placeholder representation on snippet-level)
-        meta_matched = self._matches_concept(snippet, concepts)
-        matched_signals.append("Meta description") if meta_matched else rejected_signals.append("Meta description")
-        score_breakdown["meta_description"] = self.weights["meta_description"] if meta_matched else 0.0
-
-        # 4. Roles
-        roles_list = ["engineer", "developer", "founder", "ceo", "director", "manager", "team", "president", "architect", "programmer"]
-        roles_matched = any(self._matches_concept(title + " " + snippet, {r}) for r in roles_list)
-        matched_signals.append("Employee roles") if roles_matched else rejected_signals.append("Employee roles")
-        score_breakdown["roles"] = self.weights["roles"] if roles_matched else 0.0
-
-        # Normalize snippet score (Sum of snippet weights = 60.0)
-        snippet_sum = 60.0
-        matched_sum = (
-            score_breakdown["title"] +
-            score_breakdown["meta_description"] +
-            score_breakdown["search_snippet"] +
-            score_breakdown["roles"]
-        )
-        score = int((matched_sum / snippet_sum) * 100)
-
-        detected_industry = self.detect_industry(title + " " + snippet)
-
-        return {
-            "score": score,
-            "tier": self.get_tier(score),
-            "matched_signals": matched_signals,
-            "rejected_signals": rejected_signals,
-            "score_breakdown": score_breakdown,
-            "industry": detected_industry,
-            "confidence": score / 100.0,
-            "aborted": False
-        }
-
-    def score_html(self, html: str, keyword: str, snippet_res: dict) -> dict:
-        concepts = self.get_concepts(keyword)
-        soup = BeautifulSoup(html, "html.parser")
-
-        # Start with snippet breakdown
-        matched_signals = list(snippet_res.get("matched_signals", []))
-        rejected_signals = list(snippet_res.get("rejected_signals", []))
-        score_breakdown = dict(snippet_res.get("score_breakdown", {}))
-
-        # Parse meta description from HTML (overwrites snippet-level guess)
-        meta_tag = soup.find("meta", attrs={"name": "description"})
-        meta_content = meta_tag.get("content", "") if meta_tag else ""
-        meta_matched = self._matches_concept(meta_content, concepts)
-        if meta_matched:
-            score_breakdown["meta_description"] = self.weights["meta_description"]
-            if "Meta description" not in matched_signals:
-                matched_signals.append("Meta description")
-            if "Meta description" in rejected_signals:
-                rejected_signals.remove("Meta description")
-
-        # OpenGraph
-        og_tag = soup.find("meta", attrs={"property": "og:description"}) or soup.find("meta", attrs={"property": "og:title"})
-        og_content = og_tag.get("content", "") if og_tag else ""
-        og_matched = self._matches_concept(og_content, concepts)
-        matched_signals.append("OpenGraph") if og_matched else rejected_signals.append("OpenGraph")
-        score_breakdown["og"] = self.weights["og"] if og_matched else 0.0
-
-        # JSON-LD
-        json_ld_matched = False
-        for script in soup.find_all("script", attrs={"type": "application/ld+json"}):
-            try:
-                json_data = script.get_text()
-                if self._matches_concept(json_data, concepts):
-                    json_ld_matched = True
-                    break
-            except Exception:
-                pass
-        matched_signals.append("JSON-LD") if json_ld_matched else rejected_signals.append("JSON-LD")
-        score_breakdown["json_ld"] = self.weights["json_ld"] if json_ld_matched else 0.0
-
-        # Schema.org Organization microdata
-        schema_matched = False
-        orgs = soup.find_all(attrs={"itemtype": re.compile(r"schema\.org/Organization")})
-        for org in orgs:
-            if self._matches_concept(org.get_text(), concepts):
-                schema_matched = True
-                break
-        matched_signals.append("Schema.org Organization") if schema_matched else rejected_signals.append("Schema.org Organization")
-        score_breakdown["schema_org"] = self.weights["schema_org"] if schema_matched else 0.0
-
-        # Metadata-only stop optimization
-        resolved_sum = (
-            score_breakdown.get("title", 0.0) +
-            score_breakdown.get("meta_description", 0.0) +
-            score_breakdown.get("search_snippet", 0.0) +
-            score_breakdown.get("roles", 0.0) +
-            score_breakdown.get("og", 0.0) +
-            score_breakdown.get("json_ld", 0.0) +
-            score_breakdown.get("schema_org", 0.0)
-        )
-        # Max additional potential from body signals: About (20) + Services (20) + Body (15) = 55.
-        if resolved_sum + 55.0 < 40.0:
-            # Cannot reach LOW relevance threshold, abort parsing
-            score = int((resolved_sum / 150.0) * 100)
-            return {
-                "score": score,
-                "tier": "REJECT",
-                "matched_signals": matched_signals,
-                "rejected_signals": rejected_signals + ["About page", "Services page", "Homepage body"],
-                "score_breakdown": score_breakdown,
-                "industry": snippet_res.get("industry", "Unknown"),
-                "confidence": score / 100.0,
-                "aborted": True
-            }
-
-        body_text = soup.get_text()
-
-        # Homepage body term density normalization
-        body_words = body_text.split()
-        total_words = len(body_words)
-        body_matched = False
-        if total_words > 0:
-            match_count = 0
-            body_text_lower = body_text.lower()
-            for concept in concepts:
-                match_count += len(re.findall(r'\b' + re.escape(concept) + r'\b', body_text_lower))
-            density = match_count / total_words
-            if density >= 0.005:  # 0.5% term density
-                body_matched = True
-
-        matched_signals.append("Homepage body") if body_matched else rejected_signals.append("Homepage body")
-        score_breakdown["homepage_body"] = self.weights["homepage_body"] if body_matched else 0.0
-
-        # About page link detection
-        about_matched = False
-        for a in soup.find_all("a", href=True):
-            href = a["href"].lower()
-            text = a.get_text().lower()
-            if "about" in href or "about" in text or "who-we-are" in href:
-                about_matched = True
-                break
-        matched_signals.append("About page") if about_matched else rejected_signals.append("About page")
-        score_breakdown["about_page"] = self.weights["about_page"] if about_matched else 0.0
-
-        # Services page link detection
-        services_matched = False
-        for a in soup.find_all("a", href=True):
-            href = a["href"].lower()
-            text = a.get_text().lower()
-            if any(term in href or term in text for term in ("services", "products", "solutions", "what-we-do")):
-                services_matched = True
-                break
-        matched_signals.append("Services page") if services_matched else rejected_signals.append("Services page")
-        score_breakdown["services_page"] = self.weights["services_page"] if services_matched else 0.0
-
-        # Full score calculation normalized to 150.0
-        total_sum = sum(self.weights.values())  # 150.0
-        final_score = sum(score_breakdown.values())
-        score = int((final_score / total_sum) * 100)
-
-        # Detect industry with full text
-        detected_industry = self.detect_industry(body_text)
-
-        return {
-            "score": score,
-            "tier": self.get_tier(score),
-            "matched_signals": matched_signals,
-            "rejected_signals": rejected_signals,
-            "score_breakdown": score_breakdown,
-            "industry": detected_industry,
-            "confidence": score / 100.0,
-            "aborted": False
-        }
 
     def get_tier(self, score: int) -> str:
         if score >= 80:
@@ -389,42 +133,100 @@ class SemanticRanker(BaseRanker):
         else:
             return "REJECT"
 
-# ---------- Batch Online Weight Learning Helper Functions ----------
+    def score_snippet(self, title: str, snippet: str, keyword: str, url: str = "") -> dict:
+        # 1. Resolve IntentProfile
+        t0 = time.time()
+        intent = get_cached_intent(keyword)
+        if not intent:
+            intent = self.resolver.resolve(keyword)
+            set_cached_intent(keyword, intent)
+        t_res_ms = (time.time() - t0) * 1000.0
+        stats.increment("time_intent_resolver_ms", int(t_res_ms))
+        stats.increment("count_intent_resolver")
 
-def record_feedback(action: str, matched_signals: list[str]) -> None:
-    """Queue feedback events in-memory to update weights on end-of-run."""
-    _batch_feedback.append((action, matched_signals))
+        # 2. Extract snippet-level CompanyProfile
+        t0 = time.time()
+        company = self.extractor.extract_from_snippet(title, snippet, url, self.om.version)
+        t_ext_ms = (time.time() - t0) * 1000.0
+        stats.increment("time_company_extractor_ms", int(t_ext_ms))
+        stats.increment("count_company_extractor")
+        
+        # 3. Match profiles
+        t0 = time.time()
+        res = self.matcher.match(intent, company)
+        t_match_ms = (time.time() - t0) * 1000.0
+        stats.increment("time_semantic_matcher_ms", int(t_match_ms))
+        stats.increment("count_semantic_matcher")
+        
+        return {
+            "score": res["score"],
+            "tier": self.get_tier(res["score"]),
+            "matched_signals": res["matched_signals"],
+            "rejected_signals": res["rejected_signals"],
+            "score_breakdown": res["score_breakdown"],
+            "industry": self.detect_industry(title + " " + snippet),
+            "confidence": res["confidence"],
+            "aborted": False,
+            "company_type": res["company_type"],
+            "semantic_trace": res["semantic_trace"],
+            "technologies": [t["value"] for t in company.technologies],
+            "products": [p["value"] for p in company.products],
+            "website": getattr(company, "website", ""),
+            "website_source": getattr(company, "website_source", "")
+        }
 
-def apply_batch_learning() -> None:
-    """Save batch feedback logs to JSON file weights exactly once at end-of-run."""
-    if not _batch_feedback:
-        return
+    def score_html(self, html: str, keyword: str, snippet_res: dict, url: str = "") -> dict:
+        # 1. Resolve IntentProfile
+        t0 = time.time()
+        intent = get_cached_intent(keyword)
+        if not intent:
+            intent = self.resolver.resolve(keyword)
+            set_cached_intent(keyword, intent)
+        t_res_ms = (time.time() - t0) * 1000.0
+        stats.increment("time_intent_resolver_ms", int(t_res_ms))
+        stats.increment("count_intent_resolver")
 
-    weights = load_relevance_weights()
-    for action, signals in _batch_feedback:
-        for sig in signals:
-            key = _signal_to_key(sig)
-            if key in weights:
-                if action == "reward":
-                    weights[key] = min(50.0, weights[key] + 0.5)
-                elif action == "penalize":
-                    weights[key] = max(1.0, weights[key] - 0.5)
+        # 2. Extract or Cache CompanyProfile
+        t0 = time.time()
+        company = None
+        if url:
+            company = get_cached_company(url)
 
-    save_relevance_weights(weights)
-    _batch_feedback.clear()
-    print("[SemanticRankingEngine] Online batch weight learning applied successfully.")
+        if not company:
+            company = self.extractor.extract_from_html(html, url, self.om.version, intent.concepts)
+            if url:
+                set_cached_company(url, company)
+        t_ext_ms = (time.time() - t0) * 1000.0
+        stats.increment("time_company_extractor_ms", int(t_ext_ms))
+        stats.increment("count_company_extractor")
 
-def _signal_to_key(signal_name: str) -> str:
-    mapping = {
-        "Title": "title",
-        "Meta description": "meta_description",
-        "Search snippet": "search_snippet",
-        "Employee roles": "roles",
-        "About page": "about_page",
-        "Services page": "services_page",
-        "Homepage body": "homepage_body",
-        "Schema.org Organization": "schema_org",
-        "OpenGraph": "og",
-        "JSON-LD": "json_ld"
-    }
-    return mapping.get(signal_name, "")
+        # 3. Match profiles
+        t0 = time.time()
+        res = self.matcher.match(intent, company)
+        t_match_ms = (time.time() - t0) * 1000.0
+        stats.increment("time_semantic_matcher_ms", int(t_match_ms))
+        stats.increment("count_semantic_matcher")
+
+        clean_profile_text = (
+            (company.description.get("value", "") if isinstance(company.description, dict) else str(company.description or "")) + " " +
+            company.sections.get("homepage", "") + " " +
+            company.sections.get("about", "") + " " +
+            company.sections.get("services", "")
+        )
+
+        return {
+            "score": res["score"],
+            "tier": self.get_tier(res["score"]),
+            "matched_signals": res["matched_signals"],
+            "rejected_signals": res["rejected_signals"],
+            "score_breakdown": res["score_breakdown"],
+            "industry": self.detect_industry(clean_profile_text),
+            "confidence": res["confidence"],
+            "aborted": False,
+            "company_type": res["company_type"],
+            "semantic_trace": res["semantic_trace"],
+            "technologies": [t["value"] for t in company.technologies],
+            "products": [p["value"] for p in company.products],
+            "website": getattr(company, "website", ""),
+            "website_source": getattr(company, "website_source", "")
+        }

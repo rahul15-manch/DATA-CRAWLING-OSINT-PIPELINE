@@ -65,12 +65,12 @@ def test_google_tier():
     print("✅ google_tier passed")
 
 def test_quarantine_backoff():
-    assert quarantine_duration(0) == 60.0,   "Step 0 → 60s"
-    assert quarantine_duration(1) == 120.0,  "Step 1 → 120s"
-    assert quarantine_duration(2) == 300.0,  "Step 2 → 300s"
-    assert quarantine_duration(3) == 600.0,  "Step 3 → 600s"
-    assert quarantine_duration(4) == 600.0,  "Step 4 → 600s (capped)"
-    assert quarantine_duration(99) == 600.0, "Step 99 → 600s (capped)"
+    assert quarantine_duration(0) == 30.0,   "Step 0 → 30s"
+    assert quarantine_duration(1) == 60.0,   "Step 1 → 60s"
+    assert quarantine_duration(2) == 120.0,  "Step 2 → 120s"
+    assert quarantine_duration(3) == 300.0,  "Step 3 → 300s"
+    assert quarantine_duration(4) == 300.0,  "Step 4 → 300s (capped)"
+    assert quarantine_duration(99) == 300.0, "Step 99 → 300s (capped)"
     print("✅ quarantine_backoff passed")
 
 def test_confidence():

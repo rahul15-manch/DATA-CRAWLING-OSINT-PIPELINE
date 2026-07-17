@@ -1,0 +1,203 @@
+{
+  "python noida": {
+    "ontology_version": "1.0.0",
+    "intent_profile": {
+      "primary_domain": "Python Noida",
+      "concepts": [
+        "Noida",
+        "Python Noida",
+        "Python"
+      ],
+      "positions": [
+        "Python Noida Specialist",
+        "Python Noida Developer",
+        "Python Noida Engineer"
+      ],
+      "services": [
+        "Python Noida Consulting",
+        "Python Noida Solutions",
+        "Python Noida Development"
+      ],
+      "products": [],
+      "ontology_version": "1.0.0"
+    }
+  },
+  "python automation noida": {
+    "ontology_version": "1.0.0",
+    "intent_profile": {
+      "primary_domain": "Automation",
+      "concepts": [
+        "Factory Automation",
+        "Scada",
+        "Rpa",
+        "Control Systems",
+        "Industrial Automation",
+        "Automation",
+        "Plc",
+        "Robotics",
+        "Mechatronics",
+        "IIoT",
+        "Mes",
+        "Dcs"
+      ],
+      "positions": [
+        "Control Engineer",
+        "Automation Engineer",
+        "Plc Programmer",
+        "Rpa Developer",
+        "Robotics Engineer"
+      ],
+      "services": [
+        "Plc Programming Services",
+        "Robotic Process Automation Implementation",
+        "Factory Automation Setup",
+        "Industrial Control Solutions"
+      ],
+      "products": [
+        "Rockwell",
+        "Abb",
+        "Siemens",
+        "Fanuc",
+        "Blue Prism",
+        "Kuka",
+        "Uipath"
+      ],
+      "confidence": 1.0,
+      "ontology_version": "1.0.0"
+    }
+  },
+  "python": {
+    "ontology_version": "1.0.0",
+    "intent_profile": {
+      "primary_domain": "Python",
+      "concepts": [
+        "Python"
+      ],
+      "positions": [
+        "Python Engineer",
+        "Python Developer",
+        "Python Specialist"
+      ],
+      "services": [
+        "Python Development",
+        "Python Solutions",
+        "Python Consulting"
+      ],
+      "products": [],
+      "confidence": 0.4,
+      "ontology_version": "1.0.0"
+    }
+  },
+  "ai": {
+    "ontology_version": "1.0.0",
+    "intent_profile": {
+      "primary_domain": "Ai",
+      "concepts": [
+        "Deep Learning",
+        "Computer Vision",
+        "Generative AI",
+        "NLP",
+        "Nlp",
+        "Llm",
+        "Ai",
+        "Neural Network",
+        "Transformers",
+        "Gpt",
+        "Rag",
+        "Vector DB",
+        "Ml"
+      ],
+      "positions": [
+        "Nlp Engineer",
+        "Machine Learning Engineer",
+        "Data Scientist",
+        "Ml Engineer",
+        "Computer Vision Specialist",
+        "Ai Engineer"
+      ],
+      "services": [
+        "Llm Fine-Tuning",
+        "Ai Consulting",
+        "Generative Ai Development",
+        "Machine Learning Solutions"
+      ],
+      "products": [
+        "Crewai",
+        "Claude",
+        "Openai",
+        "Dspy",
+        "Gemini",
+        "Ollama",
+        "Chatgpt",
+        "Langchain"
+      ],
+      "confidence": 1.0,
+      "ontology_version": "1.0.0"
+    }
+  },
+  "hardware": {
+    "ontology_version": "1.0.0",
+    "intent_profile": {
+      "primary_domain": "Hardware",
+      "concepts": [
+        "Hardware"
+      ],
+      "positions": [
+        "Hardware Specialist",
+        "Hardware Developer",
+        "Hardware Engineer"
+      ],
+      "services": [
+        "Hardware Consulting",
+        "Hardware Solutions",
+        "Hardware Development"
+      ],
+      "products": [],
+      "confidence": 0.4,
+      "ontology_version": "1.0.0"
+    }
+  },
+  "hardware software company": {
+    "ontology_version": "1.0.0",
+    "intent_profile": {
+      "primary_domain": "Hardware_Industrial",
+      "concepts": [
+        "Screws",
+        "Fasteners",
+        "Diy",
+        "Hardware",
+        "Equipment",
+        "Power Tools",
+        "Hardware Store",
+        "Machinery",
+        "Supplies",
+        "Retailer",
+        "Building Materials",
+        "Valves",
+        "Tools",
+        "Pumps"
+      ],
+      "positions": [
+        "Store Manager",
+        "Inventory Coordinator",
+        "Hardware Specialist",
+        "Sales Associate"
+      ],
+      "services": [
+        "Equipment Supply",
+        "Tool Rental",
+        "Hardware Retail",
+        "Industrial Supply"
+      ],
+      "products": [
+        "Mcmaster-Carr",
+        "Lowes",
+        "Grainger",
+        "Home Depot",
+        "Ace Hardware"
+      ],
+      "confidence": 1.0,
+      "ontology_version": "1.0.0"
+    }
+  }
+}

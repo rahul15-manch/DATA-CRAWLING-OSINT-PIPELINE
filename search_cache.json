@@ -1504,5 +1504,1328 @@
     "result_count": 0,
     "kind": "zero_result",
     "results": []
+  },
+  "default||site:linkedin.com/company \"python\" -site:wikipedia.org -site:play.google.com -site:apps.apple.com -site:chromewebstore.google.com -site:whatsapp.com||20||0": {
+    "query": "site:linkedin.com/company \"python\" -site:wikipedia.org -site:play.google.com -site:apps.apple.com -site:chromewebstore.google.com -site:whatsapp.com",
+    "provider": "duckduckgo",
+    "timestamp": 1784275391.4177158,
+    "result_count": 8,
+    "kind": "success",
+    "results": [
+      {
+        "title": "Python Software Foundation - LinkedIn",
+        "url": "https://www.linkedin.com/company/thepsf/",
+        "snippet": "ThePythonSoftware Foundation (PSF) is a 501 (c) (3) non-profit corporation that holds the intellectual property rights behind thePythonprogramming language. We manage the open source licensing ...",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784275391.4133432
+      },
+      {
+        "title": "Python System Design - LinkedIn",
+        "url": "https://www.linkedin.com/company/python",
+        "snippet": "PythonSystem Design | 1,226 followers on LinkedIn. We do IT right | We are an IT company who provide quality products and services to small, medium and enterprise companies. We combine our in ...",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784275391.4133432
+      },
+      {
+        "title": "Python Developer - LinkedIn",
+        "url": "https://www.linkedin.com/company/pythondeveloper",
+        "snippet": "PythonDeveloper | 10,538 followers on LinkedIn. Find bestPythonresources, articles and learn new things every day about Machine Learning, Deep Learning and AI | Not another boring programming ...",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784275391.4133432
+      },
+      {
+        "title": "OpenEDG Python Institute - LinkedIn",
+        "url": "https://www.linkedin.com/company/pythoninstitute",
+        "snippet": "ThePythonInstitute is an independent non-profit project venture set up, run, and managed by OpenEDG, the Open Education and Development Group, to promote thePythonprogramming language, train a ...",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784275391.4133432
+      },
+      {
+        "title": "Python Logistics - LinkedIn",
+        "url": "https://www.linkedin.com/company/python-logistics",
+        "snippet": "Pythonwas born with the purpose of offering efficient, exclusive and personalized services in freight forwarding to export and import by air and sea, including warehousing, pick-up, delivery ...",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784275391.4133432
+      },
+      {
+        "title": "Python Pressure Pumping - LinkedIn",
+        "url": "https://www.linkedin.com/company/python-pressure-pumping",
+        "snippet": "PythonPressure Pumping | 1,291 followers on LinkedIn.Pythonis a Pressure Pumping (Hydraulic Frac) company with multiple fleets working in the west Texas, south Texas and New Mexico, our ...",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784275391.4133432
+      },
+      {
+        "title": "Python Holdings - LinkedIn",
+        "url": "https://www.linkedin.com/company/python-holdings",
+        "snippet": "PythonHoldings Oil and Gas Conroe, Texas 909 followersPythonHoldings is an industry agnostic venture studio founded in Houston, Texas.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784275391.4133432
+      },
+      {
+        "title": "Python Solutions - LinkedIn",
+        "url": "https://www.linkedin.com/company/python-solutions",
+        "snippet": "PythonSolutions | 138 followers on LinkedIn.PythonSolutions is one of the leading providers of virtual services. Our clientele ranges from small to large sized businesses. Our main areas of ...",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784275391.4133432
+      }
+    ]
+  },
+  "default||python software company -site:wikipedia.org -site:play.google.com -site:apps.apple.com -site:chromewebstore.google.com -site:whatsapp.com||20||0": {
+    "query": "python software company -site:wikipedia.org -site:play.google.com -site:apps.apple.com -site:chromewebstore.google.com -site:whatsapp.com",
+    "provider": "google_html",
+    "timestamp": 1784275431.3767667,
+    "result_count": 0,
+    "kind": "zero_result",
+    "results": []
+  },
+  "default||site:linkedin.com/company \"python software\" -site:wikipedia.org -site:play.google.com -site:apps.apple.com -site:chromewebstore.google.com -site:whatsapp.com||20||0": {
+    "query": "site:linkedin.com/company \"python software\" -site:wikipedia.org -site:play.google.com -site:apps.apple.com -site:chromewebstore.google.com -site:whatsapp.com",
+    "provider": "google_html",
+    "timestamp": 1784276698.6445348,
+    "result_count": 0,
+    "kind": "zero_result",
+    "results": []
+  },
+  "default||site:clutch.co \"python\" -site:wikipedia.org -site:play.google.com -site:apps.apple.com -site:chromewebstore.google.com -site:whatsapp.com||20||0": {
+    "query": "site:clutch.co \"python\" -site:wikipedia.org -site:play.google.com -site:apps.apple.com -site:chromewebstore.google.com -site:whatsapp.com",
+    "provider": "google_html",
+    "timestamp": 1784276725.3485498,
+    "result_count": 0,
+    "kind": "zero_result",
+    "results": []
+  },
+  "default||site:linkedin.com/company \"python development\" -site:wikipedia.org -site:play.google.com -site:apps.apple.com -site:chromewebstore.google.com -site:whatsapp.com||20||0": {
+    "query": "site:linkedin.com/company \"python development\" -site:wikipedia.org -site:play.google.com -site:apps.apple.com -site:chromewebstore.google.com -site:whatsapp.com",
+    "provider": "google_html",
+    "timestamp": 1784279835.4348805,
+    "result_count": 0,
+    "kind": "zero_result",
+    "results": []
+  },
+  "default||python development services -site:wikipedia.org -site:play.google.com -site:apps.apple.com -site:chromewebstore.google.com -site:whatsapp.com||20||0": {
+    "query": "python development services -site:wikipedia.org -site:play.google.com -site:apps.apple.com -site:chromewebstore.google.com -site:whatsapp.com",
+    "provider": "google_html",
+    "timestamp": 1784279854.5506213,
+    "result_count": 0,
+    "kind": "zero_result",
+    "results": []
+  },
+  "default||site:linkedin.com/company \"python\" Noida -site:wikipedia.org -site:play.google.com -site:apps.apple.com -site:chromewebstore.google.com -site:whatsapp.com||20||0": {
+    "query": "site:linkedin.com/company \"python\" Noida -site:wikipedia.org -site:play.google.com -site:apps.apple.com -site:chromewebstore.google.com -site:whatsapp.com",
+    "provider": "google_html",
+    "timestamp": 1784279859.4469748,
+    "result_count": 0,
+    "kind": "zero_result",
+    "results": []
+  },
+  "default||site:linkedin.com/in \"Python Developer\" founder OR CEO OR director||5||0": {
+    "query": "site:linkedin.com/in \"Python Developer\" founder OR CEO OR director",
+    "provider": "google_html",
+    "timestamp": 1784279873.2838225,
+    "result_count": 0,
+    "kind": "zero_result",
+    "results": []
+  },
+  "default||site:linkedin.com/in \"Python Developer\" \"co-founder\"||5||0": {
+    "query": "site:linkedin.com/in \"Python Developer\" \"co-founder\"",
+    "provider": "google_html",
+    "timestamp": 1784279879.5307257,
+    "result_count": 0,
+    "kind": "zero_result",
+    "results": []
+  },
+  "default||\"Python Developer\" site:linkedin.com||5||0": {
+    "query": "\"Python Developer\" site:linkedin.com",
+    "provider": "google_html",
+    "timestamp": 1784279885.336413,
+    "result_count": 0,
+    "kind": "zero_result",
+    "results": []
+  },
+  "default||AI||20||0": {
+    "query": "AI",
+    "provider": "duckduckgo",
+    "timestamp": 1784281548.974081,
+    "result_count": 8,
+    "kind": "success",
+    "results": [
+      {
+        "title": "OpenAI | Research & Deployment",
+        "url": "https://openai.com/",
+        "snippet": "We believe our research will eventually lead to artificial general intelligence, a system that can solve human-level problems. Building safe and beneficial AGI is our mission.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784281548.968439
+      },
+      {
+        "title": "ChatGPT",
+        "url": "https://chatgpt.com/",
+        "snippet": "ChatGPT is yourAIchatbot for everyday use. Chat with the most advancedAIto explore ideas, solve problems, and learn faster.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784281548.968439
+      },
+      {
+        "title": "Google AI - How we're making AI helpful for everyone",
+        "url": "https://ai.google/",
+        "snippet": "Discover how GoogleAIis committed to enriching knowledge, solving complex challenges and helping people grow by building usefulAItools and technologies.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784281548.968439
+      },
+      {
+        "title": "Google Gemini",
+        "url": "https://gemini.google.com/",
+        "snippet": "Meet Gemini, Google'sAIassistant. Get help with writing, planning, brainstorming, and more. Experience the power of generativeAI.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784281548.968439
+      },
+      {
+        "title": "Microsoft Copilot: Your AI companion",
+        "url": "https://copilot.microsoft.com/",
+        "snippet": "Microsoft Copilot is your companion to inform, entertain and inspire. Get advice, feedback and straightforward answers. Try Copilot now.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784281548.968439
+      },
+      {
+        "title": "Google Labs: Google's home for AI experiments",
+        "url": "https://labs.google/",
+        "snippet": "Stay up to date with the latest GoogleAIexperiments, innovative tools, and technology. Explore the future ofAIresponsibly with Google Labs.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784281548.968439
+      },
+      {
+        "title": "Duck.ai by DuckDuckGo. Private AI chat. Free.",
+        "url": "https://duck.ai/",
+        "snippet": "Use ChatGPT, Claude, and otherAIs, privately. Protect chats from hackers, scammers, and companies. Keep info confidential. Free. No account required.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784281548.968439
+      },
+      {
+        "title": "DeepAI",
+        "url": "https://deepai.org/",
+        "snippet": "DeepAI is the all-in-one creativeAIplatform built for everyone. We got our start in late 2016 with the first browser-based text-to-image generator (and some other generative tools). Since then, we have greatly expanded: with a single prompt, you can generate images, edit photos, chat with anAIthat browses the internet, create short videos, compose original music, or chat with a realistic ...",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784281548.9696577
+      }
+    ]
+  },
+  "default||ai development company -site:wikipedia.org -site:play.google.com -site:apps.apple.com -site:chromewebstore.google.com -site:whatsapp.com||20||0": {
+    "query": "ai development company -site:wikipedia.org -site:play.google.com -site:apps.apple.com -site:chromewebstore.google.com -site:whatsapp.com",
+    "provider": "duckduckgo",
+    "timestamp": 1784281557.5177712,
+    "result_count": 4,
+    "kind": "success",
+    "results": [
+      {
+        "title": "Top Artificial Intelligence Development Companies - Jul 2026 ... - Clutch",
+        "url": "https://clutch.co/developers/artificial-intelligence",
+        "snippet": "Krazimo is a softwaredevelopmentcompanyspecializing inAI-driven solutions for various industries. The feedback from clients highlights their exceptional expertise, responsiveness, and seamless project management, with 100% of reviewers noting their impressive ability to deliver complex projects efficiently. Despite a few minor software issues, all clients expressed satisfaction with ...",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784281557.5156038
+      },
+      {
+        "title": "AI Development Company | End-to-End AI Development Services",
+        "url": "https://www.solulab.com/ai-development-company/",
+        "snippet": "TrustedAIdevelopmentcompanyhelping startups & enterprises build scalableAIsolutions faster. Get your freeAIstrategy call.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784281557.5156038
+      },
+      {
+        "title": "AI Development Services | Artificial Intelligence Development Company",
+        "url": "https://www.leewayhertz.com/ai-development-services-company/",
+        "snippet": "Empower your business operations with LeewayHertz'sAIdevelopmentservices. As anAIdevelopmentcompany, we drive automation and excellence.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784281557.5156038
+      },
+      {
+        "title": "Top Artificial Intelligence (AI) Companies - Goodfirms",
+        "url": "https://www.goodfirms.co/artificial-intelligence",
+        "snippet": "Looking for trustedAIcompanies or skilled artificial intelligence developers to build your next intelligent solution? Browse a list of top artificial intelligence companies offering reliableAIdevelopmentservices, including machine learning, deep learning, NLP, computer vision, predictive analytics, and more. Explore detailedcompanyportfolios, verified client reviews, case studies, and ...",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784281557.5156038
+      }
+    ]
+  },
+  "default||ai outsourcing company -site:wikipedia.org -site:play.google.com -site:apps.apple.com -site:chromewebstore.google.com -site:whatsapp.com||20||0": {
+    "query": "ai outsourcing company -site:wikipedia.org -site:play.google.com -site:apps.apple.com -site:chromewebstore.google.com -site:whatsapp.com",
+    "provider": "duckduckgo",
+    "timestamp": 1784281569.786754,
+    "result_count": 1,
+    "kind": "success",
+    "results": [
+      {
+        "title": "AI Consultant, Solutions, IT Staffing, Outsourcing, & Managed IT ...",
+        "url": "https://www.v2soft.com/",
+        "snippet": "V2Soft is anAILed global technologycompanyoffering IT solutions,AIconsulting expertise, managed IT service support, staffing, andoutsourcingcapabilities to help enterprises modernize and scale operations.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784281569.7837152
+      }
+    ]
+  },
+  "default||ai development services -site:wikipedia.org -site:play.google.com -site:apps.apple.com -site:chromewebstore.google.com -site:whatsapp.com||20||0": {
+    "query": "ai development services -site:wikipedia.org -site:play.google.com -site:apps.apple.com -site:chromewebstore.google.com -site:whatsapp.com",
+    "provider": "google_html",
+    "timestamp": 1784281592.9188766,
+    "result_count": 0,
+    "kind": "zero_result",
+    "results": []
+  },
+  "default||ai consulting company -site:wikipedia.org -site:play.google.com -site:apps.apple.com -site:chromewebstore.google.com -site:whatsapp.com||20||0": {
+    "query": "ai consulting company -site:wikipedia.org -site:play.google.com -site:apps.apple.com -site:chromewebstore.google.com -site:whatsapp.com",
+    "provider": "google_html",
+    "timestamp": 1784281600.3394883,
+    "result_count": 0,
+    "kind": "zero_result",
+    "results": []
+  },
+  "default||site:linkedin.com/company ai -site:wikipedia.org -site:play.google.com -site:apps.apple.com -site:chromewebstore.google.com -site:whatsapp.com||20||0": {
+    "query": "site:linkedin.com/company ai -site:wikipedia.org -site:play.google.com -site:apps.apple.com -site:chromewebstore.google.com -site:whatsapp.com",
+    "provider": "google_html",
+    "timestamp": 1784281606.4999487,
+    "result_count": 0,
+    "kind": "zero_result",
+    "results": []
+  },
+  "default||site:linkedin.com/company ai development -site:wikipedia.org -site:play.google.com -site:apps.apple.com -site:chromewebstore.google.com -site:whatsapp.com||20||0": {
+    "query": "site:linkedin.com/company ai development -site:wikipedia.org -site:play.google.com -site:apps.apple.com -site:chromewebstore.google.com -site:whatsapp.com",
+    "provider": "google_html",
+    "timestamp": 1784281611.9364393,
+    "result_count": 0,
+    "kind": "zero_result",
+    "results": []
+  },
+  "default||hardware software company||20||0": {
+    "query": "hardware software company",
+    "provider": "duckduckgo",
+    "timestamp": 1784283196.55205,
+    "result_count": 6,
+    "kind": "success",
+    "results": [
+      {
+        "title": "Top Software Companies in Delhi - 2026 Reviews | Goodfirms",
+        "url": "https://www.goodfirms.co/directory/city/top-software-development-companies/delhi",
+        "snippet": "Are you searching for best ITsoftwarecompanies in Delhi? Here is the list of topsoftwaredevelopment companies for Top development services in Delhi.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784283196.547277
+      },
+      {
+        "title": "Gcon - Software Company in Delhi|SEO|Hardware&Networking Company ...",
+        "url": "https://gconts.com/",
+        "snippet": "Gcon Technologies is providing consultancy to companies who desire forsoftwaredeveloped in-house for blueprints and cost evaluations. Gcon Technologies is a website design andsoftwaredevelopmentcompanyin Rohini, New Delhi.SoftwareCompanyin Rohini Delhi India.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784283196.547277
+      },
+      {
+        "title": "Top 50 Hardware Companies in New Delhi - Emails & Contacts",
+        "url": "https://aeroleads.com/list/top-hardware-companies-in-new-delhi",
+        "snippet": "This directory brings together 50hardwarecompanies in New Delhi for side-by-side comparison ofcompanyidentity, location, employee estimates, founding year, and available contact coverage. Across the current source records, commonly observed industries includeHardware,Software,Hardware, Manufacturing, and E-Commerce,Hardware,Software, Commerce and Shopping and the most frequent ...",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784283196.547277
+      },
+      {
+        "title": "It (hardware) Companies Delhi - Vcsdata",
+        "url": "https://www.vcsdata.com/it_(hardware)-companies/delhi.html",
+        "snippet": "View It (hardware) companies in Delhi - Get contact addresses, turnover, employee size , Top Companies, MNC and Private Limited of It (hardware) companies in delhi - It (hardware) delhi Companies",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784283196.547277
+      },
+      {
+        "title": "IoT Solutions Company - PsiBorg Technologies Pvt. Ltd.",
+        "url": "https://psiborg.in/",
+        "snippet": "PsiBorg is an end-to-end IoT solutionscompanyin India that takes care of all thehardware&softwareneeds in IoT. Call +91 7011584185 now!",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784283196.547277
+      },
+      {
+        "title": "52 Hardware Companies You Should Know - Built In",
+        "url": "https://builtin.com/hardware/hardware-companies",
+        "snippet": "From screens that fold to virtual reality headsets, here are thehardwarecompanies designing and developing the latest devices being used at home and in the workplace.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784283196.547277
+      }
+    ]
+  },
+  "default||hardware development company||20||0": {
+    "query": "hardware development company",
+    "provider": "duckduckgo",
+    "timestamp": 1784283198.5618424,
+    "result_count": 6,
+    "kind": "success",
+    "results": [
+      {
+        "title": "Top Computer Hardware Development Companies in Delhi",
+        "url": "https://www.glassdoor.co.in/Explore/top-computer-hardware-development-companies-delhi_II.4,33_IIND200060_IL.44,49_IS4937.htm",
+        "snippet": "Browse the top ComputerHardwareDevelopmentcompanies in Delhi. Salaries, reviews, and more - all posted by employees working at the top ComputerHardwareDevelopmentcompanies in Delhi. Apply to jobs near you.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784283198.558728
+      },
+      {
+        "title": "8 Top Hardware Development Companies in India · July 2026",
+        "url": "https://www.f6s.com/companies/hardware-development/india/co",
+        "snippet": "Detailed info and reviews on 8 topHardwareDevelopmentcompanies and startups in India in 2026. Get the latest updates on their products, jobs, funding, investors, founders and more.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784283198.558728
+      },
+      {
+        "title": "Gcon - Software Company in Delhi|SEO|Hardware&Networking Company ...",
+        "url": "https://gconts.com/",
+        "snippet": "Thecompanyis a leader in softwaredevelopmentand website designing offering the best software products for education like managing schools and colleges. Gcon Technologies have excellent exposure in developing ERPs for construction companies.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784283198.558728
+      },
+      {
+        "title": "IoT Solutions Company - PsiBorg Technologies Pvt. Ltd.",
+        "url": "https://psiborg.in/",
+        "snippet": "The capabilities and experience of our team include an end-to-end innovative IoThardwaredevelopmentprocess from an idea to a prototype, Custom sized manufacturing design, firmwaredevelopment, Mobile applicationdevelopment, IoT dashboard, and quality control.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784283198.558728
+      },
+      {
+        "title": "Embedded Hardware Development & Design Company - Rhosigma",
+        "url": "https://rhosigma.in/services/hardware-development",
+        "snippet": "Rhosigma's precisionhardwaredesign, from concept to market-ready solutions. Industry-specific embeddedhardwareengineering, including prototyping.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784283198.558728
+      },
+      {
+        "title": "About Us - IoT | Hardware & Software | Embedded Electronics ...",
+        "url": "https://inxee.com/about.php",
+        "snippet": "Inxee offers a broad spectrum of services in product design &developmentencompassing all aspects of R&D, PCB Design, Embedded Software, Product Design and Manufacturing. Inxee services span across individualhardwareand software components to entire systems.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784283198.558728
+      }
+    ]
+  },
+  "default||custom software development||20||0": {
+    "query": "custom software development",
+    "provider": "duckduckgo",
+    "timestamp": 1784283202.2846274,
+    "result_count": 8,
+    "kind": "success",
+    "results": [
+      {
+        "title": "Top Custom Software Development Companies in Delhi",
+        "url": "https://www.designrush.com/agency/software-development/in/delhi",
+        "snippet": "Discover topcustomsoftwaredevelopmentcompanies in Delhi, expertly ranked. Compare providers to find the best fit for your specific project needs.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784283202.2803202
+      },
+      {
+        "title": "Top 50+ Software Development Companies in New Delhi",
+        "url": "https://www.topdevelopers.co/directory/software-development-companies-in-new-delhi",
+        "snippet": "Explore the list of most reliablesoftwaredevelopmentcompanies in New Delhi. Find the best web developers based on their ratings, reviews, expertise, skills and much more.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784283202.2803202
+      },
+      {
+        "title": "Top Software Companies in Delhi - 2026 Reviews | Goodfirms",
+        "url": "https://www.goodfirms.co/directory/city/top-software-development-companies/delhi",
+        "snippet": "Are you searching for best ITsoftwarecompanies in Delhi? Here is the list of topsoftwaredevelopmentcompanies for Topdevelopmentservices in Delhi.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784283202.2803202
+      },
+      {
+        "title": "Software Development Company | IT Software Company in Delhi",
+        "url": "https://w2gsolutions.in/",
+        "snippet": "W2G Solutions is a topSoftwareDevelopmentCompany in Delhi, offering E-Commerce, CRM, and Web Application Solutions. Find the bestSoftwareand Web Design Services in India at best price.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784283202.2803202
+      },
+      {
+        "title": "Custom Software Development Services | Enterprise Software Company",
+        "url": "https://www.q3tech.com/custom-software-development/",
+        "snippet": "Q3 Technologies is a leadingcustomsoftwaredevelopmentcompany with 25+ years of experience and 1000+ experts, delivering web, mobile, cloud, and enterprisesoftwaresolutions.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784283202.2803202
+      },
+      {
+        "title": "Custom Software Development Services | Appinventiv",
+        "url": "https://appinventiv.com/software-development-service/",
+        "snippet": "Customsoftwaredevelopmentservices backed by 10+ years of experience and 1600+ experts helping enterprises scale and innovate.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784283202.2803202
+      },
+      {
+        "title": "Software Development Company in New Delhi, India - ISHIR",
+        "url": "https://www.ishir.com/new-delhi.htm",
+        "snippet": "Partner with a leadingsoftwaredevelopmentcompany in New Delhi, India for product innovation, AI nativedevelopment,customsoftwareengineering, and digital transformation. Build scalable, modern solutions with a trusted New Delhi based technology team.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784283202.2814424
+      },
+      {
+        "title": "Custom Software Development Company in Noida, Delhi NCR",
+        "url": "https://brainsoftsoftware.com/services/custom-software-development/",
+        "snippet": "Customsoftwaredevelopmentsolutions designed to meet your unique business needs with tailored, high-performance applications. We manage the entiredevelopmentprocess, from initial consultation and requirements gathering to design, coding, and deployment.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784283202.2814424
+      }
+    ]
+  },
+  "default||build rest api||20||0": {
+    "query": "build rest api",
+    "provider": "bing",
+    "timestamp": 1784283209.6604087,
+    "result_count": 0,
+    "kind": "zero_result",
+    "results": []
+  },
+  "default||site:linkedin.com/in \"Indias Leading Architectural Hardware Manufacturer\" founder OR CEO OR director||5||0": {
+    "query": "site:linkedin.com/in \"Indias Leading Architectural Hardware Manufacturer\" founder OR CEO OR director",
+    "provider": "google_html",
+    "timestamp": 1784285196.2082705,
+    "result_count": 0,
+    "kind": "zero_result",
+    "results": []
+  },
+  "default||site:linkedin.com/in \"Acehardware\" founder OR CEO OR director||5||0": {
+    "query": "site:linkedin.com/in \"Acehardware\" founder OR CEO OR director",
+    "provider": "google_html",
+    "timestamp": 1784285204.468924,
+    "result_count": 0,
+    "kind": "zero_result",
+    "results": []
+  },
+  "default||site:linkedin.com/in \"Indias Leading Architectural Hardware Manufacturer\" \"co-founder\"||5||0": {
+    "query": "site:linkedin.com/in \"Indias Leading Architectural Hardware Manufacturer\" \"co-founder\"",
+    "provider": "google_html",
+    "timestamp": 1784285210.656617,
+    "result_count": 0,
+    "kind": "zero_result",
+    "results": []
+  },
+  "default||site:linkedin.com/in \"Acehardware\" \"co-founder\"||5||0": {
+    "query": "site:linkedin.com/in \"Acehardware\" \"co-founder\"",
+    "provider": "google_html",
+    "timestamp": 1784285217.0862272,
+    "result_count": 0,
+    "kind": "zero_result",
+    "results": []
+  },
+  "default||software development company||3||0": {
+    "query": "software development company",
+    "provider": "duckduckgo",
+    "timestamp": 1784286488.9313574,
+    "result_count": 3,
+    "kind": "success",
+    "results": [
+      {
+        "title": "Top 50+ Software Development Companies in New Delhi",
+        "url": "https://www.topdevelopers.co/directory/software-development-companies-in-new-delhi",
+        "snippet": "Explore the list of most reliablesoftwaredevelopmentcompanies in New Delhi. Find the best web developers based on their ratings, reviews, expertise, skills and much more.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784286488.8179963
+      },
+      {
+        "title": "42 Top Software Development Companies in Delhi · July 2026",
+        "url": "https://www.f6s.com/companies/software-development/india/nct/delhi/co",
+        "snippet": "Detailed info and reviews on 42 topSoftwareDevelopmentcompanies and startups in Delhi in 2026. Get the latest updates on their products, jobs, funding, investors, founders and more.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784286488.81886
+      },
+      {
+        "title": "74 Top Software Companies in Delhi · July 2026 | F6S",
+        "url": "https://www.f6s.com/companies/software/india/nct/delhi/co",
+        "snippet": "Detailed info and reviews on 74 topSoftwarecompanies and startups in Delhi in 2026. Get the latest updates on their products, jobs, funding, investors, founders and more.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784286488.81886
+      }
+    ]
+  },
+  "default||python development company||20||0": {
+    "query": "python development company",
+    "provider": "duckduckgo",
+    "timestamp": 1784286998.390521,
+    "result_count": 7,
+    "kind": "success",
+    "results": [
+      {
+        "title": "Python Development Company in Delhi NCR | Oprezo India",
+        "url": "https://www.oprezoindia.com/python-development-company.php",
+        "snippet": "Hire Oprezo India, a topPythondevelopmentcompanyin Delhi NCR. Scalable Django, Flask & FastAPI solutions for web, AI & automation projects.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784286998.3868866
+      },
+      {
+        "title": "Top Python Development Companies in New Delhi - July 2026 Reviews ...",
+        "url": "https://www.topdevelopers.co/directory/python-development-companies-in-new-delhi",
+        "snippet": "Looking for toppythondevelopmentcompanies in New Delhi? Here are the bestPythondevelopers with verified reviews that help you hire rightcompany.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784286998.3868866
+      },
+      {
+        "title": "Top Python Developers in Delhi - 2026 Reviews | Goodfirms",
+        "url": "https://www.goodfirms.co/directory/city/top-software-development-companies/python/delhi",
+        "snippet": "Searching for the bestPythondevelopmentservices in Delhi? Check our top list ofPythondevelopmentcompanies that will help you create a complete web platform faster, from design and technical decisions.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784286998.3868866
+      },
+      {
+        "title": "Python Development Company in Delhi | Codingclave",
+        "url": "https://codingclave.com/technologies/city/python-development-in-delhi",
+        "snippet": "PythonDevelopmentCompanyin Delhi Delhi's enterprises adoptPythonfor AI-powered chatbots, data analytics dashboards, and automation tools that streamline government and private sector operations. Codingclave is a trustedPythondevelopmentcompanyserving Delhi, Delhi NCR with 200+ projects delivered and a 4.9-star Google rating.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784286998.3868866
+      },
+      {
+        "title": "Top Python Development Companies in Delhi",
+        "url": "https://www.sortlist.com/s/python-development/delhi-dl-in",
+        "snippet": "Unlock the power ofPythonwith Delhi's leadingdevelopmentcompanies and consultants. Our curated list showcases top-tierPythonexperts ready to elevate your digital projects. From web applications to data analytics, these professionals offer cutting-edge solutions tailored to your needs. Explore eachcompany'sportfolio and client testimonials to gauge their expertise and reliability ...",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784286998.3868866
+      },
+      {
+        "title": "Python Development Company in Gurgaon, Delhi and India",
+        "url": "https://www.acilindia.com/python-development-company/",
+        "snippet": "PythonWebDevelopmentCompanyPythonis one of the quickly emergingdevelopmentlanguages among cloud service providers and new businesses across the world.Pythondevelopmentis considered as one of the most effective and valuable programming languages that can be integrated with other intense stages effortlessly. We are a leadingPythondevelopmentcompanydeliver the best-in-class web ...",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784286998.3868866
+      },
+      {
+        "title": "Python Web Development Company in Delhi NCR, India, USA| WebSpread",
+        "url": "https://www.webspreadtech.com/python-development",
+        "snippet": "WebSpread is a leadingPythonDevelopmentCompanyin Noida, Delhi & NCR, We provide the bestPythonWebDevelopmentServices globally.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784286998.3868866
+      }
+    ]
+  },
+  "default||enterprise software||20||0": {
+    "query": "enterprise software",
+    "provider": "duckduckgo",
+    "timestamp": 1784287002.3268704,
+    "result_count": 3,
+    "kind": "success",
+    "results": [
+      {
+        "title": "The 15 Best Enterprise Software To Look For In 2026",
+        "url": "https://www.softwaretestinghelp.com/best-enterprise-software/",
+        "snippet": "Here we will learn What isEnterpriseSoftwareSolutions and explore the idealenterprisesoftwarebased on your business needs.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784287002.3235514
+      },
+      {
+        "title": "What are enterprise applications? - IBM",
+        "url": "https://www.ibm.com/think/topics/enterprise-applications",
+        "snippet": "Enterpriseapplications are large-scalesoftwaresolutions designed to streamline and automate various processes of an organization's operations.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784287002.3235514
+      },
+      {
+        "title": "Enterprise Software | Characteristics, Types, Features, Benefits - EDUCBA",
+        "url": "https://www.educba.com/enterprise-software/",
+        "snippet": "What isEnterpriseSoftware?Enterprisesoftwarerefers to the large-scale applications designed to support and automate business processes within organizations. These systems are typically used by multiple users across departments and integrated with various business functions, such as finance, human resources, customer management, and supply chain operations.Enterprisesoftwareis developed ...",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784287002.3235514
+      }
+    ]
+  },
+  "default||python company||20||0": {
+    "query": "python company",
+    "provider": "duckduckgo",
+    "timestamp": 1784287004.3157947,
+    "result_count": 6,
+    "kind": "success",
+    "results": [
+      {
+        "title": "Welcome to Python.org",
+        "url": "https://www.python.org/",
+        "snippet": "Intuitive Interpretation Calculations are simple withPython, and expression syntax is straightforward: the operators +, -, * and / work as expected; parentheses () can be used for grouping. More about simple math functions inPython3.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784287004.3114579
+      },
+      {
+        "title": "About the Python Software Foundation",
+        "url": "https://www.python.org/psf/about/",
+        "snippet": "PSF>>> About About thePythonSoftware Foundation ThePythonSoftware Foundation is the organization behind the open sourcePythonprogramming language. We are devoted to creating the conditions forPythonand thePythoncommunity to grow and thrive. We fulfill our mission through these core activities: Infrastructure STRUCTURE AND STABILITY SO THEPYTHONLANGUAGE, ITS CONTRIBUTORS, AND USERS ...",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784287004.3130443
+      },
+      {
+        "title": "Companies That Use Python - GeeksforGeeks",
+        "url": "https://www.geeksforgeeks.org/python/companies-that-use-python/",
+        "snippet": "Pythonis trusted by some of the biggest companies in the world because it's easy to work with and supports everything from web apps to AI. From tech giants to startups, businesses across industries usePythonto build reliable, scalable and innovative solutions.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784287004.3130443
+      },
+      {
+        "title": "Top 30 Companies That Use Python for Success and Profit",
+        "url": "https://jaydevs.com/top-companies-that-use-python/",
+        "snippet": "Discover who usesPython, whyPythonis a preferred choice for top companies worldwide, and how it can transform your business operations.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784287004.3130443
+      },
+      {
+        "title": "Top Python Development Companies in New Delhi - July 2026 Reviews ...",
+        "url": "https://www.topdevelopers.co/directory/python-development-companies-in-new-delhi",
+        "snippet": "Looking for toppythondevelopment companies in New Delhi? Here are the bestPythondevelopers with verified reviews that help you hire rightcompany.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784287004.3130443
+      },
+      {
+        "title": "Top Python Development Companies in India (July 2026)",
+        "url": "https://www.wpwebelite.com/blog/top-python-development-companies-india/",
+        "snippet": "TopPythondevelopment companies in India delivering scalable web apps, AI/ML solutions, and robust backend systems for startups and enterprises.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784287004.3130443
+      }
+    ]
+  },
+  "default||Django software company||20||0": {
+    "query": "Django software company",
+    "provider": "duckduckgo",
+    "timestamp": 1784288252.7770255,
+    "result_count": 6,
+    "kind": "success",
+    "results": [
+      {
+        "title": "The web framework for perfectionists with deadlines | Django",
+        "url": "https://www.djangoproject.com/",
+        "snippet": "MeetDjangoDjangois a high-level Python web framework that encourages rapid development and clean, pragmatic design. Built by experienced developers, it takes care of much of the hassle of web development, so you can focus on writing your app without needing to reinvent the wheel. It's free and open source. Ridiculously fast.Djangowas designed to help developers take applications from ...",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784288252.769955
+      },
+      {
+        "title": "DjangoStars - Trusted Software Development Company",
+        "url": "https://djangostars.com/main/",
+        "snippet": "DjangoStars is a leadingsoftwaredevelopmentcompanywith 17+ years of experience delivering customsoftwaresolutions for Fortune 500 companies and fast-growing businesses.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784288252.769955
+      },
+      {
+        "title": "Top 10 Django Development Companies in 2026 | Uvik Software",
+        "url": "https://uvik.net/blog/top-django-development-companies/",
+        "snippet": "10Djangodevelopment companies ranked by engineer seniority, DRF/REST API depth, and productionDjangoscale. Compare seniorDjangoteams for 2026 hires.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784288252.769955
+      },
+      {
+        "title": "Download Django | Django",
+        "url": "https://www.djangoproject.com/download/",
+        "snippet": "The latest and greatestDjangoversion is the one that's in our Git repository (our revision-control system). This is only for experienced users who want to try incoming changes and help identify bugs before an official release.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784288252.7710545
+      },
+      {
+        "title": "Top 10 Django Development Companies for 2026",
+        "url": "https://djangostars.com/blog/top-django-development-companies/",
+        "snippet": "Explore the topDjangodevelopment companies for 2026, highlighting their expertise, key clients, and project suitability for diverse business needs.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784288252.7710545
+      },
+      {
+        "title": "Best 50 Django Software Development Companies in 2026",
+        "url": "https://www.stanga.net/en/best-50-django-software-development-companies/",
+        "snippet": "Discover the bestDjangosoftwaredevelopment companies in 2026. Explore expert teams, recent trends, and how to choose the right partner for your project.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784288252.7710545
+      }
+    ]
+  },
+  "default||it consulting||20||0": {
+    "query": "it consulting",
+    "provider": "duckduckgo",
+    "timestamp": 1784288260.2794302,
+    "result_count": 4,
+    "kind": "success",
+    "results": [
+      {
+        "title": "Top 10 IT Consulting Companies in Delhi - Jul 2026 | Ranking ...",
+        "url": "https://superbcompanies.com/categories/it-consulting-companies-in-delhi/",
+        "snippet": "Discover the best ITConsultingCompanies in Delhi with top ratings and user reviews. Find trusted providers tailored to your business and make informed decisions.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784288260.2737732
+      },
+      {
+        "title": "Top IT Consultants in Delhi - Trusted Tech Consulting Firms | Justdial",
+        "url": "https://www.justdial.com/Delhi/IT-Consultants/nct-10278048",
+        "snippet": "Elevate Your Business with Expert IT Consultants! 4746 Delhi's leading TechConsultingFirms offering Innovative Solutions. Enhance efficiency and competitiveness. Explore more now!",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784288260.2737732
+      },
+      {
+        "title": "IT Companies in Delhi NCR | IT Consulting Companies in India | IT ...",
+        "url": "https://www.bsquare.in/it-consulting-services.html",
+        "snippet": "Our strategic ITconsultingwill help you automate and digitalise operations, optimise the software portfolio, and implement the latest technologies. We offer ITconsultingservices that will help you improve your software architecture, create a tech-driven digital strategy, and improve operations by optimising your software portfolio.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784288260.2737732
+      },
+      {
+        "title": "IT Consulting Services Companies in Delhi | Scrrum Labs",
+        "url": "https://scrrum.com/services/consulting-service",
+        "snippet": "ITconsultingis the process of offering tailored ITconsultingservices for a spread of companies and corporations . IT consultants are people that possess a specific set of experience that creates them advantageous in certain areas of business.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784288260.2737732
+      }
+    ]
+  },
+  "default||python software company||20||0": {
+    "query": "python software company",
+    "provider": "duckduckgo",
+    "timestamp": 1784288263.9187403,
+    "result_count": 8,
+    "kind": "success",
+    "results": [
+      {
+        "title": "10 Top Python Software Development Companies in 2026",
+        "url": "https://www.entrans.ai/blog/top-python-software-development-companies",
+        "snippet": "Explore the topPythonsoftwaredevelopment companies in 2026 offering expert web, AI, automation and backend solutions for enterprises.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784288263.9116936
+      },
+      {
+        "title": "About the Python Software Foundation",
+        "url": "https://www.python.org/psf/about/",
+        "snippet": "ThePythonSoftwareFoundation is the organization behind the open sourcePythonprogramming language. We are devoted to creating the conditions forPythonand thePythoncommunity to grow and thrive.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784288263.9116936
+      },
+      {
+        "title": "About Python™ | Python.org",
+        "url": "https://www.python.org/about/",
+        "snippet": "Applications ThePythonPackage Index (PyPI) hosts thousands of third-party modules forPython. BothPython'sstandard library and the community-contributed modules allow for endless possibilities. Web and Internet Development Database Access Desktop GUIs Scientific & Numeric Education Network ProgrammingSoftware& Game Development",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784288263.9116936
+      },
+      {
+        "title": "Top 30 Companies That Use Python for Success and Profit",
+        "url": "https://jaydevs.com/top-companies-that-use-python/",
+        "snippet": "Discover who usesPython, whyPythonis a preferred choice for top companies worldwide, and how it can transform your business operations.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784288263.9116936
+      },
+      {
+        "title": "Top 10+ Python Developers - 2026 Reviews | Goodfirms",
+        "url": "https://www.goodfirms.co/directory/languages/top-software-development-companies/python",
+        "snippet": "Pythonis one of the most versatile programming languages to develop robust mobile apps, websites, andsoftwaresolutions. If you are looking to hire the bestPythondevelopers with verified reviews and ratings, refer to this Goodfirms' list of topPythondevelopment companies. These companies offer faster time-to-value with zero risk.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784288263.9116936
+      },
+      {
+        "title": "Top 10 Python Software Development Companies of 2026",
+        "url": "https://www.imaginarycloud.com/blog/top-python-companies",
+        "snippet": "Top 10PythonSoftwareDevelopment Companies of 2026 Welcome to our list of the top 10Pythondevelopment companies. In this article, we have carefully selected and ranked the most exceptional companies in the industry based on key factors such as development cost, speed, years in business, and team size.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784288263.9127822
+      },
+      {
+        "title": "Python Development Company | Python Application Services",
+        "url": "https://www.contus.com/python-development-company.php",
+        "snippet": "As a leadingPythondevelopmentcompany, CONTUS Tech offers expertPythonsoftwaredevelopment services with Django, Flask, and FastAPI, building and integrating APIs for enterprise-grade applications.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784288263.9127822
+      },
+      {
+        "title": "Companies That Use Python - GeeksforGeeks",
+        "url": "https://www.geeksforgeeks.org/python/companies-that-use-python/",
+        "snippet": "Pythonis trusted by some of the biggest companies in the world because it's easy to work with and supports everything from web apps to AI. From tech giants to startups, businesses across industries usePythonto build reliable, scalable and innovative solutions.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784288263.9127822
+      }
+    ]
+  },
+  "default||site:linkedin.com/in \"Django\" founder OR CEO OR director||5||0": {
+    "query": "site:linkedin.com/in \"Django\" founder OR CEO OR director",
+    "provider": "brightdata",
+    "timestamp": 1784288923.8012466,
+    "result_count": 0,
+    "kind": "zero_result",
+    "results": []
+  },
+  "default||site:linkedin.com/in \"Django\" \"co-founder\"||5||0": {
+    "query": "site:linkedin.com/in \"Django\" \"co-founder\"",
+    "provider": "brightdata",
+    "timestamp": 1784288946.9640908,
+    "result_count": 0,
+    "kind": "zero_result",
+    "results": []
+  },
+  "default||\"Django\" site:linkedin.com||5||0": {
+    "query": "\"Django\" site:linkedin.com",
+    "provider": "brightdata",
+    "timestamp": 1784288950.7898889,
+    "result_count": 0,
+    "kind": "zero_result",
+    "results": []
+  },
+  "default||Hardware Development software company||20||0": {
+    "query": "Hardware Development software company",
+    "provider": "duckduckgo",
+    "timestamp": 1784289869.409171,
+    "result_count": 7,
+    "kind": "success",
+    "results": [
+      {
+        "title": "Top 25 Software Companies in Chennai [2025 Updated List]",
+        "url": "https://www.tech4lyf.com/blog/top-25-software-companies-in-chennai-2025-updated-list/",
+        "snippet": "Discover the top 25softwarecompanies in Chennai for 2025. Detailed rankings with services, specialties, and reviews. From IoT to ERP to Flutter appdevelopment.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784289869.4038477
+      },
+      {
+        "title": "Embedded Software Development Company in Chennai | Embedded Software ...",
+        "url": "https://www.ninositsolution.com/embedded-systems-company-in-chennai",
+        "snippet": "Embedded SystemsCompanyin Chennai Dive into the world of innovation and efficiency with Embedded Systems. Our dedicated team of experts specializes in designing and developing cutting-edge embedded systems, bringing your ideas to life with seamless integration and optimal performance.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784289869.4038477
+      },
+      {
+        "title": "19 Top Hardware Companies in Chennai · July 2026 | F6S",
+        "url": "https://www.f6s.com/companies/hardware/india/tamil-nadu/chennai/co",
+        "snippet": "Detailed info and reviews on 19 topHardwarecompanies and startups in Chennai in 2026. Get the latest updates on their products, jobs, funding, investors, founders and more.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784289869.4038477
+      },
+      {
+        "title": "IT Outsourcing & Software Development Company - NeoSOFT",
+        "url": "https://www.neosofttech.com/",
+        "snippet": "NeoSOFT is a leadingsoftwaredevelopmentand IT outsourcingcompanywith 25+ years ofsoftwareengineering excellence and successfully driving digital growth and innovation for 1500+ global brands.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784289869.4038477
+      },
+      {
+        "title": "Pumo Technovation",
+        "url": "https://pumotechnovation.com/",
+        "snippet": "Developing new conceptual products for Automotive sectors like Hyundai Motors, Supportinghardwareautomation andsoftwaredevelopmentwe have wide range of diversified tech verticals and also owning a Skilldevelopmentcampus collaborated with World's leading companies.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784289869.4038477
+      },
+      {
+        "title": "49 Top Software Development Companies in Chennai · July 2026",
+        "url": "https://www.f6s.com/companies/software-development/india/tamil-nadu/chennai/co",
+        "snippet": "Detailed info and reviews on 49 topSoftwareDevelopmentcompanies and startups in Chennai in 2026. Get the latest updates on their products, jobs, funding, investors, founders and more.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784289869.4038477
+      },
+      {
+        "title": "Top Computer Hardware Development Companies in Chennai",
+        "url": "https://www.glassdoor.co.in/Explore/top-computer-hardware-development-companies-madras_II.4,33_IIND200060_IL.44,50_IM1067.htm",
+        "snippet": "Browse the top ComputerHardwareDevelopmentcompanies in Chennai. Salaries, reviews, and more - all posted by employees working at the top ComputerHardwareDevelopmentcompanies in Chennai. Apply to jobs near you.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784289869.4038477
+      }
+    ]
   }
 }

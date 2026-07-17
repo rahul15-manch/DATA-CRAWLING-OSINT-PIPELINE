@@ -1,0 +1,35 @@
+{
+  "timestamp": "2026-07-17T17:07:24.016285",
+  "query": "Django software company",
+  "classification": "ENABLE_JS_PAGE",
+  "url": "https://www.google.com/search?q=Django+software+company&num=10&hl=en&gl=us",
+  "status_code": 200,
+  "redirect_chain": [
+    "https://www.google.com/search?q=Django+software+company&num=10&hl=en&gl=us"
+  ],
+  "response_headers": {
+    "content-type": "text/html; charset=UTF-8",
+    "strict-transport-security": "max-age=31536000",
+    "content-security-policy": "object-src 'none';base-uri 'self';script-src 'nonce-4HJnjUr1rkEFyjmK1X2qpA' 'strict-dynamic' 'report-sample' 'unsafe-eval' 'unsafe-inline' https: http:;report-uri https://csp.withgoogle.com/csp/gws/cdt1",
+    "cross-origin-opener-policy": "same-origin-allow-popups; report-to=\"gws\"",
+    "report-to": "{\"group\":\"gws\",\"max_age\":2592000,\"endpoints\":[{\"url\":\"https://csp.withgoogle.com/csp/report-to/gws/cdt1\"}]}",
+    "accept-ch": "Sec-CH-Prefers-Color-Scheme, Downlink, RTT, Sec-CH-UA-Form-Factors, Sec-CH-UA-Platform, Sec-CH-UA-Platform-Version, Sec-CH-UA-Full-Version, Sec-CH-UA-Arch, Sec-CH-UA-Model, Sec-CH-UA-Bitness, Sec-CH-UA-Full-Version-List, Sec-CH-UA-WoW64",
+    "x-content-type-options": "nosniff",
+    "permissions-policy": "unload=()",
+    "p3p": "CP=\"This is not a P3P policy! See g.co/p3phelp for more info.\"",
+    "content-encoding": "br",
+    "date": "Fri, 17 Jul 2026 11:37:22 GMT",
+    "server": "gws",
+    "x-xss-protection": "0",
+    "x-frame-options": "SAMEORIGIN",
+    "expires": "Fri, 17 Jul 2026 11:37:22 GMT",
+    "cache-control": "private",
+    "set-cookie": "__Secure-STRP=ANmZwa3zvQDe8Lmk15n8o_nRIT1xXJBJsU8SDKy-tm_LAO3reOPcW8bKufhdof8XLdmsY0FXyKgLhHYYPYgfvA1KkRP86k_QKg; expires=Fri, 17-Jul-2026 11:42:22 GMT; path=/; domain=.google.com; Secure; SameSite=strict, AEC=AdJVEasBaaWOLC5RZFW3uWky0TuV5SEZC2GHy1E5dTWZk3uKnl7pI-wQ2cY; expires=Wed, 13-Jan-2027 11:37:22 GMT; path=/; domain=.google.com; Secure; HttpOnly; SameSite=lax, NID=533=NwF0KqXdg4JTmny2jhaiHfyHiwO2McS6cCPEFa4IPu61lHJgQO5HtZ0eMiiN5ZEFp9xxdb2S99ZepSxWqF5aRdiAlIITbGTVpTtnt7xCzU_Os-zrkRiMcsteaDq954gjGPKuDnYkeXPg9mDXdVUZ86gk1j6Pbuh3hEZzJxtODZn_0vKVt3l7_oswPG060bo-I0oNYnkLcUKIzcibzQgd1P0; expires=Sat, 16-Jan-2027 11:37:22 GMT; path=/; domain=.google.com; Secure; HttpOnly; SameSite=none",
+    "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+  },
+  "layout_fingerprint": "2d776c7f0f4d13d3ca0db766ca6ecf79",
+  "detected_signals": [
+    "/httpservice/retry/enablejs",
+    "enablejs"
+  ]
+}

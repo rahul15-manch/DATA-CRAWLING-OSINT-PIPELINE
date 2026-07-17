@@ -1,0 +1,102 @@
+[
+  {
+    "company_name": "Indias Leading Architectural Hardware Manufacturer",
+    "website": "https://www.ozone.in/",
+    "linkedin": null,
+    "industry": "hardware",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "confidence_score": 83,
+    "lead_quality": "High",
+    "company_type": "Unknown",
+    "relevance_score": 83,
+    "relevance_tier": "HIGH",
+    "relevance_info": {
+      "score": 83,
+      "tier": "HIGH",
+      "matched_signals": [
+        "Title",
+        "Description"
+      ],
+      "rejected_signals": [
+        "Positions"
+      ],
+      "score_breakdown": {
+        "title": 20.0,
+        "description": 30.0,
+        "positions": 0.0
+      },
+      "industry": "Unknown",
+      "confidence": 0.33,
+      "aborted": false,
+      "company_type": "B2B Software",
+      "semantic_trace": [
+        "Matched Title with concepts: ['Hardware']",
+        "Matched Description with concepts: ['Hardware']"
+      ],
+      "technologies": [],
+      "products": [],
+      "website": "",
+      "website_source": "homepage"
+    },
+    "_source_file": "output\\raw\\hardware_20260717_161657.json",
+    "_flags": []
+  },
+  {
+    "company_name": "Acehardware",
+    "website": "https://www.acehardware.com/",
+    "linkedin": null,
+    "industry": "hardware",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "confidence_score": 83,
+    "lead_quality": "High",
+    "company_type": "Unknown",
+    "relevance_score": 83,
+    "relevance_tier": "HIGH",
+    "relevance_info": {
+      "score": 83,
+      "tier": "HIGH",
+      "matched_signals": [
+        "Title",
+        "Description"
+      ],
+      "rejected_signals": [
+        "Positions"
+      ],
+      "score_breakdown": {
+        "title": 20.0,
+        "description": 30.0,
+        "positions": 0.0
+      },
+      "industry": "Unknown",
+      "confidence": 0.33,
+      "aborted": false,
+      "company_type": "B2C/Marketplace",
+      "semantic_trace": [
+        "Matched Title with concepts: ['Hardware']",
+        "Matched Description with concepts: ['Hardware']"
+      ],
+      "technologies": [],
+      "products": [],
+      "website": "",
+      "website_source": "homepage"
+    },
+    "_source_file": "output\\raw\\hardware_20260717_161657.json",
+    "_flags": []
+  }
+]

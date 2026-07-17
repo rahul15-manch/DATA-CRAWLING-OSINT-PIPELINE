@@ -258,6 +258,21 @@ def build_lead_card(company: dict) -> dict | None:
 
     if emails or raw_people or extracted.get("phones"):
         stats.increment("funnel_contacts_extracted")
+        from query.expansion import record_query_outcome
+        q = company.get("query") or company.get("industry") or ""
+        src = (company.get("source") or "google").lower()
+        provider_map = {
+            "linkedin": "linkedin",
+            "clutch": "clutch",
+            "goodfirms": "goodfirms",
+            "google": "google_html",
+            "bing": "bing",
+            "brave": "brave",
+            "github": "github",
+        }
+        provider_name = provider_map.get(src, "google_html")
+        cnt = len(emails) + len(raw_people) + (1 if extracted.get("phones") else 0)
+        record_query_outcome(q, "contact_found", result_count=cnt, provider=provider_name)
 
     # ── Task 8: Score each person record ──────────────────────────────────
     people = []
@@ -359,17 +374,29 @@ def run_pipeline(keyword: str):
                     if source in sm.stats:
                         sm.stats[source].leads_discovered += 1
 
-                    # Log feedback for SRE weight optimization: reward for High/Medium leads, penalize for Low leads
+                    # Log feedback for SRE weight optimization and B2B ontology learning
                     sre_info = company.get("relevance_info", {})
                     matched = sre_info.get("matched_signals", [])
+                    techs = sre_info.get("technologies", [])
+                    prods = sre_info.get("products", [])
+                    is_high_quality = lead.get("lead_quality") in ("High", "Medium")
+                    
+                    from semantic.semantic_learning import record_learning_feedback
+                    record_learning_feedback(keyword, techs, prods, was_successful=is_high_quality)
+
                     if matched:
                         from discovery.semantic_ranking_engine import record_feedback
-                        is_high_quality = lead.get("lead_quality") in ("High", "Medium")
                         record_feedback("reward" if is_high_quality else "penalize", matched)
                 else:
                     # Penalize matched signals of the rejected candidate
                     sre_info = company.get("relevance_info", {})
                     matched = sre_info.get("matched_signals", [])
+                    techs = sre_info.get("technologies", [])
+                    prods = sre_info.get("products", [])
+                    
+                    from semantic.semantic_learning import record_learning_feedback
+                    record_learning_feedback(keyword, techs, prods, was_successful=False)
+
                     if matched:
                         from discovery.semantic_ranking_engine import record_feedback
                         record_feedback("penalize", matched)
@@ -382,6 +409,8 @@ def run_pipeline(keyword: str):
     # Apply batch weight learning exactly once at the end of the run
     from discovery.semantic_ranking_engine import apply_batch_learning
     apply_batch_learning()
+    from semantic.semantic_learning import apply_ontology_learning
+    apply_ontology_learning()
 
     # ── Write output ──────────────────────────────────────────────────────
     os.makedirs(config.RAW_OUTPUT_FOLDER, exist_ok=True)
@@ -420,6 +449,24 @@ def run_pipeline(keyword: str):
     print(f"Lead Quality Dist.   : High={high} | Medium={medium} | Low={low}")
     print(f"Output File          : {output_file}")
     print("=" * 60 + "\n")
+
+    # Commercial Intent Sanity Check Metric
+    try:
+        from search.manager import is_high_priority_query
+        is_commercial = is_high_priority_query(keyword)
+    except Exception:
+        is_commercial = False
+
+    if is_commercial and len(companies) >= 5:
+        acceptance_rate = (len(leads) / len(companies))
+        if acceptance_rate < 0.05:
+            print("!" * 60)
+            print("WARNING: HIGH COMMERCIAL INTENT QUERY YIELDED VERY LOW ACCEPTANCE!")
+            print(f"  Query '{keyword}' has strong B2B/commercial intent classification,")
+            print(f"  but only {len(leads)} out of {len(companies)} discovered pages ({acceptance_rate*100:.1f}%) were accepted.")
+            print("  This pattern suggests a potential scorer mismatch or ontology mapping issue.")
+            print("  Please check if company homepages are being filtered out under 'semantic_low_score'.")
+            print("!" * 60 + "\n")
 
     return output_file
 
