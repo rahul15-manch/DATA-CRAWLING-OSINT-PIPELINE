@@ -54,7 +54,11 @@ class BrightDataProvider(GoogleHtmlProvider):
     ) -> tuple[list[SearchResult], SearchValidationResult]:
         from search.search_validator import validate_search_response
 
-        params = f"q={quote_plus(query)}&num={min(max_results, 10)}&hl=en&gl=us"
+        # Bright Data's SERP proxy returns 0-byte responses for URLs containing
+        # %22 (URL-encoded double quotes). Strip quote operators — the keywords
+        # still work for discovery without exact-phrase matching.
+        sanitized_query = query.replace('"', '')
+        params = f"q={quote_plus(sanitized_query)}&hl=en&gl=us"
         if page > 0:
             params += f"&start={page * min(max_results, 10)}"
         google_url = f"https://www.google.com/search?{params}"

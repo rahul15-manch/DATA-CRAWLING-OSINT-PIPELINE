@@ -34,8 +34,11 @@ class HeaderMiddleware(BaseMiddleware):
         if request.headers:
             headers.update(request.headers)
 
-        # Remove Accept-Encoding so curl_cffi handles gzip/brotli automatically
-        headers.pop("Accept-Encoding", None)
+        # Remove Accept-Encoding so curl_cffi handles gzip/brotli automatically,
+        # UNLESS the caller explicitly set it (e.g. to avoid brotli decompression issues)
+        user_set_encoding = request.headers and "Accept-Encoding" in request.headers
+        if not user_set_encoding:
+            headers.pop("Accept-Encoding", None)
 
         request.headers = headers
         request.meta["user_agent"] = ua

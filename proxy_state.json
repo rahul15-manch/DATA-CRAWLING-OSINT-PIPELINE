@@ -1,93 +1,28 @@
 {
   "34.87.80.221:30000": {
-    "score": 0.0,
-    "google_successes": 0,
-    "google_captchas": 1,
-    "google_429s": 0,
-    "consecutive_failures": 2,
-    "consecutive_blocks": {
-      "www.bing.com": 0
-    },
-    "dead": true,
-    "google_status": "healthy",
-    "bing_status": "healthy",
-    "general_status": "healthy",
-    "last_success_ts": 1783927041.3453336,
-    "last_failure_ts": 1783927650.0441,
-    "latency_samples": [
-      3.144
-    ],
-    "outcome_history": [
-      [
-        1783927147.044894,
-        "TRANSPORT_CONNECTION_ERROR"
-      ],
-      [
-        1783927229.005069,
-        "TRANSPORT_CONNECTION_ERROR"
-      ],
-      [
-        1783927232.0530221,
-        "GOOGLE_CAPTCHA"
-      ],
-      [
-        1783927566.592453,
-        "TRANSPORT_CONNECTION_ERROR"
-      ],
-      [
-        1783927650.0441,
-        "TRANSPORT_CONNECTION_ERROR"
-      ]
-    ],
-    "quarantine_until": null,
-    "quarantine_step": 0,
-    "inactive": false,
-    "dead_for_google": false,
-    "dead_for_bing": false,
-    "consecutive_timeouts": {},
-    "provider_capabilities": {
-      "google": "unknown",
-      "bing": "unknown",
-      "duckduckgo": "unknown",
-      "default": "unknown"
-    }
-  },
-  "47.81.56.193:8888": {
-    "score": 0.0,
+    "score": 100.0,
     "google_successes": 0,
     "google_captchas": 0,
-    "google_429s": 1,
-    "consecutive_failures": 4,
+    "google_429s": 0,
+    "consecutive_failures": 2,
     "consecutive_blocks": {},
     "dead": true,
     "google_status": "healthy",
     "bing_status": "healthy",
-    "general_status": "healthy",
-    "last_success_ts": 1783927041.3453336,
-    "last_failure_ts": 1784179114.1380987,
+    "general_status": "dead",
+    "last_success_ts": null,
+    "last_failure_ts": 1784448824.2146702,
     "latency_samples": [
-      4.197,
-      3.08499813079834,
-      2.8680386543273926,
-      29.955540418624878,
-      28.771435737609863
+      26.454450130462646
     ],
     "outcome_history": [
       [
-        1783927106.8288608,
+        1784448689.5817852,
         "TRANSPORT_CONNECTION_ERROR"
       ],
       [
-        1783927182.1934803,
-        "TRANSPORT_CONNECTION_ERROR"
-      ],
-      [
-        1784178819.18349,
-        "TRANSPORT_CONNECTION_ERROR"
-      ],
-      [
-        1784179114.1380987,
-        "TRANSPORT_CONNECTION_ERROR"
+        1784448824.2146702,
+        "TRANSPORT_TIMEOUT"
       ]
     ],
     "quarantine_until": null,
@@ -97,43 +32,69 @@
     "dead_for_bing": false,
     "consecutive_timeouts": {},
     "provider_capabilities": {
-      "google": "unknown",
-      "bing": "unknown",
-      "duckduckgo": "unknown",
-      "default": "unknown"
+      "google": "DEAD",
+      "bing": "GOOD",
+      "duckduckgo": "GOOD",
+      "brave": "GOOD",
+      "directory": "GOOD",
+      "general_crawl": "TIMEOUT"
+    }
+  },
+  "47.81.56.193:8888": {
+    "score": 100.0,
+    "google_successes": 0,
+    "google_captchas": 0,
+    "google_429s": 0,
+    "consecutive_failures": 0,
+    "consecutive_blocks": {},
+    "dead": true,
+    "google_status": "healthy",
+    "bing_status": "healthy",
+    "general_status": "dead",
+    "last_success_ts": null,
+    "last_failure_ts": null,
+    "latency_samples": [],
+    "outcome_history": [],
+    "quarantine_until": null,
+    "quarantine_step": 0,
+    "inactive": false,
+    "dead_for_google": false,
+    "dead_for_bing": false,
+    "consecutive_timeouts": {},
+    "provider_capabilities": {
+      "google": "GOOD",
+      "bing": "GOOD",
+      "duckduckgo": "GOOD",
+      "brave": "GOOD",
+      "directory": "GOOD",
+      "general_crawl": "TLS_ERROR"
     }
   },
   "217.182.203.184:8888": {
-    "score": 0.0,
+    "score": 94.0,
     "google_successes": 0,
     "google_captchas": 0,
-    "google_429s": 1,
-    "consecutive_failures": 0,
-    "consecutive_blocks": {
-      "www.bing.com": 1
-    },
+    "google_429s": 0,
+    "consecutive_failures": 2,
+    "consecutive_blocks": {},
     "dead": true,
     "google_status": "healthy",
-    "bing_status": "blocked",
-    "general_status": "healthy",
-    "last_success_ts": 1783927041.3453336,
-    "last_failure_ts": 1784178733.6455395,
+    "bing_status": "healthy",
+    "general_status": "dead",
+    "last_success_ts": null,
+    "last_failure_ts": 1784455114.9975603,
     "latency_samples": [
-      2.81,
-      10.35208773612976
+      6.606708526611328,
+      5.431594610214233
     ],
     "outcome_history": [
       [
-        1783927122.5730393,
-        "GOOGLE_CAPTCHA"
-      ],
-      [
-        1783927621.1895487,
+        1784448729.822051,
         "TRANSPORT_CONNECTION_ERROR"
       ],
       [
-        1784178733.6455395,
-        "GOOGLE_CAPTCHA"
+        1784455114.9975603,
+        "TRANSPORT_CONNECTION_ERROR"
       ]
     ],
     "quarantine_until": null,
@@ -143,209 +104,57 @@
     "dead_for_bing": false,
     "consecutive_timeouts": {},
     "provider_capabilities": {
-      "google": "unknown",
-      "bing": "unknown",
-      "duckduckgo": "unknown",
-      "default": "unknown"
+      "google": "DEAD",
+      "bing": "GOOD",
+      "duckduckgo": "GOOD",
+      "brave": "GOOD",
+      "directory": "GOOD",
+      "general_crawl": "GOOD"
     }
   },
   "181.39.25.196:8118": {
     "score": 94.0,
     "google_successes": 0,
-    "google_captchas": 6,
-    "google_429s": 1,
+    "google_captchas": 0,
+    "google_429s": 0,
     "consecutive_failures": 1,
-    "consecutive_blocks": {
-      "www.bing.com": 0,
-      "www.google.com": 5,
-      "api.brightdata.com": 0,
-      "www.goodfirms.co": 0,
-      "suntist.com": 0,
-      "uvik.net": 0,
-      "djangoproject.com": 0,
-      "emizentech.com": 0
-    },
+    "consecutive_blocks": {},
     "dead": false,
     "google_status": "healthy",
     "bing_status": "healthy",
     "general_status": "healthy",
-    "last_success_ts": 1784290295.7260494,
-    "last_failure_ts": 1784290367.968906,
+    "last_success_ts": 1784455181.389385,
+    "last_failure_ts": 1784455958.1914601,
     "latency_samples": [
-      2.6764469146728516,
-      3.454322099685669,
-      5.563807249069214,
-      5.757350444793701,
-      3.1748130321502686,
-      2.4615445137023926,
-      1.052610158920288,
-      0.9848878383636475,
-      0.7725708484649658,
-      0.839759349822998
+      3.25183367729187,
+      2.90877628326416,
+      4.114028692245483,
+      3.8894155025482178,
+      22.141679763793945
     ],
     "outcome_history": [
       [
-        1783927201.1889327,
+        1784448775.927811,
         "TRANSPORT_CONNECTION_ERROR"
       ],
       [
-        1783927626.7725303,
-        "GOOGLE_CAPTCHA"
-      ],
-      [
-        1784178779.0853662,
-        "GOOGLE_CAPTCHA"
-      ],
-      [
-        1784286483.2214224,
-        "GOOGLE_CAPTCHA"
-      ],
-      [
-        1784286938.6142552,
+        1784455173.9483213,
         "TRANSPORT_SUCCESS"
       ],
       [
-        1784286989.8402517,
-        "GOOGLE_CAPTCHA"
-      ],
-      [
-        1784287258.6394377,
+        1784455174.2841904,
         "TRANSPORT_SUCCESS"
       ],
       [
-        1784287283.9566777,
+        1784455180.4858956,
         "TRANSPORT_SUCCESS"
       ],
       [
-        1784287309.4967208,
+        1784455181.389385,
         "TRANSPORT_SUCCESS"
       ],
       [
-        1784287334.8966436,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784287354.8704226,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784287394.9136658,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784287417.5867987,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784287436.5297751,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784287449.1065307,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784287469.3787553,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784287489.281628,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784287505.1208498,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784288244.0174334,
-        "GOOGLE_CAPTCHA"
-      ],
-      [
-        1784288596.400802,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784288610.3851733,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784288630.3451607,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784288657.485135,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784288708.975605,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784288771.8908594,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784288800.5228195,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784288823.8797512,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784288841.2565236,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784288865.8564997,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784288880.9758394,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784288902.8671865,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784288904.8619277,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784288936.365236,
-        "GOOGLE_CAPTCHA"
-      ],
-      [
-        1784289860.8178163,
-        "GOOGLE_CAPTCHA"
-      ],
-      [
-        1784289992.4654748,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784290146.2444735,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784290163.0402913,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784290206.9345944,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784290228.6172972,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784290295.7260494,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784290367.968906,
+        1784455958.1914601,
         "TRANSPORT_CONNECTION_ERROR"
       ]
     ],
@@ -355,255 +164,50 @@
     "dead_for_google": false,
     "dead_for_bing": false,
     "consecutive_timeouts": {
-      "api.brightdata.com": 0,
-      "www.goodfirms.co": 0,
-      "suntist.com": 0,
-      "uvik.net": 0,
-      "djangoproject.com": 0,
-      "emizentech.com": 0
+      "in.linkedin.com": 0,
+      "www.linkedin.com": 0
     },
     "provider_capabilities": {
-      "google": "CAPTCHA",
-      "bing": "unknown",
-      "duckduckgo": "unknown",
-      "default": "unknown",
-      "general_crawl": "DEAD"
+      "google": "DEAD",
+      "bing": "GOOD",
+      "duckduckgo": "GOOD",
+      "brave": "GOOD",
+      "directory": "GOOD",
+      "general_crawl": "SLOW"
     }
   },
   "52.67.38.58:3128": {
-    "score": 100.0,
-    "google_successes": 171,
-    "google_captchas": 0,
-    "google_429s": 1,
-    "consecutive_failures": 0,
+    "score": 84.0,
+    "google_successes": 0,
+    "google_captchas": 1,
+    "google_429s": 0,
+    "consecutive_failures": 1,
     "consecutive_blocks": {
-      "www.google.com": 1,
-      "api.brightdata.com": 0,
-      "www.boffowebsol.com": 0,
-      "www.goodfirms.co": 0,
-      "www.stanga.net": 0,
-      "empat.tech": 0,
-      "www.dinocodela.com": 0,
-      "brainerhub.com": 0
+      "www.google.com": 1
     },
-    "dead": false,
+    "dead": true,
     "google_status": "healthy",
     "bing_status": "healthy",
-    "general_status": "healthy",
-    "last_success_ts": 1784290402.0251417,
-    "last_failure_ts": 1784287390.7290199,
+    "general_status": "dead",
+    "last_success_ts": null,
+    "last_failure_ts": 1784455935.399152,
     "latency_samples": [
-      1.4469738006591797,
-      1.5957612991333008,
-      1.4129843711853027,
-      1.3844919204711914,
-      1.412123441696167,
-      1.3990871906280518,
-      1.4121575355529785,
-      1.6247894763946533,
-      1.3909435272216797,
-      1.4620325565338135
+      31.46100354194641,
+      14.373963356018066,
+      35.272114276885986
     ],
     "outcome_history": [
       [
-        1784284275.9559658,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784284286.6789734,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784284295.7401896,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784284303.9635732,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784284486.666567,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784284518.3860912,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784284549.4841979,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784284733.764666,
+        1784448721.931578,
         "TRANSPORT_CONNECTION_ERROR"
       ],
       [
-        1784284997.304327,
-        "TRANSPORT_SUCCESS"
+        1784455130.1204581,
+        "GOOGLE_CAPTCHA"
       ],
       [
-        1784285060.688672,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784285171.0202749,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784285172.0201051,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784285196.1943953,
-        "GOOGLE_SERP"
-      ],
-      [
-        1784285204.458304,
-        "GOOGLE_SERP"
-      ],
-      [
-        1784285210.6479998,
-        "GOOGLE_SERP"
-      ],
-      [
-        1784285217.0751324,
-        "GOOGLE_SERP"
-      ],
-      [
-        1784286476.4320676,
-        "GOOGLE_429"
-      ],
-      [
-        1784286977.9466693,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784287224.9077876,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784287246.5313454,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784287307.057892,
+        1784455935.399152,
         "TRANSPORT_CONNECTION_ERROR"
-      ],
-      [
-        1784287373.861533,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784288235.2376082,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784288283.8911426,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784288374.010748,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784288487.26912,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784288647.431426,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784288673.6339319,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784288682.5034711,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784288694.7285912,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784288733.8439412,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784288746.551954,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784288758.7838056,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784288788.5128956,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784288853.713019,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784288896.679541,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784288903.5302398,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784288923.7815003,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784288946.9528377,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784288950.783505,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784289933.425092,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784290180.3768044,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784290193.1358128,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784290256.4517949,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784290278.315495,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784290319.7143714,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784290341.3310635,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784290354.8624866,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784290389.4443288,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784290402.0251417,
-        "TRANSPORT_SUCCESS"
       ]
     ],
     "quarantine_until": null,
@@ -611,90 +215,47 @@
     "inactive": false,
     "dead_for_google": false,
     "dead_for_bing": false,
-    "consecutive_timeouts": {
-      "www.google.com": 0,
-      "search.brave.com": 0,
-      "www.yellowpages.com": 0,
-      "clutch.co": 0,
-      "www.goodfirms.co": 0,
-      "dir.indiamart.com": 0,
-      "www.justdial.com": 0,
-      "example.com": 0,
-      "aiassistica.com": 0,
-      "andersenlab.com": 0,
-      "beststartup.in": 0,
-      "f6s.com": 0,
-      "daffodilsw.com": 0,
-      "tatvasoft.com": 0,
-      "indo18.com": 0,
-      "bokeptime.com": 0,
-      "engineering.com": 0,
-      "creativepath.in": 0,
-      "rynow.in": 0,
-      "karnatakatourism.org": 0,
-      "builtinbengaluru.in": 0,
-      "techvault.co.in": 0,
-      "reckersautomation.com": 0,
-      "aeab.in": 0,
-      "depl.biz": 0,
-      "jarmakautomation.com": 0,
-      "python.org": 0,
-      "awesome-python.com": 0,
-      "jetbrains.com": 0,
-      "online-python.com": 0,
-      "programiz.com": 0,
-      "onecompiler.com": 0,
-      "pybuddy.com": 0,
-      "www.boffowebsol.com": 0,
-      "www.crunchbase.com": 0,
-      "ozone.in": 0,
-      "acehardware.com": 0,
-      "api.brightdata.com": 0,
-      "www.stanga.net": 0,
-      "empat.tech": 0,
-      "www.dinocodela.com": 0,
-      "brainerhub.com": 0
-    },
+    "consecutive_timeouts": {},
     "provider_capabilities": {
-      "google": "BLOCKED",
-      "bing": "unknown",
-      "duckduckgo": "unknown",
-      "default": "good",
+      "google": "DEAD",
+      "bing": "GOOD",
+      "duckduckgo": "GOOD",
+      "brave": "GOOD",
+      "directory": "GOOD",
       "general_crawl": "GOOD"
     }
   },
   "34.134.231.117:3129": {
-    "score": 0.0,
-    "google_successes": 1,
-    "google_captchas": 2,
+    "score": 90.0,
+    "google_successes": 0,
+    "google_captchas": 1,
     "google_429s": 0,
     "consecutive_failures": 0,
     "consecutive_blocks": {
-      "www.google.com": 1,
-      "www.bing.com": 0
+      "www.google.com": 1
     },
     "dead": true,
-    "google_status": "blocked",
+    "google_status": "healthy",
     "bing_status": "healthy",
-    "general_status": "healthy",
-    "last_success_ts": 1783927041.3453336,
-    "last_failure_ts": 1784178788.1052148,
+    "general_status": "dead",
+    "last_success_ts": null,
+    "last_failure_ts": 1784455134.1655877,
     "latency_samples": [
-      2.694,
-      5.76435661315918,
-      5.335126161575317
+      30.05495524406433,
+      10.959033966064453,
+      2.750516891479492
     ],
     "outcome_history": [
       [
-        1783927192.198587,
-        "GOOGLE_CAPTCHA"
+        1784448760.4367766,
+        "TRANSPORT_CONNECTION_ERROR"
       ],
       [
-        1783927573.5807686,
-        "GOOGLE_CAPTCHA"
+        1784449452.7378743,
+        "TRANSPORT_CONNECTION_ERROR"
       ],
       [
-        1784178788.1052148,
+        1784455134.1655877,
         "GOOGLE_CAPTCHA"
       ]
     ],
@@ -705,10 +266,12 @@
     "dead_for_bing": false,
     "consecutive_timeouts": {},
     "provider_capabilities": {
-      "google": "unknown",
-      "bing": "unknown",
-      "duckduckgo": "unknown",
-      "default": "unknown"
+      "google": "CAPTCHA",
+      "bing": "GOOD",
+      "duckduckgo": "GOOD",
+      "brave": "GOOD",
+      "directory": "GOOD",
+      "general_crawl": "GOOD"
     }
   }
 }

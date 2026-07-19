@@ -1737,5 +1737,25 @@
     "social_links": {},
     "people": [],
     "source": "Google"
+  },
+  {
+    "company_name": "Buildableworks",
+    "website": "https://www.buildableworks.com/",
+    "domain": "buildableworks.com",
+    "industry": "Software Development",
+    "contact_page": "https://www.buildableworks.com/contact",
+    "about_page": "https://www.buildableworks.com/about",
+    "emails": [
+      "connect@buildableworks.com"
+    ],
+    "phones": [],
+    "social_links": {
+      "linkedin.com": "https://www.linkedin.com/company/buildable",
+      "instagram.com": "https://www.instagram.com/buildableworks",
+      "facebook.com": "https://www.facebook.com/BuildableWorks/",
+      "twitter.com": "https://twitter.com/buildableworks"
+    },
+    "people": [],
+    "source": "Google"
   }
 ]

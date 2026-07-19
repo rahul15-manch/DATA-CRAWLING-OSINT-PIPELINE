@@ -40,6 +40,19 @@ def classify_error(error: Exception | None) -> str:
         
     return "generic"
 
+def get_base_domain(host: str) -> str:
+    host = host.lower().strip()
+    if not host or host == "global":
+        return "global"
+    if ":" in host:
+        host = host.split(":")[0]
+    parts = host.split('.')
+    if len(parts) >= 2:
+        if parts[-2] in ("co", "com", "org", "net", "edu", "gov", "ac"):
+            return ".".join(parts[-3:])
+        return ".".join(parts[-2:])
+    return host
+
 # Map classify_error results to OutcomeType
 _ERROR_TO_OUTCOME = {
     "captcha":              OutcomeType.GOOGLE_CAPTCHA,
@@ -182,7 +195,8 @@ class Proxy:
         if self.quarantine_until and now < self.quarantine_until:
             return True
 
-        cd_until = self.cooldown_until.get(domain, 0.0)
+        base_dom = get_base_domain(domain)
+        cd_until = self.cooldown_until.get(base_dom, 0.0)
         global_cd = self.cooldown_until.get("global", 0.0)
         is_cd = (now < cd_until) or (now < global_cd)
         
@@ -190,15 +204,15 @@ class Proxy:
             transitioned = False
             if "google" in domain.lower() and self.google_status == "blocked":
                 self.google_status = "healthy"
-                if self.consecutive_blocks: self.consecutive_blocks[domain] = 0
+                if self.consecutive_blocks: self.consecutive_blocks[base_dom] = 0
                 transitioned = True
             elif "bing" in domain.lower() and self.bing_status == "blocked":
                 self.bing_status = "healthy"
-                if self.consecutive_blocks: self.consecutive_blocks[domain] = 0
+                if self.consecutive_blocks: self.consecutive_blocks[base_dom] = 0
                 transitioned = True
             elif self.general_status == "blocked":
                 self.general_status = "healthy"
-                if self.consecutive_blocks: self.consecutive_blocks[domain] = 0
+                if self.consecutive_blocks: self.consecutive_blocks[base_dom] = 0
                 transitioned = True
                 
             if transitioned:
@@ -267,19 +281,20 @@ class Proxy:
             self.inactive = False
             logger.info(f"[ProxyManager] Proxy {self.raw_url} reactivated after success.")
         
+        base_dom = get_base_domain(domain)
         if self.consecutive_blocks:
-            self.consecutive_blocks[domain] = 0
+            self.consecutive_blocks[base_dom] = 0
             
         if not hasattr(self, "consecutive_timeouts") or self.consecutive_timeouts is None:
             self.consecutive_timeouts = {}
-        self.consecutive_timeouts[domain] = 0
+        self.consecutive_timeouts[base_dom] = 0
         
         if "google" in domain.lower():
             self.dead_for_google = False
         elif "bing" in domain.lower():
             self.dead_for_bing = False
             
-        if domain in self.cooldown_until: self.cooldown_until[domain] = 0.0
+        if base_dom in self.cooldown_until: self.cooldown_until[base_dom] = 0.0
         if "global" in self.cooldown_until: self.cooldown_until["global"] = 0.0
             
         old_score = self.proxy_score
@@ -326,6 +341,7 @@ class Proxy:
             if reason == "CAPTCHA": err_type = "captcha"
             elif reason == "ENABLE_JS": err_type = "enablejs"
             elif reason == "CONSENT_PAGE": err_type = "consent_page"
+            elif reason == "CHALLENGE_PAGE": err_type = "captcha"  # challenge/WAF wall = same as captcha
             elif reason == "RATE_LIMIT": err_type = "rate_limit"
             elif reason == "TIMEOUT": err_type = "timeout"
             elif reason in ["PARSER_FAILURE", "UNKNOWN_LAYOUT"]: err_type = "parser_failure"
@@ -418,6 +434,15 @@ class Proxy:
             # Use quarantine with exponential backoff instead of fixed cooldown
             self.quarantine_step = min(self.quarantine_step + 1, QUARANTINE_MAX_STEP + QUARANTINE_INACTIVE_AFTER)
             qd = quarantine_duration(self.quarantine_step)
+            
+            # Apply strict long cooldowns specifically for Google domains
+            if "google" in domain.lower():
+                from .config import config
+                if err_type == "rate_limit":
+                    qd = max(qd, getattr(config, "GOOGLE_429_COOLDOWN", 900.0))
+                else:
+                    qd = max(qd, getattr(config, "GOOGLE_CAPTCHA_COOLDOWN", 1800.0))
+
             self.quarantine_until = now + qd
             
             # Mark inactive after too many consecutive backoffs at the cap
@@ -441,7 +466,7 @@ class Proxy:
                     
             self.cooldown_until[domain] = now + qd
 
-            logger.info(f"[ProxyManager] Proxy {self.raw_url} quarantined for {qd:.0f}s (step {self.quarantine_step}). Score changed by -{penalty:.1f}.")
+            logger.info(f"[ProxyManager] Proxy {self.raw_url} quarantined for {qd:.0f}s (step {self.quarantine_step}) for domain {domain}. Score changed by -{penalty:.1f}.")
             
         elif err_type in ["dead_connection", "tls_failure", "certificate_failure", "timeout"]:
             self.consecutive_failures += 1
@@ -534,6 +559,127 @@ class ProxyManager:
         logger.info(f"Loaded {len(proxy_list)} proxies into the manager.")
         if not self._state_loaded:
             self.load_state("proxy_state.json")
+
+        # Trigger real-time startup background health verification
+        self.validate_all_proxies_async()
+        
+        # Block for at most 3 seconds or until at least one proxy is verified healthy
+        start_wait = time.time()
+        while time.time() - start_wait < 3.0:
+            with self._lock:
+                healthy_count = sum(1 for p in self._proxies if not p.dead)
+            if healthy_count > 0:
+                break
+            time.sleep(0.1)
+
+    def validate_all_proxies_async(self):
+        """Run a background thread to validate HTTPS and Google connectivity for all loaded proxies."""
+        def _check_all():
+            logger.info("[ProxyManager] Starting background proxy validation thread...")
+            with self._lock:
+                proxies_to_test = list(self._proxies)
+                
+            from concurrent.futures import ThreadPoolExecutor
+            try:
+                from curl_cffi import requests
+                has_curl_cffi = True
+            except ImportError:
+                try:
+                    import requests
+                    has_curl_cffi = False
+                except ImportError:
+                    logger.warning("[ProxyManager] No requests or curl_cffi installed. Skipping active validation.")
+                    return
+            
+            # Multiple test endpoints — try in order, pass if ANY succeeds
+            GENERAL_TEST_URLS = [
+                "https://httpbin.org/ip",
+                "https://api.ipify.org",
+                "https://ifconfig.me/ip",
+            ]
+            
+            def _test_single_proxy(p: Proxy):
+                url = p.raw_url if "://" in p.raw_url else f"http://{p.raw_url}"
+                proxies_dict = {"http": url, "https": url}
+                
+                # Test Stage 1: general HTTPS — try multiple endpoints, pass on first success
+                general_alive = False
+                for test_url in GENERAL_TEST_URLS:
+                    try:
+                        if has_curl_cffi:
+                            resp = requests.get(
+                                test_url,
+                                proxies=proxies_dict,
+                                timeout=8,
+                                impersonate="chrome124",
+                                verify=False
+                            )
+                        else:
+                            resp = requests.get(
+                                test_url,
+                                proxies=proxies_dict,
+                                timeout=8,
+                                verify=False
+                            )
+                        if resp.status_code == 200:
+                            general_alive = True
+                            break
+                    except Exception:
+                        pass  # Try next endpoint
+                
+                if general_alive:
+                    p.dead = False
+                    p.general_status = "healthy"
+                    logger.info(f"[ProxyManager] Proxy {p.raw_url} -> ALIVE (general HTTPS OK)")
+                else:
+                    p.dead = True
+                    p.general_status = "dead"
+                    # Do NOT zero the score — keep historical score intact
+                    # Score reflects past performance; dead flag blocks current use
+                    logger.warning(f"[ProxyManager] Proxy {p.raw_url} -> DEAD (all {len(GENERAL_TEST_URLS)} general HTTPS tests failed)")
+                    return
+                    
+                # Test Stage 2: Google HTTPS (only if general is alive)
+                try:
+                    if has_curl_cffi:
+                        resp = requests.get(
+                            "https://www.google.com",
+                            proxies=proxies_dict,
+                            timeout=8,
+                            impersonate="chrome124",
+                            verify=False
+                        )
+                    else:
+                        resp = requests.get(
+                            "https://www.google.com",
+                            proxies=proxies_dict,
+                            timeout=8,
+                            verify=False
+                        )
+                    if resp.status_code == 200:
+                        p.google_status = "healthy"
+                        p.dead_for_google = False
+                        logger.info(f"[ProxyManager] Proxy {p.raw_url} -> Google OK")
+                    elif resp.status_code == 429:
+                        p.google_status = "blocked"
+                        p.cooldown_until["www.google.com"] = time.time() + 900.0
+                        logger.warning(f"[ProxyManager] Proxy {p.raw_url} -> Google 429 (15min cooldown)")
+                    else:
+                        p.google_status = "blocked"
+                        logger.warning(f"[ProxyManager] Proxy {p.raw_url} -> Google HTTP {resp.status_code}")
+                except Exception as e:
+                    p.google_status = "blocked"
+                    p.dead_for_google = True
+                    logger.warning(f"[ProxyManager] Proxy {p.raw_url} -> Google UNREACHABLE ({e})")
+                    
+            with ThreadPoolExecutor(max_workers=min(15, len(proxies_to_test) or 1)) as executor:
+                executor.map(_test_single_proxy, proxies_to_test)
+                
+            alive = sum(1 for p in proxies_to_test if not p.dead)
+            google_alive = sum(1 for p in proxies_to_test if not p.dead and not p.dead_for_google)
+            logger.info(f"[ProxyManager] Background proxy validation complete. Alive: {alive}/{len(proxies_to_test)}, Google-capable: {google_alive}/{len(proxies_to_test)}")
+            
+        threading.Thread(target=_check_all, name="ProxyManager-StartupValidator", daemon=True).start()
 
     def load_from_file(self, filepath: str):
         try:
@@ -635,6 +781,18 @@ class ProxyManager:
                                     continue
                                 restored.append((ts, ot))
                         p.outcome_history = restored
+                        
+                        # Reset temporary blocks/dead status from previous runs on new pipeline startup
+                        p.dead = False
+                        p.dead_for_google = False
+                        p.dead_for_bing = False
+                        p.cooldown_until.clear()
+                        p.quarantine_until = None
+                        p.quarantine_step = 0
+                        p.inactive = False
+                        if p.proxy_score <= 0.0:
+                            p.proxy_score = 100.0
+                            
             self._state_loaded = True
             logger.info(f"Loaded proxy state from {filepath}")
             self._log_proxy_stats("Loaded proxy state")
@@ -671,6 +829,7 @@ class ProxyManager:
                 try:
                     self.refresh_proxy_capabilities()
                     self.clear_invalid_cooldowns()
+                    self.validate_all_proxies_async()
                 except Exception:
                     logger.exception("[ProxyManager] Background validation failed")
 

@@ -2,6 +2,8 @@
 
 import re
 from urllib.parse import urljoin, urlparse
+import threading
+import time
 
 import requests
 from bs4 import BeautifulSoup
@@ -10,6 +12,11 @@ import config
 from utils.constants import DESIGNATION_KEYWORDS, DESIGNATION_ACRONYMS
 from utils.validators import is_valid_phone, is_valid_person_record, rank_emails
 from utils.enrichment import detect_company_type, detect_industry
+
+# Domain Crawl Circuit Breaker state
+_domain_consecutive_blocks = {}
+_domain_cooldowns = {}
+_cb_lock = threading.Lock()
 
 # ── Patterns ──────────────────────────────────────────────────────────────────
 
@@ -89,6 +96,19 @@ def _get_domain_budget_state(domain: str):
 # Fetch helper
 # ─────────────────────────────────────────────────────────────────────────────
 
+def _penalise_proxy(proxy_url: str, canonical_url: str):
+    try:
+        from network_client_project.network.proxy_manager import get_proxy_manager
+        from urllib.parse import urlparse as _up
+        pm = get_proxy_manager()
+        proxy_obj = pm.get_proxy_by_url(proxy_url)
+        if proxy_obj:
+            proxy_obj.record_failure(domain=_up(canonical_url).netloc, reason="CHALLENGE_PAGE")
+            print(f"[page_extractor] Penalised proxy {proxy_url} for delivering non-HTML content.")
+    except Exception:
+        pass
+
+
 def fetch_page(url: str):
     """
     Fetch a page's public HTML via a plain GET using NetworkClient.
@@ -111,6 +131,16 @@ def fetch_page(url: str):
 
     from urllib.parse import urlparse
     domain = urlparse(canonical_url).netloc.lower()
+    domain_key = domain.lstrip("www.")
+
+    # Check domain-level circuit breaker cooldown
+    with _cb_lock:
+        cooldown_until = _domain_cooldowns.get(domain_key, 0.0)
+        if time.time() < cooldown_until:
+            remaining = int(cooldown_until - time.time())
+            print(f"[CrawlCircuitBreaker] Skipping {canonical_url} — domain {domain_key} is in cooldown for {remaining}s due to consecutive blocks.")
+            return None
+
     state = _get_domain_budget_state(domain)
 
     if state["pages_crawled"] >= 4:
@@ -127,18 +157,68 @@ def fetch_page(url: str):
         return None
 
     client = NetworkClient()
+    resp = None
+    success = False
+
     try:
         # Try direct connection first
         resp = client.get(canonical_url, require_proxy=False, timeout=config.REQUEST_TIMEOUT)
         if resp.status_code in (403, 429) or str(resp.status_code).startswith("5"):
             raise Exception(f"Direct connection failed with HTTP {resp.status_code}")
+
+        # Check if direct request returned valid HTML
+        content_type = (resp.headers.get("Content-Type") or resp.headers.get("content-type") or "").lower()
+        if resp.status_code == 200 and any(ct in content_type for ct in _HTML_CONTENT_TYPES):
+            success = True
     except Exception as exc:
         print(f"[page_extractor] Direct fetch failed for {canonical_url} ({exc}), retrying with proxy...")
-        try:
-            resp = client.get(canonical_url, require_proxy=True, timeout=config.REQUEST_TIMEOUT)
-        except Exception as proxy_exc:
-            print(f"[page_extractor] Proxy fetch failed for {canonical_url}: {proxy_exc}")
-            return None
+
+    if not success:
+        # Try up to 3 different unique proxies
+        exclude_urls = set()
+        for attempt in range(1, 4):
+            session_id = f"enrichment_{domain_key}_{attempt}"
+            try:
+                # Get a unique proxy (exclude_urls prevents re-using previously tried proxies)
+                resp = client.get(
+                    canonical_url,
+                    require_proxy=True,
+                    session_id=session_id,
+                    timeout=config.REQUEST_TIMEOUT,
+                    exclude_urls=exclude_urls
+                )
+                proxy_used = getattr(resp, "proxy", None)
+                if proxy_used:
+                    exclude_urls.add(proxy_used)
+
+                if resp.status_code == 200:
+                    content_type = (resp.headers.get("Content-Type") or resp.headers.get("content-type") or "").lower()
+                    if any(ct in content_type for ct in _HTML_CONTENT_TYPES):
+                        success = True
+                        break
+                    else:
+                        print(f"[page_extractor] Proxy attempt {attempt} returned non-HTML response from {canonical_url}")
+                        if proxy_used and proxy_used != "direct":
+                            _penalise_proxy(proxy_used, canonical_url)
+                else:
+                    print(f"[page_extractor] Proxy attempt {attempt} returned HTTP {resp.status_code} for {canonical_url}")
+            except Exception as proxy_exc:
+                print(f"[page_extractor] Proxy attempt {attempt} failed for {canonical_url}: {proxy_exc}")
+                resp = None
+
+    # Handle success/failure transitions for Domain-level Circuit Breaker
+    if not success:
+        with _cb_lock:
+            blocks = _domain_consecutive_blocks.get(domain_key, 0) + 1
+            _domain_consecutive_blocks[domain_key] = blocks
+            if blocks >= 10:
+                _domain_cooldowns[domain_key] = time.time() + 1200.0  # 20 minutes cooldown
+                print(f"[CrawlCircuitBreaker] Domain {domain_key} hit 10 consecutive blocks. Circuit opened for 20 minutes.")
+        return None
+
+    # Reset block count on success
+    with _cb_lock:
+        _domain_consecutive_blocks[domain_key] = 0
 
     try:
         # Track bytes and page counts
@@ -146,23 +226,15 @@ def fetch_page(url: str):
         downloaded_bytes = len(resp.content or b"")
         state["bytes_downloaded"] += downloaded_bytes
 
-        if resp.status_code != 200:
-            return None
-
-        content_type = resp.headers.get("Content-Type", "").lower()
-        if not any(ct in content_type for ct in _HTML_CONTENT_TYPES):
-            print(f"[page_extractor] skipping non-HTML response from {canonical_url}")
-            return None
-
         html = resp.text
-        
+
         if not frontier.record_crawl(canonical_url, html):
             return None
 
         return html
 
     except Exception as exc:  # noqa: BLE001
-        print(f"[page_extractor] failed to fetch {canonical_url}: {exc}")
+        print(f"[page_extractor] failed to process {canonical_url}: {exc}")
         return None
 
 

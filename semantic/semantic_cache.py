@@ -8,9 +8,12 @@ Invalidates on TTL (30 days) or ontology version mismatch.
 import os
 import json
 import time
+import threading
 from semantic.semantic_profile import IntentProfile, CompanyProfile
 from semantic.ontology_manager import ONTOLOGY_VERSION
 import utils.stats_tracker as stats
+
+_cache_lock = threading.Lock()
 
 # ---------- Paths & Memory Store ----------
 
@@ -24,23 +27,24 @@ _company_cache = {}
 
 def load_caches():
     global _intent_cache, _company_cache
-    if os.path.exists(INTENT_CACHE_PATH):
-        try:
-            with open(INTENT_CACHE_PATH, "r", encoding="utf-8") as f:
-                _intent_cache = json.load(f)
-        except Exception:
+    with _cache_lock:
+        if os.path.exists(INTENT_CACHE_PATH):
+            try:
+                with open(INTENT_CACHE_PATH, "r", encoding="utf-8") as f:
+                    _intent_cache = json.load(f)
+            except Exception:
+                _intent_cache = {}
+        else:
             _intent_cache = {}
-    else:
-        _intent_cache = {}
-        
-    if os.path.exists(COMPANY_CACHE_PATH):
-        try:
-            with open(COMPANY_CACHE_PATH, "r", encoding="utf-8") as f:
-                _company_cache = json.load(f)
-        except Exception:
+            
+        if os.path.exists(COMPANY_CACHE_PATH):
+            try:
+                with open(COMPANY_CACHE_PATH, "r", encoding="utf-8") as f:
+                    _company_cache = json.load(f)
+            except Exception:
+                _company_cache = {}
+        else:
             _company_cache = {}
-    else:
-        _company_cache = {}
 
 def save_caches():
     os.makedirs("data", exist_ok=True)
@@ -56,22 +60,24 @@ def save_caches():
 
 def get_cached_intent(keyword: str) -> IntentProfile | None:
     kw_key = keyword.lower().strip()
-    if kw_key in _intent_cache:
-        entry = _intent_cache[kw_key]
-        if entry.get("ontology_version") == ONTOLOGY_VERSION:
-            stats.increment("intent_cache_hits")
-            return IntentProfile.from_dict(entry["intent_profile"])
-            
-    stats.increment("intent_cache_misses")
-    return None
+    with _cache_lock:
+        if kw_key in _intent_cache:
+            entry = _intent_cache[kw_key]
+            if entry.get("ontology_version") == ONTOLOGY_VERSION:
+                stats.increment("intent_cache_hits")
+                return IntentProfile.from_dict(entry["intent_profile"])
+                
+        stats.increment("intent_cache_misses")
+        return None
 
 def set_cached_intent(keyword: str, intent: IntentProfile):
     kw_key = keyword.lower().strip()
-    _intent_cache[kw_key] = {
-        "ontology_version": ONTOLOGY_VERSION,
-        "intent_profile": intent.to_dict()
-    }
-    save_caches()
+    with _cache_lock:
+        _intent_cache[kw_key] = {
+            "ontology_version": ONTOLOGY_VERSION,
+            "intent_profile": intent.to_dict()
+        }
+        save_caches()
 
 def _get_company_cache_key(url_or_domain: str) -> str:
     if not url_or_domain:
@@ -105,33 +111,35 @@ def get_cached_company(url_or_domain: str) -> CompanyProfile | None:
     if not cache_key:
         return None
 
-    if cache_key in _company_cache:
-        entry = _company_cache[cache_key]
-        # Invalidate if ontology version changed
-        if entry.get("ontology_version") != ONTOLOGY_VERSION:
-            return None
+    with _cache_lock:
+        if cache_key in _company_cache:
+            entry = _company_cache[cache_key]
+            # Invalidate if ontology version changed
+            if entry.get("ontology_version") != ONTOLOGY_VERSION:
+                return None
+                
+            # Check TTL (30 days)
+            last_crawled_ts = entry.get("timestamp", 0.0)
+            if time.time() - last_crawled_ts > 30 * 86400:
+                return None
+                
+            stats.increment("company_cache_hits")
+            return CompanyProfile.from_dict(entry["company_profile"])
             
-        # Check TTL (30 days)
-        last_crawled_ts = entry.get("timestamp", 0.0)
-        if time.time() - last_crawled_ts > 30 * 86400:
-            return None
-            
-        stats.increment("company_cache_hits")
-        return CompanyProfile.from_dict(entry["company_profile"])
-        
-    stats.increment("company_cache_misses")
-    return None
+        stats.increment("company_cache_misses")
+        return None
 
 def set_cached_company(url_or_domain: str, company: CompanyProfile):
     cache_key = _get_company_cache_key(url_or_domain)
     if not cache_key:
         return
-    _company_cache[cache_key] = {
-        "ontology_version": ONTOLOGY_VERSION,
-        "timestamp": time.time(),
-        "company_profile": company.to_dict()
-    }
-    save_caches()
+    with _cache_lock:
+        _company_cache[cache_key] = {
+            "ontology_version": ONTOLOGY_VERSION,
+            "timestamp": time.time(),
+            "company_profile": company.to_dict()
+        }
+        save_caches()
 
 # Auto-load caches on import
 load_caches()

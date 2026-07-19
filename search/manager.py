@@ -20,6 +20,29 @@ from query.expansion import record_query_outcome
 logger = logging.getLogger(__name__)
 
 
+def is_valid_company_url(url: str) -> bool:
+    if not url:
+        return False
+    url = url.strip()
+    if not (url.startswith("http://") or url.startswith("https://")):
+        return False
+    try:
+        parsed = urlparse(url)
+        netloc = parsed.netloc.lower()
+        if not netloc or "." not in netloc:
+            return False
+        # Reject search engine paths or internal searches
+        path = parsed.path.lower()
+        if path == "/search" or "search?q=" in url.lower() or "google.com" in netloc:
+            return False
+        # Reject local search files or search terms containing spaces or exclamation marks in host
+        if " " in netloc or "!" in netloc:
+            return False
+        return True
+    except Exception:
+        return False
+
+
 # ─────────────────────────────────────────────────────────────────────────────
 # Per-provider statistics
 # ─────────────────────────────────────────────────────────────────────────────
@@ -300,6 +323,11 @@ class SearchManager:
             "bing": 2
         }
 
+        # Per-provider live query counter for round-robin rotation.
+        # Tracks how many times each provider has been the *first tried* this session,
+        # so _get_ordered_providers can rotate the most-used provider to the back.
+        self._provider_live_query_count: dict[str, int] = defaultdict(int)
+
         # ── Totals ────────────────────────────────────────────────────────
         self.total_queries:            int = 0
         self.total_results:            int = 0
@@ -551,6 +579,7 @@ class SearchManager:
                     continue
 
             self._keyword_queries[pname] += 1
+            self._provider_live_query_count[pname] += 1  # feeds round-robin rotation
 
             t0 = time.time()
             self._last_diag.status_code = None
@@ -580,6 +609,8 @@ class SearchManager:
                 accepted = 0
                 rejected_reasons: dict[str, int] = defaultdict(int)
                 for r in raw:
+                    if not r.url or not is_valid_company_url(r.url):
+                        continue
                     result_dict = {"title": r.title or "", "url": r.url or "", "snippet": r.snippet or ""}
                     classification, reason = classify_result(result_dict)
                     if should_ignore_result(result_dict):
@@ -1163,6 +1194,18 @@ class SearchManager:
 
     # ── Internal helpers ──────────────────────────────────────────────────────
 
+    # Cost tiers: lower = cheaper.  Used to prevent paid providers from
+    # outscoring free ones just by being reliable.
+    PROVIDER_COST_TIER: dict[str, int] = {
+        "google_html": 0,
+        "duckduckgo": 0,
+        "brave": 0,
+        "bing": 0,
+        "brightdata": 1,          # paid — rescue only
+        "directory_provider": 0,
+        "repository_provider": 0,
+    }
+
     def _get_provider_score(self, name: str) -> float:
         stats = self.stats.get(name)
         if not stats or stats.queries == 0:
@@ -1170,26 +1213,32 @@ class SearchManager:
 
         import math
         q = stats.queries
-        # Lead Yield: 45% (leads_discovered / max(1, queries))
+        # Lead Yield: 35%
         lead_yield = (stats.leads_discovered / q) * 100.0
-        
-        # Business Acceptance: 20% (business_accepted / max(1, queries))
+
+        # Business Acceptance: 20%
         biz_acceptance = (stats.business_accepted / q) * 100.0
-        
-        # HTTP Success: 15% (successful_queries / max(1, queries))
+
+        # HTTP Success: 10%
         http_success = (stats.successful_queries / q) * 100.0
-        
-        # Latency: 10% (avg_latency_s)
+
+        # Latency: 25% — steeper penalty so a 15s provider is clearly worse than a 2s one.
         avg_latency = stats.avg_latency_s
-        latency_score = max(0.0, 100.0 - avg_latency * 5.0)
-        
-        # Block Rate: 10% (failures / max(1, queries))
+        latency_score = max(0.0, 100.0 - avg_latency * 8.0)
+
+        # Block Rate: 10%
         block_rate = (stats.failures / q) * 100.0
         safety_score = max(0.0, 100.0 - block_rate)
 
-        # Blend them: 45% Lead Yield, 20% Business Acceptance, 15% HTTP Success, 10% Latency, 10% Block Rate
-        base_score = (0.45 * lead_yield) + (0.20 * biz_acceptance) + (0.15 * http_success) + (0.10 * latency_score) + (0.10 * safety_score)
-        
+        # Blend: 35% Lead Yield + 20% Biz Accept + 10% HTTP Success + 25% Latency + 10% Block Rate
+        base_score = (
+            0.35 * lead_yield
+            + 0.20 * biz_acceptance
+            + 0.10 * http_success
+            + 0.25 * latency_score
+            + 0.10 * safety_score
+        )
+
         # Floor score for low sample size to prevent early tanking
         if q < 3:
             base_score = max(20.0, base_score)
@@ -1197,7 +1246,15 @@ class SearchManager:
         # Exploration bonus
         exploration_bonus = 15.0 / math.sqrt(q)
         score = base_score + exploration_bonus
-        
+
+        # Cost penalty: paid providers get a deduction so they can't outscore
+        # free providers through reliability alone.  A perfect BrightData run
+        # scores ~80 instead of ~100, which is lower than a decently-performing
+        # free provider.
+        cost_tier = self.PROVIDER_COST_TIER.get(name, 0)
+        if cost_tier > 0:
+            score -= 20.0 * cost_tier
+
         return max(1.0, min(100.0, score))
 
     def get_adaptive_timeout(self, pname: str) -> float:
@@ -1256,16 +1313,43 @@ class SearchManager:
             )
             return ordered
 
-        # Dynamically sort based on best numeric health score
-        ordered.sort(key=lambda p: self._get_provider_score(p.name), reverse=True)
+        # ── Cost-tier-aware ordering ─────────────────────────────────────
+        # Primary sort key: configured priority index (preserves the intended
+        #   Google → DDG → Brave → Bing → BrightData ordering).
+        # Secondary sort key: provider health score (breaks ties within the
+        #   same priority rank — e.g. if Google is in cooldown, DDG moves up).
+        #
+        # This replaces the old unconstrained score-sort that let BrightData
+        # jump to first place simply by succeeding, masking the health of
+        # every free provider.
+        priority_index = {name: idx for idx, name in enumerate(self._priority)}
 
-        # Epsilon-Greedy Exploration: 10% chance to move a random provider to the front
+        def _sort_key(p):
+            idx = priority_index.get(p.name, 999)
+            score = self._get_provider_score(p.name)
+            # Providers in cooldown / circuit-breaker OPEN get demoted to
+            # the end regardless of their priority position.
+            is_healthy = self.provider_health.get(p.name, True)
+            breaker = self._provider_breaker_states.get(p.name, "CLOSED")
+            if not is_healthy or breaker == "OPEN":
+                idx += 100  # push to end
+            return (idx, -score)  # lower idx = higher priority; higher score = better
+
+        ordered.sort(key=_sort_key)
+
+        # Epsilon-Greedy Exploration: 10% chance to swap two adjacent
+        # *free-tier* providers (never promotes BrightData to first).
         import random
         if len(ordered) > 1 and random.random() < 0.10:
-            explore_idx = random.randint(1, len(ordered) - 1)
-            explored_provider = ordered.pop(explore_idx)
-            ordered.insert(0, explored_provider)
-            print(f"[SearchManager] Epsilon-Greedy: Exploring provider {explored_provider.name!r} by moving it to the front.")
+            free_providers = [
+                i for i, p in enumerate(ordered)
+                if self.PROVIDER_COST_TIER.get(p.name, 0) == 0
+            ]
+            if len(free_providers) > 1:
+                explore_idx = random.choice(free_providers[1:])
+                explored_provider = ordered.pop(explore_idx)
+                ordered.insert(free_providers[0], explored_provider)
+                print(f"[SearchManager] Epsilon-Greedy: Exploring provider {explored_provider.name!r} by moving it to the front of free tier.")
 
         return ordered
 

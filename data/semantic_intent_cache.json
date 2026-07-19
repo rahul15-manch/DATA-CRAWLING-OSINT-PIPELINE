@@ -199,5 +199,127 @@
       "confidence": 1.0,
       "ontology_version": "1.0.0"
     }
+  },
+  "cloud": {
+    "ontology_version": "1.0.0",
+    "intent_profile": {
+      "primary_domain": "Cloud",
+      "concepts": [
+        "Cloud"
+      ],
+      "positions": [
+        "Cloud Specialist",
+        "Cloud Developer",
+        "Cloud Engineer"
+      ],
+      "services": [
+        "Cloud Solutions",
+        "Cloud Consulting",
+        "Cloud Development"
+      ],
+      "products": [],
+      "confidence": 0.4,
+      "ontology_version": "1.0.0"
+    }
+  },
+  "engineering": {
+    "ontology_version": "1.0.0",
+    "intent_profile": {
+      "primary_domain": "Hardware_Development",
+      "concepts": [
+        "Semiconductors",
+        "Hardware",
+        "Microcontrollers",
+        "IoT",
+        "Pcb Design",
+        "Circuit Design",
+        "Hardware Development",
+        "Electronics",
+        "Hardware Engineering",
+        "Embedded Systems",
+        "Firmware"
+      ],
+      "positions": [
+        "Electronics Engineer",
+        "Hardware Engineer",
+        "Firmware Engineer",
+        "Embedded Developer"
+      ],
+      "services": [
+        "Embedded Systems Development",
+        "Pcb Design Services",
+        "Iot Product Design",
+        "Hardware Design"
+      ],
+      "products": [
+        "Microcontrollers",
+        "Sensors",
+        "Arduino",
+        "Pcb",
+        "Raspberry Pi"
+      ],
+      "confidence": 1.0,
+      "ontology_version": "1.0.0"
+    }
+  },
+  "software": {
+    "ontology_version": "1.0.0",
+    "intent_profile": {
+      "primary_domain": "Software_Development",
+      "concepts": [
+        "FastAPI",
+        "Node.Js",
+        "React",
+        "It Services",
+        "Api Development",
+        "Custom Software",
+        "Flask",
+        "Python",
+        "Backend",
+        "Django",
+        "It Consulting",
+        "Graphql",
+        "Web Development",
+        "Full Stack",
+        "Microservices",
+        "Vue",
+        "Software House",
+        "Rest Api",
+        "Frontend",
+        "Software Outsourcing"
+      ],
+      "positions": [
+        "Python Developer",
+        "Software Engineer",
+        "Backend Engineer",
+        "Web Developer",
+        "Api Developer",
+        "Full Stack Developer"
+      ],
+      "services": [
+        "Web Application Development",
+        "It Consulting",
+        "Api Development",
+        "Software Outsourcing",
+        "Python Development Services",
+        "Backend Development",
+        "Custom Software Development"
+      ],
+      "products": [
+        "Gcp",
+        "FastAPI",
+        "Aws",
+        "Azure",
+        "Django",
+        "Python",
+        "Kubernetes",
+        "Postgresql",
+        "Docker",
+        "Redis",
+        "Flask"
+      ],
+      "confidence": 1.0,
+      "ontology_version": "1.0.0"
+    }
   }
 }

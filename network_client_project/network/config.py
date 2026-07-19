@@ -30,8 +30,8 @@ class NetworkConfig(BaseSettings):
     GOOGLE_REQUEST_BUDGET: int = Field(default=6)
     GOOGLE_DELAY_MIN: float = Field(default=2.0)
     GOOGLE_DELAY_MAX: float = Field(default=6.0)
-    GOOGLE_CAPTCHA_COOLDOWN: float = Field(default=600.0)
-    GOOGLE_429_COOLDOWN: float = Field(default=300.0)
+    GOOGLE_CAPTCHA_COOLDOWN: float = Field(default=1800.0)
+    GOOGLE_429_COOLDOWN: float = Field(default=900.0)
     GOOGLE_PROXY_SCORE_THRESHOLD: float = Field(default=10.0)
 
     # --- SEARCH CACHE SETTINGS ---

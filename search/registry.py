@@ -54,11 +54,11 @@ class LazyProviderRegistryDict(dict):
 PROVIDER_REGISTRY = LazyProviderRegistryDict()
 
 DEFAULT_PRIORITY: list[str] = [
-    "brightdata",
     "google_html",
     "duckduckgo",
     "brave",
     "bing",
+    "brightdata",         # paid rescue provider — only after free engines fail
     "directory_provider",
     "repository_provider",
 ]

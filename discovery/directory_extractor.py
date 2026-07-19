@@ -1,4 +1,4 @@
-﻿"""
+"""
 discovery/directory_extractor.py
 =================================
 Mines outbound company profile links from directory and listing pages
@@ -27,6 +27,29 @@ from bs4 import BeautifulSoup
 logger = logging.getLogger(__name__)
 
 MAX_LINKS_PER_DIRECTORY = 50
+
+
+def _is_valid_url(url: str) -> bool:
+    if not url:
+        return False
+    url = url.strip()
+    if not (url.startswith("http://") or url.startswith("https://")):
+        return False
+    try:
+        parsed = urlparse(url)
+        netloc = parsed.netloc.lower()
+        if not netloc or "." not in netloc:
+            return False
+        # Reject search engine paths or internal searches
+        path = parsed.path.lower()
+        if path == "/search" or "search?q=" in url.lower() or "google.com" in netloc:
+            return False
+        # Reject local search files or search terms containing spaces or exclamation marks in host
+        if " " in netloc or "!" in netloc:
+            return False
+        return True
+    except Exception:
+        return False
 
 # Domains we must never treat as company profile links
 _BLOCKED_LINK_DOMAINS = {
@@ -116,7 +139,7 @@ def extract_company_links(html: str, base_url: str) -> list[str]:
         parsed = urlparse(abs_url)
         clean_url = parsed._replace(query="", fragment="").geturl().rstrip("/")
 
-        if not clean_url.startswith("http"):
+        if not clean_url.startswith("http") or not _is_valid_url(clean_url):
             continue
         if clean_url in seen:
             continue

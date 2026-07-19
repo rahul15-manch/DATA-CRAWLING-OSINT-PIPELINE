@@ -19,6 +19,24 @@ class RetryMiddleware(BaseMiddleware):
         self.max_retries = max_retries if max_retries is not None else config.MAX_RETRIES
 
     def process_response(self, request: Request, response: Response, client: Any) -> Union[Request, Response]:
+        # Check if directory domain
+        from urllib.parse import urlparse
+        domain = urlparse(request.url).netloc.lower()
+        is_directory = any(p in domain for p in ("clutch.co", "goodfirms.co", "crunchbase.com", "linkedin.com", "f6s.com"))
+        
+        if is_directory:
+            waf_error = ErrorDetector.detect_waf_or_captcha(response)
+            if response.status_code in (403, 429) or waf_error:
+                logger.warning(f"[Retry] Rate limit or WAF block detected on directory {domain} (HTTP {response.status_code}). Bypassing immediate retry to bubble up to circuit breaker.")
+                session_id = request.meta.get("session_id")
+                if session_id:
+                    with client.proxy_manager._lock:
+                        client.proxy_manager._sticky_sessions.pop(session_id, None)
+                proxy_obj = request.meta.get("_proxy_obj")
+                if proxy_obj:
+                    request.meta["exclude_urls"] = request.meta.get("exclude_urls", set()) | {proxy_obj.raw_url}
+                return response  # Bubble up immediately!
+
         # 1. 404 Not Found: never retry
         if response.status_code == 404:
             return response

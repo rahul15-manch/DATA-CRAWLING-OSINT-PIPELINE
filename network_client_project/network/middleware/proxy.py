@@ -29,7 +29,15 @@ class ProxyMiddleware(BaseMiddleware):
         require_proxy = request.meta.get("require_proxy", False)
         provider = request.meta.get("provider")
 
-        domain = urlparse(request.url).netloc
+        domain = urlparse(request.url).netloc.lower()
+
+        # Enforce proxy routing on known protected domains to protect direct IP
+        protected_domains = ("linkedin.com", "clutch.co", "goodfirms.co", "crunchbase.com")
+        if any(d in domain for d in protected_domains):
+            require_proxy = True
+            request.meta["require_proxy"] = True
+            bypass_proxy = False
+            request.meta["bypass_proxy"] = False
 
         # ── Apply connection policy if provider is known ─────────────────
         if provider and not bypass_proxy and not require_proxy:
@@ -51,8 +59,9 @@ class ProxyMiddleware(BaseMiddleware):
                 client.proxy_manager._sticky_sessions.pop(session_id, None)
             return None
 
-        # Fetch a proxy from the manager
-        proxy = client.proxy_manager.get_proxy(session_id, domain=domain, provider=provider)
+        # Fetch a proxy from the manager, respecting any excluded URLs
+        exclude_urls = request.meta.get("exclude_urls")
+        proxy = client.proxy_manager.get_proxy(session_id, domain=domain, provider=provider, exclude_urls=exclude_urls)
         
         if require_proxy and not proxy:
             raise NetworkClientError(f"No healthy proxies available for {domain}")

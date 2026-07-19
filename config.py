@@ -14,9 +14,9 @@ SEARCH_PROVIDER = os.getenv("SEARCH_PROVIDER", "auto").strip().lower()
 
 
 # Ordered list of providers to try (env: comma-separated string)
-# google_html is primary — uses curl_cffi Chrome TLS impersonation (no API key needed).
-# bing is the final fallback — always available.
-_raw_priority   = os.getenv("SEARCH_PROVIDER_PRIORITY", "google_html,brave,duckduckgo,bing")
+# Free providers first, paid rescue provider (BrightData) last.
+# BrightData only fires after free engines fail, return zero, or hit rate limits.
+_raw_priority   = os.getenv("SEARCH_PROVIDER_PRIORITY", "google_html,duckduckgo,brave,bing,brightdata")
 SEARCH_PROVIDER_PRIORITY: list[str] = [p.strip() for p in _raw_priority.split(",") if p.strip()]
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -26,7 +26,7 @@ SEARCH_PROVIDER_PRIORITY: list[str] = [p.strip() for p in _raw_priority.split(",
 # direct_first → try direct IP; on failure (timeout/403/429), retry via proxy
 PROVIDER_CONNECTION_POLICY: dict[str, str] = {
     "google_html":       "proxy_only",
-    "bing":              "direct_first",
+    "bing":              "proxy_only",
     "duckduckgo":        "direct_first",
     "brave":             "direct_first",
     "directory_provider": "direct_first",
@@ -90,8 +90,8 @@ GOOGLE_MAX_CONCURRENT   = int(os.getenv("GOOGLE_MAX_CONCURRENT",   "2"))
 GOOGLE_REQUEST_BUDGET   = int(os.getenv("GOOGLE_REQUEST_BUDGET",   "6"))
 GOOGLE_DELAY_MIN        = float(os.getenv("GOOGLE_DELAY_MIN",      "2.0"))
 GOOGLE_DELAY_MAX        = float(os.getenv("GOOGLE_DELAY_MAX",      "6.0"))
-GOOGLE_CAPTCHA_COOLDOWN = float(os.getenv("GOOGLE_CAPTCHA_COOLDOWN", "600.0"))
-GOOGLE_429_COOLDOWN     = float(os.getenv("GOOGLE_429_COOLDOWN",     "300.0"))
+GOOGLE_CAPTCHA_COOLDOWN = float(os.getenv("GOOGLE_CAPTCHA_COOLDOWN", "1800.0"))
+GOOGLE_429_COOLDOWN     = float(os.getenv("GOOGLE_429_COOLDOWN",     "900.0"))
 GOOGLE_PROXY_SCORE_THRESHOLD = float(os.getenv("GOOGLE_PROXY_SCORE_THRESHOLD", "10.0"))
 
 GOOGLE_CB_WINDOW_SIZE = int(os.getenv("GOOGLE_CB_WINDOW_SIZE", "20"))
@@ -137,7 +137,7 @@ TARGET_COMPANIES        = int(os.getenv("TARGET_COMPANIES",   "50"))
 # Stop discovery when we have this many high-confidence ('ALLOW') companies.
 TARGET_HIGH_CONFIDENCE  = int(os.getenv("TARGET_HIGH_CONFIDENCE", "10"))
 # Base runtime threshold (seconds) before stopping query loops.
-MAX_RUNTIME             = int(os.getenv("MAX_RUNTIME", "30"))
+MAX_RUNTIME             = int(os.getenv("MAX_RUNTIME", "120"))
 # SRE relevance thresholds
 RELEVANCE_THRESHOLD_LOW = int(os.getenv("RELEVANCE_THRESHOLD_LOW", "40"))
 RELEVANCE_THRESHOLD_MEDIUM = int(os.getenv("RELEVANCE_THRESHOLD_MEDIUM", "60"))
@@ -146,6 +146,10 @@ RELEVANCE_THRESHOLD_HIGH = int(os.getenv("RELEVANCE_THRESHOLD_HIGH", "80"))
 MAX_SEARCH_PAGES        = int(os.getenv("MAX_SEARCH_PAGES",   "3"))
 # Number of parallel workers for website extraction + contact discovery.
 MAX_CRAWL_WORKERS       = int(os.getenv("MAX_CRAWL_WORKERS",  "5"))
+# Number of parallel workers for directory candidates evaluation.
+DISCOVERY_PARALLEL_WORKERS = int(os.getenv("DISCOVERY_PARALLEL_WORKERS", "5"))
+# Maximum candidate profile pages (Clutch/GoodFirms links) to crawl/evaluate per run.
+MAX_DIRECTORY_CANDIDATES_TO_EVALUATE = int(os.getenv("MAX_DIRECTORY_CANDIDATES_TO_EVALUATE", "50"))
 
 
 # ─────────────────────────────────────────────────────────────────────────────

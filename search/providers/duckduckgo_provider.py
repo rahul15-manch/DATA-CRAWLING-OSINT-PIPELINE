@@ -35,12 +35,27 @@ class DuckDuckGoProvider(SearchProvider):
         
         for attempt in range(2):
             try:
+                import random
+                if attempt == 0:
+                    time.sleep(random.uniform(2.0, 4.0))
+                else:
+                    # Rotate session and add longer delay on retry
+                    self._cookie_session_id = f"duckduckgo:search:{time.time()}"
+                    time.sleep(random.uniform(3.0, 6.0))
                 resp = client.post(
                     url,
                     session_id=self._cookie_session_id,
                     data={"q": query},
                     provider="duckduckgo",
                     timeout=15.0,
+                    headers={
+                        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+                        "Accept-Language": "en-US,en;q=0.9",
+                        "Accept-Encoding": "gzip, deflate",
+                        "Content-Type": "application/x-www-form-urlencoded",
+                        "Origin": "https://lite.duckduckgo.com",
+                        "Referer": "https://lite.duckduckgo.com/",
+                    },
                 )
             except Exception as e:
                 raise ProviderUnavailable(self.name, str(e))

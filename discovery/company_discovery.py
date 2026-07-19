@@ -564,7 +564,13 @@ def evaluate_url(url: str, title: str, snippet: str, query_or_keyword: str, prov
             if html:
                 from query.expansion import record_query_outcome
                 record_query_outcome(query_or_keyword, "homepage_crawled", provider=provider)
-                sre_res = ranker.score_html(html, query_or_keyword, sre_res, url=url)
+                html_sre = ranker.score_html(html, query_or_keyword, sre_res, url=url)
+                # Use the higher of the two scores — homepage text may be sparse
+                # even for a real company (single-page apps, minimal copy, etc.)
+                if html_sre["score"] >= sre_res["score"]:
+                    sre_res = html_sre
+                else:
+                    print(f"[company_discovery] Homepage scored lower than snippet ({html_sre['score']} vs {relevance_score}); keeping directory score.")
                 if sre_res["score"] >= config.RELEVANCE_THRESHOLD_LOW:
                     return {
                         "url": url,
@@ -572,7 +578,15 @@ def evaluate_url(url: str, title: str, snippet: str, query_or_keyword: str, prov
                         "relevance_tier": sre_res["tier"],
                         "relevance_info": sre_res
                     }
+                # Still below threshold even with directory score preserved — return directory result
+                return {
+                    "url": url,
+                    "relevance_score": relevance_score,
+                    "relevance_tier": "HIGH",
+                    "relevance_info": sre_res
+                }
             else:
+                # Homepage blocked / non-HTML — trust the directory score
                 return {
                     "url": url,
                     "relevance_score": relevance_score,
@@ -585,7 +599,12 @@ def evaluate_url(url: str, title: str, snippet: str, query_or_keyword: str, prov
         if html:
             from query.expansion import record_query_outcome
             record_query_outcome(query_or_keyword, "homepage_crawled", provider=provider)
-            sre_res = ranker.score_html(html, query_or_keyword, sre_res, url=url)
+            html_sre = ranker.score_html(html, query_or_keyword, sre_res, url=url)
+            # Use higher of homepage vs directory score
+            if html_sre["score"] >= sre_res["score"]:
+                sre_res = html_sre
+            else:
+                print(f"[company_discovery] Homepage scored lower than snippet ({html_sre['score']} vs {relevance_score}); keeping directory score.")
             if sre_res["score"] >= config.RELEVANCE_THRESHOLD_LOW:
                 return {
                     "url": url,
@@ -594,6 +613,7 @@ def evaluate_url(url: str, title: str, snippet: str, query_or_keyword: str, prov
                     "relevance_info": sre_res
                 }
         else:
+            # Homepage blocked / non-HTML — trust the directory score
             return {
                 "url": url,
                 "relevance_score": relevance_score,
@@ -1198,75 +1218,119 @@ def discover_companies(keyword: str) -> list:
                     
         # Interleave candidates by domain
         interleaved_candidates = interleave_urls_by_domain(all_candidate_profiles)
-        print(f"[Discovery] Interleaved {len(interleaved_candidates)} directory candidate profiles across domains.")
         
-        last_domain = None
-        for ext_url, dir_title, dir_family in interleaved_candidates:
+        # Limit candidate evaluation queue to avoid hammering directories and blowing budget
+        max_eval = getattr(config, "MAX_DIRECTORY_CANDIDATES_TO_EVALUATE", 50)
+        candidates_to_process = interleaved_candidates[:max_eval]
+        print(f"[Discovery] Interleaved {len(interleaved_candidates)} directory candidate profiles across domains.")
+        print(f"[Discovery] Capping candidate processing queue at {len(candidates_to_process)} (Max allowed: {max_eval}).")
+        
+        # Concurrently evaluate candidate profiles in parallel to reduce sequential delay
+        from concurrent.futures import ThreadPoolExecutor
+        import threading
+        
+        num_workers = getattr(config, "DISCOVERY_PARALLEL_WORKERS", 5)
+        print(f"\n[Discovery] Evaluating {len(candidates_to_process)} directory candidate profiles in parallel using {num_workers} workers...")
+        
+        eval_lock = threading.Lock()
+        domain_last_time = {}
+        domain_time_lock = threading.Lock()
+        
+        def evaluate_candidate(cand):
+            ext_url, dir_title, dir_family = cand
             if "crunchbase.com" in ext_url:
-                continue
+                return None
             if ext_url in processed_company_urls:
-                continue
+                return None
                 
-            # Extra gentle spacing between requests to same domain
             from urllib.parse import urlparse
-            current_domain = urlparse(ext_url).netloc.lower()
-            if current_domain == last_domain:
-                delay = random.uniform(1.0, 2.5)
-                time.sleep(delay)
-            last_domain = current_domain
+            domain = urlparse(ext_url).netloc.lower().lstrip("www.")
             
-            # Evaluate company profile or direct URL
-            eval_res = evaluate_url(ext_url, "", "", keyword, dir_family)
-            if not eval_res:
-                continue
+            with domain_time_lock:
+                last_time = domain_last_time.get(domain, 0.0)
+                now = time.time()
+                # Politeness delay of 3.0 seconds per domain to prevent concurrent WAF rate limits
+                wait_needed = max(0.0, 3.0 - (now - last_time))
+                domain_last_time[domain] = now + wait_needed
                 
-            processed_company_urls.add(eval_res["url"])
-            
-            # Guess company name
-            result_mock = {"title": "", "snippet": "", "url": eval_res["url"]}
-            company_name = guess_company_name(result_mock)
-            if not company_name:
-                continue
+            if wait_needed > 0:
+                time.sleep(wait_needed)
                 
-            sre_res = eval_res["relevance_info"]
-            relevance_score = eval_res["relevance_score"]
-            tier = eval_res["relevance_tier"]
-            
-            print(f"[SRE Directory Lead] Company: {company_name} | Score: {relevance_score} | Tier: {tier} | Industry: {sre_res.get('industry')}")
-            
-            stats.increment("funnel_business_accepted")
-            accepted_count_total += 1
-            key = company_name.lower()
-            source = detect_source(eval_res["url"])
-            
-            new_record = {
-                "company": company_name,
-                "website": sre_res.get("website") or None,
-                "website_source": sre_res.get("website_source") or None,
-                "linkedin": None,
-                "source_url": eval_res["url"],
-                "industry": keyword,
-                "query": dir_title or keyword,
-                "location": None,
-                "source": source,
-                "classification": "UNKNOWN",
-                "relevance_score": relevance_score,
-                "relevance_tier": tier,
-                "relevance_info": sre_res,
-                "industry_detected": sre_res.get("industry", "Unknown"),
-            }
+            try:
+                # Evaluate company profile or direct URL
+                eval_res = evaluate_url(ext_url, "", "", keyword, dir_family)
+                if eval_res:
+                    return (cand, eval_res)
+            except Exception as e:
+                print(f"[Discovery] Error evaluating candidate {ext_url}: {e}")
+            return None
 
-            if "linkedin.com" in eval_res["url"]:
-                new_record["linkedin"] = eval_res["url"]
-            elif not _is_platform_domain(ext_url):
-                new_record["website"] = eval_res["url"]
+        # Execute thread pool
+        with ThreadPoolExecutor(max_workers=num_workers) as executor:
+            futures = [executor.submit(evaluate_candidate, cand) for cand in candidates_to_process]
             
-            if key in accumulator:
-                accumulator[key] = best_company_record(accumulator[key], new_record)
-                unique_sources.add(accumulator[key]["source"])
-            else:
-                accumulator[key] = new_record
-                unique_sources.add(source)
+            for future in futures:
+                res = future.result()
+                if not res:
+                    continue
+                
+                cand, eval_res = res
+                ext_url, dir_title, dir_family = cand
+                
+                # Check again under lock to avoid race conditions
+                with eval_lock:
+                    if eval_res["url"] in processed_company_urls:
+                        continue
+                    processed_company_urls.add(eval_res["url"])
+                
+                # Guess company name
+                result_mock = {"title": "", "snippet": "", "url": eval_res["url"]}
+                company_name = guess_company_name(result_mock)
+                if not company_name:
+                    continue
+                    
+                sre_res = eval_res["relevance_info"]
+                relevance_score = eval_res["relevance_score"]
+                tier = eval_res["relevance_tier"]
+                
+                print(f"[SRE Directory Lead] Company: {company_name} | Score: {relevance_score} | Tier: {tier} | Industry: {sre_res.get('industry')}")
+                
+                stats.increment("funnel_business_accepted")
+                
+                # Lock modifications to shared stats, accumulator, and unique_sources
+                with eval_lock:
+                    accepted_count_total += 1
+                    key = company_name.lower()
+                    source = detect_source(eval_res["url"])
+                    
+                    new_record = {
+                        "company": company_name,
+                        "website": sre_res.get("website") or None,
+                        "website_source": sre_res.get("website_source") or None,
+                        "linkedin": None,
+                        "source_url": eval_res["url"],
+                        "industry": keyword,
+                        "query": dir_title or keyword,
+                        "location": None,
+                        "source": source,
+                        "classification": "UNKNOWN",
+                        "relevance_score": relevance_score,
+                        "relevance_tier": tier,
+                        "relevance_info": sre_res,
+                        "industry_detected": sre_res.get("industry", "Unknown"),
+                    }
+
+                    if "linkedin.com" in eval_res["url"]:
+                        new_record["linkedin"] = eval_res["url"]
+                    elif not _is_platform_domain(ext_url):
+                        new_record["website"] = eval_res["url"]
+                    
+                    if key in accumulator:
+                        accumulator[key] = best_company_record(accumulator[key], new_record)
+                        unique_sources.add(accumulator[key]["source"])
+                    else:
+                        accumulator[key] = new_record
+                        unique_sources.add(source)
 
     # ── Task Preservation ──────────────────────────────────────────────────
     remaining = []

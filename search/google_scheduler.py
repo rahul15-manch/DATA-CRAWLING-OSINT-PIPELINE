@@ -241,6 +241,14 @@ class GoogleRequestScheduler:
                     f"Query: '{query}' via proxy {proxy.raw_url}"
                 )
 
+            # Smart session reset: clear cookies, connections, and User-Agents on block or proxy rotation
+            if was_block or attempts > 1:
+                try:
+                    provider._client.session_manager.clear_session(session_id)
+                    logger.info(f"[GoogleScheduler] Rotated session/User-Agent for thread session: {session_id}")
+                except Exception:
+                    pass
+
             proxy_manager.set_sticky_proxy(session_id, proxy)
 
             try:

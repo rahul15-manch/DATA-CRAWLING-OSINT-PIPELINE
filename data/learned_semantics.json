@@ -18,5 +18,65 @@
       "target_field": "concepts"
     }
   },
-  "hardware": {}
+  "hardware": {},
+  "cloud": {},
+  "engineering": {
+    "Electronics": {
+      "seen": 1,
+      "accepted": 1,
+      "confidence": 1.0,
+      "first_seen": "2026-07-18",
+      "last_seen": "2026-07-18",
+      "target_field": "concepts"
+    },
+    "IoT": {
+      "seen": 3,
+      "accepted": 0,
+      "confidence": 0.0,
+      "first_seen": "2026-07-19",
+      "last_seen": "2026-07-19",
+      "target_field": "concepts"
+    },
+    "Hardware": {
+      "seen": 3,
+      "accepted": 0,
+      "confidence": 0.0,
+      "first_seen": "2026-07-19",
+      "last_seen": "2026-07-19",
+      "target_field": "concepts"
+    },
+    "Firmware": {
+      "seen": 1,
+      "accepted": 0,
+      "confidence": 0.0,
+      "first_seen": "2026-07-19",
+      "last_seen": "2026-07-19",
+      "target_field": "concepts"
+    },
+    "Embedded Systems": {
+      "seen": 1,
+      "accepted": 0,
+      "confidence": 0.0,
+      "first_seen": "2026-07-19",
+      "last_seen": "2026-07-19",
+      "target_field": "concepts"
+    },
+    "Hardware Development": {
+      "seen": 1,
+      "accepted": 0,
+      "confidence": 0.0,
+      "first_seen": "2026-07-19",
+      "last_seen": "2026-07-19",
+      "target_field": "concepts"
+    },
+    "Pcb Design": {
+      "seen": 1,
+      "accepted": 0,
+      "confidence": 0.0,
+      "first_seen": "2026-07-19",
+      "last_seen": "2026-07-19",
+      "target_field": "concepts"
+    }
+  },
+  "software": {}
 }

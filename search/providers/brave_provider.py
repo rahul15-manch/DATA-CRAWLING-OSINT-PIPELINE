@@ -111,6 +111,8 @@ class BraveProvider(SearchProvider):
 
         for attempt in range(1, 5):
             try:
+                if attempt == 1:
+                    time.sleep(random.uniform(1.5, 3.0))
                 resp = client.get(
                     url,
                     session_id=self._cookie_session_id,
@@ -119,12 +121,13 @@ class BraveProvider(SearchProvider):
                     headers={
                         "Accept-Language": "en-US,en;q=0.9",
                         "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
+                        "Accept-Encoding": "gzip, deflate",
                         "Cache-Control": "no-cache",
                         "Referer": "https://search.brave.com/",
                     },
                 )
             except Exception as e:
-                raise ProviderUnavailable(self.name, str(e))
+                raise ProviderUnavailable(self.name, f"Failed to perform, {e}")
 
             if resp.status_code == 429:
                 wait_for = self._next_backoff()

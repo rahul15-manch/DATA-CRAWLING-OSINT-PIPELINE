@@ -1,0 +1,58 @@
+[
+    {
+        "company_name": "Services Company Info",
+        "website": null,
+        "linkedin": null,
+        "industry": "Hardware_Development",
+        "location": null,
+        "contact_page": null,
+        "about_page": null,
+        "team_page": null,
+        "emails": [],
+        "phones": [],
+        "social_links": {},
+        "people": [],
+        "source": "Clutch",
+        "confidence_score": 51,
+        "lead_quality": "Medium",
+        "company_type": "Unknown",
+        "relevance_score": 51,
+        "relevance_tier": "LOW",
+        "relevance_info": {
+            "score": 51,
+            "tier": "LOW",
+            "matched_signals": [
+                "Description",
+                "Technologies"
+            ],
+            "rejected_signals": [
+                "Services",
+                "Products",
+                "Positions",
+                "Blog/Articles"
+            ],
+            "score_breakdown": {
+                "description": 33.5,
+                "services": 0.0,
+                "technologies": 21.5,
+                "products": 0.0,
+                "positions": 0.0,
+                "blog": 0.0
+            },
+            "industry": "Hardware_Development",
+            "confidence": 0.51,
+            "aborted": false,
+            "company_type": "B2B Software",
+            "semantic_trace": [
+                "Matched Description with concepts: ['Electronics']",
+                "Matched Technologies: ['Electronics']"
+            ],
+            "technologies": [
+                "Electronics"
+            ],
+            "products": [],
+            "website": "",
+            "website_source": ""
+        }
+    }
+]
