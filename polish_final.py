@@ -1,22 +1,5 @@
 #!/usr/bin/env python3
-"""
-Pillar 2 — Polish Script (final pass)
 
-Fixes remaining issues found on manual review of FINAL_leads_for_pillar4.json:
-  1. Duplicate emails/people within the same record
-  2. "Mass email list" records — pages where the scraped emails belong to many
-     DIFFERENT companies (a directory/blog footer got scraped, not one
-     company's real contacts). Detected by: emails spanning many different
-     domains that don't match the record's own website domain.
-  3. Garbage person names — an email address or a phone number got scraped
-     into the "name" field instead of an actual person's name.
-  4. Broader article/directory-page detection (multi-word title gaps that
-     the earlier regex missed, e.g. "The Real Impact of X on Y").
-
-Input:  FINAL_leads_for_pillar4.json
-Output: FINAL_leads_for_pillar4.json  (overwritten, polished)
-        polish_dropped.json          (what got cut here, for your review)
-"""
 
 import json
 import re
