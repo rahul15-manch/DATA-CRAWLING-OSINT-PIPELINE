@@ -245,16 +245,34 @@
       "people_dropped:7"
     ],
     "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
       "domain_source": "existing_website",
       "whois": {
-        "registrar": "MarkMonitor Inc.",
+        "registrar": "MarkMonitor, Inc.",
         "creation_date": "2001-01-13 00:12:14+00:00",
-        "org": null,
-        "country": null
+        "org": "Wikimedia Foundation, Inc.",
+        "country": "US"
+      }
+    },
+    "_registry": {
+      "matched": true,
+      "confidence": "similarity_filtered",
+      "registered_name": "ARTIFICIAL INTELLIGENCE LIMITED",
+      "company_number": "SC681942",
+      "current_status": null,
+      "incorporation_date": "25 November 2020",
+      "source_url": "https://find-and-update.company-information.service.gov.uk/company/SC681942",
+      "similarity_score": 1.0
+    },
+    "_social": {
+      "twitter_x": {
+        "url": "https://x.com/climate",
+        "source": "found_on_site"
+      },
+      "linkedin": {
+        "url": "https://www.linkedin.com/company/artificial-intelligence",
+        "source": "slug_guess",
+        "confirmed": false,
+        "note": "unverified guess — LinkedIn returns HTTP 200 for both real and fake company URLs, so this cannot be auto-confirmed. Open the link manually to check."
       }
     }
   },
@@ -304,29 +322,43 @@
       "people_dropped:1"
     ],
     "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
       "domain_source": "existing_website",
       "whois": {
         "registrar": "GoDaddy.com, LLC",
         "creation_date": "2012-01-12 01:57:48+00:00",
         "org": null,
         "country": null
+      }
+    },
+    "_registry": {
+      "matched": false,
+      "reason": "best_candidate_below_threshold",
+      "candidate": {
+        "registered_name": "ISTEIN ARTIFICIAL INTELLIGENCE LTD",
+        "company_number": "12131471",
+        "current_status": "Dissolved",
+        "incorporation_date": null,
+        "source_url": "https://find-and-update.company-information.service.gov.uk/company/12131471",
+        "similarity_score": 0.448
+      }
+    },
+    "_social": {
+      "linkedin": {
+        "url": "https://linkedin.com/company/coursera",
+        "source": "found_on_site"
       },
-      "discovered_emails": [
-        "gbarrella@coursera.org",
-        "jdebusk@coursera.org",
-        "pmclinden@coursera.org",
-        "mclaessens@coursera.org",
-        "dmukherji@coursera.org",
-        "macharya@coursera.org",
-        "saman@coursera.org",
-        "abuente@coursera.org",
-        "cpittman@coursera.org",
-        "mnajem@coursera.org"
-      ]
+      "twitter_x": {
+        "url": "https://twitter.com/coursera",
+        "source": "found_on_site"
+      },
+      "facebook": {
+        "url": "https://facebook.com/Coursera",
+        "source": "found_on_site"
+      },
+      "instagram": {
+        "url": "https://instagram.com/coursera",
+        "source": "found_on_site"
+      }
     }
   },
   {
@@ -380,29 +412,35 @@
       "people_dropped:9"
     ],
     "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
       "domain_source": "existing_website",
       "whois": {
         "registrar": "NAMECHEAP INC",
         "creation_date": "2017-12-16 01:52:01+00:00",
         "org": null,
         "country": null
+      }
+    },
+    "_registry": {
+      "matched": false,
+      "reason": "best_candidate_below_threshold",
+      "candidate": {
+        "registered_name": "TOGETHERAI UK LIMITED",
+        "company_number": "13318041",
+        "current_status": "Dissolved",
+        "incorporation_date": null,
+        "source_url": "https://find-and-update.company-information.service.gov.uk/company/13318041",
+        "similarity_score": 0.5
+      }
+    },
+    "_social": {
+      "linkedin": {
+        "url": "https://linkedin.com/company/togethercomputer",
+        "source": "found_on_site"
       },
-      "discovered_emails": [
-        "max@together.ai",
-        "susan@together.ai",
-        "arielle@together.ai",
-        "skapadia@together.ai",
-        "jue@together.ai",
-        "ryan@together.ai",
-        "chris@together.ai",
-        "casper@together.ai",
-        "justin@together.ai",
-        "james@together.ai"
-      ]
+      "twitter_x": {
+        "url": "https://x.com/togethercompute",
+        "source": "found_on_site"
+      }
     }
   },
   {
@@ -453,29 +491,47 @@
       "people_dropped:3"
     ],
     "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
       "domain_source": "existing_website",
       "whois": {
         "registrar": "CSC Corporate Domains, Inc.",
         "creation_date": "1986-03-19 05:00:00+00:00",
         "org": null,
         "country": null
+      }
+    },
+    "_registry": {
+      "matched": false,
+      "reason": "best_candidate_below_threshold",
+      "candidate": {
+        "registered_name": "AM I A.I? LIMITED",
+        "company_number": "11922217",
+        "current_status": null,
+        "incorporation_date": "3 April 2019",
+        "source_url": "https://find-and-update.company-information.service.gov.uk/company/11922217",
+        "similarity_score": 0.218
+      }
+    },
+    "_social": {
+      "linkedin": {
+        "url": "https://linkedin.com/company/ibm",
+        "source": "found_on_site"
       },
-      "discovered_emails": [
-        "valentin.ruscan@ibm.com",
-        "praveen.thota@ibm.com",
-        "jonathan.shapiro@ibm.com",
-        "adrika.shukla@ibm.com",
-        "honorine.rebeiro@ibm.com",
-        "adrienn.marosi@ibm.com",
-        "jimmy.yang@ibm.com",
-        "cristian.pita@ibm.com",
-        "andrew.sica@ibm.com",
-        "latisha.robinson@ibm.com"
-      ]
+      "facebook": {
+        "url": "https://facebook.com/share.php",
+        "source": "found_on_site"
+      },
+      "instagram": {
+        "url": "https://instagram.com/ibm",
+        "source": "found_on_site"
+      },
+      "youtube": {
+        "url": "https://youtube.com/@IBM",
+        "source": "found_on_site"
+      },
+      "twitter_x": {
+        "url": "https://twitter.com/ibm",
+        "source": "found_on_site"
+      }
     }
   },
   {
@@ -522,29 +578,43 @@
       "email_junk:logo-zoom@2x.png"
     ],
     "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
       "domain_source": "existing_website",
       "whois": {
         "registrar": "MarkMonitor, Inc.",
         "creation_date": "1999-04-22 04:00:00+00:00",
         "org": "Zoom Communications, Inc.",
         "country": "US"
+      }
+    },
+    "_registry": {
+      "matched": false,
+      "reason": "best_candidate_below_threshold",
+      "candidate": {
+        "registered_name": "WHAT IS AI LTD",
+        "company_number": "SC851958",
+        "current_status": null,
+        "incorporation_date": "11 June 2025",
+        "source_url": "https://find-and-update.company-information.service.gov.uk/company/SC851958",
+        "similarity_score": 0.516
+      }
+    },
+    "_social": {
+      "linkedin": {
+        "url": "https://linkedin.com/company/zoom",
+        "source": "found_on_site"
       },
-      "discovered_emails": [
-        "blake.allen@zoom.com",
-        "hawley@zoom.com",
-        "rebecca.bernhard@zoom.com",
-        "shay.miller@zoom.com",
-        "parker.garcia@zoom.com",
-        "sage.jones@zoom.com",
-        "tatum.brown@zoom.com",
-        "zion.brown@zoom.com",
-        "lane.anderson@zoom.com",
-        "ellis.nguyen@zoom.com"
-      ]
+      "twitter_x": {
+        "url": "https://twitter.com/zoom",
+        "source": "found_on_site"
+      },
+      "facebook": {
+        "url": "https://facebook.com/zoom",
+        "source": "found_on_site"
+      },
+      "instagram": {
+        "url": "https://instagram.com/zoom",
+        "source": "found_on_site"
+      }
     }
   },
   {
@@ -591,29 +661,43 @@
       "people_dropped:4"
     ],
     "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
       "domain_source": "existing_website",
       "whois": {
         "registrar": "NOM-IQ Ltd dba Com Laude",
         "creation_date": "1997-07-30 04:00:00+00:00",
         "org": "Genesys Cloud Services, Inc.",
         "country": "US"
+      }
+    },
+    "_registry": {
+      "matched": false,
+      "reason": "best_candidate_below_threshold",
+      "candidate": {
+        "registered_name": "AFRICA CENTER FOR ARTIFICIAL INTELLIGENCE CIC",
+        "company_number": "16678164",
+        "current_status": null,
+        "incorporation_date": "28 August 2025",
+        "source_url": "https://find-and-update.company-information.service.gov.uk/company/16678164",
+        "similarity_score": 0.595
+      }
+    },
+    "_social": {
+      "linkedin": {
+        "url": "https://linkedin.com/company/601919",
+        "source": "found_on_site"
       },
-      "discovered_emails": [
-        "felix.axtmann@genesys.com",
-        "jason.cayanong@genesys.com",
-        "aristides.zabala@genesys.com",
-        "michael.long@genesys.com",
-        "mohamed.eisa@genesys.com",
-        "omar.guerra@genesys.com",
-        "karen.chow@genesys.com",
-        "tim.wilson@genesys.com",
-        "anna.ditchella@genesys.com",
-        "hamza.nassar@genesys.com"
-      ]
+      "twitter_x": {
+        "url": "https://x.com/Genesys",
+        "source": "found_on_site"
+      },
+      "facebook": {
+        "url": "https://facebook.com/Genesys",
+        "source": "found_on_site"
+      },
+      "instagram": {
+        "url": "https://instagram.com/genesyscx",
+        "source": "found_on_site"
+      }
     }
   },
   {
@@ -649,29 +733,47 @@
       "people_dropped:7"
     ],
     "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
       "domain_source": "existing_website",
       "whois": {
         "registrar": "GoDaddy.com, LLC",
-        "creation_date": "[datetime.datetime(1999, 2, 16, 5, 0, tzinfo=tzoffset('UTC', 0)), datetime.datetime(1999, 2, 16, 0, 0, tzinfo=tzoffset('UTC', 0))]",
-        "org": "Domains By Proxy, LLC",
-        "country": "US"
+        "creation_date": "1999-02-16 05:00:00+00:00",
+        "org": null,
+        "country": null
+      }
+    },
+    "_registry": {
+      "matched": false,
+      "reason": "best_candidate_below_threshold",
+      "candidate": {
+        "registered_name": "AIM SOFTWARE SOLUTIONS UK LTD",
+        "company_number": "13948440",
+        "current_status": null,
+        "incorporation_date": "2 March 2022",
+        "source_url": "https://find-and-update.company-information.service.gov.uk/company/13948440",
+        "similarity_score": 0.369
+      }
+    },
+    "_social": {
+      "linkedin": {
+        "url": "https://linkedin.com/company/dialpad",
+        "source": "found_on_site"
       },
-      "discovered_emails": [
-        "denise.kopinski@dialpad.com",
-        "jesu.joseph@dialpad.com",
-        "brett.reed@dialpad.com",
-        "curtis.owens@dialpad.com",
-        "tyler.wright@dialpad.com",
-        "claire.vieth@dialpad.com",
-        "joseph.casey@dialpad.com",
-        "mike.franze@dialpad.com",
-        "blake.cross@dialpad.com",
-        "robbie.mcdonald@dialpad.com"
-      ]
+      "twitter_x": {
+        "url": "https://x.com/dialpad",
+        "source": "found_on_site"
+      },
+      "facebook": {
+        "url": "https://facebook.com/Dialpadhq",
+        "source": "found_on_site"
+      },
+      "instagram": {
+        "url": "https://instagram.com/dialpadhq",
+        "source": "found_on_site"
+      },
+      "youtube": {
+        "url": "https://youtube.com/channel",
+        "source": "found_on_site"
+      }
     }
   },
   {
@@ -700,29 +802,47 @@
       "people_dropped:2"
     ],
     "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
       "domain_source": "existing_website",
       "whois": {
         "registrar": "Squarespace Domains II LLC",
         "creation_date": "2017-12-21 02:05:11+00:00",
         "org": "Learneo, Inc.",
         "country": "US"
+      }
+    },
+    "_registry": {
+      "matched": false,
+      "reason": "best_candidate_below_threshold",
+      "candidate": {
+        "registered_name": "OLLY RICKETTS FREELANCE WRITER LTD.",
+        "company_number": "12773700",
+        "current_status": "Dissolved",
+        "incorporation_date": null,
+        "source_url": "https://find-and-update.company-information.service.gov.uk/company/12773700",
+        "similarity_score": 0.369
+      }
+    },
+    "_social": {
+      "linkedin": {
+        "url": "https://linkedin.com/company/quillbot",
+        "source": "found_on_site"
       },
-      "discovered_emails": [
-        "aparna.iyer@quillbot.com",
-        "saurabh.goel@quillbot.com",
-        "guilherme.figueiredo@quillbot.com",
-        "yaser.hameed@quillbot.com",
-        "cameron.leel@quillbot.com",
-        "abdul.nafeen@quillbot.com",
-        "rodrigo.fontes@quillbot.com",
-        "jack.lawson@quillbot.com",
-        "miranda.godinez@quillbot.com",
-        "asif.jamil@quillbot.com"
-      ]
+      "twitter_x": {
+        "url": "https://x.com/thequillbot",
+        "source": "found_on_site"
+      },
+      "facebook": {
+        "url": "https://facebook.com/thequillbot",
+        "source": "found_on_site"
+      },
+      "instagram": {
+        "url": "https://instagram.com/thequillbot",
+        "source": "found_on_site"
+      },
+      "youtube": {
+        "url": "https://youtube.com/@Quillbot",
+        "source": "found_on_site"
+      }
     }
   },
   {
@@ -765,23 +885,35 @@
       "email_junk:noreply@vercel.com"
     ],
     "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
       "domain_source": "existing_website",
       "whois": {
         "registrar": "NAMECHEAP INC",
         "creation_date": "2022-08-02 17:00:49+00:00",
         "org": null,
         "country": null
+      }
+    },
+    "_registry": {
+      "matched": false,
+      "reason": "best_candidate_below_threshold",
+      "candidate": {
+        "registered_name": "GEEKS FOR EMAIL LIMITED",
+        "company_number": "09977484",
+        "current_status": "Dissolved",
+        "incorporation_date": null,
+        "source_url": "https://find-and-update.company-information.service.gov.uk/company/09977484",
+        "similarity_score": 0.28
+      }
+    },
+    "_social": {
+      "linkedin": {
+        "url": "https://linkedin.com/company/mailsai",
+        "source": "found_on_site"
       },
-      "discovered_emails": [
-        "richard@mails.ai",
-        "janey@mails.ai",
-        "hi@mails.ai",
-        "support@mails.ai"
-      ]
+      "youtube": {
+        "url": "https://youtube.com/@mailsai",
+        "source": "found_on_site"
+      }
     }
   },
   {
@@ -818,22 +950,35 @@
       "email_junk:example@domain.com"
     ],
     "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
       "domain_source": "existing_website",
       "whois": {
         "registrar": "NAMECHEAP INC",
         "creation_date": "2023-01-30 10:07:48+00:00",
         "org": null,
         "country": null
+      }
+    },
+    "_registry": {
+      "matched": false,
+      "reason": "no_search_result"
+    },
+    "_social": {
+      "linkedin": {
+        "url": "https://linkedin.com/company/writemail-ai",
+        "source": "found_on_site"
       },
-      "discovered_emails": [
-        "info@writemail.ai",
-        "george@writemail.ai",
-        "denise@writemail.ai"
-      ]
+      "twitter_x": {
+        "url": "https://twitter.com/writemail_ai",
+        "source": "found_on_site"
+      },
+      "facebook": {
+        "url": "https://facebook.com/people",
+        "source": "found_on_site"
+      },
+      "instagram": {
+        "url": "https://instagram.com/app.writemail",
+        "source": "found_on_site"
+      }
     }
   },
   {
@@ -916,29 +1061,43 @@
       "people_dropped:28"
     ],
     "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
       "domain_source": "existing_website",
       "whois": {
         "registrar": "Whois Corp.",
         "creation_date": "1994-11-29 05:00:00+00:00",
         "org": "Samsung Electronics CO., Ltd",
         "country": "KR"
+      }
+    },
+    "_registry": {
+      "matched": false,
+      "reason": "best_candidate_below_threshold",
+      "candidate": {
+        "registered_name": "THE OWLS ARE NOT WHAT THEY SEEM LTD",
+        "company_number": "16000891",
+        "current_status": null,
+        "incorporation_date": "7 October 2024",
+        "source_url": "https://find-and-update.company-information.service.gov.uk/company/16000891",
+        "similarity_score": 0.285
+      }
+    },
+    "_social": {
+      "linkedin": {
+        "url": "https://linkedin.com/company/samsung-electronics",
+        "source": "found_on_site"
       },
-      "discovered_emails": [
-        "jean.p@samsung.com",
-        "richard.kim@samsung.com",
-        "joon.lee@samsung.com",
-        "paul.gaskin@samsung.com",
-        "jerrelin.c@samsung.com",
-        "ashfaque.q@samsung.com",
-        "n.bourdais@samsung.com",
-        "keunchul.hwang@samsung.com",
-        "arun.r@samsung.com",
-        "youngouk.cho@samsung.com"
-      ]
+      "twitter_x": {
+        "url": "https://twitter.com/samsunguk",
+        "source": "found_on_site"
+      },
+      "facebook": {
+        "url": "https://facebook.com/SamsungUK",
+        "source": "found_on_site"
+      },
+      "instagram": {
+        "url": "https://instagram.com/samsunguk",
+        "source": "found_on_site"
+      }
     }
   },
   {
@@ -991,29 +1150,47 @@
       "people_dropped:9"
     ],
     "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
       "domain_source": "existing_website",
       "whois": {
         "registrar": "CSC Corporate Domains, Inc.",
         "creation_date": "1986-03-19 05:00:00+00:00",
         "org": null,
         "country": null
+      }
+    },
+    "_registry": {
+      "matched": false,
+      "reason": "best_candidate_below_threshold",
+      "candidate": {
+        "registered_name": "THE CURIOUS MINDSET POWERED BY 64TEQ LTD",
+        "company_number": "16069061",
+        "current_status": null,
+        "incorporation_date": "8 November 2024",
+        "source_url": "https://find-and-update.company-information.service.gov.uk/company/16069061",
+        "similarity_score": 0.414
+      }
+    },
+    "_social": {
+      "linkedin": {
+        "url": "https://linkedin.com/company/ibm",
+        "source": "found_on_site"
       },
-      "discovered_emails": [
-        "valentin.ruscan@ibm.com",
-        "praveen.thota@ibm.com",
-        "jonathan.shapiro@ibm.com",
-        "adrika.shukla@ibm.com",
-        "honorine.rebeiro@ibm.com",
-        "adrienn.marosi@ibm.com",
-        "jimmy.yang@ibm.com",
-        "cristian.pita@ibm.com",
-        "andrew.sica@ibm.com",
-        "latisha.robinson@ibm.com"
-      ]
+      "facebook": {
+        "url": "https://facebook.com/share.php",
+        "source": "found_on_site"
+      },
+      "instagram": {
+        "url": "https://instagram.com/ibm",
+        "source": "found_on_site"
+      },
+      "youtube": {
+        "url": "https://youtube.com/@IBM",
+        "source": "found_on_site"
+      },
+      "twitter_x": {
+        "url": "https://twitter.com/manishcgoyal",
+        "source": "found_on_site"
+      }
     }
   },
   {
@@ -1037,24 +1214,45 @@
       "people_dropped:4"
     ],
     "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
       "domain_source": "existing_website",
       "whois": {
         "registrar": "NAMECHEAP INC",
         "creation_date": "2023-12-09 21:11:10+00:00",
         "org": null,
         "country": null
+      }
+    },
+    "_registry": {
+      "matched": true,
+      "confidence": "similarity_filtered",
+      "registered_name": "PHONELY LIMITED",
+      "company_number": "15485810",
+      "current_status": null,
+      "incorporation_date": "13 February 2024",
+      "source_url": "https://find-and-update.company-information.service.gov.uk/company/15485810",
+      "similarity_score": 0.694
+    },
+    "_social": {
+      "linkedin": {
+        "url": "https://linkedin.com/in/will-bodewes",
+        "source": "found_on_site"
       },
-      "discovered_emails": [
-        "grant@phonely.ai",
-        "will@phonely.ai",
-        "support@phonely.ai",
-        "hello@phonely.ai",
-        "careers@phonely.ai"
-      ]
+      "twitter_x": {
+        "url": "https://twitter.com/phonelyai",
+        "source": "found_on_site"
+      },
+      "facebook": {
+        "url": "https://facebook.com/tr",
+        "source": "found_on_site"
+      },
+      "instagram": {
+        "url": "https://instagram.com/phonely_ai",
+        "source": "found_on_site"
+      },
+      "youtube": {
+        "url": "https://youtube.com/@phonely-ai",
+        "source": "found_on_site"
+      }
     }
   },
   {
@@ -1083,16 +1281,42 @@
       "people_dropped:3"
     ],
     "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
       "domain_source": "existing_website",
       "whois": {
         "registrar": "MarkMonitor, Inc.",
         "creation_date": "1994-11-01 05:00:00+00:00",
         "org": "Amazon Technologies, Inc.",
         "country": "US"
+      }
+    },
+    "_registry": {
+      "matched": false,
+      "reason": "best_candidate_below_threshold",
+      "candidate": {
+        "registered_name": "FINISHING AIDS AND TOOLS LIMITED",
+        "company_number": "00660087",
+        "current_status": null,
+        "incorporation_date": "20 May 1960",
+        "source_url": "https://find-and-update.company-information.service.gov.uk/company/00660087",
+        "similarity_score": 0.427
+      }
+    },
+    "_social": {
+      "linkedin": {
+        "url": "https://linkedin.com/company/amazon-web-services",
+        "source": "found_on_site"
+      },
+      "twitter_x": {
+        "url": "https://x.com/awscloud",
+        "source": "found_on_site"
+      },
+      "facebook": {
+        "url": "https://facebook.com/amazonwebservices",
+        "source": "found_on_site"
+      },
+      "instagram": {
+        "url": "https://instagram.com/amazonwebservices",
+        "source": "found_on_site"
       }
     }
   },
@@ -1129,29 +1353,47 @@
       "people_dropped:8"
     ],
     "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
       "domain_source": "existing_website",
       "whois": {
         "registrar": "CSC Corporate Domains, Inc.",
         "creation_date": "1986-03-19 05:00:00+00:00",
         "org": null,
         "country": null
+      }
+    },
+    "_registry": {
+      "matched": false,
+      "reason": "best_candidate_below_threshold",
+      "candidate": {
+        "registered_name": "WHAT IS AI LTD",
+        "company_number": "SC851958",
+        "current_status": null,
+        "incorporation_date": "11 June 2025",
+        "source_url": "https://find-and-update.company-information.service.gov.uk/company/SC851958",
+        "similarity_score": 0.479
+      }
+    },
+    "_social": {
+      "linkedin": {
+        "url": "https://linkedin.com/company/ibm",
+        "source": "found_on_site"
       },
-      "discovered_emails": [
-        "valentin.ruscan@ibm.com",
-        "praveen.thota@ibm.com",
-        "jonathan.shapiro@ibm.com",
-        "adrika.shukla@ibm.com",
-        "honorine.rebeiro@ibm.com",
-        "adrienn.marosi@ibm.com",
-        "jimmy.yang@ibm.com",
-        "cristian.pita@ibm.com",
-        "andrew.sica@ibm.com",
-        "latisha.robinson@ibm.com"
-      ]
+      "facebook": {
+        "url": "https://facebook.com/share.php",
+        "source": "found_on_site"
+      },
+      "instagram": {
+        "url": "https://instagram.com/ibm",
+        "source": "found_on_site"
+      },
+      "youtube": {
+        "url": "https://youtube.com/@IBM",
+        "source": "found_on_site"
+      },
+      "twitter_x": {
+        "url": "https://twitter.com/manishcgoyal",
+        "source": "found_on_site"
+      }
     }
   },
   {
@@ -1231,29 +1473,41 @@
       "people_dropped:28"
     ],
     "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
       "domain_source": "existing_website",
       "whois": {
-        "registrar": "NETIM SAS",
-        "creation_date": "2005-10-20 02:54:57+00:00",
-        "org": null,
-        "country": null
+        "registrar": "NETIM",
+        "creation_date": "[datetime.datetime(2005, 10, 20, 2, 54, 57, tzinfo=tzoffset('UTC', 0)), datetime.datetime(2005, 10, 20, 0, 0, tzinfo=tzoffset('UTC', 0))]",
+        "org": "Avenga Germany GmbH",
+        "country": "DE"
+      }
+    },
+    "_registry": {
+      "matched": true,
+      "confidence": "similarity_filtered",
+      "registered_name": "THE ARTIFICIAL INTELLIGENCE (AI) COMPANY LIMITED",
+      "company_number": "17323193",
+      "current_status": null,
+      "incorporation_date": "6 July 2026",
+      "source_url": "https://find-and-update.company-information.service.gov.uk/company/17323193",
+      "similarity_score": 0.853
+    },
+    "_social": {
+      "linkedin": {
+        "url": "https://linkedin.com/company/avenga",
+        "source": "found_on_site"
       },
-      "discovered_emails": [
-        "romina.kuznietz@avenga.com",
-        "nicolas.ledesma@avenga.com",
-        "benjamin.pierola@avenga.com",
-        "andriy.dzyben@avenga.com",
-        "piotr.balys@avenga.com",
-        "justyna.wroniak@avenga.com",
-        "gregor.hermann@avenga.com",
-        "javier.zoppetti@avenga.com",
-        "nicolas.meudt@avenga.com",
-        "boris.willms@avenga.com"
-      ]
+      "twitter_x": {
+        "url": "https://x.com/avenga_global",
+        "source": "found_on_site"
+      },
+      "instagram": {
+        "url": "https://instagram.com/avenga_global",
+        "source": "found_on_site"
+      },
+      "youtube": {
+        "url": "https://youtube.com/@avengallc",
+        "source": "found_on_site"
+      }
     }
   },
   {
@@ -1319,16 +1573,36 @@
       "people_dropped:12"
     ],
     "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
       "domain_source": "existing_website",
       "whois": {
         "registrar": "CSC Corporate Domains, Inc.",
         "creation_date": "2000-08-29 17:05:35+00:00",
         "org": null,
         "country": null
+      }
+    },
+    "_registry": {
+      "matched": true,
+      "confidence": "similarity_filtered",
+      "registered_name": "ARTIFICIAL INTELLIGENCE SOLUTIONS & SERVICES LTD",
+      "company_number": "16289328",
+      "current_status": null,
+      "incorporation_date": "3 March 2025",
+      "source_url": "https://find-and-update.company-information.service.gov.uk/company/16289328",
+      "similarity_score": 0.83
+    },
+    "_social": {
+      "linkedin": {
+        "url": "https://linkedin.com/company/accenture",
+        "source": "found_on_site"
+      },
+      "facebook": {
+        "url": "https://facebook.com/accenture",
+        "source": "found_on_site"
+      },
+      "instagram": {
+        "url": "https://instagram.com/accenture",
+        "source": "found_on_site"
       }
     }
   },
@@ -1374,29 +1648,39 @@
       "people_dropped:2"
     ],
     "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
       "domain_source": "existing_website",
       "whois": {
         "registrar": "MarkMonitor, Inc.",
         "creation_date": "[datetime.datetime(1993, 6, 17, 4, 0, tzinfo=tzoffset('UTC', 0)), datetime.datetime(1993, 6, 17, 7, 0, tzinfo=tzoffset('UTC', 0))]",
         "org": "Forbes Media LLC",
         "country": "US"
+      }
+    },
+    "_registry": {
+      "matched": false,
+      "reason": "best_candidate_below_threshold",
+      "candidate": {
+        "registered_name": "AIRA FORCE 2026-1 PLC",
+        "company_number": "17259293",
+        "current_status": null,
+        "incorporation_date": "3 June 2026",
+        "source_url": "https://find-and-update.company-information.service.gov.uk/company/17259293",
+        "similarity_score": 0.358
+      }
+    },
+    "_social": {
+      "linkedin": {
+        "url": "https://linkedin.com/in/rashishrivastava98",
+        "source": "found_on_site"
       },
-      "discovered_emails": [
-        "jokuszka@forbes.com",
-        "kbornholtz@forbes.com",
-        "lvillaraut@forbes.com",
-        "jbruno@forbes.com",
-        "sgangishetti@forbes.com",
-        "gvasquez@forbes.com",
-        "tkalamajka@forbes.com",
-        "mbrown@forbes.com",
-        "djohnson@forbes.com",
-        "lboyers@forbes.com"
-      ]
+      "twitter_x": {
+        "url": "https://twitter.com/ElisabethAnne15",
+        "source": "found_on_site"
+      },
+      "facebook": {
+        "url": "https://facebook.com/forbes",
+        "source": "found_on_site"
+      }
     }
   },
   {
@@ -1447,29 +1731,39 @@
       "people_dropped:15"
     ],
     "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
       "domain_source": "existing_website",
       "whois": {
         "registrar": "Squarespace Domains II LLC",
         "creation_date": "2004-02-17 22:06:36+00:00",
         "org": "Aible",
         "country": "US"
+      }
+    },
+    "_registry": {
+      "matched": false,
+      "reason": "best_candidate_below_threshold",
+      "candidate": {
+        "registered_name": "THE INDEPENDENT NEWHAM USERS FORUM (MENTAL HEALTH)",
+        "company_number": "03853697",
+        "current_status": null,
+        "incorporation_date": "30 September 1999",
+        "source_url": "https://find-and-update.company-information.service.gov.uk/company/03853697",
+        "similarity_score": 0.291
+      }
+    },
+    "_social": {
+      "linkedin": {
+        "url": "https://linkedin.com/company/aible",
+        "source": "found_on_site"
       },
-      "discovered_emails": [
-        "brad@aible.com",
-        "greg@aible.com",
-        "rod@aible.com",
-        "afsana@aible.com",
-        "jonathan@aible.com",
-        "erin@aible.com",
-        "dylan@aible.com",
-        "rutika@aible.com",
-        "alex@aible.com",
-        "joe@aible.com"
-      ]
+      "twitter_x": {
+        "url": "https://twitter.com/iamAible",
+        "source": "found_on_site"
+      },
+      "facebook": {
+        "url": "https://facebook.com/iamaible",
+        "source": "found_on_site"
+      }
     }
   },
   {
@@ -1497,10 +1791,6 @@
       "sparse_no_contact_channel"
     ],
     "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
       "domains_tried": [
         "aiio.com",
         "aiio.in"
@@ -1512,6 +1802,26 @@
         "creation_date": "[datetime.datetime(2023, 10, 25, 11, 19, 8, 751000, tzinfo=tzoffset('UTC', 0)), datetime.datetime(2023, 10, 25, 11, 19, 8, tzinfo=tzoffset('UTC', 0))]",
         "org": null,
         "country": "IN"
+      }
+    },
+    "_registry": {
+      "matched": false,
+      "reason": "best_candidate_below_threshold",
+      "candidate": {
+        "registered_name": "AIIO CONSULT LIMITED",
+        "company_number": "13601601",
+        "current_status": null,
+        "incorporation_date": "3 September 2021",
+        "source_url": "https://find-and-update.company-information.service.gov.uk/company/13601601",
+        "similarity_score": 0.282
+      }
+    },
+    "_social": {
+      "linkedin": {
+        "url": "https://www.linkedin.com/company/ai-io",
+        "source": "slug_guess",
+        "confirmed": false,
+        "note": "unverified guess — LinkedIn returns HTTP 200 for both real and fake company URLs, so this cannot be auto-confirmed. Open the link manually to check."
       }
     }
   },
@@ -1540,23 +1850,37 @@
       "sparse_no_contact_channel"
     ],
     "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
       "domains_tried": [
         "aila.com",
-        "aila.in",
-        "aila.co.in",
-        "aila.io"
+        "aila.in"
       ],
       "domain_source": "guessed_and_verified",
-      "discovered_website": "https://aila.io",
+      "discovered_website": "https://aila.in",
       "whois": {
-        "registrar": "DYNADOT LLC",
-        "creation_date": "2015-10-02 15:55:05+00:00",
+        "registrar": "Wild West Domains, LLC",
+        "creation_date": "2020-06-27 16:36:23.447000+00:00",
         "org": null,
-        "country": null
+        "country": "IN"
+      }
+    },
+    "_registry": {
+      "matched": false,
+      "reason": "best_candidate_below_threshold",
+      "candidate": {
+        "registered_name": "AILA LABS LIMITED",
+        "company_number": "16657402",
+        "current_status": null,
+        "incorporation_date": "18 August 2025",
+        "source_url": "https://find-and-update.company-information.service.gov.uk/company/16657402",
+        "similarity_score": 0.429
+      }
+    },
+    "_social": {
+      "linkedin": {
+        "url": "https://www.linkedin.com/company/ai-la",
+        "source": "slug_guess",
+        "confirmed": false,
+        "note": "unverified guess — LinkedIn returns HTTP 200 for both real and fake company URLs, so this cannot be auto-confirmed. Open the link manually to check."
       }
     }
   },
@@ -1585,17 +1909,37 @@
       "sparse_no_contact_channel"
     ],
     "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
       "domains_tried": [
-        "genaiworks.com",
-        "genaiworks.in",
-        "genaiworks.co.in",
-        "genaiworks.io",
-        "genaiworks.org"
-      ]
+        "genaiworks.com"
+      ],
+      "domain_source": "guessed_and_verified",
+      "discovered_website": "https://genaiworks.com",
+      "whois": {
+        "registrar": "NameCheap, Inc.",
+        "creation_date": "2023-04-30 07:01:33+00:00",
+        "org": null,
+        "country": null
+      }
+    },
+    "_registry": {
+      "matched": false,
+      "reason": "best_candidate_below_threshold",
+      "candidate": {
+        "registered_name": "AMF GENAI LIMITED",
+        "company_number": "16521813",
+        "current_status": null,
+        "incorporation_date": "16 June 2025",
+        "source_url": "https://find-and-update.company-information.service.gov.uk/company/16521813",
+        "similarity_score": 0.433
+      }
+    },
+    "_social": {
+      "linkedin": {
+        "url": "https://www.linkedin.com/company/genai-works",
+        "source": "slug_guess",
+        "confirmed": false,
+        "note": "unverified guess — LinkedIn returns HTTP 200 for both real and fake company URLs, so this cannot be auto-confirmed. Open the link manually to check."
+      }
     }
   },
   {
@@ -1623,17 +1967,38 @@
       "sparse_no_contact_channel"
     ],
     "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
       "domains_tried": [
         "aiforgood.com",
-        "aiforgood.in",
-        "aiforgood.co.in",
-        "aiforgood.io",
-        "aiforgood.org"
-      ]
+        "aiforgood.in"
+      ],
+      "domain_source": "guessed_and_verified",
+      "discovered_website": "https://aiforgood.in",
+      "whois": {
+        "registrar": "GoDaddy",
+        "creation_date": "2023-10-16 11:00:34.488000+00:00",
+        "org": null,
+        "country": "IN"
+      }
+    },
+    "_registry": {
+      "matched": false,
+      "reason": "best_candidate_below_threshold",
+      "candidate": {
+        "registered_name": "AI FOR GOOD INNOVATION HUB LTD",
+        "company_number": "16775165",
+        "current_status": null,
+        "incorporation_date": "9 October 2025",
+        "source_url": "https://find-and-update.company-information.service.gov.uk/company/16775165",
+        "similarity_score": 0.597
+      }
+    },
+    "_social": {
+      "linkedin": {
+        "url": "https://www.linkedin.com/company/ai-for-good",
+        "source": "slug_guess",
+        "confirmed": false,
+        "note": "unverified guess — LinkedIn returns HTTP 200 for both real and fake company URLs, so this cannot be auto-confirmed. Open the link manually to check."
+      }
     }
   },
   {
@@ -1661,10 +2026,6 @@
       "sparse_no_contact_channel"
     ],
     "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
       "domains_tried": [
         "ai.com"
       ],
@@ -1672,22 +2033,28 @@
       "discovered_website": "https://ai.com",
       "whois": {
         "registrar": "GoDaddy.com, LLC",
-        "creation_date": "[datetime.datetime(1993, 5, 4, 4, 0, tzinfo=tzoffset('UTC', 0)), datetime.datetime(1993, 5, 3, 23, 0, tzinfo=tzoffset('UTC', 0))]",
-        "org": "Domains By Proxy, LLC",
-        "country": "US"
-      },
-      "discovered_emails": [
-        "contact@ai.com",
-        "allama@ai.com",
-        "tony@ai.com",
-        "enquiry@ai.com",
-        "job@ai.com",
-        "sample@ai.com",
-        "infobatch@ai.com",
-        "support@ai.com",
-        "webmaster@ai.com",
-        "hyphen@ai.com"
-      ]
+        "creation_date": "1993-05-04 04:00:00+00:00",
+        "org": null,
+        "country": null
+      }
+    },
+    "_registry": {
+      "matched": true,
+      "confidence": "similarity_filtered",
+      "registered_name": "AI LTD",
+      "company_number": "05844524",
+      "current_status": "Dissolved",
+      "incorporation_date": null,
+      "source_url": "https://find-and-update.company-information.service.gov.uk/company/05844524",
+      "similarity_score": 1.0
+    },
+    "_social": {
+      "linkedin": {
+        "url": "https://www.linkedin.com/company/ai",
+        "source": "slug_guess",
+        "confirmed": false,
+        "note": "unverified guess — LinkedIn returns HTTP 200 for both real and fake company URLs, so this cannot be auto-confirmed. Open the link manually to check."
+      }
     }
   },
   {
@@ -1715,10 +2082,6 @@
       "sparse_no_contact_channel"
     ],
     "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
       "domains_tried": [
         "standardai.com"
       ],
@@ -1726,9 +2089,27 @@
       "discovered_website": "https://standardai.com",
       "whois": {
         "registrar": "GoDaddy.com, LLC",
-        "creation_date": "[datetime.datetime(2013, 10, 8, 22, 39, 21, tzinfo=tzoffset('UTC', 0)), datetime.datetime(2013, 10, 8, 17, 39, 21, tzinfo=tzoffset('UTC', 0))]",
-        "org": "Domains By Proxy, LLC",
-        "country": "US"
+        "creation_date": "2013-10-08 22:39:21+00:00",
+        "org": null,
+        "country": null
+      }
+    },
+    "_registry": {
+      "matched": true,
+      "confidence": "similarity_filtered",
+      "registered_name": "STANDARD AI SOLUTIONS LTD",
+      "company_number": "15614946",
+      "current_status": null,
+      "incorporation_date": "4 April 2024",
+      "source_url": "https://find-and-update.company-information.service.gov.uk/company/15614946",
+      "similarity_score": 1.0
+    },
+    "_social": {
+      "linkedin": {
+        "url": "https://www.linkedin.com/company/standard-ai",
+        "source": "slug_guess",
+        "confirmed": false,
+        "note": "unverified guess — LinkedIn returns HTTP 200 for both real and fake company URLs, so this cannot be auto-confirmed. Open the link manually to check."
       }
     }
   },
@@ -1757,10 +2138,6 @@
       "sparse_no_contact_channel"
     ],
     "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
       "domains_tried": [
         "globalai.com"
       ],
@@ -1768,16 +2145,28 @@
       "discovered_website": "https://globalai.com",
       "whois": {
         "registrar": "GoDaddy.com, LLC",
-        "creation_date": "[datetime.datetime(2000, 3, 13, 19, 20, 50, tzinfo=tzoffset('UTC', 0)), datetime.datetime(2000, 3, 13, 14, 20, 50, tzinfo=tzoffset('UTC', 0))]",
-        "org": "Domains By Proxy, LLC",
-        "country": "US"
-      },
-      "discovered_emails": [
-        "balazs.toth@globalai.com",
-        "marzena@globalai.com",
-        "info@globalai.com",
-        "legal@globalai.com"
-      ]
+        "creation_date": "2000-03-13 19:20:50+00:00",
+        "org": null,
+        "country": null
+      }
+    },
+    "_registry": {
+      "matched": true,
+      "confidence": "similarity_filtered",
+      "registered_name": "GLOBAL AI LTD",
+      "company_number": "15535731",
+      "current_status": null,
+      "incorporation_date": "2 March 2024",
+      "source_url": "https://find-and-update.company-information.service.gov.uk/company/15535731",
+      "similarity_score": 1.0
+    },
+    "_social": {
+      "linkedin": {
+        "url": "https://www.linkedin.com/company/global-ai",
+        "source": "slug_guess",
+        "confirmed": false,
+        "note": "unverified guess — LinkedIn returns HTTP 200 for both real and fake company URLs, so this cannot be auto-confirmed. Open the link manually to check."
+      }
     }
   },
   {
@@ -1805,10 +2194,6 @@
       "sparse_no_contact_channel"
     ],
     "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
       "domains_tried": [
         "theaijournal.com",
         "theaijournal.in",
@@ -1816,6 +2201,24 @@
         "theaijournal.io",
         "theaijournal.org"
       ]
+    },
+    "_registry": {
+      "matched": true,
+      "confidence": "similarity_filtered",
+      "registered_name": "THE AI JOURNAL LTD",
+      "company_number": "12602024",
+      "current_status": null,
+      "incorporation_date": "14 May 2020",
+      "source_url": "https://find-and-update.company-information.service.gov.uk/company/12602024",
+      "similarity_score": 1.0
+    },
+    "_social": {
+      "linkedin": {
+        "url": "https://www.linkedin.com/company/the-ai-journal",
+        "source": "slug_guess",
+        "confirmed": false,
+        "note": "unverified guess — LinkedIn returns HTTP 200 for both real and fake company URLs, so this cannot be auto-confirmed. Open the link manually to check."
+      }
     }
   },
   {
@@ -1930,24 +2333,47 @@
       "people_dropped:56"
     ],
     "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
       "domain_source": "existing_website",
       "whois": {
         "registrar": "GoDaddy.com, LLC",
         "creation_date": "2015-07-15 11:50:40+00:00",
-        "org": "Domains By Proxy, LLC",
-        "country": "US"
+        "org": null,
+        "country": null
+      }
+    },
+    "_registry": {
+      "matched": false,
+      "reason": "best_candidate_below_threshold",
+      "candidate": {
+        "registered_name": "THE MAJESTIC WONDER EMPORIUM OF MR MAGORIUMS DIRECTED AT ISLAMIC BIRD WATCHING AND CRICKETING ENDEAVOUR FOR THE SALVATION OF THE CHURCH AND TORAH ON SABBATH LTD",
+        "company_number": "13586085",
+        "current_status": "Dissolved",
+        "incorporation_date": null,
+        "source_url": "https://find-and-update.company-information.service.gov.uk/company/13586085",
+        "similarity_score": 0.199
+      }
+    },
+    "_social": {
+      "linkedin": {
+        "url": "https://linkedin.com/company/goodfirms",
+        "source": "found_on_site"
       },
-      "discovered_emails": [
-        "jin@goodfirms.co",
-        "nathan@goodfirms.co",
-        "sophia@goodfirms.co",
-        "darren@goodfirms.co",
-        "info@goodfirms.co"
-      ]
+      "twitter_x": {
+        "url": "https://x.com/Goodfirms",
+        "source": "found_on_site"
+      },
+      "facebook": {
+        "url": "https://facebook.com/goodfirms",
+        "source": "found_on_site"
+      },
+      "instagram": {
+        "url": "https://instagram.com/goodfirms_",
+        "source": "found_on_site"
+      },
+      "youtube": {
+        "url": "https://youtube.com/@Goodfirms",
+        "source": "found_on_site"
+      }
     }
   },
   {
@@ -2060,24 +2486,47 @@
       "people_dropped:56"
     ],
     "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
       "domain_source": "existing_website",
       "whois": {
         "registrar": "GoDaddy.com, LLC",
         "creation_date": "2015-07-15 11:50:40+00:00",
-        "org": "Domains By Proxy, LLC",
-        "country": "US"
+        "org": null,
+        "country": null
+      }
+    },
+    "_registry": {
+      "matched": false,
+      "reason": "best_candidate_below_threshold",
+      "candidate": {
+        "registered_name": "MAKERS CENTRAL LIMITED",
+        "company_number": "14258625",
+        "current_status": null,
+        "incorporation_date": "27 July 2022",
+        "source_url": "https://find-and-update.company-information.service.gov.uk/company/14258625",
+        "similarity_score": 0.115
+      }
+    },
+    "_social": {
+      "linkedin": {
+        "url": "https://linkedin.com/company/goodfirms",
+        "source": "found_on_site"
       },
-      "discovered_emails": [
-        "jin@goodfirms.co",
-        "nathan@goodfirms.co",
-        "sophia@goodfirms.co",
-        "darren@goodfirms.co",
-        "info@goodfirms.co"
-      ]
+      "twitter_x": {
+        "url": "https://x.com/blog",
+        "source": "found_on_site"
+      },
+      "facebook": {
+        "url": "https://facebook.com/goodfirms",
+        "source": "found_on_site"
+      },
+      "instagram": {
+        "url": "https://instagram.com/goodfirms_",
+        "source": "found_on_site"
+      },
+      "youtube": {
+        "url": "https://youtube.com/@Goodfirms",
+        "source": "found_on_site"
+      }
     }
   },
   {
@@ -2193,24 +2642,45 @@
       "people_dropped:56"
     ],
     "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
       "domain_source": "existing_website",
       "whois": {
         "registrar": "GoDaddy.com, LLC",
         "creation_date": "2015-07-15 11:50:40+00:00",
         "org": null,
         "country": null
+      }
+    },
+    "_registry": {
+      "matched": true,
+      "confidence": "similarity_filtered",
+      "registered_name": "AIA HEALTHCARE LIMITED",
+      "company_number": "16716962",
+      "current_status": "Dissolved",
+      "incorporation_date": null,
+      "source_url": "https://find-and-update.company-information.service.gov.uk/company/16716962",
+      "similarity_score": 0.62
+    },
+    "_social": {
+      "linkedin": {
+        "url": "https://linkedin.com/company/goodfirms",
+        "source": "found_on_site"
       },
-      "discovered_emails": [
-        "jin@goodfirms.co",
-        "nathan@goodfirms.co",
-        "sophia@goodfirms.co",
-        "darren@goodfirms.co",
-        "info@goodfirms.co"
-      ]
+      "twitter_x": {
+        "url": "https://x.com/Goodfirms",
+        "source": "found_on_site"
+      },
+      "facebook": {
+        "url": "https://facebook.com/goodfirms",
+        "source": "found_on_site"
+      },
+      "instagram": {
+        "url": "https://instagram.com/goodfirms_",
+        "source": "found_on_site"
+      },
+      "youtube": {
+        "url": "https://youtube.com/@Goodfirms",
+        "source": "found_on_site"
+      }
     }
   },
   {
@@ -2323,24 +2793,47 @@
       "people_dropped:56"
     ],
     "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
       "domain_source": "existing_website",
       "whois": {
         "registrar": "GoDaddy.com, LLC",
         "creation_date": "2015-07-15 11:50:40+00:00",
         "org": null,
         "country": null
+      }
+    },
+    "_registry": {
+      "matched": false,
+      "reason": "best_candidate_below_threshold",
+      "candidate": {
+        "registered_name": "AICH SECOND LIFE FASHION LIMITED",
+        "company_number": "17056935",
+        "current_status": null,
+        "incorporation_date": "26 February 2026",
+        "source_url": "https://find-and-update.company-information.service.gov.uk/company/17056935",
+        "similarity_score": 0.456
+      }
+    },
+    "_social": {
+      "linkedin": {
+        "url": "https://linkedin.com/company/goodfirms",
+        "source": "found_on_site"
       },
-      "discovered_emails": [
-        "jin@goodfirms.co",
-        "nathan@goodfirms.co",
-        "sophia@goodfirms.co",
-        "darren@goodfirms.co",
-        "info@goodfirms.co"
-      ]
+      "twitter_x": {
+        "url": "https://x.com/Goodfirms",
+        "source": "found_on_site"
+      },
+      "facebook": {
+        "url": "https://facebook.com/goodfirms",
+        "source": "found_on_site"
+      },
+      "instagram": {
+        "url": "https://instagram.com/glitch_ai",
+        "source": "found_on_site"
+      },
+      "youtube": {
+        "url": "https://youtube.com/@Goodfirms",
+        "source": "found_on_site"
+      }
     }
   },
   {
@@ -2374,21 +2867,43 @@
       "email_junk:your@email.com"
     ],
     "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
       "domain_source": "existing_website",
       "whois": {
         "registrar": "GoDaddy.com, LLC",
         "creation_date": "2018-05-08 09:03:39+00:00",
         "org": null,
         "country": null
+      }
+    },
+    "_registry": {
+      "matched": false,
+      "reason": "best_candidate_below_threshold",
+      "candidate": {
+        "registered_name": "AWS CLOUD EXPERTS LIMITED",
+        "company_number": "16340095",
+        "current_status": null,
+        "incorporation_date": "25 March 2025",
+        "source_url": "https://find-and-update.company-information.service.gov.uk/company/16340095",
+        "similarity_score": 0.517
+      }
+    },
+    "_social": {
+      "linkedin": {
+        "url": "https://linkedin.com/company/squareops-tech",
+        "source": "found_on_site"
       },
-      "discovered_emails": [
-        "consult@squareops.com",
-        "contact@squareops.com"
-      ]
+      "twitter_x": {
+        "url": "https://twitter.com/squareops",
+        "source": "found_on_site"
+      },
+      "facebook": {
+        "url": "https://facebook.com/squareops",
+        "source": "found_on_site"
+      },
+      "instagram": {
+        "url": "https://instagram.com/squareops",
+        "source": "found_on_site"
+      }
     }
   },
   {
@@ -2417,10 +2932,6 @@
       "sparse_no_contact_channel"
     ],
     "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
       "domains_tried": [
         "turningcloud.com"
       ],
@@ -2428,17 +2939,30 @@
       "discovered_website": "https://turningcloud.com",
       "whois": {
         "registrar": "GoDaddy.com, LLC",
-        "creation_date": "[datetime.datetime(2011, 4, 6, 17, 22, 53, tzinfo=tzoffset('UTC', 0)), datetime.datetime(2011, 4, 6, 12, 22, 53, tzinfo=tzoffset('UTC', 0))]",
-        "org": "Domains By Proxy, LLC",
-        "country": "US"
-      },
-      "discovered_emails": [
-        "ashish@turningcloud.com",
-        "nidhi@turningcloud.com",
-        "mayank@turningcloud.com",
-        "murthy@turningcloud.com",
-        "info@turningcloud.com"
-      ]
+        "creation_date": "2011-04-06 17:22:53+00:00",
+        "org": null,
+        "country": null
+      }
+    },
+    "_registry": {
+      "matched": false,
+      "reason": "best_candidate_below_threshold",
+      "candidate": {
+        "registered_name": "AARK TECH SOLUTIONS UK PRIVATE LIMITED",
+        "company_number": "17076562",
+        "current_status": null,
+        "incorporation_date": "8 March 2026",
+        "source_url": "https://find-and-update.company-information.service.gov.uk/company/17076562",
+        "similarity_score": 0.1
+      }
+    },
+    "_social": {
+      "linkedin": {
+        "url": "https://www.linkedin.com/company/turningcloud",
+        "source": "slug_guess",
+        "confirmed": false,
+        "note": "unverified guess — LinkedIn returns HTTP 200 for both real and fake company URLs, so this cannot be auto-confirmed. Open the link manually to check."
+      }
     }
   },
   {
@@ -2467,17 +2991,35 @@
       "sparse_no_contact_channel"
     ],
     "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
       "domains_tried": [
-        "cloudcertitude.com",
-        "cloudcertitude.in",
-        "cloudcertitude.co.in",
-        "cloudcertitude.io",
-        "cloudcertitude.org"
-      ]
+        "cloudcertitude.com"
+      ],
+      "domain_source": "guessed_and_verified",
+      "discovered_website": "https://cloudcertitude.com",
+      "whois": {
+        "registrar": "GoDaddy.com, LLC",
+        "creation_date": "2013-02-27 17:26:39+00:00",
+        "org": null,
+        "country": null
+      }
+    },
+    "_registry": {
+      "matched": true,
+      "confidence": "similarity_filtered",
+      "registered_name": "CERTITUDE LIMITED",
+      "company_number": "12045289",
+      "current_status": null,
+      "incorporation_date": "11 June 2019",
+      "source_url": "https://find-and-update.company-information.service.gov.uk/company/12045289",
+      "similarity_score": 0.65
+    },
+    "_social": {
+      "linkedin": {
+        "url": "https://www.linkedin.com/company/cloud-certitude",
+        "source": "slug_guess",
+        "confirmed": false,
+        "note": "unverified guess — LinkedIn returns HTTP 200 for both real and fake company URLs, so this cannot be auto-confirmed. Open the link manually to check."
+      }
     }
   },
   {
@@ -2506,10 +3048,6 @@
       "sparse_no_contact_channel"
     ],
     "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
       "domains_tried": [
         "anantacloud.com"
       ],
@@ -2517,14 +3055,28 @@
       "discovered_website": "https://anantacloud.com",
       "whois": {
         "registrar": "GoDaddy.com, LLC",
-        "creation_date": "[datetime.datetime(2025, 1, 6, 4, 27, 37, tzinfo=tzoffset('UTC', 0)), datetime.datetime(2025, 1, 5, 23, 27, 37, tzinfo=tzoffset('UTC', 0))]",
-        "org": "Domains By Proxy, LLC",
-        "country": "US"
-      },
-      "discovered_emails": [
-        "hello@anantacloud.com",
-        "hiring@anantacloud.com"
-      ]
+        "creation_date": "2025-01-06 04:27:37+00:00",
+        "org": null,
+        "country": null
+      }
+    },
+    "_registry": {
+      "matched": true,
+      "confidence": "similarity_filtered",
+      "registered_name": "ANANTA LTD",
+      "company_number": "11492735",
+      "current_status": null,
+      "incorporation_date": "31 July 2018",
+      "source_url": "https://find-and-update.company-information.service.gov.uk/company/11492735",
+      "similarity_score": 0.6
+    },
+    "_social": {
+      "linkedin": {
+        "url": "https://www.linkedin.com/company/ananta-cloud",
+        "source": "slug_guess",
+        "confirmed": false,
+        "note": "unverified guess — LinkedIn returns HTTP 200 for both real and fake company URLs, so this cannot be auto-confirmed. Open the link manually to check."
+      }
     }
   },
   {
@@ -2553,10 +3105,6 @@
       "sparse_no_contact_channel"
     ],
     "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
       "domains_tried": [
         "bcloudglobal.com",
         "bcloudglobal.in",
@@ -2564,6 +3112,26 @@
         "bcloudglobal.io",
         "bcloudglobal.org"
       ]
+    },
+    "_registry": {
+      "matched": false,
+      "reason": "best_candidate_below_threshold",
+      "candidate": {
+        "registered_name": "BCLOUD CONSULTANCY LTD",
+        "company_number": "11860357",
+        "current_status": null,
+        "incorporation_date": "5 March 2019",
+        "source_url": "https://find-and-update.company-information.service.gov.uk/company/11860357",
+        "similarity_score": 0.579
+      }
+    },
+    "_social": {
+      "linkedin": {
+        "url": "https://www.linkedin.com/company/bcloud-global",
+        "source": "slug_guess",
+        "confirmed": false,
+        "note": "unverified guess — LinkedIn returns HTTP 200 for both real and fake company URLs, so this cannot be auto-confirmed. Open the link manually to check."
+      }
     }
   },
   {
@@ -2592,10 +3160,6 @@
       "sparse_no_contact_channel"
     ],
     "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
       "domains_tried": [
         "mpccloud.com",
         "mpccloud.in",
@@ -2603,6 +3167,24 @@
         "mpccloud.io",
         "mpccloud.org"
       ]
+    },
+    "_registry": {
+      "matched": true,
+      "confidence": "similarity_filtered",
+      "registered_name": "MPC CLOUD CONSULTING LIMITED",
+      "company_number": "16919928",
+      "current_status": null,
+      "incorporation_date": "18 December 2025",
+      "source_url": "https://find-and-update.company-information.service.gov.uk/company/16919928",
+      "similarity_score": 1.0
+    },
+    "_social": {
+      "linkedin": {
+        "url": "https://www.linkedin.com/company/mpc-cloud",
+        "source": "slug_guess",
+        "confirmed": false,
+        "note": "unverified guess — LinkedIn returns HTTP 200 for both real and fake company URLs, so this cannot be auto-confirmed. Open the link manually to check."
+      }
     }
   },
   {
@@ -2631,10 +3213,6 @@
       "sparse_no_contact_channel"
     ],
     "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
       "domains_tried": [
         "cloudzent.com"
       ],
@@ -2645,11 +3223,27 @@
         "creation_date": "2017-12-14 07:53:46+00:00",
         "org": "Privacy Protect, LLC (PrivacyProtect.org)",
         "country": "US"
-      },
-      "discovered_emails": [
-        "gaganjot.singh@cloudzent.com",
-        "info@cloudzent.com"
-      ]
+      }
+    },
+    "_registry": {
+      "matched": false,
+      "reason": "best_candidate_below_threshold",
+      "candidate": {
+        "registered_name": "A&A TECHNOLOGY CONSULTANCY SERVICES LTD",
+        "company_number": "08713090",
+        "current_status": null,
+        "incorporation_date": "1 October 2013",
+        "source_url": "https://find-and-update.company-information.service.gov.uk/company/08713090",
+        "similarity_score": 0.0
+      }
+    },
+    "_social": {
+      "linkedin": {
+        "url": "https://www.linkedin.com/company/cloudzent",
+        "source": "slug_guess",
+        "confirmed": false,
+        "note": "unverified guess — LinkedIn returns HTTP 200 for both real and fake company URLs, so this cannot be auto-confirmed. Open the link manually to check."
+      }
     }
   },
   {
@@ -2678,17 +3272,36 @@
       "sparse_no_contact_channel"
     ],
     "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
       "domains_tried": [
         "acecloud.com",
-        "acecloud.in",
-        "acecloud.co.in",
-        "acecloud.io",
-        "acecloud.org"
-      ]
+        "acecloud.in"
+      ],
+      "domain_source": "guessed_and_verified",
+      "discovered_website": "https://acecloud.in",
+      "whois": {
+        "registrar": "GoDaddy",
+        "creation_date": "2022-12-19 17:54:25.795000+00:00",
+        "org": null,
+        "country": "IN"
+      }
+    },
+    "_registry": {
+      "matched": true,
+      "confidence": "similarity_filtered",
+      "registered_name": "ACECLOUD LIMITED",
+      "company_number": "13535823",
+      "current_status": null,
+      "incorporation_date": "28 July 2021",
+      "source_url": "https://find-and-update.company-information.service.gov.uk/company/13535823",
+      "similarity_score": 1.0
+    },
+    "_social": {
+      "linkedin": {
+        "url": "https://www.linkedin.com/company/acecloud",
+        "source": "slug_guess",
+        "confirmed": false,
+        "note": "unverified guess — LinkedIn returns HTTP 200 for both real and fake company URLs, so this cannot be auto-confirmed. Open the link manually to check."
+      }
     }
   },
   {
@@ -2717,10 +3330,6 @@
       "sparse_no_contact_channel"
     ],
     "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
       "domains_tried": [
         "progression.com"
       ],
@@ -2731,19 +3340,25 @@
         "creation_date": "1998-05-09 04:00:00+00:00",
         "org": null,
         "country": "US"
-      },
-      "discovered_emails": [
-        "rakesh.pawar@progression.com",
-        "sarthak.hooda@progression.com",
-        "bhushan.khadage@progression.com",
-        "bansi.dhar@progression.com",
-        "param.hooda@progression.com",
-        "susanta.praharaj@progression.com",
-        "harish.rawat@progression.com",
-        "narender.singh@progression.com",
-        "deepesh.yadav@progression.com",
-        "abhishek.kumar@progression.com"
-      ]
+      }
+    },
+    "_registry": {
+      "matched": true,
+      "confidence": "similarity_filtered",
+      "registered_name": "PROGRESSION LIMITED",
+      "company_number": "02247925",
+      "current_status": "Dissolved",
+      "incorporation_date": null,
+      "source_url": "https://find-and-update.company-information.service.gov.uk/company/02247925",
+      "similarity_score": 1.0
+    },
+    "_social": {
+      "linkedin": {
+        "url": "https://www.linkedin.com/company/progression",
+        "source": "slug_guess",
+        "confirmed": false,
+        "note": "unverified guess — LinkedIn returns HTTP 200 for both real and fake company URLs, so this cannot be auto-confirmed. Open the link manually to check."
+      }
     }
   },
   {
@@ -2772,17 +3387,29 @@
       "sparse_no_contact_channel"
     ],
     "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
       "domains_tried": [
-        "cloudtechner.com",
-        "cloudtechner.in",
-        "cloudtechner.co.in",
-        "cloudtechner.io",
-        "cloudtechner.org"
-      ]
+        "cloudtechner.com"
+      ],
+      "domain_source": "guessed_and_verified",
+      "discovered_website": "https://cloudtechner.com",
+      "whois": {
+        "registrar": "GoDaddy.com, LLC",
+        "creation_date": "2020-09-18 15:41:13+00:00",
+        "org": null,
+        "country": null
+      }
+    },
+    "_registry": {
+      "matched": false,
+      "reason": "no_search_result"
+    },
+    "_social": {
+      "linkedin": {
+        "url": "https://www.linkedin.com/company/cloudtechner",
+        "source": "slug_guess",
+        "confirmed": false,
+        "note": "unverified guess — LinkedIn returns HTTP 200 for both real and fake company URLs, so this cannot be auto-confirmed. Open the link manually to check."
+      }
     }
   },
   {
@@ -2814,27 +3441,31 @@
       "people_dropped:4"
     ],
     "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
       "domain_source": "existing_website",
       "whois": {
         "registrar": "GoDaddy.com, LLC",
-        "creation_date": "[datetime.datetime(2014, 8, 6, 13, 59, 46, tzinfo=tzoffset('UTC', 0)), datetime.datetime(2014, 8, 6, 8, 59, 46, tzinfo=tzoffset('UTC', 0))]",
-        "org": "Domains By Proxy, LLC",
-        "country": "US"
+        "creation_date": "2014-08-06 13:59:46+00:00",
+        "org": null,
+        "country": null
+      }
+    },
+    "_registry": {
+      "matched": false,
+      "reason": "no_search_result"
+    },
+    "_social": {
+      "linkedin": {
+        "url": "https://linkedin.com/company/gomilestone-pvt.-ltd",
+        "source": "found_on_site"
       },
-      "discovered_emails": [
-        "kaushal@gomilestone.com",
-        "ankit.gupta@gomilestone.com",
-        "sandeep@gomilestone.com",
-        "kuldeep@gomilestone.com",
-        "libanshi.jain@gomilestone.com",
-        "pankaj@gomilestone.com",
-        "bikram.singh@gomilestone.com",
-        "info@gomilestone.com"
-      ]
+      "facebook": {
+        "url": "https://facebook.com/GoMilestone",
+        "source": "found_on_site"
+      },
+      "instagram": {
+        "url": "https://instagram.com/go.milestone",
+        "source": "found_on_site"
+      }
     }
   },
   {
@@ -2863,10 +3494,6 @@
       "sparse_no_contact_channel"
     ],
     "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
       "domains_tried": [
         "the10bestcompaniestoworkforindelhincrin2026.com",
         "the10bestcompaniestoworkforindelhincrin2026.in",
@@ -2874,6 +3501,26 @@
         "the10bestcompaniestoworkforindelhincrin2026.io",
         "the10bestcompaniestoworkforindelhincrin2026.org"
       ]
+    },
+    "_registry": {
+      "matched": false,
+      "reason": "best_candidate_below_threshold",
+      "candidate": {
+        "registered_name": "BEST COMPANIES TO WORK FOR LTD",
+        "company_number": "15293632",
+        "current_status": null,
+        "incorporation_date": "20 November 2023",
+        "source_url": "https://find-and-update.company-information.service.gov.uk/company/15293632",
+        "similarity_score": 0.572
+      }
+    },
+    "_social": {
+      "linkedin": {
+        "url": "https://www.linkedin.com/company/the-10-best-companies-to-work-for-in-delhi-ncr-in-2026",
+        "source": "slug_guess",
+        "confirmed": false,
+        "note": "unverified guess — LinkedIn returns HTTP 200 for both real and fake company URLs, so this cannot be auto-confirmed. Open the link manually to check."
+      }
     }
   },
   {
@@ -2902,29 +3549,43 @@
       "people_dropped:2"
     ],
     "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
       "domain_source": "existing_website",
       "whois": {
-        "registrar": "GoDaddy.com, LLC",
-        "creation_date": "[datetime.datetime(2005, 2, 16, 7, 3, 23, 300000, tzinfo=tzoffset('UTC', 0)), datetime.datetime(2005, 2, 16, 7, 3, 23, tzinfo=tzoffset('UTC', 0))]",
+        "registrar": "GoDaddy",
+        "creation_date": "2005-02-16 07:03:23.300000+00:00",
         "org": null,
         "country": "IN"
+      }
+    },
+    "_registry": {
+      "matched": false,
+      "reason": "best_candidate_below_threshold",
+      "candidate": {
+        "registered_name": "ITZ DELHI LIMITED",
+        "company_number": "16244510",
+        "current_status": null,
+        "incorporation_date": "11 February 2025",
+        "source_url": "https://find-and-update.company-information.service.gov.uk/company/16244510",
+        "similarity_score": 0.358
+      }
+    },
+    "_social": {
+      "linkedin": {
+        "url": "https://linkedin.com/in/prateekgarg2",
+        "source": "found_on_site"
       },
-      "discovered_emails": [
-        "umesh.babu@progressive.in",
-        "venu.garg@progressive.in",
-        "sandeep.khanna@progressive.in",
-        "divya.goswami@progressive.in",
-        "monika.pal@progressive.in",
-        "prateek.garg@progressive.in",
-        "anushka.sharma@progressive.in",
-        "ankit.pandey@progressive.in",
-        "vishal.goswami@progressive.in",
-        "bhavik.ambani@progressive.in"
-      ]
+      "twitter_x": {
+        "url": "https://twitter.com/prateekgarg64",
+        "source": "found_on_site"
+      },
+      "facebook": {
+        "url": "https://facebook.com/ProgressiveInfotech",
+        "source": "found_on_site"
+      },
+      "instagram": {
+        "url": "https://instagram.com/progressivetech",
+        "source": "found_on_site"
+      }
     }
   },
   {
@@ -2953,10 +3614,6 @@
       "sparse_no_contact_channel"
     ],
     "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
       "domains_tried": [
         "itcompanyindia.com"
       ],
@@ -2964,9 +3621,29 @@
       "discovered_website": "https://itcompanyindia.com",
       "whois": {
         "registrar": "GoDaddy.com, LLC",
-        "creation_date": "[datetime.datetime(2011, 8, 20, 17, 2, 30, tzinfo=tzoffset('UTC', 0)), datetime.datetime(2011, 8, 20, 12, 2, 30, tzinfo=tzoffset('UTC', 0))]",
-        "org": "Domains By Proxy, LLC",
-        "country": "US"
+        "creation_date": "2011-08-20 17:02:30+00:00",
+        "org": null,
+        "country": null
+      }
+    },
+    "_registry": {
+      "matched": false,
+      "reason": "best_candidate_below_threshold",
+      "candidate": {
+        "registered_name": "INDIA IT GROUP LIMITED",
+        "company_number": "15217131",
+        "current_status": "Dissolved",
+        "incorporation_date": null,
+        "source_url": "https://find-and-update.company-information.service.gov.uk/company/15217131",
+        "similarity_score": 0.517
+      }
+    },
+    "_social": {
+      "linkedin": {
+        "url": "https://www.linkedin.com/company/it-company-india",
+        "source": "slug_guess",
+        "confirmed": false,
+        "note": "unverified guess — LinkedIn returns HTTP 200 for both real and fake company URLs, so this cannot be auto-confirmed. Open the link manually to check."
       }
     }
   },
@@ -2996,17 +3673,37 @@
       "sparse_no_contact_channel"
     ],
     "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
       "domains_tried": [
-        "itindia.com",
-        "itindia.in",
-        "itindia.co.in",
-        "itindia.io",
-        "itindia.org"
-      ]
+        "itindia.com"
+      ],
+      "domain_source": "guessed_and_verified",
+      "discovered_website": "https://itindia.com",
+      "whois": {
+        "registrar": "GoDaddy.com, LLC",
+        "creation_date": "2001-06-07 06:00:16+00:00",
+        "org": null,
+        "country": null
+      }
+    },
+    "_registry": {
+      "matched": false,
+      "reason": "best_candidate_below_threshold",
+      "candidate": {
+        "registered_name": "AJAB GAJAB INDIAN STREET FOOD PVT LIMITED",
+        "company_number": "17117158",
+        "current_status": null,
+        "incorporation_date": "25 March 2026",
+        "source_url": "https://find-and-update.company-information.service.gov.uk/company/17117158",
+        "similarity_score": 0.221
+      }
+    },
+    "_social": {
+      "linkedin": {
+        "url": "https://www.linkedin.com/company/i-t-india",
+        "source": "slug_guess",
+        "confirmed": false,
+        "note": "unverified guess — LinkedIn returns HTTP 200 for both real and fake company URLs, so this cannot be auto-confirmed. Open the link manually to check."
+      }
     }
   },
   {
@@ -3035,10 +3732,6 @@
       "sparse_no_contact_channel"
     ],
     "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
       "domains_tried": [
         "itcompanyinnoidadelhi.com",
         "itcompanyinnoidadelhi.in",
@@ -3046,6 +3739,26 @@
         "itcompanyinnoidadelhi.io",
         "itcompanyinnoidadelhi.org"
       ]
+    },
+    "_registry": {
+      "matched": false,
+      "reason": "best_candidate_below_threshold",
+      "candidate": {
+        "registered_name": "ITZ DELHI LIMITED",
+        "company_number": "16244510",
+        "current_status": null,
+        "incorporation_date": "11 February 2025",
+        "source_url": "https://find-and-update.company-information.service.gov.uk/company/16244510",
+        "similarity_score": 0.349
+      }
+    },
+    "_social": {
+      "linkedin": {
+        "url": "https://www.linkedin.com/company/it-company-in-noida-delhi",
+        "source": "slug_guess",
+        "confirmed": false,
+        "note": "unverified guess — LinkedIn returns HTTP 200 for both real and fake company URLs, so this cannot be auto-confirmed. Open the link manually to check."
+      }
     }
   },
   {
@@ -3074,10 +3787,6 @@
       "sparse_no_contact_channel"
     ],
     "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
       "domains_tried": [
         "ntplworlditcompany.com",
         "ntplworlditcompany.in",
@@ -3085,6 +3794,26 @@
         "ntplworlditcompany.io",
         "ntplworlditcompany.org"
       ]
+    },
+    "_registry": {
+      "matched": false,
+      "reason": "best_candidate_below_threshold",
+      "candidate": {
+        "registered_name": "ABBOTTS MEADOW (BISHOPS ITCHINGTON) MANAGEMENT COMPANY LIMITED",
+        "company_number": "09645792",
+        "current_status": null,
+        "incorporation_date": "18 June 2015",
+        "source_url": "https://find-and-update.company-information.service.gov.uk/company/09645792",
+        "similarity_score": 0.267
+      }
+    },
+    "_social": {
+      "linkedin": {
+        "url": "https://www.linkedin.com/company/ntplworld-it-company",
+        "source": "slug_guess",
+        "confirmed": false,
+        "note": "unverified guess — LinkedIn returns HTTP 200 for both real and fake company URLs, so this cannot be auto-confirmed. Open the link manually to check."
+      }
     }
   },
   {
@@ -3113,10 +3842,6 @@
       "sparse_no_contact_channel"
     ],
     "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
       "domains_tried": [
         "webzonalitcompany.com",
         "webzonalitcompany.in",
@@ -3124,6 +3849,18 @@
         "webzonalitcompany.io",
         "webzonalitcompany.org"
       ]
+    },
+    "_registry": {
+      "matched": false,
+      "reason": "no_search_result"
+    },
+    "_social": {
+      "linkedin": {
+        "url": "https://www.linkedin.com/company/webzonal-it-company",
+        "source": "slug_guess",
+        "confirmed": false,
+        "note": "unverified guess — LinkedIn returns HTTP 200 for both real and fake company URLs, so this cannot be auto-confirmed. Open the link manually to check."
+      }
     }
   },
   {
@@ -3146,10 +3883,6 @@
       "sparse_no_contact_channel"
     ],
     "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
       "domains_tried": [
         "meentosys.com"
       ],
@@ -3157,13 +3890,30 @@
       "discovered_website": "https://meentosys.com",
       "whois": {
         "registrar": "GoDaddy.com, LLC",
-        "creation_date": "[datetime.datetime(2017, 2, 3, 8, 20, 1, tzinfo=tzoffset('UTC', 0)), datetime.datetime(2017, 2, 3, 3, 20, 1, tzinfo=tzoffset('UTC', 0))]",
-        "org": "Domains By Proxy, LLC",
-        "country": "US"
-      },
-      "discovered_emails": [
-        "info@meentosys.com"
-      ]
+        "creation_date": "2017-02-03 08:20:01+00:00",
+        "org": null,
+        "country": null
+      }
+    },
+    "_registry": {
+      "matched": false,
+      "reason": "best_candidate_below_threshold",
+      "candidate": {
+        "registered_name": "AAAM PRIVATE HIRE LIMITED",
+        "company_number": "08280607",
+        "current_status": null,
+        "incorporation_date": "5 November 2012",
+        "source_url": "https://find-and-update.company-information.service.gov.uk/company/08280607",
+        "similarity_score": 0.133
+      }
+    },
+    "_social": {
+      "linkedin": {
+        "url": "https://www.linkedin.com/company/meentosys",
+        "source": "slug_guess",
+        "confirmed": false,
+        "note": "unverified guess — LinkedIn returns HTTP 200 for both real and fake company URLs, so this cannot be auto-confirmed. Open the link manually to check."
+      }
     }
   },
   {
@@ -3192,10 +3942,6 @@
       "sparse_no_contact_channel"
     ],
     "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
       "domains_tried": [
         "teamcomputers.com"
       ],
@@ -3206,19 +3952,25 @@
         "creation_date": "1999-05-18 22:53:42+00:00",
         "org": null,
         "country": "IN"
-      },
-      "discovered_emails": [
-        "deepak.milind@teamcomputers.com",
-        "sparsh.sharma@teamcomputers.com",
-        "leena.yadav@teamcomputers.com",
-        "ravi.shankar@teamcomputers.com",
-        "manoj.rawat@teamcomputers.com",
-        "saurabh.rai@teamcomputers.com",
-        "komal.verma@teamcomputers.com",
-        "radha.rajput@teamcomputers.com",
-        "suman.kumari@teamcomputers.com",
-        "vijay.bisht@teamcomputers.com"
-      ]
+      }
+    },
+    "_registry": {
+      "matched": true,
+      "confidence": "similarity_filtered",
+      "registered_name": "TEAM COMPUTERS LIMITED",
+      "company_number": "06113758",
+      "current_status": null,
+      "incorporation_date": "19 February 2007",
+      "source_url": "https://find-and-update.company-information.service.gov.uk/company/06113758",
+      "similarity_score": 1.0
+    },
+    "_social": {
+      "linkedin": {
+        "url": "https://www.linkedin.com/company/team-computers",
+        "source": "slug_guess",
+        "confirmed": false,
+        "note": "unverified guess — LinkedIn returns HTTP 200 for both real and fake company URLs, so this cannot be auto-confirmed. Open the link manually to check."
+      }
     }
   },
   {
@@ -3247,10 +3999,6 @@
       "sparse_no_contact_channel"
     ],
     "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
       "domains_tried": [
         "proactivedatasystems.com"
       ],
@@ -3261,6 +4009,24 @@
         "creation_date": "2011-08-22 16:22:07+00:00",
         "org": "ORGANIZATION NAME MASKED",
         "country": "US"
+      }
+    },
+    "_registry": {
+      "matched": true,
+      "confidence": "similarity_filtered",
+      "registered_name": "PROACTIVE DATA SERVICES LIMITED",
+      "company_number": "09242693",
+      "current_status": "Active",
+      "incorporation_date": null,
+      "source_url": "https://find-and-update.company-information.service.gov.uk/company/09242693",
+      "similarity_score": 0.733
+    },
+    "_social": {
+      "linkedin": {
+        "url": "https://www.linkedin.com/company/proactive-data-systems",
+        "source": "slug_guess",
+        "confirmed": false,
+        "note": "unverified guess — LinkedIn returns HTTP 200 for both real and fake company URLs, so this cannot be auto-confirmed. Open the link manually to check."
       }
     }
   },
@@ -3290,10 +4056,6 @@
       "sparse_no_contact_channel"
     ],
     "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
       "domains_tried": [
         "neccorporationindia.com",
         "neccorporationindia.in",
@@ -3301,6 +4063,26 @@
         "neccorporationindia.io",
         "neccorporationindia.org"
       ]
+    },
+    "_registry": {
+      "matched": false,
+      "reason": "best_candidate_below_threshold",
+      "candidate": {
+        "registered_name": "ORIGIN DAILY LIFE NECESSITIES PVT LIMITED",
+        "company_number": "15031902",
+        "current_status": "Dissolved",
+        "incorporation_date": null,
+        "source_url": "https://find-and-update.company-information.service.gov.uk/company/15031902",
+        "similarity_score": 0.158
+      }
+    },
+    "_social": {
+      "linkedin": {
+        "url": "https://www.linkedin.com/company/nec-corporation-india",
+        "source": "slug_guess",
+        "confirmed": false,
+        "note": "unverified guess — LinkedIn returns HTTP 200 for both real and fake company URLs, so this cannot be auto-confirmed. Open the link manually to check."
+      }
     }
   },
   {
@@ -3329,10 +4111,6 @@
       "sparse_no_contact_channel"
     ],
     "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
       "domains_tried": [
         "delhico.com"
       ],
@@ -3343,11 +4121,27 @@
         "creation_date": "2015-03-09 14:26:17+00:00",
         "org": "REDACTED FOR PRIVACY",
         "country": "IN"
-      },
-      "discovered_emails": [
-        "palak@delhico.com",
-        "hi@delhico.com"
-      ]
+      }
+    },
+    "_registry": {
+      "matched": false,
+      "reason": "best_candidate_below_threshold",
+      "candidate": {
+        "registered_name": "DELHI COTTAGE IRCHESTER LTD",
+        "company_number": "13085593",
+        "current_status": "Dissolved",
+        "incorporation_date": null,
+        "source_url": "https://find-and-update.company-information.service.gov.uk/company/13085593",
+        "similarity_score": 0.348
+      }
+    },
+    "_social": {
+      "linkedin": {
+        "url": "https://www.linkedin.com/company/delhi-co",
+        "source": "slug_guess",
+        "confirmed": false,
+        "note": "unverified guess — LinkedIn returns HTTP 200 for both real and fake company URLs, so this cannot be auto-confirmed. Open the link manually to check."
+      }
     }
   },
   {
@@ -3376,16 +4170,32 @@
       "email_junk:bg-info@2x.png"
     ],
     "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
       "domain_source": "existing_website",
       "whois": {
         "registrar": "GoDaddy",
         "creation_date": "2024-02-07 16:23:38.685000+00:00",
         "org": null,
         "country": "US"
+      }
+    },
+    "_registry": {
+      "matched": false,
+      "reason": "best_candidate_below_threshold",
+      "candidate": {
+        "registered_name": "BUZZ CX INDIA (DELHI) LIMITED",
+        "company_number": "16537937",
+        "current_status": null,
+        "incorporation_date": "24 June 2025",
+        "source_url": "https://find-and-update.company-information.service.gov.uk/company/16537937",
+        "similarity_score": 0.467
+      }
+    },
+    "_social": {
+      "linkedin": {
+        "url": "https://www.linkedin.com/company/built-in-delhi",
+        "source": "slug_guess",
+        "confirmed": false,
+        "note": "unverified guess — LinkedIn returns HTTP 200 for both real and fake company URLs, so this cannot be auto-confirmed. Open the link manually to check."
       }
     }
   },
@@ -3481,29 +4291,39 @@
       "people_dropped:3"
     ],
     "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
       "domain_source": "existing_website",
       "whois": {
         "registrar": "GoDaddy",
         "creation_date": "2015-11-26 10:01:51.807000+00:00",
         "org": null,
         "country": "IN"
+      }
+    },
+    "_registry": {
+      "matched": false,
+      "reason": "best_candidate_below_threshold",
+      "candidate": {
+        "registered_name": "LEX 77 LTD",
+        "company_number": "12115006",
+        "current_status": "Dissolved",
+        "incorporation_date": null,
+        "source_url": "https://find-and-update.company-information.service.gov.uk/company/12115006",
+        "similarity_score": 0.109
+      }
+    },
+    "_social": {
+      "linkedin": {
+        "url": "https://linkedin.com/company/aegion-aerospace",
+        "source": "found_on_site"
       },
-      "discovered_emails": [
-        "namitagupta@fitt-iitd.in",
-        "ankit@fitt-iitd.in",
-        "vaibhavparihar@fitt-iitd.in",
-        "subratrai@fitt-iitd.in",
-        "ayurshrikesarwani@fitt-iitd.in",
-        "nishasagar@fitt-iitd.in",
-        "akashrana@fitt-iitd.in",
-        "akashyadav@fitt-iitd.in",
-        "ashishmishra@fitt-iitd.in",
-        "priyasachdeva@fitt-iitd.in"
-      ]
+      "twitter_x": {
+        "url": "https://twitter.com/fitt_iitd",
+        "source": "found_on_site"
+      },
+      "facebook": {
+        "url": "https://facebook.com/tbiu.fitt",
+        "source": "found_on_site"
+      }
     }
   }
 ]

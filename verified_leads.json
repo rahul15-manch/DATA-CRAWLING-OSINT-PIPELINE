@@ -245,18 +245,240 @@
       "people_dropped:7"
     ],
     "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
       "domain_source": "existing_website",
       "whois": {
-        "registrar": "MarkMonitor Inc.",
+        "registrar": "MarkMonitor, Inc.",
         "creation_date": "2001-01-13 00:12:14+00:00",
-        "org": null,
-        "country": null
+        "org": "Wikimedia Foundation, Inc.",
+        "country": "US"
       }
-    }
+    },
+    "_verified_emails": [],
+    "_verified_phones": [
+      "1233266753",
+      "1347765143",
+      "1356344717",
+      "1361732815",
+      "2020.103140",
+      "291.5504.599"
+    ],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "phones": {
+        "0-13-790395-2": "not_valid_number",
+        "0-1982-5079-7": "not_valid_number",
+        "0-465-02997-3": "not_valid_number",
+        "00005756": "not_valid_number",
+        "00146-007-0094-5": "not_valid_number",
+        "00146-025-02265": "not_valid_number",
+        "0017-8012": "not_possible_length",
+        "0022-4537.00153": "not_valid_number",
+        "00224499.2024.23": "not_valid_number",
+        "0028-792": "parse_error:0",
+        "007 \n \n 2020 \n 1": "parse_error:1",
+        "0099-9660": "parse_error:0",
+        "0190-8286": "not_valid_number",
+        "01900692.2018.14": "not_valid_number",
+        "0261-3077": "not_valid_number",
+        "0269888905000408": "not_possible_length",
+        "031 \n \n 2023 \n 1": "parse_error:1",
+        "036 \n \n 2003 \n 1": "parse_error:1",
+        "0362-4331": "not_valid_number",
+        "05-2023-0107": "not_valid_number",
+        "063 \n \n 2014 \n 1": "parse_error:1",
+        "0921-8890": "not_valid_number",
+        "0954009031000165": "not_possible_length",
+        "1-5688-1205-1": "not_valid_number",
+        "1-59593-447-2": "not_valid_number",
+        "1.00014-9": "not_valid_number",
+        "10  237802312412": "not_possible_length",
+        "10.13140": "not_valid_number",
+        "10.26782": "not_valid_number",
+        "101 \n \n 2005 \n 1": "parse_error:1",
+        "1013298507114": "not_valid_number",
+        "1039480085": "not_valid_number",
+        "1059-1028": "not_valid_number",
+        "10676-007-9138-2": "not_valid_number",
+        "10694-021-01157": "not_valid_number",
+        "1083694322": "not_valid_number",
+        "10920625": "not_valid_number",
+        "10994-011-5242": "not_valid_number",
+        "11019-020-09948": "not_valid_number",
+        "11041459": "not_valid_number",
+        "11062903": "not_valid_number",
+        "1110727808": "not_valid_number",
+        "11229402": "not_valid_number",
+        "113  103140": "not_valid_number",
+        "11573548": "not_valid_number",
+        "1180639.1180782": "not_possible_length",
+        "11891083": "not_valid_number",
+        "11930-024-00392": "not_valid_number",
+        "1202.2745": "not_valid_number",
+        "1233266753": "ok",
+        "12525-023-00680": "not_valid_number",
+        "12559-015-9372-6": "not_valid_number",
+        "12916-026-04981": "not_valid_number",
+        "1347765143": "ok",
+        "1356344717": "ok",
+        "1361732815": "ok",
+        "1361801097": "not_valid_number",
+        "1404.7828": "not_valid_number",
+        "1435-5655": "not_valid_number",
+        "1460-2113": "not_valid_number",
+        "14636783": "not_valid_number",
+        "1476-4687": "not_valid_number",
+        "1483817127": "not_valid_number",
+        "1524838022114377": "not_possible_length",
+        "1548-3592": "not_valid_number",
+        "1606.08813": "not_valid_number",
+        "16622160": "not_valid_number",
+        "1741-7015": "not_valid_number",
+        "1866-9956": "not_valid_number",
+        "1867-299": "not_valid_number",
+        "19361610.2024.23": "not_possible_length",
+        "1973-11-02": "not_valid_number",
+        "1984 1982": "not_valid_number",
+        "2.2.30247.50087": "not_valid_number",
+        "2.933500": "not_valid_number",
+        "2000000039": "not_valid_number",
+        "2007.08.013": "not_valid_number",
+        "2009-11-25": "not_valid_number",
+        "2009.2021702": "not_valid_number",
+        "2009.2039057": "not_valid_number",
+        "2011-03-16": "not_valid_number",
+        "2011-03-24": "not_valid_number",
+        "2011-04-14": "not_valid_number",
+        "2012.2205597": "not_valid_number",
+        "2012.6248110": "not_valid_number",
+        "2014.09.003": "not_valid_number",
+        "2014.2307227": "not_valid_number",
+        "2016.08.019": "not_valid_number",
+        "2017-05-05": "not_valid_number",
+        "2017-05-25": "not_valid_number",
+        "2017-12-19": "not_valid_number",
+        "2017.02.003": "not_valid_number",
+        "2019-12-22": "not_valid_number",
+        "20190474": "not_valid_number",
+        "2019668143": "not_valid_number",
+        "2020.02.00006": "not_valid_number",
+        "2020.103140": "ok",
+        "2024-08-16": "not_valid_number",
+        "2026-04-26": "not_valid_number",
+        "2053951723120679": "not_possible_length",
+        "21507740.2020.17": "not_possible_length",
+        "2158-2041": "not_valid_number",
+        "21582041.2018.15": "not_possible_length",
+        "2161-0002": "not_valid_number",
+        "222198675": "not_valid_number",
+        "231867665": "not_valid_number",
+        "2378-0231": "not_valid_number",
+        "2378023124125962": "not_possible_length",
+        "2398-6352": "not_valid_number",
+        "24.3.0413": "not_valid_number",
+        "2502.08640": "not_valid_number",
+        "25462637": "not_valid_number",
+        "260 \n \n 2016 \n 1": "parse_error:1",
+        "26185243": "not_valid_number",
+        "2638-6100": "not_valid_number",
+        "2639475.2639478": "not_possible_length",
+        "27257441": "not_valid_number",
+        "291.5504.599": "ok",
+        "295 \n \n 2015 \n 1": "parse_error:1",
+        "30467396": "not_valid_number",
+        "31296650": "not_valid_number",
+        "32228388": "not_valid_number",
+        "32236794": "not_valid_number",
+        "34265844": "not_valid_number",
+        "35140384": "not_valid_number",
+        "3531146.3533138": "not_possible_length",
+        "357 \n \n 2013 \n 1": "parse_error:1",
+        "359 \n \n 2006 \n 1": "parse_error:1",
+        "360018.360022": "not_valid_number",
+        "36211133": "not_valid_number",
+        "36565267": "not_valid_number",
+        "3715275.3732083": "not_possible_length",
+        "37741658": "not_valid_number",
+        "38454007": "not_valid_number",
+        "38632492": "not_valid_number",
+        "38875587": "not_valid_number",
+        "39254628": "not_valid_number",
+        "41.08889": "not_valid_number",
+        "41345316": "not_valid_number",
+        "41586-021-03819": "not_valid_number",
+        "41586-021-04357": "not_valid_number",
+        "41586-025-09771": "not_valid_number",
+        "41586-026-00697": "not_valid_number",
+        "41589-024-01580": "not_valid_number",
+        "41746-023-00988": "not_valid_number",
+        "41986680": "not_valid_number",
+        "42243840": "not_valid_number",
+        "42256-022-00465": "not_valid_number",
+        "432 \n \n 2007 \n 1": "parse_error:1",
+        "444 \n \n 2025 \n 1": "parse_error:1",
+        "546 \n \n 2022 \n 1": "parse_error:1",
+        "565 \n \n 2018 \n 1": "parse_error:1",
+        "579 \n \n 2011 \n 1": "parse_error:1",
+        "657 \n \n 2010 \n 1": "parse_error:1",
+        "666 \n \n 2002 \n 1": "parse_error:1",
+        "666 \n \n 2026 \n 1": "parse_error:1",
+        "722 \n \n 2019 \n 1": "parse_error:1",
+        "726 \n \n 2012 \n 1": "parse_error:1",
+        "749 \n \n 2004 \n 1": "parse_error:1",
+        "76.14889": "not_valid_number",
+        "814 \n \n 2009 \n 1": "parse_error:1",
+        "872734.806939": "not_valid_number",
+        "902 \n \n 2008 \n 1": "parse_error:1",
+        "903 \n \n 2021 \n 1": "parse_error:1",
+        "93.311653": "not_valid_number",
+        "960 \n \n 2024 \n 1": "parse_error:1",
+        "975 \n \n 2017 \n 1": "parse_error:1",
+        "978-0-0290-8060": "not_valid_number",
+        "978-0-0601-1082": "not_valid_number",
+        "978-0-0613-3646": "not_valid_number",
+        "978-0-0700-8770": "not_valid_number",
+        "978-0-12-824073": "not_valid_number",
+        "978-0-1346-1099": "not_valid_number",
+        "978-0-1951-0270": "not_valid_number",
+        "978-0-2015-1752": "not_valid_number",
+        "978-0-2620-8153": "not_valid_number",
+        "978-0-309-52501": "not_valid_number",
+        "978-0-3938-6833": "not_valid_number",
+        "978-0-4650-4521": "not_valid_number",
+        "978-0-4650-6570": "not_valid_number",
+        "978-0-5218-7628": "not_valid_number",
+        "978-0-5255-5861": "not_valid_number",
+        "978-0-6700-3384": "not_valid_number",
+        "978-0-6723-0412": "not_valid_number",
+        "978-0-6745-7616": "not_valid_number",
+        "978-0-7139-9037": "not_valid_number",
+        "978-0-7382-0030": "not_valid_number",
+        "978-0-7910-0464": "not_valid_number",
+        "978-0-8021-1839": "not_valid_number",
+        "978-0-8053-4780": "not_valid_number",
+        "978-0-8160-2628": "not_valid_number",
+        "978-1-0092-5819": "not_valid_number",
+        "978-1-1071-9539": "not_valid_number",
+        "978-1-4299-6935": "not_valid_number",
+        "978-1-4356-4787": "not_valid_number",
+        "978-1-4614-6940": "not_valid_number",
+        "978-1-4673-1228": "not_valid_number",
+        "978-1-5586-0467": "not_valid_number",
+        "978-1-57586-053": "not_valid_number",
+        "978-1-7864-3904": "not_valid_number",
+        "978-3-031-22552": "not_valid_number",
+        "978-3-540-68677": "not_valid_number",
+        "978-3-5402-3733": "not_valid_number",
+        "978-3-5402-9621": "not_valid_number",
+        "978-3319584867": "not_valid_number",
+        "978-8-8947-8760": "not_valid_number",
+        "978-9-2310-0450": "not_valid_number",
+        "9780511975837": "not_valid_number",
+        "9781009258227": "not_valid_number",
+        "979-8-4007-1482": "not_valid_number"
+      },
+      "website": "ok"
+    },
+    "_verification_passed": true
   },
   {
     "company_name": "What Is Artificial Intelligence? Definition, Uses, and Types",
@@ -304,30 +526,30 @@
       "people_dropped:1"
     ],
     "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
       "domain_source": "existing_website",
       "whois": {
         "registrar": "GoDaddy.com, LLC",
         "creation_date": "2012-01-12 01:57:48+00:00",
         "org": null,
         "country": null
+      }
+    },
+    "_verified_emails": [
+      "press@coursera.org",
+      "privacy@coursera.org"
+    ],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "emails": {
+        "ac4f0d12bc9e9944381d661506c49745@o75955.ingest.us.sentry.io": "no_mx_records",
+        "b98a248650b4422aa62b11040f69e742@o75955.ingest.sentry.io": "no_mx_records",
+        "press@coursera.org": "ok",
+        "privacy@coursera.org": "ok"
       },
-      "discovered_emails": [
-        "gbarrella@coursera.org",
-        "jdebusk@coursera.org",
-        "pmclinden@coursera.org",
-        "mclaessens@coursera.org",
-        "dmukherji@coursera.org",
-        "macharya@coursera.org",
-        "saman@coursera.org",
-        "abuente@coursera.org",
-        "cpittman@coursera.org",
-        "mnajem@coursera.org"
-      ]
-    }
+      "website": "ok"
+    },
+    "_verification_passed": true
   },
   {
     "company_name": "Together AI",
@@ -380,30 +602,21 @@
       "people_dropped:9"
     ],
     "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
       "domain_source": "existing_website",
       "whois": {
         "registrar": "NAMECHEAP INC",
         "creation_date": "2017-12-16 01:52:01+00:00",
         "org": null,
         "country": null
-      },
-      "discovered_emails": [
-        "max@together.ai",
-        "susan@together.ai",
-        "arielle@together.ai",
-        "skapadia@together.ai",
-        "jue@together.ai",
-        "ryan@together.ai",
-        "chris@together.ai",
-        "casper@together.ai",
-        "justin@together.ai",
-        "james@together.ai"
-      ]
-    }
+      }
+    },
+    "_verified_emails": [],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "website": "ok"
+    },
+    "_verification_passed": true
   },
   {
     "company_name": "What is contact center AI?",
@@ -453,30 +666,44 @@
       "people_dropped:3"
     ],
     "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
       "domain_source": "existing_website",
       "whois": {
         "registrar": "CSC Corporate Domains, Inc.",
         "creation_date": "1986-03-19 05:00:00+00:00",
         "org": null,
         "country": null
+      }
+    },
+    "_verified_emails": [
+      "David.D.Cox@ibm.com",
+      "Joe.Petrone@ibm.com",
+      "Veena.Mosur@ibm.com",
+      "aparnap@us.ibm.com",
+      "gillian.s.orrell@uk.ibm.com",
+      "jonwrona@gmail.com",
+      "martin@fleming41.com",
+      "neil_t@mit.edu",
+      "njborge@mit.edu",
+      "subhro.das@ibm.com"
+    ],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "emails": {
+        "David.D.Cox@ibm.com": "ok",
+        "Joe.Petrone@ibm.com": "ok",
+        "Veena.Mosur@ibm.com": "ok",
+        "aparnap@us.ibm.com": "ok",
+        "gillian.s.orrell@uk.ibm.com": "ok",
+        "jonwrona@gmail.com": "ok",
+        "martin@fleming41.com": "ok",
+        "neil_t@mit.edu": "ok",
+        "njborge@mit.edu": "ok",
+        "subhro.das@ibm.com": "ok"
       },
-      "discovered_emails": [
-        "valentin.ruscan@ibm.com",
-        "praveen.thota@ibm.com",
-        "jonathan.shapiro@ibm.com",
-        "adrika.shukla@ibm.com",
-        "honorine.rebeiro@ibm.com",
-        "adrienn.marosi@ibm.com",
-        "jimmy.yang@ibm.com",
-        "cristian.pita@ibm.com",
-        "andrew.sica@ibm.com",
-        "latisha.robinson@ibm.com"
-      ]
-    }
+      "website": "ok"
+    },
+    "_verification_passed": true
   },
   {
     "company_name": "What is an AI Contact Center?",
@@ -522,30 +749,43 @@
       "email_junk:logo-zoom@2x.png"
     ],
     "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
       "domain_source": "existing_website",
       "whois": {
         "registrar": "MarkMonitor, Inc.",
         "creation_date": "1999-04-22 04:00:00+00:00",
         "org": "Zoom Communications, Inc.",
         "country": "US"
+      }
+    },
+    "_verified_emails": [
+      "address@example.com",
+      "email@yourcompany.com",
+      "replytoaddress@example.com",
+      "someone@example.com"
+    ],
+    "_verified_phones": [
+      "+1.888.799.9666",
+      "0008000503335"
+    ],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "emails": {
+        "address@example.com": "ok",
+        "email@yourcompany.com": "ok",
+        "replytoaddress@example.com": "ok",
+        "someone@example.com": "ok"
       },
-      "discovered_emails": [
-        "blake.allen@zoom.com",
-        "hawley@zoom.com",
-        "rebecca.bernhard@zoom.com",
-        "shay.miller@zoom.com",
-        "parker.garcia@zoom.com",
-        "sage.jones@zoom.com",
-        "tatum.brown@zoom.com",
-        "zion.brown@zoom.com",
-        "lane.anderson@zoom.com",
-        "ellis.nguyen@zoom.com"
-      ]
-    }
+      "phones": {
+        "+1.888.799.9666": "ok",
+        "0008000503335": "ok",
+        "1-250 \n 251-500": "parse_error:1",
+        "2-10 \n 11-50 \n 5": "parse_error:1",
+        "5000 \n 5001-1000": "parse_error:1",
+        "501-1000 \n 1001": "parse_error:1"
+      },
+      "website": "ok"
+    },
+    "_verification_passed": true
   },
   {
     "company_name": "What is Contact Center Artificial Intelligence?",
@@ -591,30 +831,32 @@
       "people_dropped:4"
     ],
     "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
       "domain_source": "existing_website",
       "whois": {
         "registrar": "NOM-IQ Ltd dba Com Laude",
         "creation_date": "1997-07-30 04:00:00+00:00",
         "org": "Genesys Cloud Services, Inc.",
         "country": "US"
+      }
+    },
+    "_verified_emails": [],
+    "_verified_phones": [
+      "+1 650 466-1100",
+      "+1 650 466-1260"
+    ],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "phones": {
+        "+1 650 466-1100": "ok",
+        "+1 650 466-1260": "ok",
+        "0 101-300 301-50": "not_valid_number",
+        "0 501-1000": "not_valid_number",
+        "1-20 21-50 51-10": "not_valid_number",
+        "436-3797": "not_valid_number"
       },
-      "discovered_emails": [
-        "felix.axtmann@genesys.com",
-        "jason.cayanong@genesys.com",
-        "aristides.zabala@genesys.com",
-        "michael.long@genesys.com",
-        "mohamed.eisa@genesys.com",
-        "omar.guerra@genesys.com",
-        "karen.chow@genesys.com",
-        "tim.wilson@genesys.com",
-        "anna.ditchella@genesys.com",
-        "hamza.nassar@genesys.com"
-      ]
-    }
+      "website": "ok"
+    },
+    "_verification_passed": true
   },
   {
     "company_name": "AI Contact Center Software Features & Solutions",
@@ -649,30 +891,21 @@
       "people_dropped:7"
     ],
     "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
       "domain_source": "existing_website",
       "whois": {
         "registrar": "GoDaddy.com, LLC",
-        "creation_date": "[datetime.datetime(1999, 2, 16, 5, 0, tzinfo=tzoffset('UTC', 0)), datetime.datetime(1999, 2, 16, 0, 0, tzinfo=tzoffset('UTC', 0))]",
-        "org": "Domains By Proxy, LLC",
-        "country": "US"
-      },
-      "discovered_emails": [
-        "denise.kopinski@dialpad.com",
-        "jesu.joseph@dialpad.com",
-        "brett.reed@dialpad.com",
-        "curtis.owens@dialpad.com",
-        "tyler.wright@dialpad.com",
-        "claire.vieth@dialpad.com",
-        "joseph.casey@dialpad.com",
-        "mike.franze@dialpad.com",
-        "blake.cross@dialpad.com",
-        "robbie.mcdonald@dialpad.com"
-      ]
-    }
+        "creation_date": "1999-02-16 05:00:00+00:00",
+        "org": null,
+        "country": null
+      }
+    },
+    "_verified_emails": [],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "website": "ok"
+    },
+    "_verification_passed": true
   },
   {
     "company_name": "Free AI Email Writer",
@@ -700,30 +933,24 @@
       "people_dropped:2"
     ],
     "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
       "domain_source": "existing_website",
       "whois": {
         "registrar": "Squarespace Domains II LLC",
         "creation_date": "2017-12-21 02:05:11+00:00",
         "org": "Learneo, Inc.",
         "country": "US"
+      }
+    },
+    "_verified_emails": [],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "emails": {
+        "5743ef12f4887fc460c7968ebb2de54d@sentry-webapp.quillbot.com": "no_mx_records"
       },
-      "discovered_emails": [
-        "aparna.iyer@quillbot.com",
-        "saurabh.goel@quillbot.com",
-        "guilherme.figueiredo@quillbot.com",
-        "yaser.hameed@quillbot.com",
-        "cameron.leel@quillbot.com",
-        "abdul.nafeen@quillbot.com",
-        "rodrigo.fontes@quillbot.com",
-        "jack.lawson@quillbot.com",
-        "miranda.godinez@quillbot.com",
-        "asif.jamil@quillbot.com"
-      ]
-    }
+      "website": "ok"
+    },
+    "_verification_passed": true
   },
   {
     "company_name": "Mails.ai — Email infrastructure for AI agents",
@@ -765,24 +992,47 @@
       "email_junk:noreply@vercel.com"
     ],
     "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
       "domain_source": "existing_website",
       "whois": {
         "registrar": "NAMECHEAP INC",
         "creation_date": "2022-08-02 17:00:49+00:00",
         "org": null,
         "country": null
+      }
+    },
+    "_verified_emails": [
+      "billing@aws.com",
+      "jordan@stripe.com",
+      "ops@brex.com",
+      "sarah@yourcompany.com",
+      "security@mails.ai",
+      "support@mails.ai",
+      "user@example.com",
+      "user@example.com",
+      "user@stripe.com"
+    ],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "emails": {
+        "billing@aws.com": "ok",
+        "jordan@stripe.com": "ok",
+        "n@sarah.on": "domain_does_not_exist",
+        "ops@brex.com": "ok",
+        "sarah@yourcompany.com": "ok",
+        "security@mails.ai": "ok",
+        "support@mails.ai": "ok",
+        "user@example.com": "ok",
+        "user@acme.com": "no_mx_records",
+        "user@stripe.com": "ok"
       },
-      "discovered_emails": [
-        "richard@mails.ai",
-        "janey@mails.ai",
-        "hi@mails.ai",
-        "support@mails.ai"
-      ]
-    }
+      "phones": {
+        "00 01 02 03 04 0": "not_valid_number",
+        "2026-05-14": "not_valid_number"
+      },
+      "website": "ok"
+    },
+    "_verification_passed": true
   },
   {
     "company_name": "WriteMail.ai",
@@ -818,23 +1068,29 @@
       "email_junk:example@domain.com"
     ],
     "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
       "domain_source": "existing_website",
       "whois": {
-        "registrar": "NAMECHEAP INC",
+        "registrar": "NameCheap, Inc.",
         "creation_date": "2023-01-30 10:07:48+00:00",
         "org": null,
         "country": null
+      }
+    },
+    "_verified_emails": [
+      "info@writemail.ai"
+    ],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "emails": {
+        "info@writemail.ai": "ok"
       },
-      "discovered_emails": [
-        "info@writemail.ai",
-        "george@writemail.ai",
-        "denise@writemail.ai"
-      ]
-    }
+      "phones": {
+        "23.06.2026": "not_valid_number"
+      },
+      "website": "ok"
+    },
+    "_verification_passed": true
   },
   {
     "company_name": "What Are AI Phones?",
@@ -916,30 +1172,29 @@
       "people_dropped:28"
     ],
     "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
       "domain_source": "existing_website",
       "whois": {
         "registrar": "Whois Corp.",
         "creation_date": "1994-11-29 05:00:00+00:00",
         "org": "Samsung Electronics CO., Ltd",
         "country": "KR"
+      }
+    },
+    "_verified_emails": [],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "phones": {
+        "0330 726 1022": "not_valid_number",
+        "09.06.2026": "not_valid_number",
+        "16.05.2026": "not_valid_number",
+        "1995-2026": "not_valid_number",
+        "27.04.2026": "not_valid_number",
+        "3650-3950": "not_valid_number"
       },
-      "discovered_emails": [
-        "jean.p@samsung.com",
-        "richard.kim@samsung.com",
-        "joon.lee@samsung.com",
-        "paul.gaskin@samsung.com",
-        "jerrelin.c@samsung.com",
-        "ashfaque.q@samsung.com",
-        "n.bourdais@samsung.com",
-        "keunchul.hwang@samsung.com",
-        "arun.r@samsung.com",
-        "youngouk.cho@samsung.com"
-      ]
-    }
+      "website": "ok"
+    },
+    "_verification_passed": true
   },
   {
     "company_name": "Meet the AI-first phones powered by small models",
@@ -991,30 +1246,46 @@
       "people_dropped:9"
     ],
     "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
       "domain_source": "existing_website",
       "whois": {
         "registrar": "CSC Corporate Domains, Inc.",
         "creation_date": "1986-03-19 05:00:00+00:00",
         "org": null,
         "country": null
+      }
+    },
+    "_verified_emails": [
+      "Christian.Bieck@ibm.com",
+      "Maryam.Ashoori@ibm.com",
+      "anthony2@us.ibm.com",
+      "arnas.siaudvytis@ibm.com",
+      "ayas@il.ibm.com",
+      "cindy.w.anderson@ibm.com",
+      "croden@us.ibm.com",
+      "mahmoud@us.ibm.com",
+      "timhumph@us.ibm.com"
+    ],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "emails": {
+        "Christian.Bieck@ibm.com": "ok",
+        "Maryam.Ashoori@ibm.com": "ok",
+        "anthony2@us.ibm.com": "ok",
+        "arnas.siaudvytis@ibm.com": "ok",
+        "ayas@il.ibm.com": "ok",
+        "cindy.w.anderson@ibm.com": "ok",
+        "croden@us.ibm.com": "ok",
+        "mahmoud@us.ibm.com": "ok",
+        "timhumph@us.ibm.com": "ok"
       },
-      "discovered_emails": [
-        "valentin.ruscan@ibm.com",
-        "praveen.thota@ibm.com",
-        "jonathan.shapiro@ibm.com",
-        "adrika.shukla@ibm.com",
-        "honorine.rebeiro@ibm.com",
-        "adrienn.marosi@ibm.com",
-        "jimmy.yang@ibm.com",
-        "cristian.pita@ibm.com",
-        "andrew.sica@ibm.com",
-        "latisha.robinson@ibm.com"
-      ]
-    }
+      "phones": {
+        "0.000005": "not_valid_number",
+        "2024-05-31": "not_valid_number"
+      },
+      "website": "ok"
+    },
+    "_verification_passed": true
   },
   {
     "company_name": "Phonely AI",
@@ -1037,25 +1308,26 @@
       "people_dropped:4"
     ],
     "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
       "domain_source": "existing_website",
       "whois": {
         "registrar": "NAMECHEAP INC",
         "creation_date": "2023-12-09 21:11:10+00:00",
         "org": null,
         "country": null
+      }
+    },
+    "_verified_emails": [
+      "email@phonely.ai"
+    ],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "emails": {
+        "email@phonely.ai": "ok"
       },
-      "discovered_emails": [
-        "grant@phonely.ai",
-        "will@phonely.ai",
-        "support@phonely.ai",
-        "hello@phonely.ai",
-        "careers@phonely.ai"
-      ]
-    }
+      "website": "ok"
+    },
+    "_verification_passed": true
   },
   {
     "company_name": "AI Tools and Services",
@@ -1083,10 +1355,6 @@
       "people_dropped:3"
     ],
     "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
       "domain_source": "existing_website",
       "whois": {
         "registrar": "MarkMonitor, Inc.",
@@ -1094,7 +1362,17 @@
         "org": "Amazon Technologies, Inc.",
         "country": "US"
       }
-    }
+    },
+    "_verified_emails": [],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "phones": {
+        "1996-2026": "not_valid_number"
+      },
+      "website": "ok"
+    },
+    "_verification_passed": true
   },
   {
     "company_name": "What is AI as a Service (AIaaS)?",
@@ -1129,30 +1407,28 @@
       "people_dropped:8"
     ],
     "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
       "domain_source": "existing_website",
       "whois": {
         "registrar": "CSC Corporate Domains, Inc.",
         "creation_date": "1986-03-19 05:00:00+00:00",
         "org": null,
         "country": null
+      }
+    },
+    "_verified_emails": [
+      "albaraj@ph.ibm.com",
+      "florin.gherghina@ro.ibm.com"
+    ],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "emails": {
+        "albaraj@ph.ibm.com": "ok",
+        "florin.gherghina@ro.ibm.com": "ok"
       },
-      "discovered_emails": [
-        "valentin.ruscan@ibm.com",
-        "praveen.thota@ibm.com",
-        "jonathan.shapiro@ibm.com",
-        "adrika.shukla@ibm.com",
-        "honorine.rebeiro@ibm.com",
-        "adrienn.marosi@ibm.com",
-        "jimmy.yang@ibm.com",
-        "cristian.pita@ibm.com",
-        "andrew.sica@ibm.com",
-        "latisha.robinson@ibm.com"
-      ]
-    }
+      "website": "ok"
+    },
+    "_verification_passed": true
   },
   {
     "company_name": "AI Services • Artificial Intelligence Services Company",
@@ -1231,30 +1507,58 @@
       "people_dropped:28"
     ],
     "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
       "domain_source": "existing_website",
       "whois": {
-        "registrar": "NETIM SAS",
-        "creation_date": "2005-10-20 02:54:57+00:00",
-        "org": null,
-        "country": null
+        "registrar": "NETIM",
+        "creation_date": "[datetime.datetime(2005, 10, 20, 2, 54, 57, tzinfo=tzoffset('UTC', 0)), datetime.datetime(2005, 10, 20, 0, 0, tzinfo=tzoffset('UTC', 0))]",
+        "org": "Avenga Germany GmbH",
+        "country": "DE"
+      }
+    },
+    "_verified_emails": [
+      "hello@avenga.com"
+    ],
+    "_verified_phones": [
+      "+381 11 22 894 53",
+      "+381 18 4577 319",
+      "+381 21 6623075",
+      "+381 34 337 023",
+      "+389 2 3097 400",
+      "+421 917 333 997",
+      "2022031528"
+    ],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "emails": {
+        "hello@avenga.com": "ok"
       },
-      "discovered_emails": [
-        "romina.kuznietz@avenga.com",
-        "nicolas.ledesma@avenga.com",
-        "benjamin.pierola@avenga.com",
-        "andriy.dzyben@avenga.com",
-        "piotr.balys@avenga.com",
-        "justyna.wroniak@avenga.com",
-        "gregor.hermann@avenga.com",
-        "javier.zoppetti@avenga.com",
-        "nicolas.meudt@avenga.com",
-        "boris.willms@avenga.com"
-      ]
-    }
+      "phones": {
+        "+381 11 22 894 53": "ok",
+        "+381 18 4577 319": "ok",
+        "+381 21 6623075": "ok",
+        "+381 34 337 023": "ok",
+        "+389 2 3097 400": "ok",
+        "+421 917 333 997": "ok",
+        "11 \n34000": "parse_error:1",
+        "11-13 \n10245": "parse_error:1",
+        "16 \n21000": "parse_error:1",
+        "16 \n53-673": "parse_error:1",
+        "20 \n 40-007": "parse_error:1",
+        "2022031528": "ok",
+        "22 \n78 000": "parse_error:1",
+        "221 846 300": "not_valid_number",
+        "26 \n01-208": "parse_error:1",
+        "27408787": "not_valid_number",
+        "28223756": "not_valid_number",
+        "29 \n11151": "parse_error:1",
+        "35 \n31-545": "parse_error:1",
+        "35942487": "not_valid_number",
+        "48 22 290 58 05": "not_valid_number",
+        "713 424 658": "not_valid_number"
+      },
+      "website": "ok"
+    },
+    "_verification_passed": true
   },
   {
     "company_name": "Artificial Intelligence (AI) Services & Solutions",
@@ -1319,10 +1623,6 @@
       "people_dropped:12"
     ],
     "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
       "domain_source": "existing_website",
       "whois": {
         "registrar": "CSC Corporate Domains, Inc.",
@@ -1330,7 +1630,18 @@
         "org": null,
         "country": null
       }
-    }
+    },
+    "_verified_emails": [],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "phones": {
+        "672-0266": "not_valid_number",
+        "889-9009": "not_valid_number"
+      },
+      "website": "ok"
+    },
+    "_verification_passed": true
   },
   {
     "company_name": "Forbes 2026 AI 50 List",
@@ -1374,30 +1685,56 @@
       "people_dropped:2"
     ],
     "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
       "domain_source": "existing_website",
       "whois": {
         "registrar": "MarkMonitor, Inc.",
         "creation_date": "[datetime.datetime(1993, 6, 17, 4, 0, tzinfo=tzoffset('UTC', 0)), datetime.datetime(1993, 6, 17, 7, 0, tzinfo=tzoffset('UTC', 0))]",
         "org": "Forbes Media LLC",
         "country": "US"
+      }
+    },
+    "_verified_emails": [
+      "FRBcustserv@cdsfulfillment.com",
+      "corrections@forbes.com",
+      "dlopenzina@forbes.com",
+      "ebrier@forbes.com",
+      "feedback@forbes.com",
+      "iain.martin@forbes.com",
+      "permissions@forbes.com",
+      "pressinquiries@forbes.com",
+      "readers@forbes.com",
+      "reprints@forbes.com",
+      "rshrivastava@forbes.com",
+      "schierchio@forbes.com",
+      "security@forbes.com",
+      "spreadsheets@forbes.com",
+      "iain.martin@forbes.com"
+    ],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "emails": {
+        "FRBcustserv@cdsfulfillment.com": "ok",
+        "corrections@forbes.com": "ok",
+        "dlopenzina@forbes.com": "ok",
+        "ebrier@forbes.com": "ok",
+        "feedback@forbes.com": "ok",
+        "iain.martin@forbes.com": "ok",
+        "permissions@forbes.com": "ok",
+        "pressinquiries@forbes.com": "ok",
+        "readers@forbes.com": "ok",
+        "reprints@forbes.com": "ok",
+        "rshrivastava@forbes.com": "ok",
+        "schierchio@forbes.com": "ok",
+        "security@forbes.com": "ok",
+        "spreadsheets@forbes.com": "ok"
       },
-      "discovered_emails": [
-        "jokuszka@forbes.com",
-        "kbornholtz@forbes.com",
-        "lvillaraut@forbes.com",
-        "jbruno@forbes.com",
-        "sgangishetti@forbes.com",
-        "gvasquez@forbes.com",
-        "tkalamajka@forbes.com",
-        "mbrown@forbes.com",
-        "djohnson@forbes.com",
-        "lboyers@forbes.com"
-      ]
-    }
+      "phones": {
+        "2026 2026": "not_valid_number"
+      },
+      "website": "ok"
+    },
+    "_verification_passed": true
   },
   {
     "company_name": "AI Agents for Business Users at Enterprise Scale",
@@ -1447,34 +1784,30 @@
       "people_dropped:15"
     ],
     "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
       "domain_source": "existing_website",
       "whois": {
         "registrar": "Squarespace Domains II LLC",
         "creation_date": "2004-02-17 22:06:36+00:00",
         "org": "Aible",
         "country": "US"
+      }
+    },
+    "_verified_emails": [],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "phones": {
+        "1994-2018": "not_valid_number",
+        "864-1715": "not_valid_number",
+        "869-9658": "not_valid_number"
       },
-      "discovered_emails": [
-        "brad@aible.com",
-        "greg@aible.com",
-        "rod@aible.com",
-        "afsana@aible.com",
-        "jonathan@aible.com",
-        "erin@aible.com",
-        "dylan@aible.com",
-        "rutika@aible.com",
-        "alex@aible.com",
-        "joe@aible.com"
-      ]
-    }
+      "website": "ok"
+    },
+    "_verification_passed": true
   },
   {
     "company_name": "ai.io",
-    "website": null,
+    "website": "https://aiio.org",
     "linkedin_company": "https://www.linkedin.com/company/ai-io",
     "industry": "ai",
     "location": null,
@@ -1497,27 +1830,33 @@
       "sparse_no_contact_channel"
     ],
     "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
       "domains_tried": [
         "aiio.com",
-        "aiio.in"
+        "aiio.in",
+        "aiio.co.in",
+        "aiio.io",
+        "aiio.org"
       ],
       "domain_source": "guessed_and_verified",
-      "discovered_website": "https://aiio.in",
+      "discovered_website": "https://aiio.org",
       "whois": {
-        "registrar": "DYNADOT LLC",
-        "creation_date": "[datetime.datetime(2023, 10, 25, 11, 19, 8, 751000, tzinfo=tzoffset('UTC', 0)), datetime.datetime(2023, 10, 25, 11, 19, 8, tzinfo=tzoffset('UTC', 0))]",
+        "registrar": "GoDaddy.com, LLC",
+        "creation_date": "2017-09-13 14:30:13+00:00",
         "org": null,
-        "country": "IN"
+        "country": null
       }
-    }
+    },
+    "_verified_emails": [],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "website": "ok"
+    },
+    "_verification_passed": true
   },
   {
     "company_name": "AI LA",
-    "website": null,
+    "website": "https://aila.in",
     "linkedin_company": "https://www.linkedin.com/company/ai-la",
     "industry": "ai",
     "location": null,
@@ -1540,67 +1879,30 @@
       "sparse_no_contact_channel"
     ],
     "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
       "domains_tried": [
         "aila.com",
-        "aila.in",
-        "aila.co.in",
-        "aila.io"
+        "aila.in"
       ],
       "domain_source": "guessed_and_verified",
-      "discovered_website": "https://aila.io",
+      "discovered_website": "https://aila.in",
       "whois": {
-        "registrar": "DYNADOT LLC",
-        "creation_date": "2015-10-02 15:55:05+00:00",
+        "registrar": "Wild West Domains, LLC",
+        "creation_date": "2020-06-27 16:36:23.447000+00:00",
         "org": null,
-        "country": null
+        "country": "IN"
       }
-    }
-  },
-  {
-    "company_name": "GenAI Works",
-    "website": null,
-    "linkedin_company": "https://www.linkedin.com/company/genai-works",
-    "industry": "ai",
-    "location": null,
-    "contact_page": null,
-    "about_page": null,
-    "team_page": null,
-    "emails": [],
-    "phones": [],
-    "social_links": {},
-    "people": [
-      {
-        "name": "Steve Nouri – The largest AI Community 14 Million Members",
-        "designation": null,
-        "linkedin": "https://ch.linkedin.com/in/stevenouri"
-      }
-    ],
-    "source": "LinkedIn",
-    "_source_file": "data-1.json",
-    "_flags": [
-      "sparse_no_contact_channel"
-    ],
-    "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
-      "domains_tried": [
-        "genaiworks.com",
-        "genaiworks.in",
-        "genaiworks.co.in",
-        "genaiworks.io",
-        "genaiworks.org"
-      ]
-    }
+    },
+    "_verified_emails": [],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "website": "ok"
+    },
+    "_verification_passed": true
   },
   {
     "company_name": "AI for Good",
-    "website": null,
+    "website": "https://aiforgood.in",
     "linkedin_company": "https://www.linkedin.com/company/ai-for-good-global-summit-un/",
     "industry": "ai",
     "location": null,
@@ -1623,22 +1925,30 @@
       "sparse_no_contact_channel"
     ],
     "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
       "domains_tried": [
         "aiforgood.com",
-        "aiforgood.in",
-        "aiforgood.co.in",
-        "aiforgood.io",
-        "aiforgood.org"
-      ]
-    }
+        "aiforgood.in"
+      ],
+      "domain_source": "guessed_and_verified",
+      "discovered_website": "https://aiforgood.in",
+      "whois": {
+        "registrar": "GoDaddy",
+        "creation_date": "2023-10-16 11:00:34.488000+00:00",
+        "org": null,
+        "country": "IN"
+      }
+    },
+    "_verified_emails": [],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "website": "ok"
+    },
+    "_verification_passed": true
   },
   {
     "company_name": "Ai",
-    "website": null,
+    "website": "https://ai.com",
     "linkedin_company": "https://www.linkedin.com/company/ai",
     "industry": "ai",
     "location": null,
@@ -1661,10 +1971,6 @@
       "sparse_no_contact_channel"
     ],
     "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
       "domains_tried": [
         "ai.com"
       ],
@@ -1672,27 +1978,22 @@
       "discovered_website": "https://ai.com",
       "whois": {
         "registrar": "GoDaddy.com, LLC",
-        "creation_date": "[datetime.datetime(1993, 5, 4, 4, 0, tzinfo=tzoffset('UTC', 0)), datetime.datetime(1993, 5, 3, 23, 0, tzinfo=tzoffset('UTC', 0))]",
-        "org": "Domains By Proxy, LLC",
-        "country": "US"
-      },
-      "discovered_emails": [
-        "contact@ai.com",
-        "allama@ai.com",
-        "tony@ai.com",
-        "enquiry@ai.com",
-        "job@ai.com",
-        "sample@ai.com",
-        "infobatch@ai.com",
-        "support@ai.com",
-        "webmaster@ai.com",
-        "hyphen@ai.com"
-      ]
-    }
+        "creation_date": "1993-05-04 04:00:00+00:00",
+        "org": null,
+        "country": null
+      }
+    },
+    "_verified_emails": [],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "website": "ok"
+    },
+    "_verification_passed": true
   },
   {
     "company_name": "Standard AI",
-    "website": null,
+    "website": "https://standardai.com",
     "linkedin_company": "https://www.linkedin.com/company/standard-ai",
     "industry": "ai",
     "location": null,
@@ -1715,10 +2016,6 @@
       "sparse_no_contact_channel"
     ],
     "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
       "domains_tried": [
         "standardai.com"
       ],
@@ -1726,15 +2023,22 @@
       "discovered_website": "https://standardai.com",
       "whois": {
         "registrar": "GoDaddy.com, LLC",
-        "creation_date": "[datetime.datetime(2013, 10, 8, 22, 39, 21, tzinfo=tzoffset('UTC', 0)), datetime.datetime(2013, 10, 8, 17, 39, 21, tzinfo=tzoffset('UTC', 0))]",
-        "org": "Domains By Proxy, LLC",
-        "country": "US"
+        "creation_date": "2013-10-08 22:39:21+00:00",
+        "org": null,
+        "country": null
       }
-    }
+    },
+    "_verified_emails": [],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "website": "ok"
+    },
+    "_verification_passed": true
   },
   {
     "company_name": "Global AI",
-    "website": null,
+    "website": "https://globalai.com",
     "linkedin_company": "https://www.linkedin.com/company/globalai",
     "industry": "ai",
     "location": null,
@@ -1757,10 +2061,6 @@
       "sparse_no_contact_channel"
     ],
     "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
       "domains_tried": [
         "globalai.com"
       ],
@@ -1768,55 +2068,18 @@
       "discovered_website": "https://globalai.com",
       "whois": {
         "registrar": "GoDaddy.com, LLC",
-        "creation_date": "[datetime.datetime(2000, 3, 13, 19, 20, 50, tzinfo=tzoffset('UTC', 0)), datetime.datetime(2000, 3, 13, 14, 20, 50, tzinfo=tzoffset('UTC', 0))]",
-        "org": "Domains By Proxy, LLC",
-        "country": "US"
-      },
-      "discovered_emails": [
-        "balazs.toth@globalai.com",
-        "marzena@globalai.com",
-        "info@globalai.com",
-        "legal@globalai.com"
-      ]
-    }
-  },
-  {
-    "company_name": "The AI Journal",
-    "website": null,
-    "linkedin_company": "https://www.linkedin.com/company/the-ai-journal",
-    "industry": "ai",
-    "location": null,
-    "contact_page": null,
-    "about_page": null,
-    "team_page": null,
-    "emails": [],
-    "phones": [],
-    "social_links": {},
-    "people": [
-      {
-        "name": "Tom Allen",
-        "designation": null,
-        "linkedin": "https://uk.linkedin.com/in/tom-allen-515058b7"
+        "creation_date": "2000-03-13 19:20:50+00:00",
+        "org": null,
+        "country": null
       }
-    ],
-    "source": "LinkedIn",
-    "_source_file": "data-1.json",
-    "_flags": [
-      "sparse_no_contact_channel"
-    ],
-    "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
-      "domains_tried": [
-        "theaijournal.com",
-        "theaijournal.in",
-        "theaijournal.co.in",
-        "theaijournal.io",
-        "theaijournal.org"
-      ]
-    }
+    },
+    "_verified_emails": [],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "website": "ok"
+    },
+    "_verification_passed": true
   },
   {
     "company_name": "The Dominance of the AI will Not Come to an End",
@@ -1930,25 +2193,166 @@
       "people_dropped:56"
     ],
     "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
       "domain_source": "existing_website",
       "whois": {
         "registrar": "GoDaddy.com, LLC",
         "creation_date": "2015-07-15 11:50:40+00:00",
-        "org": "Domains By Proxy, LLC",
-        "country": "US"
+        "org": null,
+        "country": null
+      }
+    },
+    "_verified_emails": [
+      "17dilip.sharma@gmail.com",
+      "Jemimah@goodfirms.com",
+      "MichelleW3908@gmail.com",
+      "Sawera.usman@peopleperfect.com",
+      "abdullahsulehri@gmail.com",
+      "aditya69choudhary69@gmail.com",
+      "ajaysharma32@gmail.com",
+      "akshitaparashar2000@gmail.com",
+      "alikhan@binbakar.com.pk",
+      "altamash.ishtiaq@heritageluxurysuites.com",
+      "aminaameer177@gmail.com",
+      "beenagour9@gmail.com",
+      "business.zfour@gmail.com",
+      "chauhan.sagar.16032002@gmail.com",
+      "dalton.lemburg@topshelfinc.us",
+      "enquiry@bharatpayroll.com",
+      "esha.arora2403@gmail.com",
+      "farheenahmed1996@gmail.com",
+      "feedback@paycomonline.com",
+      "hello@izeek.org",
+      "hello@namely.com",
+      "himanshu31091@gmail.com",
+      "im.somnath26@gmail.com",
+      "info@bitrix24.com",
+      "info@geekinn.com",
+      "info@goodfirms.co",
+      "info@icarusbuilders.com",
+      "inquiry@emossy.com",
+      "jennifer.king@mvpconsultingplus.com",
+      "junaidjaved7011@gmail.com",
+      "lachlan.d@revelo.com",
+      "lasya.prakash@business-advantage.net",
+      "lkanugo@moreyeahs.in",
+      "manager.hr@cardiffmed.com",
+      "marlin.whitney@inshura.com",
+      "maryam.shakeel@keystonepk.com",
+      "name@example.com",
+      "neetubaisoya7@gmail.com",
+      "nidamela@250mils.com",
+      "nikitasingh06974@gmail.com",
+      "ridzrana1@yahoo.com",
+      "sales@divineit.net",
+      "sales@resourceinn.com",
+      "sawera.usman@peopleperfect.com",
+      "sehar.liaqat@folium.ai",
+      "sharifadil69@gmail.com",
+      "shashank23jan@gmail.com",
+      "shovon@divine-it.net",
+      "sidra@visualr.com.au",
+      "social@ceridian.com",
+      "support@bamboohr.com",
+      "support@eddy.com",
+      "support@oorwin.com",
+      "support@peoplei.tech",
+      "support@sage.hr",
+      "support@vultus.com",
+      "support@webhr.co",
+      "support@zenefits.com",
+      "support@zfour.in",
+      "theanuragchoudhary1@gmail.com",
+      "tshirt602@gmail.com",
+      "vandanaguptamba2019@acropolis.in",
+      "vishalbehal24@gmail.com",
+      "zishirox@gmail.com",
+      "zunairmaqbool98@gmail.com"
+    ],
+    "_verified_phones": [
+      "333 6089411"
+    ],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "emails": {
+        "17dilip.sharma@gmail.com": "ok",
+        "Jemimah@goodfirms.com": "ok",
+        "MichelleW3908@gmail.com": "ok",
+        "Sawera.usman@peopleperfect.com": "ok",
+        "abdullahsulehri@gmail.com": "ok",
+        "aditya69choudhary69@gmail.com": "ok",
+        "ajaysharma32@gmail.com": "ok",
+        "akshitaparashar2000@gmail.com": "ok",
+        "alikhan@binbakar.com.pk": "ok",
+        "altamash.ishtiaq@heritageluxurysuites.com": "ok",
+        "aminaameer177@gmail.com": "ok",
+        "beenagour9@gmail.com": "ok",
+        "business.zfour@gmail.com": "ok",
+        "chauhan.sagar.16032002@gmail.com": "ok",
+        "dale.hulsing@ezobamacare.com": "no_mx_records",
+        "dalton.lemburg@topshelfinc.us": "ok",
+        "enquiry@bharatpayroll.com": "ok",
+        "esha.arora2403@gmail.com": "ok",
+        "farheenahmed1996@gmail.com": "ok",
+        "feedback@paycomonline.com": "ok",
+        "hello@izeek.org": "ok",
+        "hello@namely.com": "ok",
+        "himanshu31091@gmail.com": "ok",
+        "im.somnath26@gmail.com": "ok",
+        "info@bitrix24.com": "ok",
+        "info@geekinn.com": "ok",
+        "info@goodfirms.co": "ok",
+        "info@icarusbuilders.com": "ok",
+        "inquiry@emossy.com": "ok",
+        "jennifer.king@mvpconsultingplus.com": "ok",
+        "junaidjaved7011@gmail.com": "ok",
+        "lachlan.d@revelo.com": "ok",
+        "lasya.prakash@business-advantage.net": "ok",
+        "lkanugo@moreyeahs.in": "ok",
+        "manager.hr@cardiffmed.com": "ok",
+        "marlin.whitney@inshura.com": "ok",
+        "maryam.shakeel@keystonepk.com": "ok",
+        "name@example.com": "ok",
+        "neetubaisoya7@gmail.com": "ok",
+        "nidamela@250mils.com": "ok",
+        "nikitasingh06974@gmail.com": "ok",
+        "ridzrana1@yahoo.com": "ok",
+        "sales@divineit.net": "ok",
+        "sales@resourceinn.com": "ok",
+        "sawera.usman@peopleperfect.com": "ok",
+        "sehar.liaqat@folium.ai": "ok",
+        "sharifadil69@gmail.com": "ok",
+        "shashank23jan@gmail.com": "ok",
+        "shovon@divine-it.net": "ok",
+        "sidra@visualr.com.au": "ok",
+        "social@ceridian.com": "ok",
+        "support@bamboohr.com": "ok",
+        "support@eddy.com": "ok",
+        "support@oorwin.com": "ok",
+        "support@peoplei.tech": "ok",
+        "support@sage.hr": "ok",
+        "support@vultus.com": "ok",
+        "support@webhr.co": "ok",
+        "support@zenefits.com": "ok",
+        "support@zfour.in": "ok",
+        "theanuragchoudhary1@gmail.com": "ok",
+        "tshirt602@gmail.com": "ok",
+        "vandanaguptamba2019@acropolis.in": "ok",
+        "vishalbehal24@gmail.com": "ok",
+        "zishirox@gmail.com": "ok",
+        "zunairmaqbool98@gmail.com": "ok"
       },
-      "discovered_emails": [
-        "jin@goodfirms.co",
-        "nathan@goodfirms.co",
-        "sophia@goodfirms.co",
-        "darren@goodfirms.co",
-        "info@goodfirms.co"
-      ]
-    }
+      "phones": {
+        "0 501 - 1000 100": "not_valid_number",
+        "02466434 6065": "not_valid_number",
+        "09 60409": "not_valid_number",
+        "1 - 10 11 - 50 5": "not_valid_number",
+        "1 - 100 101 - 50": "not_valid_number",
+        "333 6089411": "ok",
+        "64 60409": "not_valid_number"
+      },
+      "website": "ok"
+    },
+    "_verification_passed": true
   },
   {
     "company_name": "How to Build an AI-Powered App in 2026?",
@@ -2060,25 +2464,162 @@
       "people_dropped:56"
     ],
     "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
       "domain_source": "existing_website",
       "whois": {
         "registrar": "GoDaddy.com, LLC",
         "creation_date": "2015-07-15 11:50:40+00:00",
-        "org": "Domains By Proxy, LLC",
-        "country": "US"
+        "org": null,
+        "country": null
+      }
+    },
+    "_verified_emails": [
+      "17dilip.sharma@gmail.com",
+      "MichelleW3908@gmail.com",
+      "Sawera.usman@peopleperfect.com",
+      "abdullahsulehri@gmail.com",
+      "aditya69choudhary69@gmail.com",
+      "ajaysharma32@gmail.com",
+      "akshitaparashar2000@gmail.com",
+      "alikhan@binbakar.com.pk",
+      "altamash.ishtiaq@heritageluxurysuites.com",
+      "aminaameer177@gmail.com",
+      "beenagour9@gmail.com",
+      "business.zfour@gmail.com",
+      "chauhan.sagar.16032002@gmail.com",
+      "dalton.lemburg@topshelfinc.us",
+      "enquiry@bharatpayroll.com",
+      "esha.arora2403@gmail.com",
+      "farheenahmed1996@gmail.com",
+      "feedback@paycomonline.com",
+      "hello@izeek.org",
+      "hello@namely.com",
+      "himanshu31091@gmail.com",
+      "im.somnath26@gmail.com",
+      "info@bitrix24.com",
+      "info@geekinn.com",
+      "info@goodfirms.co",
+      "info@icarusbuilders.com",
+      "inquiry@emossy.com",
+      "jennifer.king@mvpconsultingplus.com",
+      "junaidjaved7011@gmail.com",
+      "lachlan.d@revelo.com",
+      "lasya.prakash@business-advantage.net",
+      "lkanugo@moreyeahs.in",
+      "manager.hr@cardiffmed.com",
+      "marlin.whitney@inshura.com",
+      "maryam.shakeel@keystonepk.com",
+      "neetubaisoya7@gmail.com",
+      "nidamela@250mils.com",
+      "nikitasingh06974@gmail.com",
+      "ridzrana1@yahoo.com",
+      "sales@divineit.net",
+      "sales@resourceinn.com",
+      "sawera.usman@peopleperfect.com",
+      "sehar.liaqat@folium.ai",
+      "sharifadil69@gmail.com",
+      "shashank23jan@gmail.com",
+      "shovon@divine-it.net",
+      "sidra@visualr.com.au",
+      "social@ceridian.com",
+      "support@bamboohr.com",
+      "support@eddy.com",
+      "support@oorwin.com",
+      "support@peoplei.tech",
+      "support@sage.hr",
+      "support@vultus.com",
+      "support@webhr.co",
+      "support@zenefits.com",
+      "support@zfour.in",
+      "theanuragchoudhary1@gmail.com",
+      "tshirt602@gmail.com",
+      "vandanaguptamba2019@acropolis.in",
+      "vishalbehal24@gmail.com",
+      "zishirox@gmail.com",
+      "zunairmaqbool98@gmail.com"
+    ],
+    "_verified_phones": [
+      "333 6089411"
+    ],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "emails": {
+        "17dilip.sharma@gmail.com": "ok",
+        "MichelleW3908@gmail.com": "ok",
+        "Sawera.usman@peopleperfect.com": "ok",
+        "abdullahsulehri@gmail.com": "ok",
+        "aditya69choudhary69@gmail.com": "ok",
+        "ajaysharma32@gmail.com": "ok",
+        "akshitaparashar2000@gmail.com": "ok",
+        "alikhan@binbakar.com.pk": "ok",
+        "altamash.ishtiaq@heritageluxurysuites.com": "ok",
+        "aminaameer177@gmail.com": "ok",
+        "beenagour9@gmail.com": "ok",
+        "business.zfour@gmail.com": "ok",
+        "chauhan.sagar.16032002@gmail.com": "ok",
+        "dale.hulsing@ezobamacare.com": "no_mx_records",
+        "dalton.lemburg@topshelfinc.us": "ok",
+        "enquiry@bharatpayroll.com": "ok",
+        "esha.arora2403@gmail.com": "ok",
+        "farheenahmed1996@gmail.com": "ok",
+        "feedback@paycomonline.com": "ok",
+        "hello@izeek.org": "ok",
+        "hello@namely.com": "ok",
+        "himanshu31091@gmail.com": "ok",
+        "im.somnath26@gmail.com": "ok",
+        "info@bitrix24.com": "ok",
+        "info@geekinn.com": "ok",
+        "info@goodfirms.co": "ok",
+        "info@icarusbuilders.com": "ok",
+        "inquiry@emossy.com": "ok",
+        "jennifer.king@mvpconsultingplus.com": "ok",
+        "junaidjaved7011@gmail.com": "ok",
+        "lachlan.d@revelo.com": "ok",
+        "lasya.prakash@business-advantage.net": "ok",
+        "lkanugo@moreyeahs.in": "ok",
+        "manager.hr@cardiffmed.com": "ok",
+        "marlin.whitney@inshura.com": "ok",
+        "maryam.shakeel@keystonepk.com": "ok",
+        "neetubaisoya7@gmail.com": "ok",
+        "nidamela@250mils.com": "ok",
+        "nikitasingh06974@gmail.com": "ok",
+        "ridzrana1@yahoo.com": "ok",
+        "sales@divineit.net": "ok",
+        "sales@resourceinn.com": "ok",
+        "sawera.usman@peopleperfect.com": "ok",
+        "sehar.liaqat@folium.ai": "ok",
+        "sharifadil69@gmail.com": "ok",
+        "shashank23jan@gmail.com": "ok",
+        "shovon@divine-it.net": "ok",
+        "sidra@visualr.com.au": "ok",
+        "social@ceridian.com": "ok",
+        "support@bamboohr.com": "ok",
+        "support@eddy.com": "ok",
+        "support@oorwin.com": "ok",
+        "support@peoplei.tech": "ok",
+        "support@sage.hr": "ok",
+        "support@vultus.com": "ok",
+        "support@webhr.co": "ok",
+        "support@zenefits.com": "ok",
+        "support@zfour.in": "ok",
+        "theanuragchoudhary1@gmail.com": "ok",
+        "tshirt602@gmail.com": "ok",
+        "vandanaguptamba2019@acropolis.in": "ok",
+        "vishalbehal24@gmail.com": "ok",
+        "zishirox@gmail.com": "ok",
+        "zunairmaqbool98@gmail.com": "ok"
       },
-      "discovered_emails": [
-        "jin@goodfirms.co",
-        "nathan@goodfirms.co",
-        "sophia@goodfirms.co",
-        "darren@goodfirms.co",
-        "info@goodfirms.co"
-      ]
-    }
+      "phones": {
+        "0 501 - 1000 100": "not_valid_number",
+        "02466434 6065": "not_valid_number",
+        "09 60409": "not_valid_number",
+        "1 - 10 11 - 50 5": "not_valid_number",
+        "1 - 100 101 - 50": "not_valid_number",
+        "333 6089411": "ok",
+        "64 60409": "not_valid_number"
+      },
+      "website": "ok"
+    },
+    "_verification_passed": true
   },
   {
     "company_name": "AI in Healthcare",
@@ -2193,25 +2734,165 @@
       "people_dropped:56"
     ],
     "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
       "domain_source": "existing_website",
       "whois": {
         "registrar": "GoDaddy.com, LLC",
         "creation_date": "2015-07-15 11:50:40+00:00",
         "org": null,
         "country": null
+      }
+    },
+    "_verified_emails": [
+      "17dilip.sharma@gmail.com",
+      "MichelleW3908@gmail.com",
+      "Sawera.usman@peopleperfect.com",
+      "abdullahsulehri@gmail.com",
+      "aditya69choudhary69@gmail.com",
+      "ajaysharma32@gmail.com",
+      "akshitaparashar2000@gmail.com",
+      "alikhan@binbakar.com.pk",
+      "altamash.ishtiaq@heritageluxurysuites.com",
+      "aminaameer177@gmail.com",
+      "beenagour9@gmail.com",
+      "business.zfour@gmail.com",
+      "chauhan.sagar.16032002@gmail.com",
+      "dalton.lemburg@topshelfinc.us",
+      "enquiry@bharatpayroll.com",
+      "esha.arora2403@gmail.com",
+      "farheenahmed1996@gmail.com",
+      "feedback@paycomonline.com",
+      "hello@izeek.org",
+      "hello@namely.com",
+      "himanshu31091@gmail.com",
+      "im.somnath26@gmail.com",
+      "info@bitrix24.com",
+      "info@geekinn.com",
+      "info@goodfirms.co",
+      "info@icarusbuilders.com",
+      "inquiry@emossy.com",
+      "jennifer.king@mvpconsultingplus.com",
+      "junaidjaved7011@gmail.com",
+      "lachlan.d@revelo.com",
+      "lasya.prakash@business-advantage.net",
+      "lkanugo@moreyeahs.in",
+      "manager.hr@cardiffmed.com",
+      "marlin.whitney@inshura.com",
+      "maryam.shakeel@keystonepk.com",
+      "neetubaisoya7@gmail.com",
+      "nidamela@250mils.com",
+      "nikitasingh06974@gmail.com",
+      "ridzrana1@yahoo.com",
+      "sales@divineit.net",
+      "sales@resourceinn.com",
+      "sawera.usman@peopleperfect.com",
+      "sehar.liaqat@folium.ai",
+      "sharifadil69@gmail.com",
+      "shashank23jan@gmail.com",
+      "shovon@divine-it.net",
+      "sidra@visualr.com.au",
+      "social@ceridian.com",
+      "support@bamboohr.com",
+      "support@eddy.com",
+      "support@oorwin.com",
+      "support@peoplei.tech",
+      "support@sage.hr",
+      "support@vultus.com",
+      "support@webhr.co",
+      "support@zenefits.com",
+      "support@zfour.in",
+      "theanuragchoudhary1@gmail.com",
+      "tshirt602@gmail.com",
+      "vandanaguptamba2019@acropolis.in",
+      "vishalbehal24@gmail.com",
+      "zishirox@gmail.com",
+      "zunairmaqbool98@gmail.com"
+    ],
+    "_verified_phones": [
+      "333 6089411"
+    ],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "emails": {
+        "17dilip.sharma@gmail.com": "ok",
+        "MichelleW3908@gmail.com": "ok",
+        "Sawera.usman@peopleperfect.com": "ok",
+        "abdullahsulehri@gmail.com": "ok",
+        "aditya69choudhary69@gmail.com": "ok",
+        "ajaysharma32@gmail.com": "ok",
+        "akshitaparashar2000@gmail.com": "ok",
+        "alikhan@binbakar.com.pk": "ok",
+        "altamash.ishtiaq@heritageluxurysuites.com": "ok",
+        "aminaameer177@gmail.com": "ok",
+        "beenagour9@gmail.com": "ok",
+        "business.zfour@gmail.com": "ok",
+        "chauhan.sagar.16032002@gmail.com": "ok",
+        "dale.hulsing@ezobamacare.com": "no_mx_records",
+        "dalton.lemburg@topshelfinc.us": "ok",
+        "enquiry@bharatpayroll.com": "ok",
+        "esha.arora2403@gmail.com": "ok",
+        "farheenahmed1996@gmail.com": "ok",
+        "feedback@paycomonline.com": "ok",
+        "hello@izeek.org": "ok",
+        "hello@namely.com": "ok",
+        "himanshu31091@gmail.com": "ok",
+        "im.somnath26@gmail.com": "ok",
+        "info@bitrix24.com": "ok",
+        "info@geekinn.com": "ok",
+        "info@goodfirms.co": "ok",
+        "info@icarusbuilders.com": "ok",
+        "inquiry@emossy.com": "ok",
+        "jennifer.king@mvpconsultingplus.com": "ok",
+        "junaidjaved7011@gmail.com": "ok",
+        "lachlan.d@revelo.com": "ok",
+        "lasya.prakash@business-advantage.net": "ok",
+        "lkanugo@moreyeahs.in": "ok",
+        "manager.hr@cardiffmed.com": "ok",
+        "marlin.whitney@inshura.com": "ok",
+        "maryam.shakeel@keystonepk.com": "ok",
+        "neetubaisoya7@gmail.com": "ok",
+        "nidamela@250mils.com": "ok",
+        "nikitasingh06974@gmail.com": "ok",
+        "ridzrana1@yahoo.com": "ok",
+        "sales@divineit.net": "ok",
+        "sales@resourceinn.com": "ok",
+        "sawera.usman@peopleperfect.com": "ok",
+        "sehar.liaqat@folium.ai": "ok",
+        "sharifadil69@gmail.com": "ok",
+        "shashank23jan@gmail.com": "ok",
+        "shovon@divine-it.net": "ok",
+        "sidra@visualr.com.au": "ok",
+        "social@ceridian.com": "ok",
+        "support@bamboohr.com": "ok",
+        "support@eddy.com": "ok",
+        "support@oorwin.com": "ok",
+        "support@peoplei.tech": "ok",
+        "support@sage.hr": "ok",
+        "support@vultus.com": "ok",
+        "support@webhr.co": "ok",
+        "support@zenefits.com": "ok",
+        "support@zfour.in": "ok",
+        "theanuragchoudhary1@gmail.com": "ok",
+        "tshirt602@gmail.com": "ok",
+        "vandanaguptamba2019@acropolis.in": "ok",
+        "vishalbehal24@gmail.com": "ok",
+        "zishirox@gmail.com": "ok",
+        "zunairmaqbool98@gmail.com": "ok"
       },
-      "discovered_emails": [
-        "jin@goodfirms.co",
-        "nathan@goodfirms.co",
-        "sophia@goodfirms.co",
-        "darren@goodfirms.co",
-        "info@goodfirms.co"
-      ]
-    }
+      "phones": {
+        "0 501 - 1000 100": "not_valid_number",
+        "02466434 6065": "not_valid_number",
+        "0306457323002194": "not_possible_length",
+        "09 60409": "not_valid_number",
+        "1 - 10 11 - 50 5": "not_valid_number",
+        "1 - 100 101 - 50": "not_valid_number",
+        "23001246": "not_valid_number",
+        "2542660525002586": "not_possible_length",
+        "333 6089411": "ok",
+        "64 60409": "not_valid_number"
+      },
+      "website": "ok"
+    },
+    "_verification_passed": true
   },
   {
     "company_name": "AI in Fashion",
@@ -2323,25 +3004,162 @@
       "people_dropped:56"
     ],
     "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
       "domain_source": "existing_website",
       "whois": {
         "registrar": "GoDaddy.com, LLC",
         "creation_date": "2015-07-15 11:50:40+00:00",
         "org": null,
         "country": null
+      }
+    },
+    "_verified_emails": [
+      "17dilip.sharma@gmail.com",
+      "MichelleW3908@gmail.com",
+      "Sawera.usman@peopleperfect.com",
+      "abdullahsulehri@gmail.com",
+      "aditya69choudhary69@gmail.com",
+      "ajaysharma32@gmail.com",
+      "akshitaparashar2000@gmail.com",
+      "alikhan@binbakar.com.pk",
+      "altamash.ishtiaq@heritageluxurysuites.com",
+      "aminaameer177@gmail.com",
+      "beenagour9@gmail.com",
+      "business.zfour@gmail.com",
+      "chauhan.sagar.16032002@gmail.com",
+      "dalton.lemburg@topshelfinc.us",
+      "enquiry@bharatpayroll.com",
+      "esha.arora2403@gmail.com",
+      "farheenahmed1996@gmail.com",
+      "feedback@paycomonline.com",
+      "hello@izeek.org",
+      "hello@namely.com",
+      "himanshu31091@gmail.com",
+      "im.somnath26@gmail.com",
+      "info@bitrix24.com",
+      "info@geekinn.com",
+      "info@goodfirms.co",
+      "info@icarusbuilders.com",
+      "inquiry@emossy.com",
+      "jennifer.king@mvpconsultingplus.com",
+      "junaidjaved7011@gmail.com",
+      "lachlan.d@revelo.com",
+      "lasya.prakash@business-advantage.net",
+      "lkanugo@moreyeahs.in",
+      "manager.hr@cardiffmed.com",
+      "marlin.whitney@inshura.com",
+      "maryam.shakeel@keystonepk.com",
+      "neetubaisoya7@gmail.com",
+      "nidamela@250mils.com",
+      "nikitasingh06974@gmail.com",
+      "ridzrana1@yahoo.com",
+      "sales@divineit.net",
+      "sales@resourceinn.com",
+      "sawera.usman@peopleperfect.com",
+      "sehar.liaqat@folium.ai",
+      "sharifadil69@gmail.com",
+      "shashank23jan@gmail.com",
+      "shovon@divine-it.net",
+      "sidra@visualr.com.au",
+      "social@ceridian.com",
+      "support@bamboohr.com",
+      "support@eddy.com",
+      "support@oorwin.com",
+      "support@peoplei.tech",
+      "support@sage.hr",
+      "support@vultus.com",
+      "support@webhr.co",
+      "support@zenefits.com",
+      "support@zfour.in",
+      "theanuragchoudhary1@gmail.com",
+      "tshirt602@gmail.com",
+      "vandanaguptamba2019@acropolis.in",
+      "vishalbehal24@gmail.com",
+      "zishirox@gmail.com",
+      "zunairmaqbool98@gmail.com"
+    ],
+    "_verified_phones": [
+      "333 6089411"
+    ],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "emails": {
+        "17dilip.sharma@gmail.com": "ok",
+        "MichelleW3908@gmail.com": "ok",
+        "Sawera.usman@peopleperfect.com": "ok",
+        "abdullahsulehri@gmail.com": "ok",
+        "aditya69choudhary69@gmail.com": "ok",
+        "ajaysharma32@gmail.com": "ok",
+        "akshitaparashar2000@gmail.com": "ok",
+        "alikhan@binbakar.com.pk": "ok",
+        "altamash.ishtiaq@heritageluxurysuites.com": "ok",
+        "aminaameer177@gmail.com": "ok",
+        "beenagour9@gmail.com": "ok",
+        "business.zfour@gmail.com": "ok",
+        "chauhan.sagar.16032002@gmail.com": "ok",
+        "dale.hulsing@ezobamacare.com": "no_mx_records",
+        "dalton.lemburg@topshelfinc.us": "ok",
+        "enquiry@bharatpayroll.com": "ok",
+        "esha.arora2403@gmail.com": "ok",
+        "farheenahmed1996@gmail.com": "ok",
+        "feedback@paycomonline.com": "ok",
+        "hello@izeek.org": "ok",
+        "hello@namely.com": "ok",
+        "himanshu31091@gmail.com": "ok",
+        "im.somnath26@gmail.com": "ok",
+        "info@bitrix24.com": "ok",
+        "info@geekinn.com": "ok",
+        "info@goodfirms.co": "ok",
+        "info@icarusbuilders.com": "ok",
+        "inquiry@emossy.com": "ok",
+        "jennifer.king@mvpconsultingplus.com": "ok",
+        "junaidjaved7011@gmail.com": "ok",
+        "lachlan.d@revelo.com": "ok",
+        "lasya.prakash@business-advantage.net": "ok",
+        "lkanugo@moreyeahs.in": "ok",
+        "manager.hr@cardiffmed.com": "ok",
+        "marlin.whitney@inshura.com": "ok",
+        "maryam.shakeel@keystonepk.com": "ok",
+        "neetubaisoya7@gmail.com": "ok",
+        "nidamela@250mils.com": "ok",
+        "nikitasingh06974@gmail.com": "ok",
+        "ridzrana1@yahoo.com": "ok",
+        "sales@divineit.net": "ok",
+        "sales@resourceinn.com": "ok",
+        "sawera.usman@peopleperfect.com": "ok",
+        "sehar.liaqat@folium.ai": "ok",
+        "sharifadil69@gmail.com": "ok",
+        "shashank23jan@gmail.com": "ok",
+        "shovon@divine-it.net": "ok",
+        "sidra@visualr.com.au": "ok",
+        "social@ceridian.com": "ok",
+        "support@bamboohr.com": "ok",
+        "support@eddy.com": "ok",
+        "support@oorwin.com": "ok",
+        "support@peoplei.tech": "ok",
+        "support@sage.hr": "ok",
+        "support@vultus.com": "ok",
+        "support@webhr.co": "ok",
+        "support@zenefits.com": "ok",
+        "support@zfour.in": "ok",
+        "theanuragchoudhary1@gmail.com": "ok",
+        "tshirt602@gmail.com": "ok",
+        "vandanaguptamba2019@acropolis.in": "ok",
+        "vishalbehal24@gmail.com": "ok",
+        "zishirox@gmail.com": "ok",
+        "zunairmaqbool98@gmail.com": "ok"
       },
-      "discovered_emails": [
-        "jin@goodfirms.co",
-        "nathan@goodfirms.co",
-        "sophia@goodfirms.co",
-        "darren@goodfirms.co",
-        "info@goodfirms.co"
-      ]
-    }
+      "phones": {
+        "0 501 - 1000 100": "not_valid_number",
+        "02466434 6065": "not_valid_number",
+        "09 60409": "not_valid_number",
+        "1 - 10 11 - 50 5": "not_valid_number",
+        "1 - 100 101 - 50": "not_valid_number",
+        "333 6089411": "ok",
+        "64 60409": "not_valid_number"
+      },
+      "website": "ok"
+    },
+    "_verification_passed": true
   },
   {
     "company_name": "AWS Cloud Services in Gurgaon",
@@ -2374,26 +3192,39 @@
       "email_junk:your@email.com"
     ],
     "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
       "domain_source": "existing_website",
       "whois": {
         "registrar": "GoDaddy.com, LLC",
         "creation_date": "2018-05-08 09:03:39+00:00",
         "org": null,
         "country": null
+      }
+    },
+    "_verified_emails": [
+      "consult@squareops.com",
+      "hr@squareops.com"
+    ],
+    "_verified_phones": [
+      "+91 88009 07226",
+      "+91 92055 54850"
+    ],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "emails": {
+        "consult@squareops.com": "ok",
+        "hr@squareops.com": "ok"
       },
-      "discovered_emails": [
-        "consult@squareops.com",
-        "contact@squareops.com"
-      ]
-    }
+      "phones": {
+        "+91 88009 07226": "ok",
+        "+91 92055 54850": "ok"
+      },
+      "website": "ok"
+    },
+    "_verification_passed": true
   },
   {
     "company_name": "TurningCloud Solutions Private Limited",
-    "website": null,
+    "website": "https://turningcloud.com",
     "linkedin_company": "https://in.linkedin.com/company/turning-cloud-solutions",
     "location": "gurugram",
     "industry": "cloud company",
@@ -2417,10 +3248,6 @@
       "sparse_no_contact_channel"
     ],
     "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
       "domains_tried": [
         "turningcloud.com"
       ],
@@ -2428,22 +3255,22 @@
       "discovered_website": "https://turningcloud.com",
       "whois": {
         "registrar": "GoDaddy.com, LLC",
-        "creation_date": "[datetime.datetime(2011, 4, 6, 17, 22, 53, tzinfo=tzoffset('UTC', 0)), datetime.datetime(2011, 4, 6, 12, 22, 53, tzinfo=tzoffset('UTC', 0))]",
-        "org": "Domains By Proxy, LLC",
-        "country": "US"
-      },
-      "discovered_emails": [
-        "ashish@turningcloud.com",
-        "nidhi@turningcloud.com",
-        "mayank@turningcloud.com",
-        "murthy@turningcloud.com",
-        "info@turningcloud.com"
-      ]
-    }
+        "creation_date": "2011-04-06 17:22:53+00:00",
+        "org": null,
+        "country": null
+      }
+    },
+    "_verified_emails": [],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "website": "ok"
+    },
+    "_verification_passed": true
   },
   {
     "company_name": "Cloud Certitude",
-    "website": null,
+    "website": "https://cloudcertitude.com",
     "linkedin_company": "https://in.linkedin.com/company/cloudcertitude",
     "location": "gurugram",
     "industry": "cloud company",
@@ -2467,22 +3294,29 @@
       "sparse_no_contact_channel"
     ],
     "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
       "domains_tried": [
-        "cloudcertitude.com",
-        "cloudcertitude.in",
-        "cloudcertitude.co.in",
-        "cloudcertitude.io",
-        "cloudcertitude.org"
-      ]
-    }
+        "cloudcertitude.com"
+      ],
+      "domain_source": "guessed_and_verified",
+      "discovered_website": "https://cloudcertitude.com",
+      "whois": {
+        "registrar": "GoDaddy.com, LLC",
+        "creation_date": "2013-02-27 17:26:39+00:00",
+        "org": null,
+        "country": null
+      }
+    },
+    "_verified_emails": [],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "website": "ok"
+    },
+    "_verification_passed": true
   },
   {
     "company_name": "Ananta Cloud",
-    "website": null,
+    "website": "https://anantacloud.com",
     "linkedin_company": "https://in.linkedin.com/company/anantacloud",
     "location": "gurugram",
     "industry": "cloud company",
@@ -2506,10 +3340,6 @@
       "sparse_no_contact_channel"
     ],
     "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
       "domains_tried": [
         "anantacloud.com"
       ],
@@ -2517,97 +3347,22 @@
       "discovered_website": "https://anantacloud.com",
       "whois": {
         "registrar": "GoDaddy.com, LLC",
-        "creation_date": "[datetime.datetime(2025, 1, 6, 4, 27, 37, tzinfo=tzoffset('UTC', 0)), datetime.datetime(2025, 1, 5, 23, 27, 37, tzinfo=tzoffset('UTC', 0))]",
-        "org": "Domains By Proxy, LLC",
-        "country": "US"
-      },
-      "discovered_emails": [
-        "hello@anantacloud.com",
-        "hiring@anantacloud.com"
-      ]
-    }
-  },
-  {
-    "company_name": "BCloud Global Services",
-    "website": null,
-    "linkedin_company": "https://in.linkedin.com/company/bcloud-global-services",
-    "location": "gurugram",
-    "industry": "cloud company",
-    "lead_type": "b2b",
-    "contact_page": null,
-    "about_page": null,
-    "team_page": null,
-    "emails": [],
-    "phones": [],
-    "social_links": {},
-    "people": [
-      {
-        "name": "Bhushan Chhabra",
-        "designation": null,
-        "linkedin": "https://in.linkedin.com/in/bhushan-chhabra-86462024"
+        "creation_date": "2025-01-06 04:27:37+00:00",
+        "org": null,
+        "country": null
       }
-    ],
-    "source": "LinkedIn",
-    "_source_file": "data-2.json",
-    "_flags": [
-      "sparse_no_contact_channel"
-    ],
-    "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
-      "domains_tried": [
-        "bcloudglobal.com",
-        "bcloudglobal.in",
-        "bcloudglobal.co.in",
-        "bcloudglobal.io",
-        "bcloudglobal.org"
-      ]
-    }
-  },
-  {
-    "company_name": "MPC Cloud Consulting Pvt Ltd",
-    "website": null,
-    "linkedin_company": "https://in.linkedin.com/company/mpccloudconsulting",
-    "location": "gurugram",
-    "industry": "cloud company",
-    "lead_type": "b2b",
-    "contact_page": null,
-    "about_page": null,
-    "team_page": null,
-    "emails": [],
-    "phones": [],
-    "social_links": {},
-    "people": [
-      {
-        "name": "Mohit Goyal",
-        "designation": null,
-        "linkedin": "https://in.linkedin.com/in/mohitgoyal5762"
-      }
-    ],
-    "source": "LinkedIn",
-    "_source_file": "data-2.json",
-    "_flags": [
-      "sparse_no_contact_channel"
-    ],
-    "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
-      "domains_tried": [
-        "mpccloud.com",
-        "mpccloud.in",
-        "mpccloud.co.in",
-        "mpccloud.io",
-        "mpccloud.org"
-      ]
-    }
+    },
+    "_verified_emails": [],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "website": "ok"
+    },
+    "_verification_passed": true
   },
   {
     "company_name": "CloudZent Technology Services",
-    "website": null,
+    "website": "https://cloudzent.com",
     "linkedin_company": "https://in.linkedin.com/company/cloudzenttechnologyservices",
     "location": "gurugram",
     "industry": "cloud company",
@@ -2631,10 +3386,6 @@
       "sparse_no_contact_channel"
     ],
     "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
       "domains_tried": [
         "cloudzent.com"
       ],
@@ -2645,16 +3396,19 @@
         "creation_date": "2017-12-14 07:53:46+00:00",
         "org": "Privacy Protect, LLC (PrivacyProtect.org)",
         "country": "US"
-      },
-      "discovered_emails": [
-        "gaganjot.singh@cloudzent.com",
-        "info@cloudzent.com"
-      ]
-    }
+      }
+    },
+    "_verified_emails": [],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "website": "ok"
+    },
+    "_verification_passed": true
   },
   {
     "company_name": "AceCloud",
-    "website": null,
+    "website": "https://acecloud.in",
     "linkedin_company": "https://in.linkedin.com/company/acecloudai",
     "location": "gurugram",
     "industry": "cloud company",
@@ -2678,22 +3432,30 @@
       "sparse_no_contact_channel"
     ],
     "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
       "domains_tried": [
         "acecloud.com",
-        "acecloud.in",
-        "acecloud.co.in",
-        "acecloud.io",
-        "acecloud.org"
-      ]
-    }
+        "acecloud.in"
+      ],
+      "domain_source": "guessed_and_verified",
+      "discovered_website": "https://acecloud.in",
+      "whois": {
+        "registrar": "GoDaddy",
+        "creation_date": "2022-12-19 17:54:25.795000+00:00",
+        "org": null,
+        "country": "IN"
+      }
+    },
+    "_verified_emails": [],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "website": "ok"
+    },
+    "_verification_passed": true
   },
   {
     "company_name": "Progression",
-    "website": null,
+    "website": "https://progression.com",
     "linkedin_company": "https://in.linkedin.com/company/progression-infonet",
     "location": "gurugram",
     "industry": "cloud company",
@@ -2717,10 +3479,6 @@
       "sparse_no_contact_channel"
     ],
     "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
       "domains_tried": [
         "progression.com"
       ],
@@ -2731,24 +3489,19 @@
         "creation_date": "1998-05-09 04:00:00+00:00",
         "org": null,
         "country": "US"
-      },
-      "discovered_emails": [
-        "rakesh.pawar@progression.com",
-        "sarthak.hooda@progression.com",
-        "bhushan.khadage@progression.com",
-        "bansi.dhar@progression.com",
-        "param.hooda@progression.com",
-        "susanta.praharaj@progression.com",
-        "harish.rawat@progression.com",
-        "narender.singh@progression.com",
-        "deepesh.yadav@progression.com",
-        "abhishek.kumar@progression.com"
-      ]
-    }
+      }
+    },
+    "_verified_emails": [],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "website": "ok"
+    },
+    "_verification_passed": true
   },
   {
     "company_name": "CloudTechner",
-    "website": null,
+    "website": "https://cloudtechner.com",
     "linkedin_company": "https://in.linkedin.com/company/cloud-techner",
     "location": "gurugram",
     "industry": "cloud company",
@@ -2772,18 +3525,25 @@
       "sparse_no_contact_channel"
     ],
     "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
       "domains_tried": [
-        "cloudtechner.com",
-        "cloudtechner.in",
-        "cloudtechner.co.in",
-        "cloudtechner.io",
-        "cloudtechner.org"
-      ]
-    }
+        "cloudtechner.com"
+      ],
+      "domain_source": "guessed_and_verified",
+      "discovered_website": "https://cloudtechner.com",
+      "whois": {
+        "registrar": "GoDaddy.com, LLC",
+        "creation_date": "2020-09-18 15:41:13+00:00",
+        "org": null,
+        "country": null
+      }
+    },
+    "_verified_emails": [],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "website": "ok"
+    },
+    "_verification_passed": true
   },
   {
     "company_name": "GoMilestone",
@@ -2814,67 +3574,33 @@
       "people_dropped:4"
     ],
     "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
       "domain_source": "existing_website",
       "whois": {
         "registrar": "GoDaddy.com, LLC",
-        "creation_date": "[datetime.datetime(2014, 8, 6, 13, 59, 46, tzinfo=tzoffset('UTC', 0)), datetime.datetime(2014, 8, 6, 8, 59, 46, tzinfo=tzoffset('UTC', 0))]",
-        "org": "Domains By Proxy, LLC",
-        "country": "US"
-      },
-      "discovered_emails": [
-        "kaushal@gomilestone.com",
-        "ankit.gupta@gomilestone.com",
-        "sandeep@gomilestone.com",
-        "kuldeep@gomilestone.com",
-        "libanshi.jain@gomilestone.com",
-        "pankaj@gomilestone.com",
-        "bikram.singh@gomilestone.com",
-        "info@gomilestone.com"
-      ]
-    }
-  },
-  {
-    "company_name": "The 10 Best Companies to Work for in Delhi-NCR in 2026",
-    "website": null,
-    "linkedin_company": "https://www.linkedin.com/pulse/linkedin-top-companies-2026-10-leading-employers-grow-1zbcf",
-    "location": "delhi",
-    "industry": "it company",
-    "lead_type": "b2b",
-    "contact_page": null,
-    "about_page": null,
-    "team_page": null,
-    "emails": [],
-    "phones": [],
-    "social_links": {},
-    "people": [
-      {
-        "name": "Akshay Chaturvedi",
-        "designation": "Founder",
-        "linkedin": "https://in.linkedin.com/in/akshaychaturvedi"
+        "creation_date": "2014-08-06 13:59:46+00:00",
+        "org": null,
+        "country": null
       }
+    },
+    "_verified_emails": [
+      "info@gomilestone.com"
     ],
-    "source": "LinkedIn",
-    "_source_file": "data-3.json",
-    "_flags": [
-      "sparse_no_contact_channel"
+    "_verified_phones": [
+      "+44 7887081915",
+      "+91 8447966431"
     ],
-    "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
+    "_website_reachable": true,
+    "_verification_notes": {
+      "emails": {
+        "info@gomilestone.com": "ok"
       },
-      "domains_tried": [
-        "the10bestcompaniestoworkforindelhincrin2026.com",
-        "the10bestcompaniestoworkforindelhincrin2026.in",
-        "the10bestcompaniestoworkforindelhincrin2026.co.in",
-        "the10bestcompaniestoworkforindelhincrin2026.io",
-        "the10bestcompaniestoworkforindelhincrin2026.org"
-      ]
-    }
+      "phones": {
+        "+44 7887081915": "ok",
+        "+91 8447966431": "ok"
+      },
+      "website": "ok"
+    },
+    "_verification_passed": true
   },
   {
     "company_name": "24x7 IT Company in Delhi",
@@ -2902,34 +3628,39 @@
       "people_dropped:2"
     ],
     "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
       "domain_source": "existing_website",
       "whois": {
-        "registrar": "GoDaddy.com, LLC",
-        "creation_date": "[datetime.datetime(2005, 2, 16, 7, 3, 23, 300000, tzinfo=tzoffset('UTC', 0)), datetime.datetime(2005, 2, 16, 7, 3, 23, tzinfo=tzoffset('UTC', 0))]",
+        "registrar": "GoDaddy",
+        "creation_date": "2005-02-16 07:03:23.300000+00:00",
         "org": null,
         "country": "IN"
+      }
+    },
+    "_verified_emails": [
+      "jane.doe@example.com",
+      "marketing@progressive.in",
+      "solutions@progressive.in"
+    ],
+    "_verified_phones": [
+      "+91 120 6373737"
+    ],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "emails": {
+        "jane.doe@example.com": "ok",
+        "marketing@progressive.in": "ok",
+        "solutions@progressive.in": "ok"
       },
-      "discovered_emails": [
-        "umesh.babu@progressive.in",
-        "venu.garg@progressive.in",
-        "sandeep.khanna@progressive.in",
-        "divya.goswami@progressive.in",
-        "monika.pal@progressive.in",
-        "prateek.garg@progressive.in",
-        "anushka.sharma@progressive.in",
-        "ankit.pandey@progressive.in",
-        "vishal.goswami@progressive.in",
-        "bhavik.ambani@progressive.in"
-      ]
-    }
+      "phones": {
+        "+91 120 6373737": "ok"
+      },
+      "website": "ok"
+    },
+    "_verification_passed": true
   },
   {
     "company_name": "IT Company India",
-    "website": null,
+    "website": "https://itcompanyindia.com",
     "linkedin_company": "https://in.linkedin.com/company/itcompanyindia",
     "location": "delhi",
     "industry": "it company",
@@ -2953,10 +3684,6 @@
       "sparse_no_contact_channel"
     ],
     "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
       "domains_tried": [
         "itcompanyindia.com"
       ],
@@ -2964,15 +3691,22 @@
       "discovered_website": "https://itcompanyindia.com",
       "whois": {
         "registrar": "GoDaddy.com, LLC",
-        "creation_date": "[datetime.datetime(2011, 8, 20, 17, 2, 30, tzinfo=tzoffset('UTC', 0)), datetime.datetime(2011, 8, 20, 12, 2, 30, tzinfo=tzoffset('UTC', 0))]",
-        "org": "Domains By Proxy, LLC",
-        "country": "US"
+        "creation_date": "2011-08-20 17:02:30+00:00",
+        "org": null,
+        "country": null
       }
-    }
+    },
+    "_verified_emails": [],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "website": "ok"
+    },
+    "_verification_passed": true
   },
   {
     "company_name": "I.T. Solutions India Pvt Ltd",
-    "website": null,
+    "website": "https://itindia.com",
     "linkedin_company": "https://in.linkedin.com/company/i-t-solutions-india-pvt-ltd",
     "location": "delhi",
     "industry": "it company",
@@ -2996,139 +3730,29 @@
       "sparse_no_contact_channel"
     ],
     "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
       "domains_tried": [
-        "itindia.com",
-        "itindia.in",
-        "itindia.co.in",
-        "itindia.io",
-        "itindia.org"
-      ]
-    }
-  },
-  {
-    "company_name": "IT company in noida delhi",
-    "website": null,
-    "linkedin_company": "https://www.linkedin.com/company/it-company-in-noida-delhi",
-    "location": "delhi",
-    "industry": "it company",
-    "lead_type": "b2b",
-    "contact_page": null,
-    "about_page": null,
-    "team_page": null,
-    "emails": [],
-    "phones": [],
-    "social_links": {},
-    "people": [
-      {
-        "name": "Mohd Vashif",
-        "designation": "CEO",
-        "linkedin": "https://in.linkedin.com/in/mohdvashif"
+        "itindia.com"
+      ],
+      "domain_source": "guessed_and_verified",
+      "discovered_website": "https://itindia.com",
+      "whois": {
+        "registrar": "GoDaddy.com, LLC",
+        "creation_date": "2001-06-07 06:00:16+00:00",
+        "org": null,
+        "country": null
       }
-    ],
-    "source": "LinkedIn",
-    "_source_file": "data-3.json",
-    "_flags": [
-      "sparse_no_contact_channel"
-    ],
-    "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
-      "domains_tried": [
-        "itcompanyinnoidadelhi.com",
-        "itcompanyinnoidadelhi.in",
-        "itcompanyinnoidadelhi.co.in",
-        "itcompanyinnoidadelhi.io",
-        "itcompanyinnoidadelhi.org"
-      ]
-    }
-  },
-  {
-    "company_name": "NTPLWorld IT Company",
-    "website": null,
-    "linkedin_company": "https://in.linkedin.com/company/ntplworld",
-    "location": "delhi",
-    "industry": "it company",
-    "lead_type": "b2b",
-    "contact_page": null,
-    "about_page": null,
-    "team_page": null,
-    "emails": [],
-    "phones": [],
-    "social_links": {},
-    "people": [
-      {
-        "name": "Aklesh Jareda",
-        "designation": "Founder",
-        "linkedin": "https://in.linkedin.com/in/ntplfounderaklesh"
-      }
-    ],
-    "source": "LinkedIn",
-    "_source_file": "data-3.json",
-    "_flags": [
-      "sparse_no_contact_channel"
-    ],
-    "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
-      "domains_tried": [
-        "ntplworlditcompany.com",
-        "ntplworlditcompany.in",
-        "ntplworlditcompany.co.in",
-        "ntplworlditcompany.io",
-        "ntplworlditcompany.org"
-      ]
-    }
-  },
-  {
-    "company_name": "WebZonal-IT-Company",
-    "website": null,
-    "linkedin_company": "https://in.linkedin.com/company/webzonal-it-company",
-    "location": "delhi",
-    "industry": "it company",
-    "lead_type": "b2b",
-    "contact_page": null,
-    "about_page": null,
-    "team_page": null,
-    "emails": [],
-    "phones": [],
-    "social_links": {},
-    "people": [
-      {
-        "name": "Harshdeep Kaur",
-        "designation": "Founder",
-        "linkedin": "https://in.linkedin.com/in/harshdeep-kaur-9931a010a"
-      }
-    ],
-    "source": "LinkedIn",
-    "_source_file": "data-3.json",
-    "_flags": [
-      "sparse_no_contact_channel"
-    ],
-    "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
-      "domains_tried": [
-        "webzonalitcompany.com",
-        "webzonalitcompany.in",
-        "webzonalitcompany.co.in",
-        "webzonalitcompany.io",
-        "webzonalitcompany.org"
-      ]
-    }
+    },
+    "_verified_emails": [],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "website": "ok"
+    },
+    "_verification_passed": true
   },
   {
     "company_name": "Meentosys Private Limited",
-    "website": null,
+    "website": "https://meentosys.com",
     "linkedin_company": "https://in.linkedin.com/company/meentosysprivatelimited",
     "location": "delhi",
     "industry": "it company",
@@ -3146,10 +3770,6 @@
       "sparse_no_contact_channel"
     ],
     "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
       "domains_tried": [
         "meentosys.com"
       ],
@@ -3157,18 +3777,22 @@
       "discovered_website": "https://meentosys.com",
       "whois": {
         "registrar": "GoDaddy.com, LLC",
-        "creation_date": "[datetime.datetime(2017, 2, 3, 8, 20, 1, tzinfo=tzoffset('UTC', 0)), datetime.datetime(2017, 2, 3, 3, 20, 1, tzinfo=tzoffset('UTC', 0))]",
-        "org": "Domains By Proxy, LLC",
-        "country": "US"
-      },
-      "discovered_emails": [
-        "info@meentosys.com"
-      ]
-    }
+        "creation_date": "2017-02-03 08:20:01+00:00",
+        "org": null,
+        "country": null
+      }
+    },
+    "_verified_emails": [],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "website": "ok"
+    },
+    "_verification_passed": true
   },
   {
     "company_name": "Team Computers",
-    "website": null,
+    "website": "https://teamcomputers.com",
     "linkedin_company": "https://in.linkedin.com/company/team-computers",
     "location": "delhi",
     "industry": "it company",
@@ -3192,38 +3816,29 @@
       "sparse_no_contact_channel"
     ],
     "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
       "domains_tried": [
         "teamcomputers.com"
       ],
       "domain_source": "guessed_and_verified",
       "discovered_website": "https://teamcomputers.com",
       "whois": {
-        "registrar": "Network Solutions, LLC",
+        "registrar": "NETWORK SOLUTIONS, LLC.",
         "creation_date": "1999-05-18 22:53:42+00:00",
         "org": null,
         "country": "IN"
-      },
-      "discovered_emails": [
-        "deepak.milind@teamcomputers.com",
-        "sparsh.sharma@teamcomputers.com",
-        "leena.yadav@teamcomputers.com",
-        "ravi.shankar@teamcomputers.com",
-        "manoj.rawat@teamcomputers.com",
-        "saurabh.rai@teamcomputers.com",
-        "komal.verma@teamcomputers.com",
-        "radha.rajput@teamcomputers.com",
-        "suman.kumari@teamcomputers.com",
-        "vijay.bisht@teamcomputers.com"
-      ]
-    }
+      }
+    },
+    "_verified_emails": [],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "website": "ok"
+    },
+    "_verification_passed": true
   },
   {
     "company_name": "Proactive Data Systems",
-    "website": null,
+    "website": "https://proactivedatasystems.com",
     "linkedin_company": "https://in.linkedin.com/company/proactivedatasystems",
     "location": "delhi",
     "industry": "it company",
@@ -3247,10 +3862,6 @@
       "sparse_no_contact_channel"
     ],
     "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
       "domains_tried": [
         "proactivedatasystems.com"
       ],
@@ -3262,50 +3873,18 @@
         "org": "ORGANIZATION NAME MASKED",
         "country": "US"
       }
-    }
-  },
-  {
-    "company_name": "NEC Corporation India Pvt Ltd.",
-    "website": null,
-    "linkedin_company": "https://in.linkedin.com/company/nec-corporation-india",
-    "location": "delhi",
-    "industry": "it company",
-    "lead_type": "b2b",
-    "contact_page": null,
-    "about_page": null,
-    "team_page": null,
-    "emails": [],
-    "phones": [],
-    "social_links": {},
-    "people": [
-      {
-        "name": "Aalok Kumar",
-        "designation": null,
-        "linkedin": "https://sg.linkedin.com/in/aalok-kumar"
-      }
-    ],
-    "source": "LinkedIn",
-    "_source_file": "data-3.json",
-    "_flags": [
-      "sparse_no_contact_channel"
-    ],
-    "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
-      "domains_tried": [
-        "neccorporationindia.com",
-        "neccorporationindia.in",
-        "neccorporationindia.co.in",
-        "neccorporationindia.io",
-        "neccorporationindia.org"
-      ]
-    }
+    },
+    "_verified_emails": [],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "website": "ok"
+    },
+    "_verification_passed": true
   },
   {
     "company_name": "Delhi Co.",
-    "website": null,
+    "website": "https://delhico.com",
     "linkedin_company": "https://in.linkedin.com/company/delhi-co-",
     "location": "delhi",
     "industry": "it company",
@@ -3329,10 +3908,6 @@
       "sparse_no_contact_channel"
     ],
     "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
       "domains_tried": [
         "delhico.com"
       ],
@@ -3343,12 +3918,15 @@
         "creation_date": "2015-03-09 14:26:17+00:00",
         "org": "REDACTED FOR PRIVACY",
         "country": "IN"
-      },
-      "discovered_emails": [
-        "palak@delhico.com",
-        "hi@delhico.com"
-      ]
-    }
+      }
+    },
+    "_verified_emails": [],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "website": "ok"
+    },
+    "_verification_passed": true
   },
   {
     "company_name": "Built In Delhi",
@@ -3376,10 +3954,6 @@
       "email_junk:bg-info@2x.png"
     ],
     "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
       "domain_source": "existing_website",
       "whois": {
         "registrar": "GoDaddy",
@@ -3387,7 +3961,14 @@
         "org": null,
         "country": "US"
       }
-    }
+    },
+    "_verified_emails": [],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "website": "ok"
+    },
+    "_verification_passed": true
   },
   {
     "company_name": "» Current Startups",
@@ -3481,29 +4062,93 @@
       "people_dropped:3"
     ],
     "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
       "domain_source": "existing_website",
       "whois": {
         "registrar": "GoDaddy",
         "creation_date": "2015-11-26 10:01:51.807000+00:00",
         "org": null,
         "country": "IN"
+      }
+    },
+    "_verified_emails": [
+      "AshutoshPastor@fitt-iitd.in",
+      "Gaurav.Jain@fitt.iitd.ac.in",
+      "Gautam.Kumar@fitt.iitd.ac.in",
+      "NamitaGupta@fitt-iitd.in",
+      "Seema.Lamba@fitt.iitd.ac.in",
+      "ankit@fitt-iitd.in",
+      "ashutosh.pastor@fitt.iitd.ac.in",
+      "bbif.fitt@gmail.com",
+      "deancorp@admin.iitd.ac.in",
+      "director@admin.iitd.ernet.in",
+      "fitt00159@fitt.iitd.ac.in",
+      "gopalnaveenfitt@gmail.com",
+      "jayantj@am.iitd.ac.in",
+      "mdfitt@fitt.iitd.ac.in",
+      "mdfitt@gmail.com",
+      "namita.gupta@fitt.iitd.ac.in",
+      "naveen.gopal@fitt.iitd.ac.in",
+      "panda@cse.iitd.ac.in",
+      "tarun@fitt-iitd.in",
+      "uttam.aswal@fitt.iitd.ac.in"
+    ],
+    "_verified_phones": [
+      "+91 11 26596078",
+      "+91 11 26597167",
+      "+91 11 2685 1169",
+      "+91 11 2685 7762",
+      "+91 7503815430",
+      "+91 8587800361",
+      "+91 9718877312",
+      "+91 9911684182",
+      "+91 9999099075",
+      "+91-11-2659-1701"
+    ],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "emails": {
+        "AshutoshPastor@fitt-iitd.in": "ok",
+        "Gaurav.Jain@fitt.iitd.ac.in": "ok",
+        "Gautam.Kumar@fitt.iitd.ac.in": "ok",
+        "NamitaGupta@fitt-iitd.in": "ok",
+        "Seema.Lamba@fitt.iitd.ac.in": "ok",
+        "ankit@fitt-iitd.in": "ok",
+        "ashutosh.pastor@fitt.iitd.ac.in": "ok",
+        "bbif.fitt@gmail.com": "ok",
+        "deancorp@admin.iitd.ac.in": "ok",
+        "director@admin.iitd.ernet.in": "ok",
+        "fitt00159@fitt.iitd.ac.in": "ok",
+        "gopalnaveenfitt@gmail.com": "ok",
+        "jayantj@am.iitd.ac.in": "ok",
+        "mdfitt@fitt.iitd.ac.in": "ok",
+        "mdfitt@gmail.com": "ok",
+        "namita.gupta@fitt.iitd.ac.in": "ok",
+        "naveen.gopal@fitt.iitd.ac.in": "ok",
+        "panda@cse.iitd.ac.in": "ok",
+        "tarun@fitt-iitd.in": "ok",
+        "uttam.aswal@fitt.iitd.ac.in": "ok"
       },
-      "discovered_emails": [
-        "namitagupta@fitt-iitd.in",
-        "ankit@fitt-iitd.in",
-        "vaibhavparihar@fitt-iitd.in",
-        "subratrai@fitt-iitd.in",
-        "ayurshrikesarwani@fitt-iitd.in",
-        "nishasagar@fitt-iitd.in",
-        "akashrana@fitt-iitd.in",
-        "akashyadav@fitt-iitd.in",
-        "ashishmishra@fitt-iitd.in",
-        "priyasachdeva@fitt-iitd.in"
-      ]
-    }
+      "phones": {
+        "+91 11 26596078": "ok",
+        "+91 11 26597167": "ok",
+        "+91 11 2685 1169": "ok",
+        "+91 11 2685 7762": "ok",
+        "+91 7503815430": "ok",
+        "+91 8587800361": "ok",
+        "+91 9718877312": "ok",
+        "+91 9911684182": "ok",
+        "+91 9999099075": "ok",
+        "+91-11-2659-1701": "ok",
+        "2658 1013": "not_valid_number",
+        "2659 7153": "not_valid_number",
+        "2659 7164": "not_valid_number",
+        "2659 7167": "not_valid_number",
+        "2659 7289": "not_valid_number",
+        "26591246": "not_valid_number",
+        "26857762": "not_valid_number"
+      },
+      "website": "ok"
+    },
+    "_verification_passed": true
   }
 ]

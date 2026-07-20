@@ -244,17 +244,21 @@
       "email_junk:270x200@2x.png",
       "people_dropped:7"
     ],
-    "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
-      "domain_source": "existing_website",
+    "_osint_intelligence": {
       "whois": {
-        "registrar": "MarkMonitor Inc.",
+        "registrar": "MarkMonitor, Inc.",
         "creation_date": "2001-01-13 00:12:14+00:00",
-        "org": null,
-        "country": null
+        "org": "Wikimedia Foundation, Inc.",
+        "country": "US"
+      },
+      "deep_contacts": {
+        "emails": [],
+        "phones": [],
+        "schemas_found": []
+      },
+      "corporate_registry": {
+        "matched": false,
+        "reason": "not_found_in_registries"
       }
     }
   },
@@ -303,30 +307,22 @@
     "_flags": [
       "people_dropped:1"
     ],
-    "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
-      "domain_source": "existing_website",
+    "_osint_intelligence": {
       "whois": {
         "registrar": "GoDaddy.com, LLC",
         "creation_date": "2012-01-12 01:57:48+00:00",
         "org": null,
         "country": null
       },
-      "discovered_emails": [
-        "gbarrella@coursera.org",
-        "jdebusk@coursera.org",
-        "pmclinden@coursera.org",
-        "mclaessens@coursera.org",
-        "dmukherji@coursera.org",
-        "macharya@coursera.org",
-        "saman@coursera.org",
-        "abuente@coursera.org",
-        "cpittman@coursera.org",
-        "mnajem@coursera.org"
-      ]
+      "deep_contacts": {
+        "emails": [],
+        "phones": [],
+        "schemas_found": []
+      },
+      "corporate_registry": {
+        "matched": false,
+        "reason": "not_found_in_registries"
+      }
     }
   },
   {
@@ -379,30 +375,22 @@
     "_flags": [
       "people_dropped:9"
     ],
-    "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
-      "domain_source": "existing_website",
+    "_osint_intelligence": {
       "whois": {
         "registrar": "NAMECHEAP INC",
         "creation_date": "2017-12-16 01:52:01+00:00",
         "org": null,
         "country": null
       },
-      "discovered_emails": [
-        "max@together.ai",
-        "susan@together.ai",
-        "arielle@together.ai",
-        "skapadia@together.ai",
-        "jue@together.ai",
-        "ryan@together.ai",
-        "chris@together.ai",
-        "casper@together.ai",
-        "justin@together.ai",
-        "james@together.ai"
-      ]
+      "deep_contacts": {
+        "emails": [],
+        "phones": [],
+        "schemas_found": []
+      },
+      "corporate_registry": {
+        "matched": false,
+        "reason": "not_found_in_registries"
+      }
     }
   },
   {
@@ -452,30 +440,22 @@
       "email_junk:1456x728_V2@2x.png",
       "people_dropped:3"
     ],
-    "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
-      "domain_source": "existing_website",
+    "_osint_intelligence": {
       "whois": {
         "registrar": "CSC Corporate Domains, Inc.",
         "creation_date": "1986-03-19 05:00:00+00:00",
         "org": null,
         "country": null
       },
-      "discovered_emails": [
-        "valentin.ruscan@ibm.com",
-        "praveen.thota@ibm.com",
-        "jonathan.shapiro@ibm.com",
-        "adrika.shukla@ibm.com",
-        "honorine.rebeiro@ibm.com",
-        "adrienn.marosi@ibm.com",
-        "jimmy.yang@ibm.com",
-        "cristian.pita@ibm.com",
-        "andrew.sica@ibm.com",
-        "latisha.robinson@ibm.com"
-      ]
+      "deep_contacts": {
+        "emails": [],
+        "phones": [],
+        "schemas_found": []
+      },
+      "corporate_registry": {
+        "matched": false,
+        "reason": "not_found_in_registries"
+      }
     }
   },
   {
@@ -521,30 +501,22 @@
       "email_junk:logo-zoom-white@2x.png",
       "email_junk:logo-zoom@2x.png"
     ],
-    "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
-      "domain_source": "existing_website",
+    "_osint_intelligence": {
       "whois": {
         "registrar": "MarkMonitor, Inc.",
         "creation_date": "1999-04-22 04:00:00+00:00",
         "org": "Zoom Communications, Inc.",
         "country": "US"
       },
-      "discovered_emails": [
-        "blake.allen@zoom.com",
-        "hawley@zoom.com",
-        "rebecca.bernhard@zoom.com",
-        "shay.miller@zoom.com",
-        "parker.garcia@zoom.com",
-        "sage.jones@zoom.com",
-        "tatum.brown@zoom.com",
-        "zion.brown@zoom.com",
-        "lane.anderson@zoom.com",
-        "ellis.nguyen@zoom.com"
-      ]
+      "deep_contacts": {
+        "emails": [],
+        "phones": [],
+        "schemas_found": []
+      },
+      "corporate_registry": {
+        "matched": false,
+        "reason": "not_found_in_registries"
+      }
     }
   },
   {
@@ -590,30 +562,22 @@
     "_flags": [
       "people_dropped:4"
     ],
-    "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
-      "domain_source": "existing_website",
+    "_osint_intelligence": {
       "whois": {
         "registrar": "NOM-IQ Ltd dba Com Laude",
         "creation_date": "1997-07-30 04:00:00+00:00",
         "org": "Genesys Cloud Services, Inc.",
         "country": "US"
       },
-      "discovered_emails": [
-        "felix.axtmann@genesys.com",
-        "jason.cayanong@genesys.com",
-        "aristides.zabala@genesys.com",
-        "michael.long@genesys.com",
-        "mohamed.eisa@genesys.com",
-        "omar.guerra@genesys.com",
-        "karen.chow@genesys.com",
-        "tim.wilson@genesys.com",
-        "anna.ditchella@genesys.com",
-        "hamza.nassar@genesys.com"
-      ]
+      "deep_contacts": {
+        "emails": [],
+        "phones": [],
+        "schemas_found": []
+      },
+      "corporate_registry": {
+        "matched": false,
+        "reason": "not_found_in_registries"
+      }
     }
   },
   {
@@ -648,30 +612,22 @@
       "email_junk:image-ai-demo-center@2x.png",
       "people_dropped:7"
     ],
-    "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
-      "domain_source": "existing_website",
+    "_osint_intelligence": {
       "whois": {
         "registrar": "GoDaddy.com, LLC",
         "creation_date": "[datetime.datetime(1999, 2, 16, 5, 0, tzinfo=tzoffset('UTC', 0)), datetime.datetime(1999, 2, 16, 0, 0, tzinfo=tzoffset('UTC', 0))]",
         "org": "Domains By Proxy, LLC",
         "country": "US"
       },
-      "discovered_emails": [
-        "denise.kopinski@dialpad.com",
-        "jesu.joseph@dialpad.com",
-        "brett.reed@dialpad.com",
-        "curtis.owens@dialpad.com",
-        "tyler.wright@dialpad.com",
-        "claire.vieth@dialpad.com",
-        "joseph.casey@dialpad.com",
-        "mike.franze@dialpad.com",
-        "blake.cross@dialpad.com",
-        "robbie.mcdonald@dialpad.com"
-      ]
+      "deep_contacts": {
+        "emails": [],
+        "phones": [],
+        "schemas_found": []
+      },
+      "corporate_registry": {
+        "matched": false,
+        "reason": "not_found_in_registries"
+      }
     }
   },
   {
@@ -699,30 +655,22 @@
     "_flags": [
       "people_dropped:2"
     ],
-    "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
-      "domain_source": "existing_website",
+    "_osint_intelligence": {
       "whois": {
         "registrar": "Squarespace Domains II LLC",
         "creation_date": "2017-12-21 02:05:11+00:00",
         "org": "Learneo, Inc.",
         "country": "US"
       },
-      "discovered_emails": [
-        "aparna.iyer@quillbot.com",
-        "saurabh.goel@quillbot.com",
-        "guilherme.figueiredo@quillbot.com",
-        "yaser.hameed@quillbot.com",
-        "cameron.leel@quillbot.com",
-        "abdul.nafeen@quillbot.com",
-        "rodrigo.fontes@quillbot.com",
-        "jack.lawson@quillbot.com",
-        "miranda.godinez@quillbot.com",
-        "asif.jamil@quillbot.com"
-      ]
+      "deep_contacts": {
+        "emails": [],
+        "phones": [],
+        "schemas_found": []
+      },
+      "corporate_registry": {
+        "matched": false,
+        "reason": "not_found_in_registries"
+      }
     }
   },
   {
@@ -764,24 +712,22 @@
     "_flags": [
       "email_junk:noreply@vercel.com"
     ],
-    "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
-      "domain_source": "existing_website",
+    "_osint_intelligence": {
       "whois": {
         "registrar": "NAMECHEAP INC",
         "creation_date": "2022-08-02 17:00:49+00:00",
         "org": null,
         "country": null
       },
-      "discovered_emails": [
-        "richard@mails.ai",
-        "janey@mails.ai",
-        "hi@mails.ai",
-        "support@mails.ai"
-      ]
+      "deep_contacts": {
+        "emails": [],
+        "phones": [],
+        "schemas_found": []
+      },
+      "corporate_registry": {
+        "matched": false,
+        "reason": "not_found_in_registries"
+      }
     }
   },
   {
@@ -817,23 +763,22 @@
     "_flags": [
       "email_junk:example@domain.com"
     ],
-    "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
-      "domain_source": "existing_website",
+    "_osint_intelligence": {
       "whois": {
         "registrar": "NAMECHEAP INC",
         "creation_date": "2023-01-30 10:07:48+00:00",
         "org": null,
         "country": null
       },
-      "discovered_emails": [
-        "info@writemail.ai",
-        "george@writemail.ai",
-        "denise@writemail.ai"
-      ]
+      "deep_contacts": {
+        "emails": [],
+        "phones": [],
+        "schemas_found": []
+      },
+      "corporate_registry": {
+        "matched": false,
+        "reason": "not_found_in_registries"
+      }
     }
   },
   {
@@ -915,30 +860,22 @@
     "_flags": [
       "people_dropped:28"
     ],
-    "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
-      "domain_source": "existing_website",
+    "_osint_intelligence": {
       "whois": {
         "registrar": "Whois Corp.",
         "creation_date": "1994-11-29 05:00:00+00:00",
         "org": "Samsung Electronics CO., Ltd",
         "country": "KR"
       },
-      "discovered_emails": [
-        "jean.p@samsung.com",
-        "richard.kim@samsung.com",
-        "joon.lee@samsung.com",
-        "paul.gaskin@samsung.com",
-        "jerrelin.c@samsung.com",
-        "ashfaque.q@samsung.com",
-        "n.bourdais@samsung.com",
-        "keunchul.hwang@samsung.com",
-        "arun.r@samsung.com",
-        "youngouk.cho@samsung.com"
-      ]
+      "deep_contacts": {
+        "emails": [],
+        "phones": [],
+        "schemas_found": []
+      },
+      "corporate_registry": {
+        "matched": false,
+        "reason": "not_found_in_registries"
+      }
     }
   },
   {
@@ -990,30 +927,22 @@
       "email_junk:1456x728_V2@2x.png",
       "people_dropped:9"
     ],
-    "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
-      "domain_source": "existing_website",
+    "_osint_intelligence": {
       "whois": {
         "registrar": "CSC Corporate Domains, Inc.",
         "creation_date": "1986-03-19 05:00:00+00:00",
         "org": null,
         "country": null
       },
-      "discovered_emails": [
-        "valentin.ruscan@ibm.com",
-        "praveen.thota@ibm.com",
-        "jonathan.shapiro@ibm.com",
-        "adrika.shukla@ibm.com",
-        "honorine.rebeiro@ibm.com",
-        "adrienn.marosi@ibm.com",
-        "jimmy.yang@ibm.com",
-        "cristian.pita@ibm.com",
-        "andrew.sica@ibm.com",
-        "latisha.robinson@ibm.com"
-      ]
+      "deep_contacts": {
+        "emails": [],
+        "phones": [],
+        "schemas_found": []
+      },
+      "corporate_registry": {
+        "matched": false,
+        "reason": "not_found_in_registries"
+      }
     }
   },
   {
@@ -1036,25 +965,22 @@
     "_flags": [
       "people_dropped:4"
     ],
-    "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
-      "domain_source": "existing_website",
+    "_osint_intelligence": {
       "whois": {
         "registrar": "NAMECHEAP INC",
         "creation_date": "2023-12-09 21:11:10+00:00",
         "org": null,
         "country": null
       },
-      "discovered_emails": [
-        "grant@phonely.ai",
-        "will@phonely.ai",
-        "support@phonely.ai",
-        "hello@phonely.ai",
-        "careers@phonely.ai"
-      ]
+      "deep_contacts": {
+        "emails": [],
+        "phones": [],
+        "schemas_found": []
+      },
+      "corporate_registry": {
+        "matched": false,
+        "reason": "not_found_in_registries"
+      }
     }
   },
   {
@@ -1082,17 +1008,21 @@
     "_flags": [
       "people_dropped:3"
     ],
-    "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
-      "domain_source": "existing_website",
+    "_osint_intelligence": {
       "whois": {
         "registrar": "MarkMonitor, Inc.",
         "creation_date": "1994-11-01 05:00:00+00:00",
         "org": "Amazon Technologies, Inc.",
         "country": "US"
+      },
+      "deep_contacts": {
+        "emails": [],
+        "phones": [],
+        "schemas_found": []
+      },
+      "corporate_registry": {
+        "matched": false,
+        "reason": "not_found_in_registries"
       }
     }
   },
@@ -1128,30 +1058,22 @@
       "email_junk:1456x728_V2@2x.png",
       "people_dropped:8"
     ],
-    "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
-      "domain_source": "existing_website",
+    "_osint_intelligence": {
       "whois": {
         "registrar": "CSC Corporate Domains, Inc.",
         "creation_date": "1986-03-19 05:00:00+00:00",
         "org": null,
         "country": null
       },
-      "discovered_emails": [
-        "valentin.ruscan@ibm.com",
-        "praveen.thota@ibm.com",
-        "jonathan.shapiro@ibm.com",
-        "adrika.shukla@ibm.com",
-        "honorine.rebeiro@ibm.com",
-        "adrienn.marosi@ibm.com",
-        "jimmy.yang@ibm.com",
-        "cristian.pita@ibm.com",
-        "andrew.sica@ibm.com",
-        "latisha.robinson@ibm.com"
-      ]
+      "deep_contacts": {
+        "emails": [],
+        "phones": [],
+        "schemas_found": []
+      },
+      "corporate_registry": {
+        "matched": false,
+        "reason": "not_found_in_registries"
+      }
     }
   },
   {
@@ -1230,30 +1152,22 @@
     "_flags": [
       "people_dropped:28"
     ],
-    "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
-      "domain_source": "existing_website",
+    "_osint_intelligence": {
       "whois": {
         "registrar": "NETIM SAS",
         "creation_date": "2005-10-20 02:54:57+00:00",
         "org": null,
         "country": null
       },
-      "discovered_emails": [
-        "romina.kuznietz@avenga.com",
-        "nicolas.ledesma@avenga.com",
-        "benjamin.pierola@avenga.com",
-        "andriy.dzyben@avenga.com",
-        "piotr.balys@avenga.com",
-        "justyna.wroniak@avenga.com",
-        "gregor.hermann@avenga.com",
-        "javier.zoppetti@avenga.com",
-        "nicolas.meudt@avenga.com",
-        "boris.willms@avenga.com"
-      ]
+      "deep_contacts": {
+        "emails": [],
+        "phones": [],
+        "schemas_found": []
+      },
+      "corporate_registry": {
+        "matched": false,
+        "reason": "not_found_in_registries"
+      }
     }
   },
   {
@@ -1318,17 +1232,21 @@
     "_flags": [
       "people_dropped:12"
     ],
-    "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
-      "domain_source": "existing_website",
+    "_osint_intelligence": {
       "whois": {
         "registrar": "CSC Corporate Domains, Inc.",
         "creation_date": "2000-08-29 17:05:35+00:00",
         "org": null,
         "country": null
+      },
+      "deep_contacts": {
+        "emails": [],
+        "phones": [],
+        "schemas_found": []
+      },
+      "corporate_registry": {
+        "matched": false,
+        "reason": "not_found_in_registries"
       }
     }
   },
@@ -1373,30 +1291,22 @@
     "_flags": [
       "people_dropped:2"
     ],
-    "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
-      "domain_source": "existing_website",
+    "_osint_intelligence": {
       "whois": {
         "registrar": "MarkMonitor, Inc.",
         "creation_date": "[datetime.datetime(1993, 6, 17, 4, 0, tzinfo=tzoffset('UTC', 0)), datetime.datetime(1993, 6, 17, 7, 0, tzinfo=tzoffset('UTC', 0))]",
         "org": "Forbes Media LLC",
         "country": "US"
       },
-      "discovered_emails": [
-        "jokuszka@forbes.com",
-        "kbornholtz@forbes.com",
-        "lvillaraut@forbes.com",
-        "jbruno@forbes.com",
-        "sgangishetti@forbes.com",
-        "gvasquez@forbes.com",
-        "tkalamajka@forbes.com",
-        "mbrown@forbes.com",
-        "djohnson@forbes.com",
-        "lboyers@forbes.com"
-      ]
+      "deep_contacts": {
+        "emails": [],
+        "phones": [],
+        "schemas_found": []
+      },
+      "corporate_registry": {
+        "matched": false,
+        "reason": "not_found_in_registries"
+      }
     }
   },
   {
@@ -1446,30 +1356,22 @@
     "_flags": [
       "people_dropped:15"
     ],
-    "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
-      "domain_source": "existing_website",
+    "_osint_intelligence": {
       "whois": {
         "registrar": "Squarespace Domains II LLC",
         "creation_date": "2004-02-17 22:06:36+00:00",
         "org": "Aible",
         "country": "US"
       },
-      "discovered_emails": [
-        "brad@aible.com",
-        "greg@aible.com",
-        "rod@aible.com",
-        "afsana@aible.com",
-        "jonathan@aible.com",
-        "erin@aible.com",
-        "dylan@aible.com",
-        "rutika@aible.com",
-        "alex@aible.com",
-        "joe@aible.com"
-      ]
+      "deep_contacts": {
+        "emails": [],
+        "phones": [],
+        "schemas_found": []
+      },
+      "corporate_registry": {
+        "matched": false,
+        "reason": "not_found_in_registries"
+      }
     }
   },
   {
@@ -1496,22 +1398,18 @@
     "_flags": [
       "sparse_no_contact_channel"
     ],
-    "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
+    "_osint_intelligence": {
       "domains_tried": [
         "aiio.com",
-        "aiio.in"
+        "aiio.in",
+        "aiio.co.in",
+        "aiio.io",
+        "aiio.org",
+        "aiio.ai"
       ],
-      "domain_source": "guessed_and_verified",
-      "discovered_website": "https://aiio.in",
-      "whois": {
-        "registrar": "DYNADOT LLC",
-        "creation_date": "[datetime.datetime(2023, 10, 25, 11, 19, 8, 751000, tzinfo=tzoffset('UTC', 0)), datetime.datetime(2023, 10, 25, 11, 19, 8, tzinfo=tzoffset('UTC', 0))]",
-        "org": null,
-        "country": "IN"
+      "corporate_registry": {
+        "matched": false,
+        "reason": "not_found_in_registries"
       }
     }
   },
@@ -1539,24 +1437,18 @@
     "_flags": [
       "sparse_no_contact_channel"
     ],
-    "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
+    "_osint_intelligence": {
       "domains_tried": [
         "aila.com",
         "aila.in",
         "aila.co.in",
-        "aila.io"
+        "aila.io",
+        "aila.org",
+        "aila.ai"
       ],
-      "domain_source": "guessed_and_verified",
-      "discovered_website": "https://aila.io",
-      "whois": {
-        "registrar": "DYNADOT LLC",
-        "creation_date": "2015-10-02 15:55:05+00:00",
-        "org": null,
-        "country": null
+      "corporate_registry": {
+        "matched": false,
+        "reason": "not_found_in_registries"
       }
     }
   },
@@ -1584,18 +1476,19 @@
     "_flags": [
       "sparse_no_contact_channel"
     ],
-    "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
+    "_osint_intelligence": {
       "domains_tried": [
         "genaiworks.com",
         "genaiworks.in",
         "genaiworks.co.in",
         "genaiworks.io",
-        "genaiworks.org"
-      ]
+        "genaiworks.org",
+        "genaiworks.ai"
+      ],
+      "corporate_registry": {
+        "matched": false,
+        "reason": "not_found_in_registries"
+      }
     }
   },
   {
@@ -1622,18 +1515,19 @@
     "_flags": [
       "sparse_no_contact_channel"
     ],
-    "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
+    "_osint_intelligence": {
       "domains_tried": [
         "aiforgood.com",
         "aiforgood.in",
         "aiforgood.co.in",
         "aiforgood.io",
-        "aiforgood.org"
-      ]
+        "aiforgood.org",
+        "aiforgood.ai"
+      ],
+      "corporate_registry": {
+        "matched": false,
+        "reason": "not_found_in_registries"
+      }
     }
   },
   {
@@ -1660,34 +1554,19 @@
     "_flags": [
       "sparse_no_contact_channel"
     ],
-    "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
+    "_osint_intelligence": {
       "domains_tried": [
-        "ai.com"
+        "ai.com",
+        "ai.in",
+        "ai.co.in",
+        "ai.io",
+        "ai.org",
+        "ai.ai"
       ],
-      "domain_source": "guessed_and_verified",
-      "discovered_website": "https://ai.com",
-      "whois": {
-        "registrar": "GoDaddy.com, LLC",
-        "creation_date": "[datetime.datetime(1993, 5, 4, 4, 0, tzinfo=tzoffset('UTC', 0)), datetime.datetime(1993, 5, 3, 23, 0, tzinfo=tzoffset('UTC', 0))]",
-        "org": "Domains By Proxy, LLC",
-        "country": "US"
-      },
-      "discovered_emails": [
-        "contact@ai.com",
-        "allama@ai.com",
-        "tony@ai.com",
-        "enquiry@ai.com",
-        "job@ai.com",
-        "sample@ai.com",
-        "infobatch@ai.com",
-        "support@ai.com",
-        "webmaster@ai.com",
-        "hyphen@ai.com"
-      ]
+      "corporate_registry": {
+        "matched": false,
+        "reason": "not_found_in_registries"
+      }
     }
   },
   {
@@ -1714,21 +1593,18 @@
     "_flags": [
       "sparse_no_contact_channel"
     ],
-    "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
+    "_osint_intelligence": {
       "domains_tried": [
-        "standardai.com"
+        "standardai.com",
+        "standardai.in",
+        "standardai.co.in",
+        "standardai.io",
+        "standardai.org",
+        "standardai.ai"
       ],
-      "domain_source": "guessed_and_verified",
-      "discovered_website": "https://standardai.com",
-      "whois": {
-        "registrar": "GoDaddy.com, LLC",
-        "creation_date": "[datetime.datetime(2013, 10, 8, 22, 39, 21, tzinfo=tzoffset('UTC', 0)), datetime.datetime(2013, 10, 8, 17, 39, 21, tzinfo=tzoffset('UTC', 0))]",
-        "org": "Domains By Proxy, LLC",
-        "country": "US"
+      "corporate_registry": {
+        "matched": false,
+        "reason": "not_found_in_registries"
       }
     }
   },
@@ -1756,28 +1632,19 @@
     "_flags": [
       "sparse_no_contact_channel"
     ],
-    "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
+    "_osint_intelligence": {
       "domains_tried": [
-        "globalai.com"
+        "globalai.com",
+        "globalai.in",
+        "globalai.co.in",
+        "globalai.io",
+        "globalai.org",
+        "globalai.ai"
       ],
-      "domain_source": "guessed_and_verified",
-      "discovered_website": "https://globalai.com",
-      "whois": {
-        "registrar": "GoDaddy.com, LLC",
-        "creation_date": "[datetime.datetime(2000, 3, 13, 19, 20, 50, tzinfo=tzoffset('UTC', 0)), datetime.datetime(2000, 3, 13, 14, 20, 50, tzinfo=tzoffset('UTC', 0))]",
-        "org": "Domains By Proxy, LLC",
-        "country": "US"
-      },
-      "discovered_emails": [
-        "balazs.toth@globalai.com",
-        "marzena@globalai.com",
-        "info@globalai.com",
-        "legal@globalai.com"
-      ]
+      "corporate_registry": {
+        "matched": false,
+        "reason": "not_found_in_registries"
+      }
     }
   },
   {
@@ -1804,18 +1671,19 @@
     "_flags": [
       "sparse_no_contact_channel"
     ],
-    "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
+    "_osint_intelligence": {
       "domains_tried": [
         "theaijournal.com",
         "theaijournal.in",
         "theaijournal.co.in",
         "theaijournal.io",
-        "theaijournal.org"
-      ]
+        "theaijournal.org",
+        "theaijournal.ai"
+      ],
+      "corporate_registry": {
+        "matched": false,
+        "reason": "not_found_in_registries"
+      }
     }
   },
   {
@@ -1929,25 +1797,22 @@
     "_flags": [
       "people_dropped:56"
     ],
-    "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
-      "domain_source": "existing_website",
+    "_osint_intelligence": {
       "whois": {
         "registrar": "GoDaddy.com, LLC",
         "creation_date": "2015-07-15 11:50:40+00:00",
         "org": "Domains By Proxy, LLC",
         "country": "US"
       },
-      "discovered_emails": [
-        "jin@goodfirms.co",
-        "nathan@goodfirms.co",
-        "sophia@goodfirms.co",
-        "darren@goodfirms.co",
-        "info@goodfirms.co"
-      ]
+      "deep_contacts": {
+        "emails": [],
+        "phones": [],
+        "schemas_found": []
+      },
+      "corporate_registry": {
+        "matched": false,
+        "reason": "not_found_in_registries"
+      }
     }
   },
   {
@@ -2059,25 +1924,22 @@
     "_flags": [
       "people_dropped:56"
     ],
-    "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
-      "domain_source": "existing_website",
+    "_osint_intelligence": {
       "whois": {
         "registrar": "GoDaddy.com, LLC",
         "creation_date": "2015-07-15 11:50:40+00:00",
         "org": "Domains By Proxy, LLC",
         "country": "US"
       },
-      "discovered_emails": [
-        "jin@goodfirms.co",
-        "nathan@goodfirms.co",
-        "sophia@goodfirms.co",
-        "darren@goodfirms.co",
-        "info@goodfirms.co"
-      ]
+      "deep_contacts": {
+        "emails": [],
+        "phones": [],
+        "schemas_found": []
+      },
+      "corporate_registry": {
+        "matched": false,
+        "reason": "not_found_in_registries"
+      }
     }
   },
   {
@@ -2192,25 +2054,22 @@
     "_flags": [
       "people_dropped:56"
     ],
-    "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
-      "domain_source": "existing_website",
+    "_osint_intelligence": {
       "whois": {
         "registrar": "GoDaddy.com, LLC",
         "creation_date": "2015-07-15 11:50:40+00:00",
-        "org": null,
-        "country": null
+        "org": "Domains By Proxy, LLC",
+        "country": "US"
       },
-      "discovered_emails": [
-        "jin@goodfirms.co",
-        "nathan@goodfirms.co",
-        "sophia@goodfirms.co",
-        "darren@goodfirms.co",
-        "info@goodfirms.co"
-      ]
+      "deep_contacts": {
+        "emails": [],
+        "phones": [],
+        "schemas_found": []
+      },
+      "corporate_registry": {
+        "matched": false,
+        "reason": "not_found_in_registries"
+      }
     }
   },
   {
@@ -2322,25 +2181,22 @@
     "_flags": [
       "people_dropped:56"
     ],
-    "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
-      "domain_source": "existing_website",
+    "_osint_intelligence": {
       "whois": {
         "registrar": "GoDaddy.com, LLC",
         "creation_date": "2015-07-15 11:50:40+00:00",
-        "org": null,
-        "country": null
+        "org": "Domains By Proxy, LLC",
+        "country": "US"
       },
-      "discovered_emails": [
-        "jin@goodfirms.co",
-        "nathan@goodfirms.co",
-        "sophia@goodfirms.co",
-        "darren@goodfirms.co",
-        "info@goodfirms.co"
-      ]
+      "deep_contacts": {
+        "emails": [],
+        "phones": [],
+        "schemas_found": []
+      },
+      "corporate_registry": {
+        "matched": false,
+        "reason": "not_found_in_registries"
+      }
     }
   },
   {
@@ -2373,22 +2229,22 @@
     "_flags": [
       "email_junk:your@email.com"
     ],
-    "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
-      "domain_source": "existing_website",
+    "_osint_intelligence": {
       "whois": {
         "registrar": "GoDaddy.com, LLC",
-        "creation_date": "2018-05-08 09:03:39+00:00",
-        "org": null,
-        "country": null
+        "creation_date": "[datetime.datetime(2018, 5, 8, 9, 3, 39, tzinfo=tzoffset('UTC', 0)), datetime.datetime(2018, 5, 8, 4, 3, 39, tzinfo=tzoffset('UTC', 0))]",
+        "org": "Domains By Proxy, LLC",
+        "country": "US"
       },
-      "discovered_emails": [
-        "consult@squareops.com",
-        "contact@squareops.com"
-      ]
+      "deep_contacts": {
+        "emails": [],
+        "phones": [],
+        "schemas_found": []
+      },
+      "corporate_registry": {
+        "matched": false,
+        "reason": "not_found_in_registries"
+      }
     }
   },
   {
@@ -2416,29 +2272,19 @@
     "_flags": [
       "sparse_no_contact_channel"
     ],
-    "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
+    "_osint_intelligence": {
       "domains_tried": [
-        "turningcloud.com"
+        "turningcloud.com",
+        "turningcloud.in",
+        "turningcloud.co.in",
+        "turningcloud.io",
+        "turningcloud.org",
+        "turningcloud.ai"
       ],
-      "domain_source": "guessed_and_verified",
-      "discovered_website": "https://turningcloud.com",
-      "whois": {
-        "registrar": "GoDaddy.com, LLC",
-        "creation_date": "[datetime.datetime(2011, 4, 6, 17, 22, 53, tzinfo=tzoffset('UTC', 0)), datetime.datetime(2011, 4, 6, 12, 22, 53, tzinfo=tzoffset('UTC', 0))]",
-        "org": "Domains By Proxy, LLC",
-        "country": "US"
-      },
-      "discovered_emails": [
-        "ashish@turningcloud.com",
-        "nidhi@turningcloud.com",
-        "mayank@turningcloud.com",
-        "murthy@turningcloud.com",
-        "info@turningcloud.com"
-      ]
+      "corporate_registry": {
+        "matched": false,
+        "reason": "not_found_in_registries"
+      }
     }
   },
   {
@@ -2466,18 +2312,19 @@
     "_flags": [
       "sparse_no_contact_channel"
     ],
-    "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
+    "_osint_intelligence": {
       "domains_tried": [
         "cloudcertitude.com",
         "cloudcertitude.in",
         "cloudcertitude.co.in",
         "cloudcertitude.io",
-        "cloudcertitude.org"
-      ]
+        "cloudcertitude.org",
+        "cloudcertitude.ai"
+      ],
+      "corporate_registry": {
+        "matched": false,
+        "reason": "not_found_in_registries"
+      }
     }
   },
   {
@@ -2505,26 +2352,19 @@
     "_flags": [
       "sparse_no_contact_channel"
     ],
-    "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
+    "_osint_intelligence": {
       "domains_tried": [
-        "anantacloud.com"
+        "anantacloud.com",
+        "anantacloud.in",
+        "anantacloud.co.in",
+        "anantacloud.io",
+        "anantacloud.org",
+        "anantacloud.ai"
       ],
-      "domain_source": "guessed_and_verified",
-      "discovered_website": "https://anantacloud.com",
-      "whois": {
-        "registrar": "GoDaddy.com, LLC",
-        "creation_date": "[datetime.datetime(2025, 1, 6, 4, 27, 37, tzinfo=tzoffset('UTC', 0)), datetime.datetime(2025, 1, 5, 23, 27, 37, tzinfo=tzoffset('UTC', 0))]",
-        "org": "Domains By Proxy, LLC",
-        "country": "US"
-      },
-      "discovered_emails": [
-        "hello@anantacloud.com",
-        "hiring@anantacloud.com"
-      ]
+      "corporate_registry": {
+        "matched": false,
+        "reason": "not_found_in_registries"
+      }
     }
   },
   {
@@ -2552,18 +2392,19 @@
     "_flags": [
       "sparse_no_contact_channel"
     ],
-    "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
+    "_osint_intelligence": {
       "domains_tried": [
         "bcloudglobal.com",
         "bcloudglobal.in",
         "bcloudglobal.co.in",
         "bcloudglobal.io",
-        "bcloudglobal.org"
-      ]
+        "bcloudglobal.org",
+        "bcloudglobal.ai"
+      ],
+      "corporate_registry": {
+        "matched": false,
+        "reason": "not_found_in_registries"
+      }
     }
   },
   {
@@ -2591,18 +2432,19 @@
     "_flags": [
       "sparse_no_contact_channel"
     ],
-    "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
+    "_osint_intelligence": {
       "domains_tried": [
         "mpccloud.com",
         "mpccloud.in",
         "mpccloud.co.in",
         "mpccloud.io",
-        "mpccloud.org"
-      ]
+        "mpccloud.org",
+        "mpccloud.ai"
+      ],
+      "corporate_registry": {
+        "matched": false,
+        "reason": "not_found_in_registries"
+      }
     }
   },
   {
@@ -2630,26 +2472,19 @@
     "_flags": [
       "sparse_no_contact_channel"
     ],
-    "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
+    "_osint_intelligence": {
       "domains_tried": [
-        "cloudzent.com"
+        "cloudzent.com",
+        "cloudzent.in",
+        "cloudzent.co.in",
+        "cloudzent.io",
+        "cloudzent.org",
+        "cloudzent.ai"
       ],
-      "domain_source": "guessed_and_verified",
-      "discovered_website": "https://cloudzent.com",
-      "whois": {
-        "registrar": "BigRock Solutions Ltd.",
-        "creation_date": "2017-12-14 07:53:46+00:00",
-        "org": "Privacy Protect, LLC (PrivacyProtect.org)",
-        "country": "US"
-      },
-      "discovered_emails": [
-        "gaganjot.singh@cloudzent.com",
-        "info@cloudzent.com"
-      ]
+      "corporate_registry": {
+        "matched": false,
+        "reason": "not_found_in_registries"
+      }
     }
   },
   {
@@ -2677,18 +2512,19 @@
     "_flags": [
       "sparse_no_contact_channel"
     ],
-    "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
+    "_osint_intelligence": {
       "domains_tried": [
         "acecloud.com",
         "acecloud.in",
         "acecloud.co.in",
         "acecloud.io",
-        "acecloud.org"
-      ]
+        "acecloud.org",
+        "acecloud.ai"
+      ],
+      "corporate_registry": {
+        "matched": false,
+        "reason": "not_found_in_registries"
+      }
     }
   },
   {
@@ -2716,34 +2552,19 @@
     "_flags": [
       "sparse_no_contact_channel"
     ],
-    "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
+    "_osint_intelligence": {
       "domains_tried": [
-        "progression.com"
+        "progression.com",
+        "progression.in",
+        "progression.co.in",
+        "progression.io",
+        "progression.org",
+        "progression.ai"
       ],
-      "domain_source": "guessed_and_verified",
-      "discovered_website": "https://progression.com",
-      "whois": {
-        "registrar": "Network Solutions, LLC",
-        "creation_date": "1998-05-09 04:00:00+00:00",
-        "org": null,
-        "country": "US"
-      },
-      "discovered_emails": [
-        "rakesh.pawar@progression.com",
-        "sarthak.hooda@progression.com",
-        "bhushan.khadage@progression.com",
-        "bansi.dhar@progression.com",
-        "param.hooda@progression.com",
-        "susanta.praharaj@progression.com",
-        "harish.rawat@progression.com",
-        "narender.singh@progression.com",
-        "deepesh.yadav@progression.com",
-        "abhishek.kumar@progression.com"
-      ]
+      "corporate_registry": {
+        "matched": false,
+        "reason": "not_found_in_registries"
+      }
     }
   },
   {
@@ -2771,18 +2592,19 @@
     "_flags": [
       "sparse_no_contact_channel"
     ],
-    "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
+    "_osint_intelligence": {
       "domains_tried": [
         "cloudtechner.com",
         "cloudtechner.in",
         "cloudtechner.co.in",
         "cloudtechner.io",
-        "cloudtechner.org"
-      ]
+        "cloudtechner.org",
+        "cloudtechner.ai"
+      ],
+      "corporate_registry": {
+        "matched": false,
+        "reason": "not_found_in_registries"
+      }
     }
   },
   {
@@ -2813,28 +2635,22 @@
     "_flags": [
       "people_dropped:4"
     ],
-    "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
-      "domain_source": "existing_website",
+    "_osint_intelligence": {
       "whois": {
         "registrar": "GoDaddy.com, LLC",
         "creation_date": "[datetime.datetime(2014, 8, 6, 13, 59, 46, tzinfo=tzoffset('UTC', 0)), datetime.datetime(2014, 8, 6, 8, 59, 46, tzinfo=tzoffset('UTC', 0))]",
         "org": "Domains By Proxy, LLC",
         "country": "US"
       },
-      "discovered_emails": [
-        "kaushal@gomilestone.com",
-        "ankit.gupta@gomilestone.com",
-        "sandeep@gomilestone.com",
-        "kuldeep@gomilestone.com",
-        "libanshi.jain@gomilestone.com",
-        "pankaj@gomilestone.com",
-        "bikram.singh@gomilestone.com",
-        "info@gomilestone.com"
-      ]
+      "deep_contacts": {
+        "emails": [],
+        "phones": [],
+        "schemas_found": []
+      },
+      "corporate_registry": {
+        "matched": false,
+        "reason": "not_found_in_registries"
+      }
     }
   },
   {
@@ -2862,18 +2678,19 @@
     "_flags": [
       "sparse_no_contact_channel"
     ],
-    "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
+    "_osint_intelligence": {
       "domains_tried": [
         "the10bestcompaniestoworkforindelhincrin2026.com",
         "the10bestcompaniestoworkforindelhincrin2026.in",
         "the10bestcompaniestoworkforindelhincrin2026.co.in",
         "the10bestcompaniestoworkforindelhincrin2026.io",
-        "the10bestcompaniestoworkforindelhincrin2026.org"
-      ]
+        "the10bestcompaniestoworkforindelhincrin2026.org",
+        "the10bestcompaniestoworkforindelhincrin2026.ai"
+      ],
+      "corporate_registry": {
+        "matched": false,
+        "reason": "not_found_in_registries"
+      }
     }
   },
   {
@@ -2901,30 +2718,22 @@
     "_flags": [
       "people_dropped:2"
     ],
-    "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
-      "domain_source": "existing_website",
+    "_osint_intelligence": {
       "whois": {
-        "registrar": "GoDaddy.com, LLC",
-        "creation_date": "[datetime.datetime(2005, 2, 16, 7, 3, 23, 300000, tzinfo=tzoffset('UTC', 0)), datetime.datetime(2005, 2, 16, 7, 3, 23, tzinfo=tzoffset('UTC', 0))]",
+        "registrar": "GoDaddy",
+        "creation_date": "2005-02-16 07:03:23.300000+00:00",
         "org": null,
         "country": "IN"
       },
-      "discovered_emails": [
-        "umesh.babu@progressive.in",
-        "venu.garg@progressive.in",
-        "sandeep.khanna@progressive.in",
-        "divya.goswami@progressive.in",
-        "monika.pal@progressive.in",
-        "prateek.garg@progressive.in",
-        "anushka.sharma@progressive.in",
-        "ankit.pandey@progressive.in",
-        "vishal.goswami@progressive.in",
-        "bhavik.ambani@progressive.in"
-      ]
+      "deep_contacts": {
+        "emails": [],
+        "phones": [],
+        "schemas_found": []
+      },
+      "corporate_registry": {
+        "matched": false,
+        "reason": "not_found_in_registries"
+      }
     }
   },
   {
@@ -2952,21 +2761,18 @@
     "_flags": [
       "sparse_no_contact_channel"
     ],
-    "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
+    "_osint_intelligence": {
       "domains_tried": [
-        "itcompanyindia.com"
+        "itcompanyindia.com",
+        "itcompanyindia.in",
+        "itcompanyindia.co.in",
+        "itcompanyindia.io",
+        "itcompanyindia.org",
+        "itcompanyindia.ai"
       ],
-      "domain_source": "guessed_and_verified",
-      "discovered_website": "https://itcompanyindia.com",
-      "whois": {
-        "registrar": "GoDaddy.com, LLC",
-        "creation_date": "[datetime.datetime(2011, 8, 20, 17, 2, 30, tzinfo=tzoffset('UTC', 0)), datetime.datetime(2011, 8, 20, 12, 2, 30, tzinfo=tzoffset('UTC', 0))]",
-        "org": "Domains By Proxy, LLC",
-        "country": "US"
+      "corporate_registry": {
+        "matched": false,
+        "reason": "not_found_in_registries"
       }
     }
   },
@@ -2995,18 +2801,19 @@
     "_flags": [
       "sparse_no_contact_channel"
     ],
-    "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
+    "_osint_intelligence": {
       "domains_tried": [
         "itindia.com",
         "itindia.in",
         "itindia.co.in",
         "itindia.io",
-        "itindia.org"
-      ]
+        "itindia.org",
+        "itindia.ai"
+      ],
+      "corporate_registry": {
+        "matched": false,
+        "reason": "not_found_in_registries"
+      }
     }
   },
   {
@@ -3034,18 +2841,19 @@
     "_flags": [
       "sparse_no_contact_channel"
     ],
-    "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
+    "_osint_intelligence": {
       "domains_tried": [
         "itcompanyinnoidadelhi.com",
         "itcompanyinnoidadelhi.in",
         "itcompanyinnoidadelhi.co.in",
         "itcompanyinnoidadelhi.io",
-        "itcompanyinnoidadelhi.org"
-      ]
+        "itcompanyinnoidadelhi.org",
+        "itcompanyinnoidadelhi.ai"
+      ],
+      "corporate_registry": {
+        "matched": false,
+        "reason": "not_found_in_registries"
+      }
     }
   },
   {
@@ -3073,18 +2881,19 @@
     "_flags": [
       "sparse_no_contact_channel"
     ],
-    "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
+    "_osint_intelligence": {
       "domains_tried": [
         "ntplworlditcompany.com",
         "ntplworlditcompany.in",
         "ntplworlditcompany.co.in",
         "ntplworlditcompany.io",
-        "ntplworlditcompany.org"
-      ]
+        "ntplworlditcompany.org",
+        "ntplworlditcompany.ai"
+      ],
+      "corporate_registry": {
+        "matched": false,
+        "reason": "not_found_in_registries"
+      }
     }
   },
   {
@@ -3112,18 +2921,19 @@
     "_flags": [
       "sparse_no_contact_channel"
     ],
-    "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
+    "_osint_intelligence": {
       "domains_tried": [
         "webzonalitcompany.com",
         "webzonalitcompany.in",
         "webzonalitcompany.co.in",
         "webzonalitcompany.io",
-        "webzonalitcompany.org"
-      ]
+        "webzonalitcompany.org",
+        "webzonalitcompany.ai"
+      ],
+      "corporate_registry": {
+        "matched": false,
+        "reason": "not_found_in_registries"
+      }
     }
   },
   {
@@ -3145,25 +2955,19 @@
     "_flags": [
       "sparse_no_contact_channel"
     ],
-    "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
+    "_osint_intelligence": {
       "domains_tried": [
-        "meentosys.com"
+        "meentosys.com",
+        "meentosys.in",
+        "meentosys.co.in",
+        "meentosys.io",
+        "meentosys.org",
+        "meentosys.ai"
       ],
-      "domain_source": "guessed_and_verified",
-      "discovered_website": "https://meentosys.com",
-      "whois": {
-        "registrar": "GoDaddy.com, LLC",
-        "creation_date": "[datetime.datetime(2017, 2, 3, 8, 20, 1, tzinfo=tzoffset('UTC', 0)), datetime.datetime(2017, 2, 3, 3, 20, 1, tzinfo=tzoffset('UTC', 0))]",
-        "org": "Domains By Proxy, LLC",
-        "country": "US"
-      },
-      "discovered_emails": [
-        "info@meentosys.com"
-      ]
+      "corporate_registry": {
+        "matched": false,
+        "reason": "not_found_in_registries"
+      }
     }
   },
   {
@@ -3191,34 +2995,19 @@
     "_flags": [
       "sparse_no_contact_channel"
     ],
-    "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
+    "_osint_intelligence": {
       "domains_tried": [
-        "teamcomputers.com"
+        "teamcomputers.com",
+        "teamcomputers.in",
+        "teamcomputers.co.in",
+        "teamcomputers.io",
+        "teamcomputers.org",
+        "teamcomputers.ai"
       ],
-      "domain_source": "guessed_and_verified",
-      "discovered_website": "https://teamcomputers.com",
-      "whois": {
-        "registrar": "Network Solutions, LLC",
-        "creation_date": "1999-05-18 22:53:42+00:00",
-        "org": null,
-        "country": "IN"
-      },
-      "discovered_emails": [
-        "deepak.milind@teamcomputers.com",
-        "sparsh.sharma@teamcomputers.com",
-        "leena.yadav@teamcomputers.com",
-        "ravi.shankar@teamcomputers.com",
-        "manoj.rawat@teamcomputers.com",
-        "saurabh.rai@teamcomputers.com",
-        "komal.verma@teamcomputers.com",
-        "radha.rajput@teamcomputers.com",
-        "suman.kumari@teamcomputers.com",
-        "vijay.bisht@teamcomputers.com"
-      ]
+      "corporate_registry": {
+        "matched": false,
+        "reason": "not_found_in_registries"
+      }
     }
   },
   {
@@ -3246,21 +3035,18 @@
     "_flags": [
       "sparse_no_contact_channel"
     ],
-    "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
+    "_osint_intelligence": {
       "domains_tried": [
-        "proactivedatasystems.com"
+        "proactivedatasystems.com",
+        "proactivedatasystems.in",
+        "proactivedatasystems.co.in",
+        "proactivedatasystems.io",
+        "proactivedatasystems.org",
+        "proactivedatasystems.ai"
       ],
-      "domain_source": "guessed_and_verified",
-      "discovered_website": "https://proactivedatasystems.com",
-      "whois": {
-        "registrar": "FastDomain Inc.",
-        "creation_date": "2011-08-22 16:22:07+00:00",
-        "org": "ORGANIZATION NAME MASKED",
-        "country": "US"
+      "corporate_registry": {
+        "matched": false,
+        "reason": "not_found_in_registries"
       }
     }
   },
@@ -3289,18 +3075,19 @@
     "_flags": [
       "sparse_no_contact_channel"
     ],
-    "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
+    "_osint_intelligence": {
       "domains_tried": [
         "neccorporationindia.com",
         "neccorporationindia.in",
         "neccorporationindia.co.in",
         "neccorporationindia.io",
-        "neccorporationindia.org"
-      ]
+        "neccorporationindia.org",
+        "neccorporationindia.ai"
+      ],
+      "corporate_registry": {
+        "matched": false,
+        "reason": "not_found_in_registries"
+      }
     }
   },
   {
@@ -3328,26 +3115,19 @@
     "_flags": [
       "sparse_no_contact_channel"
     ],
-    "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
+    "_osint_intelligence": {
       "domains_tried": [
-        "delhico.com"
+        "delhico.com",
+        "delhico.in",
+        "delhico.co.in",
+        "delhico.io",
+        "delhico.org",
+        "delhico.ai"
       ],
-      "domain_source": "guessed_and_verified",
-      "discovered_website": "https://delhico.com",
-      "whois": {
-        "registrar": "BigRock Solutions Ltd.",
-        "creation_date": "2015-03-09 14:26:17+00:00",
-        "org": "REDACTED FOR PRIVACY",
-        "country": "IN"
-      },
-      "discovered_emails": [
-        "palak@delhico.com",
-        "hi@delhico.com"
-      ]
+      "corporate_registry": {
+        "matched": false,
+        "reason": "not_found_in_registries"
+      }
     }
   },
   {
@@ -3375,17 +3155,21 @@
     "_flags": [
       "email_junk:bg-info@2x.png"
     ],
-    "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
-      "domain_source": "existing_website",
+    "_osint_intelligence": {
       "whois": {
         "registrar": "GoDaddy",
         "creation_date": "2024-02-07 16:23:38.685000+00:00",
         "org": null,
         "country": "US"
+      },
+      "deep_contacts": {
+        "emails": [],
+        "phones": [],
+        "schemas_found": []
+      },
+      "corporate_registry": {
+        "matched": false,
+        "reason": "not_found_in_registries"
       }
     }
   },
@@ -3480,30 +3264,22 @@
     "_flags": [
       "people_dropped:3"
     ],
-    "_enrichment": {
-      "corporate_social_profiles": {
-        "linkedin": null,
-        "crunchbase": null
-      },
-      "domain_source": "existing_website",
+    "_osint_intelligence": {
       "whois": {
         "registrar": "GoDaddy",
         "creation_date": "2015-11-26 10:01:51.807000+00:00",
         "org": null,
         "country": "IN"
       },
-      "discovered_emails": [
-        "namitagupta@fitt-iitd.in",
-        "ankit@fitt-iitd.in",
-        "vaibhavparihar@fitt-iitd.in",
-        "subratrai@fitt-iitd.in",
-        "ayurshrikesarwani@fitt-iitd.in",
-        "nishasagar@fitt-iitd.in",
-        "akashrana@fitt-iitd.in",
-        "akashyadav@fitt-iitd.in",
-        "ashishmishra@fitt-iitd.in",
-        "priyasachdeva@fitt-iitd.in"
-      ]
+      "deep_contacts": {
+        "emails": [],
+        "phones": [],
+        "schemas_found": []
+      },
+      "corporate_registry": {
+        "matched": false,
+        "reason": "not_found_in_registries"
+      }
     }
   }
 ]
