@@ -1414,9 +1414,15 @@
     "industry": "Hardware",
     "emails": [],
     "phones": [],
-    "social_links": {},
+    "social_links": {
+      "facebook.com": "https://www.facebook.com/acehardware",
+      "instagram.com": "https://www.instagram.com/acehardware/",
+      "twitter.com": "https://twitter.com/AceHardware"
+    },
     "people": [],
-    "source": "Google"
+    "source": "Google",
+    "contact_page": "https://www.acehardware.com/contact-us",
+    "about_page": "https://www.acehardware.com/about-us"
   },
   {
     "company_name": "Topcompanieslist",
@@ -1755,6 +1761,62 @@
       "facebook.com": "https://www.facebook.com/BuildableWorks/",
       "twitter.com": "https://twitter.com/buildableworks"
     },
+    "people": [],
+    "source": "Google"
+  },
+  {
+    "company_name": "Thecompanycheck",
+    "website": "https://www.thecompanycheck.com/org/laxmi-hardware-store/8c2749d081",
+    "domain": "thecompanycheck.com",
+    "industry": "Civil Engineering",
+    "contact_page": "https://www.thecompanycheck.com/contact-us",
+    "about_page": "https://www.thecompanycheck.com/product/company-report",
+    "emails": [
+      "support@thecompanycheck.com"
+    ],
+    "phones": [],
+    "social_links": {
+      "facebook.com": "https://www.facebook.com/The-Company-Check-104898894321356",
+      "twitter.com": "https://twitter.com/TheCompanyCheck",
+      "linkedin.com": "https://www.linkedin.com/company/the-company-check/"
+    },
+    "people": [],
+    "source": "Google"
+  },
+  {
+    "company_name": "Hardware Fittings And Accessories in Bhopal",
+    "website": "https://yellowpages.webindia123.com/d-py/Madhya-Pradesh/Bhopal/Hardware-Fittings-And-Accessories-532/1/",
+    "domain": "yellowpages.webindia123.com",
+    "industry": "Hardware_Development",
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google"
+  },
+  {
+    "company_name": "Keyaenterprises",
+    "website": "https://www.keyaenterprises.in/",
+    "domain": "keyaenterprises.in",
+    "industry": "Artificial Intelligence",
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google"
+  },
+  {
+    "company_name": "Hardware ProductsHardware Products Manufacturer Wholesale Supplier",
+    "website": "https://www.avnienterprises.co.in/hardware-products.html",
+    "domain": "avnienterprises.co.in",
+    "industry": "Artificial Intelligence",
+    "contact_page": "http://www.avnienterprises.co.in/contact.html",
+    "about_page": "http://www.avnienterprises.co.in/about.html",
+    "emails": [],
+    "phones": [
+      "+917000556771"
+    ],
+    "social_links": {},
     "people": [],
     "source": "Google"
   }

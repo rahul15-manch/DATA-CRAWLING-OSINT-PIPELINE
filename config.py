@@ -139,7 +139,7 @@ TARGET_HIGH_CONFIDENCE  = int(os.getenv("TARGET_HIGH_CONFIDENCE", "10"))
 # Base runtime threshold (seconds) before stopping query loops.
 MAX_RUNTIME             = int(os.getenv("MAX_RUNTIME", "120"))
 # SRE relevance thresholds
-RELEVANCE_THRESHOLD_LOW = int(os.getenv("RELEVANCE_THRESHOLD_LOW", "40"))
+RELEVANCE_THRESHOLD_LOW = int(os.getenv("RELEVANCE_THRESHOLD_LOW", "30"))
 RELEVANCE_THRESHOLD_MEDIUM = int(os.getenv("RELEVANCE_THRESHOLD_MEDIUM", "60"))
 RELEVANCE_THRESHOLD_HIGH = int(os.getenv("RELEVANCE_THRESHOLD_HIGH", "80"))
 # Maximum search-result pages to fetch per query (pagination depth).

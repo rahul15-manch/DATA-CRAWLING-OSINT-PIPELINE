@@ -84,6 +84,17 @@ class QueryPlanner:
             add_task("duckduckgo", f"{concept} software company{loc_suffix}")
             add_task("bing", f"{concept} development company{loc_suffix}")
 
+        # Domain-specific B2B intent expansions for hardware/electronics
+        if "hardware_development" in domains:
+            for p in ["google", "duckduckgo", "bing", "brave"]:
+                add_task(p, f"electronics manufacturing company{loc_suffix}")
+                add_task(p, f"PCB design company{loc_suffix}")
+                add_task(p, f"embedded systems company{loc_suffix}")
+                add_task(p, f"electronics design services{loc_suffix}")
+                add_task(p, f"EMS company{loc_suffix}")
+                add_task(p, f"electronic product development company{loc_suffix}")
+                add_task(p, f"hardware design consultancy{loc_suffix}")
+
         # 2. Service Family
         add_task("google", f"custom software development{loc_suffix}")
         add_task("brave", f"software outsourcing{loc_suffix}")

@@ -408,6 +408,7 @@ class SearchManager:
         self._last_diag.proxy = None
         self._last_diag.session_id = None
         self._last_diag.retry_count = None
+        self._last_diag.retry_reasons = []
 
         from network_client_project.network import signals
 
@@ -416,12 +417,14 @@ class SearchManager:
             self._last_diag.proxy = request.proxy or "direct"
             self._last_diag.session_id = request.meta.get("session_id", "default")
             self._last_diag.retry_count = request.meta.get("retry_times", 0)
+            self._last_diag.retry_reasons = request.meta.get("retry_reasons", [])
 
         def _on_request_failed(request, exception):
             self._last_diag.status_code = getattr(exception, "status_code", 0) or 500
             self._last_diag.proxy = request.proxy or "direct"
             self._last_diag.session_id = request.meta.get("session_id", "default")
             self._last_diag.retry_count = request.meta.get("retry_times", 0)
+            self._last_diag.retry_reasons = request.meta.get("retry_reasons", [])
 
         signals.connect(_on_request_completed, signals.REQUEST_COMPLETED)
         signals.connect(_on_request_failed, signals.REQUEST_FAILED)
@@ -547,6 +550,10 @@ class SearchManager:
         query_start_t = time.time()
 
         for provider in ordered:
+            from utils.deadline import Deadline
+            if Deadline.is_exceeded():
+                print(f"[SearchManager] Global deadline exceeded. Returning {len(all_results)} partial results.")
+                break
             pname = provider.name
 
             # Skip providers that are in cooldown
@@ -610,16 +617,19 @@ class SearchManager:
                 rejected_reasons: dict[str, int] = defaultdict(int)
                 for r in raw:
                     if not r.url or not is_valid_company_url(r.url):
+                        print(f"[SearchManager Reject] URL: {r.url} | Title: {r.title} | Reason: Invalid company URL pattern")
                         continue
                     result_dict = {"title": r.title or "", "url": r.url or "", "snippet": r.snippet or ""}
                     classification, reason = classify_result(result_dict)
                     if should_ignore_result(result_dict):
                         rejected_reasons[reason or classification or "UNKNOWN"] += 1
+                        print(f"[SearchManager Reject] URL: {r.url} | Title: {r.title} | Reason: Ignored by classification ({classification} - {reason})")
                         continue
 
                     canon = _canonicalize_url(r.url)
                     if canon in seen_canonical:
                         self.total_duplicates_removed += 1
+                        print(f"[SearchManager Reject] URL: {r.url} | Title: {r.title} | Reason: Duplicate canonical URL ({canon})")
                         continue
                     seen_canonical.add(canon)
                     all_results.append(r)
@@ -642,8 +652,17 @@ class SearchManager:
                 proxy_used = getattr(self._last_diag, "proxy", None) or "direct"
                 session_id = getattr(self._last_diag, "session_id", None) or "default"
                 retry_count = getattr(self._last_diag, "retry_count", None) or 0
-                is_cache_served = False # This block is only executed on cache miss/live execution
-                
+                is_cache_served = False
+                retry_reasons = getattr(self._last_diag, "retry_reasons", [])
+                reasons_str = ", ".join(retry_reasons) if retry_reasons else "None"
+                from utils.deadline import Deadline
+                print(
+                    f"[QUERY DETAIL] Provider: {pname} | Query: '{query}' | Latency: {latency:.2f}s "
+                    f"| Retry count: {retry_count} | Reason for retry: {reasons_str} "
+                    f"| Reason for rejection: {top_rejection} | Switch reason: None (Success) "
+                    f"| Remaining budget: {Deadline.remaining():.1f}s"
+                )
+
                 try:
                     from query.expansion import get_query_feedback_weight
                     roi_weight = get_query_feedback_weight(query)
@@ -670,7 +689,8 @@ class SearchManager:
                     if pname == "google_html":
                         self.google_zero_result_queries += 1
                         print(f"[SearchManager] GoogleHtml valid zero results.")
-                    self.cache.set(query, max_results, page, pname, [], kind="zero_result")
+                    if not all_results:
+                        self.cache.set(query, max_results, page, pname, [], kind="zero_result")
 
                     # Score suspicious zero results (expectation >= 0.5)
                     try:
@@ -720,6 +740,18 @@ class SearchManager:
                     self.stats[pname].queries -= 1
                     # Do not log/add stats
                 else:
+                    retry_count = getattr(self._last_diag, "retry_count", 0) or 0
+                    retry_reasons = getattr(self._last_diag, "retry_reasons", [])
+                    reasons_str = ", ".join(retry_reasons) if retry_reasons else "None"
+                    from utils.deadline import Deadline
+                    switch_reason = f"Provider {pname} failed: {exc.reason}"
+                    print(
+                        f"[QUERY DETAIL] Provider: {pname} | Query: '{query}' | Latency: {latency:.2f}s "
+                        f"| Retry count: {retry_count} | Reason for retry: {reasons_str} "
+                        f"| Reason for rejection: N/A | Switch reason: {switch_reason} "
+                        f"| Remaining budget: {Deadline.remaining():.1f}s"
+                    )
+
                     self.stats[pname].total_latency_s += latency
                     self.stats[pname].latencies.append(latency)
                     self.stats[pname].failures += 1

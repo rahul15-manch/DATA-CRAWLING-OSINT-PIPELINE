@@ -191,13 +191,8 @@ class GoogleRequestScheduler:
         exclude_urls: set = set()
         session_id = f"google_html_{threading.get_ident()}"
         
-        # Adaptive Retry Budget based on healthy proxies
-        if healthy_count > 20:
-            max_retries = 5
-        elif healthy_count >= 5:
-            max_retries = 4
-        else:
-            max_retries = 2
+        # Reduce Google retries to exactly 1 proxy retry (total 2 attempts)
+        max_retries = 2
 
         attempts = 0
         zero_result_retries = 0
@@ -205,6 +200,11 @@ class GoogleRequestScheduler:
         was_block = False
 
         while attempts < max_retries:
+            from utils.deadline import Deadline
+            if attempts > 0 and Deadline.is_exceeded():
+                logger.warning("[GoogleScheduler] Global deadline exceeded. Aborting Google search retries.")
+                break
+
             if self._is_circuit_open():
                 logger.warning("[GoogleScheduler] Circuit breaker opened during retry loop.")
                 break

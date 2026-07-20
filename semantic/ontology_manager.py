@@ -103,7 +103,8 @@ BOOTSTRAP_ONTOLOGY = {
         "concepts": [
             "python", "django", "fastapi", "flask", "node.js", "react", "vue",
             "backend", "frontend", "full stack", "rest api", "graphql",
-            "microservices", "web development", "custom software", "software house",
+            "microservices", "web development", "custom software", "software development",
+            "software engineering", "saas", "enterprise software", "software consulting",
             "it services", "software outsourcing", "it consulting", "api development"
         ],
         "positions": [
@@ -127,7 +128,12 @@ BOOTSTRAP_ONTOLOGY = {
         "products": ["ace hardware", "home depot", "lowes", "grainger", "mcmaster-carr"]
     },
     "hardware_development": {
-        "concepts": ["hardware", "hardware development", "embedded systems", "iot", "pcb design", "firmware", "microcontrollers", "semiconductors", "electronics", "circuit design", "hardware engineering"],
+        "concepts": [
+            "hardware", "hardware development", "embedded systems", "iot", "pcb design", "firmware",
+            "microcontrollers", "semiconductors", "electronics", "circuit design", "hardware engineering",
+            "electronics manufacturing", "electronics design", "ems", "electronic product development",
+            "hardware design"
+        ],
         "positions": ["hardware engineer", "embedded developer", "electronics engineer", "firmware engineer"],
         "services": ["hardware design", "embedded systems development", "pcb design services", "iot product design"],
         "products": ["microcontrollers", "pcb", "sensors", "arduino", "raspberry pi"]
@@ -152,25 +158,13 @@ class OntologyManager:
     def _load_and_merge(self) -> dict:
         os.makedirs("data", exist_ok=True)
         
-        # 1. Load static bootstrap ontology
-        if not os.path.exists(self.static_path):
+        # 1. Load static bootstrap ontology (always overwrite/sync to apply updates)
+        try:
             with open(self.static_path, "w", encoding="utf-8") as f:
                 json.dump(BOOTSTRAP_ONTOLOGY, f, indent=2, ensure_ascii=False)
-            static = BOOTSTRAP_ONTOLOGY
-        else:
-            try:
-                with open(self.static_path, "r", encoding="utf-8") as f:
-                    static = json.load(f)
-                merged = False
-                for domain, channels in BOOTSTRAP_ONTOLOGY.items():
-                    if domain not in static:
-                        static[domain] = channels
-                        merged = True
-                if merged:
-                    with open(self.static_path, "w", encoding="utf-8") as f:
-                        json.dump(static, f, indent=2, ensure_ascii=False)
-            except Exception:
-                static = BOOTSTRAP_ONTOLOGY
+        except Exception as e:
+            logger.warning(f"Failed to write bootstrap ontology to {self.static_path}: {e}")
+        static = BOOTSTRAP_ONTOLOGY
 
         # Detect and migrate old flat-list formats
         is_old = False

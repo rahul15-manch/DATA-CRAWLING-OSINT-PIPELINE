@@ -15,8 +15,13 @@ class SemanticIntentResolver:
         """Resolve a raw keyword into a structured IntentProfile, merging multi-intents."""
         kw_clean = keyword.lower().strip()
         
-        # Remove generic noise words to parse core intents
-        generic_noises = {"noida", "delhi", "best", "top", "company", "firm", "agency", "services", "software", "development"}
+        # Remove true noise words: location names, superlatives, and generic containers
+        # that add nothing to domain resolution. Keep all industry-specific words.
+        generic_noises = {
+            "noida", "delhi", "mumbai", "bangalore", "hyderabad", "chennai",
+            "pune", "kolkata", "gurgaon", "india", "best", "top", "leading",
+            "pvt", "ltd", "inc", "llc",
+        }
         words = [w for w in kw_clean.split() if w not in generic_noises and len(w) > 2]
         
         matched_domains = []
@@ -67,7 +72,8 @@ class SemanticIntentResolver:
         for w in words:
             concepts.add(ConceptNormalizer.normalize(w))
             
-        # Generate B2B/Roles variations
+        # Generate B2B/Roles variations AND include common adjacent terms
+        # that real companies use on their pages
         positions = {
             ConceptNormalizer.normalize(norm_kw + " Developer"),
             ConceptNormalizer.normalize(norm_kw + " Engineer"),
@@ -76,8 +82,14 @@ class SemanticIntentResolver:
         services = {
             ConceptNormalizer.normalize(norm_kw + " Development"),
             ConceptNormalizer.normalize(norm_kw + " Consulting"),
-            ConceptNormalizer.normalize(norm_kw + " Solutions")
+            ConceptNormalizer.normalize(norm_kw + " Solutions"),
+            ConceptNormalizer.normalize(norm_kw + " Services"),
         }
+        # Add the raw individual words as concepts too so snippet matching
+        # can catch partial hits (e.g. "IT" alone, or "consulting" alone)
+        for w in words:
+            concepts.add(w)
+            concepts.add(ConceptNormalizer.normalize(w))
         
         return IntentProfile(
             primary_domain=norm_kw,

@@ -22,12 +22,6 @@ class SessionFactory:
             "provider": (provider or "default").lower(),
             "domain": (domain or "generic").lower(),
         }
-        session.headers.update({
-            "Accept-Language": "en-US,en;q=0.9",
-            "DNT": "1",
-            "Cache-Control": "max-age=0",
-            "Pragma": "no-cache",
-        })
         return session
 
 class SessionManager:

@@ -24,11 +24,6 @@ class HeaderMiddleware(BaseMiddleware):
             user_agent=ua,
             is_xhr=is_xhr
         )
-        headers.update({
-            "DNT": "1",
-            "Cache-Control": "max-age=0",
-            "Pragma": "no-cache",
-        })
 
         # Merge user-supplied headers on top
         if request.headers:

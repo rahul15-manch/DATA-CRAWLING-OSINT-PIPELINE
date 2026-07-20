@@ -147,7 +147,11 @@ class Proxy:
                 "general_crawl": "GOOD",
             }
 
-        if self.dead or self.inactive or (self.quarantine_until and time.time() < self.quarantine_until):
+        if self.dead or self.inactive:
+            return "blocked"
+        # Only block for provider-specific quarantine (Google/Bing quarantine should NOT
+        # block this proxy from serving linkedin, goodfirms, or general crawl requests).
+        if key in ("google", "bing") and self.quarantine_until and time.time() < self.quarantine_until:
             return "blocked"
         if key == "google" and getattr(self, "dead_for_google", False):
             return "blocked"
@@ -189,13 +193,17 @@ class Proxy:
             return True
         if self.inactive:
             return True
+        base_dom = get_base_domain(domain)
         now = time.time()
 
-        # Check quarantine
-        if self.quarantine_until and now < self.quarantine_until:
+        # Quarantine is set by WAF/CAPTCHA/rate-limit blocks which are search-engine specific.
+        # Only enforce it when the requested domain is actually a search engine.
+        # A proxy quarantined for Google should still serve LinkedIn, GoodFirms, etc.
+        domain_lower = domain.lower()
+        is_search_engine = "google" in domain_lower or "bing" in domain_lower or "duckduckgo" in domain_lower or "brave" in domain_lower
+        if is_search_engine and self.quarantine_until and now < self.quarantine_until:
             return True
 
-        base_dom = get_base_domain(domain)
         cd_until = self.cooldown_until.get(base_dom, 0.0)
         global_cd = self.cooldown_until.get("global", 0.0)
         is_cd = (now < cd_until) or (now < global_cd)
@@ -424,12 +432,14 @@ class Proxy:
 
         is_block = err_type in ["captcha", "enablejs", "sorry_page", "consent_page", "rate_limit"]
         
+        base_dom = get_base_domain(domain)
+
         if is_block:
             self.consecutive_failures = 0
             
             if self.consecutive_blocks is None: self.consecutive_blocks = {}
-            current_blocks = self.consecutive_blocks.get(domain, 0) + 1
-            self.consecutive_blocks[domain] = current_blocks
+            current_blocks = self.consecutive_blocks.get(base_dom, 0) + 1
+            self.consecutive_blocks[base_dom] = current_blocks
             
             # Use quarantine with exponential backoff instead of fixed cooldown
             self.quarantine_step = min(self.quarantine_step + 1, QUARANTINE_MAX_STEP + QUARANTINE_INACTIVE_AFTER)
@@ -464,42 +474,43 @@ class Proxy:
                 elif "bing" in domain.lower():
                     self.bing_status = "blocked"
                     
-            self.cooldown_until[domain] = now + qd
+            # Cooldown scoped to base domain only (WAF/rate-limit is site-specific)
+            self.cooldown_until[base_dom] = now + qd
 
-            logger.info(f"[ProxyManager] Proxy {self.raw_url} quarantined for {qd:.0f}s (step {self.quarantine_step}) for domain {domain}. Score changed by -{penalty:.1f}.")
+            logger.info(f"[ProxyManager] Proxy {self.raw_url} quarantined for {qd:.0f}s (step {self.quarantine_step}) for domain {base_dom}. Score changed by -{penalty:.1f}.")
             
         elif err_type in ["dead_connection", "tls_failure", "certificate_failure", "timeout"]:
             self.consecutive_failures += 1
             self.proxy_score = max(0.0, self.proxy_score - penalty)
             logger.info(f"[ProxyManager] Proxy {self.raw_url} connection failed (step {self.consecutive_failures}). Score changed by -{penalty:.1f}.")
+
+            if not hasattr(self, "consecutive_timeouts") or self.consecutive_timeouts is None:
+                self.consecutive_timeouts = {}
+            self.consecutive_timeouts[base_dom] = self.consecutive_timeouts.get(base_dom, 0) + 1
+
             if self.consecutive_failures > 3:
                 self.dead = True
                 self.proxy_score = 0.0
                 logger.warning(f"[ProxyManager] Proxy {self.raw_url} marked DEAD after {self.consecutive_failures} failures.")
             else:
-                self.cooldown_until[domain] = now + cooldown_seconds
-                self.cooldown_until["global"] = now + cooldown_seconds
-                
-        elif err_type == "timeout":
-            self.consecutive_failures = 0
-            self.proxy_score = max(0.0, self.proxy_score - 5.0)
-            self.cooldown_until[domain] = now + 60.0
-            
-            if not hasattr(self, "consecutive_timeouts") or self.consecutive_timeouts is None:
-                self.consecutive_timeouts = {}
-            self.consecutive_timeouts[domain] = self.consecutive_timeouts.get(domain, 0) + 1
-            if self.consecutive_timeouts[domain] >= 3:
+                # Cooldown is domain-specific ONLY — a timeout on one target site should NOT
+                # block this proxy from serving LinkedIn, GoodFirms, or any other domain.
+                self.cooldown_until[base_dom] = now + cooldown_seconds
+
+            # Per-domain consecutive timeouts => mark dead for that domain only
+            if self.consecutive_timeouts[base_dom] >= 3:
                 if "bing" in domain.lower():
                     self.dead_for_bing = True
-                    logger.warning(f"[ProxyManager] Proxy {self.raw_url} marked dead_for_bing = True after 3 consecutive timeouts.")
+                    logger.warning(f"[ProxyManager] Proxy {self.raw_url} marked dead_for_bing after 3 consecutive timeouts.")
                 elif "google" in domain.lower():
                     self.dead_for_google = True
-                    logger.warning(f"[ProxyManager] Proxy {self.raw_url} marked dead_for_google = True after 3 consecutive timeouts.")
+                    logger.warning(f"[ProxyManager] Proxy {self.raw_url} marked dead_for_google after 3 consecutive timeouts.")
             
         else:
             self.consecutive_failures += 1
             self.proxy_score = max(0.0, self.proxy_score - 5.0)
-            self.cooldown_until[domain] = now + cooldown_seconds
+            # Domain-specific cooldown only (same reasoning — generic error on target != global block)
+            self.cooldown_until[base_dom] = now + cooldown_seconds
 
         # Permanent death condition based on proxy score
         if self.proxy_score <= 0.0 and not self.dead:
@@ -689,7 +700,7 @@ class ProxyManager:
         except Exception as e:
             logger.error(f"Failed to load proxies from file: {e}")
 
-    def save_state(self, filepath: str):
+    def save_state(self, filepath: str, is_atexit: bool = False):
         try:
             state = {}
             with self._lock:
@@ -724,10 +735,16 @@ class ProxyManager:
                     }
             with open(filepath, 'w') as f:
                 json.dump(state, f, indent=2)
-            logger.info(f"Saved proxy state to {filepath}")
-            self._log_proxy_stats("Saved proxy state")
+            if not is_atexit:
+                logger.info(f"Saved proxy state to {filepath}")
+                self._log_proxy_stats("Saved proxy state")
+            else:
+                print(f"[ProxyManager] Saved proxy state to {filepath} at process exit.")
         except Exception as e:
-            logger.error(f"Failed to save proxy state: {e}")
+            if not is_atexit:
+                logger.error(f"Failed to save proxy state: {e}")
+            else:
+                print(f"[ProxyManager] Failed to save proxy state on exit: {e}")
 
     def load_state(self, filepath: str):
         try:
@@ -826,6 +843,9 @@ class ProxyManager:
         def _loop():
             while True:
                 time.sleep(interval)
+                if getattr(self, "is_crawling", False):
+                    logger.info("[ProxyManager] Skipping background proxy validation during active crawling.")
+                    continue
                 try:
                     self.refresh_proxy_capabilities()
                     self.clear_invalid_cooldowns()
@@ -838,6 +858,9 @@ class ProxyManager:
         self._background_validation_started = True
 
     def _log_proxy_stats(self, title: str):
+        import sys
+        if hasattr(sys, "is_finalizing") and sys.is_finalizing():
+            return
         scores = sorted([(p.raw_url, p.proxy_score) for p in self._proxies], key=lambda x: x[1], reverse=True)
         non_zero = [s for s in scores if s[1] > 0]
         avg_score = sum(s[1] for s in scores) / len(scores) if scores else 0

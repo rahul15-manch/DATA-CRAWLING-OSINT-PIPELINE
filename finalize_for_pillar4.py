@@ -70,8 +70,14 @@ def clean_people(people):
 
 
 def finalize_record(rec: dict) -> dict:
-    rec["emails"] = rec.get("_verified_emails", [])
+    enrichment = rec.get("_enrichment", {})
+    discovered_emails = enrichment.get("discovered_emails", [])
+    rec["emails"] = sorted(list(set(rec.get("_verified_emails", []) + discovered_emails)))
     rec["phones"] = rec.get("_verified_phones", [])
+    
+    if not rec.get("website") and enrichment.get("discovered_website"):
+        rec["website"] = enrichment["discovered_website"]
+        
     rec["people"] = clean_people(rec.get("people"))
 
     # Strip all debug/internal fields
@@ -100,8 +106,9 @@ def main():
             dropped.append({**rec, "_drop_reason": "article_or_definition_page"})
             continue
 
-        website_reachable = rec.get("_website_reachable")
-        has_email = bool(rec.get("_verified_emails"))
+        enrichment = rec.get("_enrichment", {})
+        website_reachable = rec.get("_website_reachable") or bool(enrichment.get("discovered_website"))
+        has_email = bool(rec.get("_verified_emails")) or bool(enrichment.get("discovered_emails"))
         has_phone = bool(rec.get("_verified_phones"))
 
         if not (has_email or has_phone or website_reachable):

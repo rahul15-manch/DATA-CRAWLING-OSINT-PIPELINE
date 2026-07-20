@@ -220,6 +220,50 @@ def build_lead_card(company: dict) -> dict | None:
 
         extracted = extract_from_website(website, homepage_html=homepage_html)
         stats.increment("funnel_homepage_crawled")
+
+        # Fallback site searches if extraction returned no emails/phones
+        if website and not extracted.get("emails") and not extracted.get("phones"):
+            from urllib.parse import urlparse
+            domain = urlparse(website).netloc.lower()
+            if domain.startswith("www."):
+                domain = domain[4:]
+            if domain:
+                print(f"[pipeline] homepage extraction yielded no contacts. running fallback site searches for domain: {domain}")
+                fallback_queries = [
+                    f"site:{domain} email",
+                    f"site:{domain} contact",
+                    f"site:{domain} phone",
+                    f"site:{domain} team",
+                ]
+                from search.manager import get_search_manager
+                sm = get_search_manager()
+                
+                fallback_emails = []
+                fallback_phones = []
+                
+                for q in fallback_queries:
+                    try:
+                        results = sm.search(q, max_results=3)
+                        for res in results:
+                            snippet = getattr(res, "snippet", "") or ""
+                            from extraction.page_extractor import EMAIL_PATTERN, PHONE_CAPTURE_PATTERN, is_valid_phone
+                            
+                            found_emails = EMAIL_PATTERN.findall(snippet)
+                            fallback_emails.extend(found_emails)
+                            
+                            found_phones = PHONE_CAPTURE_PATTERN.findall(snippet)
+                            for phone in found_phones:
+                                if is_valid_phone(phone.strip()):
+                                    fallback_phones.append(phone.strip())
+                    except Exception as e:
+                        print(f"[pipeline] Fallback site search query '{q}' failed: {e}")
+                        
+                if fallback_emails:
+                    extracted["emails"] = sorted(list(set(extracted.get("emails", []) + fallback_emails)))
+                    print(f"[pipeline]   found emails from fallback site search: {extracted['emails']}")
+                if fallback_phones:
+                    extracted["phones"] = sorted(list(set(extracted.get("phones", []) + fallback_phones)))
+                    print(f"[pipeline]   found phones from fallback site search: {extracted['phones']}")
     else:
         extracted = {
             "contact_page": None,
@@ -255,6 +299,19 @@ def build_lead_card(company: dict) -> dict | None:
                 emails = sorted(set(emails))
         else:
             print(f"[pipeline] Skipping contact discovery for {company.get('company')!r} — providers exhausted.")
+
+    # ── Final Pattern Generation fallback ──
+    if website and not emails:
+        from urllib.parse import urlparse
+        domain = urlparse(website).netloc.lower()
+        if domain.startswith("www."):
+            domain = domain[4:]
+        if domain:
+            from enrichment_leads import guess_emails_from_domain
+            guessed = guess_emails_from_domain(domain)
+            if guessed:
+                emails = sorted(list(set(emails + guessed)))
+                print(f"[pipeline]   Generated email patterns as final fallback: {guessed}")
 
     if emails or raw_people or extracted.get("phones"):
         stats.increment("funnel_contacts_extracted")
@@ -413,14 +470,20 @@ def run_pipeline(keyword: str):
     apply_ontology_learning()
 
     # ── Write output ──────────────────────────────────────────────────────
-    os.makedirs(config.RAW_OUTPUT_FOLDER, exist_ok=True)
-
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-    filename = keyword.replace(" ", "_").lower()
+    # Sanitize keyword to prevent directory traversal or file path issues
+    filename = keyword.replace(" ", "_").replace("/", "_").replace("\\", "_").lower()
+    filename = filename.strip("_")
+    if not filename:
+        filename = "lead"
+        
     output_file = os.path.join(
         config.RAW_OUTPUT_FOLDER,
         f"{filename}_{timestamp}.json",
     )
+    
+    # Ensure the parent directory structure of the output file exists
+    os.makedirs(os.path.dirname(output_file), exist_ok=True)
 
     with open(output_file, "w", encoding="utf-8") as f:
         json.dump(leads, f, indent=4, ensure_ascii=False)

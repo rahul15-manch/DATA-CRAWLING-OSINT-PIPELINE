@@ -1,0 +1,678 @@
+[
+  {
+    "company_name": "Thecompanycheck",
+    "website": "https://www.thecompanycheck.com/org/laxmi-hardware-store/8c2749d081",
+    "linkedin": null,
+    "industry": "Civil Engineering",
+    "location": null,
+    "contact_page": "https://www.thecompanycheck.com/contact-us",
+    "about_page": "https://www.thecompanycheck.com/product/company-report",
+    "team_page": "https://www.thecompanycheck.com/products/databases/people",
+    "emails": [
+      "support@thecompanycheck.com"
+    ],
+    "phones": [
+      "10-0034478",
+      "2022-23 (31",
+      "2023-24 (09",
+      "2024-25 (27"
+    ],
+    "social_links": {
+      "facebook.com": "https://www.facebook.com/The-Company-Check-104898894321356",
+      "twitter.com": "https://twitter.com/TheCompanyCheck",
+      "linkedin.com": "https://www.linkedin.com/company/the-company-check/"
+    },
+    "people": [],
+    "source": "Google",
+    "confidence_score": 83,
+    "lead_quality": "High",
+    "company_type": "Software Company",
+    "relevance_score": 83,
+    "relevance_tier": "HIGH",
+    "relevance_info": {
+      "score": 83,
+      "tier": "HIGH",
+      "matched_signals": [
+        "Title",
+        "Description"
+      ],
+      "rejected_signals": [
+        "Positions"
+      ],
+      "score_breakdown": {
+        "title": 20.0,
+        "description": 30.0,
+        "positions": 0.0
+      },
+      "industry": "Hardware_Industrial",
+      "confidence": 0.33,
+      "aborted": false,
+      "company_type": "B2B Software",
+      "semantic_trace": [
+        "Matched Title with concepts: ['Hardware']",
+        "Matched Description with concepts: ['Hardware']"
+      ],
+      "technologies": [],
+      "products": [],
+      "website": "",
+      "website_source": "homepage"
+    },
+    "_source_file": "output\\raw\\hardware_20260719_194348.json",
+    "_flags": [],
+    "_verified_emails": [
+      "support@thecompanycheck.com"
+    ],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "emails": {
+        "support@thecompanycheck.com": "ok"
+      },
+      "phones": {
+        "10-0034478": "not_valid_number",
+        "2022-23 (31": "not_valid_number",
+        "2023-24 (09": "not_valid_number",
+        "2024-25 (27": "not_valid_number"
+      },
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "domain_source": "existing_website",
+      "whois": {
+        "registrar": "GoDaddy.com, LLC",
+        "creation_date": "[datetime.datetime(2019, 7, 23, 12, 14, 20, tzinfo=tzoffset('UTC', 0)), datetime.datetime(2019, 7, 23, 7, 14, 20, tzinfo=tzoffset('UTC', 0))]",
+        "org": "Domains By Proxy, LLC",
+        "country": "US"
+      }
+    }
+  },
+  {
+    "company_name": "Acehardware",
+    "website": "https://www.acehardware.com/",
+    "linkedin": null,
+    "industry": "Hardware_Development",
+    "location": null,
+    "contact_page": "https://www.acehardware.com/contact-us",
+    "about_page": "https://www.acehardware.com/about-us",
+    "team_page": null,
+    "emails": [],
+    "phones": [
+      "(2001915",
+      "1-866-290-5334",
+      "1-888-827-4223",
+      "2001923",
+      "2002176",
+      "2006052",
+      "2006053",
+      "2006398",
+      "2006874",
+      "2008408",
+      "2014129",
+      "2014130",
+      "2014333",
+      "2014354",
+      "2015824",
+      "2016694",
+      "2023428",
+      "2023432",
+      "2023459",
+      "2023461",
+      "2023462",
+      "2023463",
+      "2023465",
+      "2024842",
+      "2024843",
+      "2024844",
+      "2024858",
+      "2024862",
+      "2024871",
+      "2024874",
+      "2024875",
+      "2024878",
+      "2024879",
+      "2024936",
+      "2024937",
+      "2024938",
+      "2024946",
+      "2024947",
+      "2027479",
+      "2027481",
+      "2030563",
+      "2030564",
+      "2030565",
+      "2030566",
+      "2030567",
+      "2030616",
+      "2030617",
+      "2030619",
+      "2035926",
+      "2035927",
+      "2036233",
+      "2036235",
+      "2038019",
+      "2038020",
+      "2038021",
+      "2038022",
+      "2038023",
+      "2038138",
+      "2038661",
+      "2038662",
+      "2038663",
+      "2038664",
+      "2038665",
+      "2038666",
+      "2038667",
+      "2038668",
+      "2040666",
+      "2040669",
+      "2047901",
+      "2048145",
+      "2053732",
+      "2053733",
+      "2053740",
+      "2053741",
+      "2053743",
+      "2053746",
+      "2053747",
+      "2800480",
+      "2800498",
+      "2800514",
+      "2800522",
+      "2800548",
+      "2800555",
+      "2837672",
+      "2837680",
+      "2837698",
+      "2837706",
+      "2884583",
+      "2884625",
+      "7045239",
+      "8071115",
+      "8079613",
+      "8079614",
+      "8088216",
+      "8088217",
+      "8088648",
+      "8088649",
+      "8106243",
+      "8106244",
+      "8106246",
+      "8106248",
+      "8106249",
+      "8106250",
+      "8106251",
+      "8122240",
+      "8122241",
+      "8122242"
+    ],
+    "social_links": {
+      "facebook.com": "https://www.facebook.com/acehardware",
+      "instagram.com": "https://www.instagram.com/acehardware/",
+      "twitter.com": "https://twitter.com/AceHardware"
+    },
+    "people": [],
+    "source": "Google",
+    "confidence_score": 83,
+    "lead_quality": "High",
+    "company_type": "Marketplace",
+    "relevance_score": 83,
+    "relevance_tier": "HIGH",
+    "relevance_info": {
+      "score": 83,
+      "tier": "HIGH",
+      "matched_signals": [
+        "Title",
+        "Description"
+      ],
+      "rejected_signals": [
+        "Positions"
+      ],
+      "score_breakdown": {
+        "title": 20.0,
+        "description": 30.0,
+        "positions": 0.0
+      },
+      "industry": "Hardware_Development",
+      "confidence": 0.33,
+      "aborted": false,
+      "company_type": "B2C/Marketplace",
+      "semantic_trace": [
+        "Matched Title with concepts: ['Hardware']",
+        "Matched Description with concepts: ['Hardware']"
+      ],
+      "technologies": [],
+      "products": [],
+      "website": "",
+      "website_source": "homepage"
+    },
+    "_source_file": "output\\raw\\hardware_20260719_194348.json",
+    "_flags": [],
+    "_verified_emails": [],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "phones": {
+        "(2001915": "not_valid_number",
+        "1-866-290-5334": "not_valid_number",
+        "1-888-827-4223": "not_valid_number",
+        "2001923": "not_valid_number",
+        "2002176": "not_valid_number",
+        "2006052": "not_valid_number",
+        "2006053": "not_valid_number",
+        "2006398": "not_valid_number",
+        "2006874": "not_valid_number",
+        "2008408": "not_valid_number",
+        "2014129": "not_valid_number",
+        "2014130": "not_valid_number",
+        "2014333": "not_valid_number",
+        "2014354": "not_valid_number",
+        "2015824": "not_valid_number",
+        "2016694": "not_valid_number",
+        "2023428": "not_valid_number",
+        "2023432": "not_valid_number",
+        "2023459": "not_valid_number",
+        "2023461": "not_valid_number",
+        "2023462": "not_valid_number",
+        "2023463": "not_valid_number",
+        "2023465": "not_valid_number",
+        "2024842": "not_valid_number",
+        "2024843": "not_valid_number",
+        "2024844": "not_valid_number",
+        "2024858": "not_valid_number",
+        "2024862": "not_valid_number",
+        "2024871": "not_valid_number",
+        "2024874": "not_valid_number",
+        "2024875": "not_valid_number",
+        "2024878": "not_valid_number",
+        "2024879": "not_valid_number",
+        "2024936": "not_valid_number",
+        "2024937": "not_valid_number",
+        "2024938": "not_valid_number",
+        "2024946": "not_valid_number",
+        "2024947": "not_valid_number",
+        "2027479": "not_valid_number",
+        "2027481": "not_valid_number",
+        "2030563": "not_valid_number",
+        "2030564": "not_valid_number",
+        "2030565": "not_valid_number",
+        "2030566": "not_valid_number",
+        "2030567": "not_valid_number",
+        "2030616": "not_valid_number",
+        "2030617": "not_valid_number",
+        "2030619": "not_valid_number",
+        "2035926": "not_valid_number",
+        "2035927": "not_valid_number",
+        "2036233": "not_valid_number",
+        "2036235": "not_valid_number",
+        "2038019": "not_valid_number",
+        "2038020": "not_valid_number",
+        "2038021": "not_valid_number",
+        "2038022": "not_valid_number",
+        "2038023": "not_valid_number",
+        "2038138": "not_valid_number",
+        "2038661": "not_valid_number",
+        "2038662": "not_valid_number",
+        "2038663": "not_valid_number",
+        "2038664": "not_valid_number",
+        "2038665": "not_valid_number",
+        "2038666": "not_valid_number",
+        "2038667": "not_valid_number",
+        "2038668": "not_valid_number",
+        "2040666": "not_valid_number",
+        "2040669": "not_valid_number",
+        "2047901": "not_valid_number",
+        "2048145": "not_valid_number",
+        "2053732": "not_valid_number",
+        "2053733": "not_valid_number",
+        "2053740": "not_valid_number",
+        "2053741": "not_valid_number",
+        "2053743": "not_valid_number",
+        "2053746": "not_valid_number",
+        "2053747": "not_valid_number",
+        "2800480": "not_valid_number",
+        "2800498": "not_valid_number",
+        "2800514": "not_valid_number",
+        "2800522": "not_valid_number",
+        "2800548": "not_valid_number",
+        "2800555": "not_valid_number",
+        "2837672": "not_valid_number",
+        "2837680": "not_valid_number",
+        "2837698": "not_valid_number",
+        "2837706": "not_valid_number",
+        "2884583": "not_valid_number",
+        "2884625": "not_valid_number",
+        "7045239": "not_valid_number",
+        "8071115": "not_valid_number",
+        "8079613": "not_valid_number",
+        "8079614": "not_valid_number",
+        "8088216": "not_valid_number",
+        "8088217": "not_valid_number",
+        "8088648": "not_valid_number",
+        "8088649": "not_valid_number",
+        "8106243": "not_valid_number",
+        "8106244": "not_valid_number",
+        "8106246": "not_valid_number",
+        "8106248": "not_valid_number",
+        "8106249": "not_valid_number",
+        "8106250": "not_valid_number",
+        "8106251": "not_valid_number",
+        "8122240": "not_valid_number",
+        "8122241": "not_valid_number",
+        "8122242": "not_valid_number"
+      },
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "domain_source": "existing_website",
+      "whois": {
+        "registrar": "Network Solutions, LLC",
+        "creation_date": "1995-07-26 04:00:00+00:00",
+        "org": null,
+        "country": "US"
+      }
+    }
+  },
+  {
+    "company_name": "Cybo",
+    "website": "https://www.cybo.com/IN/sonipat/hardware-store/",
+    "linkedin": null,
+    "industry": "Hardware_Development",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "confidence_score": 75,
+    "lead_quality": "High",
+    "company_type": "Unknown",
+    "relevance_score": 75,
+    "relevance_tier": "MEDIUM",
+    "relevance_info": {
+      "score": 75,
+      "tier": "MEDIUM",
+      "matched_signals": [
+        "Description",
+        "Services",
+        "Technologies"
+      ],
+      "rejected_signals": [
+        "Products",
+        "Positions",
+        "Blog/Articles"
+      ],
+      "score_breakdown": {
+        "description": 36.0,
+        "services": 24.0,
+        "technologies": 20.0,
+        "products": 0.0,
+        "positions": 0.0,
+        "blog": 0.0
+      },
+      "industry": "Hardware_Development",
+      "confidence": 0.76,
+      "aborted": false,
+      "company_type": "B2C/Marketplace",
+      "semantic_trace": [
+        "Matched Description with concepts: ['Hardware']",
+        "Matched Services with terms: ['Hardware']",
+        "Matched Technologies: ['Hardware']"
+      ],
+      "technologies": [
+        "Hardware"
+      ],
+      "products": [],
+      "website": "",
+      "website_source": ""
+    },
+    "_source_file": "output\\raw\\hardware_20260719_194348.json",
+    "_flags": [],
+    "_verified_emails": [],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "domain_source": "existing_website",
+      "whois": {
+        "registrar": "Amazon Registrar, Inc.",
+        "creation_date": "1995-05-03 04:00:00+00:00",
+        "org": "c/o whoisproxy.com",
+        "country": "US"
+      }
+    }
+  },
+  {
+    "company_name": "Hardware Fittings And Accessories in Bhopal",
+    "website": "https://yellowpages.webindia123.com/d-py/Madhya-Pradesh/Bhopal/Hardware-Fittings-And-Accessories-532/1/",
+    "linkedin": null,
+    "industry": "Hardware_Development",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "confidence_score": 53,
+    "lead_quality": "Medium",
+    "company_type": "Unknown",
+    "relevance_score": 53,
+    "relevance_tier": "LOW",
+    "relevance_info": {
+      "score": 53,
+      "tier": "LOW",
+      "matched_signals": [
+        "Description",
+        "Technologies"
+      ],
+      "rejected_signals": [
+        "Services",
+        "Products",
+        "Positions",
+        "Blog/Articles"
+      ],
+      "score_breakdown": {
+        "description": 36.0,
+        "services": 0.0,
+        "technologies": 20.0,
+        "products": 0.0,
+        "positions": 0.0,
+        "blog": 0.0
+      },
+      "industry": "Hardware_Development",
+      "confidence": 0.53,
+      "aborted": false,
+      "company_type": "B2C/Marketplace",
+      "semantic_trace": [
+        "Matched Description with concepts: ['Hardware']",
+        "Matched Technologies: ['Hardware']"
+      ],
+      "technologies": [
+        "Hardware"
+      ],
+      "products": [],
+      "website": "",
+      "website_source": ""
+    },
+    "_source_file": "output\\raw\\hardware_20260719_194348.json",
+    "_flags": [],
+    "_verified_emails": [],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "domain_source": "existing_website",
+      "whois": {
+        "registrar": "Network Solutions, LLC",
+        "creation_date": "2000-10-11 18:04:57+00:00",
+        "org": null,
+        "country": "IN"
+      }
+    }
+  },
+  {
+    "company_name": "Keyaenterprises",
+    "website": "https://www.keyaenterprises.in/",
+    "linkedin": null,
+    "industry": "Artificial Intelligence",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "confidence_score": 34,
+    "lead_quality": "Low",
+    "company_type": "Software Company",
+    "relevance_score": 34,
+    "relevance_tier": "REJECT",
+    "relevance_info": {
+      "score": 34,
+      "tier": "REJECT",
+      "matched_signals": [
+        "Description"
+      ],
+      "rejected_signals": [
+        "Services",
+        "Technologies",
+        "Products",
+        "Positions",
+        "Blog/Articles"
+      ],
+      "score_breakdown": {
+        "description": 36.0,
+        "services": 0.0,
+        "technologies": 0.0,
+        "products": 0.0,
+        "positions": 0.0,
+        "blog": 0.0
+      },
+      "industry": "Hardware_Development",
+      "confidence": 0.2,
+      "aborted": false,
+      "company_type": "B2B Software",
+      "semantic_trace": [
+        "Matched Description with concepts: ['Hardware']"
+      ],
+      "technologies": [],
+      "products": [],
+      "website": "",
+      "website_source": ""
+    },
+    "_source_file": "output\\raw\\hardware_20260719_194348.json",
+    "_flags": [],
+    "_verified_emails": [],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "domain_source": "existing_website",
+      "whois": {
+        "registrar": "GoDaddy.com, LLC",
+        "creation_date": "[datetime.datetime(2023, 8, 12, 5, 43, 30, 520000, tzinfo=tzoffset('UTC', 0)), datetime.datetime(2023, 8, 12, 5, 43, 30, tzinfo=tzoffset('UTC', 0))]",
+        "org": null,
+        "country": "IN"
+      }
+    }
+  },
+  {
+    "company_name": "Hardware ProductsHardware Products Manufacturer Wholesale Supplier",
+    "website": "https://www.avnienterprises.co.in/hardware-products.html",
+    "linkedin": null,
+    "industry": "Artificial Intelligence",
+    "location": null,
+    "contact_page": "http://www.avnienterprises.co.in/contact.html",
+    "about_page": "http://www.avnienterprises.co.in/about.html",
+    "team_page": null,
+    "emails": [],
+    "phones": [
+      "+91- 7000556771"
+    ],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "confidence_score": 53,
+    "lead_quality": "Medium",
+    "company_type": "Software Company",
+    "relevance_score": 53,
+    "relevance_tier": "LOW",
+    "relevance_info": {
+      "score": 53,
+      "tier": "LOW",
+      "matched_signals": [
+        "Description",
+        "Technologies"
+      ],
+      "rejected_signals": [
+        "Services",
+        "Products",
+        "Positions",
+        "Blog/Articles"
+      ],
+      "score_breakdown": {
+        "description": 36.0,
+        "services": 0.0,
+        "technologies": 20.0,
+        "products": 0.0,
+        "positions": 0.0,
+        "blog": 0.0
+      },
+      "industry": "Hardware_Industrial",
+      "confidence": 0.53,
+      "aborted": false,
+      "company_type": "B2C/Marketplace",
+      "semantic_trace": [
+        "Matched Description with concepts: ['Hardware']",
+        "Matched Technologies: ['Hardware']"
+      ],
+      "technologies": [
+        "Hardware"
+      ],
+      "products": [],
+      "website": "",
+      "website_source": ""
+    },
+    "_source_file": "output\\raw\\hardware_20260719_194348.json",
+    "_flags": [],
+    "_verified_emails": [],
+    "_verified_phones": [
+      "+91- 7000556771"
+    ],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "phones": {
+        "+91- 7000556771": "ok"
+      },
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "domain_source": "existing_website",
+      "whois": {
+        "registrar": "Wild West Domains, LLC",
+        "creation_date": "[datetime.datetime(2023, 1, 13, 12, 27, 34, 809000, tzinfo=tzoffset('UTC', 0)), datetime.datetime(2023, 1, 13, 12, 27, 34, tzinfo=tzoffset('UTC', 0))]",
+        "org": null,
+        "country": "IN"
+      }
+    }
+  }
+]

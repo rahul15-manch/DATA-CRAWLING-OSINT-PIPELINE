@@ -109,7 +109,12 @@ class BraveProvider(SearchProvider):
         from network_client_project.network.client import get_network_client
         client = get_network_client()
 
-        for attempt in range(1, 5):
+        for attempt in range(1, 3):
+            from utils.deadline import Deadline
+            if attempt > 1 and Deadline.is_exceeded():
+                logger.warning("[BraveProvider] Global deadline exceeded. Aborting Brave search retries.")
+                break
+
             try:
                 if attempt == 1:
                     time.sleep(random.uniform(1.5, 3.0))
@@ -132,7 +137,7 @@ class BraveProvider(SearchProvider):
             if resp.status_code == 429:
                 wait_for = self._next_backoff()
                 self._cooldown_until = time.time() + wait_for
-                if attempt < 4:
+                if attempt < 2:
                     time.sleep(wait_for + random.uniform(0.5, 1.5))
                     continue
                 raise ProviderUnavailable(self.name, "Brave Scraper HTTP 429 rate limit")

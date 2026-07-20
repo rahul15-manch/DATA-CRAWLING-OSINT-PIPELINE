@@ -290,75 +290,6 @@
     "kind": "zero_result",
     "results": []
   },
-  "default||hardware||20||0": {
-    "query": "hardware",
-    "provider": "duckduckgo",
-    "timestamp": 1784214711.144256,
-    "result_count": 5,
-    "kind": "success",
-    "results": [
-      {
-        "title": "Top Hardware Tool Dealers in Sonipat near me - Justdial",
-        "url": "https://www.justdial.com/Sonipat/Hardware-Tool-Dealers/nct-10243534",
-        "snippet": "HardwareTool Dealers in Sonipat - Find the best deals on top-quality tools for your projects! Whether you need power tools, hand tools, or accessories, buy from trusted dealers nearby. Get the right equipment for home repairs, DIY projects, and professional jobs. Save time and money with unbeatable prices!",
-        "provider": "unknown",
-        "source": "",
-        "rank": 0,
-        "provider_rank": 0,
-        "query": "",
-        "page": 0,
-        "timestamp": 1784214711.1407013
-      },
-      {
-        "title": "Ace Hardware | The Helpful Place - Ace Hardware",
-        "url": "https://www.acehardware.com/",
-        "snippet": "Shop AceHardwarefor grills,hardware, home improvement, lawn and garden, and tools. Buy online & pickup today!",
-        "provider": "unknown",
-        "source": "",
-        "rank": 0,
-        "provider_rank": 0,
-        "query": "",
-        "page": 0,
-        "timestamp": 1784214711.1407013
-      },
-      {
-        "title": "Hardware stores in Sonipat - Cybo",
-        "url": "https://www.cybo.com/IN/sonipat/hardware-store/",
-        "snippet": "BestHardwarestores in Sonipat. PNB KITCHENMATE Retail Showroom (Kitchenware and Hotelware), Dev Rachna Kitchenware, Haryana Trading Company Bahalgarh, Surindra Batteries (Exide Amaron Battery Sonipat",
-        "provider": "unknown",
-        "source": "",
-        "rank": 0,
-        "provider_rank": 0,
-        "query": "",
-        "page": 0,
-        "timestamp": 1784214711.1407013
-      },
-      {
-        "title": "Sahil Hardware Store - Retailer from Sonipat, India | About Us",
-        "url": "https://www.indiamart.com/sahil-hardware-store/profile.html",
-        "snippet": "SahilHardwareStore - Retailer of 65m Transparent Cello Tape, 15Inch Shrink Film Roll, Red cello tape, 100m Packaging Air Bubbles Roll and Adhesive & Pressure Sensitive Tapes in Sonipat, Haryana",
-        "provider": "unknown",
-        "source": "",
-        "rank": 0,
-        "provider_rank": 0,
-        "query": "",
-        "page": 0,
-        "timestamp": 1784214711.1407013
-      },
-      {
-        "title": "Sahil Hardware Store, Jatheri - Hardware store in Sonipat",
-        "url": "https://www.indiainfo.net/place/sahil-hardware-store-875345",
-        "snippet": "SahilHardwareStore is located in Jatheri, Nathupur, P.S.Rai, Pritampura, Rai area of Sonipat, Haryana India. Complete address of SahilHardwareStore:Sector 38, Ferozepur Khadar, Haryana 131029.",
-        "provider": "unknown",
-        "source": "",
-        "rank": 0,
-        "provider_rank": 0,
-        "query": "",
-        "page": 0,
-        "timestamp": 1784214711.1422021
-      }
-    ]
-  },
   "default||best hardware||20||0": {
     "query": "best hardware",
     "provider": "duckduckgo",
@@ -422,51 +353,6 @@
         "query": "top hardware",
         "page": 0,
         "timestamp": 1784214723.9106543
-      }
-    ]
-  },
-  "default||hardware company||20||0": {
-    "query": "hardware company",
-    "provider": "bing",
-    "timestamp": 1784214740.643531,
-    "result_count": 3,
-    "kind": "success",
-    "results": [
-      {
-        "title": "100 Top Hardware Companies in India · July 2026 | F6S",
-        "url": "https://www.f6s.com/companies/hardware/india/co",
-        "snippet": "Jul 1, 2026 · Detailed info and reviews on 100 top Hardware companies and startups in India in 2026. Get the latest updates on their …",
-        "provider": "bing",
-        "source": "Bing",
-        "rank": 0,
-        "provider_rank": 1,
-        "query": "hardware company",
-        "page": 0,
-        "timestamp": 1784214740.6224127
-      },
-      {
-        "title": "India's Leading Architectural Hardware Manufacturer",
-        "url": "https://www.ozone.in/",
-        "snippet": "Ozone is the leading manufacturer & supplier of Architectural Hardware Fittings & Security Solutions that …",
-        "provider": "bing",
-        "source": "Bing",
-        "rank": 0,
-        "provider_rank": 5,
-        "query": "hardware company",
-        "page": 0,
-        "timestamp": 1784214740.6224127
-      },
-      {
-        "title": "15 Top Computer Hardware Companies in India · July 2026 | F6S",
-        "url": "https://www.f6s.com/companies/computer-hardware/india/co",
-        "snippet": "Jul 1, 2026 · Detailed info and reviews on 15 top Computer Hardware companies and startups in India in 2026. Get the latest updates …",
-        "provider": "bing",
-        "source": "Bing",
-        "rank": 0,
-        "provider_rank": 6,
-        "query": "hardware company",
-        "page": 0,
-        "timestamp": 1784214740.6224127
       }
     ]
   },
@@ -945,14 +831,6 @@
     "kind": "zero_result",
     "results": []
   },
-  "default||site:linkedin.com/in \"Daffodilsw\" founder OR CEO OR director||5||0": {
-    "query": "site:linkedin.com/in \"Daffodilsw\" founder OR CEO OR director",
-    "provider": "google_html",
-    "timestamp": 1784220398.0481043,
-    "result_count": 0,
-    "kind": "zero_result",
-    "results": []
-  },
   "default||software bangalore||20||0": {
     "query": "software bangalore",
     "provider": "duckduckgo",
@@ -1112,14 +990,6 @@
     "query": "site:linkedin.com/in \"Creativepath\" \"co-founder\"",
     "provider": "google_html",
     "timestamp": 1784220702.7715814,
-    "result_count": 0,
-    "kind": "zero_result",
-    "results": []
-  },
-  "default||site:linkedin.com/in \"Daffodilsw\" \"co-founder\"||5||0": {
-    "query": "site:linkedin.com/in \"Daffodilsw\" \"co-founder\"",
-    "provider": "google_html",
-    "timestamp": 1784220710.33628,
     "result_count": 0,
     "kind": "zero_result",
     "results": []
@@ -1856,14 +1726,6 @@
     "query": "site:linkedin.com/in \"Indias Leading Architectural Hardware Manufacturer\" founder OR CEO OR director",
     "provider": "google_html",
     "timestamp": 1784285196.2082705,
-    "result_count": 0,
-    "kind": "zero_result",
-    "results": []
-  },
-  "default||site:linkedin.com/in \"Acehardware\" founder OR CEO OR director||5||0": {
-    "query": "site:linkedin.com/in \"Acehardware\" founder OR CEO OR director",
-    "provider": "google_html",
-    "timestamp": 1784285204.468924,
     "result_count": 0,
     "kind": "zero_result",
     "results": []
@@ -5252,541 +5114,965 @@
       }
     ]
   },
-  "default||ai software company||10||0": {
-    "query": "ai software company",
+  "default||site:clutch.co Custom Software||20||0": {
+    "query": "site:clutch.co Custom Software",
     "provider": "duckduckgo",
-    "timestamp": 1784526041.3795514,
-    "result_count": 7,
+    "timestamp": 1784466878.6331763,
+    "result_count": 9,
     "kind": "success",
     "results": [
       {
-        "title": "more info",
-        "url": "https://duckduckgo.com/duckduckgo-help-pages/company/ads-by-microsoft-on-duckduckgo-private-search/",
-        "snippet": "Get online fast with EmergentAIwebsite builder. No tech skills needed. Turn your Mobile App ideas into reality—AI & no-code app development made simple.",
+        "title": "Top Custom Software Development Companies - Clutch.co",
+        "url": "https://clutch.co/developers",
+        "snippet": "Simform is acustomsoftwaredevelopment company specializing in tailoredsoftwaredevelopment and full-stack solutions. Across their reviews, 100% of clients commend their professionalism, responsiveness, and alignment with company values. Approximately 80% of reviewers highlight their ability to deliver projects on time and within budget, while about 90% appreciate their strategic ...",
         "provider": "unknown",
         "source": "",
         "rank": 0,
         "provider_rank": 0,
         "query": "",
         "page": 0,
-        "timestamp": 1784526041.3651748
+        "timestamp": 1784466878.625382
       },
       {
-        "title": "Software Company in Gurgaon, India | Akoode Technologies",
-        "url": "https://www.akoode.com/",
-        "snippet": "Akoode is a trustedAIandsoftwaredevelopmentcompanyserving India and the USA, delivering customsoftware, DevOps, SaaS, and digital solutions.",
+        "title": "Top Custom Software Development Companies for Small Business",
+        "url": "https://clutch.co/developers/small-business",
+        "snippet": "Discover vetted developers for small businesses. Compare web, mobile, andcustomsoftwareteams and hire the right partner to scale your SMB.",
         "provider": "unknown",
         "source": "",
         "rank": 0,
         "provider_rank": 0,
         "query": "",
         "page": 0,
-        "timestamp": 1784526041.3712022
+        "timestamp": 1784466878.625382
       },
       {
-        "title": "Top AI Software Development Companies - 2026 Ranking",
-        "url": "https://www.esparkinfo.com/software-development/top-companies/ai",
-        "snippet": "Trapped by manual processes and slow workflows? TopAIsoftwaredevelopment companies build smart automation tools to accelerate your enterprise pipeline.",
+        "title": "Best Software Development Packages - Clutch",
+        "url": "https://clutch.co/developers/packages",
+        "snippet": "Customsoftwaredevelopment is the process of designing, developing and deployingsoftwarefor a specific set of users with specific functions. As opposed to out-of-the-boxsoftware, orsoftwareas a service (SaaS), that is sold as is,customsoftwareaims to address specific needs and requirements of the end user that pre-made solutions may not address.",
         "provider": "unknown",
         "source": "",
         "rank": 0,
         "provider_rank": 0,
         "query": "",
         "page": 0,
-        "timestamp": 1784526041.3712022
+        "timestamp": 1784466878.625382
       },
       {
-        "title": "100 Top AI (Artificial Intelligence) Companies in United States - F6S",
-        "url": "https://www.f6s.com/companies/artificial-intelligence/united-states/co",
-        "snippet": "Detailed info and reviews on 100 topAI(Artificial Intelligence) companies and startups in United States in 2026. Get the latest updates on their products, jobs, funding, investors, founders and more.",
+        "title": "Top Custom Software Development Companies for the IT Services ... - Clutch",
+        "url": "https://clutch.co/developers/information-technology-industry",
+        "snippet": "Vention is acustomsoftwaredevelopment firm known for its expertise in tailoredsoftwaredevelopment and managedsoftwaredevelopment services. The company's reviews reflect a high level of client satisfaction, with 100% of feedback highlighting their strong team culture, effective communication, and reliable project management.",
         "provider": "unknown",
         "source": "",
         "rank": 0,
         "provider_rank": 0,
         "query": "",
         "page": 0,
-        "timestamp": 1784526041.3712022
+        "timestamp": 1784466878.625382
       },
       {
-        "title": "10 Best AI Companies in India - Analytics Insight",
-        "url": "https://www.analyticsinsight.net/artificial-intelligence/top-10-ai-companies-in-india",
-        "snippet": "Discover India's leadingAIcompanies of 2025, driving innovation in automation, analytics, and machine learning. Explore top firms like Fractal, Ksolves, and Arya.ai.",
+        "title": "Top Custom Software Development Companies for Retail Companies",
+        "url": "https://clutch.co/developers/retail-industry",
+        "snippet": "Goji Labs is acustomsoftwaredevelopment company known for its expertise in tailoredsoftwaredevelopment and bespokesoftwarecreation. Reviews highlight their exceptional project management, flexibility, and technical proficiency, with 100% of clients noting their professionalism and commitment to delivering high-quality, end-to-endsoftwaresolutions. Clients appreciate their proactive ...",
         "provider": "unknown",
         "source": "",
         "rank": 0,
         "provider_rank": 0,
         "query": "",
         "page": 0,
-        "timestamp": 1784526041.3712022
+        "timestamp": 1784466878.625382
       },
       {
-        "title": "Leading Enterprise AI Software Provider | C3 AI",
-        "url": "https://c3.ai/",
-        "snippet": "C3AIis an EnterpriseAIapplicationsoftwarecompanyenabling organizations worldwide to develop, deploy, and operateAIat scale.",
+        "title": "Clutch - The Leading Marketplace for Finding Business Services",
+        "url": "https://clutch.co/",
+        "snippet": "Clutch powers how businesses discover, evaluate, and hire the right B2B service partners.",
         "provider": "unknown",
         "source": "",
         "rank": 0,
         "provider_rank": 0,
         "query": "",
         "page": 0,
-        "timestamp": 1784526041.3712022
+        "timestamp": 1784466878.625382
       },
       {
-        "title": "77 Artificial Intelligence (AI) Companies to Know - Built In",
-        "url": "https://builtin.com/artificial-intelligence/ai-companies-roundup",
-        "snippet": "Summary: Artificial intelligence is transforming industries from healthcare and finance tosoftwareand manufacturing. This roundup highlights leadingAIcompanies — including OpenAI, Anthropic, Google and Nvidia — alongside startups usingAIto power everything from search engines and cybersecurity to robotics, marketing and enterprisesoftware. more Artificial intelligence is ...",
+        "title": "Top Software Developers in the United States - Clutch",
+        "url": "https://clutch.co/us/developers",
+        "snippet": "BairesDev is aCustomSoftwareDevelopment company that offers tailoredsoftwarecreation and full stacksoftwaredevelopment services. Across multiple reviews, clients consistently praise their high-quality resources, seamless project management, and timely delivery. An impressive 75% of reviewers highlight their strong cultural fit and alignment with company values, while 90% commend their ...",
         "provider": "unknown",
         "source": "",
         "rank": 0,
         "provider_rank": 0,
         "query": "",
         "page": 0,
-        "timestamp": 1784526041.3712022
+        "timestamp": 1784466878.625382
+      },
+      {
+        "title": "Custom Software Development: The Pros and Cons for Businesses - Clutch",
+        "url": "https://clutch.co/resources/custom-software-development-pros-cons-businesses",
+        "snippet": "Customsoftwaredevelopment is the process of creating an application from the ground up to match the way your business actually works — your processes, your data, and your goals. It's built around what you need today and can adapt as your needs change, instead of forcing you to fit into someone else's mold. Choose commercial off-the-shelf (COTS) if it covers at least 70 to 80% of what ...",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784466878.6264105
+      },
+      {
+        "title": "Top Custom Software Development Companies for Manufacturing ... - Clutch",
+        "url": "https://clutch.co/developers/manufacturing-industry",
+        "snippet": "Find top developers for the manufacturing industry. Hire teams building IIoT, MES, automation and supply-chainsoftwareto optimize production.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784466878.6264105
       }
     ]
   },
-  "default||site:linkedin.com/company Custom Software||10||0": {
-    "query": "site:linkedin.com/company Custom Software",
+  "default||hardware||20||0": {
+    "query": "hardware",
     "provider": "duckduckgo",
-    "timestamp": 1784526699.790015,
-    "result_count": 10,
+    "timestamp": 1784469895.1485033,
+    "result_count": 5,
     "kind": "success",
     "results": [
       {
-        "title": "Custom Software Solutions | LinkedIn",
-        "url": "https://in.linkedin.com/company/custom-software-solutions-pune",
-        "snippet": "Established in 2013,CustomSoftwareSolutions (CSS) is a Pune-basedsoftwaredevelopment organization with a strong track record of delivering innovative solutions. As a technology-agnostic company, CSS leverages its extensive experience in product development, enhancement, and support to provide tailored solutions to its clients.",
+        "title": "Hardware Shops in Sonepat - Tools & Supplies Nearby",
+        "url": "https://www.justdial.com/Sonepat/Hardware-Shops/nct-10243514",
+        "snippet": "Looking forhardwareshops in Sonepat? Find options on Justdial, compare products, check reviews, and connect with shops for quick purchases.",
         "provider": "unknown",
         "source": "",
         "rank": 0,
         "provider_rank": 0,
         "query": "",
         "page": 0,
-        "timestamp": 1784526699.781122
+        "timestamp": 1784469895.1424875
       },
       {
-        "title": "Noventum™ Custom Software - LinkedIn",
-        "url": "https://www.linkedin.com/company/noventumcustomsoftware",
-        "snippet": "Noventum™CustomSoftware| 253 followers on LinkedIn. We improve your online performance through fast and efficientcustomsoftware. | In 2010, Brian Stinar and his friend, Aaron Torres, co ...",
+        "title": "Ace Hardware | The Helpful Place - Ace Hardware",
+        "url": "https://www.acehardware.com/",
+        "snippet": "Shop AceHardwarefor grills,hardware, home improvement, lawn and garden, and tools. Buy online & pickup today!",
         "provider": "unknown",
         "source": "",
         "rank": 0,
         "provider_rank": 0,
         "query": "",
         "page": 0,
-        "timestamp": 1784526699.781122
+        "timestamp": 1784469895.1424875
       },
       {
-        "title": "Custom Soft | LinkedIn",
-        "url": "https://in.linkedin.com/company/custom-soft",
-        "snippet": "CustomSoft | 1,227 followers on LinkedIn. Customsoft LeadingSoftwareDevelopment company from India. Specialized in Insurance, Real Estate Retail, Healthcare. | CustomSoft is LeadingSoftwaredevelopment company working for USA, UK, and CANADA &amp; EUROPE based clients. CustomSoft Provide Business solutions to specific domains like Insurance, Healthcare, Optician Industry, Shipping and ...",
+        "title": "Hardware stores in Sonipat - Cybo",
+        "url": "https://www.cybo.com/IN/sonipat/hardware-store/",
+        "snippet": "BestHardwarestores in Sonipat. PNB KITCHENMATE Retail Showroom (Kitchenware and Hotelware), Dev Rachna Kitchenware, Haryana Trading Company Bahalgarh, Surindra Batteries (Exide Amaron Battery Sonipat",
         "provider": "unknown",
         "source": "",
         "rank": 0,
         "provider_rank": 0,
         "query": "",
         "page": 0,
-        "timestamp": 1784526699.781122
+        "timestamp": 1784469895.1434934
       },
       {
-        "title": "Chetu, Inc. | LinkedIn",
-        "url": "https://www.linkedin.com/company/chetu-inc-",
-        "snippet": "SpecialtiesCustomSoftwareDevelopment, Mobile Applications, Systems Integration, Cloud Technologies, Business Intelligence, Infrastructure Support, Senior-Level Development, Implementation ...",
+        "title": "Bharat Hardware and Paints - near Shree Makhan Bhog Restorant ... - Cybo",
+        "url": "https://www.cybo.com/IN-biz/bharat-hardware-and-paints_2V",
+        "snippet": "BharatHardwareand Paints Sonipat postal code 131028. See Google profile, Hours, Phone and more for this business. 4.0 Cybo Score. BharatHardwareand Paints is working in Corporate management, Wholesale of construction supplies,Hardwarestores activities. Review on Cybo.",
         "provider": "unknown",
         "source": "",
         "rank": 0,
         "provider_rank": 0,
         "query": "",
         "page": 0,
-        "timestamp": 1784526699.781122
+        "timestamp": 1784469895.1434934
       },
       {
-        "title": "Custom Software (Pvt) Ltd - LinkedIn",
-        "url": "https://pk.linkedin.com/company/customsoftware-pvt-ltd",
-        "snippet": "AtCustomSoftware, we specialize in tailoring cutting-edgesoftwaresolutions to meet the unique needs of your business. As your strategic technology partner, we are committed to delivering top-notchsoftwaredevelopment services that drive efficiency, enhance productivity, and foster growth.",
+        "title": "Hardware Store - Sonipat",
+        "url": "https://sonipat.infoisinfo.co.in/search/hardware",
+        "snippet": "BestHardwareServices in Sonipat. Find phone numbers, address, opening hours and reviews of the topHardwareServices in Sonipat.",
         "provider": "unknown",
         "source": "",
         "rank": 0,
         "provider_rank": 0,
         "query": "",
         "page": 0,
-        "timestamp": 1784526699.781122
-      },
-      {
-        "title": "Custom Software Solutions, Inc. - LinkedIn",
-        "url": "https://www.linkedin.com/company/custom-software-solutions-inc.",
-        "snippet": "CustomSoftwareSolutions helps clients create the ideal customer experience, across the entire customer journey. Our interactive and connected offerings include website design, website ...",
-        "provider": "unknown",
-        "source": "",
-        "rank": 0,
-        "provider_rank": 0,
-        "query": "",
-        "page": 0,
-        "timestamp": 1784526699.781122
-      },
-      {
-        "title": "Custom Software Systems, Inc. - LinkedIn",
-        "url": "https://www.linkedin.com/company/custom-software-systems-inc.",
-        "snippet": "CustomSoftwareSystems, Inc. | 1,412 followers on LinkedIn. Linking the Right Information Technology Solutions with Your Business Needs | Welcome ToCustomSoftwareSystems, Inc. AboutCustom...",
-        "provider": "unknown",
-        "source": "",
-        "rank": 0,
-        "provider_rank": 0,
-        "query": "",
-        "page": 0,
-        "timestamp": 1784526699.781122
-      },
-      {
-        "title": "Buildable Custom Software - LinkedIn",
-        "url": "https://www.linkedin.com/company/buildable",
-        "snippet": "BuildableCustomSoftwareSoftwareDevelopment McMinnville, OR 505 followers Let's build what's next.Customsoftwarefor web, cloud, mobile, and desktop.",
-        "provider": "unknown",
-        "source": "",
-        "rank": 0,
-        "provider_rank": 0,
-        "query": "",
-        "page": 0,
-        "timestamp": 1784526699.781122
-      },
-      {
-        "title": "Custom Software Development - LinkedIn",
-        "url": "https://www.linkedin.com/company/software-developmenta",
-        "snippet": "We are a comprehensiveCustomSoftwareDevelopment, Mobile Application Development, HR Staffing and MVP consulting services company, providing wide range of consulting services to its clients and ...",
-        "provider": "unknown",
-        "source": "",
-        "rank": 0,
-        "provider_rank": 0,
-        "query": "",
-        "page": 0,
-        "timestamp": 1784526699.781122
-      },
-      {
-        "title": "Makeen Custom Software Development & Technology Services",
-        "url": "https://www.linkedin.com/company/makeen",
-        "snippet": "MakeenCustomSoftwareDevelopment &amp; Technology Services | 13,105 followers on LinkedIn. Jump-start your business with expertsoftwareengineering teams | Based in Washington, USA, Makeen ...",
-        "provider": "unknown",
-        "source": "",
-        "rank": 0,
-        "provider_rank": 0,
-        "query": "",
-        "page": 0,
-        "timestamp": 1784526699.781122
+        "timestamp": 1784469895.1434934
       }
     ]
   },
-  "default||ai||10||0": {
-    "query": "ai",
+  "default||hardware company||20||0": {
+    "query": "hardware company",
     "provider": "duckduckgo",
-    "timestamp": 1784527038.766069,
-    "result_count": 7,
+    "timestamp": 1784470016.7908056,
+    "result_count": 9,
     "kind": "success",
     "results": [
       {
-        "title": "AI Architectural Rendering - Get 3 Free Renders Daily",
-        "url": "https://duckduckgo.com/y.js?ad_domain=rerenderai.com&ad_provider=bingv7aa&ad_type=txad&click_metadata=rRFOk8D8KGyD0ApXwzFE1u9Mhv8F5YwAsOCNq7FIYCBuox668N%2DDdxxTMYcx6mSw2L9l_vyd6tkfEoiYI36cr1qyVvV8mQo4YN870eMlhZTnvRsvctPfKjP59cP8sX7vBf8mwZeXrs7a61Cj2Pzm8Vw%2D0ecpr1L3itMX%2DVTvla4.Ih%2Ds%2DykBowOQzqyeMEvFeA&rut=7f48061eb1191f9bd5aa85d749b78f6ab505a3d83b526786d912a2abadaf8586&u3=https%3A%2F%2Fwww.bing.com%2Faclick%3Fld%3De8mCOrD6nc0bcLHS4V0hLTvjVUCUyYuM_GZFv5xeyZzB8hjOouYBMFG0Ivdci1wCkARiEfETJQvRbOFSFXD3xX3ST%2Dt1fQMszzxrK2JF_UEGjDowI0HhrwHJFHzyGTBw0T4yX3Db19xlFhR8kPqXJy6vo2dVnciOr4Vl_gW3uTcUcGBH3oAalg4iDpM154sex8ylNm0BURFw94OwHbrcO0Ioegils%26u%3DaHR0cHMlM2ElMmYlMmZyZXJlbmRlcmFpLmNvbSUzZm1zY2xraWQlM2QzMTg4NTZlY2ZiYjMxMDdlOTBiNTNjYjE0MzBlZDM2YQ%26rlid%3D318856ecfbb3107e90b53cb1430ed36a&vqd=4-238601239261102896421258051787648449275&iurl=%7B1%7DIG%3D31CFB3A7D3E644F697A836C3F5D0BAE3%26CID%3D0DF4F86D06A266F40921EFF107C067AC%26ID%3DDevEx%2C5039.1",
-        "snippet": "Bring your architectural visions to life and elevate your presentations withAI. Transform your architectural concepts into stunning, realistic visuals in seconds.",
+        "title": "Keya Enterprises - IT Hardware Solutions in Bhopal, Madhya Pradesh",
+        "url": "https://www.keyaenterprises.in/",
+        "snippet": "Keya Enterprises is a leading IThardwaresolutions provider in Bhopal, MP. We specialize in computerhardwaresupply, servers, storage solutions, networking equipment, and comprehensive IT services. Trusted by businesses across Madhya Pradesh since 2017.",
         "provider": "unknown",
         "source": "",
         "rank": 0,
         "provider_rank": 0,
         "query": "",
         "page": 0,
-        "timestamp": 1784527038.7537417
+        "timestamp": 1784470016.7842326
       },
       {
-        "title": "more info",
-        "url": "https://duckduckgo.com/duckduckgo-help-pages/company/ads-by-microsoft-on-duckduckgo-private-search/",
-        "snippet": "Bring your architectural visions to life and elevate your presentations withAI. Transform your architectural concepts into stunning, realistic visuals in seconds.",
+        "title": "RAJA HARDWARE Company Profile | Bhopal, Madhya Pradesh, India ...",
+        "url": "https://www.dnb.com/business-directory/company-profiles.raja_hardware.a0426159b415100e7126b44fed86be3b.html",
+        "snippet": "Findcompanyresearch, competitor information, contact details & financial data for RAJAHARDWAREof Bhopal, Madhya Pradesh. Get the latest business insights from Dun & Bradstreet.",
         "provider": "unknown",
         "source": "",
         "rank": 0,
         "provider_rank": 0,
         "query": "",
         "page": 0,
-        "timestamp": 1784527038.7547386
+        "timestamp": 1784470016.7842326
       },
       {
-        "title": "Scalable AI Frontend & Backend - AI Infrastructure at Scale",
-        "url": "https://duckduckgo.com/y.js?ad_domain=drivenets.com&ad_provider=bingv7aa&ad_type=txad&click_metadata=06cPykDc1MVlgc2uLAwjAF8lWEXDV9ADQcnU2dlptoJvQq278ip_kuoMb9wToryIktbmEM254GEv0zqZRGx542dx7OdkFhyVsRT7hFyJXFiG%2DagzewNNYe5I3LoKLBOmlQeGBg57IY47NUpRv8IogPbuiNT6dVABr6yq0KLKgyg.IwHK%2D4E2%2DKQTtATAC3m3rA&rut=df224f032b110be01a7e27b3621ace30fda2d64c3defef066c8d2dd5c7ab1907&u3=https%3A%2F%2Fwww.bing.com%2Faclick%3Fld%3De8gcwe0HC0JmG%2DCh0YUWKJ5DVUCUwJHHAhlqWl0XN3TTGKWq7FQY_3iLTQcNDtHu02h1Ej7BjWdBT3s0m7Yc9wTCy%2D8oNVFdL1ThSn_d018fbrp5NK3MNkZdhHYPCMOzX53jej4hsLlsDfLPNnOfNUKRzsxEkceYhtn1u0BDcAsYyQK6DXLA1l_DzlXxSjPQSzwaVrvnecfVF52fqnPcmbhIQ7iHg%26u%3DaHR0cHMlM2ElMmYlMmZkcml2ZW5ldHMuY29tJTJmc29sdXRpb25zJTJmYWktbmV0d29ya2luZyUyZiUzZnV0bV90ZXJtJTNkYWklMjUyMGZyb250JTI1MjBlbmQlMjUyMGRldmVsb3BtZW50JTI2dXRtX2NhbXBhaWduJTNkRmViJTJiMjYtQUklMmJQcm9kdWN0cyUyNnV0bV9zb3VyY2UlM2RiaW5nJTI2dXRtX21lZGl1bSUzZHBwYyUyNmhzYV9hY2MlM2QyODgzOTIyNzI5JTI2aHNhX2NhbSUzZDIzNTcwOTA1NTgyJTI2aHNhX2dycCUzZDExNzg2Nzg1NzgwMzQ0MjIlMjZoc2FfYWQlM2QlMjZoc2Ffc3JjJTNkcyUyNmhzYV90Z3QlM2Rrd2QtNzM2Njc4ODI0NDQyNzQlMjZoc2Ffa3clM2RhaSUyNTIwZnJvbnQlMjUyMGVuZCUyNTIwZGV2ZWxvcG1lbnQlMjZoc2FfbXQlM2RiJTI2aHNhX25ldCUzZGFkd29yZHMlMjZoc2FfdmVyJTNkMyUyNm1zY2xraWQlM2RlNzljNjRkY2UyMmMxOWQ3NTkzYjBlODE1YTkxYjZjNg%26rlid%3De79c64dce22c19d7593b0e815a91b6c6&vqd=4-212376224618094191886151452867116010679&iurl=%7B1%7DIG%3D31CFB3A7D3E644F697A836C3F5D0BAE3%26CID%3D0DF4F86D06A266F40921EFF107C067AC%26ID%3DDevEx%2C5042.1",
-        "snippet": "The highest-performanceAIinfrastructure for scale-out GPU clusters. Proven at scale. Build a lossless Ethernet-based fabric for your GPU cluster with scheduled cell fabric",
+        "title": "Hardware Products,Hardware Products Manufacturer & Wholesale Supplier ...",
+        "url": "https://www.avnienterprises.co.in/hardware-products.html",
+        "snippet": "HardwareProducts Manufacturer & Wholesale Supplier / Wholesaler in Madhya Pradesh, India - Avni Enterprises is a leading Manufacturer ofHardwareProducts,HardwareProducts from Bhopal. Enquiry now!",
         "provider": "unknown",
         "source": "",
         "rank": 0,
         "provider_rank": 0,
         "query": "",
         "page": 0,
-        "timestamp": 1784527038.7547386
+        "timestamp": 1784470016.7852526
       },
       {
-        "title": "OpenAI | Research & Deployment",
-        "url": "https://openai.com/",
-        "snippet": "We believe our research will eventually lead to artificial general intelligence, a system that can solve human-level problems. Building safe and beneficial AGI is our mission.",
+        "title": "BHARMAL HARDWARE Company Profile | Bhopal, Madhya Pradesh | Competitors ...",
+        "url": "https://www.dnb.com/business-directory/company-profiles.bharmal_hardware.c0c98b7d579fc366021f61e0e246b468.html",
+        "snippet": "Findcompanyresearch, competitor information, contact details & financial data for BHARMALHARDWAREof Bhopal, Madhya Pradesh. Get the latest business insights from Dun & Bradstreet.",
         "provider": "unknown",
         "source": "",
         "rank": 0,
         "provider_rank": 0,
         "query": "",
         "page": 0,
-        "timestamp": 1784527038.7547386
+        "timestamp": 1784470016.7852526
       },
       {
-        "title": "ChatGPT",
-        "url": "https://chatgpt.com/",
-        "snippet": "ChatGPT is yourAIchatbot for everyday use. Chat with the most advancedAIto explore ideas, solve problems, and learn faster.",
+        "title": "Hardware Fittings And Accessories in Bhopal",
+        "url": "https://yellowpages.webindia123.com/d-py/Madhya-Pradesh/Bhopal/Hardware-Fittings-And-Accessories-532/1/",
+        "snippet": "HardwareShops in Bhopal. Get Address, Contact Numbers, Website, Email and more forHardwareFittings And Accessories in Bhopal on yellowpages.webindia123.com, Madhya Pradesh, India like Shree NathHardware& Plywood, Shankar Paints AndHardware- Gulmohar Colony, Gyan Traders, Rahul Sales Corporation, ShaktiHardware, Agrawal SanitaryHardwareand Electrical, Asian Sanitaries and Pain",
         "provider": "unknown",
         "source": "",
         "rank": 0,
         "provider_rank": 0,
         "query": "",
         "page": 0,
-        "timestamp": 1784527038.7547386
+        "timestamp": 1784470016.7852526
       },
       {
-        "title": "DeepAI",
-        "url": "https://deepai.org/",
-        "snippet": "DeepAI is the all-in-one creativeAIplatform built for everyone. We got our start in late 2016 with the first browser-based text-to-image generator (and some other generative tools). Since then, we have greatly expanded: with a single prompt, you can generate images, edit photos, chat with anAIthat browses the internet, create short videos, compose original music, or chat with a realistic ...",
+        "title": "Laxmi Hardware Store | Bhopal, Madhya Pradesh - The Company Check",
+        "url": "https://www.thecompanycheck.com/org/laxmi-hardware-store/8c2749d081",
+        "snippet": "LaxmiHardwareStore is a Micro enterprise engaged in the Wholesale Of Construction Materials,Hardware, Plumbing And Heating Equipment And Supplies in Bhopal, Madhya Pradesh. Find out more about product and services.",
         "provider": "unknown",
         "source": "",
         "rank": 0,
         "provider_rank": 0,
         "query": "",
         "page": 0,
-        "timestamp": 1784527038.7547386
+        "timestamp": 1784470016.7852526
       },
       {
-        "title": "Google AI - How we're making AI helpful for everyone",
-        "url": "https://ai.google/",
-        "snippet": "Discover how GoogleAIis committed to enriching knowledge, solving complex challenges and helping people grow by building usefulAItools and technologies.",
+        "title": "Raja Hardware, Bhopal - Wholesaler of Door Handle and Door Lock - IndiaMART",
+        "url": "https://www.indiamart.com/raja-hardware-bhopal/",
+        "snippet": "About Us RajaHardware- Wholesaler of door handle, door lock & furniturehardwarein Bhopal, Madhya Pradesh. + Read More",
         "provider": "unknown",
         "source": "",
         "rank": 0,
         "provider_rank": 0,
         "query": "",
         "page": 0,
-        "timestamp": 1784527038.7547386
+        "timestamp": 1784470016.7852526
+      },
+      {
+        "title": "Manish Hardware | Bhopal, Madhya Pradesh - The Company Check",
+        "url": "https://www.thecompanycheck.com/org/manish-hardware/ef485111a7",
+        "snippet": "ManishHardwareis a Micro enterprise engaged in the Wholesale Of Construction Materials,Hardware, Plumbing And Heating Equipment And Supplies in Bhopal, Madhya Pradesh. Find out more about product and services.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784470016.7852526
+      },
+      {
+        "title": "Raja Hardware - Retailer from Bhopal, India | About Us",
+        "url": "https://www.indiamart.com/raja-hardware-bhopal/aboutus.html",
+        "snippet": "RajaHardware, Bhopal, Madhya Pradesh - Retailer of Door Handle, Door locks, FurnitureHardware, kitchen accessories and Cabinet Handles,Hardware& Fittings",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784470016.7852526
       }
     ]
   },
-  "default||ai company||10||0": {
-    "query": "ai company",
-    "provider": "duckduckgo",
-    "timestamp": 1784527124.2288435,
-    "result_count": 7,
+  "default||site:linkedin.com/in \"Hardware ProductsHardware Products Manufacturer Wholesale Supplier\" founder OR CEO OR director||5||0": {
+    "query": "site:linkedin.com/in \"Hardware ProductsHardware Products Manufacturer Wholesale Supplier\" founder OR CEO OR director",
+    "provider": "brightdata",
+    "timestamp": 1784470100.6840248,
+    "result_count": 0,
+    "kind": "zero_result",
+    "results": []
+  },
+  "default||site:linkedin.com/in \"Acehardware\" founder OR CEO OR director||5||0": {
+    "query": "site:linkedin.com/in \"Acehardware\" founder OR CEO OR director",
+    "provider": "brave",
+    "timestamp": 1784470081.8589633,
+    "result_count": 1,
     "kind": "success",
     "results": [
       {
-        "title": "Pega Decision-Making AI - Real-Time AI from Pega",
-        "url": "https://duckduckgo.com/y.js?ad_domain=pega.com&ad_provider=bingv7aa&ad_type=txad&click_metadata=j4pW1At0CFg27GVS31q97MVRSvlGXyO1hzUP1zJNJqau9L%2DEuuiulHnNj5vK533u8ryNHqeioR9OMbl1Xwam4yeuPBSCRxktu9PwjFuHIwiTP_SsBDFMalZ9fXmEnLCuMglJhz_%2DWHGToRXibFVDXCguh112v4hF5gbNlZO0iNU.BsWvcCpRKZ%2DNy2jZyIDYeQ&rut=e10bc9a700ae5ff6d3a54f52c972c15602e02ba8bc787c66c5c8ac35049c50c2&u3=https%3A%2F%2Fwww.bing.com%2Faclick%3Fld%3De8dU81t2AgDm1GWYKmzbv2BTVUCUwwc0ZMt7qHHAs2kLoIDYQv5yt6O7UWx6u6ISNSacIbonIj%2DZCTudX6EWQIGb6J9ruj3rV01p00E3pXZtqEfXILmjps3QLA63eMO0uf03L65TJaYBpWoapqYs36YZJ7YX1g_Q4SEtH_bS8czbL06NikXzOS2efVVO5A5GG1Eku8EMw1ObnULJ9V%2DUC5Gu5vUfA%26u%3DaHR0cHMlM2ElMmYlMmZhZC5kb3VibGVjbGljay5uZXQlMmZzZWFyY2hhZHMlMmZsaW5rJTJmY2xpY2slM2ZsaWQlM2Q0MzcwMDA4MTM0NDExMjkzMSUyNmRzX3Nfa3dnaWQlM2Q1ODcwMDAwNzc0NjY1NTI0NiUyNmRzX2FfY2lkJTNkNDAwODE3MjUwJTI2ZHNfYV9jYWlkJTNkMTY2NTIzNDk1MjYlMjZkc19hX2FnaWQlM2QxMzIxNTg2MTc1ODIlMjZkc19hX2xpZCUzZGt3ZC0xNjgzNzM3OTE3JTI2JTI2ZHNfZV9hZGlkJTNkODE2Mzg4MzgwMDgxMjAlMjZkc19lX3RhcmdldF9pZCUzZGt3ZC04MTYzOTA4MTYyNTI0NyUzYWxvYy05MCUyNiUyNmRzX2VfbmV0d29yayUzZHMlMjZkc191cmxfdiUzZDIlMjZkc19kZXN0X3VybCUzZGh0dHBzJTNhJTJmJTJmd3d3LnBlZ2EuY29tJTJmcmVhbC10aW1lLWRlY2lzaW9uaW5nJTNmdXRtX3NvdXJjZSUzZGJpbmclMjZ1dG1fbWVkaXVtJTNkY3BjJTI2dXRtX2NhbXBhaWduJTNkQl9JbmRpYV9Ob25CcmFuZF9BSV9DRV9Ccm9hZF8oQ1BOLTExMTA2NylfRU4lMjZ1dG1fdGVybSUzZGFpJTI1MjBtYXJrZXRpbmclMjZnbG9jJTNkMjMwMDYyJTI2dXRtX2NvbnRlbnQlM2RwY3JpZCU3YyU3Y3BrdyU3Y2t3ZC04MTYzOTA4MTYyNTI0NyUzYWxvYy05MCU3Y3BtdCU3Y2IlN2NwZHYlN2NjJTdjJTI2Z2NsaWQlM2QwMmNkYzIyOTkxZmMxZTlkOTU4MWE4NzQyOGVlZGRhNyUyNmdjbHNyYyUzZDNwLmRzJTI2JTI2bXNjbGtpZCUzZDAyY2RjMjI5OTFmYzFlOWQ5NTgxYTg3NDI4ZWVkZGE3JTI2dXRtX3NvdXJjZSUzZGJpbmclMjZ1dG1fbWVkaXVtJTNkY3BjJTI2dXRtX2NhbXBhaWduJTNkQl9JbmRpYV9Ob25CcmFuZF9BSV9DRV9Ccm9hZF8oQ1BOLTExMTA2NylfRU4lMjZ1dG1fdGVybSUzZGFpJTI1MjBtYXJrZXRpbmclMjZ1dG1fY29udGVudCUzZFJlYWwtVGltZSUyNTIwRGVjaXNpb25pbmc%26rlid%3D02cdc22991fc1e9d9581a87428eedda7&vqd=4-24669440172152700157603850893972680353&iurl=%7B1%7DIG%3D91A938BC60794FBB9FF797C3704753D0%26CID%3D19C93D415C2965A715942ADD5D4B64D6%26ID%3DDevEx%2C5038.1",
-        "snippet": "Pega real-timeAIsolutions help drive increased customer lifetime value. Stay connected and relevant to your customers with real-time decisioning powered byAI.",
-        "provider": "unknown",
-        "source": "",
+        "title": "05:07CNBCAce Hardware CEO John Venhuizen discusses consumer trends and most ...November 18, 2022",
+        "url": "https://www.cnbc.com/video/2022/11/18/ace-hardware-ceo-john-venhuizen-discusses-consumer-trends-and-most-recent-quarter.html",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
         "rank": 0,
-        "provider_rank": 0,
-        "query": "",
+        "provider_rank": 3,
+        "query": "site:linkedin.com/in \"Acehardware\" founder OR CEO OR director",
         "page": 0,
-        "timestamp": 1784527124.2194476
-      },
-      {
-        "title": "more info",
-        "url": "https://duckduckgo.com/duckduckgo-help-pages/company/ads-by-microsoft-on-duckduckgo-private-search/",
-        "snippet": "Pega real-timeAIsolutions help drive increased customer lifetime value. Stay connected and relevant to your customers with real-time decisioning powered byAI.",
-        "provider": "unknown",
-        "source": "",
-        "rank": 0,
-        "provider_rank": 0,
-        "query": "",
-        "page": 0,
-        "timestamp": 1784527124.2204447
-      },
-      {
-        "title": "Free AI to Write Papers - Ai Research",
-        "url": "https://duckduckgo.com/y.js?ad_domain=jenni.ai&ad_provider=bingv7aa&ad_type=txad&click_metadata=v52ObIz182rtslF7Q_3ZLsZadlYxRC9bjaKOvI4E3BdOhWkGyIoM2dkNj1QdBgnnhvZuyI0HXFyp7Qn5dlrXkn4gI4FZ2N70GVmsFvAyVwNup3kFbdBxbzOh9PPCEOq293DSixG91CwCjwzFTCS%2D9DQ%2DB2TmLAkPeQe4uHxvc6o.LC3N6eZ6YfL6wNkb1xee5A&rut=81bfba4a1e8ff55b9e366e1782e0d81786015ca98569dfa99d97aa8d928545c4&u3=https%3A%2F%2Fwww.bing.com%2Faclick%3Fld%3De8NjhSlCqPKB2G0ia3AXQ11DVUCUx_vcz1bqUubAt7HIJc7u2HPYeqt90OP9laggwB492e1YCwBmza%2D_tXMe2c37V570wxo7q4k9kEcatBjCe99vcadclCwJbiFvYBp8_g9XEUQmuL74F6shzlEn0qr6GEXFCNkmj87aU%2DFe%2D7xBDc5a3TSzAbRbjJ4bdKf5wBIMxrrqeov611O29kRy8NONVMByo%26u%3DaHR0cHMlM2ElMmYlMmZqZW5uaS5haSUzZnV0bV9zb3VyY2UlM2RiaW5nJTI2dXRtX21lZGl1bSUzZGNwYyUyNnV0bV9jYW1wYWlnbiUzZDQ4Nzg2MjUxMCUyNnV0bV90ZXJtJTNkYWklMjUyMHJlc2VhcmNoJTI2dXRtX2NvbnRlbnQlM2QlMjZjbWNfYWRpZCUzZGdhX180ODc4NjI1MTAlMjZ1dG1fZ3JvdXAlM2QxMjMwMzU1MDA1OTE3NTg5JTI2bXNjbGtpZCUzZGNlMTY0ZGJmNjEzZTE3MDQ3OGVmMjdlMmQ4MmM2ZTYw%26rlid%3Dce164dbf613e170478ef27e2d82c6e60&vqd=4-77831254231473652408406162744429435634&iurl=%7B1%7DIG%3D91A938BC60794FBB9FF797C3704753D0%26CID%3D19C93D415C2965A715942ADD5D4B64D6%26ID%3DDevEx%2C5041.1",
-        "snippet": "Save Hours in Writing Papers With Jenni.AIfor Free. Get Suggestions Whenever You Are Stuck Or Expand Your Notes Into Full Paragraphs",
-        "provider": "unknown",
-        "source": "",
-        "rank": 0,
-        "provider_rank": 0,
-        "query": "",
-        "page": 0,
-        "timestamp": 1784527124.2204447
-      },
-      {
-        "title": "OpenAI | Research & Deployment",
-        "url": "https://openai.com/",
-        "snippet": "We believe our research will eventually lead to artificial general intelligence, a system that can solve human-level problems. Building safe and beneficial AGI is our mission.",
-        "provider": "unknown",
-        "source": "",
-        "rank": 0,
-        "provider_rank": 0,
-        "query": "",
-        "page": 0,
-        "timestamp": 1784527124.2204447
-      },
-      {
-        "title": "Top 10: AI Companies | AI Magazine",
-        "url": "https://aimagazine.com/top10/top-10-ai-companies-2025",
-        "snippet": "From breakthrough research to real-world applications,AIMagazine highlights the Top 10AICompanies in 2025 defining the future of the technology",
-        "provider": "unknown",
-        "source": "",
-        "rank": 0,
-        "provider_rank": 0,
-        "query": "",
-        "page": 0,
-        "timestamp": 1784527124.2204447
-      },
-      {
-        "title": "10 Best AI Companies in India - Analytics Insight",
-        "url": "https://www.analyticsinsight.net/artificial-intelligence/top-10-ai-companies-in-india",
-        "snippet": "Discover India's leadingAIcompanies of 2025, driving innovation in automation, analytics, and machine learning. Explore top firms like Fractal, Ksolves, and Arya.ai.",
-        "provider": "unknown",
-        "source": "",
-        "rank": 0,
-        "provider_rank": 0,
-        "query": "",
-        "page": 0,
-        "timestamp": 1784527124.2204447
-      },
-      {
-        "title": "77 Artificial Intelligence (AI) Companies to Know - Built In",
-        "url": "https://builtin.com/artificial-intelligence/ai-companies-roundup",
-        "snippet": "Summary: Artificial intelligence is transforming industries from healthcare and finance to software and manufacturing. This roundup highlights leadingAIcompanies — including OpenAI, Anthropic, Google and Nvidia — alongside startups usingAIto power everything from search engines and cybersecurity to robotics, marketing and enterprise software. more Artificial intelligence is ...",
-        "provider": "unknown",
-        "source": "",
-        "rank": 0,
-        "provider_rank": 0,
-        "query": "",
-        "page": 0,
-        "timestamp": 1784527124.2204447
+        "timestamp": 1784470081.8494592
       }
     ]
   },
-  "default||site:linkedin.com/company software||10||0": {
-    "query": "site:linkedin.com/company software",
-    "provider": "duckduckgo",
-    "timestamp": 1784527369.6597152,
-    "result_count": 10,
+  "default||site:linkedin.com/in \"Keyaenterprises\" founder OR CEO OR director||5||0": {
+    "query": "site:linkedin.com/in \"Keyaenterprises\" founder OR CEO OR director",
+    "provider": "brightdata",
+    "timestamp": 1784470117.7889388,
+    "result_count": 0,
+    "kind": "zero_result",
+    "results": []
+  },
+  "default||site:linkedin.com/in \"Cybo\" founder OR CEO OR director||5||0": {
+    "query": "site:linkedin.com/in \"Cybo\" founder OR CEO OR director",
+    "provider": "brightdata",
+    "timestamp": 1784470274.3300214,
+    "result_count": 0,
+    "kind": "zero_result",
+    "results": []
+  },
+  "default||site:linkedin.com/in \"Hardware Fittings And Accessories in Bhopal\" founder OR CEO OR director||5||0": {
+    "query": "site:linkedin.com/in \"Hardware Fittings And Accessories in Bhopal\" founder OR CEO OR director",
+    "provider": "brightdata",
+    "timestamp": 1784470298.7763546,
+    "result_count": 0,
+    "kind": "zero_result",
+    "results": []
+  },
+  "default||electronics\\||20||0": {
+    "query": "electronics\\",
+    "provider": "bing",
+    "timestamp": 1784473428.762715,
+    "result_count": 4,
     "kind": "success",
     "results": [
       {
-        "title": "Software Development Platform - Develop Software Efficiently",
-        "url": "https://duckduckgo.com/y.js?ad_domain=blueoptima.com&ad_provider=bingv7aa&ad_type=txad&click_metadata=ooUVOT4sQJT%2D_FdJ8RS6smsha6Uc_anCEayx13LUVtpPknexz2bNSklb_kE26mnOlT3AblhtLEIqUleyN_vkeT7SD%2DsVf1u%2D9Ij9iHjo_wHOF4GyXfeO1W1%2Dcega3DJxkBRHHUT9ugIYpemikJ7MaAGu6mhHkHa5BobucLYD7zw.wiJ825ZBOSQeAO5NQPTI1Q&rut=267a49cd6bfe09d5c9848d7352ca12d4ce17f3dfa25299eeb929fdd4371b4014&u3=https%3A%2F%2Fwww.bing.com%2Faclick%3Fld%3De8LP9GE%2DZPlQbiXbYr25U8lDVUCUzF3k_iPcaf7huaqHH_dD2%2DyzlfuCFul7a9z1CoMS2v6KkgefQHtvh7TGdilQfvXwHeBgYUMINZ24Q_Gq26S9JaDu3jKEa_VLb73EBNJCG5MsblDakvjM2tB1gNJxVUkzsHRASQlPQGvw3hAcbtAEX%2D2p80CfaqrKBrXFUCc_WJTwmRU3HeGL%2DCaWJZl9NNWSc%26u%3DaHR0cHMlM2ElMmYlMmZ3d3cuYmx1ZW9wdGltYS5jb20lMmYlM2Z1dG1fdGVybSUzZG1lYXN1cmUlMjUyMGFpJTI1MjBkZXZlbG9wZXIlMjUyMHByb2R1Y3Rpdml0eSUyNnV0bV9jYW1wYWlnbiUzZEJsdWVPcHRpbWElMmJDb25zb2xpZGF0aW9uJTI2dXRtX3NvdXJjZSUzZGJpbmclMjZ1dG1fbWVkaXVtJTNkcHBjJTI2aHNhX2FjYyUzZDgwNzg4NjM2NDklMjZoc2FfY2FtJTNkMTY2MzA3MjA3ODMlMjZoc2FfZ3JwJTNkMTI2ODgzNzMyMTQ3NDc0NCUyNmhzYV9hZCUzZCUyNmhzYV9zcmMlM2RzJTI2aHNhX3RndCUzZGt3ZC03OTMwMjkwMDQ1MDAwNyUyNmhzYV9rdyUzZG1lYXN1cmUlMjUyMGFpJTI1MjBkZXZlbG9wZXIlMjUyMHByb2R1Y3Rpdml0eSUyNmhzYV9tdCUzZGIlMjZoc2FfbmV0JTNkYWR3b3JkcyUyNmhzYV92ZXIlM2QzJTI2bXNjbGtpZCUzZDk4ZjQ1YjcxM2MwNDFiOGIzMWUzMzEyYzg2MGNlMjBi%26rlid%3D98f45b713c041b8b31e3312c860ce20b&vqd=4-131420549199374821900361545245375061106&iurl=%7B1%7DIG%3DDDD2C77FC6F64594932026218CB34363%26CID%3D2BBFE54CFC146346382FF2D0FDEC6262%26ID%3DDevEx%2C5038.1",
-        "snippet": "Expand YourSoftwareEngineering Potential and AccelerateSoftwareDelivery. Objectively Measure Your Developers Productivity and Optimise YourSoftwareDelivery.",
-        "provider": "unknown",
-        "source": "",
+        "title": "200+ Electronic Circuits - Simple Circuits and Mini Projects",
+        "url": "https://circuitdigest.com/electronic-circuits",
+        "snippet": "Mar 14, 2026 · Explore Simple Electronics Circuits and Mini Projects Ideas. These free electronic circuits are properly tested and can be found with schematic diagrams, breadboard image or PCB, a detailed …",
+        "provider": "bing",
+        "source": "Bing",
         "rank": 0,
-        "provider_rank": 0,
-        "query": "",
+        "provider_rank": 4,
+        "query": "electronics\\",
         "page": 0,
-        "timestamp": 1784527369.650517
+        "timestamp": 1784473428.745343
       },
       {
-        "title": "more info",
-        "url": "https://duckduckgo.com/duckduckgo-help-pages/company/ads-by-microsoft-on-duckduckgo-private-search/",
-        "snippet": "Expand YourSoftwareEngineering Potential and AccelerateSoftwareDelivery. Objectively Measure Your Developers Productivity and Optimise YourSoftwareDelivery.",
-        "provider": "unknown",
-        "source": "",
+        "title": "Electronics | An Open Access Journal from MDPI",
+        "url": "https://www.mdpi.com/journal/electronics",
+        "snippet": "Electronics is an international, peer-reviewed, open access journal on the science of electronics and its applications published semimonthly online by MDPI.",
+        "provider": "bing",
+        "source": "Bing",
         "rank": 0,
-        "provider_rank": 0,
-        "query": "",
+        "provider_rank": 5,
+        "query": "electronics\\",
         "page": 0,
-        "timestamp": 1784527369.650517
+        "timestamp": 1784473428.745343
       },
       {
-        "title": "PureSoftware Ltd | LinkedIn",
-        "url": "https://www.linkedin.com/company/puresoftware",
-        "snippet": "PureSoftware, a wholly owned subsidiary of Happiest Minds, is a globalsoftwareproducts and digital services company. PureSoftware has been driving transformation for the world's top ...",
-        "provider": "unknown",
-        "source": "",
+        "title": "Electronics - Components, Circuits, Technology | Britannica",
+        "url": "https://www.britannica.com/technology/electronics/The-science-of-electronics",
+        "snippet": "Jun 13, 2026 · Since electronics is concerned with the control of the motion of electrons, one must keep in mind that electrons, being negatively charged, are attracted to positive charges and repelled by …",
+        "provider": "bing",
+        "source": "Bing",
         "rank": 0,
-        "provider_rank": 0,
-        "query": "",
+        "provider_rank": 7,
+        "query": "electronics\\",
         "page": 0,
-        "timestamp": 1784527369.650517
+        "timestamp": 1784473428.745343
       },
       {
-        "title": "Software.com - LinkedIn",
-        "url": "https://www.linkedin.com/company/softwaredotcom",
-        "snippet": "Software.com | 2,254 followers on LinkedIn. Automated KPIs that help companies measure and improve development performance | We provide teams with simple, automated engineering KPIs to measure and ...",
-        "provider": "unknown",
-        "source": "",
+        "title": "HOME - DEE Electronics",
+        "url": "https://dee-inc.com/",
+        "snippet": "DEE is a client-focused Value-Added and Value-Creation Integrator that focuses on your goals, problems, and needs above all else. We put our clients needs above our own, get into the alligator …",
+        "provider": "bing",
+        "source": "Bing",
         "rank": 0,
-        "provider_rank": 0,
-        "query": "",
+        "provider_rank": 9,
+        "query": "electronics\\",
         "page": 0,
-        "timestamp": 1784527369.650517
-      },
-      {
-        "title": "SoftwareOne - LinkedIn",
-        "url": "https://www.linkedin.com/company/softwareone",
-        "snippet": "SoftwareOne | 772,937 followers on LinkedIn. Always on your side, making technology matter. | SoftwareOne is a globalsoftwareand cloud solutions provider. With a presence in over 70 countries ...",
-        "provider": "unknown",
-        "source": "",
-        "rank": 0,
-        "provider_rank": 0,
-        "query": "",
-        "page": 0,
-        "timestamp": 1784527369.650517
-      },
-      {
-        "title": "Software AG - LinkedIn",
-        "url": "https://www.linkedin.com/company/software-ag",
-        "snippet": "SoftwareAG has been helping enterprises run and evolve their core business applications for over 50 years. With a focus on modernization, integration, and long-term value,SoftwareAG enables ...",
-        "provider": "unknown",
-        "source": "",
-        "rank": 0,
-        "provider_rank": 0,
-        "query": "",
-        "page": 0,
-        "timestamp": 1784527369.650517
-      },
-      {
-        "title": "Beacon Software - LinkedIn",
-        "url": "https://www.linkedin.com/company/beaconsoftware",
-        "snippet": "Beacon is the permanent home for Main Streetsoftwareand services supporting the real economy. We buy, build, and grow exceptional mission-criticalsoftwarebusinesses, preserving their legacy ...",
-        "provider": "unknown",
-        "source": "",
-        "rank": 0,
-        "provider_rank": 0,
-        "query": "",
-        "page": 0,
-        "timestamp": 1784527369.650517
-      },
-      {
-        "title": "Lucid Software - LinkedIn",
-        "url": "https://www.linkedin.com/company/lucidsoftware",
-        "snippet": "LucidSoftware| 145,468 followers on LinkedIn. The Work Acceleration Platform powered by visual collaboration: Lucidchart, Lucidspark, and airfocus. | LucidSoftwareis the leader in visual ...",
-        "provider": "unknown",
-        "source": "",
-        "rank": 0,
-        "provider_rank": 0,
-        "query": "",
-        "page": 0,
-        "timestamp": 1784527369.650517
-      },
-      {
-        "title": "Banyan Software - LinkedIn",
-        "url": "https://www.linkedin.com/company/banyan-software-llc/",
-        "snippet": "BanyanSoftware| 46,111 followers on LinkedIn. The best permanent home for successful enterprisesoftwarebusinesses, their employees, and customers. | BanyanSoftwareprovides the best permanent ...",
-        "provider": "unknown",
-        "source": "",
-        "rank": 0,
-        "provider_rank": 0,
-        "query": "",
-        "page": 0,
-        "timestamp": 1784527369.650517
-      },
-      {
-        "title": "Software Finder - LinkedIn",
-        "url": "https://www.linkedin.com/company/softwarefinder-us",
-        "snippet": "SoftwareFinder | 37,514 followers on LinkedIn. Helping greatsoftwareget discovered by the teams who need it most |SoftwareFinder is a discovery platform built for growing businesses that don ...",
-        "provider": "unknown",
-        "source": "",
-        "rank": 0,
-        "provider_rank": 0,
-        "query": "",
-        "page": 0,
-        "timestamp": 1784527369.650517
+        "timestamp": 1784473428.745343
       }
     ]
+  },
+  "default||electronics development company||20||0": {
+    "query": "electronics development company",
+    "provider": "brightdata",
+    "timestamp": 1784473705.4238136,
+    "result_count": 0,
+    "kind": "zero_result",
+    "results": []
+  },
+  "default||Software House company||20||0": {
+    "query": "Software House company",
+    "provider": "bing",
+    "timestamp": 1784474485.0970626,
+    "result_count": 8,
+    "kind": "success",
+    "results": [
+      {
+        "title": "Software - Qué es, tipos y ejemplos - Concepto",
+        "url": "https://concepto.de/software/",
+        "snippet": "Te explicamos qué es un software, cuáles tipos existen y ejemplos. Además, su diferencia con el hardware y qué es el software libre.",
+        "provider": "bing",
+        "source": "Bing",
+        "rank": 0,
+        "provider_rank": 1,
+        "query": "Software House company",
+        "page": 0,
+        "timestamp": 1784474485.0826826
+      },
+      {
+        "title": "Software Download",
+        "url": "https://www.microsoft.com/en-us/software-download/?msockid=30dd5e5c9ba2644e3c4449c79a196584",
+        "snippet": "Skip to main content Software Download Windows 11 Windows 11 for Arm Windows 10 Windows 8.1 Windows 7 Media Feature Pack Windows 10/11 Insider Preview Windows Server Insider Preview …",
+        "provider": "bing",
+        "source": "Bing",
+        "rank": 0,
+        "provider_rank": 2,
+        "query": "Software House company",
+        "page": 0,
+        "timestamp": 1784474485.0826826
+      },
+      {
+        "title": "Software (Qué es, Tipos y Ejemplos) - Enciclopedia Significados",
+        "url": "https://www.significados.com/software/",
+        "snippet": "Dec 9, 2024 · Software es un término informático que hace referencia a un programa o conjunto de programas de cómputo, así como datos, procedimientos y pautas que permiten realizar distintas …",
+        "provider": "bing",
+        "source": "Bing",
+        "rank": 0,
+        "provider_rank": 5,
+        "query": "Software House company",
+        "page": 0,
+        "timestamp": 1784474485.0826826
+      },
+      {
+        "title": "Download software for Windows",
+        "url": "https://en.softonic.com/windows",
+        "snippet": "Download software for Windows. Download VidMate, Google Chrome, VLC media player and more",
+        "provider": "bing",
+        "source": "Bing",
+        "rank": 0,
+        "provider_rank": 6,
+        "query": "Software House company",
+        "page": 0,
+        "timestamp": 1784474485.0826826
+      },
+      {
+        "title": "Que es el software : Tipos, ejemplos y diferencias con el hardware ...",
+        "url": "https://www.codigosinformaticos.com/que-es-el-software/",
+        "snippet": "Lo que realmente permite que todo funcione es el software, el cerebro invisible que da órdenes, ejecuta tareas y permite que interactúes con el equipo. En este artículo descubrirás qué es el software, sus …",
+        "provider": "bing",
+        "source": "Bing",
+        "rank": 0,
+        "provider_rank": 7,
+        "query": "Software House company",
+        "page": 0,
+        "timestamp": 1784474485.0826826
+      },
+      {
+        "title": "Noticias, análisis y descargas de software , guía de las mejores apps ...",
+        "url": "https://www.softonic.com/",
+        "snippet": "Softonic es el lugar perfecto para descubrir las mejores apps y contenidos para tu dispositivo: noticias, artículos, descargas y más. ¡Bienvenido a tu guía de apps!",
+        "provider": "bing",
+        "source": "Bing",
+        "rank": 0,
+        "provider_rank": 8,
+        "query": "Software House company",
+        "page": 0,
+        "timestamp": 1784474485.0826826
+      },
+      {
+        "title": "Descarga de software",
+        "url": "https://www.microsoft.com/es-es/software-download/?msockid=30dd5e5c9ba2644e3c4449c79a196584",
+        "snippet": "Saltar al contenido principal Descarga de software Windows 11 Windows 11 for Arm Windows 10 Windows 8.1 Windows 7 Media Feature Pack Windows 10/11 Insider Preview Windows Server …",
+        "provider": "bing",
+        "source": "Bing",
+        "rank": 0,
+        "provider_rank": 9,
+        "query": "Software House company",
+        "page": 0,
+        "timestamp": 1784474485.0826826
+      },
+      {
+        "title": "Qué es Software - Definición, tipos y ejemplos de Software",
+        "url": "https://www.arimetrics.com/glosario-digital/software",
+        "snippet": "El software es un conjunto de reglas o programas que dan instrucciones a un ordenador para que realice tareas específicas. También se conoce como aplicaciones de software, paquetes de …",
+        "provider": "bing",
+        "source": "Bing",
+        "rank": 0,
+        "provider_rank": 10,
+        "query": "Software House company",
+        "page": 0,
+        "timestamp": 1784474485.0826826
+      }
+    ]
+  },
+  "default||electronics design services||20||0": {
+    "query": "electronics design services",
+    "provider": "bing",
+    "timestamp": 1784474966.683444,
+    "result_count": 9,
+    "kind": "success",
+    "results": [
+      {
+        "title": "Real-time travel data | WSDOT",
+        "url": "https://wsdot.com/travel/real-time/",
+        "snippet": "Traffic Management Centers and Washington State Ferries are reporting on road and bridge closures, collisions, construction, reduced ferry service, low tides, and anything else that goes down.",
+        "provider": "bing",
+        "source": "Bing",
+        "rank": 0,
+        "provider_rank": 1,
+        "query": "electronics design services",
+        "page": 0,
+        "timestamp": 1784474966.6674259
+      },
+      {
+        "title": "Traffic Cameras and Alerts - Redmond",
+        "url": "https://gis.redmond.gov/traffic/",
+        "snippet": "WA State Parks GIS, Esri, TomTom, Garmin, SafeGraph, GeoTechnologies, Inc, METI/NASA, USGS, Bureau of Land Management, EPA, NPS, USDA, USFWS | Esri and its data vendors",
+        "provider": "bing",
+        "source": "Bing",
+        "rank": 0,
+        "provider_rank": 2,
+        "query": "electronics design services",
+        "page": 0,
+        "timestamp": 1784474966.6674259
+      },
+      {
+        "title": "Driving directions , live traffic & road conditions updates - Waze",
+        "url": "https://www.waze.com/live-map",
+        "snippet": "Realtime driving directions based on live traffic updates from Waze - Get the best route to your destination from fellow drivers",
+        "provider": "bing",
+        "source": "Bing",
+        "rank": 0,
+        "provider_rank": 3,
+        "query": "electronics design services",
+        "page": 0,
+        "timestamp": 1784474966.6674259
+      },
+      {
+        "title": "Travel Center Map | WSDOT",
+        "url": "https://wsdot.com/travel/real-time/map/",
+        "snippet": "The map provides traffic flow, travel alerts, cameras, weather conditions, mountain pass reports, rest areas and commercial vehicle restrictions.",
+        "provider": "bing",
+        "source": "Bing",
+        "rank": 0,
+        "provider_rank": 4,
+        "query": "electronics design services",
+        "page": 0,
+        "timestamp": 1784474966.6674259
+      },
+      {
+        "title": "Washington State Department of Transportation",
+        "url": "https://wsdot.wa.gov/",
+        "snippet": "Washington state offers countless destinations and routes for travel by foot, wheel, or bicycle. Whether you prefer walking or rolling, we’re here to connect you with route planning resources and information …",
+        "provider": "bing",
+        "source": "Bing",
+        "rank": 0,
+        "provider_rank": 6,
+        "query": "electronics design services",
+        "page": 0,
+        "timestamp": 1784474966.6674259
+      },
+      {
+        "title": "Live Map - TrafficView",
+        "url": "https://trafficview.org/live_traffic/",
+        "snippet": "Explore real-time traffic conditions and incidents with TrafficView's live map for a smoother journey.",
+        "provider": "bing",
+        "source": "Bing",
+        "rank": 0,
+        "provider_rank": 7,
+        "query": "electronics design services",
+        "page": 0,
+        "timestamp": 1784474966.6674259
+      },
+      {
+        "title": "Travel | WSDOT - Washington State Department of Transportation",
+        "url": "https://wsdot.wa.gov/travel",
+        "snippet": "Washington State Ferries View sailing schedules, buy your tickets online, or save a spot for your vehicle on certain routes.",
+        "provider": "bing",
+        "source": "Bing",
+        "rank": 0,
+        "provider_rank": 8,
+        "query": "electronics design services",
+        "page": 0,
+        "timestamp": 1784474966.6674259
+      },
+      {
+        "title": "Driving Directions & Traffic Reports by Waze",
+        "url": "https://www.waze.com/waze",
+        "snippet": "Get driving directions, a live traffic map &amp; road alerts. Download the GPS traffic app, powered by community.",
+        "provider": "bing",
+        "source": "Bing",
+        "rank": 0,
+        "provider_rank": 9,
+        "query": "electronics design services",
+        "page": 0,
+        "timestamp": 1784474966.6674259
+      },
+      {
+        "title": "Redmond , Washington Live Traffic Cameras - Current Road …",
+        "url": "https://opencctv.org/livetraffic/united-states/washington/redmond",
+        "snippet": "Watch 6 live traffic cameras in Redmond, Washington. Real-time views of local streets, highways, and intersections showing current traffic conditions.",
+        "provider": "bing",
+        "source": "Bing",
+        "rank": 0,
+        "provider_rank": 10,
+        "query": "electronics design services",
+        "page": 0,
+        "timestamp": 1784474966.6674259
+      }
+    ]
+  },
+  "default||software company company||20||0": {
+    "query": "software company company",
+    "provider": "duckduckgo",
+    "timestamp": 1784520012.193585,
+    "result_count": 9,
+    "kind": "success",
+    "results": [
+      {
+        "title": "Software Development Company in India | Custom IT Solutions",
+        "url": "https://saminus.com/service/best-software-development-in-hisar-haryana/",
+        "snippet": "TopSoftwareDevelopmentCompanyin India offering custom IT solutions, web & mobile apps, cloud, and digital transformation to boost business growth.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784520012.1869326
+      },
+      {
+        "title": "Best Software Development Company in Hisar | Custom IT Solutions ...",
+        "url": "https://dalisantmetrics.com/dev/software-company-in-hisar/",
+        "snippet": "Leadingsoftwarecompanyin Hisar providing custom web development, mobile apps, ERP systems, AI solutions. Empowering local businesses with latest technology.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784520012.1869326
+      },
+      {
+        "title": "Software Development Company in Hisar",
+        "url": "https://www.starnexttechnologies.com/Software-Development-Company-in-Hisar.php",
+        "snippet": "HomeSoftwareDevelopmentCompanyin CitySoftwareDevelopmentCompanyin Hisar Ourcompanyis the bestsoftwarecompanyof Hisar. We makesoftwarelike Billing, Attendance, School Management, Payroll. For all these, you met us and became the best with us.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784520012.1869326
+      },
+      {
+        "title": "List of Software Companies in Hisar",
+        "url": "https://topcompanieslist.com/Software-industry/Hisar-city/company.htm",
+        "snippet": "GZiel Global Solutions Pvt.Ltd is located in Hisar at Level 12, Tower C,Building 8, DLF Cyber City Complex, DLF City Phase II, Gurgaon, 122002 .",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784520012.1869326
+      },
+      {
+        "title": "SOFT Solution",
+        "url": "https://www.softsols.in/",
+        "snippet": "Soft Solutions is a Hisar (Haryana) based Website Designing andSoftwareDevelopmentCompanySince 1997. Soft Solutions is a rapidly growing and most trusted name in Indian web designingCompany.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784520012.1869326
+      },
+      {
+        "title": "Software Development Company | Daffodil Software",
+        "url": "https://www.daffodilsw.com/",
+        "snippet": "SoftwareDevelopmentCompanyoffering comprehensivesoftwaredevelopment services for all your business needs. Explore now.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784520012.1882346
+      },
+      {
+        "title": "Top Software Companies 2026 - Built In",
+        "url": "https://builtin.com/companies/type/software-companies",
+        "snippet": "Check out this list of the topSoftwarecompanies. Seecompanybenefits, info, interviews and more at Built In.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784520012.1882346
+      },
+      {
+        "title": "SineTech Software Inc. in Hisar",
+        "url": "https://hisar.idbf.in/4744161/sinetech-software-inc-",
+        "snippet": "SineTechSoftwareInc. is aSoftwareCompanies business located in Hisar, Haryana, India. The office is situated at SCF 15, Red Cross Market Parking, Mehta Nagar, Hisar - 125001.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784520012.1882346
+      },
+      {
+        "title": "Top Software Companies in Hisar - Best IT Firms Near Me",
+        "url": "https://hisar.idbf.in/software-companies",
+        "snippet": "Hire topSoftwareCompanies in Hisar for website, mobile app, ERP, CRM andsoftwaredevelopment. Get phone, address, email, website and hours near me.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784520012.1882346
+      }
+    ]
+  },
+  "default||site:daffodilsw.com email||3||0": {
+    "query": "site:daffodilsw.com email",
+    "provider": "brightdata",
+    "timestamp": 1784520431.1605194,
+    "result_count": 0,
+    "kind": "zero_result",
+    "results": []
+  },
+  "default||site:starnexttechnologies.com email||3||0": {
+    "query": "site:starnexttechnologies.com email",
+    "provider": "brave",
+    "timestamp": 1784520409.4066112,
+    "result_count": 2,
+    "kind": "success",
+    "results": [
+      {
+        "title": "Website Designing in Sirsa, Website Developement in Sirsa, Best…",
+        "url": "https://www.starnexttechnologies.com/about.php",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 2,
+        "query": "site:starnexttechnologies.com email",
+        "page": 0,
+        "timestamp": 1784520409.39815
+      },
+      {
+        "title": "Website Designing in Hisar, Website Developement in Hisar, Best…",
+        "url": "https://www.starnexttechnologies.com/Website-Designing-Company-in-Hisar.php",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 3,
+        "query": "site:starnexttechnologies.com email",
+        "page": 0,
+        "timestamp": 1784520409.39815
+      }
+    ]
+  },
+  "default||site:starnexttechnologies.com contact||3||0": {
+    "query": "site:starnexttechnologies.com contact",
+    "provider": "brave",
+    "timestamp": 1784520413.2830753,
+    "result_count": 2,
+    "kind": "success",
+    "results": [
+      {
+        "title": "Website Designing in Delhi, Website Developement in Delhi, Best…",
+        "url": "https://starnexttechnologies.com/Website-Designing-Company-in-Delhi.php",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 2,
+        "query": "site:starnexttechnologies.com contact",
+        "page": 0,
+        "timestamp": 1784520413.275848
+      },
+      {
+        "title": "Website Designing in Sirsa, Website Developement in Sirsa, Best…",
+        "url": "https://www.starnexttechnologies.com/Website-Designing-Company-in-Sirsa.php",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 3,
+        "query": "site:starnexttechnologies.com contact",
+        "page": 0,
+        "timestamp": 1784520413.275848
+      }
+    ]
+  },
+  "default||site:starnexttechnologies.com phone||3||0": {
+    "query": "site:starnexttechnologies.com phone",
+    "provider": "brave",
+    "timestamp": 1784520420.867141,
+    "result_count": 3,
+    "kind": "success",
+    "results": [
+      {
+        "title": "Starnexttechnologiesstarnexttechnologies.comStarnext Technologies",
+        "url": "https://starnexttechnologies.com/",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 1,
+        "query": "site:starnexttechnologies.com phone",
+        "page": 0,
+        "timestamp": 1784520420.8618915
+      },
+      {
+        "title": "Website Designing in Hisar, Website Developement in Hisar, Best…",
+        "url": "https://www.starnexttechnologies.com/Website-Designing-Company-in-Hisar.php",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 2,
+        "query": "site:starnexttechnologies.com phone",
+        "page": 0,
+        "timestamp": 1784520420.8618915
+      },
+      {
+        "title": "Website Maintenance Service Sirsa, Website Designing in Sirsa…",
+        "url": "https://www.starnexttechnologies.com/Website-Maintenance-Company-in-Sirsa.php",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 3,
+        "query": "site:starnexttechnologies.com phone",
+        "page": 0,
+        "timestamp": 1784520420.8618915
+      }
+    ]
+  },
+  "default||site:starnexttechnologies.com team||3||0": {
+    "query": "site:starnexttechnologies.com team",
+    "provider": "brave",
+    "timestamp": 1784520426.922401,
+    "result_count": 1,
+    "kind": "success",
+    "results": [
+      {
+        "title": "Starnexttechnologiesstarnexttechnologies.com› web-designing-expert-sirsa.phpWeb Designing Expert in Fatehabad | Web Designing Expert in Hisar | Web Designing Expert in Sirsa | Web Designing Expert in Chandigarh | Web Designing Expert in Mohali | Web Designing Expert in Panchkula | Web Designing Expert in Himachal Pradesh",
+        "url": "http://starnexttechnologies.com/web-designing-expert-sirsa.php",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 3,
+        "query": "site:starnexttechnologies.com team",
+        "page": 0,
+        "timestamp": 1784520426.9175098
+      }
+    ]
+  },
+  "default||site:daffodilsw.com contact||3||0": {
+    "query": "site:daffodilsw.com contact",
+    "provider": "brave",
+    "timestamp": 1784520555.8017373,
+    "result_count": 3,
+    "kind": "success",
+    "results": [
+      {
+        "title": "Daffodil Softwaredaffodilsw.com› home  › locationsLocations | Daffodil Software",
+        "url": "https://www.daffodilsw.com/locations/",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 1,
+        "query": "site:daffodilsw.com contact",
+        "page": 0,
+        "timestamp": 1784520555.7960858
+      },
+      {
+        "title": "DevOps Services",
+        "url": "https://www.daffodilsw.com/devops-services/",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 2,
+        "query": "site:daffodilsw.com contact",
+        "page": 0,
+        "timestamp": 1784520555.7960858
+      },
+      {
+        "title": "Hire Dedicated Developers",
+        "url": "https://www.daffodilsw.com/hire-dedicated-developers/",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 3,
+        "query": "site:daffodilsw.com contact",
+        "page": 0,
+        "timestamp": 1784520555.7960858
+      }
+    ]
+  },
+  "default||site:daffodilsw.com phone||3||0": {
+    "query": "site:daffodilsw.com phone",
+    "provider": "brightdata",
+    "timestamp": 1784520619.9153252,
+    "result_count": 0,
+    "kind": "zero_result",
+    "results": []
+  },
+  "default||site:linkedin.com/in \"Starnexttechnologies\" founder OR CEO OR director||5||0": {
+    "query": "site:linkedin.com/in \"Starnexttechnologies\" founder OR CEO OR director",
+    "provider": "brightdata",
+    "timestamp": 1784520628.6665995,
+    "result_count": 0,
+    "kind": "zero_result",
+    "results": []
   }
 }

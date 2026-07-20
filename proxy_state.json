@@ -4,17 +4,20 @@
     "google_successes": 0,
     "google_captchas": 0,
     "google_429s": 0,
-    "consecutive_failures": 5,
+    "consecutive_failures": 6,
     "consecutive_blocks": {},
-    "dead": true,
+    "dead": false,
     "google_status": "healthy",
     "bing_status": "healthy",
-    "general_status": "dead",
+    "general_status": "healthy",
     "last_success_ts": null,
-    "last_failure_ts": 1784526293.9253669,
+    "last_failure_ts": 1784520793.1456077,
     "latency_samples": [
       26.454450130462646,
-      12.93936562538147
+      10.5101478099823,
+      21.95604372024536,
+      23.070053339004517,
+      19.48735237121582
     ],
     "outcome_history": [
       [
@@ -26,16 +29,20 @@
         "TRANSPORT_TIMEOUT"
       ],
       [
-        1784526032.7466373,
+        1784470009.233334,
         "TRANSPORT_CONNECTION_ERROR"
       ],
       [
-        1784526270.3299894,
-        "TRANSPORT_TIMEOUT"
+        1784519983.3620532,
+        "TRANSPORT_CONNECTION_ERROR"
       ],
       [
-        1784526293.9253669,
-        "TRANSPORT_TIMEOUT"
+        1784520387.6300526,
+        "TRANSPORT_CONNECTION_ERROR"
+      ],
+      [
+        1784520793.1456077,
+        "TRANSPORT_CONNECTION_ERROR"
       ]
     ],
     "quarantine_until": null,
@@ -43,7 +50,9 @@
     "inactive": false,
     "dead_for_google": false,
     "dead_for_bing": false,
-    "consecutive_timeouts": {},
+    "consecutive_timeouts": {
+      "google.com": 4
+    },
     "provider_capabilities": {
       "google": "DEAD",
       "bing": "GOOD",
@@ -54,114 +63,65 @@
     }
   },
   "47.81.56.193:8888": {
-    "score": 0.0,
+    "score": 100.0,
     "google_successes": 0,
     "google_captchas": 0,
     "google_429s": 0,
-    "consecutive_failures": 4,
+    "consecutive_failures": 0,
     "consecutive_blocks": {},
-    "dead": true,
+    "dead": false,
     "google_status": "healthy",
     "bing_status": "healthy",
     "general_status": "healthy",
-    "last_success_ts": 1784526193.9810169,
-    "last_failure_ts": 1784527361.3551884,
+    "last_success_ts": 1784520337.4763427,
+    "last_failure_ts": 1784519960.2356775,
     "latency_samples": [
-      10.557117938995361,
-      2.7198009490966797,
-      1.0015265941619873,
-      3.5192553997039795,
-      1.2464325428009033,
-      5.830589294433594,
-      2.057386875152588,
-      21.572901487350464,
-      22.841733694076538,
-      19.587578773498535
+      23.63414716720581,
+      1.5693378448486328,
+      2.5100913047790527,
+      1.20088791847229,
+      1.4465692043304443,
+      2.696584701538086,
+      1.1060869693756104,
+      1.4235773086547852,
+      1.3672549724578857
     ],
     "outcome_history": [
       [
-        1784525409.2761984,
+        1784519960.2356775,
         "TRANSPORT_CONNECTION_ERROR"
       ],
       [
-        1784526018.9283736,
-        "TRANSPORT_CONNECTION_ERROR"
-      ],
-      [
-        1784526095.963296,
+        1784520323.4917247,
         "TRANSPORT_SUCCESS"
       ],
       [
-        1784526110.8884814,
+        1784520325.5456436,
         "TRANSPORT_SUCCESS"
       ],
       [
-        1784526111.0789964,
+        1784520326.8007467,
         "TRANSPORT_SUCCESS"
       ],
       [
-        1784526115.0333848,
+        1784520330.1943817,
         "TRANSPORT_SUCCESS"
       ],
       [
-        1784526118.126881,
+        1784520330.5141602,
         "TRANSPORT_SUCCESS"
       ],
       [
-        1784526125.908097,
+        1784520333.384833,
         "TRANSPORT_SUCCESS"
       ],
       [
-        1784526130.3080466,
+        1784520333.8170767,
         "TRANSPORT_SUCCESS"
       ],
       [
-        1784526140.3733447,
+        1784520337.4763427,
         "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784526143.136653,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784526146.0073237,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784526160.8756275,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784526168.8717177,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784526177.4828937,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784526185.705466,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784526193.9810169,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784526258.2604847,
-        "TRANSPORT_TIMEOUT"
-      ],
-      [
-        1784526668.2094495,
-        "TRANSPORT_CONNECTION_ERROR"
-      ],
-      [
-        1784527093.1539488,
-        "TRANSPORT_CONNECTION_ERROR"
-      ],
-      [
-        1784527361.3551884,
-        "TRANSPORT_CONNECTION_ERROR"
       ]
     ],
     "quarantine_until": null,
@@ -170,8 +130,9 @@
     "dead_for_google": false,
     "dead_for_bing": false,
     "consecutive_timeouts": {
-      "linkedin.com": 0,
-      "clutch.co": 0
+      "google.com": 1,
+      "starnexttechnologies.com": 0,
+      "daffodilsw.com": 0
     },
     "provider_capabilities": {
       "google": "DEAD",
@@ -179,7 +140,7 @@
       "duckduckgo": "GOOD",
       "brave": "GOOD",
       "directory": "GOOD",
-      "general_crawl": "TIMEOUT"
+      "general_crawl": "GOOD"
     }
   },
   "217.182.203.184:8888": {
@@ -225,177 +186,229 @@
     }
   },
   "181.39.25.196:8118": {
-    "score": 0.0,
+    "score": 100.0,
     "google_successes": 0,
     "google_captchas": 0,
     "google_429s": 0,
-    "consecutive_failures": 4,
+    "consecutive_failures": 5,
     "consecutive_blocks": {},
-    "dead": true,
+    "dead": false,
     "google_status": "healthy",
     "bing_status": "healthy",
     "general_status": "healthy",
-    "last_success_ts": 1784526206.492913,
-    "last_failure_ts": 1784527340.316433,
+    "last_success_ts": 1784470762.6781447,
+    "last_failure_ts": 1784520363.0564313,
     "latency_samples": [
-      0.7443914413452148,
-      4.70428466796875,
-      1.9646103382110596,
-      1.9741837978363037,
-      4.757846117019653,
-      1.759950876235962,
-      6.401709794998169,
-      23.026846885681152,
-      21.952387809753418,
-      22.647526025772095
+      6.045925140380859,
+      4.533697605133057,
+      4.393979787826538,
+      3.6763715744018555,
+      3.4387636184692383,
+      5.590297698974609,
+      20.068724155426025,
+      26.6517493724823,
+      22.79369616508484,
+      24.39800477027893
     ],
     "outcome_history": [
       [
-        1784448775.927811,
+        1784466956.0946696,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1784466957.916064,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1784466961.550674,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1784466964.2952833,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1784466968.4934874,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1784466971.2009366,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1784466974.301986,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1784466976.4965115,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1784466978.7266147,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1784466983.3663173,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1784466984.335993,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1784466988.9064703,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1784466992.2315667,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1784466997.4841592,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1784467002.7960744,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1784467006.2847526,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1784467008.6237276,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1784467010.1602337,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1784467012.633824,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1784467013.0110857,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1784467014.23004,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1784467014.8461165,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1784467017.559561,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1784467020.7084298,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1784467024.1058753,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1784467026.8540175,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1784467031.5679588,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1784467033.414746,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1784467037.0941055,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1784467038.9812093,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1784467042.3498123,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1784467045.9188776,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1784467047.5337148,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1784467050.7928827,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1784467053.9987993,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1784467058.2920542,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1784467060.563214,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1784469997.2948,
         "TRANSPORT_CONNECTION_ERROR"
       ],
       [
-        1784455173.9483213,
+        1784470044.237836,
         "TRANSPORT_SUCCESS"
       ],
       [
-        1784455174.2841904,
+        1784470053.4925234,
         "TRANSPORT_SUCCESS"
       ],
       [
-        1784455180.4858956,
+        1784470058.5385149,
         "TRANSPORT_SUCCESS"
       ],
       [
-        1784455181.389385,
+        1784470061.1898286,
         "TRANSPORT_SUCCESS"
       ],
       [
-        1784455958.1914601,
+        1784470069.064633,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1784470079.1184638,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1784470762.6781447,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1784474355.7954385,
         "TRANSPORT_CONNECTION_ERROR"
       ],
       [
-        1784525446.1122284,
+        1784474834.7676246,
+        "TRANSPORT_CONNECTION_ERROR"
+      ],
+      [
+        1784520007.0932305,
+        "TRANSPORT_CONNECTION_ERROR"
+      ],
+      [
+        1784520124.155098,
         "TRANSPORT_TIMEOUT"
       ],
       [
-        1784525997.09348,
-        "TRANSPORT_CONNECTION_ERROR"
-      ],
-      [
-        1784526066.1650772,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784526066.376109,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784526069.1401029,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784526072.5719707,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784526073.6158853,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784526075.8159466,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784526076.1933916,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784526079.3632407,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784526079.5052118,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784526082.023081,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784526083.0638864,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784526105.2687116,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784526112.2182398,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784526117.088921,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784526117.524166,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784526122.453254,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784526130.1921,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784526141.8096101,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784526142.9960213,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784526158.699806,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784526168.9965813,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784526171.913538,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784526171.9189875,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784526178.7824771,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784526181.3790755,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784526206.4939098,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784526692.5553114,
-        "TRANSPORT_CONNECTION_ERROR"
-      ],
-      [
-        1784527116.2386823,
-        "TRANSPORT_CONNECTION_ERROR"
-      ],
-      [
-        1784527340.316433,
+        1784520363.0564313,
         "TRANSPORT_CONNECTION_ERROR"
       ]
     ],
@@ -407,40 +420,49 @@
     "consecutive_timeouts": {
       "in.linkedin.com": 0,
       "www.linkedin.com": 0,
+      "google.com": 6,
+      "clutch.co": 0,
       "linkedin.com": 0,
-      "clutch.co": 0
+      "empat.tech": 0,
+      "cybo.com": 0,
+      "thecompanycheck.com": 0,
+      "keyaenterprises.in": 0,
+      "dalisantmetrics.com": 1
     },
     "provider_capabilities": {
       "google": "DEAD",
       "bing": "GOOD",
-      "duckduckgo": "TIMEOUT",
+      "duckduckgo": "GOOD",
       "brave": "GOOD",
       "directory": "GOOD",
-      "general_crawl": "SLOW"
+      "general_crawl": "TIMEOUT"
     }
   },
   "52.67.38.58:3128": {
-    "score": 0.0,
+    "score": 95.0,
     "google_successes": 0,
-    "google_captchas": 1,
+    "google_captchas": 2,
     "google_429s": 0,
-    "consecutive_failures": 4,
+    "consecutive_failures": 0,
     "consecutive_blocks": {
-      "www.google.com": 1
+      "www.google.com": 1,
+      "google.com": 1
     },
     "dead": true,
     "google_status": "healthy",
     "bing_status": "healthy",
     "general_status": "dead",
     "last_success_ts": null,
-    "last_failure_ts": 1784527282.4417353,
+    "last_failure_ts": 1784522714.1773367,
     "latency_samples": [
       31.46100354194641,
       14.373963356018066,
       35.272114276885986,
-      32.81086015701294,
-      27.640116453170776,
-      45.18041491508484
+      28.526904821395874,
+      21.026538848876953,
+      43.84447646141052,
+      39.892173051834106,
+      14.256765842437744
     ],
     "outcome_history": [
       [
@@ -456,26 +478,36 @@
         "TRANSPORT_CONNECTION_ERROR"
       ],
       [
-        1784525383.728986,
+        1784466847.8222077,
         "TRANSPORT_CONNECTION_ERROR"
       ],
       [
-        1784525967.5735772,
+        1784473556.8688507,
         "TRANSPORT_CONNECTION_ERROR"
       ],
       [
-        1784527282.4417353,
+        1784474334.368504,
         "TRANSPORT_CONNECTION_ERROR"
+      ],
+      [
+        1784519935.7234802,
+        "TRANSPORT_CONNECTION_ERROR"
+      ],
+      [
+        1784522714.1773367,
+        "GOOGLE_CAPTCHA"
       ]
     ],
-    "quarantine_until": null,
-    "quarantine_step": 0,
+    "quarantine_until": 1784524514.1773367,
+    "quarantine_step": 1,
     "inactive": false,
     "dead_for_google": false,
     "dead_for_bing": false,
-    "consecutive_timeouts": {},
+    "consecutive_timeouts": {
+      "google.com": 4
+    },
     "provider_capabilities": {
-      "google": "DEAD",
+      "google": "CAPTCHA",
       "bing": "GOOD",
       "duckduckgo": "GOOD",
       "brave": "GOOD",
@@ -484,27 +516,28 @@
     }
   },
   "34.134.231.117:3129": {
-    "score": 72.0,
+    "score": 68.0,
     "google_successes": 0,
-    "google_captchas": 1,
+    "google_captchas": 2,
     "google_429s": 0,
-    "consecutive_failures": 3,
+    "consecutive_failures": 0,
     "consecutive_blocks": {
-      "www.google.com": 1
+      "www.google.com": 1,
+      "google.com": 1
     },
     "dead": false,
-    "google_status": "healthy",
+    "google_status": "blocked",
     "bing_status": "healthy",
     "general_status": "healthy",
     "last_success_ts": null,
-    "last_failure_ts": 1784527316.6707075,
+    "last_failure_ts": 1784522699.1633852,
     "latency_samples": [
       30.05495524406433,
       10.959033966064453,
       2.750516891479492,
-      27.275470733642578,
-      26.150034427642822,
-      32.95997166633606
+      28.66707682609558,
+      33.04285430908203,
+      15.702677726745605
     ],
     "outcome_history": [
       [
@@ -520,31 +553,38 @@
         "GOOGLE_CAPTCHA"
       ],
       [
-        1784526645.5390196,
+        1784469938.114012,
         "TRANSPORT_CONNECTION_ERROR"
       ],
       [
-        1784527069.23911,
+        1784470755.600363,
+        "TRANSPORT_TIMEOUT"
+      ],
+      [
+        1784474807.3511522,
         "TRANSPORT_CONNECTION_ERROR"
       ],
       [
-        1784527316.6717052,
-        "TRANSPORT_CONNECTION_ERROR"
+        1784522699.1633852,
+        "GOOGLE_CAPTCHA"
       ]
     ],
-    "quarantine_until": null,
-    "quarantine_step": 0,
+    "quarantine_until": 1784524499.1633852,
+    "quarantine_step": 1,
     "inactive": false,
-    "dead_for_google": false,
+    "dead_for_google": true,
     "dead_for_bing": false,
-    "consecutive_timeouts": {},
+    "consecutive_timeouts": {
+      "google.com": 2,
+      "clutch.co": 1
+    },
     "provider_capabilities": {
-      "google": "DEAD",
+      "google": "CAPTCHA",
       "bing": "GOOD",
       "duckduckgo": "GOOD",
       "brave": "GOOD",
       "directory": "GOOD",
-      "general_crawl": "GOOD"
+      "general_crawl": "TIMEOUT"
     }
   }
 }

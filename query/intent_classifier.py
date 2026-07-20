@@ -282,7 +282,7 @@ _TECHNOLOGY_EXPANSION: dict[str, list[str]] = {
 }
 
 _INDUSTRY_CATEGORIES: dict[str, list[str]] = {
-    "software": ["software development company", "IT services", "software house", "SaaS company", "technology consulting", "digital transformation company"],
+    "software": ["software development company", "IT services", "custom software company", "software engineering company", "SaaS company", "technology consulting", "digital transformation company"],
     "ai": ["AI startup", "AI company", "AI software", "ML company", "generative AI company"],
     "health": ["healthcare tech", "healthtech startup", "medical software company", "digital health company"],
     "manufacturing": ["manufacturing company", "industrial manufacturer", "production factory"],
@@ -307,23 +307,22 @@ _INDUSTRY_CATEGORIES: dict[str, list[str]] = {
 _GENERIC_ROLE_TEMPLATES = [
     "{keyword} company",
     "{keyword} companies",
-    "{keyword} consulting company",
-    "{keyword} solutions company",
-    "{keyword} services company",
+    "{keyword} consulting firm",
+    "{keyword} services",
 ]
 
 _GENERIC_TECH_TEMPLATES = [
-    "{keyword} development company",
+    "{keyword} company",
+    "{keyword} companies",
     "{keyword} software company",
-    "{keyword} consulting company",
     "{keyword} services company",
 ]
 
 _GENERIC_INDUSTRY_TEMPLATES = [
+    "{keyword} companies",
     "{keyword} company",
-    "{keyword} startup",
+    "{keyword} startups",
     "{keyword} solutions",
-    "{keyword} tech",
     "{keyword} agency",
 ]
 
