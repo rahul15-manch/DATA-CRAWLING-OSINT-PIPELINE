@@ -26,7 +26,7 @@ def test_generate_search_tasks_avoids_restrictive_site_queries():
     tasks = generate_search_tasks("python")
     over_restricted_queries = [
         t.query for t in tasks
-        if t.source not in {"linkedin", "clutch", "goodfirms", "crunchbase", "wellfound", "apollo", "zoominfo", "justdial"}
+        if t.source not in {"linkedin", "clutch", "goodfirms", "crunchbase", "wellfound", "apollo", "zoominfo", "justdial", "github"}
         and "site:" in t.query and not "-site:" in t.query
     ]
     assert not over_restricted_queries

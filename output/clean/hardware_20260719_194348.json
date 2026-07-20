@@ -1,0 +1,457 @@
+[
+  {
+    "company_name": "Thecompanycheck",
+    "website": "https://www.thecompanycheck.com/org/laxmi-hardware-store/8c2749d081",
+    "linkedin": null,
+    "industry": "Civil Engineering",
+    "location": null,
+    "contact_page": "https://www.thecompanycheck.com/contact-us",
+    "about_page": "https://www.thecompanycheck.com/product/company-report",
+    "team_page": "https://www.thecompanycheck.com/products/databases/people",
+    "emails": [
+      "support@thecompanycheck.com"
+    ],
+    "phones": [
+      "10-0034478",
+      "2022-23 (31",
+      "2023-24 (09",
+      "2024-25 (27"
+    ],
+    "social_links": {
+      "facebook.com": "https://www.facebook.com/The-Company-Check-104898894321356",
+      "twitter.com": "https://twitter.com/TheCompanyCheck",
+      "linkedin.com": "https://www.linkedin.com/company/the-company-check/"
+    },
+    "people": [],
+    "source": "Google",
+    "confidence_score": 83,
+    "lead_quality": "High",
+    "company_type": "Software Company",
+    "relevance_score": 83,
+    "relevance_tier": "HIGH",
+    "relevance_info": {
+      "score": 83,
+      "tier": "HIGH",
+      "matched_signals": [
+        "Title",
+        "Description"
+      ],
+      "rejected_signals": [
+        "Positions"
+      ],
+      "score_breakdown": {
+        "title": 20.0,
+        "description": 30.0,
+        "positions": 0.0
+      },
+      "industry": "Hardware_Industrial",
+      "confidence": 0.33,
+      "aborted": false,
+      "company_type": "B2B Software",
+      "semantic_trace": [
+        "Matched Title with concepts: ['Hardware']",
+        "Matched Description with concepts: ['Hardware']"
+      ],
+      "technologies": [],
+      "products": [],
+      "website": "",
+      "website_source": "homepage"
+    },
+    "_source_file": "output\\raw\\hardware_20260719_194348.json",
+    "_flags": []
+  },
+  {
+    "company_name": "Acehardware",
+    "website": "https://www.acehardware.com/",
+    "linkedin": null,
+    "industry": "Hardware_Development",
+    "location": null,
+    "contact_page": "https://www.acehardware.com/contact-us",
+    "about_page": "https://www.acehardware.com/about-us",
+    "team_page": null,
+    "emails": [],
+    "phones": [
+      "(2001915",
+      "1-866-290-5334",
+      "1-888-827-4223",
+      "2001923",
+      "2002176",
+      "2006052",
+      "2006053",
+      "2006398",
+      "2006874",
+      "2008408",
+      "2014129",
+      "2014130",
+      "2014333",
+      "2014354",
+      "2015824",
+      "2016694",
+      "2023428",
+      "2023432",
+      "2023459",
+      "2023461",
+      "2023462",
+      "2023463",
+      "2023465",
+      "2024842",
+      "2024843",
+      "2024844",
+      "2024858",
+      "2024862",
+      "2024871",
+      "2024874",
+      "2024875",
+      "2024878",
+      "2024879",
+      "2024936",
+      "2024937",
+      "2024938",
+      "2024946",
+      "2024947",
+      "2027479",
+      "2027481",
+      "2030563",
+      "2030564",
+      "2030565",
+      "2030566",
+      "2030567",
+      "2030616",
+      "2030617",
+      "2030619",
+      "2035926",
+      "2035927",
+      "2036233",
+      "2036235",
+      "2038019",
+      "2038020",
+      "2038021",
+      "2038022",
+      "2038023",
+      "2038138",
+      "2038661",
+      "2038662",
+      "2038663",
+      "2038664",
+      "2038665",
+      "2038666",
+      "2038667",
+      "2038668",
+      "2040666",
+      "2040669",
+      "2047901",
+      "2048145",
+      "2053732",
+      "2053733",
+      "2053740",
+      "2053741",
+      "2053743",
+      "2053746",
+      "2053747",
+      "2800480",
+      "2800498",
+      "2800514",
+      "2800522",
+      "2800548",
+      "2800555",
+      "2837672",
+      "2837680",
+      "2837698",
+      "2837706",
+      "2884583",
+      "2884625",
+      "7045239",
+      "8071115",
+      "8079613",
+      "8079614",
+      "8088216",
+      "8088217",
+      "8088648",
+      "8088649",
+      "8106243",
+      "8106244",
+      "8106246",
+      "8106248",
+      "8106249",
+      "8106250",
+      "8106251",
+      "8122240",
+      "8122241",
+      "8122242"
+    ],
+    "social_links": {
+      "facebook.com": "https://www.facebook.com/acehardware",
+      "instagram.com": "https://www.instagram.com/acehardware/",
+      "twitter.com": "https://twitter.com/AceHardware"
+    },
+    "people": [],
+    "source": "Google",
+    "confidence_score": 83,
+    "lead_quality": "High",
+    "company_type": "Marketplace",
+    "relevance_score": 83,
+    "relevance_tier": "HIGH",
+    "relevance_info": {
+      "score": 83,
+      "tier": "HIGH",
+      "matched_signals": [
+        "Title",
+        "Description"
+      ],
+      "rejected_signals": [
+        "Positions"
+      ],
+      "score_breakdown": {
+        "title": 20.0,
+        "description": 30.0,
+        "positions": 0.0
+      },
+      "industry": "Hardware_Development",
+      "confidence": 0.33,
+      "aborted": false,
+      "company_type": "B2C/Marketplace",
+      "semantic_trace": [
+        "Matched Title with concepts: ['Hardware']",
+        "Matched Description with concepts: ['Hardware']"
+      ],
+      "technologies": [],
+      "products": [],
+      "website": "",
+      "website_source": "homepage"
+    },
+    "_source_file": "output\\raw\\hardware_20260719_194348.json",
+    "_flags": []
+  },
+  {
+    "company_name": "Cybo",
+    "website": "https://www.cybo.com/IN/sonipat/hardware-store/",
+    "linkedin": null,
+    "industry": "Hardware_Development",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "confidence_score": 75,
+    "lead_quality": "High",
+    "company_type": "Unknown",
+    "relevance_score": 75,
+    "relevance_tier": "MEDIUM",
+    "relevance_info": {
+      "score": 75,
+      "tier": "MEDIUM",
+      "matched_signals": [
+        "Description",
+        "Services",
+        "Technologies"
+      ],
+      "rejected_signals": [
+        "Products",
+        "Positions",
+        "Blog/Articles"
+      ],
+      "score_breakdown": {
+        "description": 36.0,
+        "services": 24.0,
+        "technologies": 20.0,
+        "products": 0.0,
+        "positions": 0.0,
+        "blog": 0.0
+      },
+      "industry": "Hardware_Development",
+      "confidence": 0.76,
+      "aborted": false,
+      "company_type": "B2C/Marketplace",
+      "semantic_trace": [
+        "Matched Description with concepts: ['Hardware']",
+        "Matched Services with terms: ['Hardware']",
+        "Matched Technologies: ['Hardware']"
+      ],
+      "technologies": [
+        "Hardware"
+      ],
+      "products": [],
+      "website": "",
+      "website_source": ""
+    },
+    "_source_file": "output\\raw\\hardware_20260719_194348.json",
+    "_flags": []
+  },
+  {
+    "company_name": "Hardware Fittings And Accessories in Bhopal",
+    "website": "https://yellowpages.webindia123.com/d-py/Madhya-Pradesh/Bhopal/Hardware-Fittings-And-Accessories-532/1/",
+    "linkedin": null,
+    "industry": "Hardware_Development",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "confidence_score": 53,
+    "lead_quality": "Medium",
+    "company_type": "Unknown",
+    "relevance_score": 53,
+    "relevance_tier": "LOW",
+    "relevance_info": {
+      "score": 53,
+      "tier": "LOW",
+      "matched_signals": [
+        "Description",
+        "Technologies"
+      ],
+      "rejected_signals": [
+        "Services",
+        "Products",
+        "Positions",
+        "Blog/Articles"
+      ],
+      "score_breakdown": {
+        "description": 36.0,
+        "services": 0.0,
+        "technologies": 20.0,
+        "products": 0.0,
+        "positions": 0.0,
+        "blog": 0.0
+      },
+      "industry": "Hardware_Development",
+      "confidence": 0.53,
+      "aborted": false,
+      "company_type": "B2C/Marketplace",
+      "semantic_trace": [
+        "Matched Description with concepts: ['Hardware']",
+        "Matched Technologies: ['Hardware']"
+      ],
+      "technologies": [
+        "Hardware"
+      ],
+      "products": [],
+      "website": "",
+      "website_source": ""
+    },
+    "_source_file": "output\\raw\\hardware_20260719_194348.json",
+    "_flags": []
+  },
+  {
+    "company_name": "Keyaenterprises",
+    "website": "https://www.keyaenterprises.in/",
+    "linkedin": null,
+    "industry": "Artificial Intelligence",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "confidence_score": 34,
+    "lead_quality": "Low",
+    "company_type": "Software Company",
+    "relevance_score": 34,
+    "relevance_tier": "REJECT",
+    "relevance_info": {
+      "score": 34,
+      "tier": "REJECT",
+      "matched_signals": [
+        "Description"
+      ],
+      "rejected_signals": [
+        "Services",
+        "Technologies",
+        "Products",
+        "Positions",
+        "Blog/Articles"
+      ],
+      "score_breakdown": {
+        "description": 36.0,
+        "services": 0.0,
+        "technologies": 0.0,
+        "products": 0.0,
+        "positions": 0.0,
+        "blog": 0.0
+      },
+      "industry": "Hardware_Development",
+      "confidence": 0.2,
+      "aborted": false,
+      "company_type": "B2B Software",
+      "semantic_trace": [
+        "Matched Description with concepts: ['Hardware']"
+      ],
+      "technologies": [],
+      "products": [],
+      "website": "",
+      "website_source": ""
+    },
+    "_source_file": "output\\raw\\hardware_20260719_194348.json",
+    "_flags": []
+  },
+  {
+    "company_name": "Hardware ProductsHardware Products Manufacturer Wholesale Supplier",
+    "website": "https://www.avnienterprises.co.in/hardware-products.html",
+    "linkedin": null,
+    "industry": "Artificial Intelligence",
+    "location": null,
+    "contact_page": "http://www.avnienterprises.co.in/contact.html",
+    "about_page": "http://www.avnienterprises.co.in/about.html",
+    "team_page": null,
+    "emails": [],
+    "phones": [
+      "+91- 7000556771"
+    ],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "confidence_score": 53,
+    "lead_quality": "Medium",
+    "company_type": "Software Company",
+    "relevance_score": 53,
+    "relevance_tier": "LOW",
+    "relevance_info": {
+      "score": 53,
+      "tier": "LOW",
+      "matched_signals": [
+        "Description",
+        "Technologies"
+      ],
+      "rejected_signals": [
+        "Services",
+        "Products",
+        "Positions",
+        "Blog/Articles"
+      ],
+      "score_breakdown": {
+        "description": 36.0,
+        "services": 0.0,
+        "technologies": 20.0,
+        "products": 0.0,
+        "positions": 0.0,
+        "blog": 0.0
+      },
+      "industry": "Hardware_Industrial",
+      "confidence": 0.53,
+      "aborted": false,
+      "company_type": "B2C/Marketplace",
+      "semantic_trace": [
+        "Matched Description with concepts: ['Hardware']",
+        "Matched Technologies: ['Hardware']"
+      ],
+      "technologies": [
+        "Hardware"
+      ],
+      "products": [],
+      "website": "",
+      "website_source": ""
+    },
+    "_source_file": "output\\raw\\hardware_20260719_194348.json",
+    "_flags": []
+  }
+]

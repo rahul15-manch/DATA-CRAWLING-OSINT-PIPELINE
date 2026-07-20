@@ -63,6 +63,11 @@ def _fetch_homepage(url: str) -> str:
     from urllib.parse import urlparse
     domain_key = urlparse(url).netloc.lower().lstrip("www.")
 
+    from utils.deadline import Deadline
+    if Deadline.is_exceeded():
+        print(f"[_fetch_homepage] Global deadline exceeded for {url}. Skipping.")
+        return ""
+
     # Check circuit breaker
     with _eval_cb_lock:
         cooldown_until = _eval_domain_cooldowns.get(domain_key, 0.0)
@@ -82,6 +87,9 @@ def _fetch_homepage(url: str) -> str:
 
     try:
         resp = _client.send_request(direct_req)
+        if resp.status_code == 404:
+            print(f"[_fetch_homepage] 404 Not Found for {url}. Direct fail, no retry.")
+            return ""
         if resp.status_code in (200, 301, 302, 307, 308):
             if _is_real_html(resp):
                 success = True
@@ -95,6 +103,10 @@ def _fetch_homepage(url: str) -> str:
         exclude_urls = set()
         
         for attempt in range(1, 4):
+            if Deadline.is_exceeded():
+                print(f"[_fetch_homepage] Global deadline exceeded for {url} before attempt {attempt}. Aborting.")
+                break
+
             session_id = f"homepage_fetch_{domain_key}_{attempt}"
             proxy_req = Request(
                 url=url,
@@ -109,6 +121,9 @@ def _fetch_homepage(url: str) -> str:
             )
             try:
                 resp = _client.send_request(proxy_req)
+                if resp.status_code == 404:
+                    print(f"[_fetch_homepage] 404 Not Found for {url} via proxy. Fail fast, no retry.")
+                    return ""
                 proxy_used = getattr(resp, "proxy", None) or resp.request.meta.get("_proxy_obj")
                 if proxy_used:
                     raw_url = getattr(proxy_used, "raw_url", proxy_used)

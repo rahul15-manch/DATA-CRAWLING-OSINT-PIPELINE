@@ -58,8 +58,8 @@ def test_classify_result_separates_profile_and_listing_pages():
     listing_classification, _ = classify_result(listing_result)
 
     assert profile_classification == "ALLOW"
-    assert listing_classification == "REJECT"
-    assert should_ignore_result(listing_result) is True
+    assert listing_classification == "DIRECTORY_LIST"
+    assert should_ignore_result(listing_result) is False
     assert should_ignore_result(profile_result) is False
 
 

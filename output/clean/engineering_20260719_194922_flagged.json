@@ -1,0 +1,62 @@
+[
+  {
+    "company_name": "Avo Engineering",
+    "website": null,
+    "linkedin": null,
+    "industry": "Hardware_Development",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Clutch",
+    "confidence_score": 54,
+    "lead_quality": "Medium",
+    "company_type": "Unknown",
+    "relevance_score": 54,
+    "relevance_tier": "LOW",
+    "relevance_info": {
+      "score": 54,
+      "tier": "LOW",
+      "matched_signals": [
+        "Description",
+        "Technologies"
+      ],
+      "rejected_signals": [
+        "Services",
+        "Products",
+        "Positions",
+        "Blog/Articles"
+      ],
+      "score_breakdown": {
+        "description": 38.0,
+        "services": 0.0,
+        "technologies": 21.5,
+        "products": 0.0,
+        "positions": 0.0,
+        "blog": 0.0
+      },
+      "industry": "Hardware_Development",
+      "confidence": 0.54,
+      "aborted": false,
+      "company_type": "B2B Software",
+      "semantic_trace": [
+        "Matched Description with concepts: ['Electronics']",
+        "Matched Technologies: ['Electronics']"
+      ],
+      "technologies": [
+        "Electronics"
+      ],
+      "products": [],
+      "website": "",
+      "website_source": ""
+    },
+    "_source_file": "output\\raw\\engineering_20260719_194922.json",
+    "_flags": [
+      "sparse_no_contact_channel"
+    ]
+  }
+]

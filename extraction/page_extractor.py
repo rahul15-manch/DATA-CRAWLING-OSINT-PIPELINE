@@ -129,6 +129,11 @@ def fetch_page(url: str):
         print(f"[Robots] Crawl of {canonical_url} disallowed by robots.txt")
         return None
 
+    from utils.deadline import Deadline
+    if Deadline.is_exceeded():
+        print(f"[page_extractor] Global deadline exceeded for {canonical_url}. Skipping.")
+        return None
+
     from urllib.parse import urlparse
     domain = urlparse(canonical_url).netloc.lower()
     domain_key = domain.lstrip("www.")
@@ -163,6 +168,9 @@ def fetch_page(url: str):
     try:
         # Try direct connection first
         resp = client.get(canonical_url, require_proxy=False, timeout=config.REQUEST_TIMEOUT)
+        if resp.status_code == 404:
+            print(f"[page_extractor] 404 Not Found for {canonical_url}. Direct fail, no retry.")
+            return None
         if resp.status_code in (403, 429) or str(resp.status_code).startswith("5"):
             raise Exception(f"Direct connection failed with HTTP {resp.status_code}")
 
@@ -177,6 +185,10 @@ def fetch_page(url: str):
         # Try up to 3 different unique proxies
         exclude_urls = set()
         for attempt in range(1, 4):
+            if Deadline.is_exceeded():
+                print(f"[page_extractor] Global deadline exceeded for {canonical_url} before attempt {attempt}. Aborting.")
+                break
+
             session_id = f"enrichment_{domain_key}_{attempt}"
             try:
                 # Get a unique proxy (exclude_urls prevents re-using previously tried proxies)
@@ -187,6 +199,9 @@ def fetch_page(url: str):
                     timeout=config.REQUEST_TIMEOUT,
                     exclude_urls=exclude_urls
                 )
+                if resp.status_code == 404:
+                    print(f"[page_extractor] 404 Not Found for {canonical_url} via proxy. Fail fast, no retry.")
+                    return None
                 proxy_used = getattr(resp, "proxy", None)
                 if proxy_used:
                     exclude_urls.add(proxy_used)
@@ -285,10 +300,31 @@ def extract_meta_text(html: str) -> str:
 # ─────────────────────────────────────────────────────────────────────────────
 
 def extract_emails(html: str) -> list:
-    """Extract all email addresses visible in raw HTML."""
+    """Extract all email addresses visible in raw HTML, including mailto: links."""
     if not html:
         return []
-    return list(set(EMAIL_PATTERN.findall(html)))
+    emails = []
+    
+    # 1. Regex findall on raw HTML
+    emails.extend(EMAIL_PATTERN.findall(html))
+    
+    # 2. Parse mailto: links from href attributes
+    try:
+        soup = BeautifulSoup(html, "html.parser")
+        for a in soup.find_all("a", href=True):
+            href = a["href"].strip()
+            if href.lower().startswith("mailto:"):
+                # Remove mailto: prefix and any query parameters (e.g. ?subject=...)
+                email_part = href[7:].split("?")[0].strip()
+                # URL decode in case it is URL encoded
+                from urllib.parse import unquote
+                email_part = unquote(email_part)
+                if EMAIL_PATTERN.match(email_part):
+                    emails.append(email_part)
+    except Exception as exc:
+        print(f"[page_extractor] Error parsing mailto links: {exc}")
+        
+    return list(set(emails))
 
 
 def extract_phone_numbers(html: str) -> list:
@@ -336,6 +372,115 @@ def extract_social_links(html: str, base_url: str) -> dict:
                     links[social] = href
         except Exception:  # noqa: BLE001
             continue
+    return links
+
+
+def extract_structured_contact_info(html: str) -> dict:
+    """
+    Parse JSON-LD and microdata (schema.org) from HTML.
+    Returns a dict with extracted {"emails": [...], "phones": [...]}
+    """
+    extracted = {"emails": [], "phones": []}
+    if not html:
+        return extracted
+    
+    import json
+    try:
+        soup = BeautifulSoup(html, "html.parser")
+        
+        # 1. Parse JSON-LD blocks
+        for script in soup.find_all("script", type="application/ld+json"):
+            try:
+                content = script.string
+                if not content:
+                    continue
+                content = content.strip()
+                if content.startswith("/*<![CDATA[*/"):
+                    content = content.replace("/*<![CDATA[*/", "").replace("/*]]>*/", "")
+                
+                data = json.loads(content)
+                
+                # Traverse JSON to find "email" or "telephone" keys recursively
+                def traverse(node):
+                    if isinstance(node, dict):
+                        for k, v in node.items():
+                            if k.lower() == "email" and isinstance(v, str):
+                                clean_email = v.replace("mailto:", "").strip()
+                                if "@" in clean_email:
+                                    extracted["emails"].append(clean_email)
+                            elif k.lower() == "telephone" and isinstance(v, str):
+                                extracted["phones"].append(v.strip())
+                            else:
+                                traverse(v)
+                    elif isinstance(node, list):
+                        for item in node:
+                            traverse(item)
+                
+                traverse(data)
+            except Exception:
+                continue
+                
+        # 2. Parse standard schema.org microdata (itemprop="email", itemprop="telephone")
+        for elem in soup.find_all(itemprop=True):
+            prop = elem["itemprop"].lower()
+            if prop == "email":
+                text = elem.get_text().strip() or elem.get("content", "").strip()
+                text = text.replace("mailto:", "").strip()
+                if "@" in text:
+                    extracted["emails"].append(text)
+            elif prop == "telephone":
+                text = elem.get_text().strip() or elem.get("content", "").strip()
+                if text:
+                    extracted["phones"].append(text)
+                    
+    except Exception as exc:
+        print(f"[page_extractor] Error parsing structured contact info: {exc}")
+        
+    extracted["emails"] = list(set(extracted["emails"]))
+    extracted["phones"] = list(set(extracted["phones"]))
+    return extracted
+
+
+def find_footer_links(html: str, base_url: str) -> list:
+    """
+    Find links inside footer elements that might be contact or about pages.
+    """
+    if not html:
+        return []
+    links = []
+    try:
+        soup = BeautifulSoup(html, "html.parser")
+        footers = soup.find_all(["footer", "div", "section"])
+        footer_elements = []
+        for elem in footers:
+            if elem.name == "footer":
+                footer_elements.append(elem)
+            else:
+                classes = [c.lower() for c in elem.get("class", []) if isinstance(c, str)]
+                elem_id = (elem.get("id") or "").lower()
+                if "footer" in classes or "footer" in elem_id:
+                    footer_elements.append(elem)
+                    
+        base_netloc = urlparse(base_url).netloc.lower()
+        for footer in footer_elements:
+            for a in footer.find_all("a", href=True):
+                try:
+                    href = a["href"].strip()
+                    abs_url = urljoin(base_url, a["href"])
+                    if urlparse(abs_url).netloc.lower() != base_netloc:
+                        continue
+                    text = (a.get_text() or "").lower()
+                    href_lower = href.lower()
+                    
+                    is_contact_link = any(kw in text or kw in href_lower for kw in [
+                        "contact", "about", "team", "support", "help", "info", "reach"
+                    ])
+                    if is_contact_link and abs_url not in links:
+                        links.append(abs_url)
+                except Exception:
+                    continue
+    except Exception as exc:
+        print(f"[page_extractor] Error extracting footer links: {exc}")
     return links
 
 
@@ -495,6 +640,11 @@ def extract_from_website(homepage_url: str, homepage_html: str | None = None) ->
     result["emails"].extend(extract_emails(homepage_html))
     result["phones"].extend(extract_phone_numbers(homepage_html))
 
+    # Extract structured contact info from homepage
+    struct_info = extract_structured_contact_info(homepage_html)
+    result["emails"].extend(struct_info["emails"])
+    result["phones"].extend(struct_info["phones"])
+
     # ── Tasks 6 & 7: Enrichment from meta / headings ──────────────────────
     meta_text = extract_meta_text(homepage_html)
     result["meta_description"] = meta_text[:500] if meta_text else ""
@@ -507,16 +657,42 @@ def extract_from_website(homepage_url: str, homepage_html: str | None = None) ->
     result["about_page"] = subpages.get("about_page")
     result["team_page"] = subpages.get("team_page")
 
-    # ── Sub-page passes ───────────────────────────────────────────────────
+    # Fallback paths for contact and about pages
+    if not result["contact_page"]:
+        result["contact_page"] = urljoin(homepage_url, "/contact")
+    if not result["about_page"]:
+        result["about_page"] = urljoin(homepage_url, "/about")
+
+    # Consolidate pages to crawl
+    pages_to_scrape = {}
     for page_type in ("contact_page", "about_page", "team_page"):
         url = result[page_type]
-        if not url:
-            continue
+        if url:
+            pages_to_scrape[url] = page_type
+
+    # Follow footer contact/about links (limit to 2 extra)
+    footer_links = find_footer_links(homepage_html, homepage_url)
+    extra_crawled = 0
+    for link in footer_links:
+        if link not in pages_to_scrape and extra_crawled < 2:
+            pages_to_scrape[link] = "footer_link"
+            extra_crawled += 1
+
+    # ── Sub-page passes ───────────────────────────────────────────────────
+    for url, page_type in pages_to_scrape.items():
         html = fetch_page(url)
         if not html:
             continue
+        
+        # 1. Standard text-based extraction
         result["emails"].extend(extract_emails(html))
         result["phones"].extend(extract_phone_numbers(html))
+        
+        # 2. Structured JSON-LD / microdata extraction
+        sub_struct = extract_structured_contact_info(html)
+        result["emails"].extend(sub_struct["emails"])
+        result["phones"].extend(sub_struct["phones"])
+        
         # Improve enrichment if about page has more content
         if page_type == "about_page" and result["industry_detected"] == "Unknown":
             about_meta = extract_meta_text(html)

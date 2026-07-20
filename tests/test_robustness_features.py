@@ -40,11 +40,11 @@ def test_custom_google_cooldowns():
     
     # 429 block -> 15 min cooldown (900 seconds)
     p.record_failure(domain="www.google.com", reason="RATE_LIMIT")
-    assert p.cooldown_until["www.google.com"] >= time.time() + 890.0
+    assert p.cooldown_until["google.com"] >= time.time() + 890.0
     
     # CAPTCHA block -> 30 min cooldown (1800 seconds)
     p.record_failure(domain="www.google.com", reason="CAPTCHA")
-    assert p.cooldown_until["www.google.com"] >= time.time() + 1790.0
+    assert p.cooldown_until["google.com"] >= time.time() + 1790.0
 
 def test_url_filtering():
     from search.manager import is_valid_company_url

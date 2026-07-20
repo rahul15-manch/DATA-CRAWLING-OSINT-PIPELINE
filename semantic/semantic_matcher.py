@@ -39,6 +39,29 @@ class BaseMatcher(ABC):
         """Compute the semantic match score and trace payload."""
         pass
 
+SPANISH_TRANSLATIONS = {
+    "electronics": ["electrónica", "electrónico", "electrónicos"],
+    "electronic": ["electrónica", "electrónico", "electrónicos"],
+    "development": ["desarrollo", "desarrollador", "desarrolladores"],
+    "developer": ["desarrollo", "desarrollador", "desarrolladores"],
+    "engineering": ["ingeniería", "ingeniero", "ingenieros"],
+    "engineer": ["ingeniería", "ingeniero", "ingenieros"],
+    "design": ["diseño", "diseñador"],
+    "services": ["servicios"],
+    "company": ["compañía", "empresa", "empresas"],
+    "software": ["software", "programa", "programación"],
+    "hardware": ["hardware", "equipos"],
+    "embedded systems": ["sistemas embebidos", "sistemas empotrados", "embebidos"],
+    "automation": ["automatización", "control"],
+    "robotics": ["robótica"],
+    "custom software": ["software a medida", "desarrollo a medida"],
+    "hardware development": ["desarrollo de hardware"],
+    "software development": ["desarrollo de software", "desarrollo software"],
+    "electronics manufacturing": ["fabricación electrónica", "fabricación de electrónica"],
+    "electronics design": ["diseño electrónico", "diseño de electrónica"],
+    "hardware design": ["diseño de hardware"]
+}
+
 class WeightedMatcher(BaseMatcher):
     def __init__(self):
         self.weights = load_semantic_weights()
@@ -48,8 +71,17 @@ class WeightedMatcher(BaseMatcher):
             return False
         text_lower = text.lower()
         for c in concepts:
-            pattern = r'\b' + re.escape(c.lower()) + r'\b'
+            c_low = c.lower()
+            pattern = r'\b' + re.escape(c_low) + r'\b'
             if re.search(pattern, text_lower):
+                return True
+            # Check Spanish translations
+            translations = SPANISH_TRANSLATIONS.get(c_low, [])
+            for t in translations:
+                t_pattern = r'\b' + re.escape(t) + r'\b'
+                if re.search(t_pattern, text_lower):
+                    return True
+            if c_low in {"electronics", "electronic"} and "electron" in text_lower:
                 return True
         return False
 
@@ -59,8 +91,26 @@ class WeightedMatcher(BaseMatcher):
         matched = set()
         text_lower = text.lower()
         for c in concepts:
-            pattern = r'\b' + re.escape(c.lower()) + r'\b'
+            c_low = c.lower()
+            pattern = r'\b' + re.escape(c_low) + r'\b'
             if re.search(pattern, text_lower):
+                matched.add(c)
+                continue
+            
+            # Check Spanish translations
+            translations = SPANISH_TRANSLATIONS.get(c_low, [])
+            found = False
+            for t in translations:
+                t_pattern = r'\b' + re.escape(t) + r'\b'
+                if re.search(t_pattern, text_lower):
+                    matched.add(c)
+                    found = True
+                    break
+            if found:
+                continue
+                
+            # Substring fallback for key root terms
+            if c_low in {"electronics", "electronic"} and "electron" in text_lower:
                 matched.add(c)
         return matched
 

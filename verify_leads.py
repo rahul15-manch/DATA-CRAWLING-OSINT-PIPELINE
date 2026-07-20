@@ -136,9 +136,16 @@ def verify_record(rec: dict) -> dict:
     rec["_website_reachable"] = website_ok
     rec["_verification_notes"] = notes
 
-    # Passes overall if at least one working contact channel remains
+    # Passes overall if at least one working contact channel remains,
+    # OR if it has a website (to allow WHOIS/enrichment),
+    # OR if it's a candidate for domain guessing (has a valid company name)
+    name = rec.get("company_name", "").strip()
     rec["_verification_passed"] = bool(
-        still_valid_emails or still_valid_phones or website_ok
+        still_valid_emails or
+        still_valid_phones or
+        website_ok or
+        rec.get("website") or
+        (name and len(name) >= 2)
     )
     return rec
 

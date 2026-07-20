@@ -141,8 +141,11 @@ def process_record(rec, source_file):
         issues.append(f"people_dropped:{dropped_people}")
 
     # 5. Sparse record check (no website AND no email AND no phone)
+    # Relax rule to allow company names that are valid candidates for domain guessing
     if not rec.get("website") and not rec["emails"] and not rec["phones"]:
-        issues.append("sparse_no_contact_channel")
+        name = rec.get("company_name", "").strip()
+        if len(name) < 2 or is_directory_page(name):
+            issues.append("sparse_no_contact_channel")
 
     rec["_source_file"] = source_file
     rec["_flags"] = issues

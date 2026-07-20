@@ -1,0 +1,35 @@
+{
+  "timestamp": "2026-07-20T10:15:14.176317",
+  "query": "Hardware Engineering development company",
+  "classification": "ENABLE_JS_PAGE",
+  "url": "https://www.google.com/search?q=Hardware+Engineering+development+company&num=10&hl=en&gl=us",
+  "status_code": 200,
+  "redirect_chain": [
+    "https://www.google.com/search?q=Hardware+Engineering+development+company&num=10&hl=en&gl=us"
+  ],
+  "response_headers": {
+    "content-type": "text/html; charset=UTF-8",
+    "strict-transport-security": "max-age=31536000",
+    "content-security-policy": "object-src 'none';base-uri 'self';script-src 'nonce-APSwujlAj3rdzKHJym70tw' 'strict-dynamic' 'report-sample' 'unsafe-eval' 'unsafe-inline' https: http:;report-uri https://csp.withgoogle.com/csp/gws/cdt1",
+    "cross-origin-opener-policy": "same-origin-allow-popups; report-to=\"gws\"",
+    "report-to": "{\"group\":\"gws\",\"max_age\":2592000,\"endpoints\":[{\"url\":\"https://csp.withgoogle.com/csp/report-to/gws/cdt1\"}]}",
+    "accept-ch": "Sec-CH-Prefers-Color-Scheme, Downlink, RTT, Sec-CH-UA-Form-Factors, Sec-CH-UA-Platform, Sec-CH-UA-Platform-Version, Sec-CH-UA-Full-Version, Sec-CH-UA-Arch, Sec-CH-UA-Model, Sec-CH-UA-Bitness, Sec-CH-UA-Full-Version-List, Sec-CH-UA-WoW64",
+    "x-content-type-options": "nosniff",
+    "permissions-policy": "unload=()",
+    "p3p": "CP=\"This is not a P3P policy! See g.co/p3phelp for more info.\"",
+    "content-encoding": "br",
+    "date": "Mon, 20 Jul 2026 04:45:13 GMT",
+    "server": "gws",
+    "x-xss-protection": "0",
+    "x-frame-options": "SAMEORIGIN",
+    "expires": "Mon, 20 Jul 2026 04:45:13 GMT",
+    "cache-control": "private",
+    "set-cookie": "NID=533=Fbp-fHk4hPIp3EAPhjghX0vqDcTsmmdQemiWDrjL7oYhoLtfTzzYon9bFpsNE0-bXza9uBXz_FnSjR2E9DYEMH3pWsM_Sjw71CQXzfQlqyxQFe88iiQfg_5lRXQLYbF93u5LSkN3cvX4vmLjSRP9KLmPnx40YYki7ql6BOhUBR9EfK7_eKycn8GoHsT1_LNDUAlbVMLw23AHIKuH1PVRUwQh; expires=Tue, 19-Jan-2027 04:44:58 GMT; path=/; domain=.google.com; Secure; HttpOnly; SameSite=none",
+    "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+  },
+  "layout_fingerprint": "2d776c7f0f4d13d3ca0db766ca6ecf79",
+  "detected_signals": [
+    "/httpservice/retry/enablejs",
+    "enablejs"
+  ]
+}

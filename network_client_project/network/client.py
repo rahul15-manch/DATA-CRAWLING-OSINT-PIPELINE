@@ -54,7 +54,7 @@ class NetworkClient:
         
         # Register state saving on exit
         if not hasattr(self.proxy_manager, '_atexit_registered'):
-            atexit.register(self.proxy_manager.save_state, "proxy_state.json")
+            atexit.register(self.proxy_manager.save_state, "proxy_state.json", is_atexit=True)
             self.proxy_manager._atexit_registered = True
         
         logger.info("NetworkClient initialized with decoupled Downloader Middleware stack.")

@@ -18,15 +18,24 @@
       "target_field": "concepts"
     }
   },
-  "hardware": {},
+  "hardware": {
+    "Hardware": {
+      "seen": 3,
+      "accepted": 3,
+      "confidence": 1.0,
+      "first_seen": "2026-07-19",
+      "last_seen": "2026-07-19",
+      "target_field": "concepts"
+    }
+  },
   "cloud": {},
   "engineering": {
     "Electronics": {
-      "seen": 1,
-      "accepted": 1,
+      "seen": 2,
+      "accepted": 2,
       "confidence": 1.0,
       "first_seen": "2026-07-18",
-      "last_seen": "2026-07-18",
+      "last_seen": "2026-07-19",
       "target_field": "concepts"
     },
     "IoT": {

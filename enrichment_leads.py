@@ -61,6 +61,25 @@ CANDIDATE_TLDS = [".com", ".in", ".co.in", ".io", ".org"]
 HUNTER_API_KEY = ""
 
 
+def check_domain_mx(domain: str) -> bool:
+    """Check if the domain has at least one valid MX record."""
+    try:
+        import dns.resolver
+        answers = dns.resolver.resolve(domain, "MX", lifetime=4)
+        return len(answers) > 0
+    except Exception:
+        return False
+
+
+def guess_emails_from_domain(domain: str) -> list:
+    """Generate common email prefixes for the domain if it has MX records."""
+    if not check_domain_mx(domain):
+        return []
+    
+    prefixes = ["info", "hello", "contact", "sales", "support", "admin"]
+    return [f"{p}@{domain}" for p in prefixes]
+
+
 def slugify_company_name(name: str) -> str:
     """Turn 'Cloud Certitude Pvt Ltd' -> 'cloudcertitude'."""
     name = name.lower()
@@ -150,6 +169,10 @@ def enrich_record(rec: dict) -> dict:
         api_emails = find_emails_via_api(domain)
         if api_emails:
             enrichment["discovered_emails"] = api_emails
+        else:
+            guessed_emails = guess_emails_from_domain(domain)
+            if guessed_emails:
+                enrichment["discovered_emails"] = guessed_emails
 
     rec["_enrichment"] = enrichment
     return rec

@@ -148,6 +148,25 @@ def company_name_from_domain(url: str) -> str:
     return " ".join(word.capitalize() for word in words if word)
 
 
+def company_name_from_platform_profile(url: str) -> str:
+    """Extract and format company name from directory profile URL paths."""
+    from discovery.directory_extractor import _PROFILE_PATTERNS
+    parsed = urlparse(url)
+    domain = parsed.netloc.lower()
+    path = parsed.path.lower().strip("/")
+    
+    for domain_part, profile_prefix in _PROFILE_PATTERNS:
+        prefix_clean = profile_prefix.strip("/")
+        if domain_part in domain and prefix_clean in path:
+            parts = [p for p in path.split("/") if p]
+            prefix_parts = [p for p in prefix_clean.split("/") if p]
+            if len(parts) > len(prefix_parts):
+                token = parts[len(prefix_parts)]
+                words = re.split(r"[-_]+", token)
+                return " ".join(word.capitalize() for word in words if word)
+    return ""
+
+
 def _is_non_company_domain(url: str) -> bool:
     """Return True for known educational/media/reference/tutorial domains (Task 6)."""
     if not url:
@@ -155,13 +174,21 @@ def _is_non_company_domain(url: str) -> bool:
     token = _domain_token(url)
     if not token:
         return True
-    lowered_url = url.lower()
-    if token in NON_COMPANY_DOMAINS:
+    
+    parsed = urlparse(url.lower())
+    domain = parsed.netloc
+    if domain.startswith("www."):
+        domain = domain[4:]
+        
+    if domain in NON_COMPANY_DOMAINS or token in NON_COMPANY_DOMAINS:
         return True
-
-    for block in NON_COMPANY_DOMAINS:
-        if block in lowered_url:
+        
+    domain_parts = domain.split(".")
+    tlds = {"com", "org", "net", "edu", "gov", "co", "in", "io", "tech", "ai", "app", "info", "biz"}
+    for part in domain_parts:
+        if part not in tlds and part in NON_COMPANY_DOMAINS:
             return True
+            
     return False
 
 
@@ -409,6 +436,8 @@ def classify_page_type_with_confidence(url: str, title: str = "") -> tuple[str, 
 
 def classify_company_page(url: str, title: str = "") -> str:
     """Classify a candidate page before final validation."""
+    if url:
+        url = get_root_company_url(url)
     page_type, _ = classify_page_type_with_confidence(url, title)
     if page_type == "COMPANY_HOMEPAGE":
         return "DIRECT_COMPANY"
@@ -423,6 +452,11 @@ def classify_company_page(url: str, title: str = "") -> str:
         return "ARTICLE"
     elif page_type == "CAREERS":
         return "CATEGORY"
+    
+    # If the page type is UNKNOWN, verify if it is a private company page
+    if url and not _is_platform_domain(url) and not _is_non_company_domain(url):
+        return "DIRECT_COMPANY"
+        
     return "CATEGORY"
 
 
@@ -520,6 +554,7 @@ def evaluate_url(url: str, title: str, snippet: str, query_or_keyword: str, prov
     if page_conf >= 0.8 and page_type in {"ARTICLE", "BLOG", "NEWS", "SOCIAL", "DOCUMENTATION", "FORUM", "MARKETPLACE", "JOB_POSTING", "CAREERS"}:
         from utils.stats_tracker import record_rejection
         record_rejection(f"page_type_{page_type.lower()}")
+        print(f"[REJECTED] URL: {url} | Title: {title!r} | Reason: High-confidence non-company page type ({page_type})")
         return None
 
     # 3. COMPANY_PROFILE -> Homepage Extraction & Evaluation with profile fallback
@@ -727,6 +762,9 @@ def guess_company_name(result: dict) -> str:
     url = result.get("url") or ""
 
     domain_name = company_name_from_domain(url)
+    if not domain_name and _is_platform_domain(url):
+        domain_name = company_name_from_platform_profile(url)
+        
     domain_token = _domain_token(url)
 
     # 1. Hard override
@@ -901,6 +939,11 @@ def discover_companies(keyword: str) -> list:
     active_families = len(COMPANY_TEMPLATES)
     timeout_cap = min(float(max_runtime), 20.0 + 2.0 * active_providers + 1.0 * active_families)
     
+    from utils.deadline import Deadline
+    Deadline.set_timeout(timeout_cap)
+    if hasattr(manager, "_client") and hasattr(manager._client, "proxy_manager"):
+        manager._client.proxy_manager.is_crawling = True
+    
     exit_reason = "All enqueued tasks completed"
 
     while not scheduler.is_empty():
@@ -974,6 +1017,8 @@ def discover_companies(keyword: str) -> list:
             if should_ignore_result(result):
                 stats.increment("rejected_results")
                 rejected_count_total += 1
+                classification, reason = classify_result(result)
+                print(f"[REJECTED] URL: {url} | Title: {result.get('title')!r} | Snippet: {result.get('snippet')!r} | Reason: Page classification is {classification} ({reason})")
                 continue
 
             # Route DIRECTORY_LIST results to the secondary mining queue
@@ -1003,6 +1048,7 @@ def discover_companies(keyword: str) -> list:
                 # Reject immediately, snippet has low relevance
                 stats.increment("rejected_results")
                 rejected_count_total += 1
+                print(f"[REJECTED] URL: {url} | Title: {result.get('title')!r} | Snippet: {result.get('snippet')!r} | Reason: Low snippet relevance score {relevance_score} (< {config.RELEVANCE_THRESHOLD_LOW})")
                 continue
             else:
                 # Ambiguous/borderline snippet, perform HTML deep scoring
@@ -1021,6 +1067,7 @@ def discover_companies(keyword: str) -> list:
                         if relevance_score < config.RELEVANCE_THRESHOLD_LOW:
                             stats.increment("rejected_results")
                             rejected_count_total += 1
+                            print(f"[REJECTED] URL: {url} | Title: {result.get('title')!r} | Snippet: {result.get('snippet')!r} | Reason: Low HTML relevance score {relevance_score} (< {config.RELEVANCE_THRESHOLD_LOW})")
                             continue
                             
                         # Reclassify based on relevance
@@ -1041,6 +1088,7 @@ def discover_companies(keyword: str) -> list:
                         if relevance_score < config.RELEVANCE_THRESHOLD_LOW:
                             stats.increment("rejected_results")
                             rejected_count_total += 1
+                            print(f"[REJECTED] URL: {url} | Title: {result.get('title')!r} | Snippet: {result.get('snippet')!r} | Reason: Low fallback snippet relevance score {relevance_score} (< {config.RELEVANCE_THRESHOLD_LOW}) after HTML fetch failed")
                             continue
                         result["classification"] = "LIKELY_COMPANY"
                         result["relevance_score"] = relevance_score
@@ -1051,6 +1099,7 @@ def discover_companies(keyword: str) -> list:
                     if relevance_score < config.RELEVANCE_THRESHOLD_LOW:
                         stats.increment("rejected_results")
                         rejected_count_total += 1
+                        print(f"[REJECTED] URL: {url} | Title: {result.get('title')!r} | Snippet: {result.get('snippet')!r} | Reason: Low budget-exhausted snippet relevance score {relevance_score} (< {config.RELEVANCE_THRESHOLD_LOW})")
                         continue
                     result["classification"] = "LIKELY_COMPANY"
                     result["relevance_score"] = relevance_score
@@ -1060,6 +1109,7 @@ def discover_companies(keyword: str) -> list:
             company_name = guess_company_name(result)
             if not company_name:
                 rejected_count_total += 1
+                print(f"[REJECTED] URL: {url} | Title: {result.get('title')!r} | Snippet: {result.get('snippet')!r} | Reason: Could not guess company name")
                 continue
 
             print(f"[SRE Debug] Company: {company_name} | Score: {relevance_score} | Tier: {tier} | Industry: {sre_res.get('industry')} | Matched: {sre_res.get('matched_signals')}")
@@ -1388,6 +1438,9 @@ def discover_companies(keyword: str) -> list:
     # ── Deduplicate by normalised name ────────────────────────────────────
     result = dedupe_companies(normalized)
     stats.set_value("validated_companies", len(result))
+
+    if hasattr(manager, "_client") and hasattr(manager._client, "proxy_manager"):
+        manager._client.proxy_manager.is_crawling = False
 
     return result
 

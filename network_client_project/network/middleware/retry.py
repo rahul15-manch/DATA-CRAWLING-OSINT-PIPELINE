@@ -45,6 +45,15 @@ class RetryMiddleware(BaseMiddleware):
         if response.meta.get("is_parser_failure") or response.meta.get("is_unknown_layout"):
             return response
 
+        # Check if search provider request
+        is_search = request.meta.get("request_type") == "search" or request.meta.get("provider") in ("google_html", "brave", "bing", "duckduckgo", "brightdata")
+
+        if is_search:
+            waf_error = ErrorDetector.detect_waf_or_captcha(response)
+            if response.status_code in (403, 429) or waf_error:
+                logger.warning(f"[Retry] Search provider {request.meta.get('provider')} hit block/CAPTCHA/429 (HTTP {response.status_code}). Bubbling up immediately for fail-fast.")
+                return response
+
         # 3. 429 Too Many Requests
         if response.status_code == 429:
             from urllib.parse import urlparse
@@ -116,22 +125,21 @@ class RetryMiddleware(BaseMiddleware):
                 return self._retry(request, exception=exception)
             return None
 
-        # TLS / SSL Error: mark proxy capability as TLS_ERROR, retry once with different proxy
+        # TLS / SSL Error: mark proxy capability as TLS_ERROR, do NOT retry (permanent TLS failure)
         if any(x in err_str for x in ["ssl", "tls", "handshake"]):
             proxy_obj = request.meta.get("_proxy_obj")
             if proxy_obj:
                 provider = request.meta.get("provider", "default")
                 domain_key = proxy_obj._normalize_provider_key(provider)
                 proxy_obj.provider_capabilities[domain_key] = "TLS_ERROR"
-                
-                # Exclude the TLS failing proxy
                 request.meta["exclude_urls"] = request.meta.get("exclude_urls", set()) | {proxy_obj.raw_url}
                 
             session_id = request.meta.get("session_id")
             if session_id:
                 with client.proxy_manager._lock:
                     client.proxy_manager._sticky_sessions.pop(session_id, None)
-            return self._retry(request, exception=exception)
+            logger.warning(f"[Retry] Permanent TLS failure detected for {request.url}. Bubbling up immediately.")
+            return None
 
         # Timeout: retry with different proxy
         if "timeout" in err_str or "timed out" in err_str or "curl: (28)" in err_str:
@@ -159,16 +167,37 @@ class RetryMiddleware(BaseMiddleware):
         keep_proxy: bool = False
     ) -> Union[Request, Response]:
         
+        # Track retry reason for Issue 7 diagnostics log
+        retry_reasons = request.meta.get("retry_reasons", [])
+        if reason:
+            retry_reasons.append(reason)
+        elif exception:
+            retry_reasons.append(exception.__class__.__name__)
+        request.meta["retry_reasons"] = retry_reasons
+
+        # Check Global Timeout / Cap
+        from utils.deadline import Deadline
+        if Deadline.is_exceeded():
+            logger.warning(f"[Retry] Global deadline exceeded ({Deadline.remaining():.1f}s remaining). Aborting retry loop for {request.url}")
+            return response if response else None
+
         if "query_start_time" not in request.meta:
             request.meta["query_start_time"] = time.time()
-        elif time.time() - request.meta["query_start_time"] > 15.0:
-            logger.warning(f"[Retry] Query time budget exceeded (15s) for {request.url}")
-            return response if response else None
+        else:
+            query_timeout = getattr(config, "QUERY_TIMEOUT", 15.0)
+            if time.time() - request.meta["query_start_time"] > query_timeout:
+                logger.warning(f"[Retry] Query time budget exceeded ({query_timeout}s) for {request.url}")
+                return response if response else None
 
         retry_times = request.meta.get("retry_times", 0)
         
         max_retries = self.max_retries
-        if "bing" in request.meta.get("provider", ""):
+        pname = request.meta.get("provider", "")
+        if "google" in pname:
+            max_retries = 1
+        elif "brave" in pname:
+            max_retries = 1
+        elif "bing" in pname:
             max_retries = 1
         elif status_code in (500, 503):
             max_retries = min(2, self.max_retries)

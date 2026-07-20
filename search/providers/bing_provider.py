@@ -99,6 +99,10 @@ class BingProvider(SearchProvider):
         q_session_id = f"bing:{abs(hash(query)) % 10000}"
 
         for attempt in range(1, 3):
+            from utils.deadline import Deadline
+            if attempt > 1 and Deadline.is_exceeded():
+                logger.warning("[BingProvider] Global deadline exceeded. Aborting Bing search retries.")
+                break
             # Pre-request delay to prevent aggressive bot flagging
             if attempt == 1:
                 time.sleep(random.uniform(1.5, 3.5))
