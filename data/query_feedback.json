@@ -1,0 +1,2076 @@
+{
+    "site:linkedin.com/company flowiz -site:wikipedia.org -site:play.google.com -site:apps.apple.com -site:chromewebstore.google.com -site:whatsapp.com": {
+        "success": 1,
+        "zero": 2,
+        "parser": 0,
+        "unavailable": 2,
+        "queries_run": 5,
+        "leads_found": 10
+    },
+    "site:linkedin.com/company flowiz company -site:wikipedia.org -site:play.google.com -site:apps.apple.com -site:chromewebstore.google.com -site:whatsapp.com": {
+        "success": 0,
+        "zero": 1,
+        "parser": 0,
+        "unavailable": 3,
+        "queries_run": 4
+    },
+    "site:linkedin.com/company flowiz companies -site:wikipedia.org -site:play.google.com -site:apps.apple.com -site:chromewebstore.google.com -site:whatsapp.com": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 1,
+        "queries_run": 1
+    },
+    "site:linkedin.com/company flowiz firm -site:wikipedia.org -site:play.google.com -site:apps.apple.com -site:chromewebstore.google.com -site:whatsapp.com": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 1,
+        "queries_run": 1
+    },
+    "site:linkedin.com/company flowiz firms -site:wikipedia.org -site:play.google.com -site:apps.apple.com -site:chromewebstore.google.com -site:whatsapp.com": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 1,
+        "queries_run": 1
+    },
+    "site:linkedin.com/company flowiz agency -site:wikipedia.org -site:play.google.com -site:apps.apple.com -site:chromewebstore.google.com -site:whatsapp.com": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 1,
+        "queries_run": 1
+    },
+    "site:linkedin.com/company software delhi -site:wikipedia.org -site:play.google.com -site:apps.apple.com -site:chromewebstore.google.com -site:whatsapp.com": {
+        "success": 0,
+        "zero": 2,
+        "parser": 0,
+        "unavailable": 1,
+        "failures": 2,
+        "last_updated": 1784201608.1624916,
+        "queries_run": 3
+    },
+    "site:linkedin.com/company software development company -site:wikipedia.org -site:play.google.com -site:apps.apple.com -site:chromewebstore.google.com -site:whatsapp.com": {
+        "success": 0,
+        "zero": 2,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 2,
+        "last_updated": 1784201618.9204085,
+        "queries_run": 2
+    },
+    "site:linkedin.com/company it services -site:wikipedia.org -site:play.google.com -site:apps.apple.com -site:chromewebstore.google.com -site:whatsapp.com": {
+        "success": 0,
+        "zero": 1,
+        "parser": 0,
+        "unavailable": 1,
+        "failures": 1,
+        "last_updated": 1784201631.5536232,
+        "queries_run": 2
+    },
+    "site:linkedin.com/company software house -site:wikipedia.org -site:play.google.com -site:apps.apple.com -site:chromewebstore.google.com -site:whatsapp.com": {
+        "success": 0,
+        "zero": 1,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1784201638.3997312,
+        "queries_run": 1
+    },
+    "site:linkedin.com/company saas company -site:wikipedia.org -site:play.google.com -site:apps.apple.com -site:chromewebstore.google.com -site:whatsapp.com": {
+        "success": 0,
+        "zero": 1,
+        "parser": 0,
+        "unavailable": 1,
+        "failures": 1,
+        "last_updated": 1784201662.7148123,
+        "queries_run": 2
+    },
+    "site:clutch.co software delhi -site:wikipedia.org -site:play.google.com -site:apps.apple.com -site:chromewebstore.google.com -site:whatsapp.com": {
+        "success": 0,
+        "zero": 1,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1784201673.8842473,
+        "queries_run": 1
+    },
+    "site:linkedin.com/company \"--location delhi --industry software development --limit 1\" -site:wikipedia.org -site:play.google.com -site:apps.apple.com -site:chromewebstore.google.com -site:whatsapp.com": {
+        "success": 0,
+        "zero": 2,
+        "parser": 0,
+        "unavailable": 1,
+        "failures": 2,
+        "last_updated": 1784202591.894099,
+        "queries_run": 3
+    },
+    "site:linkedin.com/company \"software development company\" -site:wikipedia.org -site:play.google.com -site:apps.apple.com -site:chromewebstore.google.com -site:whatsapp.com": {
+        "success": 0,
+        "zero": 2,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 2,
+        "last_updated": 1784202605.506489,
+        "queries_run": 2
+    },
+    "site:linkedin.com/company \"it services\" -site:wikipedia.org -site:play.google.com -site:apps.apple.com -site:chromewebstore.google.com -site:whatsapp.com": {
+        "success": 0,
+        "zero": 2,
+        "parser": 0,
+        "unavailable": 2,
+        "failures": 2,
+        "last_updated": 1784204845.4258854,
+        "queries_run": 4
+    },
+    "site:linkedin.com/company \"software house\" -site:wikipedia.org -site:play.google.com -site:apps.apple.com -site:chromewebstore.google.com -site:whatsapp.com": {
+        "success": 0,
+        "zero": 2,
+        "parser": 0,
+        "unavailable": 1,
+        "failures": 2,
+        "last_updated": 1784202908.2854419,
+        "queries_run": 3
+    },
+    "site:linkedin.com/company \"saas company\" -site:wikipedia.org -site:play.google.com -site:apps.apple.com -site:chromewebstore.google.com -site:whatsapp.com": {
+        "success": 0,
+        "zero": 1,
+        "parser": 0,
+        "unavailable": 3,
+        "failures": 1,
+        "last_updated": 1784202920.1022687,
+        "queries_run": 4
+    },
+    "site:clutch.co \"--location delhi --industry software development --limit 1\" -site:wikipedia.org -site:play.google.com -site:apps.apple.com -site:chromewebstore.google.com -site:whatsapp.com": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 1,
+        "failures": 0,
+        "last_updated": 1784202643.033418,
+        "queries_run": 1
+    },
+    "site:linkedin.com/company sofware -site:wikipedia.org -site:play.google.com -site:apps.apple.com -site:chromewebstore.google.com -site:whatsapp.com": {
+        "success": 0,
+        "zero": 2,
+        "parser": 0,
+        "unavailable": 1,
+        "failures": 2,
+        "last_updated": 1784202751.1193848,
+        "queries_run": 3
+    },
+    "site:linkedin.com/company \"sofware company\" -site:wikipedia.org -site:play.google.com -site:apps.apple.com -site:chromewebstore.google.com -site:whatsapp.com": {
+        "success": 0,
+        "zero": 2,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 2,
+        "last_updated": 1784202761.4675508,
+        "queries_run": 2
+    },
+    "site:linkedin.com/company \"sofware startup\" -site:wikipedia.org -site:play.google.com -site:apps.apple.com -site:chromewebstore.google.com -site:whatsapp.com": {
+        "success": 0,
+        "zero": 1,
+        "parser": 0,
+        "unavailable": 1,
+        "failures": 1,
+        "last_updated": 1784202772.922894,
+        "queries_run": 2
+    },
+    "site:linkedin.com/company \"sofware solutions\" -site:wikipedia.org -site:play.google.com -site:apps.apple.com -site:chromewebstore.google.com -site:whatsapp.com": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 1,
+        "failures": 0,
+        "last_updated": 1784202781.0327566,
+        "queries_run": 1
+    },
+    "site:linkedin.com/company \"sofware tech\" -site:wikipedia.org -site:play.google.com -site:apps.apple.com -site:chromewebstore.google.com -site:whatsapp.com": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 1,
+        "failures": 0,
+        "last_updated": 1784202781.0349183,
+        "queries_run": 1
+    },
+    "site:clutch.co sofware -site:wikipedia.org -site:play.google.com -site:apps.apple.com -site:chromewebstore.google.com -site:whatsapp.com": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 1,
+        "failures": 0,
+        "last_updated": 1784202781.0359735,
+        "queries_run": 1
+    },
+    "site:linkedin.com/company software -site:wikipedia.org -site:play.google.com -site:apps.apple.com -site:chromewebstore.google.com -site:whatsapp.com": {
+        "success": 0,
+        "zero": 2,
+        "parser": 0,
+        "unavailable": 1,
+        "failures": 2,
+        "last_updated": 1784202897.9340572,
+        "queries_run": 3
+    },
+    "site:clutch.co software -site:wikipedia.org -site:play.google.com -site:apps.apple.com -site:chromewebstore.google.com -site:whatsapp.com": {
+        "success": 0,
+        "zero": 1,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1784202928.6476438,
+        "queries_run": 1
+    },
+    "site:linkedin.com/company \"\"software companies\" company\" -site:wikipedia.org -site:play.google.com -site:apps.apple.com -site:chromewebstore.google.com -site:whatsapp.com": {
+        "success": 0,
+        "zero": 2,
+        "parser": 0,
+        "unavailable": 1,
+        "failures": 2,
+        "last_updated": 1784203678.339842,
+        "queries_run": 3
+    },
+    "site:linkedin.com/company \"hardware company\" -site:wikipedia.org -site:play.google.com -site:apps.apple.com -site:chromewebstore.google.com -site:whatsapp.com": {
+        "success": 0,
+        "zero": 2,
+        "parser": 0,
+        "unavailable": 2,
+        "failures": 2,
+        "last_updated": 1784214766.9706419,
+        "queries_run": 4
+    },
+    "site:linkedin.com/company \"hardware development\" -site:wikipedia.org -site:play.google.com -site:apps.apple.com -site:chromewebstore.google.com -site:whatsapp.com": {
+        "success": 0,
+        "zero": 2,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 2,
+        "last_updated": 1784203782.6932318,
+        "queries_run": 2
+    },
+    "site:linkedin.com/company \"custom hardware\" -site:wikipedia.org -site:play.google.com -site:apps.apple.com -site:chromewebstore.google.com -site:whatsapp.com": {
+        "success": 0,
+        "zero": 1,
+        "parser": 0,
+        "unavailable": 1,
+        "failures": 1,
+        "last_updated": 1784203791.5097888,
+        "queries_run": 2
+    },
+    "site:linkedin.com/company \"hardware\" -site:wikipedia.org -site:play.google.com -site:apps.apple.com -site:chromewebstore.google.com -site:whatsapp.com": {
+        "success": 0,
+        "zero": 1,
+        "parser": 0,
+        "unavailable": 1,
+        "failures": 1,
+        "last_updated": 1784214766.953505,
+        "queries_run": 2
+    },
+    "site:linkedin.com/company \"\"hardware company\" -site:wikipedia.org -site:play.google.com -site:apps.apple.com -site:chromewebstore.google.com -site:whatsapp.com": {
+        "success": 0,
+        "zero": 2,
+        "parser": 0,
+        "unavailable": 3,
+        "failures": 2,
+        "last_updated": 1784203970.7437787,
+        "queries_run": 5
+    },
+    "site:linkedin.com/company \"\"software companies\" development\" -site:wikipedia.org -site:play.google.com -site:apps.apple.com -site:chromewebstore.google.com -site:whatsapp.com": {
+        "success": 0,
+        "zero": 2,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 2,
+        "last_updated": 1784203919.8057525,
+        "queries_run": 2
+    },
+    "site:linkedin.com/company \"automation company\" -site:wikipedia.org -site:play.google.com -site:apps.apple.com -site:chromewebstore.google.com -site:whatsapp.com": {
+        "success": 0,
+        "zero": 3,
+        "parser": 0,
+        "unavailable": 3,
+        "failures": 3,
+        "last_updated": 1784212513.9499927,
+        "queries_run": 6
+    },
+    "site:linkedin.com/company \"automation development\" -site:wikipedia.org -site:play.google.com -site:apps.apple.com -site:chromewebstore.google.com -site:whatsapp.com": {
+        "success": 0,
+        "zero": 3,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 3,
+        "last_updated": 1784212526.5134504,
+        "queries_run": 3
+    },
+    "site:linkedin.com/company \"custom automation\" -site:wikipedia.org -site:play.google.com -site:apps.apple.com -site:chromewebstore.google.com -site:whatsapp.com": {
+        "success": 0,
+        "zero": 1,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1784204853.1356142,
+        "queries_run": 1
+    },
+    "site:linkedin.com/company \"automation\" -site:wikipedia.org -site:play.google.com -site:apps.apple.com -site:chromewebstore.google.com -site:whatsapp.com": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 3,
+        "failures": 0,
+        "last_updated": 1784214100.8470573,
+        "queries_run": 3
+    },
+    "site:linkedin.com/company \"automation company company\" -site:wikipedia.org -site:play.google.com -site:apps.apple.com -site:chromewebstore.google.com -site:whatsapp.com": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 4,
+        "failures": 0,
+        "last_updated": 1784212556.1558354,
+        "queries_run": 4
+    },
+    "site:linkedin.com/company \"software company\" -site:wikipedia.org -site:play.google.com -site:apps.apple.com -site:chromewebstore.google.com -site:whatsapp.com": {
+        "success": 1,
+        "zero": 2,
+        "parser": 0,
+        "unavailable": 2,
+        "failures": 1,
+        "last_updated": 1784212205.6620743,
+        "queries_run": 5,
+        "leads_found": 6
+    },
+    "site:linkedin.com/company \"software development\" -site:wikipedia.org -site:play.google.com -site:apps.apple.com -site:chromewebstore.google.com -site:whatsapp.com": {
+        "success": 0,
+        "zero": 2,
+        "parser": 0,
+        "unavailable": 2,
+        "failures": 2,
+        "last_updated": 1784212213.9231284,
+        "queries_run": 4
+    },
+    "site:linkedin.com/company \"software services\" -site:wikipedia.org -site:play.google.com -site:apps.apple.com -site:chromewebstore.google.com -site:whatsapp.com": {
+        "success": 0,
+        "zero": 1,
+        "parser": 0,
+        "unavailable": 1,
+        "failures": 1,
+        "last_updated": 1784212231.6874123,
+        "queries_run": 2
+    },
+    "site:linkedin.com/company \"software\" delhi -site:wikipedia.org -site:play.google.com -site:apps.apple.com -site:chromewebstore.google.com -site:whatsapp.com": {
+        "success": 0,
+        "zero": 1,
+        "parser": 0,
+        "unavailable": 1,
+        "failures": 1,
+        "last_updated": 1784212231.688993,
+        "queries_run": 2
+    },
+    "site:linkedin.com/company \"software development company company\" -site:wikipedia.org -site:play.google.com -site:apps.apple.com -site:chromewebstore.google.com -site:whatsapp.com": {
+        "success": 0,
+        "zero": 1,
+        "parser": 0,
+        "unavailable": 1,
+        "failures": 1,
+        "last_updated": 1784212231.6905332,
+        "queries_run": 2
+    },
+    "site:linkedin.com/company \"software development company development\" -site:wikipedia.org -site:play.google.com -site:apps.apple.com -site:chromewebstore.google.com -site:whatsapp.com": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 2,
+        "failures": 0,
+        "last_updated": 1784212231.6926296,
+        "queries_run": 2
+    },
+    "site:linkedin.com/company \"it services company\" -site:wikipedia.org -site:play.google.com -site:apps.apple.com -site:chromewebstore.google.com -site:whatsapp.com": {
+        "success": 0,
+        "zero": 1,
+        "parser": 0,
+        "unavailable": 2,
+        "failures": 1,
+        "last_updated": 1784212392.439133,
+        "queries_run": 3
+    },
+    "site:linkedin.com/company \"it services development\" -site:wikipedia.org -site:play.google.com -site:apps.apple.com -site:chromewebstore.google.com -site:whatsapp.com": {
+        "success": 0,
+        "zero": 1,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1784212403.8360326,
+        "queries_run": 1
+    },
+    "site:linkedin.com/company \"it services services\" -site:wikipedia.org -site:play.google.com -site:apps.apple.com -site:chromewebstore.google.com -site:whatsapp.com": {
+        "success": 0,
+        "zero": 1,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1784212414.929107,
+        "queries_run": 1
+    },
+    "site:linkedin.com/company \"it services\" noida -site:wikipedia.org -site:play.google.com -site:apps.apple.com -site:chromewebstore.google.com -site:whatsapp.com": {
+        "success": 0,
+        "zero": 1,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1784212427.0269883,
+        "queries_run": 1
+    },
+    "site:clutch.co it services noida -site:wikipedia.org -site:play.google.com -site:apps.apple.com -site:chromewebstore.google.com -site:whatsapp.com": {
+        "success": 0,
+        "zero": 1,
+        "parser": 0,
+        "unavailable": 1,
+        "failures": 1,
+        "last_updated": 1784212447.184656,
+        "queries_run": 2
+    },
+    "site:linkedin.com/company \"automation services\" -site:wikipedia.org -site:play.google.com -site:apps.apple.com -site:chromewebstore.google.com -site:whatsapp.com": {
+        "success": 0,
+        "zero": 1,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1784212538.445143,
+        "queries_run": 1
+    },
+    "site:linkedin.com/company \"automation company development\" -site:wikipedia.org -site:play.google.com -site:apps.apple.com -site:chromewebstore.google.com -site:whatsapp.com": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 1,
+        "failures": 0,
+        "last_updated": 1784212556.1578465,
+        "queries_run": 1
+    },
+    "software companies noida": {
+        "success": 1,
+        "zero": 1,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1784213778.408792,
+        "queries_run": 2,
+        "leads_found": 3
+    },
+    "best software companies noida": {
+        "success": 1,
+        "zero": 1,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1784213786.3788035,
+        "queries_run": 2,
+        "leads_found": 3
+    },
+    "top software companies noida": {
+        "success": 1,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1784213791.9007444,
+        "leads_found": 3,
+        "queries_run": 1
+    },
+    "software development company": {
+        "success": 2,
+        "zero": 1,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 2,
+        "last_updated": 1784286488.9057052,
+        "leads_found": 12,
+        "queries_run": 6,
+        "score": -1
+    },
+    "best software development company": {
+        "success": 1,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1784213800.290597,
+        "leads_found": 9,
+        "queries_run": 1
+    },
+    "top software development company": {
+        "success": 0,
+        "zero": 1,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1784213818.8975995,
+        "queries_run": 1
+    },
+    "it services": {
+        "success": 0,
+        "zero": 1,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1784213830.3030097,
+        "queries_run": 1
+    },
+    "automation": {
+        "success": 1,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1784214053.887774,
+        "leads_found": 4,
+        "queries_run": 1
+    },
+    "best automation": {
+        "success": 0,
+        "zero": 2,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 2,
+        "last_updated": 1784214063.5193105,
+        "queries_run": 2
+    },
+    "top automation": {
+        "success": 1,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1784214066.7604547,
+        "leads_found": 4,
+        "queries_run": 1
+    },
+    "automation company": {
+        "success": 1,
+        "zero": 1,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1784214080.6980555,
+        "queries_run": 2,
+        "leads_found": 8
+    },
+    "best automation company": {
+        "success": 0,
+        "zero": 2,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 2,
+        "last_updated": 1784214091.9713478,
+        "queries_run": 2
+    },
+    "top automation company": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 1,
+        "failures": 0,
+        "last_updated": 1784214100.8390474,
+        "queries_run": 1
+    },
+    "automation startup": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 1,
+        "failures": 0,
+        "last_updated": 1784214100.8445578,
+        "queries_run": 1
+    },
+    "site:linkedin.com/company \"automation startup\" -site:wikipedia.org -site:play.google.com -site:apps.apple.com -site:chromewebstore.google.com -site:whatsapp.com": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 1,
+        "failures": 0,
+        "last_updated": 1784214100.850207,
+        "queries_run": 1
+    },
+    "site:linkedin.com/in \"steampowered\" founder or ceo or director": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 1,
+        "failures": 0,
+        "last_updated": 1784214101.3605862,
+        "queries_run": 1
+    },
+    "site:linkedin.com/in \"steampowered\" \"co-founder\"": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 1,
+        "failures": 0,
+        "last_updated": 1784214101.3625786,
+        "queries_run": 1
+    },
+    "hardware": {
+        "success": 1,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1784290410.6168106,
+        "leads_found": 5,
+        "queries_run": 282,
+        "score": 562
+    },
+    "best hardware": {
+        "success": 1,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1784214720.7808614,
+        "leads_found": 1,
+        "queries_run": 1
+    },
+    "top hardware": {
+        "success": 1,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1784214723.923981,
+        "leads_found": 3,
+        "queries_run": 1
+    },
+    "hardware company": {
+        "success": 1,
+        "zero": 1,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1784214740.6411266,
+        "queries_run": 2,
+        "leads_found": 3
+    },
+    "best hardware company": {
+        "success": 1,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1784214745.5520127,
+        "leads_found": 6,
+        "queries_run": 1
+    },
+    "top hardware company": {
+        "success": 1,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1784214748.396093,
+        "leads_found": 6,
+        "queries_run": 1
+    },
+    "hardware startup": {
+        "success": 0,
+        "zero": 1,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1784214759.2590594,
+        "queries_run": 1
+    },
+    "best hardware startup": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 1,
+        "failures": 0,
+        "last_updated": 1784214766.9036007,
+        "queries_run": 1
+    },
+    "top hardware startup": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 1,
+        "failures": 0,
+        "last_updated": 1784214766.9211965,
+        "queries_run": 1
+    },
+    "site:linkedin.com/company \"hardware startup\" -site:wikipedia.org -site:play.google.com -site:apps.apple.com -site:chromewebstore.google.com -site:whatsapp.com": {
+        "success": 1,
+        "zero": 1,
+        "parser": 0,
+        "unavailable": 1,
+        "failures": 0,
+        "last_updated": 1784219991.3344898,
+        "queries_run": 3,
+        "leads_found": 7
+    },
+    "site:linkedin.com/in \"about us\" founder or ceo or director": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 1,
+        "failures": 0,
+        "last_updated": 1784214767.0319562,
+        "queries_run": 1
+    },
+    "engineering": {
+        "success": 1,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1784451058.3649356,
+        "leads_found": 1,
+        "queries_run": 240,
+        "score": 482
+    },
+    "best engineering": {
+        "success": 0,
+        "zero": 4,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 4,
+        "last_updated": 1784220217.4182506,
+        "queries_run": 4
+    },
+    "top engineering": {
+        "success": 0,
+        "zero": 4,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 4,
+        "last_updated": 1784220224.5012665,
+        "queries_run": 4
+    },
+    "engineering company": {
+        "success": 1,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 1,
+        "failures": 0,
+        "last_updated": 1784218358.3168437,
+        "queries_run": 2,
+        "leads_found": 8
+    },
+    "best engineering company": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 1,
+        "failures": 0,
+        "last_updated": 1784218362.9974866,
+        "queries_run": 1
+    },
+    "site:linkedin.com/company \"hardware startup\" noida -site:wikipedia.org -site:play.google.com -site:apps.apple.com -site:chromewebstore.google.com -site:whatsapp.com": {
+        "success": 0,
+        "zero": 1,
+        "parser": 0,
+        "unavailable": 2,
+        "failures": 1,
+        "last_updated": 1784220014.926797,
+        "queries_run": 3
+    },
+    "site:linkedin.com/in \"engineeringcom\" founder or ceo or director": {
+        "success": 0,
+        "zero": 2,
+        "parser": 0,
+        "unavailable": 1,
+        "failures": 2,
+        "last_updated": 1784220251.331236,
+        "queries_run": 3
+    },
+    "site:linkedin.com/in \"engineeringcom\" \"co-founder\"": {
+        "success": 0,
+        "zero": 1,
+        "parser": 0,
+        "unavailable": 1,
+        "failures": 1,
+        "last_updated": 1784220263.7287807,
+        "queries_run": 2
+    },
+    "\"engineeringcom\" site:linkedin.com": {
+        "success": 0,
+        "zero": 1,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1784220270.4260736,
+        "queries_run": 1
+    },
+    "software gurugram": {
+        "success": 1,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1784220316.9942985,
+        "leads_found": 3,
+        "queries_run": 1
+    },
+    "best software gurugram": {
+        "success": 1,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1784220323.1902556,
+        "leads_found": 1,
+        "queries_run": 1
+    },
+    "top software gurugram": {
+        "success": 1,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1784220327.428734,
+        "leads_found": 3,
+        "queries_run": 1
+    },
+    "site:linkedin.com/in \"rynow\" founder or ceo or director": {
+        "success": 1,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1784220363.3092334,
+        "leads_found": 2,
+        "queries_run": 1
+    },
+    "site:linkedin.com/in \"karnatakatourism\" founder or ceo or director": {
+        "success": 0,
+        "zero": 1,
+        "parser": 0,
+        "unavailable": 2,
+        "failures": 1,
+        "last_updated": 1784220383.5791938,
+        "queries_run": 3
+    },
+    "site:linkedin.com/in \"creativepath\" founder or ceo or director": {
+        "success": 0,
+        "zero": 1,
+        "parser": 0,
+        "unavailable": 2,
+        "failures": 1,
+        "last_updated": 1784220388.8716252,
+        "queries_run": 3
+    },
+    "site:linkedin.com/in \"f6s\" founder or ceo or director": {
+        "success": 0,
+        "zero": 1,
+        "parser": 0,
+        "unavailable": 4,
+        "failures": 1,
+        "last_updated": 1784220720.4355316,
+        "queries_run": 5
+    },
+    "site:linkedin.com/in \"daffodilsw\" founder or ceo or director": {
+        "success": 0,
+        "zero": 1,
+        "parser": 0,
+        "unavailable": 2,
+        "failures": 1,
+        "last_updated": 1784220398.0436904,
+        "queries_run": 3
+    },
+    "site:linkedin.com/in \"karnatakatourism\" \"co-founder\"": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 1,
+        "failures": 0,
+        "last_updated": 1784220406.609172,
+        "queries_run": 1
+    },
+    "site:linkedin.com/in \"creativepath\" \"co-founder\"": {
+        "success": 0,
+        "zero": 1,
+        "parser": 0,
+        "unavailable": 2,
+        "failures": 1,
+        "last_updated": 1784220706.7879605,
+        "queries_run": 3
+    },
+    "software bangalore": {
+        "success": 1,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1784220651.0267186,
+        "leads_found": 4,
+        "queries_run": 1
+    },
+    "best software bangalore": {
+        "success": 1,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1784220661.6531732,
+        "leads_found": 3,
+        "queries_run": 1
+    },
+    "top software bangalore": {
+        "success": 1,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1784220671.1321177,
+        "leads_found": 3,
+        "queries_run": 1
+    },
+    "site:linkedin.com/in \"builtinbengaluru\" founder or ceo or director": {
+        "success": 0,
+        "zero": 1,
+        "parser": 0,
+        "unavailable": 2,
+        "failures": 1,
+        "last_updated": 1784220730.5456753,
+        "queries_run": 3
+    },
+    "site:linkedin.com/in \"daffodilsw\" \"co-founder\"": {
+        "success": 0,
+        "zero": 1,
+        "parser": 0,
+        "unavailable": 1,
+        "failures": 1,
+        "last_updated": 1784220710.3262267,
+        "queries_run": 2
+    },
+    "\"creativepath\" site:linkedin.com": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 1,
+        "failures": 0,
+        "last_updated": 1784220728.6668737,
+        "queries_run": 1
+    },
+    "\"daffodilsw\" site:linkedin.com": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 1,
+        "failures": 0,
+        "last_updated": 1784220732.3022182,
+        "queries_run": 1
+    },
+    "automation noida": {
+        "success": 1,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1784221341.1555445,
+        "leads_found": 6,
+        "queries_run": 1
+    },
+    "best automation noida": {
+        "success": 1,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1784221359.420388,
+        "leads_found": 6,
+        "queries_run": 1
+    },
+    "site:linkedin.com/in \"jarmakautomation\" founder or ceo or director": {
+        "success": 0,
+        "zero": 1,
+        "parser": 0,
+        "unavailable": 1,
+        "failures": 1,
+        "last_updated": 1784221390.6081128,
+        "queries_run": 2
+    },
+    "site:linkedin.com/in \"reckersautomation\" founder or ceo or director": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 3,
+        "failures": 0,
+        "last_updated": 1784221397.0123734,
+        "queries_run": 3
+    },
+    "site:linkedin.com/in \"aeab\" founder or ceo or director": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 3,
+        "failures": 0,
+        "last_updated": 1784221395.5036077,
+        "queries_run": 3
+    },
+    "site:linkedin.com/in \"depl\" founder or ceo or director": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 2,
+        "failures": 0,
+        "last_updated": 1784221391.7427695,
+        "queries_run": 2
+    },
+    "site:linkedin.com/in \"techvault\" founder or ceo or director": {
+        "success": 0,
+        "zero": 1,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1784221382.129628,
+        "queries_run": 1
+    },
+    "site:linkedin.com/in \"jarmakautomation\" \"co-founder\"": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 1,
+        "failures": 0,
+        "last_updated": 1784221390.6151388,
+        "queries_run": 1
+    },
+    "site:linkedin.com/in \"techvault\" \"co-founder\"": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 1,
+        "failures": 0,
+        "last_updated": 1784221393.7931619,
+        "queries_run": 1
+    },
+    "python": {
+        "success": 1,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1784453476.217563,
+        "leads_found": 6,
+        "queries_run": 410,
+        "score": 826
+    },
+    "best python": {
+        "success": 1,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1784221547.3001862,
+        "leads_found": 4,
+        "queries_run": 1
+    },
+    "site:linkedin.com/in \"jetbrains\" founder or ceo or director": {
+        "success": 1,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1784221568.2134418,
+        "leads_found": 5,
+        "queries_run": 1
+    },
+    "site:linkedin.com/in \"awesome python\" founder or ceo or director": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 3,
+        "failures": 0,
+        "last_updated": 1784221609.9576547,
+        "queries_run": 3
+    },
+    "site:linkedin.com/in \"online python\" founder or ceo or director": {
+        "success": 0,
+        "zero": 3,
+        "parser": 0,
+        "unavailable": 2,
+        "failures": 3,
+        "last_updated": 1784221981.8276148,
+        "queries_run": 5
+    },
+    "site:linkedin.com/in \"welcome to pythonorg\" founder or ceo or director": {
+        "success": 0,
+        "zero": 1,
+        "parser": 0,
+        "unavailable": 1,
+        "failures": 1,
+        "last_updated": 1784221595.7984402,
+        "queries_run": 2
+    },
+    "site:linkedin.com/in \"pythonorg\" founder or ceo or director": {
+        "success": 0,
+        "zero": 1,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1784221577.4806309,
+        "queries_run": 1
+    },
+    "site:linkedin.com/in \"programiz\" founder or ceo or director": {
+        "success": 0,
+        "zero": 1,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1784221589.6139667,
+        "queries_run": 1
+    },
+    "site:linkedin.com/in \"pythonorg\" \"co-founder\"": {
+        "success": 0,
+        "zero": 1,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1784221603.1676598,
+        "queries_run": 1
+    },
+    "site:linkedin.com/in \"online python\" \"co-founder\"": {
+        "success": 0,
+        "zero": 1,
+        "parser": 0,
+        "unavailable": 1,
+        "failures": 1,
+        "last_updated": 1784221995.1394765,
+        "queries_run": 2
+    },
+    "python noida": {
+        "success": 3,
+        "zero": 6,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 2,
+        "last_updated": 1784275300.9528868,
+        "queries_run": 9,
+        "leads_found": 12
+    },
+    "best python noida": {
+        "success": 1,
+        "zero": 6,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 6,
+        "last_updated": 1784264840.093958,
+        "leads_found": 1,
+        "queries_run": 7
+    },
+    "top python noida": {
+        "success": 1,
+        "zero": 6,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 6,
+        "last_updated": 1784264844.553747,
+        "leads_found": 5,
+        "queries_run": 7
+    },
+    "python development company": {
+        "success": 1,
+        "zero": 1,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 3,
+        "last_updated": 1784442782.7112343,
+        "queries_run": 7,
+        "leads_found": 5,
+        "score": 14
+    },
+    "best python development company": {
+        "success": 1,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1784221948.580297,
+        "leads_found": 1,
+        "queries_run": 1
+    },
+    "top python development company": {
+        "success": 1,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1784221952.3696797,
+        "leads_found": 5,
+        "queries_run": 1
+    },
+    "python software company": {
+        "success": 1,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1784288263.9127822,
+        "leads_found": 5,
+        "queries_run": 2,
+        "score": 10
+    },
+    "site:linkedin.com/in \"python online compiler interpreter\" founder or ceo or director": {
+        "success": 0,
+        "zero": 1,
+        "parser": 0,
+        "unavailable": 2,
+        "failures": 1,
+        "last_updated": 1784221986.856378,
+        "queries_run": 3
+    },
+    "site:linkedin.com/in \"python online compiler interpreter\" \"co-founder\"": {
+        "success": 0,
+        "zero": 1,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1784222001.2737134,
+        "queries_run": 1
+    },
+    "site:linkedin.com/company \"python\" -site:wikipedia.org -site:play.google.com -site:apps.apple.com -site:chromewebstore.google.com -site:whatsapp.com": {
+        "success": 4,
+        "zero": 10,
+        "parser": 0,
+        "unavailable": 11,
+        "failures": 0,
+        "last_updated": 1784275391.4144437,
+        "queries_run": 25,
+        "leads_found": 33
+    },
+    "site:linkedin.com/company \"python\" noida -site:wikipedia.org -site:play.google.com -site:apps.apple.com -site:chromewebstore.google.com -site:whatsapp.com": {
+        "success": 0,
+        "zero": 10,
+        "parser": 0,
+        "unavailable": 11,
+        "failures": 10,
+        "last_updated": 1784279859.4447997,
+        "queries_run": 21
+    },
+    "python automation noida": {
+        "success": 1,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1784272120.2066228,
+        "leads_found": 1,
+        "queries_run": 1
+    },
+    "best python automation noida": {
+        "success": 1,
+        "zero": 1,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1784272127.4031081,
+        "queries_run": 2,
+        "leads_found": 1
+    },
+    "top python automation noida": {
+        "success": 1,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1784272130.5575507,
+        "leads_found": 1,
+        "queries_run": 1
+    },
+    "site:linkedin.com/company \"python automation\" -site:wikipedia.org -site:play.google.com -site:apps.apple.com -site:chromewebstore.google.com -site:whatsapp.com": {
+        "success": 0,
+        "zero": 1,
+        "parser": 0,
+        "unavailable": 2,
+        "failures": 1,
+        "last_updated": 1784272149.7664704,
+        "queries_run": 3
+    },
+    "top python": {
+        "success": 1,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1784273894.5415964,
+        "leads_found": 5,
+        "queries_run": 1
+    },
+    "site:linkedin.com/company \"python development company\" -site:wikipedia.org -site:play.google.com -site:apps.apple.com -site:chromewebstore.google.com -site:whatsapp.com": {
+        "success": 0,
+        "zero": 1,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1784273923.933422,
+        "queries_run": 1
+    },
+    "site:linkedin.com/company \"python development\" noida -site:wikipedia.org -site:play.google.com -site:apps.apple.com -site:chromewebstore.google.com -site:whatsapp.com": {
+        "success": 0,
+        "zero": 4,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 4,
+        "last_updated": 1784274645.6602468,
+        "queries_run": 4
+    },
+    "python software company noida -site:wikipedia.org -site:play.google.com -site:apps.apple.com -site:chromewebstore.google.com -site:whatsapp.com": {
+        "success": 0,
+        "zero": 3,
+        "parser": 0,
+        "unavailable": 1,
+        "failures": 3,
+        "last_updated": 1784274662.1605797,
+        "queries_run": 4
+    },
+    "python development services noida -site:wikipedia.org -site:play.google.com -site:apps.apple.com -site:chromewebstore.google.com -site:whatsapp.com": {
+        "success": 0,
+        "zero": 3,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 3,
+        "last_updated": 1784274668.2873874,
+        "queries_run": 3
+    },
+    "python consulting company noida -site:wikipedia.org -site:play.google.com -site:apps.apple.com -site:chromewebstore.google.com -site:whatsapp.com": {
+        "success": 0,
+        "zero": 1,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1784274239.960864,
+        "queries_run": 1
+    },
+    "site:linkedin.com/company \"python development\" -site:wikipedia.org -site:play.google.com -site:apps.apple.com -site:chromewebstore.google.com -site:whatsapp.com": {
+        "success": 0,
+        "zero": 6,
+        "parser": 0,
+        "unavailable": 6,
+        "failures": 6,
+        "last_updated": 1784279848.865499,
+        "queries_run": 12
+    },
+    "python software company -site:wikipedia.org -site:play.google.com -site:apps.apple.com -site:chromewebstore.google.com -site:whatsapp.com": {
+        "success": 0,
+        "zero": 3,
+        "parser": 0,
+        "unavailable": 2,
+        "failures": 3,
+        "last_updated": 1784275431.3709445,
+        "queries_run": 5
+    },
+    "python development services -site:wikipedia.org -site:play.google.com -site:apps.apple.com -site:chromewebstore.google.com -site:whatsapp.com": {
+        "success": 0,
+        "zero": 4,
+        "parser": 0,
+        "unavailable": 1,
+        "failures": 4,
+        "last_updated": 1784279854.5485535,
+        "queries_run": 5
+    },
+    "python noida -site:wikipedia.org -site:play.google.com -site:apps.apple.com -site:chromewebstore.google.com -site:whatsapp.com": {
+        "success": 0,
+        "zero": 1,
+        "parser": 0,
+        "unavailable": 2,
+        "failures": 1,
+        "last_updated": 1784275247.965861,
+        "queries_run": 3
+    },
+    "python -site:wikipedia.org -site:play.google.com -site:apps.apple.com -site:chromewebstore.google.com -site:whatsapp.com": {
+        "success": 0,
+        "zero": 1,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1784275256.162712,
+        "queries_run": 1
+    },
+    "site:clutch.co python company": {
+        "success": 0,
+        "zero": 64,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 184,
+        "last_updated": 1784439886.6345465,
+        "queries_run": 184,
+        "score": -120
+    },
+    "python company": {
+        "success": 0,
+        "zero": 3,
+        "parser": 3,
+        "unavailable": 0,
+        "failures": 9,
+        "last_updated": 1784448766.5871823,
+        "queries_run": 18,
+        "score": 13
+    },
+    "site:linkedin.com/company \"python software\" -site:wikipedia.org -site:play.google.com -site:apps.apple.com -site:chromewebstore.google.com -site:whatsapp.com": {
+        "success": 0,
+        "zero": 1,
+        "parser": 0,
+        "unavailable": 2,
+        "failures": 1,
+        "last_updated": 1784276710.6063225,
+        "queries_run": 3
+    },
+    "site:clutch.co \"python\" -site:wikipedia.org -site:play.google.com -site:apps.apple.com -site:chromewebstore.google.com -site:whatsapp.com": {
+        "success": 0,
+        "zero": 1,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1784276725.3435066,
+        "queries_run": 1
+    },
+    "site:linkedin.com/in \"python developer\" founder or ceo or director": {
+        "success": 0,
+        "zero": 1,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1784279873.2807155,
+        "queries_run": 1
+    },
+    "site:linkedin.com/in \"python developer\" \"co-founder\"": {
+        "success": 0,
+        "zero": 1,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1784279879.5285132,
+        "queries_run": 1
+    },
+    "\"python developer\" site:linkedin.com": {
+        "success": 0,
+        "zero": 1,
+        "parser": 0,
+        "unavailable": 1,
+        "failures": 1,
+        "last_updated": 1784279896.1530414,
+        "queries_run": 2
+    },
+    "saas": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1784281448.7902467,
+        "score": 30,
+        "queries_run": 15
+    },
+    "source:linkedin": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 0.0,
+        "score": 4,
+        "queries_run": 2
+    },
+    "source:google": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 0.0,
+        "score": 1226,
+        "queries_run": 613
+    },
+    "source:duckduckgo": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 0.0,
+        "score": 182,
+        "queries_run": 45
+    },
+    "django development company": {
+        "score": 50.0,
+        "queries_run": 5,
+        "leads_found": 5
+    },
+    "flask backend services": {
+        "score": -10.0,
+        "queries_run": 5,
+        "leads_found": 0
+    },
+    "test query": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1784439886.804874,
+        "score": 85,
+        "queries_run": 17,
+        "leads_found": 17
+    },
+    "test query 2": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 17,
+        "last_updated": 1784439886.8079016,
+        "score": -17,
+        "queries_run": 17
+    },
+    "Django development company": {
+        "score": 50.0,
+        "queries_run": 5,
+        "leads_found": 5
+    },
+    "Flask backend services": {
+        "score": -10.0,
+        "queries_run": 5,
+        "leads_found": 0
+    },
+    "ai": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1784281567.551629,
+        "score": 15,
+        "queries_run": 4,
+        "leads_found": 1
+    },
+    "ai development company -site:wikipedia.org -site:play.google.com -site:apps.apple.com -site:chromewebstore.google.com -site:whatsapp.com": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1784281557.5156038,
+        "score": 9,
+        "queries_run": 2
+    },
+    "source:google_html": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 0.0,
+        "score": -45,
+        "queries_run": 30
+    },
+    "ai outsourcing company -site:wikipedia.org -site:play.google.com -site:apps.apple.com -site:chromewebstore.google.com -site:whatsapp.com": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1784281569.784734,
+        "score": 10,
+        "queries_run": 1
+    },
+    "ai development services -site:wikipedia.org -site:play.google.com -site:apps.apple.com -site:chromewebstore.google.com -site:whatsapp.com": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 3,
+        "last_updated": 1784281592.914021,
+        "score": -5,
+        "queries_run": 3
+    },
+    "source:bing": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 0.0,
+        "score": -17,
+        "queries_run": 11
+    },
+    "ai consulting company -site:wikipedia.org -site:play.google.com -site:apps.apple.com -site:chromewebstore.google.com -site:whatsapp.com": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1784281600.337469,
+        "score": -1,
+        "queries_run": 1
+    },
+    "site:linkedin.com/company ai -site:wikipedia.org -site:play.google.com -site:apps.apple.com -site:chromewebstore.google.com -site:whatsapp.com": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1784281606.4959438,
+        "score": -1,
+        "queries_run": 1
+    },
+    "site:linkedin.com/company ai development -site:wikipedia.org -site:play.google.com -site:apps.apple.com -site:chromewebstore.google.com -site:whatsapp.com": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1784281611.9321141,
+        "score": -1,
+        "queries_run": 1
+    },
+    "hardware software company": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 2,
+        "last_updated": 1784288074.1353865,
+        "score": 229,
+        "queries_run": 114
+    },
+    "hardware development company": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1784283198.5598476,
+        "score": 10,
+        "queries_run": 1
+    },
+    "custom software development": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1784449771.8520534,
+        "score": 20,
+        "queries_run": 2
+    },
+    "build rest api": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 3,
+        "last_updated": 1784449487.8697264,
+        "score": 6,
+        "queries_run": 4
+    },
+    "site:linkedin.com/in \"indias leading architectural hardware manufacturer\" founder or ceo or director": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 4,
+        "last_updated": 1784285199.1767826,
+        "score": -6,
+        "queries_run": 4
+    },
+    "site:linkedin.com/in \"acehardware\" founder or ceo or director": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 3,
+        "last_updated": 1784285204.4606943,
+        "score": -5,
+        "queries_run": 3
+    },
+    "site:linkedin.com/in \"indias leading architectural hardware manufacturer\" \"co-founder\"": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1784285210.6490269,
+        "score": -1,
+        "queries_run": 1
+    },
+    "site:linkedin.com/in \"acehardware\" \"co-founder\"": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1784285217.0766273,
+        "score": -1,
+        "queries_run": 1
+    },
+    "site:clutch.co hardware software company": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 2,
+        "last_updated": 1784287882.628659,
+        "score": 16,
+        "queries_run": 4
+    },
+    "hardware software company company": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1784285825.5742302,
+        "score": 10,
+        "queries_run": 1
+    },
+    "hardware software company software company": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1784286217.3101985,
+        "score": 20,
+        "queries_run": 2
+    },
+    "hardware software company development company": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1784285830.1272595,
+        "score": 10,
+        "queries_run": 1
+    },
+    "source:clutch": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 0.0,
+        "score": 120,
+        "queries_run": 60
+    },
+    "site:goodfirms.co hardware software company": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 2,
+        "last_updated": 1784286214.0386028,
+        "score": 6,
+        "queries_run": 3
+    },
+    "source:goodfirms": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 0.0,
+        "score": 938,
+        "queries_run": 469
+    },
+    "source:brightdata": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 0.0,
+        "score": 70,
+        "queries_run": 21
+    },
+    "enterprise software": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1784287002.3243713,
+        "score": 10,
+        "queries_run": 1
+    },
+    "django software company": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 3,
+        "last_updated": 1784288252.7720704,
+        "score": 5,
+        "queries_run": 4
+    },
+    "it consulting": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1784455897.3343506,
+        "score": 18,
+        "queries_run": 3
+    },
+    "site:linkedin.com/in \"django\" founder or ceo or director": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 5,
+        "last_updated": 1784288937.3633833,
+        "score": -8,
+        "queries_run": 5
+    },
+    "site:linkedin.com/in \"django\" \"co-founder\"": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 3,
+        "last_updated": 1784288948.8011692,
+        "score": -5,
+        "queries_run": 3
+    },
+    "\"django\" site:linkedin.com": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 2,
+        "last_updated": 1784288952.0481102,
+        "score": -3,
+        "queries_run": 2
+    },
+    "hardware development software company": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 3,
+        "last_updated": 1784289869.404938,
+        "score": 5,
+        "queries_run": 4
+    },
+    "cloud": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1784307444.1228132,
+        "score": 3,
+        "queries_run": 2
+    },
+    "cloud company": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1784307473.1550026,
+        "score": 8,
+        "queries_run": 2
+    },
+    "site:linkedin.com/in \"cloud\" founder or ceo or director": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 5,
+        "last_updated": 1784307567.2450001,
+        "score": -9,
+        "queries_run": 5
+    },
+    "site:linkedin.com/in \"cloud\" \"co-founder\"": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 5,
+        "last_updated": 1784307613.391815,
+        "score": -9,
+        "queries_run": 5
+    },
+    "\"cloud\" site:linkedin.com": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1784307642.3846812,
+        "score": 3,
+        "queries_run": 2
+    },
+    "\"cloud\" \"our team\" or \"meet the team\" or \"leadership\"": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 3,
+        "last_updated": 1784307745.9578347,
+        "score": -5,
+        "queries_run": 3
+    },
+    "\"cloud\" \"about us\" founder ceo": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1784307773.9956286,
+        "score": -1,
+        "queries_run": 1
+    },
+    "\"cloud\" contact email phone": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1784307797.0740075,
+        "score": 5,
+        "queries_run": 1
+    },
+    "site:linkedin.com/company engineering": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1784394427.2008088,
+        "score": 10,
+        "queries_run": 1
+    },
+    "site:clutch.co engineering": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1784394438.0308495,
+        "score": 10,
+        "queries_run": 1
+    },
+    "site:goodfirms.co engineering": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1784429703.579746,
+        "score": 8,
+        "queries_run": 2
+    },
+    "source:brave": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 0.0,
+        "score": 134,
+        "queries_run": 15
+    },
+    "custom software company": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1784442788.0058606,
+        "score": 8,
+        "queries_run": 1
+    },
+    "it consulting software company": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1784448645.507862,
+        "score": 9,
+        "queries_run": 1
+    },
+    "site:linkedin.com/company hardware engineering": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1784449461.632381,
+        "score": 8,
+        "queries_run": 2
+    },
+    "site:goodfirms.co hardware engineering": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 2,
+        "last_updated": 1784449748.0518014,
+        "score": 6,
+        "queries_run": 3
+    },
+    "crm development": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1784449760.7254436,
+        "score": 8,
+        "queries_run": 2
+    },
+    "hardware development development company": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1784449765.517062,
+        "score": 8,
+        "queries_run": 2
+    },
+    "site:goodfirms.co python": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 2,
+        "last_updated": 1784451468.0418718,
+        "score": 6,
+        "queries_run": 3
+    },
+    "software": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1784453741.3662393,
+        "score": 207,
+        "queries_run": 101
+    },
+    "it consulting development company": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 2,
+        "last_updated": 1784455155.0886097,
+        "score": 6,
+        "queries_run": 3
+    },
+    "engineering development company": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 2,
+        "last_updated": 1784455976.2822807,
+        "score": 6,
+        "queries_run": 3
+    }
+}

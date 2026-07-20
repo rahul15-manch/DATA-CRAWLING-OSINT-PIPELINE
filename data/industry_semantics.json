@@ -1,0 +1,377 @@
+{
+  "automation": {
+    "concepts": [
+      "automation",
+      "plc",
+      "scada",
+      "mes",
+      "dcs",
+      "iiot",
+      "mechatronics",
+      "robotics",
+      "rpa",
+      "control systems",
+      "factory automation",
+      "industrial automation"
+    ],
+    "positions": [
+      "automation engineer",
+      "plc programmer",
+      "robotics engineer",
+      "rpa developer",
+      "control engineer"
+    ],
+    "services": [
+      "factory automation setup",
+      "plc programming services",
+      "industrial control solutions",
+      "robotic process automation implementation"
+    ],
+    "products": [
+      "siemens",
+      "abb",
+      "rockwell",
+      "fanuc",
+      "kuka",
+      "uipath",
+      "blue prism"
+    ]
+  },
+  "ai": {
+    "concepts": [
+      "ai",
+      "ml",
+      "nlp",
+      "llm",
+      "deep learning",
+      "computer vision",
+      "generative ai",
+      "neural network",
+      "natural language processing",
+      "vector db",
+      "transformers",
+      "gpt",
+      "rag"
+    ],
+    "positions": [
+      "ai engineer",
+      "machine learning engineer",
+      "ml engineer",
+      "data scientist",
+      "nlp engineer",
+      "computer vision specialist"
+    ],
+    "services": [
+      "ai consulting",
+      "machine learning solutions",
+      "llm fine-tuning",
+      "generative ai development"
+    ],
+    "products": [
+      "langchain",
+      "crewai",
+      "dspy",
+      "ollama",
+      "openai",
+      "claude",
+      "gemini",
+      "chatgpt"
+    ]
+  },
+  "fintech": {
+    "concepts": [
+      "blockchain",
+      "billing",
+      "accounting",
+      "invoicing",
+      "finance",
+      "banking",
+      "cryptocurrency",
+      "ledger",
+      "fintech",
+      "payment gateway"
+    ],
+    "positions": [
+      "fintech developer",
+      "blockchain engineer",
+      "financial analyst"
+    ],
+    "services": [
+      "payment processing",
+      "accounting software development",
+      "blockchain consulting"
+    ],
+    "products": [
+      "stripe",
+      "paypal",
+      "ethereum",
+      "solidity"
+    ]
+  },
+  "healthcare": {
+    "concepts": [
+      "medical software",
+      "digital health",
+      "telemedicine",
+      "ehr",
+      "clinical trials",
+      "healthtech",
+      "clinic"
+    ],
+    "positions": [
+      "healthcare consultant",
+      "ehr administrator",
+      "clinical research coordinator"
+    ],
+    "services": [
+      "telemedicine app development",
+      "clinical data management",
+      "healthcare compliance auditing"
+    ],
+    "products": [
+      "epic systems",
+      "cerner",
+      "athenahealth"
+    ]
+  },
+  "ecommerce": {
+    "concepts": [
+      "ecommerce",
+      "digital commerce",
+      "retail tech",
+      "shopping cart",
+      "online store",
+      "marketplace",
+      "d2c",
+      "b2c"
+    ],
+    "positions": [
+      "ecommerce strategist",
+      "retail technologist",
+      "shopify developer"
+    ],
+    "services": [
+      "shopify custom development",
+      "payment gateway integration",
+      "digital commerce operations"
+    ],
+    "products": [
+      "shopify",
+      "magento",
+      "woocommerce"
+    ]
+  },
+  "logistics": {
+    "concepts": [
+      "supply chain",
+      "freight forwarding",
+      "shipping",
+      "tracking",
+      "warehouse management",
+      "fleet management",
+      "delivery solutions",
+      "logistics"
+    ],
+    "positions": [
+      "logistics coordinator",
+      "supply chain analyst"
+    ],
+    "services": [
+      "warehouse automation",
+      "fleet tracking setup",
+      "logistics consulting"
+    ],
+    "products": [
+      "sap scm",
+      "oracle otm"
+    ]
+  },
+  "cybersecurity": {
+    "concepts": [
+      "threat detection",
+      "network security",
+      "penetration testing",
+      "firewall",
+      "encryption",
+      "identity access",
+      "endpoint protection",
+      "zero trust",
+      "cybersecurity",
+      "infosec"
+    ],
+    "positions": [
+      "security analyst",
+      "penetration tester",
+      "security architect",
+      "ciso"
+    ],
+    "services": [
+      "vulnerability scanning",
+      "penetration testing services",
+      "cybersecurity audits"
+    ],
+    "products": [
+      "okta",
+      "crowdstrike",
+      "splunk"
+    ]
+  },
+  "software_development": {
+    "concepts": [
+      "python",
+      "django",
+      "fastapi",
+      "flask",
+      "node.js",
+      "react",
+      "vue",
+      "backend",
+      "frontend",
+      "full stack",
+      "rest api",
+      "graphql",
+      "microservices",
+      "web development",
+      "custom software",
+      "software house",
+      "it services",
+      "software outsourcing",
+      "it consulting",
+      "api development"
+    ],
+    "positions": [
+      "python developer",
+      "backend engineer",
+      "full stack developer",
+      "software engineer",
+      "web developer",
+      "api developer"
+    ],
+    "services": [
+      "custom software development",
+      "web application development",
+      "python development services",
+      "api development",
+      "backend development",
+      "software outsourcing",
+      "it consulting"
+    ],
+    "products": [
+      "python",
+      "django",
+      "fastapi",
+      "flask",
+      "postgresql",
+      "redis",
+      "docker",
+      "kubernetes",
+      "aws",
+      "azure",
+      "gcp"
+    ]
+  },
+  "hardware_industrial": {
+    "concepts": [
+      "hardware store",
+      "industrial hardware",
+      "tools",
+      "equipment",
+      "retailer",
+      "supplies",
+      "building materials",
+      "diy",
+      "screws",
+      "fasteners",
+      "power tools",
+      "valves",
+      "pumps",
+      "machinery"
+    ],
+    "positions": [
+      "store manager",
+      "hardware specialist",
+      "sales associate",
+      "inventory coordinator"
+    ],
+    "services": [
+      "hardware retail",
+      "tool rental",
+      "equipment supply",
+      "industrial supply"
+    ],
+    "products": [
+      "ace hardware",
+      "home depot",
+      "lowes",
+      "grainger",
+      "mcmaster-carr"
+    ]
+  },
+  "hardware_development": {
+    "concepts": [
+      "hardware",
+      "hardware development",
+      "embedded systems",
+      "iot",
+      "pcb design",
+      "firmware",
+      "microcontrollers",
+      "semiconductors",
+      "electronics",
+      "circuit design",
+      "hardware engineering"
+    ],
+    "positions": [
+      "hardware engineer",
+      "embedded developer",
+      "electronics engineer",
+      "firmware engineer"
+    ],
+    "services": [
+      "hardware design",
+      "embedded systems development",
+      "pcb design services",
+      "iot product design"
+    ],
+    "products": [
+      "microcontrollers",
+      "pcb",
+      "sensors",
+      "arduino",
+      "raspberry pi"
+    ]
+  },
+  "startup_services": {
+    "concepts": [
+      "incubator",
+      "accelerator",
+      "startup directory",
+      "founder community",
+      "funding platform",
+      "venture capital",
+      "investor network",
+      "pitch deck",
+      "equity management"
+    ],
+    "positions": [
+      "community manager",
+      "investment associate",
+      "program manager",
+      "accelerator director"
+    ],
+    "services": [
+      "startup acceleration",
+      "founder matching",
+      "fundraising assistance",
+      "investor relations"
+    ],
+    "products": [
+      "f6s",
+      "angel-list",
+      "crunchbase",
+      "dealroom",
+      "gust",
+      "carta"
+    ]
+  }
+}

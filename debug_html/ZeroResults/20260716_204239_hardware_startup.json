@@ -1,0 +1,24 @@
+{
+  "timestamp": "2026-07-16T20:42:39.246409",
+  "query": "hardware startup",
+  "classification": "ZERO_RESULTS_PAGE",
+  "url": "https://www.google.com/search?q=hardware+startup&num=10&hl=en&gl=us",
+  "status_code": 200,
+  "redirect_chain": [
+    "https://www.google.com/search?q=hardware+startup&num=10&hl=en&gl=us"
+  ],
+  "response_headers": {
+    "date": "Thu, 16 Jul 2026 15:12:35 GMT",
+    "server": "gws",
+    "last-modified": "Tue, 10 Aug 2021 15:10:37 GMT",
+    "content-type": "text/html; charset=UTF-8",
+    "cache-control": "public, max-age=2592000",
+    "content-length": "326896",
+    "x-xss-protection": "0",
+    "x-frame-options": "SAMEORIGIN"
+  },
+  "layout_fingerprint": "d0c968b4cf5465ee924f789fd49e4009",
+  "detected_signals": [
+    "did not match any documents"
+  ]
+}

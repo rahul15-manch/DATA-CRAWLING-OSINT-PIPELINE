@@ -1,0 +1,34 @@
+{
+  "timestamp": "2026-07-17T17:01:22.475935",
+  "query": "site:clutch.co hardware software company",
+  "classification": "CONSENT_PAGE",
+  "url": "https://api.brightdata.com/request",
+  "status_code": 200,
+  "redirect_chain": [
+    "https://api.brightdata.com/request"
+  ],
+  "response_headers": {
+    "server": "nginx",
+    "date": "Fri, 17 Jul 2026 11:31:20 GMT",
+    "content-type": "text/html; charset=UTF-8",
+    "x-brd-serp-warn": "these query parameters have unacceptable name and/or value and were removed: num",
+    "accept-ch": "Sec-CH-Prefers-Color-Scheme",
+    "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+    "cache-control": "private, max-age=0",
+    "content-security-policy": "object-src 'none';base-uri 'self';script-src 'nonce-9uzsZpI-TmgsuXFF1Sw5Mw' 'strict-dynamic' 'report-sample' 'unsafe-eval' 'unsafe-inline' https: http:;report-uri https://csp.withgoogle.com/csp/gws/sf",
+    "expires": "-1",
+    "p3p": "CP=\"This is not a P3P policy! See g.co/p3phelp for more info.\"",
+    "strict-transport-security": "max-age=31536000",
+    "x-content-type-options": "nosniff",
+    "x-frame-options": "SAMEORIGIN",
+    "x-xss-protection": "0",
+    "x-brd-status-code": "200",
+    "vary": "Accept-Encoding",
+    "content-encoding": "gzip",
+    "access-control-allow-origin": "*"
+  },
+  "layout_fingerprint": "f3b854a57a57f2121592cb7c78c4f5ae",
+  "detected_signals": [
+    "consent.google"
+  ]
+}

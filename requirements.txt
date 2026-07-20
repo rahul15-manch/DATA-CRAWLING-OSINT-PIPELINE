@@ -4,5 +4,6 @@ requests
 python-whois
 google-search-results
 googlesearch-python
+requests
 beautifulsoup4
-python-dotenv
+>>>>>>> a0c0f5d1c5f4a18e206562fa7678a01415602e32

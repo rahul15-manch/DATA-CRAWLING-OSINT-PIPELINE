@@ -1,0 +1,24 @@
+{
+  "timestamp": "2026-07-17T13:13:59.956477",
+  "query": "Python consulting company Noida -site:wikipedia.org -site:play.google.com -site:apps.apple.com -site:chromewebstore.google.com -site:whatsapp.com",
+  "classification": "ZERO_RESULTS_PAGE",
+  "url": "https://www.google.com/search?q=Python+consulting+company+Noida+-site%3Awikipedia.org+-site%3Aplay.google.com+-site%3Aapps.apple.com+-site%3Achromewebstore.google.com+-site%3Awhatsapp.com&num=10&hl=en&gl=us",
+  "status_code": 200,
+  "redirect_chain": [
+    "https://www.google.com/search?q=Python+consulting+company+Noida+-site%3Awikipedia.org+-site%3Aplay.google.com+-site%3Aapps.apple.com+-site%3Achromewebstore.google.com+-site%3Awhatsapp.com&num=10&hl=en&gl=us"
+  ],
+  "response_headers": {
+    "date": "Fri, 17 Jul 2026 07:43:52 GMT",
+    "server": "gws",
+    "last-modified": "Tue, 10 Aug 2021 19:13:45 GMT",
+    "content-type": "text/html; charset=UTF-8",
+    "cache-control": "public, max-age=2592000",
+    "content-length": "333862",
+    "x-xss-protection": "0",
+    "x-frame-options": "SAMEORIGIN"
+  },
+  "layout_fingerprint": "fe36ce1323f42c6aaaa2ae58e92e7e1d",
+  "detected_signals": [
+    "did not match any documents"
+  ]
+}

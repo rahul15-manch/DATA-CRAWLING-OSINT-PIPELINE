@@ -1,0 +1,24 @@
+{
+  "timestamp": "2026-07-16T22:36:29.608676",
+  "query": "site:linkedin.com/in \"Programiz\" founder OR CEO OR director",
+  "classification": "ZERO_RESULTS_PAGE",
+  "url": "https://www.google.com/search?q=site%3Alinkedin.com%2Fin+%22Programiz%22+founder+OR+CEO+OR+director&num=5&hl=en&gl=us",
+  "status_code": 200,
+  "redirect_chain": [
+    "https://www.google.com/search?q=site%3Alinkedin.com%2Fin+%22Programiz%22+founder+OR+CEO+OR+director&num=5&hl=en&gl=us"
+  ],
+  "response_headers": {
+    "date": "Thu, 16 Jul 2026 17:06:26 GMT",
+    "server": "gws",
+    "last-modified": "Tue, 10 Aug 2021 15:10:37 GMT",
+    "content-type": "text/html; charset=UTF-8",
+    "cache-control": "public, max-age=2592000",
+    "content-length": "329218",
+    "x-xss-protection": "0",
+    "x-frame-options": "SAMEORIGIN"
+  },
+  "layout_fingerprint": "ecd0917a4d6f9a7cb23a672e9a367f1d",
+  "detected_signals": [
+    "did not match any documents"
+  ]
+}

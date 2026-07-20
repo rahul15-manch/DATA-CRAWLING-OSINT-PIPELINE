@@ -1,14 +1,3 @@
-#!/usr/bin/env python3
-"""
-Pillar 2 — Rescue Script
-Takes flagged_leads.json (output of clean_leads.py), drops the records that
-are genuinely NOT companies (directory/article pages), and keeps everything
-else so it can be run back through enrich_leads.py / verify_leads.py.
-
-Input:  flagged_leads.json
-Output: rescue_candidates.json   -> real companies worth enriching further
-        dropped_not_companies.json -> directory/article pages (discarded)
-"""
 
 import json
 

@@ -1,0 +1,38 @@
+{
+  "timestamp": "2026-07-17T22:30:42.229801",
+  "query": "\"Cloud\" site:linkedin.com",
+  "classification": "ENABLE_JS_PAGE",
+  "url": "https://api.brightdata.com/request",
+  "status_code": 200,
+  "redirect_chain": [
+    "https://api.brightdata.com/request"
+  ],
+  "response_headers": {
+    "server": "nginx",
+    "date": "Fri, 17 Jul 2026 17:00:39 GMT",
+    "content-type": "text/html; charset=UTF-8",
+    "x-brd-serp-warn": "these query parameters have unacceptable name and/or value and were removed: num",
+    "accept-ch": "Sec-CH-Prefers-Color-Scheme, Downlink, RTT, Sec-CH-UA-Form-Factors, Sec-CH-UA-Platform, Sec-CH-UA-Platform-Version, Sec-CH-UA-Full-Version, Sec-CH-UA-Arch, Sec-CH-UA-Model, Sec-CH-UA-Bitness, Sec-CH-UA-Full-Version-List, Sec-CH-UA-WoW64",
+    "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+    "cache-control": "private, max-age=0",
+    "content-security-policy": "object-src 'none';base-uri 'self';script-src 'nonce-tsbtGMN3JIMWCkkjgbMDYw' 'strict-dynamic' 'report-sample' 'unsafe-eval' 'unsafe-inline' https: http:;report-uri https://csp.withgoogle.com/csp/gws/cdt1",
+    "cross-origin-opener-policy": "same-origin-allow-popups; report-to=\"gws\"",
+    "expires": "-1",
+    "permissions-policy": "unload=()",
+    "report-to": "{\"group\":\"gws\",\"max_age\":2592000,\"endpoints\":[{\"url\":\"https://csp.withgoogle.com/csp/report-to/gws/cdt1\"}]}",
+    "set-cookie": "__Secure-STRP=ANmZwa0m-EvA-VJKI_POb4_n0FhSSo8JAIihY9Lh1hpCnjNre6YNuWb5zJM06AdArSVx4_Q-AcXZEddVXbzaUhBKfoUjE2SaUv3C; expires=Fri, 17-Jul-2026 17:05:28 GMT; path=/; domain=.google.com; Secure; SameSite=strict",
+    "strict-transport-security": "max-age=31536000",
+    "x-content-type-options": "nosniff",
+    "x-frame-options": "SAMEORIGIN",
+    "x-xss-protection": "0",
+    "x-brd-status-code": "200",
+    "vary": "Accept-Encoding",
+    "content-encoding": "gzip",
+    "access-control-allow-origin": "*"
+  },
+  "layout_fingerprint": "f26f06ab444d77801ad7ffaef578e917",
+  "detected_signals": [
+    "/httpservice/retry/enablejs",
+    "enablejs"
+  ]
+}

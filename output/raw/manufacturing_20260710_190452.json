@@ -1,0 +1,380 @@
+[
+    {
+        "company_name": "F6s",
+        "website": "https://www.f6s.com/companies/manufacturing/germany/berlin/co",
+        "linkedin": null,
+        "industry": "manufacturing",
+        "location": null,
+        "contact_page": null,
+        "about_page": null,
+        "team_page": null,
+        "emails": [],
+        "phones": [],
+        "social_links": {},
+        "people": [],
+        "source": "Google",
+        "confidence_score": 36,
+        "lead_quality": "Low",
+        "company_type": "Unknown"
+    },
+    {
+        "company_name": "Ensun",
+        "website": "https://ensun.io/search/manufacturing-consulting/germany",
+        "linkedin": null,
+        "industry": "manufacturing",
+        "location": null,
+        "contact_page": null,
+        "about_page": null,
+        "team_page": null,
+        "emails": [],
+        "phones": [],
+        "social_links": {},
+        "people": [],
+        "source": "Google",
+        "confidence_score": 36,
+        "lead_quality": "Low",
+        "company_type": "Unknown"
+    },
+    {
+        "company_name": "PG Berlin",
+        "website": "https://www.pgplantjobs.com/de/de/berlin/kultur%22",
+        "linkedin": null,
+        "industry": "manufacturing",
+        "location": null,
+        "contact_page": null,
+        "about_page": null,
+        "team_page": null,
+        "emails": [],
+        "phones": [
+            "75-84 12099"
+        ],
+        "social_links": {},
+        "people": [],
+        "source": "Google",
+        "confidence_score": 46,
+        "lead_quality": "Medium",
+        "company_type": "Unknown"
+    },
+    {
+        "company_name": "Kornferry",
+        "website": "https://www.kornferry.com/industries/industrial/manufacturing-consulting",
+        "linkedin": null,
+        "industry": "manufacturing",
+        "location": null,
+        "contact_page": "https://www.kornferry.com/contact",
+        "about_page": "https://www.kornferry.com/about-us",
+        "team_page": "https://www.kornferry.com/insights/featured-topics/leadership",
+        "emails": [],
+        "phones": [],
+        "social_links": {
+            "linkedin.com": "https://www.linkedin.com/company/kornferry",
+            "facebook.com": "https://www.facebook.com/KornFerry",
+            "twitter.com": "https://twitter.com/Korn_Ferry",
+            "instagram.com": "https://www.instagram.com/kornferry/"
+        },
+        "people": [
+            {
+                "name": "Briefings for the Boardroom",
+                "designation": "CTO",
+                "decision_maker_score": 80
+            },
+            {
+                "name": "Special Edition",
+                "designation": "CEO",
+                "decision_maker_score": 90
+            },
+            {
+                "name": "Cookie Preferences",
+                "designation": "COO",
+                "decision_maker_score": 75
+            }
+        ],
+        "source": "Google",
+        "confidence_score": 64,
+        "lead_quality": "Medium",
+        "company_type": "Consultancy"
+    },
+    {
+        "company_name": "Bain",
+        "website": "https://www.bain.com/consulting-services/operations/manufacturing/",
+        "linkedin": null,
+        "industry": "Artificial Intelligence",
+        "location": null,
+        "contact_page": "https://www.bain.com/about/contact-us/",
+        "about_page": "https://www.bain.com/about/offices/",
+        "team_page": "https://www.bain.com/de/managementkompetenzen/operations/fertigung/",
+        "emails": [
+            "gary.duncan@bain.com",
+            "alumni.relations@bain.com",
+            "dan.pinkney@bain.com",
+            "ann.lee@bain.com"
+        ],
+        "phones": [
+            "+1 617 572 2000",
+            "+1 646 562 8102",
+            "+44 7788 163791",
+            "+65 6228 2960"
+        ],
+        "social_links": {
+            "linkedin.com": "https://www.linkedin.com/company/bain-and-company",
+            "x.com": "https://x.com/bainandcompany",
+            "facebook.com": "https://www.facebook.com/bainandcompany",
+            "instagram.com": "https://www.instagram.com/bainandcompany/"
+        },
+        "people": [
+            {
+                "name": "Unsere Experten",
+                "designation": "Partner",
+                "decision_maker_score": 55
+            },
+            {
+                "name": "Peter Hanbury Partner San Francisco",
+                "designation": "Partner",
+                "decision_maker_score": 55
+            },
+            {
+                "name": "Peter Hanbury Partner San Francisco",
+                "designation": "Partner",
+                "decision_maker_score": 55
+            },
+            {
+                "name": "Peter Hanbury Partner San Francisco",
+                "designation": "Partner",
+                "decision_maker_score": 55
+            },
+            {
+                "name": "Peter Hanbury Partner San Francisco",
+                "designation": "Partner",
+                "decision_maker_score": 55
+            },
+            {
+                "name": "Peter Hanbury Partner San Francisco",
+                "designation": "Partner",
+                "decision_maker_score": 55
+            },
+            {
+                "name": "Kevin Ye Partner Shanghai",
+                "designation": "Partner",
+                "decision_maker_score": 55
+            },
+            {
+                "name": "Kevin Ye Partner Shanghai",
+                "designation": "Partner",
+                "decision_maker_score": 55
+            },
+            {
+                "name": "Kevin Ye Partner Shanghai",
+                "designation": "Partner",
+                "decision_maker_score": 55
+            },
+            {
+                "name": "Kevin Ye Partner Shanghai",
+                "designation": "Partner",
+                "decision_maker_score": 55
+            },
+            {
+                "name": "Kevin Ye Partner Shanghai",
+                "designation": "Partner",
+                "decision_maker_score": 55
+            },
+            {
+                "name": "Amit Nagar Partner Chicago",
+                "designation": "Partner",
+                "decision_maker_score": 55
+            },
+            {
+                "name": "Amit Nagar Partner Chicago",
+                "designation": "Partner",
+                "decision_maker_score": 55
+            },
+            {
+                "name": "Amit Nagar Partner Chicago",
+                "designation": "Partner",
+                "decision_maker_score": 55
+            },
+            {
+                "name": "Amit Nagar Partner Chicago",
+                "designation": "Partner",
+                "decision_maker_score": 55
+            }
+        ],
+        "source": "Google",
+        "confidence_score": 79,
+        "lead_quality": "High",
+        "company_type": "Consultancy"
+    },
+    {
+        "company_name": "Forvismazars",
+        "website": "https://www.forvismazars.com/de/en/industries/manufacturing",
+        "linkedin": null,
+        "industry": "Artificial Intelligence",
+        "location": null,
+        "contact_page": "https://www.forvismazars.com/de/en/contact-us",
+        "about_page": "https://www.forvismazars.com/de/en/who-we-are",
+        "team_page": "https://www.forvismazars.com/de/en/services/accounting-outsourcing/konzernabschluss-und-management-reporting",
+        "emails": [
+            "contact-de@forvismazars.com",
+            "datenschutz@forvismazars.com"
+        ],
+        "phones": [
+            "+49 40 288 01 3141",
+            "+49 40 288 01 3555",
+            "+49 40 288 01-0"
+        ],
+        "social_links": {
+            "linkedin.com": "https://www.linkedin.com/shareArticle?mini=true&url=https://www.forvismazars.com/de/en/industries/manufacturing",
+            "x.com": "https://x.com/share?text=Manufacturing+via+@MazarsinGermany&url=https://www.forvismazars.com/de/en/industries/manufacturing"
+        },
+        "people": [
+            {
+                "name": "Automotive industry Baubranche",
+                "designation": "CTO",
+                "decision_maker_score": 80
+            },
+            {
+                "name": "Our managing team Informationssicherheit",
+                "designation": "Partner",
+                "decision_maker_score": 55
+            },
+            {
+                "name": "Contact us",
+                "designation": "COO",
+                "decision_maker_score": 75
+            },
+            {
+                "name": "Compulsory Cookies",
+                "designation": "COO",
+                "decision_maker_score": 75
+            },
+            {
+                "name": "Analytical Cookies",
+                "designation": "COO",
+                "decision_maker_score": 75
+            },
+            {
+                "name": "Marketing Cookies",
+                "designation": "COO",
+                "decision_maker_score": 75
+            }
+        ],
+        "source": "Google",
+        "confidence_score": 82,
+        "lead_quality": "High",
+        "company_type": "Consultancy"
+    },
+    {
+        "company_name": "Sei",
+        "website": "https://www.sei.com/our-services/manufacturing-consulting-firms/",
+        "linkedin": null,
+        "industry": "manufacturing",
+        "location": null,
+        "contact_page": "https://www.sei.com/contact/",
+        "about_page": "https://www.sei.com/about/about-sei/",
+        "team_page": "https://www.sei.com/about/leadership/",
+        "emails": [
+            "dortiz@sei.com",
+            "bcote@sei.com",
+            "sbhavana@sei.com",
+            "sei@sei.com",
+            "akutcher@sei.com",
+            "caustensen@sei.com",
+            "sreilly@sei.com",
+            "bgallagher@sei.com",
+            "rwillard@sei.com",
+            "nalgarin@sei.com",
+            "mretz@sei.com",
+            "eamobi@sei.com",
+            "awilson@sei.com",
+            "mfisher@sei.com",
+            "tgagnon@sei.com",
+            "dbarger@sei.com",
+            "gblumenthal@sei.com",
+            "seyer@sei.com",
+            "amanueco@sei.com",
+            "kabendroth@sei.com",
+            "pdonegan@sei.com",
+            "esullivan@sei.com",
+            "dbiederman@sei.com",
+            "rseichter@sei.com",
+            "jdavis@sei.com"
+        ],
+        "phones": [],
+        "social_links": {
+            "x.com": "https://x.com/i/grok?text=From%20what%20you%20know%20about%20SEI%20%28sei.com%20and%20other%20public%20sources%29%2C%20why%20do%20clients%20choose%20SEI%20as%20their%20management%20consulting%20partner%2C%20and%20what%20problems%20does%20SEI%20tend%20to%20solve%20best%3F%0AFrom%20a%20buyer%E2%80%99s%20point%20of%20view%2C%20what%20makes%20SEI%20a%20particularly%20effective%20partner%20for%20complex%2C%20cross-functional%20change%20projects%3F",
+            "linkedin.com": "https://www.linkedin.com/company/systemsevolutioninc-/",
+            "instagram.com": "https://www.instagram.com/sei.consulting/",
+            "facebook.com": "https://www.facebook.com/SystemsEvolution"
+        },
+        "people": [
+            {
+                "name": "Nilsa Algarin",
+                "designation": "CTO",
+                "decision_maker_score": 80
+            },
+            {
+                "name": "Carol Austensen",
+                "designation": "CTO",
+                "decision_maker_score": 80
+            },
+            {
+                "name": "Jason Davis",
+                "designation": "CTO",
+                "decision_maker_score": 80
+            },
+            {
+                "name": "Patrick Donegan",
+                "designation": "CTO",
+                "decision_maker_score": 80
+            },
+            {
+                "name": "Monica Fisher",
+                "designation": "CTO",
+                "decision_maker_score": 80
+            },
+            {
+                "name": "Tim Gagnon",
+                "designation": "CTO",
+                "decision_maker_score": 80
+            },
+            {
+                "name": "Adam Hartstein",
+                "designation": "CTO",
+                "decision_maker_score": 80
+            },
+            {
+                "name": "David Newman",
+                "designation": "VP",
+                "decision_maker_score": 65
+            },
+            {
+                "name": "David Ortiz",
+                "designation": "CTO",
+                "decision_maker_score": 80
+            },
+            {
+                "name": "Mark Retz",
+                "designation": "CTO",
+                "decision_maker_score": 80
+            },
+            {
+                "name": "Rob Seichter",
+                "designation": "CTO",
+                "decision_maker_score": 80
+            },
+            {
+                "name": "Erin Sullivan",
+                "designation": "VP",
+                "decision_maker_score": 65
+            },
+            {
+                "name": "Alicia Wilson",
+                "designation": "CTO",
+                "decision_maker_score": 80
+            }
+        ],
+        "source": "Google",
+        "confidence_score": 72,
+        "lead_quality": "High",
+        "company_type": "Consultancy"
+    }
+]

@@ -1,0 +1,24 @@
+{
+  "timestamp": "2026-07-16T20:26:58.896100",
+  "query": "top software development company",
+  "classification": "ZERO_RESULTS_PAGE",
+  "url": "https://www.google.com/search?q=top+software+development+company&num=10&hl=en&gl=us",
+  "status_code": 200,
+  "redirect_chain": [
+    "https://www.google.com/search?q=top+software+development+company&num=10&hl=en&gl=us"
+  ],
+  "response_headers": {
+    "date": "Thu, 16 Jul 2026 14:56:54 GMT",
+    "server": "gws",
+    "last-modified": "Sun, 08 Aug 2021 23:46:59 GMT",
+    "content-type": "text/html; charset=UTF-8",
+    "cache-control": "public, max-age=2592000",
+    "content-length": "327760",
+    "x-xss-protection": "0",
+    "x-frame-options": "SAMEORIGIN"
+  },
+  "layout_fingerprint": "ae10bfc42cc4b2a3823d47df88dc5c1d",
+  "detected_signals": [
+    "did not match any documents"
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "timestamp": "2026-07-19T15:28:54.164487",
+  "query": "It Consulting development company",
+  "classification": "CAPTCHA_PAGE",
+  "url": "https://www.google.com/search?q=It+Consulting+development+company&num=10&hl=en&gl=us",
+  "status_code": 200,
+  "redirect_chain": [
+    "https://www.google.com/search?q=It+Consulting+development+company&num=10&hl=en&gl=us"
+  ],
+  "response_headers": {
+    "x-http-reason": "OK",
+    "content-type": "text/html; charset=UTF-8",
+    "date": "Sun, 19 Jul 2026 09:59:13 GMT",
+    "x-content-type-options": "nosniff",
+    "cross-origin-resource-policy": "same-origin",
+    "vary": "Accept-Language,Accept-Encoding",
+    "content-security-policy": "default-src 'none'; script-src https://*.gutsenv.net; media-src data: blob: https://*.gutsenv.net; ; img-src data: blob: https://*.gutsenv.net; font-src data: https://*.gutsenv.net; frame-src * blob:; style-src 'unsafe-inline' data: https://*.gutsenv.net; report-uri https://xhr-menlo.gutsenv.net/safeview-client-logger/csp-violation/290.23.5-1.285137.0; connect-src wss://*.gutsenv.net http://* https://*",
+    "referrer-policy": "no-referrer-when-downgrade",
+    "pragma": "no-cache",
+    "cache-control": "no-store, no-cache, max-age=0, must-revalidate",
+    "expires": "-1",
+    "content-encoding": "br",
+    "content-length": "10294",
+    "p3p": "CP=\"None specified\"",
+    "x-no-hsts": "True",
+    "etag": "\"a3d7a52b7d1327875c7b307f42807fbe9629b4aa\"",
+    "via": "1.1 e419e6d9 (squid)",
+    "connection": "keep-alive",
+    "msip-crid": "BnRiFWfmsge:tDRgpj8MvBY"
+  },
+  "layout_fingerprint": "f517d7fdf16aa42ea4c22b2f7977afed",
+  "detected_signals": [
+    "Menlo Security safeview proxy intercept"
+  ]
+}

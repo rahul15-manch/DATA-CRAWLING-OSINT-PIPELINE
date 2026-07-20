@@ -1,0 +1,24 @@
+{
+  "timestamp": "2026-07-16T20:26:14.811155",
+  "query": "software companies Noida",
+  "classification": "ZERO_RESULTS_PAGE",
+  "url": "https://www.google.com/search?q=software+companies+Noida&num=10&hl=en&gl=us",
+  "status_code": 200,
+  "redirect_chain": [
+    "https://www.google.com/search?q=software+companies+Noida&num=10&hl=en&gl=us"
+  ],
+  "response_headers": {
+    "date": "Thu, 16 Jul 2026 14:56:11 GMT",
+    "server": "gws",
+    "last-modified": "Sun, 08 Aug 2021 23:46:59 GMT",
+    "content-type": "text/html; charset=UTF-8",
+    "cache-control": "public, max-age=2592000",
+    "content-length": "327328",
+    "x-xss-protection": "0",
+    "x-frame-options": "SAMEORIGIN"
+  },
+  "layout_fingerprint": "b98c4c44b605f22fad968753e0e8e6d8",
+  "detected_signals": [
+    "did not match any documents"
+  ]
+}

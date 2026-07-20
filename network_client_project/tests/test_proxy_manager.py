@@ -1,6 +1,6 @@
 import pytest
 import time
-from network.proxy_manager import ProxyManager, Proxy
+from network_client_project.network.proxy_manager import ProxyManager, Proxy, get_proxy_manager
 
 @pytest.fixture
 def proxy_manager():
@@ -28,7 +28,7 @@ def test_proxy_cooldown(proxy_manager):
     proxy.record_failure(cooldown_seconds=1.0)
     
     # Verify it is in cooldown
-    assert proxy.is_cooling_down is True
+    assert proxy.is_cooling_down() is True
     
     # We started with 3, one is cooling down, so 2 should be healthy
     stats = proxy_manager.get_stats()
@@ -63,3 +63,19 @@ def test_proxy_permanent_removal(proxy_manager):
     # Total pool size should now be 2
     stats = proxy_manager.get_stats()
     assert stats["total"] == 2
+
+
+def test_proxy_manager_normalizes_provider_keys():
+    """The shared provider-key normalization logic should handle provider names consistently."""
+    manager = ProxyManager()
+
+    assert Proxy._normalize_provider_key(manager, provider="google_html") == "google"
+    assert Proxy._normalize_provider_key(manager, provider="duckduckgo") == "duckduckgo"
+    assert Proxy._normalize_provider_key(manager, provider="bing") == "bing"
+    assert Proxy._normalize_provider_key(manager, provider="directory_provider") == "directory"
+
+
+def test_get_proxy_manager_returns_singleton():
+    first = get_proxy_manager()
+    second = get_proxy_manager()
+    assert first is second

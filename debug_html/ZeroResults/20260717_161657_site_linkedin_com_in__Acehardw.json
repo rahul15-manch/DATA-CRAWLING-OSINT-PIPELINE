@@ -1,0 +1,24 @@
+{
+  "timestamp": "2026-07-17T16:16:57.072842",
+  "query": "site:linkedin.com/in \"Acehardware\" \"co-founder\"",
+  "classification": "ZERO_RESULTS_PAGE",
+  "url": "https://www.google.com/search?q=site%3Alinkedin.com%2Fin+%22Acehardware%22+%22co-founder%22&num=5&hl=en&gl=us",
+  "status_code": 200,
+  "redirect_chain": [
+    "https://www.google.com/search?q=site%3Alinkedin.com%2Fin+%22Acehardware%22+%22co-founder%22&num=5&hl=en&gl=us"
+  ],
+  "response_headers": {
+    "date": "Fri, 17 Jul 2026 10:46:54 GMT",
+    "server": "gws",
+    "last-modified": "Tue, 10 Aug 2021 19:13:45 GMT",
+    "content-type": "text/html; charset=UTF-8",
+    "cache-control": "public, max-age=2592000",
+    "content-length": "328570",
+    "x-xss-protection": "0",
+    "x-frame-options": "SAMEORIGIN"
+  },
+  "layout_fingerprint": "c62be3b08f425579829c2c7621974a31",
+  "detected_signals": [
+    "did not match any documents"
+  ]
+}

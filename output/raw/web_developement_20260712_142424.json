@@ -1,0 +1,63 @@
+[
+    {
+        "company_name": "WhatsApp Web",
+        "website": "https://web.whatsapp.com/",
+        "linkedin": null,
+        "industry": "web developement",
+        "location": null,
+        "contact_page": null,
+        "about_page": null,
+        "team_page": null,
+        "emails": [],
+        "phones": [],
+        "social_links": {
+            "x.com": "http://www.firefox.com/"
+        },
+        "people": [],
+        "source": "Google",
+        "confidence_score": 36,
+        "lead_quality": "Low",
+        "company_type": "Software Company"
+    },
+    {
+        "company_name": "Snapchat for Web",
+        "website": "https://www.snapchat.com/web",
+        "linkedin": null,
+        "industry": "web developement",
+        "location": null,
+        "contact_page": null,
+        "about_page": null,
+        "team_page": null,
+        "emails": [],
+        "phones": [],
+        "social_links": {},
+        "people": [],
+        "source": "Google",
+        "confidence_score": 36,
+        "lead_quality": "Low",
+        "company_type": "Unknown"
+    },
+    {
+        "company_name": "Google",
+        "website": "https://chromewebstore.google.com/",
+        "linkedin": null,
+        "industry": "web developement",
+        "location": null,
+        "contact_page": null,
+        "about_page": null,
+        "team_page": null,
+        "emails": [
+            "support@wordtune.com",
+            "google-translate-chrome-extension-owners@google.com",
+            "cat-gatekeeper@nagomi.designer",
+            "modest@guitar.com"
+        ],
+        "phones": [],
+        "social_links": {},
+        "people": [],
+        "source": "Google",
+        "confidence_score": 46,
+        "lead_quality": "Medium",
+        "company_type": "Marketplace"
+    }
+]

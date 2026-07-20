@@ -1,0 +1,24 @@
+{
+  "timestamp": "2026-07-17T16:33:16.465552",
+  "query": "site:goodfirms.co hardware software company",
+  "classification": "ZERO_RESULTS_PAGE",
+  "url": "https://www.google.com/search?q=site%3Agoodfirms.co+hardware+software+company&num=10&hl=en&gl=us",
+  "status_code": 200,
+  "redirect_chain": [
+    "https://www.google.com/search?q=site%3Agoodfirms.co+hardware+software+company&num=10&hl=en&gl=us"
+  ],
+  "response_headers": {
+    "date": "Fri, 17 Jul 2026 11:03:13 GMT",
+    "server": "gws",
+    "last-modified": "Tue, 10 Aug 2021 19:13:45 GMT",
+    "content-type": "text/html; charset=UTF-8",
+    "cache-control": "public, max-age=2592000",
+    "content-length": "328354",
+    "x-xss-protection": "0",
+    "x-frame-options": "SAMEORIGIN"
+  },
+  "layout_fingerprint": "10208c49c7330eb1c99653776a5c631d",
+  "detected_signals": [
+    "did not match any documents"
+  ]
+}

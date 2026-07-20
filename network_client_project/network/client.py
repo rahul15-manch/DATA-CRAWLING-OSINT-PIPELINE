@@ -1,19 +1,24 @@
 import time
 import logging
+import atexit
+import threading
 from typing import Optional, Dict, Any, Union
-import requests
-from requests.exceptions import RequestException
+from curl_cffi import requests
+from curl_cffi.requests.exceptions import RequestException
 
 # Import our custom modules
 from .config import config
 from .logger import NetworkLogger
-from .exceptions import ErrorDetector
-from .proxy_manager import ProxyManager
+from .proxy_manager import get_proxy_manager
 from .user_agents import UserAgentManager
 from .headers import HeaderManager
 from .session_manager import SessionManager
-from .retry import retry_with_jitter
-from .rate_limiter import DomainRateManager, HumanDelayGenerator
+from .rate_limiter import DomainRateManager
+
+# Import Middleware infrastructure
+from .middleware import Request, Response, MiddlewareManager
+from .middleware.registry import MiddlewareRegistry
+from . import signals
 
 # Ensure logging is setup
 NetworkLogger.setup(log_dir=config.LOG_DIR, level=getattr(logging, config.LOG_LEVEL.upper(), logging.INFO))
@@ -21,147 +26,225 @@ logger = logging.getLogger(__name__)
 
 class NetworkClient:
     """
-    The Master Network Client.
-    Wraps all infrastructure into a clean, automated API for the scraping teams.
+    Synchronous Network Client that processes requests via a decoupled,
+    dynamically discovered middleware pipeline.
     """
+    _proxy_state_loaded = False
+
     def __init__(self):
         # Initialize Managers
-        self.proxy_manager = ProxyManager()
-        if config.PROXIES:
-            self.proxy_manager.load_from_list(config.PROXIES)
-        elif config.PROXY_FILE:
-            self.proxy_manager.load_from_file(config.PROXY_FILE)
+        self.proxy_manager = get_proxy_manager()
+        if not type(self)._proxy_state_loaded:
+            all_proxies = config.get_all_proxies
+            if all_proxies:
+                self.proxy_manager.load_from_list(all_proxies)
+            elif config.PROXY_FILE:
+                self.proxy_manager.load_from_file(config.PROXY_FILE)
+            type(self)._proxy_state_loaded = True
             
         self.ua_manager = UserAgentManager(fallback=config.FALLBACK_USER_AGENT)
         self.header_manager = HeaderManager()
         self.session_manager = SessionManager()
         self.rate_manager = DomainRateManager()
         
-        logger.info("NetworkClient initialized successfully.")
-
-    def _prepare_request(
-        self, 
-        method: str, 
-        url: str, 
-        session_id: str, 
-        is_xhr: bool = False,
-        **kwargs
-    ) -> Dict[str, Any]:
-        """
-        Internal method to assemble all the camouflage before sending.
-        """
-        # 1. Get Session
-        session = self.session_manager.get_or_create_session(session_id)
-        
-        # 2. Assign Proxy (Sticky if session_id is provided)
-        proxy = self.proxy_manager.get_proxy(session_id)
-        proxy_dict = proxy.formatted if proxy else None
-
-        # 3. Generate User-Agent and Headers
-        # If we have an existing UA for this session in the headers, keep it!
-        # Otherwise, generate a new one. (We want to stick to Chrome for modern WAFs)
-        ua = session.headers.get("User-Agent")
-        if not ua:
-            ua = self.ua_manager.get_chrome_desktop()
-            
-        headers = self.header_manager.generate_browser_headers(
-            target_url=url, 
-            user_agent=ua, 
-            is_xhr=is_xhr
+        # Dynamically discover and instantiate ordered Downloader Middleware chain
+        self.middleware_manager = MiddlewareManager(
+            MiddlewareRegistry.get_ordered_middlewares()
         )
+        
+        # Register state saving on exit
+        if not hasattr(self.proxy_manager, '_atexit_registered'):
+            atexit.register(self.proxy_manager.save_state, "proxy_state.json")
+            self.proxy_manager._atexit_registered = True
+        
+        logger.info("NetworkClient initialized with decoupled Downloader Middleware stack.")
 
-        # Merge user-provided kwargs headers without overwriting our critical ones
-        if 'headers' in kwargs:
-            headers.update(kwargs.pop('headers'))
+    def send_request(self, request: Request) -> Response:
+        """
+        Executes a Request by routing it through the Downloader Middleware chain and HTTP client.
+        Supports middleware-initiated retries transparently.
+        """
+        while True:
+            # 1. Run process_request hooks (first to last)
+            res = self.middleware_manager.process_request(request, self)
+            if isinstance(res, Response):
+                # Intercepted and mock response returned
+                return res
+            elif isinstance(res, Request):
+                # Middleware requested redirect / change: restart cycle with new request
+                request = res
+                continue
 
-        return {
-            "session": session,
-            "proxies": proxy_dict,
-            "headers": headers,
-            "timeout": config.timeout_tuple,
-            "verify": False,  # Disable SSL verification for shady targets by default
+            from urllib.parse import urlparse
+            domain = urlparse(request.url).netloc
+            session_id = request.meta.get("session_id")
+            provider = request.meta.get("provider")
+            if provider and not request.timeout:
+                try:
+                    from search.manager import get_search_manager
+                    sm = get_search_manager()
+                    request.timeout = sm.get_adaptive_timeout(provider)
+                except Exception:
+                    pass
+            domain = request.meta.get("domain") or urlparse(request.url).netloc
+            proxies_dict = request.meta.get("proxies")
+            proxy_url = proxies_dict.get("http") if proxies_dict else "direct"
+            
+            # Domain + Proxy + Session isolated session key
+            session_key = f"{session_id or 'default'}_{provider or 'default'}_{domain}_{proxy_url}"
+            session = self.session_manager.get_or_create_session(
+                session_key,
+                provider=provider,
+                domain=domain,
+            )
+            
+            # Emit request started signal
+            signals.send(signals.REQUEST_RECEIVED, request=request)
+            
+            start_time = time.time()
+            try:
+                # 2. HTTP EXECUTION OVER THE WIRE
+                curl_response = session.request(
+                    method=request.method,
+                    url=request.url,
+                    headers=request.headers,
+                    proxies=proxies_dict,
+                    params=request.params,
+                    data=request.data,
+                    json=request.json,
+                    timeout=request.timeout or max(config.CONNECT_TIMEOUT, config.READ_TIMEOUT),
+                    verify=request.verify if request.verify is not None else config.VERIFY_SSL
+                )
+                latency = (time.time() - start_time) * 1000
+                
+                # Wrap in custom Response
+                response = Response(
+                    request=request,
+                    status_code=curl_response.status_code,
+                    html=curl_response.text,
+                    latency_ms=latency,
+                    headers=dict(curl_response.headers),
+                    proxy=request.proxy,
+                    content=curl_response.content
+                )
+                
+                # Inject a standard raise_for_status helper to match curl_cffi responses
+                def raise_for_status():
+                    if response.status_code >= 400:
+                        from curl_cffi.requests.exceptions import HTTPError
+                        raise HTTPError(f"HTTP Error {response.status_code} for url {response.url}", response=curl_response)
+                response.raise_for_status = raise_for_status
+                
+                # 3. Run process_response hooks (last to first)
+                res = self.middleware_manager.process_response(request, response, self)
+                if isinstance(res, Request):
+                    # Middleware requested retry
+                    request = res
+                    continue
+                
+                # Emit request completed signal
+                signals.send(signals.REQUEST_COMPLETED, request=request, response=res)
+                return res
+
+            except Exception as e:
+                # 4. Run process_exception hooks (last to first)
+                res = self.middleware_manager.process_exception(request, e, self)
+                if isinstance(res, Request):
+                    # Middleware requested retry on exception
+                    request = res
+                    continue
+                elif isinstance(res, Response):
+                    # Exception handled and response returned
+                    return res
+                
+                # Emit request failed signal
+                signals.send(signals.REQUEST_FAILED, request=request, exception=e)
+                raise e
+
+    # --- PUBLIC API COMPATIBILITY LAYER ---
+
+    def get(self, url: str, session_id: Optional[str] = None, require_proxy: bool = False, **kwargs) -> Response:
+        """Compatibility wrapper for HTTP GET requests."""
+        # Split meta keys from regular curl_cffi kwargs
+        meta = {
+            "session_id": session_id,
+            "require_proxy": require_proxy,
+            "bypass_proxy": kwargs.pop("bypass_proxy", False),
+            "is_xhr": kwargs.pop("is_xhr", False),
+            "auto_score": kwargs.pop("auto_score", True),
             **kwargs
         }
-
-    @retry_with_jitter(max_attempts=config.MAX_RETRIES)
-    def _execute(
-        self, 
-        method: str, 
-        url: str, 
-        session_id: str, 
-        is_xhr: bool = False,
-        **kwargs
-    ) -> requests.Response:
-        """
-        The core execution engine wrapped in our tenacity Retry Engine.
-        """
-        from urllib.parse import urlparse
-        domain = urlparse(url).netloc
         
-        # 1. Rate Limiting Check
-        # (Assuming we set a default limit for all domains if not specified)
-        if domain not in self.rate_manager._domain_limiters:
-            self.rate_manager.set_domain_limit(domain, config.GLOBAL_RATE_LIMIT)
-        self.rate_manager.wait_for_domain(domain)
-
-        # 2. Human Delay (Entropy)
-        HumanDelayGenerator.standard_delay(config.MIN_DELAY, config.MAX_DELAY)
-
-        # 3. Prepare Camouflage
-        req_params = self._prepare_request(method, url, session_id, is_xhr, **kwargs)
-        session: requests.Session = req_params.pop("session")
+        # Build Request object
+        headers = meta.pop("headers", None)
+        cookies = meta.pop("cookies", None)
+        params = meta.pop("params", None)
+        timeout = meta.pop("timeout", None)
+        verify = meta.pop("verify", None)
         
-        proxy_url = req_params.get("proxies", {}).get("http")
-        start_time = time.time()
+        req = Request(
+            url=url,
+            method="GET",
+            headers=headers,
+            cookies=cookies,
+            params=params,
+            timeout=timeout,
+            verify=verify,
+            meta=meta
+        )
+        return self.send_request(req)
+
+    def post(self, url: str, session_id: Optional[str] = None, require_proxy: bool = False, **kwargs) -> Response:
+        """Compatibility wrapper for HTTP POST requests."""
+        meta = {
+            "session_id": session_id,
+            "require_proxy": require_proxy,
+            "bypass_proxy": kwargs.pop("bypass_proxy", False),
+            "is_xhr": kwargs.pop("is_xhr", False),
+            "auto_score": kwargs.pop("auto_score", True),
+            **kwargs
+        }
         
-        try:
-            # 4. SEND THE REQUEST OVER THE WIRE
-            response = session.request(method, url, **req_params)
-            latency = (time.time() - start_time) * 1000
-            
-            # 5. Log the result
-            NetworkLogger.log_request(logger, method, url, response.status_code, latency, proxy_url)
-            
-            # 6. WAF / Error Detection
-            waf_error = ErrorDetector.detect_waf_or_captcha(response)
-            if waf_error:
-                # If we hit a WAF, log it, fail the proxy, and raise the error so Retry Engine kicks in
-                logger.warning(f"WAF Intercept on {domain}: {type(waf_error).__name__}")
-                # We need to tell the ProxyManager this proxy got blocked
-                current_proxy = self.proxy_manager.get_proxy(session_id)
-                if current_proxy:
-                    current_proxy.record_failure(cooldown_seconds=300) # 5 min cooldown for WAF block
-                raise waf_error
-                
-            # If we get here, it's a true success!
-            current_proxy = self.proxy_manager.get_proxy(session_id)
-            if current_proxy:
-                current_proxy.record_success()
-                
-            # Will automatically trigger retry if status code is 500, 502, etc. (handled by tenacity config)
-            response.raise_for_status() 
-            return response
-            
-        except RequestException as e:
-            latency = (time.time() - start_time) * 1000
-            logger.error(f"Network Failure on {url}: {e}")
-            current_proxy = self.proxy_manager.get_proxy(session_id)
-            if current_proxy:
-                current_proxy.record_failure()
-            raise e
-
-    # --- PUBLIC API FOR CRAWLER TEAMS ---
-
-    def get(self, url: str, session_id: str = "global", **kwargs) -> requests.Response:
-        return self._execute("GET", url, session_id, **kwargs)
-
-    def post(self, url: str, session_id: str = "global", **kwargs) -> requests.Response:
-        return self._execute("POST", url, session_id, **kwargs)
+        headers = meta.pop("headers", None)
+        cookies = meta.pop("cookies", None)
+        params = meta.pop("params", None)
+        data = meta.pop("data", None)
+        json = meta.pop("json", None)
+        timeout = meta.pop("timeout", None)
+        verify = meta.pop("verify", None)
         
-    def download(self, url: str, filepath: str, session_id: str = "global"):
-        """Downloads a large file using streaming."""
-        response = self._execute("GET", url, session_id, stream=True)
+        req = Request(
+            url=url,
+            method="POST",
+            headers=headers,
+            cookies=cookies,
+            params=params,
+            data=data,
+            json=json,
+            timeout=timeout,
+            verify=verify,
+            meta=meta
+        )
+        return self.send_request(req)
+        
+    def download(self, url: str, filepath: str, session_id: Optional[str] = None):
+        """Downloads a file."""
+        response = self.get(url, session_id=session_id)
         with open(filepath, 'wb') as f:
-            for chunk in response.iter_content(chunk_size=8192):
-                f.write(chunk)
+            f.write(response.content)
         logger.info(f"Downloaded {url} to {filepath}")
+
+
+_NETWORK_CLIENT_SINGLETON: NetworkClient | None = None
+_NETWORK_CLIENT_LOCK = threading.Lock()
+
+
+def get_network_client() -> NetworkClient:
+    """Return a shared NetworkClient so sessions and cookies persist."""
+
+    global _NETWORK_CLIENT_SINGLETON
+    if _NETWORK_CLIENT_SINGLETON is None:
+        with _NETWORK_CLIENT_LOCK:
+            if _NETWORK_CLIENT_SINGLETON is None:
+                _NETWORK_CLIENT_SINGLETON = NetworkClient()
+    return _NETWORK_CLIENT_SINGLETON

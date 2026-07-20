@@ -16,11 +16,8 @@ try:
 except ImportError:
     whois = None
 
-# Configurations
 INPUT_FILE = "rescue_candidates.json"
-OUTPUT_FILE = "enriched_leads.json"
-REQUEST_TIMEOUT = 15
-MAX_CONCURRENT_REQUESTS = 8  # Connection pooling to prevent crashing
+REQUEST_TIMEOUT = 6
 CANDIDATE_TLDS = [".com", ".in", ".co.in", ".io", ".org"]
 
 # Set your Paid Hunter API key here if available
@@ -162,28 +159,29 @@ async def enrich_record(session: aiohttp.ClientSession, semaphore: asyncio.Semap
         rec["_enrichment"] = enrichment
         return rec
 
-async def process_bulk_leads():
-    try:
-        with open(INPUT_FILE, "r", encoding="utf-8") as fh:
-            records = json.load(fh)
-    except FileNotFoundError:
-        logging.error(f"Input file {INPUT_FILE} not found. Creating a mockup candidate list.")
-        records = [{"company_name": "Google"}, {"company_name": "Microsoft", "website": "https://microsoft.com"}]
 
-    logging.info(f"Loaded {len(records)} records. Initializing high-speed async pipeline...")
+def main():
+    with open(INPUT_FILE, "r", encoding="utf-8") as fh:
+        records = json.load(fh)
 
-    semaphore = asyncio.Semaphore(MAX_CONCURRENT_REQUESTS)
-    
-    async with aiohttp.ClientSession() as session:
-        tasks = [enrich_record(session, semaphore, rec) for rec in records]
-        enriched_records = await asyncio.gather(*tasks)
+    print(f"Enriching {len(records)} records from {INPUT_FILE} (live web/WHOIS calls, may take a while)...")
 
-    with open(OUTPUT_FILE, "w", encoding="utf-8") as fh:
-        json.dump(enriched_records, fh, indent=2, ensure_ascii=False)
+    enriched = []
+    for i, rec in enumerate(records, 1):
+        enriched.append(enrich_record(rec))
+        if i % 10 == 0 or i == len(records):
+            print(f"  processed {i}/{len(records)}")
 
-    found_new_domain = sum(1 for r in enriched_records if r["_enrichment"].get("domain_source") == "guessed_and_verified")
-    logging.info(f"Bulk Process Finished. Output saved to {OUTPUT_FILE}.")
-    logging.info(f"Discovered {found_new_domain} new domains natively.")
+    with open("enriched_leads.json", "w", encoding="utf-8") as fh:
+        json.dump(enriched, fh, indent=2, ensure_ascii=False)
+
+    found_new_domain = sum(1 for r in enriched if r["_enrichment"].get("domain_source") == "guessed_and_verified")
+    print("\n" + "=" * 40)
+    print(f"Records processed: {len(enriched)}")
+    print(f"New domains discovered via guessing: {found_new_domain}")
+    print("Output written to enriched_leads.json")
+    print("=" * 40)
+
 
 if __name__ == "__main__":
     asyncio.run(process_bulk_leads())

@@ -1,0 +1,1996 @@
+[
+  {
+    "company_name": "Trisnafilms",
+    "website": "https://trisnafilms.com/",
+    "linkedin": null,
+    "industry": "EdTech",
+    "location": null,
+    "contact_page": "https://trisnafilms.com/contact-us.html",
+    "about_page": "https://trisnafilms.com/about.html",
+    "team_page": "https://trisnafilms.com/team-trisna-teamtrisna-associate-client-crew-freelancer-team-members.html",
+    "emails": [
+      "info@trisnafilms.com",
+      "avinashkumar@trisnafilms.com",
+      "bandanakumari@trisnafilms.com"
+    ],
+    "phones": [
+      "+91 7545979979",
+      "+91 8860394567",
+      "+91 9868248005",
+      "+91 9968452255"
+    ],
+    "social_links": {
+      "facebook.com": "https://www.facebook.com/trisnafilms/",
+      "linkedin.com": "https://www.linkedin.com/company/trisnafilms/",
+      "x.com": "https://x.com/TrisnaFilms/"
+    },
+    "people": [
+      {
+        "name": "Avinash Kumar",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "OUR VALUED CLIENTS",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      }
+    ],
+    "source": "Google",
+    "confidence_score": 82,
+    "lead_quality": "High",
+    "company_type": "Manufacturer",
+    "_source_file": "output\\raw\\production_20260712_081431.json",
+    "_flags": [],
+    "_verified_emails": [
+      "info@trisnafilms.com",
+      "avinashkumar@trisnafilms.com",
+      "bandanakumari@trisnafilms.com"
+    ],
+    "_verified_phones": [
+      "+91 7545979979",
+      "+91 8860394567",
+      "+91 9868248005",
+      "+91 9968452255"
+    ],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "emails": {
+        "info@trisnafilms.com": "ok",
+        "avinashkumar@trisnafilms.com": "ok",
+        "bandanakumari@trisnafilms.com": "ok"
+      },
+      "phones": {
+        "+91 7545979979": "ok",
+        "+91 8860394567": "ok",
+        "+91 9868248005": "ok",
+        "+91 9968452255": "ok"
+      },
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "domain_source": "existing_website",
+      "whois": {
+        "registrar": "Hosting Concepts B.V. d/b/a Registrar.eu",
+        "creation_date": "2009-02-10 17:21:25+00:00",
+        "org": "Whois Privacy Protection Foundation",
+        "country": "NL"
+      }
+    }
+  },
+  {
+    "company_name": "Decodetoday",
+    "website": "https://decodetoday.com/biggest-film-production-companies-in-india/",
+    "linkedin": null,
+    "industry": "Artificial Intelligence",
+    "location": null,
+    "contact_page": "https://decodetoday.com/contact-us/",
+    "about_page": "https://decodetoday.com/about-us/",
+    "team_page": "https://decodetoday.com/waaree-energies-stock-jumps-11-after-board-approves-project-relocation/",
+    "emails": [
+      "john@doe.com"
+    ],
+    "phones": [],
+    "social_links": {
+      "linkedin.com": "https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fdecodetoday.com%2Fbiggest-film-production-companies-in-india%2F",
+      "twitter.com": "https://twitter.com/intent/tweet?text=Top%2010%20Biggest%20Film%20Production%20Companies%20in%20India%20%282025%29&url=https%3A%2F%2Fdecodetoday.com%2Fbiggest-film-production-companies-in-india%2F",
+      "facebook.com": "https://www.facebook.com/profile.php?id=61555362675287",
+      "instagram.com": "https://www.instagram.com/thedecodetoday"
+    },
+    "people": [],
+    "source": "Google",
+    "confidence_score": 60,
+    "lead_quality": "Medium",
+    "company_type": "Manufacturer",
+    "_source_file": "output\\raw\\production_20260712_081431.json",
+    "_flags": [],
+    "_verified_emails": [
+      "john@doe.com"
+    ],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "emails": {
+        "john@doe.com": "ok"
+      },
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "domain_source": "existing_website",
+      "whois": {
+        "registrar": "HOSTINGER operations, UAB",
+        "creation_date": "2023-12-13 06:50:42+00:00",
+        "org": null,
+        "country": null
+      }
+    }
+  },
+  {
+    "company_name": "Idealproduction",
+    "website": "https://idealproduction.in/",
+    "linkedin": null,
+    "industry": "Artificial Intelligence",
+    "location": null,
+    "contact_page": "https://idealproduction.in/contact-us-ideal-production/",
+    "about_page": "https://idealproduction.in/about-us/",
+    "team_page": null,
+    "emails": [
+      "info@idealproduction.in"
+    ],
+    "phones": [
+      "+91 120 354 8609"
+    ],
+    "social_links": {
+      "facebook.com": "https://www.facebook.com/IdealProductionIndia/",
+      "instagram.com": "https://www.instagram.com/idealproduction.india/",
+      "linkedin.com": "https://www.linkedin.com/company/idealproduction/"
+    },
+    "people": [],
+    "source": "Google",
+    "confidence_score": 66,
+    "lead_quality": "Medium",
+    "company_type": "Manufacturer",
+    "_source_file": "output\\raw\\production_20260712_081431.json",
+    "_flags": [],
+    "_verified_emails": [
+      "info@idealproduction.in"
+    ],
+    "_verified_phones": [
+      "+91 120 354 8609"
+    ],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "emails": {
+        "info@idealproduction.in": "ok"
+      },
+      "phones": {
+        "+91 120 354 8609": "ok"
+      },
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "domain_source": "existing_website",
+      "whois": {
+        "registrar": "GoDaddy.com, LLC",
+        "creation_date": "[datetime.datetime(2016, 12, 28, 6, 1, 7, 393000, tzinfo=tzoffset('UTC', 0)), datetime.datetime(2016, 12, 28, 6, 1, 7, tzinfo=tzoffset('UTC', 0))]",
+        "org": null,
+        "country": "IN"
+      }
+    }
+  },
+  {
+    "company_name": "Outsourcefromindia",
+    "website": "https://www.outsourcefromindia.com/top-companies/video-production/india",
+    "linkedin": null,
+    "industry": "EdTech",
+    "location": null,
+    "contact_page": "https://www.outsourcefromindia.com/contact-us",
+    "about_page": "https://www.outsourcefromindia.com/about-us",
+    "team_page": null,
+    "emails": [
+      "connect@outsourcefromindia.com"
+    ],
+    "phones": [
+      "+911204132921"
+    ],
+    "social_links": {
+      "x.com": "https://chtrbox.com/",
+      "linkedin.com": "https://www.linkedin.com/company/outsourcefromindia/"
+    },
+    "people": [],
+    "source": "Google",
+    "confidence_score": 66,
+    "lead_quality": "Medium",
+    "company_type": "Manufacturer",
+    "_source_file": "output\\raw\\production_20260712_081431.json",
+    "_flags": [],
+    "_verified_emails": [
+      "connect@outsourcefromindia.com"
+    ],
+    "_verified_phones": [
+      "+911204132921"
+    ],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "emails": {
+        "connect@outsourcefromindia.com": "ok"
+      },
+      "phones": {
+        "+911204132921": "ok"
+      },
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "domain_source": "existing_website",
+      "whois": {
+        "registrar": "GoDaddy.com, LLC",
+        "creation_date": "[datetime.datetime(2022, 10, 26, 8, 10, 32, tzinfo=tzoffset('UTC', 0)), datetime.datetime(2022, 10, 26, 3, 10, 32, tzinfo=tzoffset('UTC', 0))]",
+        "org": "Domains By Proxy, LLC",
+        "country": "US"
+      }
+    }
+  },
+  {
+    "company_name": "Designrush",
+    "website": "https://www.designrush.com/agency/video-production/in",
+    "linkedin": null,
+    "industry": "production",
+    "location": null,
+    "contact_page": "https://www.designrush.com/contact-us",
+    "about_page": "https://www.designrush.com/marketplace/project-brief",
+    "team_page": "https://www.designrush.com/agency/reputation-management-companies",
+    "emails": [
+      "info@designrush.com",
+      "marketplace@designrush.com",
+      "branko@designrush.com",
+      "mariana@designrush.com",
+      "jelena@designrush.com"
+    ],
+    "phones": [
+      "1 2 3 4 5 6 7 8 9",
+      "4.3   4.3   (1)   4.4",
+      "4.3   4.3   (1)   4.6",
+      "4.3   4.3   (1)   4.9",
+      "4.3   4.3   (1)   5.0",
+      "4.4   4.4   (8)   4.8",
+      "4.5   4.5   (2)   1.0",
+      "4.5   4.5   (2)   4.0",
+      "4.5   4.5   (2)   4.5",
+      "4.5   4.5   (2)   5.0",
+      "4.6   4.6   (5)   4.7",
+      "4.6   4.6   (8)   5.0",
+      "4.7   4.7   (4)   4.9",
+      "4.7   4.7   (4)   5.0",
+      "4.7   4.7   (7)   4.6",
+      "4.7   4.7   (7)   4.8",
+      "4.8   4.8   (15)   4.7",
+      "4.8   4.8   (25)   4.5",
+      "4.8   4.8   (5)   4.3",
+      "4.8   4.8   (5)   4.4",
+      "4.8   4.8   (5)   5.0",
+      "4.8   4.8   (6)   4.9",
+      "4.8   4.8   (6)   5.0",
+      "4.8   4.8   (7)   4.8",
+      "4.8   4.8   (7)   5.0",
+      "4.8   4.8   (8)   4.8",
+      "4.8   4.8   (8)   5.0",
+      "4.9   4.9   (10)   5.0",
+      "4.9   4.9   (11)   5.0",
+      "4.9   4.9   (14)   4.2",
+      "4.9   4.9   (14)   5.0",
+      "4.9   4.9   (15)   5",
+      "4.9   4.9   (160",
+      "4.9   4.9   (20)   4.4",
+      "4.9   4.9   (28)   5.0",
+      "4.9   4.9   (36)   4.8",
+      "5.0   5.0   (30)   4.6",
+      "5.0   5.0   (31)   4.7",
+      "5.0   5.0   (31)   4.8",
+      "5.0   5.0   (51)   5.0"
+    ],
+    "social_links": {
+      "linkedin.com": "https://www.linkedin.com/in/jelenarelic/",
+      "facebook.com": "https://www.facebook.com/share.php?u=https%3A%2F%2Fwww.designrush.com%2Fagency%2Fvideo-production%2Ftrends%2Fai-video-generators&title=I Tried the Top AI Video Generators in 2026&description=Explore the best AI video generators in 2026. Compare features, pricing, and use cases to find the right tool for your video content needs.",
+      "twitter.com": "https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.designrush.com%2Fagency%2Fvideo-production%2Ftrends%2Fai-video-generators&text=I Tried the Top AI Video Generators in 2026&via=designrushmag",
+      "x.com": "https://x.com/i/grok?text=I%E2%80%99m%20trying%20to%20figure%20out%20the%20best%20way%20to%20find%20and %20evaluate%20top%20agencies%2C%20industry%20trends%2C%20and%20creative%20work.%20What%20does%20DesignRush%20offer%20for%20brands%20and%20agencies%2C%20and%20where%20should%20I%20start%3F%20Show%20more%20content%20from%3A%20https%3A%2F%2Fwww.designrush.com",
+      "instagram.com": "https://www.instagram.com/designrushmag/"
+    },
+    "people": [
+      {
+        "name": "Thrive Internet Marketing Agency",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Your Trusted Digital Marketing Partner",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "MotionTrust Digital",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Mariana Delgado",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      }
+    ],
+    "source": "Google",
+    "confidence_score": 82,
+    "lead_quality": "High",
+    "company_type": "Agency",
+    "_source_file": "output\\raw\\production_20260712_081431.json",
+    "_flags": [],
+    "_verified_emails": [
+      "info@designrush.com",
+      "marketplace@designrush.com",
+      "branko@designrush.com",
+      "mariana@designrush.com",
+      "jelena@designrush.com"
+    ],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "emails": {
+        "info@designrush.com": "ok",
+        "marketplace@designrush.com": "ok",
+        "branko@designrush.com": "ok",
+        "mariana@designrush.com": "ok",
+        "jelena@designrush.com": "ok"
+      },
+      "phones": {
+        "1 2 3 4 5 6 7 8 9": "not_valid_number",
+        "4.3   4.3   (1)   4.4": "not_valid_number",
+        "4.3   4.3   (1)   4.6": "not_valid_number",
+        "4.3   4.3   (1)   4.9": "not_valid_number",
+        "4.3   4.3   (1)   5.0": "not_valid_number",
+        "4.4   4.4   (8)   4.8": "not_valid_number",
+        "4.5   4.5   (2)   1.0": "not_valid_number",
+        "4.5   4.5   (2)   4.0": "not_valid_number",
+        "4.5   4.5   (2)   4.5": "not_valid_number",
+        "4.5   4.5   (2)   5.0": "not_valid_number",
+        "4.6   4.6   (5)   4.7": "not_valid_number",
+        "4.6   4.6   (8)   5.0": "not_valid_number",
+        "4.7   4.7   (4)   4.9": "not_valid_number",
+        "4.7   4.7   (4)   5.0": "not_valid_number",
+        "4.7   4.7   (7)   4.6": "not_valid_number",
+        "4.7   4.7   (7)   4.8": "not_valid_number",
+        "4.8   4.8   (15)   4.7": "not_valid_number",
+        "4.8   4.8   (25)   4.5": "not_valid_number",
+        "4.8   4.8   (5)   4.3": "not_valid_number",
+        "4.8   4.8   (5)   4.4": "not_valid_number",
+        "4.8   4.8   (5)   5.0": "not_valid_number",
+        "4.8   4.8   (6)   4.9": "not_valid_number",
+        "4.8   4.8   (6)   5.0": "not_valid_number",
+        "4.8   4.8   (7)   4.8": "not_valid_number",
+        "4.8   4.8   (7)   5.0": "not_valid_number",
+        "4.8   4.8   (8)   4.8": "not_valid_number",
+        "4.8   4.8   (8)   5.0": "not_valid_number",
+        "4.9   4.9   (10)   5.0": "not_valid_number",
+        "4.9   4.9   (11)   5.0": "not_valid_number",
+        "4.9   4.9   (14)   4.2": "not_valid_number",
+        "4.9   4.9   (14)   5.0": "not_valid_number",
+        "4.9   4.9   (15)   5": "not_valid_number",
+        "4.9   4.9   (160": "not_valid_number",
+        "4.9   4.9   (20)   4.4": "not_valid_number",
+        "4.9   4.9   (28)   5.0": "not_valid_number",
+        "4.9   4.9   (36)   4.8": "not_valid_number",
+        "5.0   5.0   (30)   4.6": "not_valid_number",
+        "5.0   5.0   (31)   4.7": "not_valid_number",
+        "5.0   5.0   (31)   4.8": "not_valid_number",
+        "5.0   5.0   (51)   5.0": "not_valid_number"
+      },
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "domain_source": "existing_website",
+      "whois": {
+        "registrar": "GoDaddy.com, LLC",
+        "creation_date": "[datetime.datetime(2015, 4, 14, 18, 46, 25, tzinfo=tzoffset('UTC', 0)), datetime.datetime(2015, 4, 14, 13, 46, 25, tzinfo=tzoffset('UTC', 0))]",
+        "org": "Domains By Proxy, LLC",
+        "country": "US"
+      }
+    }
+  },
+  {
+    "company_name": "Magichourfilms",
+    "website": "https://www.magichourfilms.com/",
+    "linkedin": null,
+    "industry": "EdTech",
+    "location": null,
+    "contact_page": "https://www.magichourfilms.com/#contact",
+    "about_page": null,
+    "team_page": "http://www.magichourfilms.com/our-team/",
+    "emails": [
+      "info@magichourfilms.net"
+    ],
+    "phones": [
+      "+91 - 97866 65556",
+      "+91 - 98701 10789",
+      "+91 98701 10789",
+      "0765278"
+    ],
+    "social_links": {
+      "facebook.com": "https://www.facebook.com/MagicHourFilmsAsia/",
+      "twitter.com": "https://twitter.com/magichourfilms",
+      "instagram.com": "https://www.instagram.com/magichourfilms/"
+    },
+    "people": [],
+    "source": "Google",
+    "confidence_score": 66,
+    "lead_quality": "Medium",
+    "company_type": "Manufacturer",
+    "_source_file": "output\\raw\\production_20260712_081431.json",
+    "_flags": [],
+    "_verified_emails": [
+      "info@magichourfilms.net"
+    ],
+    "_verified_phones": [
+      "+91 - 97866 65556",
+      "+91 - 98701 10789",
+      "+91 98701 10789"
+    ],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "emails": {
+        "info@magichourfilms.net": "ok"
+      },
+      "phones": {
+        "+91 - 97866 65556": "ok",
+        "+91 - 98701 10789": "ok",
+        "+91 98701 10789": "ok",
+        "0765278": "not_valid_number"
+      },
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "domain_source": "existing_website",
+      "whois": {
+        "registrar": "DREAMHOST",
+        "creation_date": "[datetime.datetime(2007, 11, 18, 20, 48, 8, tzinfo=tzoffset('UTC', 0)), datetime.datetime(2007, 11, 18, 12, 48, 8, tzinfo=tzoffset('UTC', 0))]",
+        "org": "Proxy Protection LLC",
+        "country": "US"
+      }
+    }
+  },
+  {
+    "company_name": "Sarahleeandjohnny",
+    "website": "https://www.sarahleeandjohnny.com/best-music-production-software/",
+    "linkedin": null,
+    "industry": "Cloud Computing",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": "https://www.sarahleeandjohnny.com/best-midi-keyboards/",
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "confidence_score": 40,
+    "lead_quality": "Medium",
+    "company_type": "Software Company",
+    "_source_file": "output\\raw\\production_20260712_081431.json",
+    "_flags": [],
+    "_verified_emails": [],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "domain_source": "existing_website",
+      "whois": {
+        "registrar": "SNAPNAMES 22, LLC",
+        "creation_date": "2020-04-09 18:55:53+00:00",
+        "org": null,
+        "country": null
+      }
+    }
+  },
+  {
+    "company_name": "Ofzenandcomputing",
+    "website": "https://www.ofzenandcomputing.com/best-music-production-software/",
+    "linkedin": null,
+    "industry": "Artificial Intelligence",
+    "location": null,
+    "contact_page": "https://www.ofzenandcomputing.com/contact-names-ideas/",
+    "about_page": "https://www.ofzenandcomputing.com/about-us/",
+    "team_page": "https://www.ofzenandcomputing.com/cool-team-names-ideas/",
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "confidence_score": 50,
+    "lead_quality": "Medium",
+    "company_type": "Software Company",
+    "_source_file": "output\\raw\\production_20260712_081431.json",
+    "_flags": [],
+    "_verified_emails": [],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "domain_source": "existing_website",
+      "whois": {
+        "registrar": "GoDaddy.com, LLC",
+        "creation_date": "[datetime.datetime(2020, 5, 23, 18, 50, tzinfo=tzoffset('UTC', 0)), datetime.datetime(2020, 5, 23, 13, 50, tzinfo=tzoffset('UTC', 0))]",
+        "org": null,
+        "country": "IN"
+      }
+    }
+  },
+  {
+    "company_name": "Avid",
+    "website": "https://www.avid.com/pro-tools",
+    "linkedin": null,
+    "industry": "production",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "confidence_score": 36,
+    "lead_quality": "Low",
+    "company_type": "Software Company",
+    "_source_file": "output\\raw\\production_20260712_081431.json",
+    "_flags": [],
+    "_verified_emails": [],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "domain_source": "existing_website",
+      "whois": {
+        "registrar": "CSC Corporate Domains, Inc.",
+        "creation_date": "1992-11-04 05:00:00+00:00",
+        "org": null,
+        "country": null
+      }
+    }
+  },
+  {
+    "company_name": "Sufflemusic",
+    "website": "https://sufflemusic.com/featured/best-music-production-software-free-paid/",
+    "linkedin": null,
+    "industry": "Artificial Intelligence",
+    "location": null,
+    "contact_page": "https://sufflemusic.com/contact/",
+    "about_page": "https://sufflemusic.com/about-us/",
+    "team_page": null,
+    "emails": [
+      "contact@sufflemusic.com"
+    ],
+    "phones": [],
+    "social_links": {
+      "facebook.com": "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsufflemusic.com%2Ffeatured%2Fbest-music-production-software-free-paid%2F",
+      "twitter.com": "https://twitter.com/intent/tweet?url=https%3A%2F%2Fsufflemusic.com%2Ffeatured%2Fbest-music-production-software-free-paid%2F&text=11%20Best%20Music%20Production%20Software%20(Free%20%26%23038%3B%20Paid)",
+      "linkedin.com": "https://www.linkedin.com/shareArticle?url=https%3A%2F%2Fsufflemusic.com%2Ffeatured%2Fbest-music-production-software-free-paid%2F&title=11%20Best%20Music%20Production%20Software%20(Free%20%26%23038%3B%20Paid)",
+      "instagram.com": "https://www.instagram.com/sufflemusicmagazine/"
+    },
+    "people": [],
+    "source": "Google",
+    "confidence_score": 56,
+    "lead_quality": "Medium",
+    "company_type": "Software Company",
+    "_source_file": "output\\raw\\production_20260712_081431.json",
+    "_flags": [],
+    "_verified_emails": [
+      "contact@sufflemusic.com"
+    ],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "emails": {
+        "contact@sufflemusic.com": "ok"
+      },
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "domain_source": "existing_website",
+      "whois": {
+        "registrar": "GoDaddy.com, LLC",
+        "creation_date": "[datetime.datetime(2017, 12, 16, 11, 49, 44, tzinfo=tzoffset('UTC', 0)), datetime.datetime(2017, 12, 16, 6, 49, 44, tzinfo=tzoffset('UTC', 0))]",
+        "org": "Domains By Proxy, LLC",
+        "country": "US"
+      }
+    }
+  },
+  {
+    "company_name": "Google",
+    "website": "https://maps.google.com/",
+    "linkedin": null,
+    "industry": "production",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "confidence_score": 36,
+    "lead_quality": "Low",
+    "company_type": "Unknown",
+    "_source_file": "output\\raw\\production_20260712_081431.json",
+    "_flags": [],
+    "_verified_emails": [],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "domain_source": "existing_website",
+      "whois": {
+        "registrar": "MarkMonitor, Inc.",
+        "creation_date": "[datetime.datetime(1997, 9, 15, 4, 0, tzinfo=tzoffset('UTC', 0)), datetime.datetime(1997, 9, 15, 7, 0, tzinfo=tzoffset('UTC', 0))]",
+        "org": "Google LLC",
+        "country": "US"
+      }
+    }
+  },
+  {
+    "company_name": "Production com Film Video Production Studio",
+    "website": "https://production.com/",
+    "linkedin": null,
+    "industry": "production",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "confidence_score": 36,
+    "lead_quality": "Low",
+    "company_type": "Manufacturer",
+    "_source_file": "output\\raw\\production_20260712_081431.json",
+    "_flags": [],
+    "_verified_emails": [],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "domain_source": "existing_website",
+      "whois": {
+        "registrar": "GoDaddy.com, LLC",
+        "creation_date": "[datetime.datetime(1995, 2, 28, 5, 0, tzinfo=tzoffset('UTC', 0)), datetime.datetime(1995, 2, 28, 0, 0, tzinfo=tzoffset('UTC', 0))]",
+        "org": "Domains By Proxy, LLC",
+        "country": "US"
+      }
+    }
+  },
+  {
+    "company_name": "Smartmdr",
+    "website": "https://www.smartmdr.com/notcias/fda-issues-updated-guidance-on-computer-software-assurance-for-production-and-qms-software",
+    "linkedin": null,
+    "industry": "production",
+    "location": null,
+    "contact_page": "https://www.smartmdr.com/contact",
+    "about_page": "https://www.smartmdr.com/about",
+    "team_page": "https://www.smartmdr.com/notcias/tag/Quality+Management+System",
+    "emails": [
+      "user@domain.com",
+      "usuario@dominio.com",
+      "commercial@4easyprrc.com",
+      "services@smartmdr.com"
+    ],
+    "phones": [
+      "+351 936 632 042",
+      "+351) 936-632-042",
+      "3070-129"
+    ],
+    "social_links": {
+      "linkedin.com": "https://www.linkedin.com/company/smart-mdr/?viewAsMember=true"
+    },
+    "people": [],
+    "source": "Google",
+    "confidence_score": 70,
+    "lead_quality": "High",
+    "company_type": "Software Company",
+    "_source_file": "output\\raw\\production_20260712_081431.json",
+    "_flags": [],
+    "_verified_emails": [
+      "user@domain.com",
+      "usuario@dominio.com",
+      "commercial@4easyprrc.com",
+      "services@smartmdr.com"
+    ],
+    "_verified_phones": [
+      "+351 936 632 042",
+      "+351) 936-632-042"
+    ],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "emails": {
+        "user@domain.com": "ok",
+        "usuario@dominio.com": "ok",
+        "commercial@4easyprrc.com": "ok",
+        "services@smartmdr.com": "ok"
+      },
+      "phones": {
+        "+351 936 632 042": "ok",
+        "+351) 936-632-042": "ok",
+        "3070-129": "not_valid_number"
+      },
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "domain_source": "existing_website",
+      "whois": {
+        "registrar": "Squarespace Domains LLC",
+        "creation_date": "2024-10-21 19:46:13+00:00",
+        "org": null,
+        "country": "PT"
+      }
+    }
+  },
+  {
+    "company_name": "sederpeducationportal3in",
+    "website": "https://sederp.educationportal3.in/UploadFolder/CircularDocument/Circular2026-07-04_19-54-53_.pdf",
+    "linkedin": null,
+    "industry": "production",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "confidence_score": 36,
+    "lead_quality": "Low",
+    "company_type": "Unknown",
+    "_source_file": "output\\raw\\production_20260712_081431.json",
+    "_flags": [],
+    "_verified_emails": [],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "domain_source": "existing_website",
+      "whois": {
+        "registrar": "GoDaddy",
+        "creation_date": "2024-01-18 12:30:22.766000+00:00",
+        "org": null,
+        "country": "IN"
+      }
+    }
+  },
+  {
+    "company_name": "Flowco",
+    "website": "https://www.flowco-inc.com/brands/fps-by-flowco",
+    "linkedin": null,
+    "industry": "Artificial Intelligence",
+    "location": null,
+    "contact_page": "https://www.flowco-inc.com/contact",
+    "about_page": "https://www.flowco-inc.com/company/about-us",
+    "team_page": "https://www.flowco-inc.com/company/leadership",
+    "emails": [
+      "info@flowco-inc.com",
+      "Info@flowcosolutions.com",
+      "Info@flowcosolutons.com"
+    ],
+    "phones": [
+      "281-528-6298",
+      "281-528-6298 12514",
+      "318-397-5557 2019",
+      "405-536-0000 6529",
+      "405-605-4567 211"
+    ],
+    "social_links": {
+      "linkedin.com": "https://www.linkedin.com/company/flowco-production-solutions/"
+    },
+    "people": [
+      {
+        "name": "Joe Bob Edwards",
+        "designation": "CEO",
+        "decision_maker_score": 90
+      },
+      {
+        "name": "Jon Byers",
+        "designation": "CFO",
+        "decision_maker_score": 70
+      },
+      {
+        "name": "Chad Roberts",
+        "designation": "VP",
+        "decision_maker_score": 65
+      },
+      {
+        "name": "Mims Talton",
+        "designation": "VP",
+        "decision_maker_score": 65
+      }
+    ],
+    "source": "Google",
+    "confidence_score": 84,
+    "lead_quality": "High",
+    "company_type": "Software Company",
+    "_source_file": "output\\raw\\production_20260712_081431.json",
+    "_flags": [],
+    "_verified_emails": [
+      "info@flowco-inc.com",
+      "Info@flowcosolutions.com"
+    ],
+    "_verified_phones": [
+      "281-528-6298"
+    ],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "emails": {
+        "info@flowco-inc.com": "ok",
+        "Info@flowcosolutions.com": "ok",
+        "Info@flowcosolutons.com": "domain_does_not_exist"
+      },
+      "phones": {
+        "281-528-6298": "ok",
+        "281-528-6298 12514": "not_possible_length",
+        "318-397-5557 2019": "not_possible_length",
+        "405-536-0000 6529": "not_possible_length",
+        "405-605-4567 211": "not_valid_number"
+      },
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "domain_source": "existing_website",
+      "whois": {
+        "registrar": "Amazon Registrar, Inc.",
+        "creation_date": "2024-09-27 14:40:56+00:00",
+        "org": "c/o whoisproxy.com",
+        "country": "US"
+      }
+    }
+  },
+  {
+    "company_name": "Industrytoday",
+    "website": "https://industrytoday.com/7-best-ai-powered-production-planning-software-in-2026/",
+    "linkedin": null,
+    "industry": "Artificial Intelligence",
+    "location": null,
+    "contact_page": null,
+    "about_page": "https://industrytoday.com/about/",
+    "team_page": null,
+    "emails": [
+      "editor@industrytoday.com",
+      "editorialdesk@industrytoday.com",
+      "spoeton@industrytoday.com"
+    ],
+    "phones": [
+      "+001 973.218.0310",
+      "2026 2026"
+    ],
+    "social_links": {
+      "facebook.com": "https://www.facebook.com/IndustryTodayMedia",
+      "twitter.com": "https://twitter.com/Ind_today",
+      "linkedin.com": "https://www.linkedin.com/company/industry-today-media/"
+    },
+    "people": [],
+    "source": "Google",
+    "confidence_score": 60,
+    "lead_quality": "Medium",
+    "company_type": "Software Company",
+    "_source_file": "output\\raw\\production_20260712_081431.json",
+    "_flags": [],
+    "_verified_emails": [
+      "editor@industrytoday.com",
+      "editorialdesk@industrytoday.com",
+      "spoeton@industrytoday.com"
+    ],
+    "_verified_phones": [
+      "+001 973.218.0310"
+    ],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "emails": {
+        "editor@industrytoday.com": "ok",
+        "editorialdesk@industrytoday.com": "ok",
+        "spoeton@industrytoday.com": "ok"
+      },
+      "phones": {
+        "+001 973.218.0310": "ok",
+        "2026 2026": "not_valid_number"
+      },
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "domain_source": "existing_website",
+      "whois": {
+        "registrar": "123-Reg Limited",
+        "creation_date": "2002-06-07 12:05:56+00:00",
+        "org": null,
+        "country": null
+      }
+    }
+  },
+  {
+    "company_name": "Homestudiorecordings",
+    "website": "https://homestudiorecordings.com/best-daw-software/",
+    "linkedin": null,
+    "industry": "Cloud Computing",
+    "location": null,
+    "contact_page": "https://homestudiorecordings.com/contact/",
+    "about_page": "https://homestudiorecordings.com/about/",
+    "team_page": "https://homestudiorecordings.com/studio-equipment/keyboards/",
+    "emails": [],
+    "phones": [
+      "+44 (0) 77 20252015",
+      "100 (2026",
+      "2026-07-12"
+    ],
+    "social_links": {
+      "facebook.com": "https://www.facebook.com/homestudiorecs/",
+      "linkedin.com": "https://www.linkedin.com/in/tim-strat-37b693261/",
+      "twitter.com": "https://twitter.com/HomeStudioRecs",
+      "instagram.com": "https://www.instagram.com/HomeStudioRecs/"
+    },
+    "people": [],
+    "source": "Google",
+    "confidence_score": 60,
+    "lead_quality": "Medium",
+    "company_type": "Software Company",
+    "_source_file": "output\\raw\\production_20260712_081431.json",
+    "_flags": [],
+    "_verified_emails": [],
+    "_verified_phones": [
+      "+44 (0) 77 20252015"
+    ],
+    "_website_reachable": false,
+    "_verification_notes": {
+      "phones": {
+        "+44 (0) 77 20252015": "ok",
+        "100 (2026": "not_valid_number",
+        "2026-07-12": "not_valid_number"
+      },
+      "website": "timeout"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "domain_source": "existing_website",
+      "whois": {
+        "registrar": "NAMECHEAP INC",
+        "creation_date": "2016-06-12 14:50:26+00:00",
+        "org": "Privacy service provided by Withheld for Privacy ehf",
+        "country": "IS"
+      }
+    }
+  },
+  {
+    "company_name": "Southeast Asia ANZ Sales Intelligence Platform",
+    "website": "https://sgpgrid.com/company-details/th/production-solutions-thailand-company-limited-ID0000",
+    "linkedin": null,
+    "industry": "Artificial Intelligence",
+    "location": null,
+    "contact_page": null,
+    "about_page": "https://sgpgrid.com",
+    "team_page": "https://sgpgrid.com/article/tag/thought-leadership",
+    "emails": [],
+    "phones": [
+      "0905556003809"
+    ],
+    "social_links": {
+      "linkedin.com": "https://www.linkedin.com/company/gridappio",
+      "facebook.com": "https://web.facebook.com/gridappio?_rdc=1&_rdr",
+      "instagram.com": "https://www.instagram.com/gridapp.io"
+    },
+    "people": [],
+    "source": "Google",
+    "confidence_score": 56,
+    "lead_quality": "Medium",
+    "company_type": "Software Company",
+    "_source_file": "output\\raw\\production_20260712_081431.json",
+    "_flags": [],
+    "_verified_emails": [],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "phones": {
+        "0905556003809": "not_valid_number"
+      },
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "domain_source": "existing_website",
+      "whois": {
+        "registrar": "GoDaddy.com, LLC",
+        "creation_date": "2018-06-20 10:21:05+00:00",
+        "org": null,
+        "country": null
+      }
+    }
+  },
+  {
+    "company_name": "Prg",
+    "website": "https://www.prg.com/en/",
+    "linkedin": null,
+    "industry": "Artificial Intelligence",
+    "location": null,
+    "contact_page": "https://www.prg.com/en/contact",
+    "about_page": "https://www.prg.com/en/about",
+    "team_page": "https://www.prg.com/en/about/leadership",
+    "emails": [
+      "info@prg.com",
+      "jondoe@email.com"
+    ],
+    "phones": [],
+    "social_links": {
+      "facebook.com": "https://www.facebook.com/PRGNorthAmerica/",
+      "instagram.com": "https://www.instagram.com/prg.north.america",
+      "linkedin.com": "https://www.linkedin.com/company/prg/",
+      "twitter.com": "https://twitter.com/PRGlive"
+    },
+    "people": [
+      {
+        "name": "Jere Harris",
+        "designation": "Founder",
+        "decision_maker_score": 100
+      },
+      {
+        "name": "Greg Christian",
+        "designation": "VP",
+        "decision_maker_score": 65
+      },
+      {
+        "name": "Carol Ann Hamill",
+        "designation": "President",
+        "decision_maker_score": 85
+      },
+      {
+        "name": "Randy Hutson",
+        "designation": "President",
+        "decision_maker_score": 85
+      },
+      {
+        "name": "Alex Donnelly",
+        "designation": "President",
+        "decision_maker_score": 85
+      },
+      {
+        "name": "John Wiseman",
+        "designation": "President",
+        "decision_maker_score": 85
+      },
+      {
+        "name": "David Posegay",
+        "designation": "President",
+        "decision_maker_score": 85
+      },
+      {
+        "name": "John Campanelli",
+        "designation": "President",
+        "decision_maker_score": 85
+      },
+      {
+        "name": "Andrew Hamish Mills",
+        "designation": "President",
+        "decision_maker_score": 85
+      },
+      {
+        "name": "Jennifer Christiansen",
+        "designation": "President",
+        "decision_maker_score": 85
+      },
+      {
+        "name": "Joe Cirillo",
+        "designation": "President",
+        "decision_maker_score": 85
+      },
+      {
+        "name": "Madhuri Rao",
+        "designation": "President",
+        "decision_maker_score": 85
+      },
+      {
+        "name": "Susan Eisner",
+        "designation": "President",
+        "decision_maker_score": 85
+      },
+      {
+        "name": "Laura Barry",
+        "designation": "President",
+        "decision_maker_score": 85
+      },
+      {
+        "name": "Alex Schnulle",
+        "designation": "President",
+        "decision_maker_score": 85
+      },
+      {
+        "name": "Anne Johnston",
+        "designation": "President",
+        "decision_maker_score": 85
+      },
+      {
+        "name": "Bob Walpot",
+        "designation": "President",
+        "decision_maker_score": 85
+      },
+      {
+        "name": "Gary Boyd",
+        "designation": "COO",
+        "decision_maker_score": 75
+      },
+      {
+        "name": "Simon Watkin",
+        "designation": "President",
+        "decision_maker_score": 85
+      },
+      {
+        "name": "Bruce Mac Lean",
+        "designation": "President",
+        "decision_maker_score": 85
+      },
+      {
+        "name": "John Swain",
+        "designation": "President",
+        "decision_maker_score": 85
+      },
+      {
+        "name": "Frederic Opsomer",
+        "designation": "President",
+        "decision_maker_score": 85
+      }
+    ],
+    "source": "Google",
+    "confidence_score": 76,
+    "lead_quality": "High",
+    "company_type": "Manufacturer",
+    "_source_file": "output\\raw\\production_20260712_081431.json",
+    "_flags": [],
+    "_verified_emails": [
+      "info@prg.com",
+      "jondoe@email.com"
+    ],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "emails": {
+        "info@prg.com": "ok",
+        "jondoe@email.com": "ok"
+      },
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "domain_source": "existing_website",
+      "whois": {
+        "registrar": "GoDaddy.com, LLC",
+        "creation_date": "1995-11-25 05:00:00+00:00",
+        "org": null,
+        "country": null
+      }
+    }
+  },
+  {
+    "company_name": "Varioproductions",
+    "website": "https://varioproductions.com/",
+    "linkedin": null,
+    "industry": "production",
+    "location": null,
+    "contact_page": "https://varioproductions.com/contact-us/",
+    "about_page": "https://varioproductions.com/about/",
+    "team_page": "https://varioproductions.com/solutions/event-production/event-production-management/",
+    "emails": [],
+    "phones": [
+      "1 (888) 818-2746"
+    ],
+    "social_links": {
+      "linkedin.com": "https://www.linkedin.com/company/vario-productions",
+      "facebook.com": "https://www.facebook.com/Varioproduction",
+      "instagram.com": "https://www.instagram.com/varioproduction/"
+    },
+    "people": [
+      {
+        "name": "Partner With Vario",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Partner with Us",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Partner with Us",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Partner with Us",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Partner with Us",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      }
+    ],
+    "source": "Google",
+    "confidence_score": 69,
+    "lead_quality": "Medium",
+    "company_type": "Software Company",
+    "_source_file": "output\\raw\\production_20260712_081431.json",
+    "_flags": [],
+    "_verified_emails": [],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "phones": {
+        "1 (888) 818-2746": "not_valid_number"
+      },
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "domain_source": "existing_website",
+      "whois": {
+        "registrar": "Wild West Domains, LLC",
+        "creation_date": "2014-12-10 23:04:35+00:00",
+        "org": null,
+        "country": null
+      }
+    }
+  },
+  {
+    "company_name": "Peoriapros",
+    "website": "https://www.peoriapros.com/",
+    "linkedin": null,
+    "industry": "Artificial Intelligence",
+    "location": null,
+    "contact_page": "https://www.peoriapros.com/contact/employment-information/",
+    "about_page": "https://www.peoriapros.com/services/commercial-sewing-company/",
+    "team_page": "https://www.peoriapros.com/about/management-team/",
+    "emails": [
+      "humanresources@peoriapros.com"
+    ],
+    "phones": [
+      "(309) 683-0390",
+      "(309) 693-2000",
+      "(888) 449-2358",
+      "309-485-5669",
+      "309-693-2000"
+    ],
+    "social_links": {
+      "facebook.com": "https://www.facebook.com/Peoria-Production-Shop-157068130999876/",
+      "instagram.com": "https://www.instagram.com//peoriaproductionsolutions/",
+      "linkedin.com": "https://www.linkedin.com/company/peoria-production-shop-inc./?viewAsMember=true"
+    },
+    "people": [],
+    "source": "Google",
+    "confidence_score": 70,
+    "lead_quality": "High",
+    "company_type": "Manufacturer",
+    "_source_file": "output\\raw\\production_20260712_081431.json",
+    "_flags": [],
+    "_verified_emails": [
+      "humanresources@peoriapros.com"
+    ],
+    "_verified_phones": [
+      "(888) 449-2358"
+    ],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "emails": {
+        "humanresources@peoriapros.com": "ok"
+      },
+      "phones": {
+        "(309) 683-0390": "not_valid_number",
+        "(309) 693-2000": "not_valid_number",
+        "(888) 449-2358": "ok",
+        "309-485-5669": "not_valid_number",
+        "309-693-2000": "not_valid_number"
+      },
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "domain_source": "existing_website",
+      "whois": {
+        "registrar": "Network Solutions, LLC",
+        "creation_date": "2002-04-18 21:29:01+00:00",
+        "org": null,
+        "country": "US"
+      }
+    }
+  },
+  {
+    "company_name": "Backpackfilms",
+    "website": "https://www.backpackfilms.in/",
+    "linkedin": null,
+    "industry": "Logistics",
+    "location": null,
+    "contact_page": "https://www.backpackfilms.in/contact",
+    "about_page": "https://www.backpackfilms.in/about",
+    "team_page": null,
+    "emails": [
+      "jobs@backpackfilms.in",
+      "amit@backpackfilms.in",
+      "anita@backpackfilms.in"
+    ],
+    "phones": [
+      "+91 9820333925",
+      "+91 9920406628"
+    ],
+    "social_links": {
+      "facebook.com": "https://www.facebook.com/backpackfilmsindia/",
+      "x.com": "https://x.com/backpackfilmsin",
+      "instagram.com": "https://www.instagram.com/backpackfilms_in",
+      "linkedin.com": "https://www.linkedin.com/in/amitvachharajani/"
+    },
+    "people": [],
+    "source": "Google",
+    "confidence_score": 66,
+    "lead_quality": "Medium",
+    "company_type": "Manufacturer",
+    "_source_file": "output\\raw\\production_20260712_081431.json",
+    "_flags": [],
+    "_verified_emails": [
+      "jobs@backpackfilms.in",
+      "amit@backpackfilms.in",
+      "anita@backpackfilms.in"
+    ],
+    "_verified_phones": [
+      "+91 9820333925",
+      "+91 9920406628"
+    ],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "emails": {
+        "jobs@backpackfilms.in": "ok",
+        "amit@backpackfilms.in": "ok",
+        "anita@backpackfilms.in": "ok"
+      },
+      "phones": {
+        "+91 9820333925": "ok",
+        "+91 9920406628": "ok"
+      },
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "domain_source": "existing_website",
+      "whois": {
+        "registrar": "Endurance International Group India Private Limited",
+        "creation_date": "2012-07-19 12:17:45.980000+00:00",
+        "org": null,
+        "country": "IN"
+      }
+    }
+  },
+  {
+    "company_name": "Videase",
+    "website": "https://www.videase.in/",
+    "linkedin": null,
+    "industry": "Cybersecurity",
+    "location": null,
+    "contact_page": "https://www.videase.in/contactus.html",
+    "about_page": "https://www.videase.in/influencer-marketing-company.html",
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "confidence_score": 46,
+    "lead_quality": "Medium",
+    "company_type": "Agency",
+    "_source_file": "output\\raw\\production_20260712_081431.json",
+    "_flags": [],
+    "_verified_emails": [],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "domain_source": "existing_website",
+      "whois": {
+        "registrar": "GoDaddy",
+        "creation_date": "2022-06-03 05:53:34.128000+00:00",
+        "org": null,
+        "country": "IN"
+      }
+    }
+  },
+  {
+    "company_name": "Vidzy",
+    "website": "https://vidzy.in/",
+    "linkedin": null,
+    "industry": "Cybersecurity",
+    "location": null,
+    "contact_page": "https://vidzy.in/contact-us.html",
+    "about_page": "https://vidzy.in/top-social-media-video-production-company-in-india.html",
+    "team_page": null,
+    "emails": [
+      "info@vidzy.in",
+      "contact@vidzy.media"
+    ],
+    "phones": [
+      "+91 9219940481"
+    ],
+    "social_links": {
+      "facebook.com": "https://www.facebook.com/vidzymedia/?locale=hi_IN&paipv=0&eav=AfZI7tNWrNhNO3RtdjTdTqhNSi_I9rYm9IGiUaegR58fmvrOibpK1m15li9HI6gTIWU&_rdr",
+      "instagram.com": "https://www.instagram.com/vidzymedia/",
+      "linkedin.com": "https://www.linkedin.com/company/vidzymedia/"
+    },
+    "people": [],
+    "source": "Google",
+    "confidence_score": 66,
+    "lead_quality": "Medium",
+    "company_type": "Agency",
+    "_source_file": "output\\raw\\production_20260712_081431.json",
+    "_flags": [],
+    "_verified_emails": [
+      "info@vidzy.in"
+    ],
+    "_verified_phones": [
+      "+91 9219940481"
+    ],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "emails": {
+        "info@vidzy.in": "ok",
+        "contact@vidzy.media": "domain_does_not_exist"
+      },
+      "phones": {
+        "+91 9219940481": "ok"
+      },
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "domain_source": "existing_website",
+      "whois": {
+        "registrar": "GoDaddy.com, LLC",
+        "creation_date": "[datetime.datetime(2022, 8, 23, 6, 16, 30, 434000, tzinfo=tzoffset('UTC', 0)), datetime.datetime(2022, 8, 23, 6, 16, 30, tzinfo=tzoffset('UTC', 0))]",
+        "org": null,
+        "country": "IN"
+      }
+    }
+  },
+  {
+    "company_name": "Proproduction",
+    "website": "https://proproduction.co.in/",
+    "linkedin": null,
+    "industry": "EdTech",
+    "location": null,
+    "contact_page": "https://proproduction.co.in/contact/",
+    "about_page": "https://proproduction.co.in/about/",
+    "team_page": "https://proproduction.co.in/#collapse-c3e81796a51cc4320dca",
+    "emails": [
+      "info@proproduction.co.in",
+      "info@example.com",
+      "support@proproduction.co.in"
+    ],
+    "phones": [
+      "+(91)9354744718",
+      "+1 (859) 254-6589"
+    ],
+    "social_links": {
+      "instagram.com": "https://www.instagram.com/pro__production/",
+      "facebook.com": "https://facebook.com"
+    },
+    "people": [],
+    "source": "Google",
+    "confidence_score": 70,
+    "lead_quality": "High",
+    "company_type": "Software Company",
+    "_source_file": "output\\raw\\production_20260712_081431.json",
+    "_flags": [],
+    "_verified_emails": [
+      "info@proproduction.co.in",
+      "info@example.com",
+      "support@proproduction.co.in"
+    ],
+    "_verified_phones": [
+      "+(91)9354744718",
+      "+1 (859) 254-6589"
+    ],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "emails": {
+        "info@proproduction.co.in": "ok",
+        "info@example.com": "ok",
+        "support@proproduction.co.in": "ok"
+      },
+      "phones": {
+        "+(91)9354744718": "ok",
+        "+1 (859) 254-6589": "ok"
+      },
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "domain_source": "existing_website",
+      "whois": {
+        "registrar": "HOSTINGER operations, UAB",
+        "creation_date": "2024-10-02 10:50:05.934000+00:00",
+        "org": null,
+        "country": "IN"
+      }
+    }
+  },
+  {
+    "company_name": "Vegaproductions",
+    "website": "https://www.vegaproductions.in/",
+    "linkedin": null,
+    "industry": "EdTech",
+    "location": null,
+    "contact_page": "https://www.vegaproductions.in/contact",
+    "about_page": "https://www.vegaproductions.in/about",
+    "team_page": "https://www.vegaproductions.in/about",
+    "emails": [
+      "contact@vegaproductions.in",
+      "bfb679c754744c58a7374ee6e25cfc13@sentry.wixpress.com",
+      "5d1795a2db124a268f1e1bd88f503500@sentry.wixpress.com",
+      "2062d0a4929b45348643784b5cb39c36@sentry.wixpress.com",
+      "79baaa8e09c746d2b7401643b99792e0@sentry.wixpress.com",
+      "271e9fa3230b4eec94b02bf95780f5f2@sentry.wixpress.com",
+      "59f3fdbcc4da44ab841236a7406e9b3b@sentry.wixpress.com",
+      "8c4075d5481d476e945486754f783364@sentry.io",
+      "9a65e97ebe8141fca0c4fd686f70996b@sentry.wixpress.com",
+      "463991d7bca24f02a0baf16f9e6eda73@sentry.wixpress.com",
+      "c183baa23371454f99f417f6616b724d@sentry.wixpress.com",
+      "8c30b2581acc426badc414e8a5dc04ef@sentry.wixpress.com",
+      "cd64ba1f47df485bba2b0076c0dd3b25@sentry.wixpress.com",
+      "605a7baede844d278b89dc95ae0a9123@sentry-next.wixpress.com",
+      "460ff4620fa44cba8df530afde949785@sentry.wixpress.com",
+      "18d2f96d279149989b95faf0a4b41882@sentry-next.wixpress.com",
+      "8eb368c655b84e029ed79ad7a5c1718e@sentry.wixpress.com",
+      "78f7996315bc402f9dcb8a2f974b82d1@sentry.wixpress.com",
+      "dd0a55ccb8124b9c9d938e3acf41f8aa@sentry.wixpress.com",
+      "ed436f5053144538958ad06a5005e99a@sentry.wixpress.com"
+    ],
+    "phones": [
+      "+91 9892 992 553"
+    ],
+    "social_links": {
+      "facebook.com": "https://www.facebook.com/VegaProductions/",
+      "linkedin.com": "https://www.linkedin.com/company/vega-productions/",
+      "instagram.com": "https://www.instagram.com/vegaproductions.in/"
+    },
+    "people": [
+      {
+        "name": "Meet the Squad",
+        "designation": "Founder",
+        "decision_maker_score": 100
+      },
+      {
+        "name": "Vikas Pawar Creative Partner",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Vikas Pawar Creative Partner",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Vikas Pawar Creative Partner",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Vikas Pawar Creative Partner",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Vikas Pawar Creative Partner",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Vikas Pawar Creative Partner",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Creative Partner",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Creative Partner",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Creative Partner",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Manoj Malkar Director of Photography",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Manoj Malkar Director of Photography",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Manoj Malkar Director of Photography",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Manoj Malkar Director of Photography",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Manoj Malkar Director of Photography",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Manoj Malkar Director of Photography",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Director of Photography",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Director of Photography",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Creating Magic with our Partners",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Creating Magic with our Partners",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Creating Magic with our Partners",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      }
+    ],
+    "source": "Google",
+    "confidence_score": 86,
+    "lead_quality": "High",
+    "company_type": "Manufacturer",
+    "_source_file": "output\\raw\\production_20260712_081431.json",
+    "_flags": [],
+    "_verified_emails": [
+      "contact@vegaproductions.in",
+      "8c4075d5481d476e945486754f783364@sentry.io"
+    ],
+    "_verified_phones": [
+      "+91 9892 992 553"
+    ],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "emails": {
+        "contact@vegaproductions.in": "ok",
+        "bfb679c754744c58a7374ee6e25cfc13@sentry.wixpress.com": "no_mx_records",
+        "5d1795a2db124a268f1e1bd88f503500@sentry.wixpress.com": "no_mx_records",
+        "2062d0a4929b45348643784b5cb39c36@sentry.wixpress.com": "no_mx_records",
+        "79baaa8e09c746d2b7401643b99792e0@sentry.wixpress.com": "no_mx_records",
+        "271e9fa3230b4eec94b02bf95780f5f2@sentry.wixpress.com": "no_mx_records",
+        "59f3fdbcc4da44ab841236a7406e9b3b@sentry.wixpress.com": "no_mx_records",
+        "8c4075d5481d476e945486754f783364@sentry.io": "ok",
+        "9a65e97ebe8141fca0c4fd686f70996b@sentry.wixpress.com": "no_mx_records",
+        "463991d7bca24f02a0baf16f9e6eda73@sentry.wixpress.com": "no_mx_records",
+        "c183baa23371454f99f417f6616b724d@sentry.wixpress.com": "no_mx_records",
+        "8c30b2581acc426badc414e8a5dc04ef@sentry.wixpress.com": "no_mx_records",
+        "cd64ba1f47df485bba2b0076c0dd3b25@sentry.wixpress.com": "no_mx_records",
+        "605a7baede844d278b89dc95ae0a9123@sentry-next.wixpress.com": "no_mx_records",
+        "460ff4620fa44cba8df530afde949785@sentry.wixpress.com": "no_mx_records",
+        "18d2f96d279149989b95faf0a4b41882@sentry-next.wixpress.com": "no_mx_records",
+        "8eb368c655b84e029ed79ad7a5c1718e@sentry.wixpress.com": "no_mx_records",
+        "78f7996315bc402f9dcb8a2f974b82d1@sentry.wixpress.com": "no_mx_records",
+        "dd0a55ccb8124b9c9d938e3acf41f8aa@sentry.wixpress.com": "no_mx_records",
+        "ed436f5053144538958ad06a5005e99a@sentry.wixpress.com": "no_mx_records"
+      },
+      "phones": {
+        "+91 9892 992 553": "ok"
+      },
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "domain_source": "existing_website",
+      "whois": {
+        "registrar": "Endurance International Group India Private Limited",
+        "creation_date": "2013-06-08 12:02:57.292000+00:00",
+        "org": null,
+        "country": "IN"
+      }
+    }
+  },
+  {
+    "company_name": "Ey",
+    "website": "https://www.ey.com/en_in/insights/advanced-manufacturing/why-india-s-electronics-manufacturing-services-sector-is-growing",
+    "linkedin": null,
+    "industry": "Electrical Engineering",
+    "location": null,
+    "contact_page": null,
+    "about_page": "https://www.ey.com/en_in/careers/parthenon",
+    "team_page": "https://www.ey.com/en_in/services/workforce",
+    "emails": [],
+    "phones": [],
+    "social_links": {
+      "facebook.com": "https://www.facebook.com/EYCareersIndia/",
+      "linkedin.com": "https://www.linkedin.com/company/ernstandyoung/mycompany/"
+    },
+    "people": [
+      {
+        "name": "Tata Steel",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Featured Thinking",
+        "designation": "CEO",
+        "decision_maker_score": 90
+      }
+    ],
+    "source": "Google",
+    "confidence_score": 59,
+    "lead_quality": "Medium",
+    "company_type": "Manufacturer",
+    "_source_file": "output\\raw\\production_20260712_081431.json",
+    "_flags": [],
+    "_verified_emails": [],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "domain_source": "existing_website",
+      "whois": {
+        "registrar": "SafeNames Ltd.",
+        "creation_date": "1994-04-22 04:00:00+00:00",
+        "org": null,
+        "country": null
+      }
+    }
+  },
+  {
+    "company_name": "Garageproductions",
+    "website": "https://garageproductions.in/",
+    "linkedin": null,
+    "industry": "Artificial Intelligence",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": "https://garageproductions.in/services/ad-films",
+    "emails": [
+      "hello@garageproductions.in",
+      "you@brand.com"
+    ],
+    "phones": [
+      "+91 83768 71240"
+    ],
+    "social_links": {
+      "instagram.com": "https://instagram.com/garageproductions",
+      "linkedin.com": "https://linkedin.com/company/garage-productions"
+    },
+    "people": [],
+    "source": "Google",
+    "confidence_score": 60,
+    "lead_quality": "Medium",
+    "company_type": "Manufacturer",
+    "_source_file": "output\\raw\\production_20260712_081431.json",
+    "_flags": [],
+    "_verified_emails": [
+      "hello@garageproductions.in"
+    ],
+    "_verified_phones": [
+      "+91 83768 71240"
+    ],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "emails": {
+        "hello@garageproductions.in": "ok",
+        "you@brand.com": "no_mx_records"
+      },
+      "phones": {
+        "+91 83768 71240": "ok"
+      },
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "domain_source": "existing_website",
+      "whois": {
+        "registrar": "GoDaddy.com, LLC",
+        "creation_date": "[datetime.datetime(2015, 1, 7, 11, 0, 26, 251000, tzinfo=tzoffset('UTC', 0)), datetime.datetime(2015, 1, 7, 11, 0, 26, tzinfo=tzoffset('UTC', 0))]",
+        "org": null,
+        "country": "IN"
+      }
+    }
+  },
+  {
+    "company_name": "Cine Dreams",
+    "website": "https://www.cine-dreams.com/",
+    "linkedin": null,
+    "industry": "Artificial Intelligence",
+    "location": null,
+    "contact_page": "https://www.cine-dreams.com/contact.html",
+    "about_page": "https://www.cine-dreams.com/about.html",
+    "team_page": "https://www.cine-dreams.com/celebrity-management.html",
+    "emails": [
+      "your_email@domain.com",
+      "cinedreams333@gmail.com"
+    ],
+    "phones": [
+      "+91 8-369-120-296"
+    ],
+    "social_links": {
+      "facebook.com": "https://www.facebook.com/ProductionCompanyMumbai"
+    },
+    "people": [
+      {
+        "name": "Line Producer",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Director Of Photography",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Director Of Photography",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Art Director",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Art Director",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Production Assistants",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      }
+    ],
+    "source": "Google",
+    "confidence_score": 82,
+    "lead_quality": "High",
+    "company_type": "Manufacturer",
+    "_source_file": "output\\raw\\production_20260712_081431.json",
+    "_flags": [],
+    "_verified_emails": [
+      "your_email@domain.com",
+      "cinedreams333@gmail.com"
+    ],
+    "_verified_phones": [
+      "+91 8-369-120-296"
+    ],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "emails": {
+        "your_email@domain.com": "ok",
+        "cinedreams333@gmail.com": "ok"
+      },
+      "phones": {
+        "+91 8-369-120-296": "ok"
+      },
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "domain_source": "existing_website",
+      "whois": {
+        "registrar": "PDR Ltd. d/b/a PublicDomainRegistry.com",
+        "creation_date": "2003-07-10 12:33:32+00:00",
+        "org": "Privacy Protect, LLC (PrivacyProtect.org)",
+        "country": "US"
+      }
+    }
+  },
+  {
+    "company_name": "Altimetrik",
+    "website": "https://www.altimetrik.com/",
+    "linkedin": null,
+    "industry": "Artificial Intelligence",
+    "location": null,
+    "contact_page": "https://www.altimetrik.com/contact/",
+    "about_page": "https://www.altimetrik.com/about/",
+    "team_page": "https://www.altimetrik.com/white-papers/schemaflow-ai-data-platform-change-management/",
+    "emails": [],
+    "phones": [
+      "+1 248-281-2500",
+      "080-66904400",
+      "080-66904545"
+    ],
+    "social_links": {
+      "facebook.com": "https://www.facebook.com/AltimetrikOfficial/",
+      "instagram.com": "https://www.instagram.com/altimetrikofficial/?igsh=OXEzb3dmYW53djU4",
+      "x.com": "https://x.com/Altimetrik/",
+      "linkedin.com": "https://www.linkedin.com/company/altimetrik"
+    },
+    "people": [],
+    "source": "Google",
+    "confidence_score": 60,
+    "lead_quality": "Medium",
+    "company_type": "Software Company",
+    "_source_file": "output\\raw\\production_20260712_081431.json",
+    "_flags": [],
+    "_verified_emails": [],
+    "_verified_phones": [
+      "+1 248-281-2500",
+      "080-66904400",
+      "080-66904545"
+    ],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "phones": {
+        "+1 248-281-2500": "ok",
+        "080-66904400": "ok",
+        "080-66904545": "ok"
+      },
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "domain_source": "existing_website",
+      "whois": {
+        "registrar": "GoDaddy.com, LLC",
+        "creation_date": "[datetime.datetime(2012, 4, 19, 0, 28, 7, tzinfo=tzoffset('UTC', 0)), datetime.datetime(2012, 4, 18, 19, 28, 7, tzinfo=tzoffset('UTC', 0))]",
+        "org": "Domains By Proxy, LLC",
+        "country": "US"
+      }
+    }
+  }
+]

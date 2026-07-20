@@ -1,0 +1,25 @@
+[
+  {
+    "company_name": "Top Software Developers in Bengaluru",
+    "website": null,
+    "linkedin": null,
+    "industry": "software bangalore",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Clutch",
+    "confidence_score": 20,
+    "lead_quality": "Low",
+    "company_type": "Unknown",
+    "_source_file": "output\\raw\\software_bangalore_20260716_222212.json",
+    "_flags": [
+      "directory_or_article_page",
+      "sparse_no_contact_channel"
+    ]
+  }
+]

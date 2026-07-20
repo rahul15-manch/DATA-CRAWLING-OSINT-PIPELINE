@@ -1,0 +1,14 @@
+PILLAR 2 — LEAD CLEANING REPORT
+========================================
+Input files: output\raw\manufacturing_20260710_190452.json
+Total raw records: 7
+Duplicates removed: 0
+Records after dedup: 7
+
+CLEAN records (no issues): 7
+FLAGGED records (need review/enrichment): 0
+
+Flag breakdown:
+
+NOTE: Live MX-record email verification was NOT run (no network
+access in this environment). See verify_mx() in the script for the hook.

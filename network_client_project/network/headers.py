@@ -35,7 +35,7 @@ class HeaderManager:
         """
         # The 'Grease' pattern: Browsers intentionally send a randomized brand 
         # to ensure servers don't hardcode specific browser names.
-        grease_brand = f'"Not A(Brand";v="99", "Google Chrome";v="{chrome_version}", "Chromium";v="{chrome_version}"'
+        grease_brand = f'"Chromium";v="{chrome_version}", "Not-A.Brand";v="99", "Google Chrome";v="{chrome_version}"'
         
         return {
             "sec-ch-ua": grease_brand,
@@ -95,5 +95,11 @@ class HeaderManager:
         else:
             # Emulate a standard URL bar navigation
             headers.update(self.get_sec_fetch_headers(mode="navigate", dest="document", site="none"))
+
+        # 4. Viewport & Timezone Fingerprint Rotation
+        vw = random.choice([1280, 1366, 1440, 1920])
+        headers["sec-ch-viewport-width"] = str(vw)
+        headers["viewport-width"] = str(vw)
+        headers["sec-ch-timezone-offset"] = random.choice(["-300", "0", "300", "-480"])
 
         return headers

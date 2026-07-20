@@ -1,0 +1,31 @@
+[
+  {
+    "company_name": "Insightglobal",
+    "website": "https://insightglobal.com/industries/engineering/",
+    "linkedin": null,
+    "industry": "engineering",
+    "location": null,
+    "contact_page": "https://insightglobal.com/contact/",
+    "about_page": "https://insightglobal.com/about/",
+    "team_page": "https://insightglobal.com/transformation/culture-leadership/",
+    "emails": [],
+    "phones": [
+      "+1 855 485 8732",
+      "855-485-8853"
+    ],
+    "social_links": {
+      "instagram.com": "https://www.instagram.com/insight_global/?hl=en",
+      "linkedin.com": "https://www.linkedin.com/company/insight-global/",
+      "x.com": "https://x.com/insightglobal"
+    },
+    "people": [],
+    "source": "Google",
+    "confidence_score": 70,
+    "lead_quality": "High",
+    "company_type": "Agency",
+    "_source_file": "output\\raw\\engineering_20260711_131245.json",
+    "_flags": [
+      "email_junk:julia.koslowsky@insightglobal.com-0-150x150.jpg"
+    ]
+  }
+]

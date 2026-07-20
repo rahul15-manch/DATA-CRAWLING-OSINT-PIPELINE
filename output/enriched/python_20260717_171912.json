@@ -1,0 +1,76 @@
+[
+  {
+    "company_name": "Django",
+    "website": "https://www.djangoproject.com/",
+    "linkedin": null,
+    "industry": "Software_Development",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "confidence_score": 50,
+    "lead_quality": "Medium",
+    "company_type": "Unknown",
+    "relevance_score": 50,
+    "relevance_tier": "LOW",
+    "relevance_info": {
+      "score": 50,
+      "tier": "LOW",
+      "matched_signals": [
+        "Description",
+        "Technologies"
+      ],
+      "rejected_signals": [
+        "Services",
+        "Products",
+        "Positions",
+        "Blog/Articles"
+      ],
+      "score_breakdown": {
+        "description": 33.0,
+        "services": 0.0,
+        "technologies": 22.0,
+        "products": 0.0,
+        "positions": 0.0,
+        "blog": 0.0
+      },
+      "industry": "Software_Development",
+      "confidence": 0.5,
+      "aborted": false,
+      "company_type": "Education",
+      "semantic_trace": [
+        "Matched Description with concepts: ['Python']",
+        "Matched Technologies: ['Python']"
+      ],
+      "technologies": [
+        "Python"
+      ],
+      "products": [],
+      "website": "",
+      "website_source": ""
+    },
+    "_source_file": "output\\raw\\python_20260717_171912.json",
+    "_flags": [],
+    "_verified_emails": [],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "domain_source": "existing_website",
+      "whois": {
+        "registrar": "Gandi SAS",
+        "creation_date": "[datetime.datetime(2005, 4, 4, 19, 49, 7, tzinfo=tzoffset('UTC', 0)), datetime.datetime(2005, 4, 4, 17, 49, 7, tzinfo=tzoffset('UTC', 0))]",
+        "org": "Django Software Foundation",
+        "country": "US"
+      }
+    }
+  }
+]

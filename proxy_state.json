@@ -1,0 +1,277 @@
+{
+  "34.87.80.221:30000": {
+    "score": 100.0,
+    "google_successes": 0,
+    "google_captchas": 0,
+    "google_429s": 0,
+    "consecutive_failures": 2,
+    "consecutive_blocks": {},
+    "dead": true,
+    "google_status": "healthy",
+    "bing_status": "healthy",
+    "general_status": "dead",
+    "last_success_ts": null,
+    "last_failure_ts": 1784448824.2146702,
+    "latency_samples": [
+      26.454450130462646
+    ],
+    "outcome_history": [
+      [
+        1784448689.5817852,
+        "TRANSPORT_CONNECTION_ERROR"
+      ],
+      [
+        1784448824.2146702,
+        "TRANSPORT_TIMEOUT"
+      ]
+    ],
+    "quarantine_until": null,
+    "quarantine_step": 0,
+    "inactive": false,
+    "dead_for_google": false,
+    "dead_for_bing": false,
+    "consecutive_timeouts": {},
+    "provider_capabilities": {
+      "google": "DEAD",
+      "bing": "GOOD",
+      "duckduckgo": "GOOD",
+      "brave": "GOOD",
+      "directory": "GOOD",
+      "general_crawl": "TIMEOUT"
+    }
+  },
+  "47.81.56.193:8888": {
+    "score": 100.0,
+    "google_successes": 0,
+    "google_captchas": 0,
+    "google_429s": 0,
+    "consecutive_failures": 0,
+    "consecutive_blocks": {},
+    "dead": true,
+    "google_status": "healthy",
+    "bing_status": "healthy",
+    "general_status": "dead",
+    "last_success_ts": null,
+    "last_failure_ts": null,
+    "latency_samples": [],
+    "outcome_history": [],
+    "quarantine_until": null,
+    "quarantine_step": 0,
+    "inactive": false,
+    "dead_for_google": false,
+    "dead_for_bing": false,
+    "consecutive_timeouts": {},
+    "provider_capabilities": {
+      "google": "GOOD",
+      "bing": "GOOD",
+      "duckduckgo": "GOOD",
+      "brave": "GOOD",
+      "directory": "GOOD",
+      "general_crawl": "TLS_ERROR"
+    }
+  },
+  "217.182.203.184:8888": {
+    "score": 94.0,
+    "google_successes": 0,
+    "google_captchas": 0,
+    "google_429s": 0,
+    "consecutive_failures": 2,
+    "consecutive_blocks": {},
+    "dead": true,
+    "google_status": "healthy",
+    "bing_status": "healthy",
+    "general_status": "dead",
+    "last_success_ts": null,
+    "last_failure_ts": 1784455114.9975603,
+    "latency_samples": [
+      6.606708526611328,
+      5.431594610214233
+    ],
+    "outcome_history": [
+      [
+        1784448729.822051,
+        "TRANSPORT_CONNECTION_ERROR"
+      ],
+      [
+        1784455114.9975603,
+        "TRANSPORT_CONNECTION_ERROR"
+      ]
+    ],
+    "quarantine_until": null,
+    "quarantine_step": 0,
+    "inactive": false,
+    "dead_for_google": false,
+    "dead_for_bing": false,
+    "consecutive_timeouts": {},
+    "provider_capabilities": {
+      "google": "DEAD",
+      "bing": "GOOD",
+      "duckduckgo": "GOOD",
+      "brave": "GOOD",
+      "directory": "GOOD",
+      "general_crawl": "GOOD"
+    }
+  },
+  "181.39.25.196:8118": {
+    "score": 94.0,
+    "google_successes": 0,
+    "google_captchas": 0,
+    "google_429s": 0,
+    "consecutive_failures": 1,
+    "consecutive_blocks": {},
+    "dead": false,
+    "google_status": "healthy",
+    "bing_status": "healthy",
+    "general_status": "healthy",
+    "last_success_ts": 1784455181.389385,
+    "last_failure_ts": 1784455958.1914601,
+    "latency_samples": [
+      3.25183367729187,
+      2.90877628326416,
+      4.114028692245483,
+      3.8894155025482178,
+      22.141679763793945
+    ],
+    "outcome_history": [
+      [
+        1784448775.927811,
+        "TRANSPORT_CONNECTION_ERROR"
+      ],
+      [
+        1784455173.9483213,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1784455174.2841904,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1784455180.4858956,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1784455181.389385,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1784455958.1914601,
+        "TRANSPORT_CONNECTION_ERROR"
+      ]
+    ],
+    "quarantine_until": null,
+    "quarantine_step": 0,
+    "inactive": false,
+    "dead_for_google": false,
+    "dead_for_bing": false,
+    "consecutive_timeouts": {
+      "in.linkedin.com": 0,
+      "www.linkedin.com": 0
+    },
+    "provider_capabilities": {
+      "google": "DEAD",
+      "bing": "GOOD",
+      "duckduckgo": "GOOD",
+      "brave": "GOOD",
+      "directory": "GOOD",
+      "general_crawl": "SLOW"
+    }
+  },
+  "52.67.38.58:3128": {
+    "score": 84.0,
+    "google_successes": 0,
+    "google_captchas": 1,
+    "google_429s": 0,
+    "consecutive_failures": 1,
+    "consecutive_blocks": {
+      "www.google.com": 1
+    },
+    "dead": true,
+    "google_status": "healthy",
+    "bing_status": "healthy",
+    "general_status": "dead",
+    "last_success_ts": null,
+    "last_failure_ts": 1784455935.399152,
+    "latency_samples": [
+      31.46100354194641,
+      14.373963356018066,
+      35.272114276885986
+    ],
+    "outcome_history": [
+      [
+        1784448721.931578,
+        "TRANSPORT_CONNECTION_ERROR"
+      ],
+      [
+        1784455130.1204581,
+        "GOOGLE_CAPTCHA"
+      ],
+      [
+        1784455935.399152,
+        "TRANSPORT_CONNECTION_ERROR"
+      ]
+    ],
+    "quarantine_until": null,
+    "quarantine_step": 0,
+    "inactive": false,
+    "dead_for_google": false,
+    "dead_for_bing": false,
+    "consecutive_timeouts": {},
+    "provider_capabilities": {
+      "google": "DEAD",
+      "bing": "GOOD",
+      "duckduckgo": "GOOD",
+      "brave": "GOOD",
+      "directory": "GOOD",
+      "general_crawl": "GOOD"
+    }
+  },
+  "34.134.231.117:3129": {
+    "score": 90.0,
+    "google_successes": 0,
+    "google_captchas": 1,
+    "google_429s": 0,
+    "consecutive_failures": 0,
+    "consecutive_blocks": {
+      "www.google.com": 1
+    },
+    "dead": true,
+    "google_status": "healthy",
+    "bing_status": "healthy",
+    "general_status": "dead",
+    "last_success_ts": null,
+    "last_failure_ts": 1784455134.1655877,
+    "latency_samples": [
+      30.05495524406433,
+      10.959033966064453,
+      2.750516891479492
+    ],
+    "outcome_history": [
+      [
+        1784448760.4367766,
+        "TRANSPORT_CONNECTION_ERROR"
+      ],
+      [
+        1784449452.7378743,
+        "TRANSPORT_CONNECTION_ERROR"
+      ],
+      [
+        1784455134.1655877,
+        "GOOGLE_CAPTCHA"
+      ]
+    ],
+    "quarantine_until": null,
+    "quarantine_step": 0,
+    "inactive": false,
+    "dead_for_google": false,
+    "dead_for_bing": false,
+    "consecutive_timeouts": {},
+    "provider_capabilities": {
+      "google": "CAPTCHA",
+      "bing": "GOOD",
+      "duckduckgo": "GOOD",
+      "brave": "GOOD",
+      "directory": "GOOD",
+      "general_crawl": "GOOD"
+    }
+  }
+}

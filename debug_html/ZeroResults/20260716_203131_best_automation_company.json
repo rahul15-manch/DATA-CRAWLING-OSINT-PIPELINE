@@ -1,0 +1,24 @@
+{
+  "timestamp": "2026-07-16T20:31:31.968879",
+  "query": "best automation company",
+  "classification": "ZERO_RESULTS_PAGE",
+  "url": "https://www.google.com/search?q=best+automation+company&num=10&hl=en&gl=us",
+  "status_code": 200,
+  "redirect_chain": [
+    "https://www.google.com/search?q=best+automation+company&num=10&hl=en&gl=us"
+  ],
+  "response_headers": {
+    "date": "Thu, 16 Jul 2026 15:01:27 GMT",
+    "server": "gws",
+    "last-modified": "Sun, 08 Aug 2021 23:46:59 GMT",
+    "content-type": "text/html; charset=UTF-8",
+    "cache-control": "public, max-age=2592000",
+    "content-length": "327274",
+    "x-xss-protection": "0",
+    "x-frame-options": "SAMEORIGIN"
+  },
+  "layout_fingerprint": "a3748631ad94f6ab5a6f284812e3e6b7",
+  "detected_signals": [
+    "did not match any documents"
+  ]
+}

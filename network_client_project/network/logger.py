@@ -80,7 +80,11 @@ class NetworkLogger:
         status_code: int, 
         latency_ms: float, 
         proxy_url: Optional[str] = None,
-        retries: int = 0
+        retries: int = 0,
+        user_agent: Optional[str] = None,
+        proxy_rotated: bool = False,
+        proxy_failed: bool = False,
+        cooldown: float = 0.0
     ):
         """
         A standardized way to log network telemetry data.
@@ -97,19 +101,29 @@ class NetworkLogger:
             else:
                 p_mask = proxy_url
 
-        msg = (
-            f"[{method}] {domain} | "
-            f"Status: {status_code} | "
-            f"Latency: {latency_ms:.0f}ms | "
-            f"Proxy: {p_mask} | "
+        ua_mask = user_agent[:30] + "..." if user_agent and len(user_agent) > 30 else (user_agent or "Unknown")
+
+        msg_parts = [
+            f"[{method}] {domain}",
+            f"Status: {status_code}",
+            f"Latency: {latency_ms:.0f}ms",
+            f"Proxy: {p_mask}",
+            f"UA: {ua_mask}",
             f"Retries: {retries}"
-        )
+        ]
         
-        if 200 <= status_code < 300:
+        if proxy_rotated:
+            msg_parts.append("ROTATED")
+        if proxy_failed:
+            msg_parts.append(f"FAILED (Cooldown: {cooldown}s)")
+
+        msg = " | ".join(msg_parts)
+        
+        if 200 <= status_code < 300 and not proxy_failed:
             logger_instance.info(msg)
-        elif 300 <= status_code < 400:
+        elif 300 <= status_code < 400 and not proxy_failed:
             logger_instance.info(f"Redirect: {msg}")
-        elif 400 <= status_code < 500:
-            logger_instance.warning(f"Client Error: {msg}")
+        elif (400 <= status_code < 500) or proxy_failed:
+            logger_instance.warning(f"Client/Proxy Error: {msg}")
         else:
             logger_instance.error(f"Server Error: {msg}")

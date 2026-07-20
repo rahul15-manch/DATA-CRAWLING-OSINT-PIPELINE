@@ -1,0 +1,4212 @@
+[
+  {
+    "company_name": "Databasesets",
+    "website": "https://hkg.databasesets.com/en/gongsimingdan/type/Engineering",
+    "linkedin": null,
+    "industry": "Civil Engineering",
+    "location": null,
+    "contact_page": null,
+    "about_page": "https://hkg.databasesets.com/en/recommendation-list",
+    "team_page": "https://hkg.databasesets.com/en/gongsimingdan/number/80801917",
+    "emails": [
+      "contact@databasesets.com"
+    ],
+    "phones": [
+      "2-20110095-16",
+      "2026-07-09",
+      "2026-07-10 00",
+      "42010302000324"
+    ],
+    "social_links": {
+      "twitter.com": "https://twitter.com/HKDATABASE_",
+      "facebook.com": "https://www.facebook.com/profile.php?id=100082861291812"
+    },
+    "people": [],
+    "source": "Google",
+    "confidence_score": 66,
+    "lead_quality": "Medium",
+    "company_type": "Software Company",
+    "_source_file": "output\\raw\\engineering_20260711_131245.json",
+    "_flags": [],
+    "_verified_emails": [
+      "contact@databasesets.com"
+    ],
+    "_verified_phones": [
+      "2026-07-10 00"
+    ],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "emails": {
+        "contact@databasesets.com": "ok"
+      },
+      "phones": {
+        "2-20110095-16": "not_valid_number",
+        "2026-07-09": "not_valid_number",
+        "2026-07-10 00": "ok",
+        "42010302000324": "not_possible_length"
+      },
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "domain_source": "existing_website",
+      "whois": {
+        "error": "python-whois not installed"
+      }
+    }
+  },
+  {
+    "company_name": "Engineeringcom",
+    "website": "https://www.engineering.com/",
+    "linkedin": null,
+    "industry": "engineering",
+    "location": null,
+    "contact_page": "https://www.engineering.com/contact/",
+    "about_page": "https://www.engineering.com/voices/",
+    "team_page": null,
+    "emails": [
+      "info@engineering.com",
+      "newsroom@engineering.com",
+      "editors@engineering.com"
+    ],
+    "phones": [
+      "888-543-2447"
+    ],
+    "social_links": {
+      "facebook.com": "https://www.facebook.com/engineeringcom",
+      "instagram.com": "https://www.instagram.com/engineeringdotcom",
+      "twitter.com": "https://twitter.com/engineeringcom",
+      "linkedin.com": "https://www.linkedin.com/company/1844762/admin/feed/posts/"
+    },
+    "people": [],
+    "source": "Google",
+    "confidence_score": 66,
+    "lead_quality": "Medium",
+    "company_type": "Industrial",
+    "_source_file": "output\\raw\\engineering_20260711_131245.json",
+    "_flags": [],
+    "_verified_emails": [
+      "info@engineering.com",
+      "newsroom@engineering.com",
+      "editors@engineering.com"
+    ],
+    "_verified_phones": [
+      "888-543-2447"
+    ],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "emails": {
+        "info@engineering.com": "ok",
+        "newsroom@engineering.com": "ok",
+        "editors@engineering.com": "ok"
+      },
+      "phones": {
+        "888-543-2447": "ok"
+      },
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "domain_source": "existing_website",
+      "whois": {
+        "error": "python-whois not installed"
+      }
+    }
+  },
+  {
+    "company_name": "Jec",
+    "website": "https://www.jec.com/",
+    "linkedin": null,
+    "industry": "engineering",
+    "location": null,
+    "contact_page": "https://www.jec.com/contact-us/",
+    "about_page": "https://www.jec.com/about-us/",
+    "team_page": "https://www.jec.com/about-us/#our-management",
+    "emails": [
+      "jecsingapore@jec.com",
+      "jecthailand@jec.com",
+      "jecmyanmar@jec.com",
+      "jecmacau@jec.com",
+      "jec@jec.com",
+      "jecchina@jec.com"
+    ],
+    "phones": [
+      "+632 843 6020",
+      "+632 844 2235",
+      "+65 6362 0660",
+      "+65 6362 0770",
+      "+66 2079 5999",
+      "+66 2615 2991-4",
+      "+852 2807 1717",
+      "+852 2887 9090",
+      "+853 2825 3076",
+      "+853 2825 3077",
+      "+86 755 8238 3928",
+      "+86 755 8238 3938",
+      "+95 9 761496198"
+    ],
+    "social_links": {
+      "linkedin.com": "https://hk.linkedin.com/company/jardine-engineering-corporation"
+    },
+    "people": [
+      {
+        "name": "Michelle Tao",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Edmond Lai",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Carman Lau",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Chris Chong",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "John Chan",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Franklin Lau",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Tam Chun Kit",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Alex Law",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Frankie Chan",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Rachaphan Kovitarngkoon",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Derek Chan",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Edwin H. Hernandez",
+        "designation": "President",
+        "decision_maker_score": 85
+      }
+    ],
+    "source": "Google",
+    "confidence_score": 83,
+    "lead_quality": "High",
+    "company_type": "Industrial",
+    "_source_file": "output\\raw\\engineering_20260711_131245.json",
+    "_flags": [],
+    "_verified_emails": [
+      "jecsingapore@jec.com",
+      "jecthailand@jec.com",
+      "jecmyanmar@jec.com",
+      "jecmacau@jec.com",
+      "jec@jec.com",
+      "jecchina@jec.com"
+    ],
+    "_verified_phones": [
+      "+65 6362 0660",
+      "+65 6362 0770",
+      "+66 2079 5999",
+      "+852 2807 1717",
+      "+852 2887 9090",
+      "+853 2825 3076",
+      "+853 2825 3077",
+      "+86 755 8238 3928",
+      "+86 755 8238 3938",
+      "+95 9 761496198"
+    ],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "emails": {
+        "jecsingapore@jec.com": "ok",
+        "jecthailand@jec.com": "ok",
+        "jecmyanmar@jec.com": "ok",
+        "jecmacau@jec.com": "ok",
+        "jec@jec.com": "ok",
+        "jecchina@jec.com": "ok"
+      },
+      "phones": {
+        "+632 843 6020": "not_valid_number",
+        "+632 844 2235": "not_valid_number",
+        "+65 6362 0660": "ok",
+        "+65 6362 0770": "ok",
+        "+66 2079 5999": "ok",
+        "+66 2615 2991-4": "not_valid_number",
+        "+852 2807 1717": "ok",
+        "+852 2887 9090": "ok",
+        "+853 2825 3076": "ok",
+        "+853 2825 3077": "ok",
+        "+86 755 8238 3928": "ok",
+        "+86 755 8238 3938": "ok",
+        "+95 9 761496198": "ok"
+      },
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "domain_source": "existing_website",
+      "whois": {
+        "error": "python-whois not installed"
+      }
+    }
+  },
+  {
+    "company_name": "Rec Eng",
+    "website": "https://www.rec-eng.com/",
+    "linkedin": null,
+    "industry": "Mechanical Engineering",
+    "location": null,
+    "contact_page": "https://www.rec-eng.com/contact/",
+    "about_page": "https://www.rec-eng.com/about/",
+    "team_page": null,
+    "emails": [
+      "info@rec-eng.com"
+    ],
+    "phones": [
+      "2619 8888"
+    ],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "confidence_score": 66,
+    "lead_quality": "Medium",
+    "company_type": "Industrial",
+    "_source_file": "output\\raw\\engineering_20260711_131245.json",
+    "_flags": [],
+    "_verified_emails": [
+      "info@rec-eng.com"
+    ],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "emails": {
+        "info@rec-eng.com": "ok"
+      },
+      "phones": {
+        "2619 8888": "not_valid_number"
+      },
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "domain_source": "existing_website",
+      "whois": {
+        "error": "python-whois not installed"
+      }
+    }
+  },
+  {
+    "company_name": "Sourceforge",
+    "website": "https://sourceforge.net/software/engineering/",
+    "linkedin": null,
+    "industry": "engineering",
+    "location": null,
+    "contact_page": null,
+    "about_page": "https://sourceforge.net/about",
+    "team_page": "https://sourceforge.net/software/engineering/?feature_engineering=Document+Management",
+    "emails": [],
+    "phones": [
+      "(858) 454-5900",
+      "+1 (858) 422-6466",
+      "3.000.000",
+      "501-1000"
+    ],
+    "social_links": {
+      "x.com": "https://x.com/sourceforge",
+      "facebook.com": "https://www.facebook.com/sourceforgenet/",
+      "linkedin.com": "https://www.linkedin.com/company/sourceforge.net"
+    },
+    "people": [],
+    "source": "Google",
+    "confidence_score": 56,
+    "lead_quality": "Medium",
+    "company_type": "Software Company",
+    "_source_file": "output\\raw\\engineering_20260711_131245.json",
+    "_flags": [],
+    "_verified_emails": [],
+    "_verified_phones": [
+      "(858) 454-5900",
+      "+1 (858) 422-6466"
+    ],
+    "_website_reachable": false,
+    "_verification_notes": {
+      "phones": {
+        "(858) 454-5900": "ok",
+        "+1 (858) 422-6466": "ok",
+        "3.000.000": "not_valid_number",
+        "501-1000": "not_valid_number"
+      },
+      "website": "http_403"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "domain_source": "existing_website",
+      "whois": {
+        "error": "python-whois not installed"
+      }
+    }
+  },
+  {
+    "company_name": "Topbusinesssoftware",
+    "website": "https://topbusinesssoftware.com/categories/engineering/",
+    "linkedin": null,
+    "industry": "Artificial Intelligence",
+    "location": null,
+    "contact_page": "https://topbusinesssoftware.com/contact",
+    "about_page": "https://topbusinesssoftware.com/about",
+    "team_page": "https://topbusinesssoftware.com/categories/engineering/?feature_engineering=Document+Management",
+    "emails": [],
+    "phones": [
+      "+1 (858) 777-7979"
+    ],
+    "social_links": {
+      "x.com": "https://x.com/topbusinesssoft",
+      "linkedin.com": "https://www.linkedin.com/company/top-business-software/"
+    },
+    "people": [],
+    "source": "Google",
+    "confidence_score": 60,
+    "lead_quality": "Medium",
+    "company_type": "Software Company",
+    "_source_file": "output\\raw\\engineering_20260711_131245.json",
+    "_flags": [],
+    "_verified_emails": [],
+    "_verified_phones": [
+      "+1 (858) 777-7979"
+    ],
+    "_website_reachable": false,
+    "_verification_notes": {
+      "phones": {
+        "+1 (858) 777-7979": "ok"
+      },
+      "website": "http_403"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "domain_source": "existing_website",
+      "whois": {
+        "error": "python-whois not installed"
+      }
+    }
+  },
+  {
+    "company_name": "Lvssn",
+    "website": "https://www.lvssn.com/",
+    "linkedin": null,
+    "industry": "engineering",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [],
+    "phones": [
+      "+86 25 86557767",
+      "+90 539 734 48 63",
+      "2023034559"
+    ],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "confidence_score": 46,
+    "lead_quality": "Medium",
+    "company_type": "Industrial",
+    "_source_file": "output\\raw\\engineering_20260711_131245.json",
+    "_flags": [],
+    "_verified_emails": [],
+    "_verified_phones": [
+      "+86 25 86557767",
+      "+90 539 734 48 63",
+      "2023034559"
+    ],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "phones": {
+        "+86 25 86557767": "ok",
+        "+90 539 734 48 63": "ok",
+        "2023034559": "ok"
+      },
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "domain_source": "existing_website",
+      "whois": {
+        "error": "python-whois not installed"
+      }
+    }
+  },
+  {
+    "company_name": "Engsolu",
+    "website": "https://www.engsolu.com/",
+    "linkedin": null,
+    "industry": "Artificial Intelligence",
+    "location": null,
+    "contact_page": "https://www.engsolu.com/contact-us",
+    "about_page": null,
+    "team_page": "https://www.engsolu.com/team",
+    "emails": [
+      "user@domain.com"
+    ],
+    "phones": [
+      "10001 (212) 840-1030",
+      "10001 212.840.1030"
+    ],
+    "social_links": {
+      "linkedin.com": "https://www.linkedin.com/company/engineering-solutions-pllc/",
+      "facebook.com": "https://www.facebook.com/Engineering-Solutions-PLLC-815552428478455/?ref=aymt_homepage_panel",
+      "x.com": "https://x.com/EngSoluNYC",
+      "instagram.com": "https://www.instagram.com/engsolu/"
+    },
+    "people": [],
+    "source": "Google",
+    "confidence_score": 66,
+    "lead_quality": "Medium",
+    "company_type": "Consultancy",
+    "_source_file": "output\\raw\\engineering_20260711_131245.json",
+    "_flags": [],
+    "_verified_emails": [
+      "user@domain.com"
+    ],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "emails": {
+        "user@domain.com": "ok"
+      },
+      "phones": {
+        "10001 (212) 840-1030": "not_possible_length",
+        "10001 212.840.1030": "not_possible_length"
+      },
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "domain_source": "existing_website",
+      "whois": {
+        "error": "python-whois not installed"
+      }
+    }
+  },
+  {
+    "company_name": "Worldmetrics",
+    "website": "https://worldmetrics.org/best/engineering-industry-software/",
+    "linkedin": null,
+    "industry": "engineering",
+    "location": null,
+    "contact_page": "https://worldmetrics.org/contact-us/",
+    "about_page": "https://worldmetrics.org/about/",
+    "team_page": "https://worldmetrics.org/about/#team",
+    "emails": [
+      "info@worldmetrics.org"
+    ],
+    "phones": [],
+    "social_links": {
+      "linkedin.com": "https://www.linkedin.com/company/worldmetrics/"
+    },
+    "people": [
+      {
+        "name": "Our Story",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      }
+    ],
+    "source": "Google",
+    "confidence_score": 69,
+    "lead_quality": "Medium",
+    "company_type": "Software Company",
+    "_source_file": "output\\raw\\engineering_20260711_131245.json",
+    "_flags": [],
+    "_verified_emails": [
+      "info@worldmetrics.org"
+    ],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "emails": {
+        "info@worldmetrics.org": "ok"
+      },
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "domain_source": "existing_website",
+      "whois": {
+        "error": "python-whois not installed"
+      }
+    }
+  },
+  {
+    "company_name": "Engineering Software",
+    "website": "https://www.engineering-software.com/",
+    "linkedin": null,
+    "industry": "engineering",
+    "location": null,
+    "contact_page": "https://www.engineering-software.com/ContactUs.aspx",
+    "about_page": null,
+    "team_page": "https://www.engineering-software.com/Steam-Tables-IF97",
+    "emails": [
+      "name@domain.tld"
+    ],
+    "phones": [
+      "1-888-482-4507"
+    ],
+    "social_links": {
+      "twitter.com": "https://twitter.com/share"
+    },
+    "people": [],
+    "source": "Google",
+    "confidence_score": 66,
+    "lead_quality": "Medium",
+    "company_type": "Software Company",
+    "_source_file": "output\\raw\\engineering_20260711_131245.json",
+    "_flags": [],
+    "_verified_emails": [],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "emails": {
+        "name@domain.tld": "domain_does_not_exist"
+      },
+      "phones": {
+        "1-888-482-4507": "not_valid_number"
+      },
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "domain_source": "existing_website",
+      "whois": {
+        "error": "python-whois not installed"
+      }
+    }
+  },
+  {
+    "company_name": "Es Engineers",
+    "website": "https://es-engineers.com/",
+    "linkedin": null,
+    "industry": "Civil Engineering",
+    "location": null,
+    "contact_page": "https://es-engineers.com/contact/",
+    "about_page": "https://es-engineers.com/about/",
+    "team_page": null,
+    "emails": [
+      "info@es-engineers.com"
+    ],
+    "phones": [
+      "(561) 866-5552"
+    ],
+    "social_links": {
+      "facebook.com": "https://www.facebook.com/es.engineers/",
+      "linkedin.com": "https://www.linkedin.com/company/engineering-solutions-es/",
+      "instagram.com": "https://www.instagram.com/es_engineers/"
+    },
+    "people": [],
+    "source": "Google",
+    "confidence_score": 66,
+    "lead_quality": "Medium",
+    "company_type": "Consultancy",
+    "_source_file": "output\\raw\\engineering_20260711_131245.json",
+    "_flags": [],
+    "_verified_emails": [
+      "info@es-engineers.com"
+    ],
+    "_verified_phones": [
+      "(561) 866-5552"
+    ],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "emails": {
+        "info@es-engineers.com": "ok"
+      },
+      "phones": {
+        "(561) 866-5552": "ok"
+      },
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "domain_source": "existing_website",
+      "whois": {
+        "error": "python-whois not installed"
+      }
+    }
+  },
+  {
+    "company_name": "Accenture",
+    "website": "https://www.accenture.com/us-en/services/digital-engineering-manufacturing/engineering-services",
+    "linkedin": null,
+    "industry": "engineering",
+    "location": null,
+    "contact_page": "https://www.accenture.com/us-en/about/contact-us",
+    "about_page": "https://www.accenture.com/us-en/about/company-index",
+    "team_page": "https://www.accenture.com/us-en/services/finance-risk",
+    "emails": [],
+    "phones": [
+      "1 (216) 672-0266",
+      "1 (877) 889-9009"
+    ],
+    "social_links": {
+      "linkedin.com": "https://www.linkedin.com/company/accenture",
+      "facebook.com": "https://www.facebook.com/accenture",
+      "instagram.com": "https://www.instagram.com/accenture/"
+    },
+    "people": [
+      {
+        "name": "Partners in change",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Jason Dess",
+        "designation": "CFO",
+        "decision_maker_score": 70
+      },
+      {
+        "name": "Craig Richey",
+        "designation": "CFO",
+        "decision_maker_score": 70
+      },
+      {
+        "name": "Paul Prendergast",
+        "designation": "CFO",
+        "decision_maker_score": 70
+      },
+      {
+        "name": "Paul Zanker",
+        "designation": "CFO",
+        "decision_maker_score": 70
+      }
+    ],
+    "source": "Google",
+    "confidence_score": 71,
+    "lead_quality": "High",
+    "company_type": "Industrial",
+    "_source_file": "output\\raw\\engineering_20260711_131245.json",
+    "_flags": [],
+    "_verified_emails": [],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "phones": {
+        "1 (216) 672-0266": "not_valid_number",
+        "1 (877) 889-9009": "not_valid_number"
+      },
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "domain_source": "existing_website",
+      "whois": {
+        "error": "python-whois not installed"
+      }
+    }
+  },
+  {
+    "company_name": "Engsolutions",
+    "website": "https://www.engsolutions-llc.com/",
+    "linkedin": null,
+    "industry": "engineering",
+    "location": null,
+    "contact_page": "https://www.engsolutions-llc.com/contact-us",
+    "about_page": "https://www.engsolutions-llc.com/about",
+    "team_page": null,
+    "emails": [
+      "scott@engsolutions-llc.com",
+      "user@domain.com"
+    ],
+    "phones": [
+      "316-772-2077",
+      "772-2077"
+    ],
+    "social_links": {
+      "facebook.com": "https://www.facebook.com/Engineering-Solutions-114321236986527/",
+      "linkedin.com": "https://www.linkedin.com/company/engineering-solutions-llc-kansas/"
+    },
+    "people": [],
+    "source": "Google",
+    "confidence_score": 66,
+    "lead_quality": "Medium",
+    "company_type": "Industrial",
+    "_source_file": "output\\raw\\engineering_20260711_131245.json",
+    "_flags": [],
+    "_verified_emails": [
+      "scott@engsolutions-llc.com",
+      "user@domain.com"
+    ],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "emails": {
+        "scott@engsolutions-llc.com": "ok",
+        "user@domain.com": "ok"
+      },
+      "phones": {
+        "316-772-2077": "not_valid_number",
+        "772-2077": "not_valid_number"
+      },
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "domain_source": "existing_website",
+      "whois": {
+        "error": "python-whois not installed"
+      }
+    }
+  },
+  {
+    "company_name": "Engineering Solutions",
+    "website": "https://engineering-solutions-inc.com/",
+    "linkedin": null,
+    "industry": "Artificial Intelligence",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": "https://engineering-solutions-inc.com/services/healthcare-transformation/grant-management/",
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [
+      {
+        "name": "Implementation oversight",
+        "designation": "COO",
+        "decision_maker_score": 75
+      },
+      {
+        "name": "Implementation Governance",
+        "designation": "COO",
+        "decision_maker_score": 75
+      }
+    ],
+    "source": "Google",
+    "confidence_score": 52,
+    "lead_quality": "Medium",
+    "company_type": "Consultancy",
+    "_source_file": "output\\raw\\engineering_20260711_131245.json",
+    "_flags": [],
+    "_verified_emails": [],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "domain_source": "existing_website",
+      "whois": {
+        "error": "python-whois not installed"
+      }
+    }
+  },
+  {
+    "company_name": "Techmahindra",
+    "website": "https://www.techmahindra.com/services/engineering-services/",
+    "linkedin": null,
+    "industry": "Artificial Intelligence",
+    "location": null,
+    "contact_page": "https://www.techmahindra.com/contact-us/",
+    "about_page": "https://www.techmahindra.com/about-us/",
+    "team_page": "https://www.techmahindra.com/about-us/leadership/",
+    "emails": [
+      "ruchie.khanna@techmahindra.com",
+      "investor.relations@techmahindra.com"
+    ],
+    "phones": [
+      "+1 214-974-9907",
+      "+234 812 287 2909",
+      "+254 718 020204",
+      "+27 11 676 2800",
+      "+31 70 304 7700",
+      "+351 967 744 075",
+      "+41 61 225 42 48",
+      "+44 1908 553400",
+      "+44 1908 553600",
+      "+46 31 325 96 87",
+      "+52 55 4164 3431",
+      "+52 55 4164 3453",
+      "+55 11 2123-8100",
+      "+56 2150807600",
+      "+61 1800 153 580",
+      "+61 2 6169 4150",
+      "+61 7 3184 9110",
+      "+61 8 9211 6142",
+      "+62 21 57998222",
+      "+63 26662821",
+      "+63 27360893",
+      "+63 32 410 6491",
+      "+63 32 512 6275",
+      "+65 6439 2035",
+      "+66 2 640 8170",
+      "+81 3-6402-5921",
+      "+84 439142900",
+      "+855 23 972 000",
+      "+86 21 5080 7600",
+      "+86 25 5887 7531",
+      "+91 020 40109111",
+      "+91 120 400 5000",
+      "+91 120 400 8500",
+      "+91 120 488 6800",
+      "+91 120 489 5200",
+      "+91 120 617 6000",
+      "+91 120 6176000",
+      "+91 120 713 5222",
+      "+91 120 713 9500",
+      "+91 20 2540 9000",
+      "+91 20 4225 0000",
+      "+91 20 6627 3000",
+      "+91 22 4975 4800",
+      "+91 22 6688 2000",
+      "+91 33 4446 1000",
+      "+91 40 3063 3535",
+      "+91 40 3063 6363",
+      "+91 40 6636 1209",
+      "+91 422 458 6209",
+      "+91 44 6662 3909",
+      "+91 44 6662 4000",
+      "+91 446619200",
+      "+91 674 662 2001",
+      "+91 674 677 4505",
+      "+91 712 667 2000",
+      "+91 72668400",
+      "+91 80 4058 5200",
+      "+91 80678 07777",
+      "+965 2299 7789",
+      "+971 4 391 1700",
+      "+973 3999 0263",
+      "+974 401267675",
+      "+974 440 297 314",
+      "1050001",
+      "23102-23104",
+      "23202-23204",
+      "243-0021",
+      "2770-203"
+    ],
+    "social_links": {
+      "facebook.com": "https://www.facebook.com/TechMahindra",
+      "x.com": "https://www.x.com/Tech_Mahindra",
+      "linkedin.com": "https://www.linkedin.com/company/tech-mahindra",
+      "instagram.com": "https://www.instagram.com/techmahindra_official/"
+    },
+    "people": [
+      {
+        "name": "About Us",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Featured News",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "ANAND G. MAHINDRA",
+        "designation": "Chairman",
+        "decision_maker_score": 85
+      },
+      {
+        "name": "DR. ANISH SHAH Non-Executive Director",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "DR. ANISH SHAH",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Non-Executive Director",
+        "designation": "CEO",
+        "decision_maker_score": 90
+      },
+      {
+        "name": "MOHIT JOSHI",
+        "designation": "CEO",
+        "decision_maker_score": 90
+      },
+      {
+        "name": "HAIGREVE KHAITAN Independent Director",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "HAIGREVE KHAITAN",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Independent Director",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "DR. MUKTI KHAIRE Independent Director",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "DR. MUKTI KHAIRE",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Independent Director",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "SHIKHA SHARMA Lead Independent Director",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "SHIKHA SHARMA",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Lead Independent Director",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "PENELOPE FOWLER Independent Director",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "PENELOPE FOWLER",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Independent Director",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "NEELAM DHAWAN Independent Director",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "NEELAM DHAWAN",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Independent Director",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "TARUN BAJAJ Independent Director",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "TARUN BAJAJ",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Independent Director",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "PUNEET RENJHEN Non-Executive Director",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "PUNEET RENJHEN",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "MOHIT JOSHI",
+        "designation": "CEO",
+        "decision_maker_score": 90
+      },
+      {
+        "name": "MANISH MANGAL",
+        "designation": "President",
+        "decision_maker_score": 85
+      },
+      {
+        "name": "HARSHUL ASNANI",
+        "designation": "President",
+        "decision_maker_score": 85
+      },
+      {
+        "name": "HARSHVENDRA SOIN",
+        "designation": "President",
+        "decision_maker_score": 85
+      },
+      {
+        "name": "SAHIL DHAWAN",
+        "designation": "President",
+        "decision_maker_score": 85
+      },
+      {
+        "name": "SUMIT KUMAR POPLI",
+        "designation": "President",
+        "decision_maker_score": 85
+      },
+      {
+        "name": "KUNAL PUROHIT",
+        "designation": "President",
+        "decision_maker_score": 85
+      },
+      {
+        "name": "President - Next Gen Verticals",
+        "designation": "President",
+        "decision_maker_score": 85
+      },
+      {
+        "name": "NARASIMHAM RV",
+        "designation": "President",
+        "decision_maker_score": 85
+      },
+      {
+        "name": "BIRENDRA SEN",
+        "designation": "President",
+        "decision_maker_score": 85
+      }
+    ],
+    "source": "Google",
+    "confidence_score": 84,
+    "lead_quality": "High",
+    "company_type": "Industrial",
+    "_source_file": "output\\raw\\engineering_20260711_131245.json",
+    "_flags": [],
+    "_verified_emails": [
+      "ruchie.khanna@techmahindra.com",
+      "investor.relations@techmahindra.com"
+    ],
+    "_verified_phones": [
+      "+1 214-974-9907",
+      "+234 812 287 2909",
+      "+254 718 020204",
+      "+27 11 676 2800",
+      "+31 70 304 7700",
+      "+351 967 744 075",
+      "+41 61 225 42 48",
+      "+44 1908 553400",
+      "+44 1908 553600",
+      "+46 31 325 96 87",
+      "+52 55 4164 3431",
+      "+52 55 4164 3453",
+      "+55 11 2123-8100",
+      "+61 1800 153 580",
+      "+61 2 6169 4150",
+      "+61 7 3184 9110",
+      "+61 8 9211 6142",
+      "+62 21 57998222",
+      "+63 32 410 6491",
+      "+63 32 512 6275",
+      "+65 6439 2035",
+      "+66 2 640 8170",
+      "+81 3-6402-5921",
+      "+855 23 972 000",
+      "+86 21 5080 7600",
+      "+86 25 5887 7531",
+      "+91 020 40109111",
+      "+91 120 400 5000",
+      "+91 120 400 8500",
+      "+91 120 488 6800",
+      "+91 120 489 5200",
+      "+91 120 617 6000",
+      "+91 120 6176000",
+      "+91 120 713 5222",
+      "+91 120 713 9500",
+      "+91 20 2540 9000",
+      "+91 20 4225 0000",
+      "+91 20 6627 3000",
+      "+91 22 4975 4800",
+      "+91 22 6688 2000",
+      "+91 33 4446 1000",
+      "+91 40 3063 3535",
+      "+91 40 3063 6363",
+      "+91 40 6636 1209",
+      "+91 422 458 6209",
+      "+91 44 6662 3909",
+      "+91 44 6662 4000",
+      "+91 674 662 2001",
+      "+91 674 677 4505",
+      "+91 712 667 2000",
+      "+91 80 4058 5200",
+      "+91 80678 07777",
+      "+965 2299 7789",
+      "+971 4 391 1700",
+      "+973 3999 0263",
+      "23202-23204"
+    ],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "emails": {
+        "ruchie.khanna@techmahindra.com": "ok",
+        "investor.relations@techmahindra.com": "ok"
+      },
+      "phones": {
+        "+1 214-974-9907": "ok",
+        "+234 812 287 2909": "ok",
+        "+254 718 020204": "ok",
+        "+27 11 676 2800": "ok",
+        "+31 70 304 7700": "ok",
+        "+351 967 744 075": "ok",
+        "+41 61 225 42 48": "ok",
+        "+44 1908 553400": "ok",
+        "+44 1908 553600": "ok",
+        "+46 31 325 96 87": "ok",
+        "+52 55 4164 3431": "ok",
+        "+52 55 4164 3453": "ok",
+        "+55 11 2123-8100": "ok",
+        "+56 2150807600": "not_valid_number",
+        "+61 1800 153 580": "ok",
+        "+61 2 6169 4150": "ok",
+        "+61 7 3184 9110": "ok",
+        "+61 8 9211 6142": "ok",
+        "+62 21 57998222": "ok",
+        "+63 26662821": "not_valid_number",
+        "+63 27360893": "not_valid_number",
+        "+63 32 410 6491": "ok",
+        "+63 32 512 6275": "ok",
+        "+65 6439 2035": "ok",
+        "+66 2 640 8170": "ok",
+        "+81 3-6402-5921": "ok",
+        "+84 439142900": "not_valid_number",
+        "+855 23 972 000": "ok",
+        "+86 21 5080 7600": "ok",
+        "+86 25 5887 7531": "ok",
+        "+91 020 40109111": "ok",
+        "+91 120 400 5000": "ok",
+        "+91 120 400 8500": "ok",
+        "+91 120 488 6800": "ok",
+        "+91 120 489 5200": "ok",
+        "+91 120 617 6000": "ok",
+        "+91 120 6176000": "ok",
+        "+91 120 713 5222": "ok",
+        "+91 120 713 9500": "ok",
+        "+91 20 2540 9000": "ok",
+        "+91 20 4225 0000": "ok",
+        "+91 20 6627 3000": "ok",
+        "+91 22 4975 4800": "ok",
+        "+91 22 6688 2000": "ok",
+        "+91 33 4446 1000": "ok",
+        "+91 40 3063 3535": "ok",
+        "+91 40 3063 6363": "ok",
+        "+91 40 6636 1209": "ok",
+        "+91 422 458 6209": "ok",
+        "+91 44 6662 3909": "ok",
+        "+91 44 6662 4000": "ok",
+        "+91 446619200": "not_valid_number",
+        "+91 674 662 2001": "ok",
+        "+91 674 677 4505": "ok",
+        "+91 712 667 2000": "ok",
+        "+91 72668400": "not_valid_number",
+        "+91 80 4058 5200": "ok",
+        "+91 80678 07777": "ok",
+        "+965 2299 7789": "ok",
+        "+971 4 391 1700": "ok",
+        "+973 3999 0263": "ok",
+        "+974 401267675": "not_valid_number",
+        "+974 440 297 314": "not_valid_number",
+        "1050001": "not_valid_number",
+        "23102-23104": "not_valid_number",
+        "23202-23204": "ok",
+        "243-0021": "not_valid_number",
+        "2770-203": "not_valid_number"
+      },
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "domain_source": "existing_website",
+      "whois": {
+        "error": "python-whois not installed"
+      }
+    }
+  },
+  {
+    "company_name": "Aecom",
+    "website": "https://aecom.com/services/engineering/",
+    "linkedin": null,
+    "industry": "engineering",
+    "location": null,
+    "contact_page": "https://aecom.com/contact-us",
+    "about_page": "https://aecom.com/about-us",
+    "team_page": "https://aecom.com/about-us/our-leadership/",
+    "emails": [
+      "Businessinquiry.emia@aecom.com",
+      "Businessinquiry.anz@aecom.com",
+      "Businessinquiry.americas@aecom.com",
+      "Businessinquiry.gc@aecom.com",
+      "Businessinquiry.sea@aecom.com",
+      "support@gssdubai.com",
+      "general.Inquiries@aecom.com",
+      "general.inquiries@aecom.com",
+      "Iexternalpeopleservices@aecom.com",
+      "HR.MiddleEast@aecom.com",
+      "AECOM_Payroll@aecom.com",
+      "martha.abate@aecom.com",
+      "retirementplans@aecom.com",
+      "AECOMInvestorRelations@aecom.com",
+      "APHelpDesk@aecom.com",
+      "media@aecom.com",
+      "CorporateResponsibility@aecom.com",
+      "UKIexternalpeopleservices@aecom.com"
+    ],
+    "phones": [
+      "+1 (972) 788-1000",
+      "0808-2349928",
+      "1 312-843-5091",
+      "1-800-200654",
+      "301-944-3259",
+      "844-779-9567",
+      "877-637-4226"
+    ],
+    "social_links": {
+      "facebook.com": "https://www.facebook.com/AecomTechnologyCorporation/",
+      "instagram.com": "https://www.instagram.com/aecom/?hl=en",
+      "linkedin.com": "https://www.linkedin.com/company/aecom",
+      "twitter.com": "https://twitter.com/AECOM"
+    },
+    "people": [
+      {
+        "name": "Troy Rudd",
+        "designation": "Chairman",
+        "decision_maker_score": 85
+      },
+      {
+        "name": "Lara Poloni President",
+        "designation": "President",
+        "decision_maker_score": 85
+      },
+      {
+        "name": "Lara Poloni",
+        "designation": "President",
+        "decision_maker_score": 85
+      }
+    ],
+    "source": "Google",
+    "confidence_score": 83,
+    "lead_quality": "High",
+    "company_type": "Industrial",
+    "_source_file": "output\\raw\\engineering_20260711_131245.json",
+    "_flags": [],
+    "_verified_emails": [
+      "Businessinquiry.emia@aecom.com",
+      "Businessinquiry.anz@aecom.com",
+      "Businessinquiry.americas@aecom.com",
+      "Businessinquiry.gc@aecom.com",
+      "Businessinquiry.sea@aecom.com",
+      "support@gssdubai.com",
+      "general.Inquiries@aecom.com",
+      "general.inquiries@aecom.com",
+      "Iexternalpeopleservices@aecom.com",
+      "HR.MiddleEast@aecom.com",
+      "AECOM_Payroll@aecom.com",
+      "martha.abate@aecom.com",
+      "retirementplans@aecom.com",
+      "AECOMInvestorRelations@aecom.com",
+      "APHelpDesk@aecom.com",
+      "media@aecom.com",
+      "CorporateResponsibility@aecom.com",
+      "UKIexternalpeopleservices@aecom.com"
+    ],
+    "_verified_phones": [
+      "+1 (972) 788-1000",
+      "0808-2349928",
+      "1-800-200654",
+      "301-944-3259",
+      "844-779-9567",
+      "877-637-4226"
+    ],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "emails": {
+        "Businessinquiry.emia@aecom.com": "ok",
+        "Businessinquiry.anz@aecom.com": "ok",
+        "Businessinquiry.americas@aecom.com": "ok",
+        "Businessinquiry.gc@aecom.com": "ok",
+        "Businessinquiry.sea@aecom.com": "ok",
+        "support@gssdubai.com": "ok",
+        "general.Inquiries@aecom.com": "ok",
+        "general.inquiries@aecom.com": "ok",
+        "Iexternalpeopleservices@aecom.com": "ok",
+        "HR.MiddleEast@aecom.com": "ok",
+        "AECOM_Payroll@aecom.com": "ok",
+        "martha.abate@aecom.com": "ok",
+        "retirementplans@aecom.com": "ok",
+        "AECOMInvestorRelations@aecom.com": "ok",
+        "APHelpDesk@aecom.com": "ok",
+        "media@aecom.com": "ok",
+        "CorporateResponsibility@aecom.com": "ok",
+        "UKIexternalpeopleservices@aecom.com": "ok"
+      },
+      "phones": {
+        "+1 (972) 788-1000": "ok",
+        "0808-2349928": "ok",
+        "1 312-843-5091": "not_valid_number",
+        "1-800-200654": "ok",
+        "301-944-3259": "ok",
+        "844-779-9567": "ok",
+        "877-637-4226": "ok"
+      },
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "domain_source": "existing_website",
+      "whois": {
+        "error": "python-whois not installed"
+      }
+    }
+  },
+  {
+    "company_name": "Exp",
+    "website": "https://www.exp.com/",
+    "linkedin": null,
+    "industry": "Artificial Intelligence",
+    "location": null,
+    "contact_page": "https://www.exp.com/contact-us/",
+    "about_page": "https://www.exp.com/about-us/",
+    "team_page": "https://www.exp.com/markets/water/stormwater-management/",
+    "emails": [
+      "one@exp.com",
+      "hrsupport@exp.com"
+    ],
+    "phones": [
+      "+1.312.616.0000",
+      "+1.514.931.1080",
+      "+1.905.796.3200"
+    ],
+    "social_links": {
+      "linkedin.com": "https://www.linkedin.com/company/exp-global-inc/",
+      "instagram.com": "https://www.instagram.com/exp_global_inc/"
+    },
+    "people": [],
+    "source": "Google",
+    "confidence_score": 70,
+    "lead_quality": "High",
+    "company_type": "Software Company",
+    "_source_file": "output\\raw\\engineering_20260711_131245.json",
+    "_flags": [],
+    "_verified_emails": [
+      "one@exp.com",
+      "hrsupport@exp.com"
+    ],
+    "_verified_phones": [
+      "+1.312.616.0000",
+      "+1.514.931.1080",
+      "+1.905.796.3200"
+    ],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "emails": {
+        "one@exp.com": "ok",
+        "hrsupport@exp.com": "ok"
+      },
+      "phones": {
+        "+1.312.616.0000": "ok",
+        "+1.514.931.1080": "ok",
+        "+1.905.796.3200": "ok"
+      },
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "domain_source": "existing_website",
+      "whois": {
+        "error": "python-whois not installed"
+      }
+    }
+  },
+  {
+    "company_name": "Engineering Service",
+    "website": "https://www.engservice.com/",
+    "linkedin": null,
+    "industry": "Artificial Intelligence",
+    "location": null,
+    "contact_page": "https://www.engservice.com/contact/",
+    "about_page": "https://www.engservice.com/about-us/",
+    "team_page": "https://www.engservice.com/wp-content/uploads/2024/01/Drainage-Structures-scaled.jpg",
+    "emails": [
+      "info@engservice.com"
+    ],
+    "phones": [
+      "(601) 939-8737"
+    ],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "confidence_score": 70,
+    "lead_quality": "High",
+    "company_type": "Industrial",
+    "_source_file": "output\\raw\\engineering_20260711_131245.json",
+    "_flags": [],
+    "_verified_emails": [
+      "info@engservice.com"
+    ],
+    "_verified_phones": [
+      "(601) 939-8737"
+    ],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "emails": {
+        "info@engservice.com": "ok"
+      },
+      "phones": {
+        "(601) 939-8737": "ok"
+      },
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "domain_source": "existing_website",
+      "whois": {
+        "error": "python-whois not installed"
+      }
+    }
+  },
+  {
+    "company_name": "Julink",
+    "website": "http://en.julink.net/",
+    "linkedin": null,
+    "industry": "engineering",
+    "location": null,
+    "contact_page": "http://en.julink.net/Contact.html",
+    "about_page": "http://en.julink.net/about.html",
+    "team_page": "http://en.julink.net/product/17/",
+    "emails": [
+      "Market@julink.net",
+      "dm-Nanjing@300.cn",
+      "market@julink.net"
+    ],
+    "phones": [
+      "025-8637 1119",
+      "14030346 -1"
+    ],
+    "social_links": {},
+    "people": [
+      {
+        "name": "Service Sector",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Service Sector",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      }
+    ],
+    "source": "Google",
+    "confidence_score": 82,
+    "lead_quality": "High",
+    "company_type": "Industrial",
+    "_source_file": "output\\raw\\engineering_20260711_131245.json",
+    "_flags": [],
+    "_verified_emails": [
+      "Market@julink.net",
+      "dm-Nanjing@300.cn",
+      "market@julink.net"
+    ],
+    "_verified_phones": [
+      "025-8637 1119"
+    ],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "emails": {
+        "Market@julink.net": "ok",
+        "dm-Nanjing@300.cn": "ok",
+        "market@julink.net": "ok"
+      },
+      "phones": {
+        "025-8637 1119": "ok",
+        "14030346 -1": "not_valid_number"
+      },
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "domain_source": "existing_website",
+      "whois": {
+        "error": "python-whois not installed"
+      }
+    }
+  },
+  {
+    "company_name": "Engsoln",
+    "website": "https://www.engsoln.com/",
+    "linkedin": null,
+    "industry": "Civil Engineering",
+    "location": null,
+    "contact_page": "https://www.engsoln.com/contact/",
+    "about_page": "https://www.engsoln.com/about/",
+    "team_page": "https://www.engsoln.com/about/meet-the-team/",
+    "emails": [
+      "troy@engsoln.com",
+      "tom@engsoln.com",
+      "rachel@engsoln.com"
+    ],
+    "phones": [
+      "(434)-202-8527",
+      "(540) 442-8787",
+      "(804) 433-3124"
+    ],
+    "social_links": {
+      "facebook.com": "https://www.facebook.com/engsoln/",
+      "linkedin.com": "http://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fwww.engsoln.com&title=Engineering%20Solutions",
+      "twitter.com": "http://twitter.com/share?text=Engineering%20Solutions&url=https%3A%2F%2Fwww.engsoln.com"
+    },
+    "people": [],
+    "source": "Google",
+    "confidence_score": 70,
+    "lead_quality": "High",
+    "company_type": "Industrial",
+    "_source_file": "output\\raw\\engineering_20260711_131245.json",
+    "_flags": [],
+    "_verified_emails": [
+      "troy@engsoln.com",
+      "tom@engsoln.com",
+      "rachel@engsoln.com"
+    ],
+    "_verified_phones": [
+      "(804) 433-3124"
+    ],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "emails": {
+        "troy@engsoln.com": "ok",
+        "tom@engsoln.com": "ok",
+        "rachel@engsoln.com": "ok"
+      },
+      "phones": {
+        "(434)-202-8527": "not_valid_number",
+        "(540) 442-8787": "not_valid_number",
+        "(804) 433-3124": "ok"
+      },
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "domain_source": "existing_website",
+      "whois": {
+        "error": "python-whois not installed"
+      }
+    }
+  },
+  {
+    "company_name": "Pcehk",
+    "website": "https://pcehk.com/",
+    "linkedin": null,
+    "industry": "engineering",
+    "location": null,
+    "contact_page": "https://pcehk.com/contact/",
+    "about_page": null,
+    "team_page": "https://pcehk.com/people/",
+    "emails": [
+      "admin@pcehk.com"
+    ],
+    "phones": [
+      "+852 2572 3099",
+      "+852 2572 3988"
+    ],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "confidence_score": 66,
+    "lead_quality": "Medium",
+    "company_type": "Consultancy",
+    "_source_file": "output\\raw\\engineering_20260711_131245.json",
+    "_flags": [],
+    "_verified_emails": [
+      "admin@pcehk.com"
+    ],
+    "_verified_phones": [
+      "+852 2572 3099",
+      "+852 2572 3988"
+    ],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "emails": {
+        "admin@pcehk.com": "ok"
+      },
+      "phones": {
+        "+852 2572 3099": "ok",
+        "+852 2572 3988": "ok"
+      },
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "domain_source": "existing_website",
+      "whois": {
+        "error": "python-whois not installed"
+      }
+    }
+  },
+  {
+    "company_name": "Manningsasia",
+    "website": "https://manningsasia.com/",
+    "linkedin": null,
+    "industry": "engineering",
+    "location": null,
+    "contact_page": "https://manningsasia.com/contact/",
+    "about_page": null,
+    "team_page": "https://manningsasia.com/services-category/drainage-sewerage-impact-assessment-temporary-drainage-management/",
+    "emails": [
+      "manningsasia@manningsasia.com"
+    ],
+    "phones": [
+      "(852) 3168 2022",
+      "(852) 3168 2028",
+      "(852) 3168 2028 (852",
+      "3168 2022"
+    ],
+    "social_links": {
+      "facebook.com": "https://www.facebook.com/manningsasiaconsultants",
+      "instagram.com": "https://www.instagram.com/mannings_macl/?igshid=YmMyMTA2M2Y%3D",
+      "linkedin.com": "https://www.linkedin.com/company/manningsasia/"
+    },
+    "people": [
+      {
+        "name": "Early Contractor Involvement",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Early Contractor Involvement",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      }
+    ],
+    "source": "Google",
+    "confidence_score": 78,
+    "lead_quality": "High",
+    "company_type": "Unknown",
+    "_source_file": "output\\raw\\engineering_20260711_131245.json",
+    "_flags": [],
+    "_verified_emails": [
+      "manningsasia@manningsasia.com"
+    ],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "emails": {
+        "manningsasia@manningsasia.com": "ok"
+      },
+      "phones": {
+        "(852) 3168 2022": "not_valid_number",
+        "(852) 3168 2028": "not_valid_number",
+        "(852) 3168 2028 (852": "not_possible_length",
+        "3168 2022": "not_valid_number"
+      },
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "domain_source": "existing_website",
+      "whois": {
+        "error": "python-whois not installed"
+      }
+    }
+  },
+  {
+    "company_name": "Stanleyconsultants",
+    "website": "https://www.stanleyconsultants.com/",
+    "linkedin": null,
+    "industry": "Artificial Intelligence",
+    "location": null,
+    "contact_page": "https://www.stanleyconsultants.com/contact-us",
+    "about_page": "https://www.stanleyconsultants.com/about",
+    "team_page": "https://www.stanleyconsultants.com/solutions/asset-management",
+    "emails": [],
+    "phones": [
+      "(563) 264-6600"
+    ],
+    "social_links": {
+      "linkedin.com": "https://www.linkedin.com/company/stanleyconsultants/",
+      "twitter.com": "https://twitter.com/Stanley_Group",
+      "facebook.com": "https://www.facebook.com/stanleyconsultants",
+      "instagram.com": "https://www.instagram.com/stanleyconsultants"
+    },
+    "people": [],
+    "source": "Google",
+    "confidence_score": 60,
+    "lead_quality": "Medium",
+    "company_type": "Software Company",
+    "_source_file": "output\\raw\\engineering_20260711_131245.json",
+    "_flags": [],
+    "_verified_emails": [],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "phones": {
+        "(563) 264-6600": "not_valid_number"
+      },
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "domain_source": "existing_website",
+      "whois": {
+        "error": "python-whois not installed"
+      }
+    }
+  },
+  {
+    "company_name": "Inven",
+    "website": "https://www.inven.ai/company-lists/top-26-engineering-consulting-companies",
+    "linkedin": null,
+    "industry": "Artificial Intelligence",
+    "location": null,
+    "contact_page": "https://www.inven.ai/contact-sales",
+    "about_page": "https://www.inven.ai/workflows/company-materials-preparation",
+    "team_page": null,
+    "emails": [
+      "email@company.com"
+    ],
+    "phones": [
+      "201-500 1986",
+      "5001-10000",
+      "5001-10000 1930",
+      "5001-10000 1947",
+      "5001-10000 1962",
+      "5001-10000 1964",
+      "5001-10000 1967",
+      "5001-10000 1970",
+      "5001-10000 1973",
+      "5001-10000 1987",
+      "5001-10000 2009",
+      "501-1000",
+      "501-1000 1950"
+    ],
+    "social_links": {
+      "linkedin.com": "https://www.linkedin.com/company/arup",
+      "instagram.com": "https://www.instagram.com/inven.ai/?hl=en"
+    },
+    "people": [],
+    "source": "Google",
+    "confidence_score": 66,
+    "lead_quality": "Medium",
+    "company_type": "Consultancy",
+    "_source_file": "output\\raw\\engineering_20260711_131245.json",
+    "_flags": [],
+    "_verified_emails": [],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "emails": {
+        "email@company.com": "no_mx_records"
+      },
+      "phones": {
+        "201-500 1986": "not_valid_number",
+        "5001-10000": "not_valid_number",
+        "5001-10000 1930": "not_valid_number",
+        "5001-10000 1947": "not_valid_number",
+        "5001-10000 1962": "not_valid_number",
+        "5001-10000 1964": "not_valid_number",
+        "5001-10000 1967": "not_valid_number",
+        "5001-10000 1970": "not_valid_number",
+        "5001-10000 1973": "not_valid_number",
+        "5001-10000 1987": "not_valid_number",
+        "5001-10000 2009": "not_valid_number",
+        "501-1000": "not_valid_number",
+        "501-1000 1950": "not_valid_number"
+      },
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "domain_source": "existing_website",
+      "whois": {
+        "error": "python-whois not installed"
+      }
+    }
+  },
+  {
+    "company_name": "Hcltech",
+    "website": "https://www.hcltech.com/engineering",
+    "linkedin": null,
+    "industry": "engineering",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "confidence_score": 36,
+    "lead_quality": "Low",
+    "company_type": "Unknown",
+    "_source_file": "output\\raw\\engineering_20260711_131245.json",
+    "_flags": [],
+    "_verified_emails": [],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "domain_source": "existing_website",
+      "whois": {
+        "error": "python-whois not installed"
+      }
+    }
+  },
+  {
+    "company_name": "Cmwal",
+    "website": "https://cmwal.com/",
+    "linkedin": null,
+    "industry": "Cybersecurity",
+    "location": null,
+    "contact_page": "https://cmwal.com/contact_us.php",
+    "about_page": "https://cmwal.com/about_us.php",
+    "team_page": "https://cmwal.com/our_people.php",
+    "emails": [
+      "cmwal@cmwal.com",
+      "feedback@cmwal.com"
+    ],
+    "phones": [
+      "(852) 2522 1068",
+      "(852) 2526 3111"
+    ],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "confidence_score": 70,
+    "lead_quality": "High",
+    "company_type": "Unknown",
+    "_source_file": "output\\raw\\engineering_20260711_131245.json",
+    "_flags": [],
+    "_verified_emails": [
+      "cmwal@cmwal.com",
+      "feedback@cmwal.com"
+    ],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "emails": {
+        "cmwal@cmwal.com": "ok",
+        "feedback@cmwal.com": "ok"
+      },
+      "phones": {
+        "(852) 2522 1068": "not_valid_number",
+        "(852) 2526 3111": "not_valid_number"
+      },
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "domain_source": "existing_website",
+      "whois": {
+        "error": "python-whois not installed"
+      }
+    }
+  },
+  {
+    "company_name": "Arup",
+    "website": "https://www.arup.com/",
+    "linkedin": null,
+    "industry": "Artificial Intelligence",
+    "location": null,
+    "contact_page": "https://www.arup.com/contact-us/",
+    "about_page": "https://www.arup.com/about-us/",
+    "team_page": "https://www.arup.com/services/heat-resilience/",
+    "emails": [
+      "ClimateSustainability@arup.com"
+    ],
+    "phones": [
+      "+91 12 4407 1934"
+    ],
+    "social_links": {
+      "facebook.com": "https://www.facebook.com/ArupGroup/",
+      "instagram.com": "https://www.instagram.com/arupgroup/",
+      "linkedin.com": "https://www.linkedin.com/company/arup/"
+    },
+    "people": [
+      {
+        "name": "How heat shapes key sectors",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "How heat shapes key sectors",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "How heat shapes key sectors",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      }
+    ],
+    "source": "Google",
+    "confidence_score": 82,
+    "lead_quality": "High",
+    "company_type": "Software Company",
+    "_source_file": "output\\raw\\engineering_20260711_131245.json",
+    "_flags": [],
+    "_verified_emails": [
+      "ClimateSustainability@arup.com"
+    ],
+    "_verified_phones": [
+      "+91 12 4407 1934"
+    ],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "emails": {
+        "ClimateSustainability@arup.com": "ok"
+      },
+      "phones": {
+        "+91 12 4407 1934": "ok"
+      },
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "domain_source": "existing_website",
+      "whois": {
+        "error": "python-whois not installed"
+      }
+    }
+  },
+  {
+    "company_name": "Technosofteng",
+    "website": "https://technosofteng.com/",
+    "linkedin": null,
+    "industry": "Industrial Automation",
+    "location": null,
+    "contact_page": "https://technosofteng.com/contact-us/",
+    "about_page": "https://technosofteng.com/energy",
+    "team_page": "https://technosofteng.com/product-engineering-services/electrical-design/battery-management/",
+    "emails": [
+      "sales@technosofteng.com",
+      "info@technosoft.gmbh",
+      "contact@technosoft.gmbh"
+    ],
+    "phones": [
+      "+1 (919) 337-0866",
+      "+44 161-791-0768",
+      "+44 759-697-7421",
+      "+49 173 4370 659",
+      "+49 7243 56178-0",
+      "+91 22 4098 2222",
+      "+91 22 66262300"
+    ],
+    "social_links": {
+      "facebook.com": "https://www.facebook.com/people/Technosoft-Engineering/100064152874376/",
+      "linkedin.com": "https://www.linkedin.com/company/technosoft-engineering",
+      "twitter.com": "https://twitter.com/TechnosoftEngg"
+    },
+    "people": [
+      {
+        "name": "Smart Manufacturing",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "About Us",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      }
+    ],
+    "source": "Google",
+    "confidence_score": 82,
+    "lead_quality": "High",
+    "company_type": "Software Company",
+    "_source_file": "output\\raw\\engineering_20260711_131245.json",
+    "_flags": [],
+    "_verified_emails": [
+      "sales@technosofteng.com",
+      "info@technosoft.gmbh",
+      "contact@technosoft.gmbh"
+    ],
+    "_verified_phones": [
+      "+1 (919) 337-0866",
+      "+44 161-791-0768",
+      "+44 759-697-7421",
+      "+49 173 4370 659",
+      "+49 7243 56178-0",
+      "+91 22 4098 2222",
+      "+91 22 66262300"
+    ],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "emails": {
+        "sales@technosofteng.com": "ok",
+        "info@technosoft.gmbh": "ok",
+        "contact@technosoft.gmbh": "ok"
+      },
+      "phones": {
+        "+1 (919) 337-0866": "ok",
+        "+44 161-791-0768": "ok",
+        "+44 759-697-7421": "ok",
+        "+49 173 4370 659": "ok",
+        "+49 7243 56178-0": "ok",
+        "+91 22 4098 2222": "ok",
+        "+91 22 66262300": "ok"
+      },
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "domain_source": "existing_website",
+      "whois": {
+        "error": "python-whois not installed"
+      }
+    }
+  },
+  {
+    "company_name": "Twi",
+    "website": "https://www.twi-global.com/what-we-do/engineering-consultancy",
+    "linkedin": null,
+    "industry": "engineering",
+    "location": null,
+    "contact_page": "https://www.twi-global.com/contact",
+    "about_page": "https://www.twi-global.com/who-we-are",
+    "team_page": "https://www.twi-global.com/who-we-are/executive-team",
+    "emails": [
+      "sales@twisoftware.com",
+      "contactus@twi.co.uk",
+      "accounts.receivable@twi.co.uk",
+      "personnel@twicertification.com",
+      "trainexam@twitraining.com",
+      "member_services@twi.co.uk",
+      "theweldinginstitute@twi.co.uk",
+      "accounts.payable@twi.co.uk",
+      "company@twicertification.com",
+      "commercialgroup@twi.co.uk",
+      "accounts@twi.co.uk"
+    ],
+    "phones": [
+      "+44 (0)1223 892588",
+      "+44 (0)1223 899000",
+      "+44(0)1223 899000"
+    ],
+    "social_links": {
+      "facebook.com": "http://www.facebook.com/twiltd",
+      "twitter.com": "https://twitter.com/twi_ltd",
+      "linkedin.com": "http://www.linkedin.com/groups?mostPopular=&gid=2888580",
+      "instagram.com": "https://www.instagram.com/twi_ltd/"
+    },
+    "people": [
+      {
+        "name": "Support for SMEs",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Industry Sectors",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Andrew Ward",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Follow Us",
+        "designation": "COO",
+        "decision_maker_score": 75
+      }
+    ],
+    "source": "Google",
+    "confidence_score": 82,
+    "lead_quality": "High",
+    "company_type": "Consultancy",
+    "_source_file": "output\\raw\\engineering_20260711_131245.json",
+    "_flags": [],
+    "_verified_emails": [
+      "sales@twisoftware.com",
+      "contactus@twi.co.uk",
+      "accounts.receivable@twi.co.uk",
+      "personnel@twicertification.com",
+      "trainexam@twitraining.com",
+      "member_services@twi.co.uk",
+      "theweldinginstitute@twi.co.uk",
+      "accounts.payable@twi.co.uk",
+      "company@twicertification.com",
+      "commercialgroup@twi.co.uk",
+      "accounts@twi.co.uk"
+    ],
+    "_verified_phones": [
+      "+44 (0)1223 892588",
+      "+44 (0)1223 899000",
+      "+44(0)1223 899000"
+    ],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "emails": {
+        "sales@twisoftware.com": "ok",
+        "contactus@twi.co.uk": "ok",
+        "accounts.receivable@twi.co.uk": "ok",
+        "personnel@twicertification.com": "ok",
+        "trainexam@twitraining.com": "ok",
+        "member_services@twi.co.uk": "ok",
+        "theweldinginstitute@twi.co.uk": "ok",
+        "accounts.payable@twi.co.uk": "ok",
+        "company@twicertification.com": "ok",
+        "commercialgroup@twi.co.uk": "ok",
+        "accounts@twi.co.uk": "ok"
+      },
+      "phones": {
+        "+44 (0)1223 892588": "ok",
+        "+44 (0)1223 899000": "ok",
+        "+44(0)1223 899000": "ok"
+      },
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "domain_source": "existing_website",
+      "whois": {
+        "error": "python-whois not installed"
+      }
+    }
+  },
+  {
+    "company_name": "Ventureradar",
+    "website": "https://www.ventureradar.com/startup/Engineering",
+    "linkedin": null,
+    "industry": "Artificial Intelligence",
+    "location": null,
+    "contact_page": null,
+    "about_page": "https://www.ventureradar.com/submitcompany?utm_source=VR&utm_medium=Website&utm_content=Footer",
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {
+      "twitter.com": "https://twitter.com/venture_radar",
+      "linkedin.com": "https://www.linkedin.com/company/ventureradar/"
+    },
+    "people": [],
+    "source": "Google",
+    "confidence_score": 40,
+    "lead_quality": "Medium",
+    "company_type": "Industrial",
+    "_source_file": "output\\raw\\engineering_20260711_131245.json",
+    "_flags": [],
+    "_verified_emails": [],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "domain_source": "existing_website",
+      "whois": {
+        "error": "python-whois not installed"
+      }
+    }
+  },
+  {
+    "company_name": "Seedtable",
+    "website": "https://seedtable.com/best-engineering-startups",
+    "linkedin": null,
+    "industry": "Artificial Intelligence",
+    "location": null,
+    "contact_page": "https://seedtable.com/contact",
+    "about_page": "https://seedtable.com/about",
+    "team_page": null,
+    "emails": [
+      "hello@seedtablesupport.com",
+      "you@company.com"
+    ],
+    "phones": [],
+    "social_links": {
+      "x.com": "https://x.com/seedtable"
+    },
+    "people": [],
+    "source": "Google",
+    "confidence_score": 56,
+    "lead_quality": "Medium",
+    "company_type": "Industrial",
+    "_source_file": "output\\raw\\engineering_20260711_131245.json",
+    "_flags": [],
+    "_verified_emails": [
+      "hello@seedtablesupport.com"
+    ],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "emails": {
+        "hello@seedtablesupport.com": "ok",
+        "you@company.com": "no_mx_records"
+      },
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "domain_source": "existing_website",
+      "whois": {
+        "error": "python-whois not installed"
+      }
+    }
+  },
+  {
+    "company_name": "Superbcompanies",
+    "website": "https://superbcompanies.com/categories/startups-engineering-companies/",
+    "linkedin": null,
+    "industry": "Artificial Intelligence",
+    "location": null,
+    "contact_page": null,
+    "about_page": "https://superbcompanies.com/about-us/",
+    "team_page": null,
+    "emails": [],
+    "phones": [
+      "1 - 9 10 - 49 50 - 199",
+      "1 1 8 26.67",
+      "10 - 49 16.7",
+      "10 - 49 2008",
+      "10 - 49 2010",
+      "10 - 49 2012",
+      "10 - 49 2014",
+      "10 - 49 2016",
+      "10 - 49 2017",
+      "10 - 49 2018",
+      "10 - 49 2020",
+      "10 - 49 2021",
+      "10 - 49 2022",
+      "10 - 49 2023",
+      "200 - 499 2023",
+      "50 - 199 2000",
+      "50 - 199 2004",
+      "50 - 199 2012",
+      "50 - 199 2013",
+      "50 - 199 2015",
+      "50 - 199 2017",
+      "50 - 199 2019",
+      "50 - 199 2021",
+      "50 - 199 3.3"
+    ],
+    "social_links": {
+      "x.com": "https://www.embrox.com",
+      "linkedin.com": "https://www.linkedin.com/company/superbcompanies/",
+      "twitter.com": "https://twitter.com/superbcompanies",
+      "facebook.com": "https://www.facebook.com/superbcompanies/"
+    },
+    "people": [],
+    "source": "Google",
+    "confidence_score": 50,
+    "lead_quality": "Medium",
+    "company_type": "Industrial",
+    "_source_file": "output\\raw\\engineering_20260711_131245.json",
+    "_flags": [],
+    "_verified_emails": [],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "phones": {
+        "1 - 9 10 - 49 50 - 199": "not_valid_number",
+        "1 1 8 26.67": "not_valid_number",
+        "10 - 49 16.7": "not_valid_number",
+        "10 - 49 2008": "not_valid_number",
+        "10 - 49 2010": "not_valid_number",
+        "10 - 49 2012": "not_valid_number",
+        "10 - 49 2014": "not_valid_number",
+        "10 - 49 2016": "not_valid_number",
+        "10 - 49 2017": "not_valid_number",
+        "10 - 49 2018": "not_valid_number",
+        "10 - 49 2020": "not_valid_number",
+        "10 - 49 2021": "not_valid_number",
+        "10 - 49 2022": "not_valid_number",
+        "10 - 49 2023": "not_valid_number",
+        "200 - 499 2023": "not_valid_number",
+        "50 - 199 2000": "not_valid_number",
+        "50 - 199 2004": "not_valid_number",
+        "50 - 199 2012": "not_valid_number",
+        "50 - 199 2013": "not_valid_number",
+        "50 - 199 2015": "not_valid_number",
+        "50 - 199 2017": "not_valid_number",
+        "50 - 199 2019": "not_valid_number",
+        "50 - 199 2021": "not_valid_number",
+        "50 - 199 3.3": "not_valid_number"
+      },
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "domain_source": "existing_website",
+      "whois": {
+        "error": "python-whois not installed"
+      }
+    }
+  },
+  {
+    "company_name": "Ycombinator",
+    "website": "https://www.ycombinator.com/companies/industry/engineering-product-and-design",
+    "linkedin": null,
+    "industry": "engineering",
+    "location": null,
+    "contact_page": "https://www.ycombinator.com/contact",
+    "about_page": "https://www.ycombinator.com/about",
+    "team_page": "https://www.ycombinator.com/people",
+    "emails": [],
+    "phones": [],
+    "social_links": {
+      "twitter.com": "https://twitter.com/ycombinator",
+      "facebook.com": "https://www.facebook.com/YCombinator/",
+      "instagram.com": "https://www.instagram.com/ycombinator",
+      "linkedin.com": "https://www.linkedin.com/school/y-combinator/"
+    },
+    "people": [
+      {
+        "name": "Garry Tan",
+        "designation": "CEO",
+        "decision_maker_score": 90
+      },
+      {
+        "name": "Harshita Arora General Partner",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Harshita Arora",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Grey Baker General Partner",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Grey Baker",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Tom Blomfield General Partner",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Tom Blomfield",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Tyler Bosmeny General Partner",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Tyler Bosmeny",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Nicolas Dessaigne General Partner",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Nicolas Dessaigne",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Aaron Epstein General Partner",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Aaron Epstein",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Brad Flora General Partner",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Brad Flora",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Jared Friedman Managing Partner",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Jared Friedman",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Chris Golda General Partner",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Chris Golda",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Ankit Gupta General Partner",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Ankit Gupta",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Diana Hu Managing Partner",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Diana Hu",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Pete Koomen General Partner",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Pete Koomen",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "David Lieb General Partner",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "David Lieb",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Andrew Miklas General Partner",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Andrew Miklas",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Harj Taggar Managing Partner",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Harj Taggar",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Jon Xu General Partner",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Jon Xu",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Trevor Blackwell",
+        "designation": "Founder",
+        "decision_maker_score": 100
+      },
+      {
+        "name": "Paul Graham",
+        "designation": "Founder",
+        "decision_maker_score": 100
+      },
+      {
+        "name": "Jessica Livingston",
+        "designation": "Founder",
+        "decision_maker_score": 100
+      },
+      {
+        "name": "Robert Morris",
+        "designation": "Founder",
+        "decision_maker_score": 100
+      },
+      {
+        "name": "Victoria Holst Executive Assistant",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Victoria Holst Executive Assistant",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Gabrielle Rokeach Executive Coordinator",
+        "designation": "COO",
+        "decision_maker_score": 75
+      },
+      {
+        "name": "Gabrielle Rokeach",
+        "designation": "COO",
+        "decision_maker_score": 75
+      },
+      {
+        "name": "Jessica Shapiro Head of Events",
+        "designation": "Head Of",
+        "decision_maker_score": 60
+      },
+      {
+        "name": "Jessica Shapiro",
+        "designation": "Head Of",
+        "decision_maker_score": 60
+      },
+      {
+        "name": "Mark Thurman",
+        "designation": "Head Of",
+        "decision_maker_score": 60
+      },
+      {
+        "name": "Post Batch",
+        "designation": "Head Of",
+        "decision_maker_score": 60
+      },
+      {
+        "name": "Eric Bakan Head of Data",
+        "designation": "Head Of",
+        "decision_maker_score": 60
+      },
+      {
+        "name": "Eric Bakan",
+        "designation": "Head Of",
+        "decision_maker_score": 60
+      },
+      {
+        "name": "Jon Levy",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Carolynn Levy",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Angela Prochnow",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Tatyana Veremyova",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Allison Bryan Director of Accounting",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Allison Bryan",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Celia Cheung Director of Finance",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Celia Cheung",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Kirsty Nathoo Partner Emeritus",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Kirsty Nathoo",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Verena Prescher Head of Finance",
+        "designation": "Head Of",
+        "decision_maker_score": 60
+      },
+      {
+        "name": "Verena Prescher",
+        "designation": "Head Of",
+        "decision_maker_score": 60
+      },
+      {
+        "name": "Shaun Weber Director of Tax",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Shaun Weber",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Steven Pham Head of Media",
+        "designation": "Head Of",
+        "decision_maker_score": 60
+      },
+      {
+        "name": "Steven Pham",
+        "designation": "Head Of",
+        "decision_maker_score": 60
+      },
+      {
+        "name": "Renee Mars",
+        "designation": "Head Of",
+        "decision_maker_score": 60
+      },
+      {
+        "name": "Luther Lowe",
+        "designation": "Head Of",
+        "decision_maker_score": 60
+      }
+    ],
+    "source": "Google",
+    "confidence_score": 66,
+    "lead_quality": "Medium",
+    "company_type": "Industrial",
+    "_source_file": "output\\raw\\engineering_20260711_131245.json",
+    "_flags": [],
+    "_verified_emails": [],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "domain_source": "existing_website",
+      "whois": {
+        "error": "python-whois not installed"
+      }
+    }
+  },
+  {
+    "company_name": "Usearch",
+    "website": "https://usearch.com/dataset/engineering-startups",
+    "linkedin": null,
+    "industry": "engineering",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "confidence_score": 36,
+    "lead_quality": "Low",
+    "company_type": "Unknown",
+    "_source_file": "output\\raw\\engineering_20260711_131245.json",
+    "_flags": [],
+    "_verified_emails": [],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "domain_source": "existing_website",
+      "whois": {
+        "error": "python-whois not installed"
+      }
+    }
+  },
+  {
+    "company_name": "Cegworld",
+    "website": "https://cegworld.com/",
+    "linkedin": null,
+    "industry": "Artificial Intelligence",
+    "location": null,
+    "contact_page": "https://cegworld.com/contact",
+    "about_page": "https://cegworld.com/about-us",
+    "team_page": "https://cegworld.com/our-leadership",
+    "emails": [
+      "business@cegindia.com",
+      "hqjpr@cegindia.com"
+    ],
+    "phones": [
+      "+91 141 2751801",
+      "+91 141 2751806"
+    ],
+    "social_links": {
+      "linkedin.com": "https://in.linkedin.com/company/consulting-engineers-group-ltd",
+      "instagram.com": "https://www.instagram.com/cegindia/",
+      "facebook.com": "https://www.facebook.com/Consultin.Engineers.Group.Ltd",
+      "x.com": "https://x.com/cegindia?lang=en"
+    },
+    "people": [
+      {
+        "name": "CEG at a Glance",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Our Sectors",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      }
+    ],
+    "source": "Google",
+    "confidence_score": 82,
+    "lead_quality": "High",
+    "company_type": "Consultancy",
+    "_source_file": "output\\raw\\engineering_20260711_131245.json",
+    "_flags": [],
+    "_verified_emails": [
+      "business@cegindia.com",
+      "hqjpr@cegindia.com"
+    ],
+    "_verified_phones": [
+      "+91 141 2751801",
+      "+91 141 2751806"
+    ],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "emails": {
+        "business@cegindia.com": "ok",
+        "hqjpr@cegindia.com": "ok"
+      },
+      "phones": {
+        "+91 141 2751801": "ok",
+        "+91 141 2751806": "ok"
+      },
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "domain_source": "existing_website",
+      "whois": {
+        "error": "python-whois not installed"
+      }
+    }
+  },
+  {
+    "company_name": "RED",
+    "website": "https://www.red-eng.com/",
+    "linkedin": null,
+    "industry": "Artificial Intelligence",
+    "location": null,
+    "contact_page": "https://www.red-eng.com/contact-us",
+    "about_page": "https://www.red-eng.com/about-us",
+    "team_page": "https://www.red-eng.com/insights?type=Thought Leadership",
+    "emails": [
+      "london@red-eng.com"
+    ],
+    "phones": [],
+    "social_links": {
+      "instagram.com": "https://www.instagram.com/red_engineering_design",
+      "linkedin.com": "https://www.linkedin.com/company/red-engineering/",
+      "facebook.com": "https://www.facebook.com/RedEngineeringDesign"
+    },
+    "people": [
+      {
+        "name": "Thought Leadership",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      }
+    ],
+    "source": "Google",
+    "confidence_score": 72,
+    "lead_quality": "High",
+    "company_type": "Software Company",
+    "_source_file": "output\\raw\\engineering_20260711_131245.json",
+    "_flags": [],
+    "_verified_emails": [
+      "london@red-eng.com"
+    ],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "emails": {
+        "london@red-eng.com": "ok"
+      },
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "domain_source": "existing_website",
+      "whois": {
+        "error": "python-whois not installed"
+      }
+    }
+  },
+  {
+    "company_name": "Imegcorp",
+    "website": "https://imegcorp.com/",
+    "linkedin": null,
+    "industry": "engineering",
+    "location": null,
+    "contact_page": "https://imegcorp.com/contact/",
+    "about_page": "https://imegcorp.com/about/",
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {
+      "facebook.com": "https://www.facebook.com/IMEGcorp/",
+      "twitter.com": "https://twitter.com/IMEGcorp",
+      "instagram.com": "https://www.instagram.com/imegcorp/",
+      "linkedin.com": "https://www.linkedin.com/company/imeg-corp"
+    },
+    "people": [],
+    "source": "Google",
+    "confidence_score": 46,
+    "lead_quality": "Medium",
+    "company_type": "Consultancy",
+    "_source_file": "output\\raw\\engineering_20260711_131245.json",
+    "_flags": [],
+    "_verified_emails": [],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "domain_source": "existing_website",
+      "whois": {
+        "error": "python-whois not installed"
+      }
+    }
+  },
+  {
+    "company_name": "Enggpro",
+    "website": "https://www.enggpro.com/",
+    "linkedin": null,
+    "industry": "Artificial Intelligence",
+    "location": null,
+    "contact_page": null,
+    "about_page": "https://www.enggpro.com/blogs/top-10-industrial-safety-glasses-manufacturers-and-suppliers-company",
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {
+      "facebook.com": "https://www.facebook.com/enggproofficial/",
+      "linkedin.com": "https://www.linkedin.com/company/enggpro",
+      "instagram.com": "https://www.instagram.com/enggproofficial"
+    },
+    "people": [],
+    "source": "Google",
+    "confidence_score": 40,
+    "lead_quality": "Medium",
+    "company_type": "Software Company",
+    "_source_file": "output\\raw\\engineering_20260711_131245.json",
+    "_flags": [],
+    "_verified_emails": [],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "domain_source": "existing_website",
+      "whois": {
+        "error": "python-whois not installed"
+      }
+    }
+  },
+  {
+    "company_name": "Rowad Modern Engineering",
+    "website": "https://rowad-rme.com/vendors/",
+    "linkedin": null,
+    "industry": "Artificial Intelligence",
+    "location": null,
+    "contact_page": null,
+    "about_page": "https://rowad-rme.com/about-us/",
+    "team_page": null,
+    "emails": [
+      "business@rowad-rme.com"
+    ],
+    "phones": [
+      "+202) 235 81 518",
+      "+202) 235 88 037"
+    ],
+    "social_links": {
+      "facebook.com": "https://www.facebook.com/RowadModernEngineering/",
+      "linkedin.com": "https://www.linkedin.com/company/rowad-modern-engineering/",
+      "instagram.com": "https://www.instagram.com/rowadmodernengineering/"
+    },
+    "people": [],
+    "source": "Google",
+    "confidence_score": 60,
+    "lead_quality": "Medium",
+    "company_type": "Industrial",
+    "_source_file": "output\\raw\\engineering_20260711_131245.json",
+    "_flags": [],
+    "_verified_emails": [
+      "business@rowad-rme.com"
+    ],
+    "_verified_phones": [
+      "+202) 235 81 518",
+      "+202) 235 88 037"
+    ],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "emails": {
+        "business@rowad-rme.com": "ok"
+      },
+      "phones": {
+        "+202) 235 81 518": "ok",
+        "+202) 235 88 037": "ok"
+      },
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "domain_source": "existing_website",
+      "whois": {
+        "error": "python-whois not installed"
+      }
+    }
+  },
+  {
+    "company_name": "Inventivealliance",
+    "website": "https://inventivealliance.com/best-engineering-startups-2025/",
+    "linkedin": null,
+    "industry": "Artificial Intelligence",
+    "location": null,
+    "contact_page": "https://inventivealliance.com/contact/",
+    "about_page": "https://inventivealliance.com/the-truth-about-green-tech-are-electric-cars-and-solar-panels-really-sustainable/",
+    "team_page": "https://inventivealliance.com/the-founders-dilemma-when-to-fire-yourself-as-ceo-and-bring-in-a-professional-operator/",
+    "emails": [
+      "mail@example.com"
+    ],
+    "phones": [
+      "+1 123-456-7890"
+    ],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "confidence_score": 70,
+    "lead_quality": "High",
+    "company_type": "Industrial",
+    "_source_file": "output\\raw\\engineering_20260711_131245.json",
+    "_flags": [],
+    "_verified_emails": [
+      "mail@example.com"
+    ],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "emails": {
+        "mail@example.com": "ok"
+      },
+      "phones": {
+        "+1 123-456-7890": "not_valid_number"
+      },
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "domain_source": "existing_website",
+      "whois": {
+        "error": "python-whois not installed"
+      }
+    }
+  },
+  {
+    "company_name": "Hendersonengineers",
+    "website": "https://www.hendersonengineers.com/",
+    "linkedin": null,
+    "industry": "Healthcare",
+    "location": null,
+    "contact_page": "https://www.hendersonengineers.com/contact/",
+    "about_page": "https://www.hendersonengineers.com/who-we-are/",
+    "team_page": "https://www.hendersonengineers.com/who-we-are/leadership/",
+    "emails": [],
+    "phones": [
+      "913.742.5000",
+      "913.742.5001"
+    ],
+    "social_links": {
+      "facebook.com": "https://www.facebook.com/hendersonengineers/",
+      "twitter.com": "https://twitter.com/hendersonengs",
+      "linkedin.com": "https://www.linkedin.com/company/henderson-engineers-inc",
+      "instagram.com": "https://www.instagram.com/hendersonengineers/"
+    },
+    "people": [
+      {
+        "name": "Sector Executives Board of Directors",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Sector Executives",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Sector Executives",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Sector Executives",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Sector Executives",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Sector Executives",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Board of Directors",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Board of Directors",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Board of Directors",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Board of Directors",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Board of Directors",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Executive Team",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Sector Directors",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      }
+    ],
+    "source": "Google",
+    "confidence_score": 72,
+    "lead_quality": "High",
+    "company_type": "Software Company",
+    "_source_file": "output\\raw\\engineering_20260711_131245.json",
+    "_flags": [],
+    "_verified_emails": [],
+    "_verified_phones": [
+      "913.742.5000",
+      "913.742.5001"
+    ],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "phones": {
+        "913.742.5000": "ok",
+        "913.742.5001": "ok"
+      },
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "domain_source": "existing_website",
+      "whois": {
+        "error": "python-whois not installed"
+      }
+    }
+  },
+  {
+    "company_name": "CHONG FONG ENGINEERING",
+    "website": "https://chongfong.com/",
+    "linkedin": null,
+    "industry": "Artificial Intelligence",
+    "location": null,
+    "contact_page": "https://chongfong.com/contact-us/",
+    "about_page": "http://chongfong.com/history/",
+    "team_page": null,
+    "emails": [
+      "sales@chongfong.com",
+      "sales@cfglobaltech.com",
+      "sales@cft.co.th",
+      "contact@utahrelationship.com"
+    ],
+    "phones": [
+      "(60) 7288 2277",
+      "(66) 038 296 249",
+      "(66) 038 296 644"
+    ],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "confidence_score": 66,
+    "lead_quality": "Medium",
+    "company_type": "Manufacturer",
+    "_source_file": "output\\raw\\engineering_20260711_131245.json",
+    "_flags": [],
+    "_verified_emails": [
+      "sales@chongfong.com",
+      "sales@cfglobaltech.com",
+      "sales@cft.co.th"
+    ],
+    "_verified_phones": [
+      "(60) 7288 2277"
+    ],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "emails": {
+        "sales@chongfong.com": "ok",
+        "sales@cfglobaltech.com": "ok",
+        "sales@cft.co.th": "ok",
+        "contact@utahrelationship.com": "domain_does_not_exist"
+      },
+      "phones": {
+        "(60) 7288 2277": "ok",
+        "(66) 038 296 249": "not_valid_number",
+        "(66) 038 296 644": "not_valid_number"
+      },
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "domain_source": "existing_website",
+      "whois": {
+        "error": "python-whois not installed"
+      }
+    }
+  },
+  {
+    "company_name": "Builtin",
+    "website": "https://builtin.com/software-engineering-perspectives/engineering-companies",
+    "linkedin": null,
+    "industry": "Artificial Intelligence",
+    "location": null,
+    "contact_page": null,
+    "about_page": "https://builtin.com/node/add/company",
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {
+      "linkedin.com": "https://www.linkedin.com/shareArticle?url=https%3A%2F%2Fbuiltin.com%2Fsoftware-engineering-perspectives%2Fengineering-companies&mini=true",
+      "x.com": "https://dropbox.com/"
+    },
+    "people": [],
+    "source": "Google",
+    "confidence_score": 40,
+    "lead_quality": "Medium",
+    "company_type": "Industrial",
+    "_source_file": "output\\raw\\engineering_20260711_131245.json",
+    "_flags": [],
+    "_verified_emails": [],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "domain_source": "existing_website",
+      "whois": {
+        "error": "python-whois not installed"
+      }
+    }
+  },
+  {
+    "company_name": "Procol",
+    "website": "https://www.procol.ai/find-suppliers/",
+    "linkedin": null,
+    "industry": "Artificial Intelligence",
+    "location": null,
+    "contact_page": "https://www.procol.ai/contact-sales/",
+    "about_page": "https://www.procol.ai/about/",
+    "team_page": "https://www.procol.ai/ai-intake-management/",
+    "emails": [
+      "partner@procol.ai"
+    ],
+    "phones": [
+      "+91 76666 82222"
+    ],
+    "social_links": {
+      "x.com": "https://x.com/Procol_",
+      "linkedin.com": "https://www.linkedin.com/company/procoltech/",
+      "instagram.com": "https://www.instagram.com/procolhq/"
+    },
+    "people": [
+      {
+        "name": "Procol X Kearney Report",
+        "designation": "CFO",
+        "decision_maker_score": 70
+      },
+      {
+        "name": "Rahul Wadhwa",
+        "designation": "Head Of",
+        "decision_maker_score": 60
+      },
+      {
+        "name": "Umasankar Mahapatra Managing Director",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Umasankar Mahapatra Managing Director",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Umasankar Mahapatra",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Rahul Wadhwa",
+        "designation": "Head Of",
+        "decision_maker_score": 60
+      },
+      {
+        "name": "Strictly Necessary Cookies",
+        "designation": "COO",
+        "decision_maker_score": 75
+      },
+      {
+        "name": "Analytics Cookies",
+        "designation": "COO",
+        "decision_maker_score": 75
+      },
+      {
+        "name": "Advertising Cookies",
+        "designation": "COO",
+        "decision_maker_score": 75
+      }
+    ],
+    "source": "Google",
+    "confidence_score": 82,
+    "lead_quality": "High",
+    "company_type": "Software Company",
+    "_source_file": "output\\raw\\engineering_20260711_131245.json",
+    "_flags": [],
+    "_verified_emails": [
+      "partner@procol.ai"
+    ],
+    "_verified_phones": [
+      "+91 76666 82222"
+    ],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "emails": {
+        "partner@procol.ai": "ok"
+      },
+      "phones": {
+        "+91 76666 82222": "ok"
+      },
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "domain_source": "existing_website",
+      "whois": {
+        "error": "python-whois not installed"
+      }
+    }
+  },
+  {
+    "company_name": "Lv Machining",
+    "website": "https://www.lv-machining.com/",
+    "linkedin": null,
+    "industry": "engineering",
+    "location": null,
+    "contact_page": "https://www.lv-machining.com/contact.html",
+    "about_page": "https://www.lv-machining.com/about.html",
+    "team_page": null,
+    "emails": [],
+    "phones": [
+      "+86-25-86557767"
+    ],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "confidence_score": 56,
+    "lead_quality": "Medium",
+    "company_type": "Manufacturer",
+    "_source_file": "output\\raw\\engineering_20260711_131245.json",
+    "_flags": [],
+    "_verified_emails": [],
+    "_verified_phones": [
+      "+86-25-86557767"
+    ],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "phones": {
+        "+86-25-86557767": "ok"
+      },
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "domain_source": "existing_website",
+      "whois": {
+        "error": "python-whois not installed"
+      }
+    }
+  },
+  {
+    "company_name": "Mhi",
+    "website": "https://www.mhi.com/network/area/china.html",
+    "linkedin": null,
+    "industry": "Artificial Intelligence",
+    "location": null,
+    "contact_page": "https://www.mhi.com/inquiry",
+    "about_page": "https://www.mhi.com/company",
+    "team_page": "https://www.mhi.com/sustainability/management/report_gri.html",
+    "emails": [],
+    "phones": [
+      "0519-68190636",
+      "2026-07-01",
+      "2026-07-02",
+      "2026-07-09",
+      "852-2525-5262",
+      "852-2719-9202",
+      "852-2719-9212",
+      "852-2868-1469",
+      "86-(0)21-5899-6329",
+      "86-(0)21-5899-6686",
+      "86-010-6539-3297",
+      "86-10-5830-1089",
+      "86-10-6505-1222",
+      "86-10-6512-4321",
+      "86-10-6539-3296",
+      "86-20-8498-9030",
+      "86-20-8498-9430",
+      "86-21-5058-8600",
+      "86-21-5058-8606",
+      "86-21-5492-3222",
+      "86-21-5779-2111",
+      "86-21-5779-2200",
+      "86-21-5877-7330",
+      "86-21-5879-3030",
+      "86-21-6196-8686",
+      "86-21-6196-8688",
+      "86-21-6236-3030",
+      "86-21-6567-6616",
+      "86-21-6567-6618",
+      "86-21-6841-0048",
+      "86-21-6841-3030",
+      "86-21-6841-5222",
+      "86-21-6921-0030",
+      "86-21-6921-0825",
+      "86-24-2580-0788",
+      "86-24-2580-1789",
+      "86-25-83242711",
+      "86-25-83242715",
+      "86-411-3921-3030",
+      "86-411-3922-2000",
+      "86-41185890420",
+      "86-41185890426",
+      "86-532-8789-8634",
+      "86-532-8893-8520",
+      "86-750-381-4721",
+      "86-750-389-0011"
+    ],
+    "social_links": {
+      "linkedin.com": "https://www.linkedin.com/company/mitsubishi-heavy-industries",
+      "facebook.com": "https://www.facebook.com/mhi.ltd/",
+      "twitter.com": "https://twitter.com/MHI_Group",
+      "instagram.com": "https://www.instagram.com/mhi_groupjp"
+    },
+    "people": [],
+    "source": "Google",
+    "confidence_score": 60,
+    "lead_quality": "Medium",
+    "company_type": "Telecom",
+    "_source_file": "output\\raw\\engineering_20260711_131245.json",
+    "_flags": [],
+    "_verified_emails": [],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "phones": {
+        "0519-68190636": "not_valid_number",
+        "2026-07-01": "not_valid_number",
+        "2026-07-02": "not_valid_number",
+        "2026-07-09": "not_valid_number",
+        "852-2525-5262": "not_valid_number",
+        "852-2719-9202": "not_valid_number",
+        "852-2719-9212": "not_valid_number",
+        "852-2868-1469": "not_valid_number",
+        "86-(0)21-5899-6329": "not_valid_number",
+        "86-(0)21-5899-6686": "not_valid_number",
+        "86-010-6539-3297": "not_valid_number",
+        "86-10-5830-1089": "not_valid_number",
+        "86-10-6505-1222": "not_valid_number",
+        "86-10-6512-4321": "not_valid_number",
+        "86-10-6539-3296": "not_valid_number",
+        "86-20-8498-9030": "not_valid_number",
+        "86-20-8498-9430": "not_valid_number",
+        "86-21-5058-8600": "not_valid_number",
+        "86-21-5058-8606": "not_valid_number",
+        "86-21-5492-3222": "not_valid_number",
+        "86-21-5779-2111": "not_valid_number",
+        "86-21-5779-2200": "not_valid_number",
+        "86-21-5877-7330": "not_valid_number",
+        "86-21-5879-3030": "not_valid_number",
+        "86-21-6196-8686": "not_valid_number",
+        "86-21-6196-8688": "not_valid_number",
+        "86-21-6236-3030": "not_valid_number",
+        "86-21-6567-6616": "not_valid_number",
+        "86-21-6567-6618": "not_valid_number",
+        "86-21-6841-0048": "not_valid_number",
+        "86-21-6841-3030": "not_valid_number",
+        "86-21-6841-5222": "not_valid_number",
+        "86-21-6921-0030": "not_valid_number",
+        "86-21-6921-0825": "not_valid_number",
+        "86-24-2580-0788": "not_valid_number",
+        "86-24-2580-1789": "not_valid_number",
+        "86-25-83242711": "not_valid_number",
+        "86-25-83242715": "not_valid_number",
+        "86-411-3921-3030": "not_valid_number",
+        "86-411-3922-2000": "not_valid_number",
+        "86-41185890420": "not_valid_number",
+        "86-41185890426": "not_valid_number",
+        "86-532-8789-8634": "not_valid_number",
+        "86-532-8893-8520": "not_valid_number",
+        "86-750-381-4721": "not_valid_number",
+        "86-750-389-0011": "not_valid_number"
+      },
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "domain_source": "existing_website",
+      "whois": {
+        "error": "python-whois not installed"
+      }
+    }
+  },
+  {
+    "company_name": "Lihangmarine",
+    "website": "http://www.lihangmarine.com/",
+    "linkedin": null,
+    "industry": "engineering",
+    "location": null,
+    "contact_page": "http://www.lihangmarine.com/contactus.html",
+    "about_page": "http://www.lihangmarine.com/aboutus.html",
+    "team_page": null,
+    "emails": [
+      "hankshu99@gmail.com"
+    ],
+    "phones": [
+      "+86 159 0166 8952",
+      "15901668952"
+    ],
+    "social_links": {
+      "facebook.com": "https://www.facebook.com/profile.php?id=100073187349249",
+      "instagram.com": "https://www.instagram.com/caihongjianzhan",
+      "twitter.com": "https://twitter.com/jiaogeiwo"
+    },
+    "people": [],
+    "source": "Google",
+    "confidence_score": 66,
+    "lead_quality": "Medium",
+    "company_type": "Industrial",
+    "_source_file": "output\\raw\\engineering_20260711_131245.json",
+    "_flags": [],
+    "_verified_emails": [
+      "hankshu99@gmail.com"
+    ],
+    "_verified_phones": [
+      "+86 159 0166 8952"
+    ],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "emails": {
+        "hankshu99@gmail.com": "ok"
+      },
+      "phones": {
+        "+86 159 0166 8952": "ok",
+        "15901668952": "not_valid_number"
+      },
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "domain_source": "existing_website",
+      "whois": {
+        "error": "python-whois not installed"
+      }
+    }
+  },
+  {
+    "company_name": "Yearning",
+    "website": "http://en.yearning.net/contact/",
+    "linkedin": null,
+    "industry": "engineering",
+    "location": null,
+    "contact_page": null,
+    "about_page": "http://en.yearning.net/about/",
+    "team_page": null,
+    "emails": [],
+    "phones": [
+      "025-86576973",
+      "086-025-86576970",
+      "086-025-86576973",
+      "086-025-86650923",
+      "086-0596-8559909"
+    ],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "confidence_score": 50,
+    "lead_quality": "Medium",
+    "company_type": "Industrial",
+    "_source_file": "output\\raw\\engineering_20260711_131245.json",
+    "_flags": [],
+    "_verified_emails": [],
+    "_verified_phones": [
+      "025-86576973"
+    ],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "phones": {
+        "025-86576973": "ok",
+        "086-025-86576970": "not_valid_number",
+        "086-025-86576973": "not_valid_number",
+        "086-025-86650923": "not_valid_number",
+        "086-0596-8559909": "not_valid_number"
+      },
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "domain_source": "existing_website",
+      "whois": {
+        "error": "python-whois not installed"
+      }
+    }
+  },
+  {
+    "company_name": "Nv5",
+    "website": "https://www.nv5.com/",
+    "linkedin": null,
+    "industry": "Civil Engineering",
+    "location": null,
+    "contact_page": "https://www.nv5.com/about-nv5/contact-us/",
+    "about_page": "https://www.nv5.com/about-nv5/",
+    "team_page": "https://www.nv5.com/category/news/thought-leadership/",
+    "emails": [
+      "info@nv5.com",
+      "Info@NV5.com",
+      "AcademyRegistrar@NV5.com",
+      "academyregistrar@nv5.com"
+    ],
+    "phones": [
+      "(954) 495-2112",
+      "301.990.6006",
+      "954.495.2101",
+      "954.495.2112"
+    ],
+    "social_links": {
+      "twitter.com": "http://twitter.com/nv5_inc",
+      "facebook.com": "https://www.facebook.com/NV5.inc",
+      "linkedin.com": "http://www.linkedin.com/company/nv5",
+      "instagram.com": "https://www.instagram.com/nv5_inc/"
+    },
+    "people": [],
+    "source": "Google",
+    "confidence_score": 70,
+    "lead_quality": "High",
+    "company_type": "Consultancy",
+    "_source_file": "output\\raw\\engineering_20260711_131245.json",
+    "_flags": [],
+    "_verified_emails": [
+      "info@nv5.com",
+      "Info@NV5.com",
+      "AcademyRegistrar@NV5.com",
+      "academyregistrar@nv5.com"
+    ],
+    "_verified_phones": [
+      "(954) 495-2112",
+      "954.495.2101",
+      "954.495.2112"
+    ],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "emails": {
+        "info@nv5.com": "ok",
+        "Info@NV5.com": "ok",
+        "AcademyRegistrar@NV5.com": "ok",
+        "academyregistrar@nv5.com": "ok"
+      },
+      "phones": {
+        "(954) 495-2112": "ok",
+        "301.990.6006": "not_valid_number",
+        "954.495.2101": "ok",
+        "954.495.2112": "ok"
+      },
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "domain_source": "existing_website",
+      "whois": {
+        "error": "python-whois not installed"
+      }
+    }
+  },
+  {
+    "company_name": "Aeroleads",
+    "website": "https://aeroleads.com/list/top-industrial-engineering-companies-in-hong-kong",
+    "linkedin": null,
+    "industry": "Artificial Intelligence",
+    "location": null,
+    "contact_page": "https://aeroleads.com/searches/profiles",
+    "about_page": "https://aeroleads.com/users/uploads?source=csv",
+    "team_page": "https://aeroleads.com/welcome/onboarding",
+    "emails": [
+      "hello@aeroleads.com",
+      "jose.lozada@one-z.com",
+      "jason@xinyiglass.com",
+      "amy@crosschina.cn",
+      "alantsang@tyconalloy.com",
+      "perezr777@gmail.com",
+      "jacobchung@nwd.com.hk",
+      "joanna.ou@cosmo.io",
+      "nhem@biglots.com",
+      "john.smith@aeroleads.com",
+      "dcaldwell@millerpac.com",
+      "bpike@sunbirdengineering.com",
+      "controller@soldiersangels.org",
+      "yembir.gurung@gmail.com",
+      "eanderson@gmail.com",
+      "d.garton@maxfordham.com",
+      "unoemee2001@yahoo.com",
+      "perry@platypus.com",
+      "pushkar@aeroleads.com",
+      "smith@krypto.com",
+      "rajiba953@gmail.com",
+      "xingdian518@163.com",
+      "sam@acemb.com",
+      "jane123@yahoo.com"
+    ],
+    "phones": [
+      "+1 (012) 384 924",
+      "+1 (121) 379 921",
+      "+1 (212) 123 454",
+      "+1 (415) 800 3664",
+      "+1 (628) 282 4380",
+      "+91 12456 13245",
+      "5001-10000",
+      "501-1000"
+    ],
+    "social_links": {
+      "linkedin.com": "https://linkedin.com/company/xinyiglass",
+      "facebook.com": "https://www.facebook.com/aeroleads",
+      "twitter.com": "https://twitter.com/AeroLeads_"
+    },
+    "people": [],
+    "source": "Google",
+    "confidence_score": 70,
+    "lead_quality": "High",
+    "company_type": "Industrial",
+    "_source_file": "output\\raw\\engineering_20260711_131245.json",
+    "_flags": [],
+    "_verified_emails": [
+      "hello@aeroleads.com",
+      "jose.lozada@one-z.com",
+      "jason@xinyiglass.com",
+      "alantsang@tyconalloy.com",
+      "perezr777@gmail.com",
+      "jacobchung@nwd.com.hk",
+      "joanna.ou@cosmo.io",
+      "nhem@biglots.com",
+      "john.smith@aeroleads.com",
+      "dcaldwell@millerpac.com",
+      "bpike@sunbirdengineering.com",
+      "controller@soldiersangels.org",
+      "yembir.gurung@gmail.com",
+      "eanderson@gmail.com",
+      "d.garton@maxfordham.com",
+      "unoemee2001@yahoo.com",
+      "perry@platypus.com",
+      "pushkar@aeroleads.com",
+      "rajiba953@gmail.com",
+      "xingdian518@163.com",
+      "sam@acemb.com",
+      "jane123@yahoo.com"
+    ],
+    "_verified_phones": [
+      "+1 (415) 800 3664",
+      "+1 (628) 282 4380",
+      "+91 12456 13245"
+    ],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "emails": {
+        "hello@aeroleads.com": "ok",
+        "jose.lozada@one-z.com": "ok",
+        "jason@xinyiglass.com": "ok",
+        "amy@crosschina.cn": "domain_does_not_exist",
+        "alantsang@tyconalloy.com": "ok",
+        "perezr777@gmail.com": "ok",
+        "jacobchung@nwd.com.hk": "ok",
+        "joanna.ou@cosmo.io": "ok",
+        "nhem@biglots.com": "ok",
+        "john.smith@aeroleads.com": "ok",
+        "dcaldwell@millerpac.com": "ok",
+        "bpike@sunbirdengineering.com": "ok",
+        "controller@soldiersangels.org": "ok",
+        "yembir.gurung@gmail.com": "ok",
+        "eanderson@gmail.com": "ok",
+        "d.garton@maxfordham.com": "ok",
+        "unoemee2001@yahoo.com": "ok",
+        "perry@platypus.com": "ok",
+        "pushkar@aeroleads.com": "ok",
+        "smith@krypto.com": "no_mx_records",
+        "rajiba953@gmail.com": "ok",
+        "xingdian518@163.com": "ok",
+        "sam@acemb.com": "ok",
+        "jane123@yahoo.com": "ok"
+      },
+      "phones": {
+        "+1 (012) 384 924": "not_possible_length",
+        "+1 (121) 379 921": "not_possible_length",
+        "+1 (212) 123 454": "not_possible_length",
+        "+1 (415) 800 3664": "ok",
+        "+1 (628) 282 4380": "ok",
+        "+91 12456 13245": "ok",
+        "5001-10000": "not_valid_number",
+        "501-1000": "not_valid_number"
+      },
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "domain_source": "existing_website",
+      "whois": {
+        "error": "python-whois not installed"
+      }
+    }
+  },
+  {
+    "company_name": "Airswift",
+    "website": "https://www.airswift.com/our-industries/engineering",
+    "linkedin": null,
+    "industry": "Artificial Intelligence",
+    "location": null,
+    "contact_page": "https://www.airswift.com/contact",
+    "about_page": "https://www.airswift.com/about/locations",
+    "team_page": "https://www.airswift.com/about/meet-the-team",
+    "emails": [],
+    "phones": [],
+    "social_links": {
+      "facebook.com": "https://www.facebook.com/weareairswift",
+      "linkedin.com": "https://www.linkedin.com/company/airswift",
+      "twitter.com": "https://www.twitter.com/weareairswift",
+      "instagram.com": "https://www.instagram.com/weareairswift"
+    },
+    "people": [
+      {
+        "name": "James Allen",
+        "designation": "CEO",
+        "decision_maker_score": 90
+      },
+      {
+        "name": "Peter Denham",
+        "designation": "President",
+        "decision_maker_score": 85
+      },
+      {
+        "name": "Jayden Wallis",
+        "designation": "President",
+        "decision_maker_score": 85
+      },
+      {
+        "name": "Jenny Amalfi",
+        "designation": "President",
+        "decision_maker_score": 85
+      },
+      {
+        "name": "Callum Donaldson",
+        "designation": "VP",
+        "decision_maker_score": 65
+      },
+      {
+        "name": "Damir Tomicic",
+        "designation": "VP",
+        "decision_maker_score": 65
+      },
+      {
+        "name": "Charles Pfauwadel",
+        "designation": "VP",
+        "decision_maker_score": 65
+      },
+      {
+        "name": "Rachel Kelly",
+        "designation": "VP",
+        "decision_maker_score": 65
+      },
+      {
+        "name": "Maegan Joachim",
+        "designation": "President",
+        "decision_maker_score": 85
+      },
+      {
+        "name": "Andrew Greenwood",
+        "designation": "President",
+        "decision_maker_score": 85
+      },
+      {
+        "name": "Nicola Murphy",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Neil Manfred",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Tony Cliffe",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      }
+    ],
+    "source": "Google",
+    "confidence_score": 64,
+    "lead_quality": "Medium",
+    "company_type": "Agency",
+    "_source_file": "output\\raw\\engineering_20260711_131245.json",
+    "_flags": [],
+    "_verified_emails": [],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "domain_source": "existing_website",
+      "whois": {
+        "error": "python-whois not installed"
+      }
+    }
+  },
+  {
+    "company_name": "Iecompany",
+    "website": "https://www.iecompany.com/",
+    "linkedin": null,
+    "industry": "Industrial Automation",
+    "location": null,
+    "contact_page": "https://www.iecompany.com/contact.html",
+    "about_page": "https://www.iecompany.com/info.html",
+    "team_page": null,
+    "emails": [
+      "salesiec@iecompany.com"
+    ],
+    "phones": [
+      "(402) 564-1077",
+      "(402) 564-1383",
+      "68601-7274"
+    ],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "confidence_score": 66,
+    "lead_quality": "Medium",
+    "company_type": "Industrial",
+    "_source_file": "output\\raw\\engineering_20260711_131245.json",
+    "_flags": [],
+    "_verified_emails": [
+      "salesiec@iecompany.com"
+    ],
+    "_verified_phones": [
+      "(402) 564-1077",
+      "(402) 564-1383"
+    ],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "emails": {
+        "salesiec@iecompany.com": "ok"
+      },
+      "phones": {
+        "(402) 564-1077": "ok",
+        "(402) 564-1383": "ok",
+        "68601-7274": "not_valid_number"
+      },
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "domain_source": "existing_website",
+      "whois": {
+        "error": "python-whois not installed"
+      }
+    }
+  },
+  {
+    "company_name": "Jsti",
+    "website": "https://www.jsti.com/en/contact/map.html",
+    "linkedin": null,
+    "industry": "engineering",
+    "location": null,
+    "contact_page": "https://www.jsti.com/en/contact/train.html",
+    "about_page": "https://www.jsti.com/en/about/about.html",
+    "team_page": "https://www.jsti.com/en/investor/director.html",
+    "emails": [],
+    "phones": [
+      "025-86576435",
+      "025-86576555",
+      "32011502010265",
+      "400-001-8960"
+    ],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "confidence_score": 60,
+    "lead_quality": "Medium",
+    "company_type": "Unknown",
+    "_source_file": "output\\raw\\engineering_20260711_131245.json",
+    "_flags": [],
+    "_verified_emails": [],
+    "_verified_phones": [
+      "025-86576435",
+      "025-86576555"
+    ],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "phones": {
+        "025-86576435": "ok",
+        "025-86576555": "ok",
+        "32011502010265": "not_possible_length",
+        "400-001-8960": "not_valid_number"
+      },
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "domain_source": "existing_website",
+      "whois": {
+        "error": "python-whois not installed"
+      }
+    }
+  },
+  {
+    "company_name": "Industrialengg",
+    "website": "https://industrialengg.in/",
+    "linkedin": null,
+    "industry": "Civil Engineering",
+    "location": null,
+    "contact_page": "https://industrialengg.in/contact_2.html",
+    "about_page": "https://industrialengg.in/about.html",
+    "team_page": null,
+    "emails": [
+      "works@industrialengg.in"
+    ],
+    "phones": [
+      "022-23112206",
+      "022-23434124",
+      "022-28198022",
+      "9322243297"
+    ],
+    "social_links": {
+      "facebook.com": "https://www.facebook.com/industrialenggco/?skip_nax_wizard=true",
+      "linkedin.com": "https://www.linkedin.com/in/industrial-engineering-co-97b372193"
+    },
+    "people": [],
+    "source": "Google",
+    "confidence_score": 66,
+    "lead_quality": "Medium",
+    "company_type": "Software Company",
+    "_source_file": "output\\raw\\engineering_20260711_131245.json",
+    "_flags": [],
+    "_verified_emails": [
+      "works@industrialengg.in"
+    ],
+    "_verified_phones": [
+      "022-23112206",
+      "022-23434124",
+      "022-28198022",
+      "9322243297"
+    ],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "emails": {
+        "works@industrialengg.in": "ok"
+      },
+      "phones": {
+        "022-23112206": "ok",
+        "022-23434124": "ok",
+        "022-28198022": "ok",
+        "9322243297": "ok"
+      },
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "domain_source": "existing_website",
+      "whois": {
+        "error": "python-whois not installed"
+      }
+    }
+  },
+  {
+    "company_name": "Ltddir",
+    "website": "https://www.ltddir.com/companies/industrial-engineering-services-limited/",
+    "linkedin": null,
+    "industry": "engineering",
+    "location": null,
+    "contact_page": "https://www.ltddir.com/contactus/",
+    "about_page": "https://www.ltddir.com/Company-Search/",
+    "team_page": "https://www.ltddir.com/companies/world-team-hk-limited-2/",
+    "emails": [
+      "you@example.com"
+    ],
+    "phones": [
+      "0979965",
+      "0980140",
+      "2018-10-11",
+      "2026-06-01"
+    ],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "confidence_score": 70,
+    "lead_quality": "High",
+    "company_type": "Industrial",
+    "_source_file": "output\\raw\\engineering_20260711_131245.json",
+    "_flags": [],
+    "_verified_emails": [
+      "you@example.com"
+    ],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "emails": {
+        "you@example.com": "ok"
+      },
+      "phones": {
+        "0979965": "not_valid_number",
+        "0980140": "not_valid_number",
+        "2018-10-11": "not_valid_number",
+        "2026-06-01": "not_valid_number"
+      },
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "domain_source": "existing_website",
+      "whois": {
+        "error": "python-whois not installed"
+      }
+    }
+  },
+  {
+    "company_name": "Pmcorp",
+    "website": "https://pmcorp.com/services/industrial-engineering-services/",
+    "linkedin": null,
+    "industry": "Artificial Intelligence",
+    "location": null,
+    "contact_page": "https://pmcorp.com/contact-us/",
+    "about_page": "https://pmcorp.com/about/",
+    "team_page": "https://pmcorp.com/services/reality-capture-and-cad-services/bim-services/bim-asset-models-for-facility-management/",
+    "emails": [
+      "PMCSimulationConsultingMeeting@pmcorp.com",
+      "PMIIndustrialEngineeringConsultation@pmcorp.com"
+    ],
+    "phones": [
+      "(313) 441-4460",
+      "+1 313-441-4460"
+    ],
+    "social_links": {
+      "facebook.com": "https://www.facebook.com/PMCORP",
+      "twitter.com": "https://twitter.com/PMC_Corp",
+      "linkedin.com": "https://www.linkedin.com/company/pmc"
+    },
+    "people": [
+      {
+        "name": "Layout and Material Flow Consulting",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      }
+    ],
+    "source": "Google",
+    "confidence_score": 82,
+    "lead_quality": "High",
+    "company_type": "Industrial",
+    "_source_file": "output\\raw\\engineering_20260711_131245.json",
+    "_flags": [],
+    "_verified_emails": [
+      "PMCSimulationConsultingMeeting@pmcorp.com",
+      "PMIIndustrialEngineeringConsultation@pmcorp.com"
+    ],
+    "_verified_phones": [
+      "+1 313-441-4460"
+    ],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "emails": {
+        "PMCSimulationConsultingMeeting@pmcorp.com": "ok",
+        "PMIIndustrialEngineeringConsultation@pmcorp.com": "ok"
+      },
+      "phones": {
+        "(313) 441-4460": "not_valid_number",
+        "+1 313-441-4460": "ok"
+      },
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "domain_source": "existing_website",
+      "whois": {
+        "error": "python-whois not installed"
+      }
+    }
+  }
+]

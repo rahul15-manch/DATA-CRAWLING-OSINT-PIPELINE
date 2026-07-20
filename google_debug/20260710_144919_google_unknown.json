@@ -1,0 +1,9 @@
+{
+  "timestamp": "2026-07-10T14:49:19.150984",
+  "url": "https://menlo.gutsenv.net/safeview-auth-server/proxy_auth?url=aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS9zZWFyY2g_cT1zaXRlJTNBbGlua2VkaW4uY29tJTJGY29tcGFueStTb2Z0d2FyZStDb21wYW55K05vaWRhJm51bT0xMCZobD1lbiZnbD11cw==&pnr=2&initiating_req_id=kLm6YS1CLB8&conn_id=vVS68Zu3AGQ",
+  "status_code": 200,
+  "content_length": 5257,
+  "classification": "UNKNOWN_LAYOUT",
+  "reason": "All parsers returned 0 results",
+  "proxy": "34.134.231.117:3129"
+}

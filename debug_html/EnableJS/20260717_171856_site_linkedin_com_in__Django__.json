@@ -1,0 +1,35 @@
+{
+  "timestamp": "2026-07-17T17:18:56.363726",
+  "query": "site:linkedin.com/in \"Django\" founder OR CEO OR director",
+  "classification": "ENABLE_JS_PAGE",
+  "url": "https://www.google.com/search?q=site%3Alinkedin.com%2Fin+%22Django%22+founder+OR+CEO+OR+director&num=5&hl=en&gl=us",
+  "status_code": 200,
+  "redirect_chain": [
+    "https://www.google.com/search?q=site%3Alinkedin.com%2Fin+%22Django%22+founder+OR+CEO+OR+director&num=5&hl=en&gl=us"
+  ],
+  "response_headers": {
+    "content-type": "text/html; charset=UTF-8",
+    "strict-transport-security": "max-age=31536000",
+    "content-security-policy": "object-src 'none';base-uri 'self';script-src 'nonce-QqhkN6DlWBYBjPEkmVeEog' 'strict-dynamic' 'report-sample' 'unsafe-eval' 'unsafe-inline' https: http:;report-uri https://csp.withgoogle.com/csp/gws/cdt1",
+    "cross-origin-opener-policy": "same-origin-allow-popups; report-to=\"gws\"",
+    "report-to": "{\"group\":\"gws\",\"max_age\":2592000,\"endpoints\":[{\"url\":\"https://csp.withgoogle.com/csp/report-to/gws/cdt1\"}]}",
+    "accept-ch": "Sec-CH-Prefers-Color-Scheme, Downlink, RTT, Sec-CH-UA-Form-Factors, Sec-CH-UA-Platform, Sec-CH-UA-Platform-Version, Sec-CH-UA-Full-Version, Sec-CH-UA-Arch, Sec-CH-UA-Model, Sec-CH-UA-Bitness, Sec-CH-UA-Full-Version-List, Sec-CH-UA-WoW64",
+    "x-content-type-options": "nosniff",
+    "permissions-policy": "unload=()",
+    "p3p": "CP=\"This is not a P3P policy! See g.co/p3phelp for more info.\"",
+    "content-encoding": "br",
+    "date": "Fri, 17 Jul 2026 11:48:54 GMT",
+    "server": "gws",
+    "x-xss-protection": "0",
+    "x-frame-options": "SAMEORIGIN",
+    "expires": "Fri, 17 Jul 2026 11:48:54 GMT",
+    "cache-control": "private",
+    "set-cookie": "__Secure-STRP=ANmZwa0s45pnmYGCvGOdczgyGDhTKYzm2iYUJYocbZkAoo-xaxFhgFStfasoBU-snsY1E3Rl8Y6JZh113uOsKHx-J9zTJijv_ocq; expires=Fri, 17-Jul-2026 11:53:54 GMT; path=/; domain=.google.com; Secure; SameSite=strict, NID=533=WpgVCveNL1VJjsNaU6yTE8lQIfv0ku3qum8T7eIEydtS3A5IBevKDeD2iK9h77hu2GhEKnsIXLSSlmexidfL0smrjO9M5m-8mLnwnM9LkjslD5b5lMJmH9sCfLVRtA_LisKAjyz7wfB3TDwNUbch1QunIKEPGUAJZNYkr1S2-bZWmRc7Tx58A-9a6XiYrBTN9Sc6NKzT3fAnuQczDsMt3sw; expires=Sat, 16-Jan-2027 11:37:22 GMT; path=/; domain=.google.com; Secure; HttpOnly; SameSite=none",
+    "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+  },
+  "layout_fingerprint": "2d776c7f0f4d13d3ca0db766ca6ecf79",
+  "detected_signals": [
+    "/httpservice/retry/enablejs",
+    "enablejs"
+  ]
+}

@@ -1,0 +1,29 @@
+[
+  {
+    "company_name": "F6s",
+    "website": "https://www.f6s.com/companies/software/india/haryana/gurgaon/co",
+    "linkedin": null,
+    "industry": "software gurugram",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "confidence_score": 36,
+    "lead_quality": "Low",
+    "company_type": "Unknown",
+    "_source_file": "output\\raw\\software_gurugram_20260716_221648.json",
+    "_flags": [],
+    "_verified_emails": [],
+    "_verified_phones": [],
+    "_website_reachable": false,
+    "_verification_notes": {
+      "website": "http_405"
+    },
+    "_verification_passed": false
+  }
+]

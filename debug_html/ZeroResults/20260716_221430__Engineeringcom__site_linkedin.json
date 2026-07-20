@@ -1,0 +1,24 @@
+{
+  "timestamp": "2026-07-16T22:14:30.418928",
+  "query": "\"Engineeringcom\" site:linkedin.com",
+  "classification": "ZERO_RESULTS_PAGE",
+  "url": "https://www.google.com/search?q=%22Engineeringcom%22+site%3Alinkedin.com&num=5&hl=en&gl=us",
+  "status_code": 200,
+  "redirect_chain": [
+    "https://www.google.com/search?q=%22Engineeringcom%22+site%3Alinkedin.com&num=5&hl=en&gl=us"
+  ],
+  "response_headers": {
+    "date": "Thu, 16 Jul 2026 16:44:26 GMT",
+    "server": "gws",
+    "last-modified": "Tue, 10 Aug 2021 15:10:37 GMT",
+    "content-type": "text/html; charset=UTF-8",
+    "cache-control": "public, max-age=2592000",
+    "content-length": "327868",
+    "x-xss-protection": "0",
+    "x-frame-options": "SAMEORIGIN"
+  },
+  "layout_fingerprint": "b7bf42e5c894f40207fd8fefb4e20961",
+  "detected_signals": [
+    "did not match any documents"
+  ]
+}

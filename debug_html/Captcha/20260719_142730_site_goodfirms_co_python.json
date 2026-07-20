@@ -1,0 +1,29 @@
+{
+  "timestamp": "2026-07-19T14:27:30.319456",
+  "query": "site:goodfirms.co python",
+  "classification": "CAPTCHA_PAGE",
+  "url": "https://www.google.com/search?q=site%3Agoodfirms.co+python&num=10&hl=en&gl=us",
+  "status_code": 200,
+  "redirect_chain": [
+    "https://www.google.com/search?q=site%3Agoodfirms.co+python&num=10&hl=en&gl=us"
+  ],
+  "response_headers": {
+    "content-type": "text/html; charset=UTF-8",
+    "date": "Sun, 19 Jul 2026 08:57:49 GMT",
+    "x-content-type-options": "nosniff",
+    "pragma": "no-cache",
+    "cache-control": "no-store, no-cache, max-age=0, must-revalidate",
+    "expires": "-1",
+    "content-security-policy": "default-src 'none'; script-src 'self' https://menlo.gutsenv.net; img-src 'self' data: https://menlo.gutsenv.net; style-src 'self' https://menlo.gutsenv.net; font-src 'self' https://menlo.gutsenv.net; connect-src 'self' https://menlo-inspect.gutsenv.net https://xhr-menlo.gutsenv.net; base-uri 'none'; report-uri /safeview-client-logger/csp-violation/290.23.5-1.285137.0;",
+    "vary": "Accept-Language",
+    "x-ua-compatible": "IE=edge",
+    "p3p": "CP=\"None specified\"",
+    "etag": "\"fbae52d67f6395d2cca749c923b40f6591b73ee3\"",
+    "content-length": "5231",
+    "set-cookie": "safeview-id=\"2|1:0|10:1784451469|11:safeview-id|192:Lp6lhCV9qFz8id8QPCSD/C0Q24Ze7jUEiZ56jJEznUkxcHy1bVwuHtHN5Xn0CRqe92i22e6eLWZg3cXtNPejc+NqgHpkrRBSO1e1/24duDarhdTulCoI7Oz+mx1N3nhU69WDMg2ovBof4xCbfkYDi6s1yBfci7Dsjlvv/tE1gkWqmV+SrFoganVKWBtXapRJ|a2ca412ca70cbacd4256311a5beaaf624309326d789666109709bfeb13ac403f\"; expires=Mon, 19 Jul 2027 08:57:49 GMT; HttpOnly; Path=/; SameSite=None; Secure"
+  },
+  "layout_fingerprint": "8af0a9481059c417cb39a7a3ea8fd67a",
+  "detected_signals": [
+    "Menlo Security safeview proxy intercept"
+  ]
+}

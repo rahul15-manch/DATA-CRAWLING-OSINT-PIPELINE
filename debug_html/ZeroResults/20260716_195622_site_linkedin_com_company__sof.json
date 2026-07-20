@@ -1,0 +1,24 @@
+{
+  "timestamp": "2026-07-16T19:56:22.775121",
+  "query": "site:linkedin.com/company \"software company\" -site:wikipedia.org -site:play.google.com -site:apps.apple.com -site:chromewebstore.google.com -site:whatsapp.com",
+  "classification": "ZERO_RESULTS_PAGE",
+  "url": "https://www.google.com/search?q=site%3Alinkedin.com%2Fcompany+%22software+company%22+-site%3Awikipedia.org+-site%3Aplay.google.com+-site%3Aapps.apple.com+-site%3Achromewebstore.google.com+-site%3Awhatsapp.com&num=10&hl=en&gl=us",
+  "status_code": 200,
+  "redirect_chain": [
+    "https://www.google.com/search?q=site%3Alinkedin.com%2Fcompany+%22software+company%22+-site%3Awikipedia.org+-site%3Aplay.google.com+-site%3Aapps.apple.com+-site%3Achromewebstore.google.com+-site%3Awhatsapp.com&num=10&hl=en&gl=us"
+  ],
+  "response_headers": {
+    "date": "Thu, 16 Jul 2026 14:26:17 GMT",
+    "server": "gws",
+    "last-modified": "Sun, 08 Aug 2021 23:46:59 GMT",
+    "content-type": "text/html; charset=UTF-8",
+    "cache-control": "public, max-age=2592000",
+    "content-length": "334564",
+    "x-xss-protection": "0",
+    "x-frame-options": "SAMEORIGIN"
+  },
+  "layout_fingerprint": "14b489856cbadaf2b2de3f42500684e3",
+  "detected_signals": [
+    "did not match any documents"
+  ]
+}

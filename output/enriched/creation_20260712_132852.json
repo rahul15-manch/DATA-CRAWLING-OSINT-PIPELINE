@@ -1,0 +1,2249 @@
+[
+  {
+    "company_name": "Coca Colacompany",
+    "website": "https://www.coca-colacompany.com/media-center/the-coca-cola-company-introduces-fizzion",
+    "linkedin": null,
+    "industry": "Artificial Intelligence",
+    "location": null,
+    "contact_page": "https://www.coca-colacompany.com/about-us/contact-us",
+    "about_page": "https://www.coca-colacompany.com/about-us",
+    "team_page": "https://www.coca-colacompany.com/about-us/leadership",
+    "emails": [],
+    "phones": [
+      "(1-800-438-2653",
+      "1-888-348-2404"
+    ],
+    "social_links": {
+      "facebook.com": "https://www.facebook.com/TheCocaColaCo",
+      "linkedin.com": "https://www.linkedin.com/company/the-coca-cola-company/",
+      "instagram.com": "https://www.instagram.com/TheCocaColaCo/"
+    },
+    "people": [
+      {
+        "name": "Our Board of Directors",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Our Board of Directors",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Our Board of Directors",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Our Board of Directors",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "John Murphy",
+        "designation": "President",
+        "decision_maker_score": 85
+      },
+      {
+        "name": "Manuel Arroyo",
+        "designation": "VP",
+        "decision_maker_score": 65
+      },
+      {
+        "name": "Tapaswee Chandele",
+        "designation": "VP",
+        "decision_maker_score": 65
+      },
+      {
+        "name": "Monica Howard Douglas",
+        "designation": "VP",
+        "decision_maker_score": 65
+      },
+      {
+        "name": "EVP and Global General Counsel",
+        "designation": "VP",
+        "decision_maker_score": 65
+      },
+      {
+        "name": "Claudia Lorenzo",
+        "designation": "President",
+        "decision_maker_score": 85
+      },
+      {
+        "name": "Jennifer Mann",
+        "designation": "President",
+        "decision_maker_score": 85
+      },
+      {
+        "name": "Luisa Ortega",
+        "designation": "President",
+        "decision_maker_score": 85
+      },
+      {
+        "name": "Bruno Pietracci",
+        "designation": "President",
+        "decision_maker_score": 85
+      },
+      {
+        "name": "Nancy Quan",
+        "designation": "VP",
+        "decision_maker_score": 65
+      },
+      {
+        "name": "Sanket Ray",
+        "designation": "President",
+        "decision_maker_score": 85
+      },
+      {
+        "name": "Stacy Apter",
+        "designation": "President",
+        "decision_maker_score": 85
+      },
+      {
+        "name": "Senior Vice President and Treasurer",
+        "designation": "President",
+        "decision_maker_score": 85
+      },
+      {
+        "name": "Luis Felipe Avellar",
+        "designation": "President",
+        "decision_maker_score": 85
+      },
+      {
+        "name": "Todd Beiger",
+        "designation": "President",
+        "decision_maker_score": 85
+      },
+      {
+        "name": "Derek Benz",
+        "designation": "President",
+        "decision_maker_score": 85
+      },
+      {
+        "name": "Selman Careaga",
+        "designation": "President",
+        "decision_maker_score": 85
+      },
+      {
+        "name": "Jeffrey Gilbert",
+        "designation": "President",
+        "decision_maker_score": 85
+      },
+      {
+        "name": "Mark Harris",
+        "designation": "President",
+        "decision_maker_score": 85
+      },
+      {
+        "name": "Jennifer Henry",
+        "designation": "President",
+        "decision_maker_score": 85
+      },
+      {
+        "name": "Brenda Hofmann",
+        "designation": "President",
+        "decision_maker_score": 85
+      },
+      {
+        "name": "Gilles Leclerc",
+        "designation": "President",
+        "decision_maker_score": 85
+      },
+      {
+        "name": "Jennifer Manning",
+        "designation": "President",
+        "decision_maker_score": 85
+      },
+      {
+        "name": "Ellie May",
+        "designation": "President",
+        "decision_maker_score": 85
+      },
+      {
+        "name": "Bernard McGuinness",
+        "designation": "President",
+        "decision_maker_score": 85
+      },
+      {
+        "name": "Carlos Pagoaga",
+        "designation": "President",
+        "decision_maker_score": 85
+      },
+      {
+        "name": "Franck Salmon",
+        "designation": "President",
+        "decision_maker_score": 85
+      },
+      {
+        "name": "Mark Westfall",
+        "designation": "President",
+        "decision_maker_score": 85
+      },
+      {
+        "name": "Leonardo Zei",
+        "designation": "President",
+        "decision_maker_score": 85
+      },
+      {
+        "name": "Privacy Policy",
+        "designation": "COO",
+        "decision_maker_score": 75
+      },
+      {
+        "name": "Cookies Policy",
+        "designation": "COO",
+        "decision_maker_score": 75
+      }
+    ],
+    "source": "Google",
+    "confidence_score": 73,
+    "lead_quality": "High",
+    "company_type": "Unknown",
+    "_source_file": "output\\raw\\creation_20260712_132852.json",
+    "_flags": [],
+    "_verified_emails": [],
+    "_verified_phones": [
+      "(1-800-438-2653"
+    ],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "phones": {
+        "(1-800-438-2653": "ok",
+        "1-888-348-2404": "not_valid_number"
+      },
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "domain_source": "existing_website",
+      "whois": {
+        "registrar": "MarkMonitor, Inc.",
+        "creation_date": "1998-09-16 04:00:00+00:00",
+        "org": "The Coca-Cola Company",
+        "country": "US"
+      }
+    }
+  },
+  {
+    "company_name": "Mahindra Mahindra Dealer Business World",
+    "website": "https://mahindradealerworld.com/DMSContext/dmscommon/LoginAction.action?loginFlag=TXNS",
+    "linkedin": null,
+    "industry": "creation",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "confidence_score": 36,
+    "lead_quality": "Low",
+    "company_type": "Unknown",
+    "_source_file": "output\\raw\\creation_20260712_132852.json",
+    "_flags": [],
+    "_verified_emails": [],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "domain_source": "existing_website",
+      "whois": {
+        "registrar": "TUCOWS.COM, CO.",
+        "creation_date": "2012-10-17 21:13:47+00:00",
+        "org": "REDACTED FOR PRIVACY",
+        "country": "IN"
+      }
+    }
+  },
+  {
+    "company_name": "Hubspot",
+    "website": "https://knowledge.hubspot.com/records/create-companies",
+    "linkedin": null,
+    "industry": "Cybersecurity",
+    "location": null,
+    "contact_page": "https://knowledge.hubspot.com/billing/where-can-i-find-my-subscription-and-contacts-or-email-send-limit-information-in-hubspot",
+    "about_page": "https://knowledge.hubspot.com/records/associate-records",
+    "team_page": null,
+    "emails": [
+      "billing@hubspot.com"
+    ],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "confidence_score": 56,
+    "lead_quality": "Medium",
+    "company_type": "Unknown",
+    "_source_file": "output\\raw\\creation_20260712_132852.json",
+    "_flags": [],
+    "_verified_emails": [
+      "billing@hubspot.com"
+    ],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "emails": {
+        "billing@hubspot.com": "ok"
+      },
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "domain_source": "existing_website",
+      "whois": {
+        "registrar": "MarkMonitor, Inc.",
+        "creation_date": "2005-02-06 20:02:28+00:00",
+        "org": "HubSpot, Inc.",
+        "country": "US"
+      }
+    }
+  },
+  {
+    "company_name": "Creativ",
+    "website": "https://creativ.com/",
+    "linkedin": null,
+    "industry": "Artificial Intelligence",
+    "location": null,
+    "contact_page": "https://creativ.com/#contact-form",
+    "about_page": "https://creativ.com/about",
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {
+      "instagram.com": "https://www.instagram.com/thecreativcompany/",
+      "linkedin.com": "https://www.linkedin.com/company/creativ-strategies/"
+    },
+    "people": [],
+    "source": "Google",
+    "confidence_score": 46,
+    "lead_quality": "Medium",
+    "company_type": "Agency",
+    "_source_file": "output\\raw\\creation_20260712_132852.json",
+    "_flags": [],
+    "_verified_emails": [],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "domain_source": "existing_website",
+      "whois": {
+        "registrar": "NAMECHEAP INC",
+        "creation_date": "1999-11-21 17:18:32+00:00",
+        "org": "Privacy service provided by Withheld for Privacy ehf",
+        "country": "IS"
+      }
+    }
+  },
+  {
+    "company_name": "Hbr",
+    "website": "https://hbr.org/2022/11/how-to-communicate-your-companys-strategy-effectively",
+    "linkedin": null,
+    "industry": "Artificial Intelligence",
+    "location": null,
+    "contact_page": "https://hbr.org/contact-us",
+    "about_page": "https://hbr.org/product/how-to-communicate-your-company-s-strategy-effectively/H07CQW-PDF-ENG",
+    "team_page": "https://hbr.org/topic/leadership",
+    "emails": [
+      "user@example.com",
+      "customerservice@harvardbusiness.org"
+    ],
+    "phones": [
+      "617.783.7500",
+      "800.988.0886"
+    ],
+    "social_links": {
+      "twitter.com": "https://twitter.com/HarvardBiz",
+      "facebook.com": "https://www.facebook.com/HBR",
+      "linkedin.com": "https://www.linkedin.com/company/harvard-business-review?trk=biz-companies-cym",
+      "instagram.com": "https://www.instagram.com/harvard_business_review/?hl=en"
+    },
+    "people": [
+      {
+        "name": "See all topics",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Partner Center",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Partner Center",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Partner Center",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Partner Center",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      }
+    ],
+    "source": "Google",
+    "confidence_score": 79,
+    "lead_quality": "High",
+    "company_type": "Software Company",
+    "_source_file": "output\\raw\\creation_20260712_132852.json",
+    "_flags": [],
+    "_verified_emails": [
+      "user@example.com",
+      "customerservice@harvardbusiness.org"
+    ],
+    "_verified_phones": [
+      "617.783.7500",
+      "800.988.0886"
+    ],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "emails": {
+        "user@example.com": "ok",
+        "customerservice@harvardbusiness.org": "ok"
+      },
+      "phones": {
+        "617.783.7500": "ok",
+        "800.988.0886": "ok"
+      },
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "domain_source": "existing_website",
+      "whois": {
+        "registrar": "MarkMonitor, Inc.",
+        "creation_date": "1996-12-05 05:00:00+00:00",
+        "org": "Harvard Business School Publishing",
+        "country": "US"
+      }
+    }
+  },
+  {
+    "company_name": "Prologis CEO says data centers are one of the largest",
+    "website": "https://www.cnbc.com/2026/06/03/prologis-ceo-says-data-centers-are-one-of-the-largest-value-creation-opportunities.html?msockid=1f8b92a4a5e3695d12b08530a4f16868",
+    "linkedin": null,
+    "industry": "Artificial Intelligence",
+    "location": null,
+    "contact_page": null,
+    "about_page": "https://www.cnbc.com/about-cnbc-international/",
+    "team_page": "https://www.cnbc.com/mad-money-soundboard/",
+    "emails": [
+      "madcap@cnbc.com"
+    ],
+    "phones": [
+      "1-800-743"
+    ],
+    "social_links": {
+      "linkedin.com": "https://linkedin.com/in/alexa-lomonaco/",
+      "twitter.com": "https://twitter.com/MadMoneyOnCNBC",
+      "facebook.com": "https://www.facebook.com/madmoney?ref=aymt_homepage_panel",
+      "instagram.com": "http://instagram.com/jimcramer"
+    },
+    "people": [],
+    "source": "Google",
+    "confidence_score": 66,
+    "lead_quality": "Medium",
+    "company_type": "Unknown",
+    "_source_file": "output\\raw\\creation_20260712_132852.json",
+    "_flags": [],
+    "_verified_emails": [
+      "madcap@cnbc.com"
+    ],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "emails": {
+        "madcap@cnbc.com": "ok"
+      },
+      "phones": {
+        "1-800-743": "not_valid_number"
+      },
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "domain_source": "existing_website",
+      "whois": {
+        "registrar": "MarkMonitor, Inc.",
+        "creation_date": "1997-09-30 04:00:00+00:00",
+        "org": "NBCUniversal Media, LLC",
+        "country": "US"
+      }
+    }
+  },
+  {
+    "company_name": "Thecreationcompanies",
+    "website": "https://www.thecreationcompanies.com/experiences",
+    "linkedin": null,
+    "industry": "creation",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [
+      "8eb368c655b84e029ed79ad7a5c1718e@sentry.wixpress.com",
+      "605a7baede844d278b89dc95ae0a9123@sentry-next.wixpress.com",
+      "2062d0a4929b45348643784b5cb39c36@sentry.wixpress.com"
+    ],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "confidence_score": 46,
+    "lead_quality": "Medium",
+    "company_type": "Unknown",
+    "_source_file": "output\\raw\\creation_20260712_132852.json",
+    "_flags": [],
+    "_verified_emails": [],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "emails": {
+        "8eb368c655b84e029ed79ad7a5c1718e@sentry.wixpress.com": "no_mx_records",
+        "605a7baede844d278b89dc95ae0a9123@sentry-next.wixpress.com": "no_mx_records",
+        "2062d0a4929b45348643784b5cb39c36@sentry.wixpress.com": "no_mx_records"
+      },
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "domain_source": "existing_website",
+      "whois": {
+        "registrar": "GoDaddy.com, LLC",
+        "creation_date": "[datetime.datetime(2018, 11, 10, 16, 9, 50, tzinfo=tzoffset('UTC', 0)), datetime.datetime(2018, 11, 10, 11, 9, 50, tzinfo=tzoffset('UTC', 0))]",
+        "org": "Domains By Proxy, LLC",
+        "country": "US"
+      }
+    }
+  },
+  {
+    "company_name": "Creationtech",
+    "website": "https://www.creationtech.com/",
+    "linkedin": null,
+    "industry": "Civil Engineering",
+    "location": null,
+    "contact_page": "https://www.creationtech.com/contact/",
+    "about_page": "https://www.creationtech.com/about/",
+    "team_page": "https://www.creationtech.com/our-team/",
+    "emails": [
+      "info@creationtech.com"
+    ],
+    "phones": [
+      "877.734.7456"
+    ],
+    "social_links": {},
+    "people": [
+      {
+        "name": "James Hackett",
+        "designation": "Head Of",
+        "decision_maker_score": 60
+      },
+      {
+        "name": "Stephen P.  DeFalco",
+        "designation": "Chairman",
+        "decision_maker_score": 85
+      },
+      {
+        "name": "CYRIL DAMMON",
+        "designation": "President",
+        "decision_maker_score": 85
+      },
+      {
+        "name": "Rene Rodriguez",
+        "designation": "President",
+        "decision_maker_score": 85
+      },
+      {
+        "name": "Jennie Xian",
+        "designation": "President",
+        "decision_maker_score": 85
+      },
+      {
+        "name": "HUGO ALARCON",
+        "designation": "President",
+        "decision_maker_score": 85
+      },
+      {
+        "name": "JON HANSON",
+        "designation": "President",
+        "decision_maker_score": 85
+      },
+      {
+        "name": "Chris Klingerman",
+        "designation": "President",
+        "decision_maker_score": 85
+      },
+      {
+        "name": "Nate Bullerman",
+        "designation": "President",
+        "decision_maker_score": 85
+      },
+      {
+        "name": "JULIO BELLO",
+        "designation": "President",
+        "decision_maker_score": 85
+      },
+      {
+        "name": "Will Robinson",
+        "designation": "President",
+        "decision_maker_score": 85
+      },
+      {
+        "name": "JEREMY NORTHRUP",
+        "designation": "President",
+        "decision_maker_score": 85
+      },
+      {
+        "name": "ZAC TELLINGHUISEN",
+        "designation": "President",
+        "decision_maker_score": 85
+      },
+      {
+        "name": "Darryl Catellier",
+        "designation": "President",
+        "decision_maker_score": 85
+      },
+      {
+        "name": "Chad Crosby",
+        "designation": "President",
+        "decision_maker_score": 85
+      },
+      {
+        "name": "Diana Ferrari",
+        "designation": "President",
+        "decision_maker_score": 85
+      },
+      {
+        "name": "Jennifer Huebschman",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Jill Weaver",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      }
+    ],
+    "source": "Google",
+    "confidence_score": 83,
+    "lead_quality": "High",
+    "company_type": "Software Company",
+    "_source_file": "output\\raw\\creation_20260712_132852.json",
+    "_flags": [],
+    "_verified_emails": [
+      "info@creationtech.com"
+    ],
+    "_verified_phones": [
+      "877.734.7456"
+    ],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "emails": {
+        "info@creationtech.com": "ok"
+      },
+      "phones": {
+        "877.734.7456": "ok"
+      },
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "domain_source": "existing_website",
+      "whois": {
+        "registrar": "Network Solutions, LLC",
+        "creation_date": "1998-02-09 05:00:00+00:00",
+        "org": null,
+        "country": "CA"
+      }
+    }
+  },
+  {
+    "company_name": "Bain",
+    "website": "https://www.bain.com/insights/value-creation-what-it-is-and-why-it-matters/",
+    "linkedin": null,
+    "industry": "Artificial Intelligence",
+    "location": null,
+    "contact_page": "https://www.bain.com/about/contact-us/",
+    "about_page": "https://www.bain.com/about/offices/",
+    "team_page": "https://www.bain.com/consulting-services/organization/",
+    "emails": [
+      "dan.pinkney@bain.com",
+      "gary.duncan@bain.com",
+      "ann.lee@bain.com",
+      "alumni.relations@bain.com"
+    ],
+    "phones": [
+      "+1 617 572 2000",
+      "+1 646 562 8102",
+      "+44 7788 163791",
+      "+65 6228 2960"
+    ],
+    "social_links": {
+      "linkedin.com": "https://www.linkedin.com/in/christophedevusser/",
+      "x.com": "https://x.com/bainandcompany",
+      "facebook.com": "https://www.facebook.com/bainandcompany",
+      "instagram.com": "https://www.instagram.com/bainandcompany/"
+    },
+    "people": [
+      {
+        "name": "Sanjay Dhiri Partner London",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Sanjay Dhiri Partner London",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Sanjay Dhiri Partner London",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Sanjay Dhiri Partner London",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Sanjay Dhiri Partner London",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Sarah Elk Partner Houston",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Sarah Elk Partner Houston",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Sarah Elk Partner Houston",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Sarah Elk Partner Houston",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Sarah Elk Partner Houston",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Michael Withers Partner Melbourne",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Michael Withers Partner Melbourne",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Michael Withers Partner Melbourne",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Michael Withers Partner Melbourne",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Michael Withers Partner Melbourne",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Darrell Rigby Partner Boston",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Darrell Rigby Partner Boston",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Darrell Rigby Partner Boston",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Darrell Rigby Partner Boston",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Darrell Rigby Partner Boston",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Laura van Dijk Partner Boston",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Laura van Dijk Partner Boston",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Laura van Dijk Partner Boston",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Laura van Dijk Partner Boston",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Laura van Dijk Partner Boston",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Logan Stevens Partner Atlanta",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Logan Stevens Partner Atlanta",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Logan Stevens Partner Atlanta",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Logan Stevens Partner Atlanta",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Logan Stevens Partner Atlanta",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Rebecca Russell Partner Atlanta",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Rebecca Russell Partner Atlanta",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Rebecca Russell Partner Atlanta",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Rebecca Russell Partner Atlanta",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Rebecca Russell Partner Atlanta",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "John Hazan Partner Paris",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "John Hazan Partner Paris",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "John Hazan Partner Paris",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "John Hazan Partner Paris",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      }
+    ],
+    "source": "Google",
+    "confidence_score": 79,
+    "lead_quality": "High",
+    "company_type": "Unknown",
+    "_source_file": "output\\raw\\creation_20260712_132852.json",
+    "_flags": [],
+    "_verified_emails": [
+      "dan.pinkney@bain.com",
+      "gary.duncan@bain.com",
+      "ann.lee@bain.com",
+      "alumni.relations@bain.com"
+    ],
+    "_verified_phones": [
+      "+1 617 572 2000",
+      "+1 646 562 8102",
+      "+44 7788 163791",
+      "+65 6228 2960"
+    ],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "emails": {
+        "dan.pinkney@bain.com": "ok",
+        "gary.duncan@bain.com": "ok",
+        "ann.lee@bain.com": "ok",
+        "alumni.relations@bain.com": "ok"
+      },
+      "phones": {
+        "+1 617 572 2000": "ok",
+        "+1 646 562 8102": "ok",
+        "+44 7788 163791": "ok",
+        "+65 6228 2960": "ok"
+      },
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "domain_source": "existing_website",
+      "whois": {
+        "registrar": "Amazon Registrar, Inc.",
+        "creation_date": "1994-02-02 05:00:00+00:00",
+        "org": "c/o whoisproxy.com",
+        "country": "US"
+      }
+    }
+  },
+  {
+    "company_name": "Business Setup",
+    "website": "https://www.creationbc.com/",
+    "linkedin": null,
+    "industry": "Artificial Intelligence",
+    "location": null,
+    "contact_page": "https://www.creationbc.com/contact-us/",
+    "about_page": "https://www.creationbc.com/about/",
+    "team_page": "https://www.creationbc.com/our-team/",
+    "emails": [
+      "info@creationbc.com",
+      "scott.cairns@creationbc.com"
+    ],
+    "phones": [
+      "+966 11 434 3300",
+      "+971 4 878 6240"
+    ],
+    "social_links": {
+      "facebook.com": "https://www.facebook.com/creationUAE/",
+      "twitter.com": "https://twitter.com/CreationUAE",
+      "linkedin.com": "https://www.linkedin.com/company/creation-business-consultants/",
+      "instagram.com": "https://www.instagram.com/creationuae/"
+    },
+    "people": [
+      {
+        "name": "OUR DIRECTORS",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "OUR DIRECTORS",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "OUR DIRECTORS",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "OUR DIRECTORS",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "OUR DIRECTORS",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Scott Cairns Managing Director",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Scott Cairns Managing Director",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Scott Cairns",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Managing Director",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Managing Director",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Managing Director",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      }
+    ],
+    "source": "Google",
+    "confidence_score": 82,
+    "lead_quality": "High",
+    "company_type": "Consultancy",
+    "_source_file": "output\\raw\\creation_20260712_132852.json",
+    "_flags": [],
+    "_verified_emails": [
+      "info@creationbc.com",
+      "scott.cairns@creationbc.com"
+    ],
+    "_verified_phones": [
+      "+966 11 434 3300",
+      "+971 4 878 6240"
+    ],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "emails": {
+        "info@creationbc.com": "ok",
+        "scott.cairns@creationbc.com": "ok"
+      },
+      "phones": {
+        "+966 11 434 3300": "ok",
+        "+971 4 878 6240": "ok"
+      },
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "domain_source": "existing_website",
+      "whois": {
+        "registrar": "GoDaddy.com, LLC",
+        "creation_date": "[datetime.datetime(2018, 2, 1, 12, 28, 48, tzinfo=tzoffset('UTC', 0)), datetime.datetime(2018, 2, 1, 7, 28, 48, tzinfo=tzoffset('UTC', 0))]",
+        "org": "Domains By Proxy, LLC",
+        "country": "US"
+      }
+    }
+  },
+  {
+    "company_name": "Lyst DE",
+    "website": "https://www.lyst.com/de-de/marke/creation-l/?msockid=1f8b92a4a5e3695d12b08530a4f16868",
+    "linkedin": null,
+    "industry": "Artificial Intelligence",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [
+      "b6ece805320344ec94ba8a83af8c0a89@o418110.ingest.sentry.io"
+    ],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "confidence_score": 46,
+    "lead_quality": "Medium",
+    "company_type": "Marketplace",
+    "_source_file": "output\\raw\\creation_20260712_132852.json",
+    "_flags": [],
+    "_verified_emails": [],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "emails": {
+        "b6ece805320344ec94ba8a83af8c0a89@o418110.ingest.sentry.io": "no_mx_records"
+      },
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "domain_source": "existing_website",
+      "whois": {
+        "registrar": "Gandi SAS",
+        "creation_date": "[datetime.datetime(2001, 12, 27, 23, 31, 53, tzinfo=tzoffset('UTC', 0)), datetime.datetime(2001, 12, 27, 22, 31, 53, tzinfo=tzoffset('UTC', 0))]",
+        "org": "LYST LTD",
+        "country": "GB"
+      }
+    }
+  },
+  {
+    "company_name": "Designrush",
+    "website": "https://www.designrush.com/agency/content-marketing/content-creation",
+    "linkedin": null,
+    "industry": "creation",
+    "location": null,
+    "contact_page": "https://www.designrush.com/contact-us",
+    "about_page": "https://www.designrush.com/marketplace/project-brief",
+    "team_page": "https://www.designrush.com/agency/reputation-management-companies",
+    "emails": [
+      "info@designrush.com",
+      "jelena@designrush.com",
+      "spotlight@designrush.com",
+      "marketplace@designrush.com",
+      "mariana@designrush.com",
+      "maria.v@designrush.com"
+    ],
+    "phones": [
+      "(201) 870 6000",
+      "(603)-835-3130",
+      "100 100 - 249",
+      "25 100 - 249",
+      "4.4   4.4   (8)   4.8",
+      "4.6   4.6   (8)   5.0",
+      "4.7   4.7   (13)   5.0",
+      "4.7   4.7   (4)   4.9",
+      "4.7   4.7   (4)   5.0",
+      "4.7   4.7   (7)   4.6",
+      "4.7   4.7   (7)   4.8",
+      "4.8   4.8   (15)   4.7",
+      "4.8   4.8   (151",
+      "4.8   4.8   (25)   4.5",
+      "4.8   4.8   (5)   5.0",
+      "4.8   4.8   (6)   5.0",
+      "4.8   4.8   (7)   4.8",
+      "4.8   4.8   (7)   5.0",
+      "4.8   4.8   (8)   4.8",
+      "4.8   4.8   (8)   5.0",
+      "4.9   4.9   (10)   5.0",
+      "4.9   4.9   (11)   5.0",
+      "4.9   4.9   (12)   5.0",
+      "4.9   4.9   (13)   5.0",
+      "4.9   4.9   (14)   4.2",
+      "4.9   4.9   (14)   4.9",
+      "4.9   4.9   (14)   5.0",
+      "4.9   4.9   (15)   5",
+      "4.9   4.9   (17)   5.0",
+      "4.9   4.9   (18)   5.0",
+      "4.9   4.9   (19)   4.4",
+      "4.9   4.9   (22)   5.0",
+      "4.9   4.9   (25)   4.5",
+      "4.9   4.9   (28)   5.0",
+      "4.9   4.9   (33)   5.0",
+      "4.9   4.9   (36)   4.8",
+      "4.9   4.9   (46)   4.7",
+      "4.9   4.9   (59)   4.9",
+      "5.0   5.0   (107)   5",
+      "5.0   5.0   (270)   4",
+      "5.0   5.0   (30)   4.6",
+      "5.0   5.0   (30)   5.0",
+      "5.0   5.0   (31)   4.7",
+      "5.0   5.0   (31)   4.8",
+      "5.0   5.0   (31)   5.0",
+      "5.0   5.0   (32)   4.6",
+      "5.0   5.0   (36)   5.0",
+      "5.0   5.0   (37)   4.9",
+      "5.0   5.0   (39)   5.0",
+      "5.0   5.0   (41)   5.0",
+      "5.0   5.0   (42)   5.0",
+      "5.0   5.0   (45)   4.9",
+      "5.0   5.0   (49)   5.0",
+      "5.0   5.0   (50)   5.0",
+      "5.0   5.0   (51)   5.0",
+      "5.0   5.0   (58)   5.0",
+      "5.0   5.0   (70)   4.9",
+      "5.0   5.0   (89)   4.9"
+    ],
+    "social_links": {
+      "linkedin.com": "https://www.linkedin.com/in/vanessa-maandal-156b85161/",
+      "facebook.com": "https://www.facebook.com/share.php?u=https%3A%2F%2Fwww.designrush.com%2Fagency%2Fcontent-marketing%2Ftrends%2Fsponsored-content&title=Sponsored Content Explained: Types, Benefits, and Best Practices for Success&description=Discover the different types of sponsored content, its benefits for brands, and best practices for ethical and effective digital marketing campaigns.",
+      "twitter.com": "https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.designrush.com%2Fagency%2Fcontent-marketing%2Ftrends%2Fsponsored-content&text=Sponsored Content Explained: Types, Benefits, and Best Practices for Success&via=designrushmag",
+      "x.com": "https://x.com/i/grok?text=I%E2%80%99m%20trying%20to%20figure%20out%20the%20best%20way%20to%20find%20and %20evaluate%20top%20agencies%2C%20industry%20trends%2C%20and%20creative%20work.%20What%20does%20DesignRush%20offer%20for%20brands%20and%20agencies%2C%20and%20where%20should%20I%20start%3F%20Show%20more%20content%20from%3A%20https%3A%2F%2Fwww.designrush.com",
+      "instagram.com": "https://www.instagram.com/designrushmag/"
+    },
+    "people": [
+      {
+        "name": "Thrive Internet Marketing Agency",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Your Trusted Digital Marketing Partner",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "MotionTrust Digital",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Mariana Delgado",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      }
+    ],
+    "source": "Google",
+    "confidence_score": 82,
+    "lead_quality": "High",
+    "company_type": "Agency",
+    "_source_file": "output\\raw\\creation_20260712_132852.json",
+    "_flags": [],
+    "_verified_emails": [
+      "info@designrush.com",
+      "jelena@designrush.com",
+      "spotlight@designrush.com",
+      "marketplace@designrush.com",
+      "mariana@designrush.com",
+      "maria.v@designrush.com"
+    ],
+    "_verified_phones": [
+      "(603)-835-3130"
+    ],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "emails": {
+        "info@designrush.com": "ok",
+        "jelena@designrush.com": "ok",
+        "spotlight@designrush.com": "ok",
+        "marketplace@designrush.com": "ok",
+        "mariana@designrush.com": "ok",
+        "maria.v@designrush.com": "ok"
+      },
+      "phones": {
+        "(201) 870 6000": "not_valid_number",
+        "(603)-835-3130": "ok",
+        "100 100 - 249": "not_valid_number",
+        "25 100 - 249": "not_valid_number",
+        "4.4   4.4   (8)   4.8": "not_valid_number",
+        "4.6   4.6   (8)   5.0": "not_valid_number",
+        "4.7   4.7   (13)   5.0": "not_valid_number",
+        "4.7   4.7   (4)   4.9": "not_valid_number",
+        "4.7   4.7   (4)   5.0": "not_valid_number",
+        "4.7   4.7   (7)   4.6": "not_valid_number",
+        "4.7   4.7   (7)   4.8": "not_valid_number",
+        "4.8   4.8   (15)   4.7": "not_valid_number",
+        "4.8   4.8   (151": "not_valid_number",
+        "4.8   4.8   (25)   4.5": "not_valid_number",
+        "4.8   4.8   (5)   5.0": "not_valid_number",
+        "4.8   4.8   (6)   5.0": "not_valid_number",
+        "4.8   4.8   (7)   4.8": "not_valid_number",
+        "4.8   4.8   (7)   5.0": "not_valid_number",
+        "4.8   4.8   (8)   4.8": "not_valid_number",
+        "4.8   4.8   (8)   5.0": "not_valid_number",
+        "4.9   4.9   (10)   5.0": "not_valid_number",
+        "4.9   4.9   (11)   5.0": "not_valid_number",
+        "4.9   4.9   (12)   5.0": "not_valid_number",
+        "4.9   4.9   (13)   5.0": "not_valid_number",
+        "4.9   4.9   (14)   4.2": "not_valid_number",
+        "4.9   4.9   (14)   4.9": "not_valid_number",
+        "4.9   4.9   (14)   5.0": "not_valid_number",
+        "4.9   4.9   (15)   5": "not_valid_number",
+        "4.9   4.9   (17)   5.0": "not_valid_number",
+        "4.9   4.9   (18)   5.0": "not_valid_number",
+        "4.9   4.9   (19)   4.4": "not_valid_number",
+        "4.9   4.9   (22)   5.0": "not_valid_number",
+        "4.9   4.9   (25)   4.5": "not_valid_number",
+        "4.9   4.9   (28)   5.0": "not_valid_number",
+        "4.9   4.9   (33)   5.0": "not_valid_number",
+        "4.9   4.9   (36)   4.8": "not_valid_number",
+        "4.9   4.9   (46)   4.7": "not_valid_number",
+        "4.9   4.9   (59)   4.9": "not_valid_number",
+        "5.0   5.0   (107)   5": "not_valid_number",
+        "5.0   5.0   (270)   4": "not_valid_number",
+        "5.0   5.0   (30)   4.6": "not_valid_number",
+        "5.0   5.0   (30)   5.0": "not_valid_number",
+        "5.0   5.0   (31)   4.7": "not_valid_number",
+        "5.0   5.0   (31)   4.8": "not_valid_number",
+        "5.0   5.0   (31)   5.0": "not_valid_number",
+        "5.0   5.0   (32)   4.6": "not_valid_number",
+        "5.0   5.0   (36)   5.0": "not_valid_number",
+        "5.0   5.0   (37)   4.9": "not_valid_number",
+        "5.0   5.0   (39)   5.0": "not_valid_number",
+        "5.0   5.0   (41)   5.0": "not_valid_number",
+        "5.0   5.0   (42)   5.0": "not_valid_number",
+        "5.0   5.0   (45)   4.9": "not_valid_number",
+        "5.0   5.0   (49)   5.0": "not_valid_number",
+        "5.0   5.0   (50)   5.0": "not_valid_number",
+        "5.0   5.0   (51)   5.0": "not_valid_number",
+        "5.0   5.0   (58)   5.0": "not_valid_number",
+        "5.0   5.0   (70)   4.9": "not_valid_number",
+        "5.0   5.0   (89)   4.9": "not_valid_number"
+      },
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "domain_source": "existing_website",
+      "whois": {
+        "registrar": "GoDaddy.com, LLC",
+        "creation_date": "[datetime.datetime(2015, 4, 14, 18, 46, 25, tzinfo=tzoffset('UTC', 0)), datetime.datetime(2015, 4, 14, 13, 46, 25, tzinfo=tzoffset('UTC', 0))]",
+        "org": "Domains By Proxy, LLC",
+        "country": "US"
+      }
+    }
+  },
+  {
+    "company_name": "Topcreativecompanies",
+    "website": "https://topcreativecompanies.com/",
+    "linkedin": null,
+    "industry": "creation",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {
+      "instagram.com": "https://www.instagram.com/ifyoucouldjobs/",
+      "linkedin.com": "https://www.linkedin.com/company/if-you-could-jobs/"
+    },
+    "people": [],
+    "source": "Google",
+    "confidence_score": 36,
+    "lead_quality": "Low",
+    "company_type": "Unknown",
+    "_source_file": "output\\raw\\creation_20260712_132852.json",
+    "_flags": [],
+    "_verified_emails": [],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "domain_source": "existing_website",
+      "whois": {
+        "registrar": "REGISTER S.P.A.",
+        "creation_date": "[datetime.datetime(2024, 3, 21, 17, 34, 3, tzinfo=tzoffset('UTC', 0)), datetime.datetime(2024, 3, 21, 0, 0, tzinfo=tzoffset('UTC', 0))]",
+        "org": "REDACTED FOR PRIVACY",
+        "country": "GB"
+      }
+    }
+  },
+  {
+    "company_name": "Canva",
+    "website": "https://www.canva.com/?msockid=1f8b92a4a5e3695d12b08530a4f16868",
+    "linkedin": null,
+    "industry": "creation",
+    "location": null,
+    "contact_page": null,
+    "about_page": "https://www.canva.com/about/",
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {
+      "x.com": "https://www.firefox.com"
+    },
+    "people": [],
+    "source": "Google",
+    "confidence_score": 40,
+    "lead_quality": "Medium",
+    "company_type": "Unknown",
+    "_source_file": "output\\raw\\creation_20260712_132852.json",
+    "_flags": [],
+    "_verified_emails": [],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "domain_source": "existing_website",
+      "whois": {
+        "registrar": "Gandi SAS",
+        "creation_date": "[datetime.datetime(2001, 5, 5, 0, 3, 52, tzinfo=tzoffset('UTC', 0)), datetime.datetime(2001, 5, 4, 22, 3, 52, tzinfo=tzoffset('UTC', 0))]",
+        "org": "Canva Pty. Ltd.",
+        "country": "AU"
+      }
+    }
+  },
+  {
+    "company_name": "Creationequity",
+    "website": "https://creationequity.com/",
+    "linkedin": null,
+    "industry": "Finance",
+    "location": null,
+    "contact_page": "https://creationequity.com/contact",
+    "about_page": null,
+    "team_page": "https://creationequity.com/team",
+    "emails": [
+      "info@creationequity.com",
+      "hr@lgedesignbuild.com"
+    ],
+    "phones": [],
+    "social_links": {
+      "instagram.com": "https://www.instagram.com/creationequity/",
+      "linkedin.com": "https://www.linkedin.com/company/creationequity/",
+      "facebook.com": "https://www.facebook.com/creationequity/"
+    },
+    "people": [
+      {
+        "name": "Our Team",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "David Sellers",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "David Sellers",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Bob Agahi",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Bob Agahi",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Brandon Shapiro",
+        "designation": "President",
+        "decision_maker_score": 85
+      },
+      {
+        "name": "Brandon Shapiro",
+        "designation": "President",
+        "decision_maker_score": 85
+      },
+      {
+        "name": "Jagger Everett",
+        "designation": "President",
+        "decision_maker_score": 85
+      },
+      {
+        "name": "Jagger Everett",
+        "designation": "President",
+        "decision_maker_score": 85
+      },
+      {
+        "name": "Amy Fricke",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Amy Fricke",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Drew Graham",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Drew Graham",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Zach Tolson",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Zach Tolson",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Chris Campbell",
+        "designation": "President",
+        "decision_maker_score": 85
+      },
+      {
+        "name": "Chris Campbell",
+        "designation": "President",
+        "decision_maker_score": 85
+      }
+    ],
+    "source": "Google",
+    "confidence_score": 68,
+    "lead_quality": "Medium",
+    "company_type": "Finance",
+    "_source_file": "output\\raw\\creation_20260712_132852.json",
+    "_flags": [],
+    "_verified_emails": [
+      "info@creationequity.com",
+      "hr@lgedesignbuild.com"
+    ],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "emails": {
+        "info@creationequity.com": "ok",
+        "hr@lgedesignbuild.com": "ok"
+      },
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "domain_source": "existing_website",
+      "whois": {
+        "registrar": "TUCOWS.COM, CO.",
+        "creation_date": "2019-01-24 19:37:27+00:00",
+        "org": "Contact Privacy Inc. Customer 0153764674",
+        "country": "CA"
+      }
+    }
+  },
+  {
+    "company_name": "Creationsoftware",
+    "website": "https://www.creationsoftware.com/",
+    "linkedin": null,
+    "industry": "creation",
+    "location": null,
+    "contact_page": "https://www.creationsoftware.com/contactus.php",
+    "about_page": "https://www.creationsoftware.com/index.php",
+    "team_page": null,
+    "emails": [],
+    "phones": [
+      "3029045"
+    ],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "confidence_score": 56,
+    "lead_quality": "Medium",
+    "company_type": "Software Company",
+    "_source_file": "output\\raw\\creation_20260712_132852.json",
+    "_flags": [],
+    "_verified_emails": [],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "phones": {
+        "3029045": "not_valid_number"
+      },
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "domain_source": "existing_website",
+      "whois": {
+        "registrar": "TUCOWS.COM, CO.",
+        "creation_date": "1999-10-31 19:22:09+00:00",
+        "org": "REDACTED FOR PRIVACY",
+        "country": "GB"
+      }
+    }
+  },
+  {
+    "company_name": "100 kostenlos",
+    "website": "https://tools.pdf24.org/de/creator",
+    "linkedin": null,
+    "industry": "creation",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {
+      "facebook.com": "https://www.facebook.com/pdf24/",
+      "x.com": "https://x.com/PDF24",
+      "linkedin.com": "https://www.linkedin.com/company/pdf24/"
+    },
+    "people": [],
+    "source": "Google",
+    "confidence_score": 36,
+    "lead_quality": "Low",
+    "company_type": "Software Company",
+    "_source_file": "output\\raw\\creation_20260712_132852.json",
+    "_flags": [],
+    "_verified_emails": [],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "domain_source": "existing_website",
+      "whois": {
+        "registrar": "InterNetX GmbH",
+        "creation_date": "2005-10-10 13:34:48+00:00",
+        "org": "IP Internet Pioneer GmbH",
+        "country": "DE"
+      }
+    }
+  },
+  {
+    "company_name": "Download SongPro",
+    "website": "https://www.creationsoftware.com/downloads.php",
+    "linkedin": null,
+    "industry": "creation",
+    "location": null,
+    "contact_page": "https://www.creationsoftware.com/contactus.php",
+    "about_page": "https://www.creationsoftware.com/index.php",
+    "team_page": null,
+    "emails": [],
+    "phones": [
+      "3029045"
+    ],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "confidence_score": 56,
+    "lead_quality": "Medium",
+    "company_type": "Software Company",
+    "_source_file": "output\\raw\\creation_20260712_132852.json",
+    "_flags": [],
+    "_verified_emails": [],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "phones": {
+        "3029045": "not_valid_number"
+      },
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "domain_source": "existing_website",
+      "whois": {
+        "registrar": "TUCOWS.COM, CO.",
+        "creation_date": "1999-10-31 19:22:09+00:00",
+        "org": "REDACTED FOR PRIVACY",
+        "country": "GB"
+      }
+    }
+  },
+  {
+    "company_name": "Blender",
+    "website": "https://www.blender.org/",
+    "linkedin": null,
+    "industry": "creation",
+    "location": null,
+    "contact_page": null,
+    "about_page": "https://www.blender.org/about/",
+    "team_page": "https://www.blender.org/events/blender-at-siggraph-2026/",
+    "emails": [],
+    "phones": [],
+    "social_links": {
+      "instagram.com": "https://instagram.com/blender.official/",
+      "facebook.com": "https://www.facebook.com/YourOwn3DSoftware/",
+      "linkedin.com": "https://www.linkedin.com/company/blender-org/"
+    },
+    "people": [],
+    "source": "Google",
+    "confidence_score": 46,
+    "lead_quality": "Medium",
+    "company_type": "Software Company",
+    "_source_file": "output\\raw\\creation_20260712_132852.json",
+    "_flags": [],
+    "_verified_emails": [],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "domain_source": "existing_website",
+      "whois": {
+        "registrar": "Domain.com - Network Solutions, LLC",
+        "creation_date": "2000-04-04 17:56:19+00:00",
+        "org": "Statutory Masking Enabled",
+        "country": null
+      }
+    }
+  },
+  {
+    "company_name": "Techradar",
+    "website": "https://www.techradar.com/best/best-graphic-design-software",
+    "linkedin": null,
+    "industry": "Cybersecurity",
+    "location": null,
+    "contact_page": "https://www.techradar.com/how-to/contact-us",
+    "about_page": "https://www.techradar.com/news/about-us#section-affiliate-advertising-disclosure",
+    "team_page": null,
+    "emails": [
+      "sales@bluepixlmedia.com",
+      "sales@tbreak.com",
+      "harry.bowden-ford@futurenet.com",
+      "aron.clinch@futurenet.com",
+      "isaiah.williams@futurenet.com",
+      "desire.athow@futurenet.com",
+      "shona.moreland@futurenet.com",
+      "marc.mclaren@futurenet.com",
+      "Mandywestberg@gmail.com",
+      "mike.mcnally@futurenet.com",
+      "becky.scarrott@futurenet.com",
+      "lucy.buglass@futurenet.com",
+      "benedict.collins@futurenet.com",
+      "cat.ellis@futurenet.com",
+      "robert.dunne@futurenet.com",
+      "steven.clark@futurenet.com",
+      "max.delaney@futurenet.com",
+      "cas.kulk@bluepixlmedia.com",
+      "neeraj@strategence.in",
+      "sasha.mcgregor@futurenet.com",
+      "james@techradar.com",
+      "lindsay.handmer@futurenet.com",
+      "mark.wilson@futurenet.com",
+      "sharmishta.sarkar@futurenet.com",
+      "hamish.hector@futurenet.com",
+      "james.davidson@futurenet.com",
+      "matthew.hanson@futurenet.com",
+      "james.capell@futurenet.com",
+      "axel.metz@futurenet.com",
+      "roland.Moore-Colyer@futurenet.com",
+      "Christian.Guyton@futurenet.com",
+      "jouri.altorf@bluepixlmedia.com",
+      "Commentmoderation@futurenet.com",
+      "viktoria.shilets@futurenet.com",
+      "amelia.schwanke@futurenet.com",
+      "james.pickard@futurenet.com",
+      "rowan.davies@futurenet.com",
+      "nathan.walters@futurenet.com",
+      "usadvertising@futurenet.com",
+      "ecommerce-b2b@futurenet.com",
+      "ruth.hamilton@futurenet.com",
+      "jack.cunningham@futurenet.com",
+      "petter.mattsson@me.com",
+      "dash.wood@futurenet.com",
+      "your@example.com",
+      "lance.ulanoff@futurenet.com",
+      "news@techradar.com",
+      "josephine.watson@futurenet.com",
+      "help@magazinesdirect.com",
+      "rob.dwiar@futurenet.com",
+      "jacob.krol@futurenet.com",
+      "graham.barlow@futurenet.com",
+      "matthew.bolton@futurenet.com",
+      "owain.williams@futurenet.com",
+      "chris.ferguson@futurenet.com",
+      "rhys.wood@futurenet.com",
+      "mike.moore@futurenet.com",
+      "matt.evans@futurenet.com",
+      "tom.power@futurenet.com",
+      "mackenzie.frazier@futurenet.com",
+      "markus.mesia@gmail.com",
+      "digital@orage.no",
+      "timothy.coleman@futurenet.com",
+      "lewis.maddison@futurenet.com",
+      "matthew.maidment@futurenet.com",
+      "josh.russell@futurenet.com",
+      "bram.lodewijks@bluepixlmedia.com",
+      "max.langridge@futurenet.com",
+      "alex.whitelock@futurenet.com"
+    ],
+    "phones": [
+      "(02) 9955 2677",
+      "+1 212 378 0448",
+      "+44 (0) 7917 769 177",
+      "+44 (0)1225 442244",
+      "+44 (0)20 7042 4000",
+      "+971 55 350 6006",
+      "01225 442244",
+      "0300 123 2220"
+    ],
+    "social_links": {
+      "facebook.com": "https://www.facebook.com/TechRadar",
+      "twitter.com": "https://twitter.com/intent/user?screen_name=techradar"
+    },
+    "people": [],
+    "source": "Google",
+    "confidence_score": 66,
+    "lead_quality": "Medium",
+    "company_type": "Software Company",
+    "_source_file": "output\\raw\\creation_20260712_132852.json",
+    "_flags": [],
+    "_verified_emails": [
+      "sales@bluepixlmedia.com",
+      "sales@tbreak.com",
+      "harry.bowden-ford@futurenet.com",
+      "aron.clinch@futurenet.com",
+      "isaiah.williams@futurenet.com",
+      "desire.athow@futurenet.com",
+      "shona.moreland@futurenet.com",
+      "marc.mclaren@futurenet.com",
+      "Mandywestberg@gmail.com",
+      "mike.mcnally@futurenet.com",
+      "becky.scarrott@futurenet.com",
+      "lucy.buglass@futurenet.com",
+      "benedict.collins@futurenet.com",
+      "cat.ellis@futurenet.com",
+      "robert.dunne@futurenet.com",
+      "steven.clark@futurenet.com",
+      "max.delaney@futurenet.com",
+      "cas.kulk@bluepixlmedia.com",
+      "sasha.mcgregor@futurenet.com",
+      "james@techradar.com",
+      "lindsay.handmer@futurenet.com",
+      "mark.wilson@futurenet.com",
+      "sharmishta.sarkar@futurenet.com",
+      "hamish.hector@futurenet.com",
+      "james.davidson@futurenet.com",
+      "matthew.hanson@futurenet.com",
+      "james.capell@futurenet.com",
+      "axel.metz@futurenet.com",
+      "roland.Moore-Colyer@futurenet.com",
+      "Christian.Guyton@futurenet.com",
+      "jouri.altorf@bluepixlmedia.com",
+      "Commentmoderation@futurenet.com",
+      "viktoria.shilets@futurenet.com",
+      "amelia.schwanke@futurenet.com",
+      "james.pickard@futurenet.com",
+      "rowan.davies@futurenet.com",
+      "nathan.walters@futurenet.com",
+      "usadvertising@futurenet.com",
+      "ecommerce-b2b@futurenet.com",
+      "ruth.hamilton@futurenet.com",
+      "jack.cunningham@futurenet.com",
+      "petter.mattsson@me.com",
+      "dash.wood@futurenet.com",
+      "your@example.com",
+      "lance.ulanoff@futurenet.com",
+      "news@techradar.com",
+      "josephine.watson@futurenet.com",
+      "help@magazinesdirect.com",
+      "rob.dwiar@futurenet.com",
+      "jacob.krol@futurenet.com",
+      "graham.barlow@futurenet.com",
+      "matthew.bolton@futurenet.com",
+      "owain.williams@futurenet.com",
+      "chris.ferguson@futurenet.com",
+      "rhys.wood@futurenet.com",
+      "mike.moore@futurenet.com",
+      "matt.evans@futurenet.com",
+      "tom.power@futurenet.com",
+      "mackenzie.frazier@futurenet.com",
+      "markus.mesia@gmail.com",
+      "digital@orage.no",
+      "timothy.coleman@futurenet.com",
+      "lewis.maddison@futurenet.com",
+      "matthew.maidment@futurenet.com",
+      "josh.russell@futurenet.com",
+      "bram.lodewijks@bluepixlmedia.com",
+      "max.langridge@futurenet.com",
+      "alex.whitelock@futurenet.com"
+    ],
+    "_verified_phones": [
+      "+1 212 378 0448",
+      "+44 (0) 7917 769 177",
+      "+44 (0)1225 442244",
+      "+44 (0)20 7042 4000",
+      "+971 55 350 6006",
+      "01225 442244"
+    ],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "emails": {
+        "sales@bluepixlmedia.com": "ok",
+        "sales@tbreak.com": "ok",
+        "harry.bowden-ford@futurenet.com": "ok",
+        "aron.clinch@futurenet.com": "ok",
+        "isaiah.williams@futurenet.com": "ok",
+        "desire.athow@futurenet.com": "ok",
+        "shona.moreland@futurenet.com": "ok",
+        "marc.mclaren@futurenet.com": "ok",
+        "Mandywestberg@gmail.com": "ok",
+        "mike.mcnally@futurenet.com": "ok",
+        "becky.scarrott@futurenet.com": "ok",
+        "lucy.buglass@futurenet.com": "ok",
+        "benedict.collins@futurenet.com": "ok",
+        "cat.ellis@futurenet.com": "ok",
+        "robert.dunne@futurenet.com": "ok",
+        "steven.clark@futurenet.com": "ok",
+        "max.delaney@futurenet.com": "ok",
+        "cas.kulk@bluepixlmedia.com": "ok",
+        "neeraj@strategence.in": "no_mx_records",
+        "sasha.mcgregor@futurenet.com": "ok",
+        "james@techradar.com": "ok",
+        "lindsay.handmer@futurenet.com": "ok",
+        "mark.wilson@futurenet.com": "ok",
+        "sharmishta.sarkar@futurenet.com": "ok",
+        "hamish.hector@futurenet.com": "ok",
+        "james.davidson@futurenet.com": "ok",
+        "matthew.hanson@futurenet.com": "ok",
+        "james.capell@futurenet.com": "ok",
+        "axel.metz@futurenet.com": "ok",
+        "roland.Moore-Colyer@futurenet.com": "ok",
+        "Christian.Guyton@futurenet.com": "ok",
+        "jouri.altorf@bluepixlmedia.com": "ok",
+        "Commentmoderation@futurenet.com": "ok",
+        "viktoria.shilets@futurenet.com": "ok",
+        "amelia.schwanke@futurenet.com": "ok",
+        "james.pickard@futurenet.com": "ok",
+        "rowan.davies@futurenet.com": "ok",
+        "nathan.walters@futurenet.com": "ok",
+        "usadvertising@futurenet.com": "ok",
+        "ecommerce-b2b@futurenet.com": "ok",
+        "ruth.hamilton@futurenet.com": "ok",
+        "jack.cunningham@futurenet.com": "ok",
+        "petter.mattsson@me.com": "ok",
+        "dash.wood@futurenet.com": "ok",
+        "your@example.com": "ok",
+        "lance.ulanoff@futurenet.com": "ok",
+        "news@techradar.com": "ok",
+        "josephine.watson@futurenet.com": "ok",
+        "help@magazinesdirect.com": "ok",
+        "rob.dwiar@futurenet.com": "ok",
+        "jacob.krol@futurenet.com": "ok",
+        "graham.barlow@futurenet.com": "ok",
+        "matthew.bolton@futurenet.com": "ok",
+        "owain.williams@futurenet.com": "ok",
+        "chris.ferguson@futurenet.com": "ok",
+        "rhys.wood@futurenet.com": "ok",
+        "mike.moore@futurenet.com": "ok",
+        "matt.evans@futurenet.com": "ok",
+        "tom.power@futurenet.com": "ok",
+        "mackenzie.frazier@futurenet.com": "ok",
+        "markus.mesia@gmail.com": "ok",
+        "digital@orage.no": "ok",
+        "timothy.coleman@futurenet.com": "ok",
+        "lewis.maddison@futurenet.com": "ok",
+        "matthew.maidment@futurenet.com": "ok",
+        "josh.russell@futurenet.com": "ok",
+        "bram.lodewijks@bluepixlmedia.com": "ok",
+        "max.langridge@futurenet.com": "ok",
+        "alex.whitelock@futurenet.com": "ok"
+      },
+      "phones": {
+        "(02) 9955 2677": "not_valid_number",
+        "+1 212 378 0448": "ok",
+        "+44 (0) 7917 769 177": "ok",
+        "+44 (0)1225 442244": "ok",
+        "+44 (0)20 7042 4000": "ok",
+        "+971 55 350 6006": "ok",
+        "01225 442244": "ok",
+        "0300 123 2220": "not_valid_number"
+      },
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "domain_source": "existing_website",
+      "whois": {
+        "registrar": "Lexsynergy Limited",
+        "creation_date": "2003-12-06 19:17:07+00:00",
+        "org": null,
+        "country": null
+      }
+    }
+  },
+  {
+    "company_name": "Jetpack",
+    "website": "https://jetpack.com/resources/content-creation-tools/",
+    "linkedin": null,
+    "industry": "creation",
+    "location": null,
+    "contact_page": "https://jetpack.com/contact-support/",
+    "about_page": null,
+    "team_page": "https://jetpack.com/pro-dashboard/",
+    "emails": [
+      "privacypolicyupdates@automattic.com"
+    ],
+    "phones": [],
+    "social_links": {
+      "twitter.com": "https://twitter.com/jetpack",
+      "facebook.com": "https://www.facebook.com/jetpackme/",
+      "linkedin.com": "https://www.linkedin.com/company/jetpack-for-wordpress/"
+    },
+    "people": [
+      {
+        "name": "WordPress Plugins",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      }
+    ],
+    "source": "Google",
+    "confidence_score": 64,
+    "lead_quality": "Medium",
+    "company_type": "Software Company",
+    "_source_file": "output\\raw\\creation_20260712_132852.json",
+    "_flags": [],
+    "_verified_emails": [
+      "privacypolicyupdates@automattic.com"
+    ],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "emails": {
+        "privacypolicyupdates@automattic.com": "ok"
+      },
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "domain_source": "existing_website",
+      "whois": {
+        "registrar": "MarkMonitor, Inc.",
+        "creation_date": "1996-01-19 05:00:00+00:00",
+        "org": "DNStination Inc.",
+        "country": "US"
+      }
+    }
+  },
+  {
+    "company_name": "Sidehustles",
+    "website": "https://sidehustles.com/content-creation-tools/",
+    "linkedin": null,
+    "industry": "creation",
+    "location": null,
+    "contact_page": "https://sidehustles.com/contact/",
+    "about_page": "https://sidehustles.com/about-us/",
+    "team_page": "https://sidehustles.com/remote-job-boards/",
+    "emails": [],
+    "phones": [],
+    "social_links": {
+      "x.com": "https://www.wix.com/",
+      "facebook.com": "https://www.facebook.com/sidehustlesforall",
+      "twitter.com": "https://twitter.com/SideHustles4All",
+      "instagram.com": "https://www.instagram.com/SideHustlesForAll/",
+      "linkedin.com": "https://www.linkedin.com/company/sidehustlescom"
+    },
+    "people": [
+      {
+        "name": "Show Me The Money",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      }
+    ],
+    "source": "Google",
+    "confidence_score": 59,
+    "lead_quality": "Medium",
+    "company_type": "Software Company",
+    "_source_file": "output\\raw\\creation_20260712_132852.json",
+    "_flags": [],
+    "_verified_emails": [],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "domain_source": "existing_website",
+      "whois": {
+        "registrar": "GoDaddy.com, LLC",
+        "creation_date": "[datetime.datetime(2013, 5, 27, 18, 24, 26, tzinfo=tzoffset('UTC', 0)), datetime.datetime(2013, 5, 27, 13, 24, 26, tzinfo=tzoffset('UTC', 0))]",
+        "org": "Domains By Proxy, LLC",
+        "country": "US"
+      }
+    }
+  },
+  {
+    "company_name": "Findstack",
+    "website": "https://findstack.com/software/content-creation",
+    "linkedin": null,
+    "industry": "creation",
+    "location": null,
+    "contact_page": "https://findstack.com/about/#contact",
+    "about_page": "https://findstack.com/products/crevio/reviews",
+    "team_page": "https://findstack.com/software/project-management",
+    "emails": [
+      "hello@findstack.com",
+      "1d403928be900ac40aa63d941cf21824@o4505289601515520.ingest.sentry.io"
+    ],
+    "phones": [],
+    "social_links": {
+      "linkedin.com": "https://www.linkedin.com/company/findstack",
+      "twitter.com": "https://www.twitter.com/findstack",
+      "facebook.com": "https://www.facebook.com/findstack"
+    },
+    "people": [],
+    "source": "Google",
+    "confidence_score": 60,
+    "lead_quality": "Medium",
+    "company_type": "Software Company",
+    "_source_file": "output\\raw\\creation_20260712_132852.json",
+    "_flags": [],
+    "_verified_emails": [
+      "hello@findstack.com"
+    ],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "emails": {
+        "hello@findstack.com": "ok",
+        "1d403928be900ac40aa63d941cf21824@o4505289601515520.ingest.sentry.io": "no_mx_records"
+      },
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "domain_source": "existing_website",
+      "whois": {
+        "registrar": "Cloudflare, Inc.",
+        "creation_date": "2016-05-27 18:14:28+00:00",
+        "org": "DATA REDACTED",
+        "country": "GB"
+      }
+    }
+  },
+  {
+    "company_name": "Vista",
+    "website": "https://create.vista.com/",
+    "linkedin": null,
+    "industry": "creation",
+    "location": null,
+    "contact_page": null,
+    "about_page": "https://create.vista.com/templates/customer's-testimonial-about-salads/id-636b7b8abd515db728dae2e7/",
+    "team_page": "https://create.vista.com/create/mood-board/",
+    "emails": [
+      "support.create@vista.com"
+    ],
+    "phones": [],
+    "social_links": {
+      "linkedin.com": "https://www.linkedin.com/company/vistacreateofficial/",
+      "instagram.com": "https://www.instagram.com/vistacreate/",
+      "twitter.com": "https://twitter.com/vistacreate",
+      "facebook.com": "https://www.facebook.com/vistacreateofficial/"
+    },
+    "people": [],
+    "source": "Google",
+    "confidence_score": 56,
+    "lead_quality": "Medium",
+    "company_type": "Software Company",
+    "_source_file": "output\\raw\\creation_20260712_132852.json",
+    "_flags": [],
+    "_verified_emails": [
+      "support.create@vista.com"
+    ],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "emails": {
+        "support.create@vista.com": "ok"
+      },
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "domain_source": "existing_website",
+      "whois": {
+        "registrar": "MarkMonitor, Inc.",
+        "creation_date": "1994-11-02 05:00:00+00:00",
+        "org": "Cimpress Schweiz GmbH",
+        "country": "CH"
+      }
+    }
+  },
+  {
+    "company_name": "38 Free Visual Content Creation Tools To Make Marketing Easy",
+    "website": "https://optinmonster.com/best-visual-content-creation-tools/",
+    "linkedin": null,
+    "industry": "creation",
+    "location": null,
+    "contact_page": "https://optinmonster.com/contact-us/",
+    "about_page": "https://optinmonster.com/about",
+    "team_page": "https://optinmonster.com/features/form-builder/",
+    "emails": [],
+    "phones": [],
+    "social_links": {
+      "facebook.com": "https://www.facebook.com/sharer/sharer.php?u=https://optinmonster.com/best-visual-content-creation-tools/&display=popup&ref=plugin&src=share_button",
+      "twitter.com": "https://twitter.com/share?url=https://optinmonster.com/best-visual-content-creation-tools/&text=38%20Free%20Visual%20Content%20Creation%20Tools%20To%20Make%20Marketing%20Easy%20%282026%29&via=optinmonster",
+      "linkedin.com": "https://www.linkedin.com/shareArticle?mini=true&url=https://optinmonster.com/best-visual-content-creation-tools/",
+      "x.com": "https://screenshots.firefox.com/"
+    },
+    "people": [
+      {
+        "name": "Maruti Konduri Head of Marketing",
+        "designation": "Head Of",
+        "decision_maker_score": 60
+      },
+      {
+        "name": "Maruti Konduri",
+        "designation": "Head Of",
+        "decision_maker_score": 60
+      },
+      {
+        "name": "Chris Lema CTO Crowd Favorite",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Chris Lema",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "John Dumas Founder of EntrepreneurOnFire",
+        "designation": "Founder",
+        "decision_maker_score": 100
+      },
+      {
+        "name": "John Dumas",
+        "designation": "Founder",
+        "decision_maker_score": 100
+      },
+      {
+        "name": "Moby Siddique",
+        "designation": "Founder",
+        "decision_maker_score": 100
+      },
+      {
+        "name": "Nicolas Gagne",
+        "designation": "Founder",
+        "decision_maker_score": 100
+      },
+      {
+        "name": "Michael Stelzner",
+        "designation": "Founder",
+        "decision_maker_score": 100
+      },
+      {
+        "name": "Neil Patel Founder QuickSprout",
+        "designation": "Founder",
+        "decision_maker_score": 100
+      },
+      {
+        "name": "Neil Patel",
+        "designation": "Founder",
+        "decision_maker_score": 100
+      }
+    ],
+    "source": "Google",
+    "confidence_score": 66,
+    "lead_quality": "Medium",
+    "company_type": "Software Company",
+    "_source_file": "output\\raw\\creation_20260712_132852.json",
+    "_flags": [],
+    "_verified_emails": [],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "domain_source": "existing_website",
+      "whois": {
+        "registrar": "GoDaddy.com, LLC",
+        "creation_date": "[datetime.datetime(2012, 11, 30, 16, 51, 24, tzinfo=tzoffset('UTC', 0)), datetime.datetime(2012, 11, 30, 11, 51, 24, tzinfo=tzoffset('UTC', 0))]",
+        "org": "Domains By Proxy, LLC",
+        "country": "US"
+      }
+    }
+  }
+]

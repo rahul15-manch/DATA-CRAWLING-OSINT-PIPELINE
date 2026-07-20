@@ -1,0 +1,762 @@
+[
+    {
+        "company_name": "F6s",
+        "website": "https://www.f6s.com/companies/software/india/uttar-pradesh/noida/co",
+        "linkedin": null,
+        "industry": "Software Company Noida",
+        "location": null,
+        "contact_page": null,
+        "about_page": null,
+        "team_page": null,
+        "emails": [],
+        "phones": [],
+        "social_links": {},
+        "people": [],
+        "source": "Google",
+        "confidence_score": 36,
+        "lead_quality": "Low",
+        "company_type": "Unknown"
+    },
+    {
+        "company_name": "Techspot",
+        "website": "https://www.techspot.com/downloads/",
+        "linkedin": null,
+        "industry": "Cybersecurity",
+        "location": null,
+        "contact_page": null,
+        "about_page": "https://www.techspot.com/about/",
+        "team_page": "https://www.techspot.com/news/113030-indie-developer-steam-refund-policy-cost-well-reviewed.html",
+        "emails": [],
+        "phones": [
+            "150.0.7871.115",
+            "151.0.7922.19",
+            "260.4.2926",
+            "262.3.3056",
+            "32.0.101.8861"
+        ],
+        "social_links": {
+            "facebook.com": "https://www.facebook.com/techspot",
+            "x.com": "https://x.com/techspot"
+        },
+        "people": [
+            {
+                "name": "Featured on TechSpot",
+                "designation": "Founder",
+                "decision_maker_score": 100
+            }
+        ],
+        "source": "Google",
+        "confidence_score": 70,
+        "lead_quality": "High",
+        "company_type": "Software Company"
+    },
+    {
+        "company_name": "Beststartup",
+        "website": "https://beststartup.in/101-noida-based-software-companies-the-most-innovative-software-companies/",
+        "linkedin": null,
+        "industry": "Software Company Noida",
+        "location": null,
+        "contact_page": "https://beststartup.in/contact-us/",
+        "about_page": "https://beststartup.in/about-us/",
+        "team_page": null,
+        "emails": [
+            "contribute@beststartup.in",
+            "editor@beststartup.in",
+            "admin@beststartup.in"
+        ],
+        "phones": [],
+        "social_links": {
+            "linkedin.com": "https://www.linkedin.com/company/one97-communications-limited",
+            "twitter.com": "https://twitter.com/One97",
+            "x.com": "http://www.hotelogix.com",
+            "facebook.com": "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fbeststartup.in%2F101-noida-based-software-companies-the-most-innovative-software-companies%2F"
+        },
+        "people": [],
+        "source": "Google",
+        "confidence_score": 56,
+        "lead_quality": "Medium",
+        "company_type": "Software Company"
+    },
+    {
+        "company_name": "Registerkaro",
+        "website": "https://www.registerkaro.in/post/top-it-software-companies-in-noida",
+        "linkedin": null,
+        "industry": "Software Company Noida",
+        "location": null,
+        "contact_page": "https://www.registerkaro.in/contact-us",
+        "about_page": "https://www.registerkaro.in/company-registration",
+        "team_page": "https://www.registerkaro.in/spice-board-registration",
+        "emails": [
+            "your.email@example.com"
+        ],
+        "phones": [
+            "+91 92173 26570",
+            "+919217326570",
+            "2023-08-31",
+            "2023-09-21",
+            "2023-11-24",
+            "2023-12-13",
+            "2024-01-31",
+            "2024-02-08",
+            "2024-07-29",
+            "2024-09-03",
+            "2024-09-21",
+            "2024-11-18",
+            "2025-01-25",
+            "2025-03-10",
+            "2025-03-29",
+            "2025-04-30",
+            "2025-05-22",
+            "2025-11-11",
+            "2026-04-21",
+            "2026-04-24",
+            "2026-05-20",
+            "2026-07-01",
+            "5 (8828) 4.0"
+        ],
+        "social_links": {
+            "linkedin.com": "https://in.linkedin.com/in/srihari-dhondalay",
+            "facebook.com": "https://www.facebook.com/RegisterKaro1/",
+            "instagram.com": "https://www.instagram.com/registerkaro_/"
+        },
+        "people": [
+            {
+                "name": "Public Limited Company",
+                "designation": "Partner",
+                "decision_maker_score": 55
+            },
+            {
+                "name": "Dubai Free Zone Company Registration",
+                "designation": "CFO",
+                "decision_maker_score": 70
+            },
+            {
+                "name": "Other Services",
+                "designation": "CFO",
+                "decision_maker_score": 70
+            },
+            {
+                "name": "Annual Compliance for Society",
+                "designation": "Partner",
+                "decision_maker_score": 55
+            },
+            {
+                "name": "Trust Annual Compliance",
+                "designation": "Partner",
+                "decision_maker_score": 55
+            },
+            {
+                "name": "Change in Director",
+                "designation": "Partner",
+                "decision_maker_score": 55
+            },
+            {
+                "name": "Add Designated Partner",
+                "designation": "CTO",
+                "decision_maker_score": 80
+            },
+            {
+                "name": "Winding Up of a Company",
+                "designation": "CTO",
+                "decision_maker_score": 80
+            },
+            {
+                "name": "Increase Authorized Capital",
+                "designation": "CTO",
+                "decision_maker_score": 80
+            },
+            {
+                "name": "Transfer of Shares",
+                "designation": "Partner",
+                "decision_maker_score": 55
+            },
+            {
+                "name": "Convert Your Business",
+                "designation": "Partner",
+                "decision_maker_score": 55
+            },
+            {
+                "name": "Shareholder's Agreement",
+                "designation": "Founder",
+                "decision_maker_score": 100
+            },
+            {
+                "name": "Partnership Explore partnerships",
+                "designation": "Partner",
+                "decision_maker_score": 55
+            }
+        ],
+        "source": "Google",
+        "confidence_score": 86,
+        "lead_quality": "High",
+        "company_type": "Software Company"
+    },
+    {
+        "company_name": "Microsoft",
+        "website": "https://www.microsoft.com/en-us/software-download/?msockid=3e95fd0832536e2e2252ea9a338c6f48",
+        "linkedin": null,
+        "industry": "Software Company Noida",
+        "location": null,
+        "contact_page": null,
+        "about_page": "https://www.microsoft.com/about",
+        "team_page": "https://www.microsoft.com/en-us/microsoft-teams/group-chat-software",
+        "emails": [],
+        "phones": [],
+        "social_links": {
+            "x.com": "https://www.xbox.com/"
+        },
+        "people": [],
+        "source": "Google",
+        "confidence_score": 46,
+        "lead_quality": "Medium",
+        "company_type": "Software Company"
+    },
+    {
+        "company_name": "Lanetteam",
+        "website": "https://www.lanetteam.com/top-it-companies-in-noida",
+        "linkedin": null,
+        "industry": "Artificial Intelligence",
+        "location": null,
+        "contact_page": "https://www.lanetteam.com/contact-us",
+        "about_page": "https://www.lanetteam.com/about",
+        "team_page": "https://www.lanetteam.com/",
+        "emails": [
+            "salesinquiry_in@oracle.com",
+            "sales@infoicontechnologies.com",
+            "info@softonicsolution.com",
+            "info@flagbitsindia.com",
+            "info@kiwitech.com",
+            "recruitment@lanetteam.com",
+            "firstname@shadowinfosystem.com",
+            "hr@lanetteam.com"
+        ],
+        "phones": [
+            "+91 6353 235 503",
+            "+91 7229030202",
+            "+91 80 37132100",
+            "+91 8800384880",
+            "+91-120-413-9663",
+            "+91-120-4576892",
+            "+91-80-3041-9999",
+            "+91-971-190-6695",
+            "02147 739 207",
+            "080-2852 0261",
+            "8667201238"
+        ],
+        "social_links": {
+            "instagram.com": "https://www.instagram.com/lanet_team/",
+            "linkedin.com": "https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.lanetteam.com%2Ftop-it-companies-in-noida",
+            "facebook.com": "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.lanetteam.com%2Ftop-it-companies-in-noida"
+        },
+        "people": [
+            {
+                "name": "Engineers Per Squad",
+                "designation": "Partner",
+                "decision_maker_score": 55
+            },
+            {
+                "name": "Google Cloud Partner",
+                "designation": "Partner",
+                "decision_maker_score": 55
+            },
+            {
+                "name": "Google Cloud Partner",
+                "designation": "Partner",
+                "decision_maker_score": 55
+            },
+            {
+                "name": "Google Cloud Partner",
+                "designation": "Partner",
+                "decision_maker_score": 55
+            },
+            {
+                "name": "AWS Select Partner",
+                "designation": "Partner",
+                "decision_maker_score": 55
+            },
+            {
+                "name": "AWS Select Partner",
+                "designation": "Partner",
+                "decision_maker_score": 55
+            },
+            {
+                "name": "AWS Select Partner",
+                "designation": "Partner",
+                "decision_maker_score": 55
+            },
+            {
+                "name": "Microsoft Solutions Partner",
+                "designation": "Partner",
+                "decision_maker_score": 55
+            },
+            {
+                "name": "Microsoft Solutions Partner",
+                "designation": "Partner",
+                "decision_maker_score": 55
+            },
+            {
+                "name": "Sarah Chen",
+                "designation": "CTO",
+                "decision_maker_score": 80
+            },
+            {
+                "name": "Michael Rodriguez",
+                "designation": "CEO",
+                "decision_maker_score": 90
+            },
+            {
+                "name": "Jennifer Park",
+                "designation": "VP",
+                "decision_maker_score": 65
+            },
+            {
+                "name": "Vector DBs",
+                "designation": "CTO",
+                "decision_maker_score": 80
+            },
+            {
+                "name": "Vector DBs",
+                "designation": "CTO",
+                "decision_maker_score": 80
+            },
+            {
+                "name": "Industry Expertise",
+                "designation": "CTO",
+                "decision_maker_score": 80
+            }
+        ],
+        "source": "Google",
+        "confidence_score": 84,
+        "lead_quality": "High",
+        "company_type": "Unknown"
+    },
+    {
+        "company_name": "Aiassistica",
+        "website": "https://aiassistica.com/it-companies-in-noida/",
+        "linkedin": null,
+        "industry": "Artificial Intelligence",
+        "location": null,
+        "contact_page": "https://aiassistica.com/contact",
+        "about_page": "https://aiassistica.com/about-us/",
+        "team_page": null,
+        "emails": [
+            "info@aiassistica.com"
+        ],
+        "phones": [],
+        "social_links": {
+            "facebook.com": "https://www.facebook.com/profile.php?id=61578111661343",
+            "linkedin.com": "http://linkedin.com/company/aiassistica/",
+            "instagram.com": "https://www.instagram.com/aiassistica/",
+            "x.com": "https://x.com/AiAssistica"
+        },
+        "people": [],
+        "source": "Google",
+        "confidence_score": 56,
+        "lead_quality": "Medium",
+        "company_type": "Software Company"
+    },
+    {
+        "company_name": "Superbcompanies",
+        "website": "https://superbcompanies.com/categories/software-consulting-companies-in-noida/",
+        "linkedin": null,
+        "industry": "Artificial Intelligence",
+        "location": null,
+        "contact_page": null,
+        "about_page": "https://superbcompanies.com/about-us/",
+        "team_page": null,
+        "emails": [],
+        "phones": [
+            "1 - 9 50 - 199 10 - 49",
+            "10 - 49 2015",
+            "10 - 49 2018",
+            "10 - 49 2023",
+            "10 - 49 61.5",
+            "200 - 499 2003",
+            "50 - 199 1000",
+            "50 - 199 2007",
+            "50 - 199 2014",
+            "50 - 199 2016",
+            "50 - 199 2017",
+            "50 - 199 2018",
+            "50 - 199 2020",
+            "50 - 199 2021",
+            "50 - 199 7.7",
+            "500 - 999 2018"
+        ],
+        "social_links": {
+            "linkedin.com": "https://www.linkedin.com/company/superbcompanies/",
+            "twitter.com": "https://twitter.com/superbcompanies",
+            "facebook.com": "https://www.facebook.com/superbcompanies/"
+        },
+        "people": [],
+        "source": "Google",
+        "confidence_score": 50,
+        "lead_quality": "Medium",
+        "company_type": "Software Company"
+    },
+    {
+        "company_name": "Techbehemoths",
+        "website": "https://techbehemoths.com/top-companies/it-consulting/noida",
+        "linkedin": null,
+        "industry": "Software Company Noida",
+        "location": null,
+        "contact_page": "https://techbehemoths.com/contact",
+        "about_page": "https://techbehemoths.com/company/spiral-mantra-private-limited",
+        "team_page": null,
+        "emails": [
+            "sales@spiralmantra.com"
+        ],
+        "phones": [
+            "+91 8920750916",
+            "+918920750916"
+        ],
+        "social_links": {
+            "linkedin.com": "https://www.linkedin.com/company/techbehemoths/",
+            "facebook.com": "https://www.facebook.com/techbehemoths",
+            "twitter.com": "https://twitter.com/TechBehemoths",
+            "instagram.com": "https://www.instagram.com/techbehemoths/"
+        },
+        "people": [],
+        "source": "Google",
+        "confidence_score": 66,
+        "lead_quality": "Medium",
+        "company_type": "Consultancy"
+    },
+    {
+        "company_name": "Hyscaler",
+        "website": "https://hyscaler.com/insights/types-of-software/",
+        "linkedin": null,
+        "industry": "Artificial Intelligence",
+        "location": null,
+        "contact_page": "https://hyscaler.com/contact-us/business-enquiry",
+        "about_page": "https://hyscaler.com/about-us",
+        "team_page": "https://hyscaler.com/insights/api-gateway-vs-api-management/",
+        "emails": [
+            "sales@hyscaler.com",
+            "info@hyscaler.com",
+            "support@hyscaler.com"
+        ],
+        "phones": [
+            "+1-408-658-0677",
+            "+1-858-216-4380",
+            "+91-760-887-7277",
+            "+91-774-904-4377"
+        ],
+        "social_links": {
+            "facebook.com": "https://www.facebook.com/sharer/sharer.php?u=https://hyscaler.com/insights/types-of-software/",
+            "twitter.com": "https://twitter.com/intent/tweet?url=https://hyscaler.com/insights/types-of-software/",
+            "linkedin.com": "https://www.linkedin.com/sharing/share-offsite/?url=https://hyscaler.com/insights/types-of-software/",
+            "x.com": "https://x.com/i/grok?text=Summarize%20this%20article%20titled%20%22Types%20of%20Software%3A%20A%20Complete%20Classification%20Guide%20(2026)%22%20at%20https%3A%2F%2Fhyscaler.com%2Finsights%2Ftypes-of-software%2F",
+            "instagram.com": "https://www.instagram.com/hyscaler/"
+        },
+        "people": [],
+        "source": "Google",
+        "confidence_score": 70,
+        "lead_quality": "High",
+        "company_type": "Software Company"
+    },
+    {
+        "company_name": "20 ANNI DI BARCELLONA ROSETO",
+        "website": "https://ultrasbasket.forumcommunity.net/?t=60633015",
+        "linkedin": null,
+        "industry": "Software Company Noida",
+        "location": null,
+        "contact_page": "https://ultrasbasket.forumcommunity.net/?act=email",
+        "about_page": null,
+        "team_page": null,
+        "emails": [],
+        "phones": [],
+        "social_links": {},
+        "people": [],
+        "source": "Google",
+        "confidence_score": 37,
+        "lead_quality": "Low",
+        "company_type": "Unknown"
+    },
+    {
+        "company_name": "voyagelinternautecom",
+        "website": "https://voyage.linternaute.com/forum/affich-120848221-whirlpool-6th-sense-fresh-control",
+        "linkedin": null,
+        "industry": "Software Company Noida",
+        "location": null,
+        "contact_page": null,
+        "about_page": null,
+        "team_page": null,
+        "emails": [],
+        "phones": [],
+        "social_links": {
+            "twitter.com": "https://twitter.com/LInternauteInfo",
+            "facebook.com": "https://www.facebook.com/linternaute",
+            "x.com": "https://x.com/share?url=https://bricolage.linternaute.com/forum/affich-120848221-whirlpool-6th-sense-fresh-control"
+        },
+        "people": [],
+        "source": "Google",
+        "confidence_score": 34,
+        "lead_quality": "Low",
+        "company_type": "Software Company"
+    },
+    {
+        "company_name": "Berlines",
+        "website": "https://voyage.linternaute.com/forum/auto/affich-800071033-service-commercial-aie-aie",
+        "linkedin": null,
+        "industry": "Artificial Intelligence",
+        "location": null,
+        "contact_page": null,
+        "about_page": null,
+        "team_page": null,
+        "emails": [],
+        "phones": [],
+        "social_links": {
+            "twitter.com": "https://twitter.com/LInternauteInfo",
+            "facebook.com": "https://www.facebook.com/linternaute",
+            "x.com": "https://x.com/share?url=https://bricolage.linternaute.com/forum/auto/affich-800071033-service-commercial-aie-aie"
+        },
+        "people": [],
+        "source": "Google",
+        "confidence_score": 34,
+        "lead_quality": "Low",
+        "company_type": "Unknown"
+    },
+    {
+        "company_name": "Fallout New Vegas Anteprima Ita",
+        "website": "https://archive.forumcommunity.net/?t=40968320",
+        "linkedin": null,
+        "industry": "Software Company Noida",
+        "location": null,
+        "contact_page": "https://archive.forumcommunity.net/?act=email",
+        "about_page": null,
+        "team_page": null,
+        "emails": [],
+        "phones": [],
+        "social_links": {},
+        "people": [],
+        "source": "Google",
+        "confidence_score": 37,
+        "lead_quality": "Low",
+        "company_type": "Unknown"
+    },
+    {
+        "company_name": "Repiquer électricité sur boîte dérivation pour alimenter un interrupteur",
+        "website": "https://voyage.linternaute.com/forum/affich-121167493-repiquer-electricite-sur-boite-derivation-pour-alimenter-un-interrupteur",
+        "linkedin": null,
+        "industry": "Artificial Intelligence",
+        "location": null,
+        "contact_page": null,
+        "about_page": null,
+        "team_page": null,
+        "emails": [],
+        "phones": [],
+        "social_links": {
+            "twitter.com": "https://twitter.com/LInternauteInfo",
+            "facebook.com": "https://www.facebook.com/linternaute",
+            "x.com": "https://x.com/share?url=https://bricolage.linternaute.com/forum/affich-121167493-repiquer-electricite-sur-boite-derivation-pour-alimenter-un-interrupteur"
+        },
+        "people": [],
+        "source": "Google",
+        "confidence_score": 34,
+        "lead_quality": "Low",
+        "company_type": "Software Company"
+    },
+    {
+        "company_name": "FEMMINILE",
+        "website": "https://ultrasbasket.forumcommunity.net/?t=50119949",
+        "linkedin": null,
+        "industry": "Software Company Noida",
+        "location": null,
+        "contact_page": "https://ultrasbasket.forumcommunity.net/?act=email",
+        "about_page": null,
+        "team_page": null,
+        "emails": [],
+        "phones": [],
+        "social_links": {},
+        "people": [],
+        "source": "Google",
+        "confidence_score": 37,
+        "lead_quality": "Low",
+        "company_type": "Unknown"
+    },
+    {
+        "company_name": "Significados",
+        "website": "https://www.significados.com/software/",
+        "linkedin": null,
+        "industry": "Software Company Noida",
+        "location": null,
+        "contact_page": "https://www.significados.com/contacto/",
+        "about_page": null,
+        "team_page": null,
+        "emails": [
+            "logo@3x.png",
+            "logo@2x.png"
+        ],
+        "phones": [
+            "2013 - 2026  7"
+        ],
+        "social_links": {},
+        "people": [],
+        "source": "Google",
+        "confidence_score": 60,
+        "lead_quality": "Medium",
+        "company_type": "Software Company"
+    },
+    {
+        "company_name": "Elrincondelsoftware",
+        "website": "https://elrincondelsoftware.net/",
+        "linkedin": null,
+        "industry": "Software Company Noida",
+        "location": null,
+        "contact_page": "https://elrincondelsoftware.net/el-rincon-del-software-contacto/",
+        "about_page": null,
+        "team_page": null,
+        "emails": [],
+        "phones": [],
+        "social_links": {},
+        "people": [],
+        "source": "Google",
+        "confidence_score": 40,
+        "lead_quality": "Medium",
+        "company_type": "Software Company"
+    },
+    {
+        "company_name": "Codigosinformaticos",
+        "website": "https://www.codigosinformaticos.com/que-es-el-software/",
+        "linkedin": null,
+        "industry": "Software Company Noida",
+        "location": null,
+        "contact_page": "https://www.codigosinformaticos.com/contacto/",
+        "about_page": null,
+        "team_page": null,
+        "emails": [],
+        "phones": [],
+        "social_links": {
+            "facebook.com": "https://www.facebook.com/sharer/sharer.php?u=https://www.codigosinformaticos.com/que-es-el-software/",
+            "linkedin.com": "https://www.linkedin.com/shareArticle?mini=true&url=https://www.codigosinformaticos.com/que-es-el-software/&title=Que es el software: Tipos, ejemplos y diferencias con el hardware [Guía 2025]",
+            "x.com": "https://x.com/intent/post?text=Hey%2C+check+out+this+cool+site+I+found%3A+www.yourname.com+%23Topic+via%40my_twitter_name&url=https%3A%2F%2Fwww.codigosinformaticos.com%2Fque-es-el-software%2F"
+        },
+        "people": [],
+        "source": "Google",
+        "confidence_score": 40,
+        "lead_quality": "Medium",
+        "company_type": "Software Company"
+    },
+    {
+        "company_name": "Softonic",
+        "website": "https://en.softonic.com/windows",
+        "linkedin": null,
+        "industry": "Software Company Noida",
+        "location": null,
+        "contact_page": null,
+        "about_page": null,
+        "team_page": null,
+        "emails": [],
+        "phones": [],
+        "social_links": {},
+        "people": [],
+        "source": "Google",
+        "confidence_score": 36,
+        "lead_quality": "Low",
+        "company_type": "Unknown"
+    },
+    {
+        "company_name": "Ninite",
+        "website": "https://ninite.com/",
+        "linkedin": null,
+        "industry": "Software Company Noida",
+        "location": null,
+        "contact_page": null,
+        "about_page": "https://ninite.com/about",
+        "team_page": null,
+        "emails": [
+            "contact@ninite.com"
+        ],
+        "phones": [
+            "1.2.85.513",
+            "1.4.1.1032",
+            "10003-1502",
+            "12.13.10.3",
+            "133.0.5932.34",
+            "15.0.2201.2134",
+            "150.0.4078.48",
+            "150.0.7871.115",
+            "2.3.14.5270",
+            "2.7.0.2722",
+            "2015.10.19",
+            "2024.1.0.3113",
+            "2026.1.2.36540",
+            "258.4.3749",
+            "26.108.0607.0002",
+            "26.6.11052.3712",
+            "26.6.11052.3716",
+            "3.6.9403.32563",
+            "4.5.8.7128",
+            "5.112.9563.32325",
+            "5.9.2.10042",
+            "6.39.11548",
+            "64) 10.0.9.36120",
+            "64) 10.0.9.50000",
+            "64) 8.0.28.26269",
+            "64) 8.0.28.36119",
+            "64) 9.0.17.26269",
+            "64) 9.0.17.36118",
+            "7.1.0.41345",
+            "7.3.7.1155",
+            "8.1.4087.46",
+            "86) 10.0.9.36120",
+            "86) 10.0.9.50000",
+            "86) 8.0.28.26269",
+            "86) 8.0.28.36119",
+            "86) 9.0.17.26269",
+            "86) 9.0.17.36118"
+        ],
+        "social_links": {},
+        "people": [],
+        "source": "Google",
+        "confidence_score": 60,
+        "lead_quality": "Medium",
+        "company_type": "Software Company"
+    },
+    {
+        "company_name": "Linkdot",
+        "website": "https://linkdot.io/software-companies-in-noida/",
+        "linkedin": null,
+        "industry": "Software Development",
+        "location": null,
+        "contact_page": "https://linkdot.io/contact/",
+        "about_page": "https://linkdot.io/about-us/",
+        "team_page": "https://linkdot.io/benefits-of-productivity-tools-for-remote-teams/",
+        "emails": [],
+        "phones": [],
+        "social_links": {},
+        "people": [],
+        "source": "Google",
+        "confidence_score": 50,
+        "lead_quality": "Medium",
+        "company_type": "Software Company"
+    },
+    {
+        "company_name": "Marketmystique",
+        "website": "https://marketmystique.com/it-companies-in-noida/",
+        "linkedin": null,
+        "industry": "Artificial Intelligence",
+        "location": null,
+        "contact_page": "https://marketmystique.com/contact-us/",
+        "about_page": "https://marketmystique.com/about-us/",
+        "team_page": null,
+        "emails": [
+            "info@marketmystique.com"
+        ],
+        "phones": [
+            "150-200 7"
+        ],
+        "social_links": {
+            "facebook.com": "https://www.facebook.com/MarketMystique/",
+            "linkedin.com": "https://www.linkedin.com/company/marketmystiqueofficial",
+            "x.com": "https://x.com/MarketMystique",
+            "instagram.com": "https://www.instagram.com/marketmystiqueofficial/"
+        },
+        "people": [],
+        "source": "Google",
+        "confidence_score": 66,
+        "lead_quality": "Medium",
+        "company_type": "Software Company"
+    }
+]

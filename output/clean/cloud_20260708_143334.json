@@ -1,0 +1,1391 @@
+[
+  {
+    "company_name": "F6s",
+    "website": "https://www.f6s.com/companies/cloud/india/co",
+    "linkedin": null,
+    "industry": "cloud",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "confidence_score": 36,
+    "lead_quality": "Low",
+    "company_type": "Unknown",
+    "_source_file": "output\\raw\\cloud_20260708_143334.json",
+    "_flags": []
+  },
+  {
+    "company_name": "Google",
+    "website": "https://cloud.google.com/",
+    "linkedin": null,
+    "industry": "Artificial Intelligence",
+    "location": null,
+    "contact_page": "https://cloud.google.com/contact",
+    "about_page": "https://cloud.google.com/analyst-reports",
+    "team_page": "https://cloud.google.com/solutions/financial-services",
+    "emails": [],
+    "phones": [],
+    "social_links": {
+      "x.com": "https://x.com/googlecloud"
+    },
+    "people": [
+      {
+        "name": "New Business Channels Using APIs",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Windows on Google Cloud",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Model Garden",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Cloud Connectivity",
+        "designation": "VP",
+        "decision_maker_score": 65
+      },
+      {
+        "name": "Virtual Private Cloud",
+        "designation": "VP",
+        "decision_maker_score": 65
+      },
+      {
+        "name": "Private Service Connect",
+        "designation": "VP",
+        "decision_maker_score": 65
+      },
+      {
+        "name": "Find a partner",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Carbon Footprint",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Google Cloud Community",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Consulting and Partners",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Google Cloud Marketplace",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Find a partner",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      }
+    ],
+    "source": "Google",
+    "confidence_score": 62,
+    "lead_quality": "Medium",
+    "company_type": "Software Company",
+    "_source_file": "output\\raw\\cloud_20260708_143334.json",
+    "_flags": []
+  },
+  {
+    "company_name": "Inventiva",
+    "website": "https://www.inventiva.co.in/trends/companies-for-cloud-computing/",
+    "linkedin": null,
+    "industry": "Artificial Intelligence",
+    "location": null,
+    "contact_page": "https://www.inventiva.co.in/contact-us/",
+    "about_page": "https://www.inventiva.co.in/about-us/",
+    "team_page": null,
+    "emails": [
+      "info@inventiva.co.in"
+    ],
+    "phones": [
+      "+91-9717329850"
+    ],
+    "social_links": {
+      "facebook.com": "https://www.facebook.com/InventivaIndia",
+      "x.com": "https://x.com/inventivaindia",
+      "linkedin.com": "https://www.linkedin.com/company/inventivaindia/",
+      "instagram.com": "https://www.instagram.com/inventivaindia/",
+      "twitter.com": "https://twitter.com/inventivaindia"
+    },
+    "people": [],
+    "source": "Google",
+    "confidence_score": 66,
+    "lead_quality": "Medium",
+    "company_type": "Software Company",
+    "_source_file": "output\\raw\\cloud_20260708_143334.json",
+    "_flags": []
+  },
+  {
+    "company_name": "Datamation",
+    "website": "https://www.datamation.com/cloud/cloud-service-providers/",
+    "linkedin": null,
+    "industry": "Cybersecurity",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": "https://www.datamation.com/careers/data-management-job-market/",
+    "emails": [],
+    "phones": [],
+    "social_links": {
+      "facebook.com": "https://www.facebook.com/Datamationcom/",
+      "x.com": "https://x.com/datamation",
+      "twitter.com": "https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.datamation.com%2Fshared%2Fcloud%2Fcloud-service-providers%2F&text=16+Top+Cloud+Computing+Companies+in+2026&via=Datamation"
+    },
+    "people": [],
+    "source": "Google",
+    "confidence_score": 40,
+    "lead_quality": "Medium",
+    "company_type": "Software Company",
+    "_source_file": "output\\raw\\cloud_20260708_143334.json",
+    "_flags": []
+  },
+  {
+    "company_name": "Cloud AI Quantum",
+    "website": "https://www.cloud.in/",
+    "linkedin": null,
+    "industry": "Cloud Computing",
+    "location": null,
+    "contact_page": "https://www.cloud.in/contact-us",
+    "about_page": "https://www.cloud.in/about-us",
+    "team_page": "https://www.cloud.in/contact-us?intent=executive#start",
+    "emails": [
+      "sales@cloud.in",
+      "support@cloud.in"
+    ],
+    "phones": [
+      "+91-20-6608 0101",
+      "+91-20-6608 0123"
+    ],
+    "social_links": {
+      "linkedin.com": "https://www.linkedin.com/company/cloud.in/",
+      "facebook.com": "https://www.facebook.com/clouddotin",
+      "twitter.com": "https://twitter.com/clouddotin",
+      "instagram.com": "https://www.instagram.com/clouddotin/"
+    },
+    "people": [
+      {
+        "name": "Modernization Assessment",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      }
+    ],
+    "source": "Google",
+    "confidence_score": 82,
+    "lead_quality": "High",
+    "company_type": "Software Company",
+    "_source_file": "output\\raw\\cloud_20260708_143334.json",
+    "_flags": []
+  },
+  {
+    "company_name": "Analyticsinsight",
+    "website": "https://www.analyticsinsight.net/cloud-computing/top-10-cloud-companies-in-india",
+    "linkedin": null,
+    "industry": "Cloud Computing",
+    "location": null,
+    "contact_page": "https://www.analyticsinsight.net/contact-us/",
+    "about_page": "https://www.analyticsinsight.net/about-us",
+    "team_page": "https://www.analyticsinsight.net/team",
+    "emails": [
+      "info@analyticsinsight.net",
+      "submissions@analyticsinsight.net",
+      "achu.k@analyticsinsight.net",
+      "analyticsinsight@analyticsinsight.net",
+      "hr@analyticsinsight.net",
+      "sankha@analyticsinsight.net",
+      "ashishsukhadeve@analyticsinsight.net",
+      "anudeep@analyticsinsight.net",
+      "press@analyticsinsight.net",
+      "simran.m@analyticsinsight.net",
+      "subodh@analyticsinsight.net",
+      "antara.b@analyticsinsight.net"
+    ],
+    "phones": [
+      "+91 9000113973",
+      "+91 9100930793"
+    ],
+    "social_links": {
+      "twitter.com": "https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.analyticsinsight.net%2Fcloud-computing%2Ftop-10-cloud-companies-in-india&text=Top%2010%20Cloud%20Companies%20in%20India&hashtags=",
+      "facebook.com": "https://www.facebook.com/sharer.php?u=https%3A%2F%2Fwww.analyticsinsight.net%2Fcloud-computing%2Ftop-10-cloud-companies-in-india",
+      "linkedin.com": "https://www.linkedin.com/shareArticle?url=https%3A%2F%2Fwww.analyticsinsight.net%2Fcloud-computing%2Ftop-10-cloud-companies-in-india&title=Top%2010%20Cloud%20Companies%20in%20India"
+    },
+    "people": [],
+    "source": "Google",
+    "confidence_score": 70,
+    "lead_quality": "High",
+    "company_type": "Software Company",
+    "_source_file": "output\\raw\\cloud_20260708_143334.json",
+    "_flags": []
+  },
+  {
+    "company_name": "Microsoft",
+    "website": "https://azure.microsoft.com/en-us?msockid=2e62a50d33c16bca3dc5b29d32dd6a20",
+    "linkedin": null,
+    "industry": "Cloud Computing",
+    "location": null,
+    "contact_page": "https://azure.microsoft.com/en-us/contact",
+    "about_page": "https://azure.microsoft.com/en-us/resources/cloud-computing-dictionary/",
+    "team_page": "https://azure.microsoft.com/en-us/products/api-management",
+    "emails": [],
+    "phones": [
+      "(0)8 05 98 00 79     9",
+      "(0)8 75 10 980     9",
+      "(0)800 0205934     9",
+      "(0)800 026 0329     9",
+      "(0)800 523 121     9",
+      "(0)800 8088014     9",
+      "(0)80058121     9",
+      "(0)801128000     9",
+      "(000) 8000 404 454",
+      "(800) 642 7676     8",
+      "0 8000 123 345     9",
+      "000 4054 083     9",
+      "0120 54 2244     9",
+      "014440283",
+      "080 222 0880     09",
+      "0800 16 73 44     9",
+      "0800 222 9467        9",
+      "0800 662 006     9",
+      "0800 761 7454     9",
+      "0800 800 004     8",
+      "0850 390 2777     9",
+      "1 7097831     9",
+      "1 809 453 214     9",
+      "1 877 678 8032     9",
+      "1800 1013659     8",
+      "1800 832 352     9",
+      "1800624449     8",
+      "3 9212 1942     8",
+      "3002 3256     9",
+      "305 418 9143     9",
+      "400 820 3800     9",
+      "5386541",
+      "766505110",
+      "80 404 952     9",
+      "800 000 024     9",
+      "800 123 3353     9",
+      "800 20 91 75     9",
+      "800 620 02     9",
+      "800089761     9",
+      "801 802 000     9",
+      "855 270 0615     8",
+      "9194560"
+    ],
+    "social_links": {
+      "x.com": "https://www.xbox.com/"
+    },
+    "people": [
+      {
+        "name": "Partners with specialized security expertise.",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Partners with specialized security expertise.",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Partners with specialized security expertise.",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Azure Data Factory",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      }
+    ],
+    "source": "Google",
+    "confidence_score": 72,
+    "lead_quality": "High",
+    "company_type": "Software Company",
+    "_source_file": "output\\raw\\cloud_20260708_143334.json",
+    "_flags": []
+  },
+  {
+    "company_name": "Claude",
+    "website": "https://claude.com/",
+    "linkedin": null,
+    "industry": "Artificial Intelligence",
+    "location": null,
+    "contact_page": "https://claude.com/contact-sales",
+    "about_page": "https://claude.com/product/overview",
+    "team_page": "https://claude.com/programs/claude-team-plan-for-research-labs",
+    "emails": [],
+    "phones": [
+      "2024-03-15",
+      "2024-03-18",
+      "2024-03-20",
+      "2024-03-22"
+    ],
+    "social_links": {
+      "instagram.com": "https://www.instagram.com/claudeai",
+      "linkedin.com": "https://www.linkedin.com/showcase/claude/",
+      "x.com": "https://x.com/claudeai"
+    },
+    "people": [
+      {
+        "name": "Play video",
+        "designation": "COO",
+        "decision_maker_score": 75
+      },
+      {
+        "name": "Explore connectors",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Explore connectors Explore connectors",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Explore connectors",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Claude partner network",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Claude partner network",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Connectors Connectors",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Powered by Claude",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Service partners",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Service partners Service partners",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Service partners",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "cookie settings",
+        "designation": "COO",
+        "decision_maker_score": 75
+      },
+      {
+        "name": "all cookies",
+        "designation": "COO",
+        "decision_maker_score": 75
+      }
+    ],
+    "source": "Google",
+    "confidence_score": 72,
+    "lead_quality": "High",
+    "company_type": "Unknown",
+    "_source_file": "output\\raw\\cloud_20260708_143334.json",
+    "_flags": []
+  },
+  {
+    "company_name": "Cloud",
+    "website": "https://www.cloud.com/",
+    "linkedin": null,
+    "industry": "Industrial Automation",
+    "location": null,
+    "contact_page": null,
+    "about_page": "https://www.cloud.com/about-us",
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {
+      "x.com": "https://www.citrix.com/customer-success/atlantic-health-system.html"
+    },
+    "people": [],
+    "source": "Google",
+    "confidence_score": 40,
+    "lead_quality": "Medium",
+    "company_type": "Software Company",
+    "_source_file": "output\\raw\\cloud_20260708_143334.json",
+    "_flags": []
+  },
+  {
+    "company_name": "Icloud",
+    "website": "https://www.icloud.com/",
+    "linkedin": null,
+    "industry": "Artificial Intelligence",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "confidence_score": 36,
+    "lead_quality": "Low",
+    "company_type": "Software Company",
+    "_source_file": "output\\raw\\cloud_20260708_143334.json",
+    "_flags": []
+  },
+  {
+    "company_name": "Amazon",
+    "website": "https://aws.amazon.com/",
+    "linkedin": null,
+    "industry": "Cloud Computing",
+    "location": null,
+    "contact_page": "https://aws.amazon.com/contact-us/?nc2=h_ut_cu",
+    "about_page": null,
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {
+      "x.com": "https://x.com/awscloud",
+      "facebook.com": "https://www.facebook.com/amazonwebservices",
+      "linkedin.com": "https://www.linkedin.com/company/amazon-web-services/",
+      "instagram.com": "https://www.instagram.com/amazonwebservices/"
+    },
+    "people": [],
+    "source": "Google",
+    "confidence_score": 40,
+    "lead_quality": "Medium",
+    "company_type": "Software Company",
+    "_source_file": "output\\raw\\cloud_20260708_143334.json",
+    "_flags": []
+  },
+  {
+    "company_name": "Techmahindra",
+    "website": "https://www.techmahindra.com/services/cloud-consulting-services/",
+    "linkedin": null,
+    "industry": "Cloud Computing",
+    "location": null,
+    "contact_page": "https://www.techmahindra.com/contact-us/",
+    "about_page": "https://www.techmahindra.com/about-us/",
+    "team_page": "https://www.techmahindra.com/about-us/leadership/",
+    "emails": [
+      "ruchie.khanna@techmahindra.com",
+      "investor.relations@techmahindra.com"
+    ],
+    "phones": [
+      "+1 214-974-9907",
+      "+234 812 287 2909",
+      "+254 718 020204",
+      "+27 11 676 2800",
+      "+31 70 304 7700",
+      "+351 967 744 075",
+      "+41 61 225 42 48",
+      "+44 1908 553400",
+      "+44 1908 553600",
+      "+46 31 325 96 87",
+      "+52 55 4164 3431",
+      "+52 55 4164 3453",
+      "+55 11 2123-8100",
+      "+56 2150807600",
+      "+61 1800 153 580",
+      "+61 2 6169 4150",
+      "+61 7 3184 9110",
+      "+61 8 9211 6142",
+      "+62 21 57998222",
+      "+63 26662821",
+      "+63 27360893",
+      "+63 32 410 6491",
+      "+63 32 512 6275",
+      "+65 6439 2035",
+      "+66 2 640 8170",
+      "+81 3-6402-5921",
+      "+84 439142900",
+      "+855 23 972 000",
+      "+86 21 5080 7600",
+      "+86 25 5887 7531",
+      "+91 020 40109111",
+      "+91 120 400 5000",
+      "+91 120 400 8500",
+      "+91 120 488 6800",
+      "+91 120 489 5200",
+      "+91 120 617 6000",
+      "+91 120 6176000",
+      "+91 120 713 5222",
+      "+91 120 713 9500",
+      "+91 20 2540 9000",
+      "+91 20 4225 0000",
+      "+91 20 6627 3000",
+      "+91 22 4975 4800",
+      "+91 22 6688 2000",
+      "+91 33 4446 1000",
+      "+91 40 3063 3535",
+      "+91 40 3063 6363",
+      "+91 40 6636 1209",
+      "+91 422 458 6209",
+      "+91 44 6662 3909",
+      "+91 44 6662 4000",
+      "+91 446619200",
+      "+91 674 662 2001",
+      "+91 674 677 4505",
+      "+91 712 667 2000",
+      "+91 72668400",
+      "+91 80 4058 5200",
+      "+91 80678 07777",
+      "+965 2299 7789",
+      "+971 4 391 1700",
+      "+973 3999 0263",
+      "+974 401267675",
+      "+974 440 297 314",
+      "1050001",
+      "23102-23104",
+      "23202-23204",
+      "243-0021",
+      "2770-203"
+    ],
+    "social_links": {
+      "facebook.com": "https://www.facebook.com/TechMahindra",
+      "x.com": "https://www.x.com/Tech_Mahindra",
+      "linkedin.com": "https://www.linkedin.com/company/tech-mahindra",
+      "instagram.com": "https://www.instagram.com/techmahindra_official/"
+    },
+    "people": [
+      {
+        "name": "About Us",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Featured News",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "ANAND G. MAHINDRA",
+        "designation": "Chairman",
+        "decision_maker_score": 85
+      },
+      {
+        "name": "DR. ANISH SHAH Non-Executive Director",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "DR. ANISH SHAH",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Non-Executive Director",
+        "designation": "CEO",
+        "decision_maker_score": 90
+      },
+      {
+        "name": "MOHIT JOSHI",
+        "designation": "CEO",
+        "decision_maker_score": 90
+      },
+      {
+        "name": "HAIGREVE KHAITAN Independent Director",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "HAIGREVE KHAITAN",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Independent Director",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "DR. MUKTI KHAIRE Independent Director",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "DR. MUKTI KHAIRE",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Independent Director",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "SHIKHA SHARMA Lead Independent Director",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "SHIKHA SHARMA",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Lead Independent Director",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "PENELOPE FOWLER Independent Director",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "PENELOPE FOWLER",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Independent Director",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "NEELAM DHAWAN Independent Director",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "NEELAM DHAWAN",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Independent Director",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "TARUN BAJAJ Independent Director",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "TARUN BAJAJ",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Independent Director",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "PUNEET RENJHEN Non-Executive Director",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "PUNEET RENJHEN",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "MOHIT JOSHI",
+        "designation": "CEO",
+        "decision_maker_score": 90
+      },
+      {
+        "name": "MANISH MANGAL",
+        "designation": "President",
+        "decision_maker_score": 85
+      },
+      {
+        "name": "HARSHUL ASNANI",
+        "designation": "President",
+        "decision_maker_score": 85
+      },
+      {
+        "name": "HARSHVENDRA SOIN",
+        "designation": "President",
+        "decision_maker_score": 85
+      },
+      {
+        "name": "SAHIL DHAWAN",
+        "designation": "President",
+        "decision_maker_score": 85
+      },
+      {
+        "name": "SUMIT KUMAR POPLI",
+        "designation": "President",
+        "decision_maker_score": 85
+      },
+      {
+        "name": "KUNAL PUROHIT",
+        "designation": "President",
+        "decision_maker_score": 85
+      },
+      {
+        "name": "President - Next Gen Verticals",
+        "designation": "President",
+        "decision_maker_score": 85
+      },
+      {
+        "name": "NARASIMHAM RV",
+        "designation": "President",
+        "decision_maker_score": 85
+      },
+      {
+        "name": "BIRENDRA SEN",
+        "designation": "President",
+        "decision_maker_score": 85
+      }
+    ],
+    "source": "Google",
+    "confidence_score": 84,
+    "lead_quality": "High",
+    "company_type": "Software Company",
+    "_source_file": "output\\raw\\cloud_20260708_143334.json",
+    "_flags": []
+  },
+  {
+    "company_name": "Outsourcefromindia",
+    "website": "https://www.outsourcefromindia.com/top-companies/cloud-consulting/india",
+    "linkedin": null,
+    "industry": "Cloud Computing",
+    "location": null,
+    "contact_page": "https://www.outsourcefromindia.com/contact-us",
+    "about_page": "https://www.outsourcefromindia.com/about-us",
+    "team_page": null,
+    "emails": [
+      "connect@outsourcefromindia.com"
+    ],
+    "phones": [
+      "+911204132921"
+    ],
+    "social_links": {
+      "x.com": "https://www.maxaix.com",
+      "linkedin.com": "https://www.linkedin.com/company/outsourcefromindia/"
+    },
+    "people": [],
+    "source": "Google",
+    "confidence_score": 66,
+    "lead_quality": "Medium",
+    "company_type": "Software Company",
+    "_source_file": "output\\raw\\cloud_20260708_143334.json",
+    "_flags": []
+  },
+  {
+    "company_name": "Microsoft OneDrive",
+    "website": "https://onedrive.live.com/",
+    "linkedin": null,
+    "industry": "cloud",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "confidence_score": 36,
+    "lead_quality": "Low",
+    "company_type": "Unknown",
+    "_source_file": "output\\raw\\cloud_20260708_143334.json",
+    "_flags": []
+  },
+  {
+    "company_name": "Grantthornton",
+    "website": "https://www.grantthornton.in/services/consulting/new-and-emerging-tech/cloud-consulting-services/",
+    "linkedin": null,
+    "industry": "Cloud Computing",
+    "location": null,
+    "contact_page": "https://www.grantthornton.in/en/contact/",
+    "about_page": "https://www.grantthornton.in/en/about/golf/",
+    "team_page": "https://www.grantthornton.in/en/services/tax-regulatory-finance-consulting/global-people-solutions/",
+    "emails": [
+      "gtbharat@in.gt.com",
+      "replytoaddress@example.com",
+      "someone@example.com",
+      "address@example.com"
+    ],
+    "phones": [
+      "+91 11 4952 7400"
+    ],
+    "social_links": {
+      "facebook.com": "https://www.facebook.com/GrantThorntonBharat",
+      "linkedin.com": "https://www.linkedin.com/company/909723?trk=tyah&trkInfo=tarId:1408522350548,tas:Grant%20Thornton%20India%20LLP,idx:1-1-1",
+      "twitter.com": "https://twitter.com/GrantThorntonIN",
+      "instagram.com": "https://www.instagram.com/grantthornton_bharat/"
+    },
+    "people": [
+      {
+        "name": "Akhil Chandna",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "View All Events",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Our leader",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Akhil Chandna",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      }
+    ],
+    "source": "Google",
+    "confidence_score": 79,
+    "lead_quality": "High",
+    "company_type": "Software Company",
+    "_source_file": "output\\raw\\cloud_20260708_143334.json",
+    "_flags": []
+  },
+  {
+    "company_name": "Accenture",
+    "website": "https://www.accenture.com/us-en/services/cloud",
+    "linkedin": null,
+    "industry": "Artificial Intelligence",
+    "location": null,
+    "contact_page": "https://www.accenture.com/us-en/about/contact-us",
+    "about_page": "https://www.accenture.com/us-en/about/company-index",
+    "team_page": "https://www.accenture.com/us-en/services/finance-risk",
+    "emails": [],
+    "phones": [
+      "1 (216) 672-0266",
+      "1 (877) 889-9009"
+    ],
+    "social_links": {
+      "linkedin.com": "https://www.linkedin.com/company/accenture",
+      "facebook.com": "https://www.facebook.com/accenture",
+      "instagram.com": "https://www.instagram.com/accenture/"
+    },
+    "people": [
+      {
+        "name": "Partners in change",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Jason Dess",
+        "designation": "CFO",
+        "decision_maker_score": 70
+      },
+      {
+        "name": "Craig Richey",
+        "designation": "CFO",
+        "decision_maker_score": 70
+      },
+      {
+        "name": "Paul Prendergast",
+        "designation": "CFO",
+        "decision_maker_score": 70
+      },
+      {
+        "name": "Paul Zanker",
+        "designation": "CFO",
+        "decision_maker_score": 70
+      }
+    ],
+    "source": "Google",
+    "confidence_score": 71,
+    "lead_quality": "High",
+    "company_type": "Software Company",
+    "_source_file": "output\\raw\\cloud_20260708_143334.json",
+    "_flags": []
+  },
+  {
+    "company_name": "Beststartup",
+    "website": "https://beststartup.in/101-india-based-cloud-computing-companies-the-most-innovative-cloud-computing-companies/",
+    "linkedin": null,
+    "industry": "Cloud Computing",
+    "location": null,
+    "contact_page": "https://beststartup.in/contact-us/",
+    "about_page": "https://beststartup.in/about-us/",
+    "team_page": null,
+    "emails": [
+      "editor@beststartup.in",
+      "admin@beststartup.in",
+      "contribute@beststartup.in"
+    ],
+    "phones": [],
+    "social_links": {
+      "linkedin.com": "https://www.linkedin.com/company/441807",
+      "twitter.com": "https://twitter.com/Route_Mobile",
+      "x.com": "https://fugenx.com/",
+      "facebook.com": "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fbeststartup.in%2F101-india-based-cloud-computing-companies-the-most-innovative-cloud-computing-companies%2F"
+    },
+    "people": [],
+    "source": "Google",
+    "confidence_score": 56,
+    "lead_quality": "Medium",
+    "company_type": "Software Company",
+    "_source_file": "output\\raw\\cloud_20260708_143334.json",
+    "_flags": []
+  },
+  {
+    "company_name": "Tracxn",
+    "website": "https://tracxn.com/d/explore/cloud-infrastructure-startups-in-india/__-UN4Bu5cwRQ2om-ldXY1eyWqZ60hxd2DfANV4uvOrGE/companies",
+    "linkedin": null,
+    "industry": "Civil Engineering",
+    "location": null,
+    "contact_page": "https://tracxn.com/contactus",
+    "about_page": "https://tracxn.com/d/explore/cloud-infrastructure-startups-in-india/__-UN4Bu5cwRQ2om-ldXY1eyWqZ60hxd2DfANV4uvOrGE/companies#about",
+    "team_page": null,
+    "emails": [
+      "hi@tracxn.com"
+    ],
+    "phones": [
+      "0 1 2 3 4 5 6",
+      "0 4 8 12 16 20",
+      "023 1 2022 - 2021 3 20",
+      "2026 - 2025 - 2024 5 2",
+      "2026 - 2025 3 2024 14",
+      "5 2017 14",
+      "6 4 4 3 2 2 2 1 1 1"
+    ],
+    "social_links": {
+      "linkedin.com": "https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Ftracxn.com%2Fd%2Fexplore%2Fcloud-infrastructure-startups-in-india%2F__-UN4Bu5cwRQ2om-ldXY1eyWqZ60hxd2DfANV4uvOrGE",
+      "twitter.com": "https://twitter.com/intent/tweet?url=https%3A%2F%2Ftracxn.com%2Fd%2Fexplore%2Fcloud-infrastructure-startups-in-india%2F__-UN4Bu5cwRQ2om-ldXY1eyWqZ60hxd2DfANV4uvOrGE",
+      "facebook.com": "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftracxn.com%2Fd%2Fexplore%2Fcloud-infrastructure-startups-in-india%2F__-UN4Bu5cwRQ2om-ldXY1eyWqZ60hxd2DfANV4uvOrGE"
+    },
+    "people": [],
+    "source": "Google",
+    "confidence_score": 66,
+    "lead_quality": "Medium",
+    "company_type": "Software Company",
+    "_source_file": "output\\raw\\cloud_20260708_143334.json",
+    "_flags": []
+  },
+  {
+    "company_name": "Industrial Cloud",
+    "website": "https://industrial-cloud.com/",
+    "linkedin": null,
+    "industry": "cloud",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "confidence_score": 36,
+    "lead_quality": "Low",
+    "company_type": "Unknown",
+    "_source_file": "output\\raw\\cloud_20260708_143334.json",
+    "_flags": []
+  },
+  {
+    "company_name": "Turck",
+    "website": "https://www.turck.in/en/industrial-cloud-9887.php",
+    "linkedin": null,
+    "industry": "Industrial Automation",
+    "location": null,
+    "contact_page": "https://www.turck.in/en/powertrain-contactless-verification-4339.php",
+    "about_page": "https://www.turck.in/en/company-news-2863.php",
+    "team_page": "https://www.turck.in/en/44528.php",
+    "emails": [
+      "emailaddress@example.com"
+    ],
+    "phones": [
+      "+91-7768933005",
+      "62443-4-1"
+    ],
+    "social_links": {},
+    "people": [
+      {
+        "name": "Success Stories",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      }
+    ],
+    "source": "Google",
+    "confidence_score": 82,
+    "lead_quality": "High",
+    "company_type": "Software Company",
+    "_source_file": "output\\raw\\cloud_20260708_143334.json",
+    "_flags": []
+  },
+  {
+    "company_name": "Ifs",
+    "website": "https://www.ifs.com/en/ifs-cloud",
+    "linkedin": null,
+    "industry": "cloud",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [
+      {
+        "name": "Vikram Jadhav",
+        "designation": "Founder",
+        "linkedin": "https://in.linkedin.com/in/vikramjadhav123",
+        "decision_maker_score": 100
+      }
+    ],
+    "source": "Google",
+    "confidence_score": 50,
+    "lead_quality": "Medium",
+    "company_type": "Unknown",
+    "_source_file": "output\\raw\\cloud_20260708_143334.json",
+    "_flags": []
+  },
+  {
+    "company_name": "Zipdo",
+    "website": "https://zipdo.co/service/industrial-cloud/",
+    "linkedin": null,
+    "industry": "Cloud Computing",
+    "location": null,
+    "contact_page": "https://zipdo.co/contact-us/",
+    "about_page": "https://zipdo.co/about/",
+    "team_page": null,
+    "emails": [
+      "info@zipdo.co"
+    ],
+    "phones": [],
+    "social_links": {
+      "linkedin.com": "https://www.linkedin.com/company/zipdo/about/?viewAsMember=true",
+      "x.com": "https://x.com/i/communities/2024839078873628780"
+    },
+    "people": [],
+    "source": "Google",
+    "confidence_score": 56,
+    "lead_quality": "Medium",
+    "company_type": "Software Company",
+    "_source_file": "output\\raw\\cloud_20260708_143334.json",
+    "_flags": []
+  },
+  {
+    "company_name": "Ovhcloud",
+    "website": "https://startup.ovhcloud.com/en/",
+    "linkedin": null,
+    "industry": "cloud",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "confidence_score": 36,
+    "lead_quality": "Low",
+    "company_type": "Unknown",
+    "_source_file": "output\\raw\\cloud_20260708_143334.json",
+    "_flags": []
+  },
+  {
+    "company_name": "Thectoclub",
+    "website": "https://thectoclub.com/services/best-cloud-service-providers/",
+    "linkedin": null,
+    "industry": "cloud",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "confidence_score": 36,
+    "lead_quality": "Low",
+    "company_type": "Unknown",
+    "_source_file": "output\\raw\\cloud_20260708_143334.json",
+    "_flags": []
+  },
+  {
+    "company_name": "Kpmg",
+    "website": "https://kpmg.com/in/en/services/advisory/consulting/digital-platforms/cloud-solutions.html",
+    "linkedin": null,
+    "industry": "Artificial Intelligence",
+    "location": null,
+    "contact_page": "https://kpmg.com/in/en/misc/generic-contact-page.html",
+    "about_page": "https://kpmg.com/xx/en/about/industry-analyst-accolades.html",
+    "team_page": "https://kpmg.com/in/en/misc/kpmg-board-leadership-center.html",
+    "emails": [
+      "indiawebsite@kpmg.com",
+      "knickelanhalt@kpmg.com"
+    ],
+    "phones": [],
+    "social_links": {
+      "linkedin.com": "https://www.linkedin.com/shareArticle?mini=true&url=https://kpmg.com/in/en/services/advisory/consulting/digital-platforms/cloud-solutions.html&title=Cloud%20Solutions",
+      "twitter.com": "http://twitter.com/share?text=Cloud%20Solutions&url=https://kpmg.com/in/en/services/advisory/consulting/digital-platforms/cloud-solutions.html",
+      "facebook.com": "http://www.facebook.com/sharer.php?u=https://kpmg.com/in/en/services/advisory/consulting/digital-platforms/cloud-solutions.html&p[title]=Cloud%20Solutions",
+      "x.com": "https://x.com/kpmgindia"
+    },
+    "people": [
+      {
+        "name": "Yezdi Nagporewalla",
+        "designation": null,
+        "linkedin": "https://in.linkedin.com/in/yezdinagporewalla",
+        "decision_maker_score": 0
+      }
+    ],
+    "source": "Google",
+    "confidence_score": 60,
+    "lead_quality": "Medium",
+    "company_type": "Software Company",
+    "_source_file": "output\\raw\\cloud_20260708_143334.json",
+    "_flags": []
+  },
+  {
+    "company_name": "Rapyder",
+    "website": "https://www.rapyder.com/",
+    "linkedin": null,
+    "industry": "cloud",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "confidence_score": 36,
+    "lead_quality": "Low",
+    "company_type": "Unknown",
+    "_source_file": "output\\raw\\cloud_20260708_143334.json",
+    "_flags": []
+  },
+  {
+    "company_name": "Cloudagency",
+    "website": "https://cloudagency.co/",
+    "linkedin": null,
+    "industry": "Cloud Computing",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [
+      "hello@cloudagency.co",
+      "dev@genieinawebsite.com"
+    ],
+    "phones": [
+      "(888) 333-5350"
+    ],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "confidence_score": 56,
+    "lead_quality": "Medium",
+    "company_type": "Software Company",
+    "_source_file": "output\\raw\\cloud_20260708_143334.json",
+    "_flags": []
+  },
+  {
+    "company_name": "Cloudthat",
+    "website": "https://www.cloudthat.com/consulting/",
+    "linkedin": null,
+    "industry": "Cloud Computing",
+    "location": null,
+    "contact_page": "https://www.cloudthat.com/contact-us/",
+    "about_page": "https://www.cloudthat.com/about-us/",
+    "team_page": "https://www.cloudthat.com/careers/",
+    "emails": [
+      "sales-americas@cloudthat.com",
+      "sales-apac@cloudthat.com",
+      "sales@cloudthat.com",
+      "yourname@example.com",
+      "uk-sales@cloudthat.com"
+    ],
+    "phones": [
+      "+1 213-894-9132",
+      "+1 855 558 8830",
+      "+1855 558 8830",
+      "+88 022-266-007-85",
+      "+91 33 6637 4415",
+      "+91 7949383777",
+      "+91 88 8000 2200",
+      "+91 8880002200",
+      "022       2021",
+      "2014       2013",
+      "2015       2014",
+      "2016       2015",
+      "2017       2016",
+      "2018       2017",
+      "2019       2018",
+      "2020       2019",
+      "2021       2020",
+      "2023       2022",
+      "2024       2023",
+      "2025       2024",
+      "206 737-9006",
+      "304.55556"
+    ],
+    "social_links": {
+      "facebook.com": "https://www.facebook.com/cloudthat",
+      "twitter.com": "https://www.twitter.com/cloudthat",
+      "instagram.com": "https://www.instagram.com/cloudthat/",
+      "linkedin.com": "https://www.linkedin.com/company/cloudthat"
+    },
+    "people": [
+      {
+        "name": "East India and SAARC",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      }
+    ],
+    "source": "Google",
+    "confidence_score": 82,
+    "lead_quality": "High",
+    "company_type": "Software Company",
+    "_source_file": "output\\raw\\cloud_20260708_143334.json",
+    "_flags": []
+  },
+  {
+    "company_name": "Softagency",
+    "website": "https://softagency.in/",
+    "linkedin": null,
+    "industry": "Cloud Computing",
+    "location": null,
+    "contact_page": "https://softagency.in/contact-us/",
+    "about_page": "https://softagency.in/about-us/",
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {
+      "facebook.com": "https://www.facebook.com/softagency.in"
+    },
+    "people": [],
+    "source": "Google",
+    "confidence_score": 46,
+    "lead_quality": "Medium",
+    "company_type": "Software Company",
+    "_source_file": "output\\raw\\cloud_20260708_143334.json",
+    "_flags": []
+  },
+  {
+    "company_name": "Associative",
+    "website": "https://associative.in/cloud-computing-consulting-company/",
+    "linkedin": null,
+    "industry": "Cloud Computing",
+    "location": null,
+    "contact_page": "https://associative.in/contact/",
+    "about_page": "https://associative.in/associative-app-development-company/",
+    "team_page": null,
+    "emails": [
+      "info@associative.in",
+      "your@example.com"
+    ],
+    "phones": [
+      "+91 9028850524",
+      "2024-07-15",
+      "2026-05-22",
+      "2026-06-28",
+      "9028850524"
+    ],
+    "social_links": {
+      "facebook.com": "https://www.facebook.com/Associative07",
+      "twitter.com": "https://twitter.com/associative07",
+      "instagram.com": "https://www.instagram.com/associative07/",
+      "linkedin.com": "https://www.linkedin.com/company/associative07/"
+    },
+    "people": [],
+    "source": "Google",
+    "confidence_score": 66,
+    "lead_quality": "Medium",
+    "company_type": "Software Company",
+    "_source_file": "output\\raw\\cloud_20260708_143334.json",
+    "_flags": []
+  },
+  {
+    "company_name": "Aveva",
+    "website": "https://www.aveva.com/en/solutions/digital-transformation/industrial-cloud-platform/",
+    "linkedin": null,
+    "industry": "Cloud Computing",
+    "location": null,
+    "contact_page": "https://www.aveva.com/en/contact/",
+    "about_page": "https://www.aveva.com/en/about/partners/",
+    "team_page": "https://www.aveva.com/en/solutions/digital-transformation/edge-management/",
+    "emails": [
+      "feedback@AVEVA.com"
+    ],
+    "phones": [
+      "2937296"
+    ],
+    "social_links": {
+      "facebook.com": "https://www.facebook.com/avevasolutions/",
+      "x.com": "https://x.com/AVEVAGroup",
+      "linkedin.com": "https://www.linkedin.com/company/aveva/",
+      "instagram.com": "https://www.instagram.com/avevagroup/"
+    },
+    "people": [
+      {
+        "name": "Read more",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      }
+    ],
+    "source": "Google",
+    "confidence_score": 79,
+    "lead_quality": "High",
+    "company_type": "Software Company",
+    "_source_file": "output\\raw\\cloud_20260708_143334.json",
+    "_flags": []
+  },
+  {
+    "company_name": "Superbcompanies",
+    "website": "https://superbcompanies.com/categories/industrial-cloud-computing-services/",
+    "linkedin": null,
+    "industry": "Artificial Intelligence",
+    "location": null,
+    "contact_page": null,
+    "about_page": "https://superbcompanies.com/about-us/",
+    "team_page": null,
+    "emails": [],
+    "phones": [
+      "1 1 1 20.00",
+      "10 - 49 2019",
+      "200 - 499 2016",
+      "200 - 499 40.0",
+      "50 - 199 20.0",
+      "50 - 199 200 - 499 500",
+      "50 - 199 2007",
+      "500 - 999 1993",
+      "500 - 999 2004"
+    ],
+    "social_links": {
+      "linkedin.com": "https://www.linkedin.com/company/superbcompanies/",
+      "twitter.com": "https://twitter.com/superbcompanies",
+      "facebook.com": "https://www.facebook.com/superbcompanies/"
+    },
+    "people": [],
+    "source": "Google",
+    "confidence_score": 50,
+    "lead_quality": "Medium",
+    "company_type": "Software Company",
+    "_source_file": "output\\raw\\cloud_20260708_143334.json",
+    "_flags": []
+  }
+]

@@ -1,0 +1,24 @@
+{
+  "timestamp": "2026-07-16T22:33:02.123100",
+  "query": "site:linkedin.com/in \"Techvault\" founder OR CEO OR director",
+  "classification": "ZERO_RESULTS_PAGE",
+  "url": "https://www.google.com/search?q=site%3Alinkedin.com%2Fin+%22Techvault%22+founder+OR+CEO+OR+director&num=5&hl=en&gl=us",
+  "status_code": 200,
+  "redirect_chain": [
+    "https://www.google.com/search?q=site%3Alinkedin.com%2Fin+%22Techvault%22+founder+OR+CEO+OR+director&num=5&hl=en&gl=us"
+  ],
+  "response_headers": {
+    "date": "Thu, 16 Jul 2026 17:02:57 GMT",
+    "server": "gws",
+    "last-modified": "Tue, 10 Aug 2021 15:10:37 GMT",
+    "content-type": "text/html; charset=UTF-8",
+    "cache-control": "public, max-age=2592000",
+    "content-length": "329218",
+    "x-xss-protection": "0",
+    "x-frame-options": "SAMEORIGIN"
+  },
+  "layout_fingerprint": "ee3e322502038e037b4cb05c7c59a045",
+  "detected_signals": [
+    "did not match any documents"
+  ]
+}

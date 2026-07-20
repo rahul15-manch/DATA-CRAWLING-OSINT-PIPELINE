@@ -1,0 +1,24 @@
+{
+  "timestamp": "2026-07-16T22:36:17.478378",
+  "query": "site:linkedin.com/in \"Pythonorg\" founder OR CEO OR director",
+  "classification": "ZERO_RESULTS_PAGE",
+  "url": "https://www.google.com/search?q=site%3Alinkedin.com%2Fin+%22Pythonorg%22+founder+OR+CEO+OR+director&num=5&hl=en&gl=us",
+  "status_code": 200,
+  "redirect_chain": [
+    "https://www.google.com/search?q=site%3Alinkedin.com%2Fin+%22Pythonorg%22+founder+OR+CEO+OR+director&num=5&hl=en&gl=us"
+  ],
+  "response_headers": {
+    "date": "Thu, 16 Jul 2026 17:06:11 GMT",
+    "server": "gws",
+    "last-modified": "Tue, 10 Aug 2021 15:10:37 GMT",
+    "content-type": "text/html; charset=UTF-8",
+    "cache-control": "public, max-age=2592000",
+    "content-length": "329218",
+    "x-xss-protection": "0",
+    "x-frame-options": "SAMEORIGIN"
+  },
+  "layout_fingerprint": "5170cbb953f94af7201bddff271506d4",
+  "detected_signals": [
+    "did not match any documents"
+  ]
+}

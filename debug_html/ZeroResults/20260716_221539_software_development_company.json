@@ -1,0 +1,24 @@
+{
+  "timestamp": "2026-07-16T22:15:39.863765",
+  "query": "software development company",
+  "classification": "ZERO_RESULTS_PAGE",
+  "url": "https://www.google.com/search?q=software+development+company&num=10&hl=en&gl=us",
+  "status_code": 200,
+  "redirect_chain": [
+    "https://www.google.com/search?q=software+development+company&num=10&hl=en&gl=us"
+  ],
+  "response_headers": {
+    "date": "Thu, 16 Jul 2026 16:45:35 GMT",
+    "server": "gws",
+    "last-modified": "Tue, 10 Aug 2021 15:10:37 GMT",
+    "content-type": "text/html; charset=UTF-8",
+    "cache-control": "public, max-age=2592000",
+    "content-length": "327544",
+    "x-xss-protection": "0",
+    "x-frame-options": "SAMEORIGIN"
+  },
+  "layout_fingerprint": "922a6dbc05d8cb95e034655557a14891",
+  "detected_signals": [
+    "did not match any documents"
+  ]
+}

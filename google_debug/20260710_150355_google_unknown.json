@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-07-10T15:03:55.118810",
+  "url": "https://menlo.gutsenv.net/safeview-auth-server/proxy_auth?url=aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS9zZWFyY2g_cT1zaXRlJTNBbGlua2VkaW4uY29tJTJGY29tcGFueStNYW51ZmFjdHVyaW5nJm51bT0xMCZobD1lbiZnbD11cw==&pnr=2&initiating_req_id=NFmN62bi6ep&conn_id=tFtvii76ue1",
+  "status_code": 200,
+  "content_length": 5248,
+  "page_title": "secureweb",
+  "detected_language": "en",
+  "classification": "UNKNOWN_LAYOUT",
+  "layout_fingerprint": "8af0a9481059c417cb39a7a3ea8fd67a",
+  "reason": "All parsing strategies failed to return organic results",
+  "proxy": "34.134.231.117:3129",
+  "link_count": 0,
+  "div_g_count": 0,
+  "knowledge_panel": false,
+  "ai_overview": false,
+  "people_also_ask": false
+}

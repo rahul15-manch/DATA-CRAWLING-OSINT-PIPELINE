@@ -1,12 +1,12 @@
 import logging
-import requests
-from requests.exceptions import RequestException, Timeout, ConnectionError
+from curl_cffi import requests
+from curl_cffi.requests.exceptions import RequestException, Timeout, ConnectionError, HTTPError
 from tenacity import (
     retry,
     stop_after_attempt,
     wait_exponential,
     wait_random_exponential,
-    retry_if_exception_type,
+    retry_if_exception,
     retry_if_result,
     before_sleep_log
 )
@@ -17,6 +17,11 @@ logger = logging.getLogger(__name__)
 
 def is_retryable_exception(exception: BaseException) -> bool:
     """Determine if a network exception should trigger a retry."""
+    if getattr(exception, "retryable", True) is False:
+        return False
+    if isinstance(exception, HTTPError) and exception.response is not None:
+        # Only retry HTTPError if the status code is retryable
+        return is_retryable_status_code(exception.response)
     # We retry on timeouts, connection drops, and general network failures.
     return isinstance(exception, (Timeout, ConnectionError, RequestException))
 
@@ -40,7 +45,7 @@ def retry_with_jitter(max_attempts: int = 5):
     return retry(
         stop=stop_after_attempt(max_attempts),
         wait=wait_random_exponential(multiplier=1, max=60),
-        retry=(retry_if_exception_type(RequestException) | retry_if_result(is_retryable_status_code)),
+        retry=(retry_if_exception(is_retryable_exception) | retry_if_result(is_retryable_status_code)),
         before_sleep=before_sleep_log(logger, logging.WARNING)
     )
 
@@ -55,7 +60,7 @@ def retry_fixed(max_attempts: int = 3, wait_seconds: int = 5):
     return retry(
         stop=stop_after_attempt(max_attempts),
         wait=wait_fixed(wait_seconds),
-        retry=(retry_if_exception_type(RequestException) | retry_if_result(is_retryable_status_code)),
+        retry=(retry_if_exception(is_retryable_exception) | retry_if_result(is_retryable_status_code)),
         before_sleep=before_sleep_log(logger, logging.WARNING)
     )
 

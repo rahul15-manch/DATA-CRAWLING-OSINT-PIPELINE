@@ -1,0 +1,19 @@
+{
+  "timestamp": "2026-07-17T17:19:10.783742",
+  "query": "\"Django\" site:linkedin.com",
+  "classification": "UNKNOWN_LAYOUT",
+  "url": "https://api.brightdata.com/request",
+  "status_code": 200,
+  "redirect_chain": [
+    "https://api.brightdata.com/request"
+  ],
+  "response_headers": {
+    "date": "Fri, 17 Jul 2026 11:49:09 GMT",
+    "server": "squid/3.5.28",
+    "last-modified": "Tue, 10 Aug 2021 19:13:45 GMT",
+    "content-length": "1188",
+    "content-type": "text/html"
+  },
+  "layout_fingerprint": "377db23e87f4367fd6b2737892986ab3",
+  "detected_signals": []
+}

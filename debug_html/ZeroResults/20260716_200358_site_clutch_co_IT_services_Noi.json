@@ -1,0 +1,24 @@
+{
+  "timestamp": "2026-07-16T20:03:58.775639",
+  "query": "site:clutch.co IT services Noida -site:wikipedia.org -site:play.google.com -site:apps.apple.com -site:chromewebstore.google.com -site:whatsapp.com",
+  "classification": "ZERO_RESULTS_PAGE",
+  "url": "https://www.google.com/search?q=site%3Aclutch.co+IT+services+Noida+-site%3Awikipedia.org+-site%3Aplay.google.com+-site%3Aapps.apple.com+-site%3Achromewebstore.google.com+-site%3Awhatsapp.com&num=10&hl=en&gl=us",
+  "status_code": 200,
+  "redirect_chain": [
+    "https://www.google.com/search?q=site%3Aclutch.co+IT+services+Noida+-site%3Awikipedia.org+-site%3Aplay.google.com+-site%3Aapps.apple.com+-site%3Achromewebstore.google.com+-site%3Awhatsapp.com&num=10&hl=en&gl=us"
+  ],
+  "response_headers": {
+    "date": "Thu, 16 Jul 2026 14:33:55 GMT",
+    "server": "gws",
+    "last-modified": "Sun, 08 Aug 2021 23:46:59 GMT",
+    "content-type": "text/html; charset=UTF-8",
+    "cache-control": "public, max-age=2592000",
+    "content-length": "333916",
+    "x-xss-protection": "0",
+    "x-frame-options": "SAMEORIGIN"
+  },
+  "layout_fingerprint": "c82c10947354f2b0080b85565173036b",
+  "detected_signals": [
+    "did not match any documents"
+  ]
+}

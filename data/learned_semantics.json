@@ -1,0 +1,82 @@
+{
+  "python noida": {
+    "Python": {
+      "seen": 3,
+      "accepted": 3,
+      "confidence": 1.0,
+      "target_field": "concepts",
+      "last_seen": "2026-07-17"
+    }
+  },
+  "python": {
+    "Python": {
+      "seen": 4,
+      "accepted": 2,
+      "confidence": 0.5,
+      "first_seen": "2026-07-17",
+      "last_seen": "2026-07-17",
+      "target_field": "concepts"
+    }
+  },
+  "hardware": {},
+  "cloud": {},
+  "engineering": {
+    "Electronics": {
+      "seen": 1,
+      "accepted": 1,
+      "confidence": 1.0,
+      "first_seen": "2026-07-18",
+      "last_seen": "2026-07-18",
+      "target_field": "concepts"
+    },
+    "IoT": {
+      "seen": 3,
+      "accepted": 0,
+      "confidence": 0.0,
+      "first_seen": "2026-07-19",
+      "last_seen": "2026-07-19",
+      "target_field": "concepts"
+    },
+    "Hardware": {
+      "seen": 3,
+      "accepted": 0,
+      "confidence": 0.0,
+      "first_seen": "2026-07-19",
+      "last_seen": "2026-07-19",
+      "target_field": "concepts"
+    },
+    "Firmware": {
+      "seen": 1,
+      "accepted": 0,
+      "confidence": 0.0,
+      "first_seen": "2026-07-19",
+      "last_seen": "2026-07-19",
+      "target_field": "concepts"
+    },
+    "Embedded Systems": {
+      "seen": 1,
+      "accepted": 0,
+      "confidence": 0.0,
+      "first_seen": "2026-07-19",
+      "last_seen": "2026-07-19",
+      "target_field": "concepts"
+    },
+    "Hardware Development": {
+      "seen": 1,
+      "accepted": 0,
+      "confidence": 0.0,
+      "first_seen": "2026-07-19",
+      "last_seen": "2026-07-19",
+      "target_field": "concepts"
+    },
+    "Pcb Design": {
+      "seen": 1,
+      "accepted": 0,
+      "confidence": 0.0,
+      "first_seen": "2026-07-19",
+      "last_seen": "2026-07-19",
+      "target_field": "concepts"
+    }
+  },
+  "software": {}
+}

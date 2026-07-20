@@ -1,0 +1,183 @@
+[
+  {
+    "company_name": "Esparkinfo",
+    "website": "https://www.esparkinfo.com/cloud/top-companies/india",
+    "linkedin": null,
+    "industry": "Cloud Computing",
+    "location": null,
+    "contact_page": null,
+    "about_page": "https://www.esparkinfo.com/about",
+    "team_page": "https://www.esparkinfo.com/generative-ai/ai-agent/team",
+    "emails": [],
+    "phones": [
+      "+1 (323) 287-9242",
+      "+91 9974 759 287",
+      "+91) - 9023728517",
+      "+91) - 9023728518",
+      "650816981"
+    ],
+    "social_links": {
+      "x.com": "https://x.com/esparkbiz",
+      "facebook.com": "https://www.facebook.com/esparkbiz/",
+      "linkedin.com": "https://www.linkedin.com/company/esparkinfo/",
+      "instagram.com": "https://www.instagram.com/esparkbiz/"
+    },
+    "people": [
+      {
+        "name": "View Case Studies",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Engagement Model",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Engagement Model",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Engagement Model",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Scalability and growth support",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      }
+    ],
+    "source": "Google",
+    "confidence_score": 68,
+    "lead_quality": "Medium",
+    "company_type": "Software Company",
+    "_source_file": "output\\raw\\cloud_20260708_143334.json",
+    "_flags": [
+      "people_dropped:1"
+    ]
+  },
+  {
+    "company_name": "Enreap",
+    "website": "https://enreap.com/cloud-solutions-consulting/",
+    "linkedin": null,
+    "industry": "Cloud Computing",
+    "location": null,
+    "contact_page": "https://enreap.com/contact/",
+    "about_page": "https://enreap.com/about-us/",
+    "team_page": "https://enreap.com/project-and-portfolio-management-ppm-solutions/",
+    "emails": [
+      "sales@enreap.com",
+      "%20sales@enreap.com"
+    ],
+    "phones": [
+      "+65 97 201409",
+      "+971 50 985 9044"
+    ],
+    "social_links": {
+      "twitter.com": "https://twitter.com/enreap_india",
+      "linkedin.com": "https://www.linkedin.com/company/enreap/",
+      "instagram.com": "https://www.instagram.com/enreap.global/",
+      "facebook.com": "https://www.facebook.com/enreap"
+    },
+    "people": [
+      {
+        "name": "Mohammad Ali Hashmi",
+        "designation": "VP",
+        "decision_maker_score": 65
+      },
+      {
+        "name": "Our global partnerships",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Our global partnerships",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Our global partnerships",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Our global partnerships",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Our global partnerships",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Our global partnerships",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Our global partnerships",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Our Partners",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "About Us",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      }
+    ],
+    "source": "Google",
+    "confidence_score": 80,
+    "lead_quality": "High",
+    "company_type": "Software Company",
+    "_source_file": "output\\raw\\cloud_20260708_143334.json",
+    "_flags": [
+      "people_dropped:1"
+    ]
+  },
+  {
+    "company_name": "Onedatasoftware",
+    "website": "https://www.onedatasoftware.com/in/cloud-consulting-company-india",
+    "linkedin": null,
+    "industry": "Industrial Automation",
+    "location": null,
+    "contact_page": "https://www.onedatasoftware.com/in/contact-us",
+    "about_page": "https://www.onedatasoftware.com/in/data-analytics-company-india",
+    "team_page": null,
+    "emails": [
+      "contact@onedatasoftware.com",
+      "hire-india@onedatasoftware.com"
+    ],
+    "phones": [
+      "(1000806039",
+      "+1 (803) 906-0003",
+      "+52 446 144 3375",
+      "+91  78456 06222",
+      "+91 78456 06222",
+      "+91 9585035886",
+      "+91 96002 95140"
+    ],
+    "social_links": {
+      "facebook.com": "https://www.facebook.com/onedatasoftwaresolutions",
+      "instagram.com": "https://www.instagram.com/onedatasoftwaresolution/",
+      "linkedin.com": "https://www.linkedin.com/company/onedata-software-solutions",
+      "twitter.com": "https://twitter.com/OneData_Contact"
+    },
+    "people": [],
+    "source": "Google",
+    "confidence_score": 66,
+    "lead_quality": "Medium",
+    "company_type": "Software Company",
+    "_source_file": "output\\raw\\cloud_20260708_143334.json",
+    "_flags": [
+      "email_junk:flags@2x.png"
+    ]
+  }
+]

@@ -1,0 +1,62 @@
+[
+  {
+    "company_name": "Python Developer",
+    "website": "https://pybuddy.com",
+    "linkedin": "https://www.linkedin.com/company/pythondeveloper",
+    "industry": "Logistics",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "LinkedIn",
+    "confidence_score": 81,
+    "lead_quality": "High",
+    "company_type": "Unknown",
+    "relevance_score": 81,
+    "relevance_tier": "HIGH",
+    "relevance_info": {
+      "score": 81,
+      "tier": "HIGH",
+      "matched_signals": [
+        "Description",
+        "Services",
+        "Technologies",
+        "Blog/Articles"
+      ],
+      "rejected_signals": [
+        "Products",
+        "Positions"
+      ],
+      "score_breakdown": {
+        "description": 31.5,
+        "services": 26.5,
+        "technologies": 21.5,
+        "products": 0.0,
+        "positions": 0.0,
+        "blog": 6.5
+      },
+      "industry": "Logistics",
+      "confidence": 0.81,
+      "aborted": false,
+      "company_type": "B2B Software",
+      "semantic_trace": [
+        "Matched Description with concepts: ['Python']",
+        "Matched Services with terms: ['Python']",
+        "Matched Technologies: ['Python']",
+        "Matched Blog/Articles with concepts: ['Python']"
+      ],
+      "technologies": [
+        "Python"
+      ],
+      "products": [],
+      "website": "https://pybuddy.com",
+      "website_source": "linkedin"
+    },
+    "_source_file": "output\\raw\\python_noida_20260717_144816.json",
+    "_flags": []
+  }
+]
