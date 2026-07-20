@@ -10,11 +10,6 @@ import requests
 import sys
 import pathlib
 
-# --------------- Input / Output wiring ---------------
-# Usage:
-#   python verify_leads.py                              (legacy: reads rescue_ready_to_verify.json)
-#   python verify_leads.py input.json                  (writes to output/verified/)
-#   python verify_leads.py input.json output.json      (explicit output path)
 
 INPUT_FILE = sys.argv[1] if len(sys.argv) >= 2 else "rescue_ready_to_verify.json"
 
