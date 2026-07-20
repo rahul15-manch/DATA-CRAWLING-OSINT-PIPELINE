@@ -1,9 +1,5 @@
 #!/usr/bin/env python3
-"""
-Pillar 2 & 4 — Advanced OSINT & Data Pipeline (Fixed & Complete)
-Resolves SearchResult bugs, implements deep contact recovery (JSON-LD, Schema),
-and multi-registry corporate matching (MCA, OpenCorporates, Companies House, SEC).
-"""
+
 
 import json
 import re
