@@ -4,16 +4,17 @@
     "google_successes": 0,
     "google_captchas": 0,
     "google_429s": 0,
-    "consecutive_failures": 2,
+    "consecutive_failures": 5,
     "consecutive_blocks": {},
     "dead": true,
     "google_status": "healthy",
     "bing_status": "healthy",
     "general_status": "dead",
     "last_success_ts": null,
-    "last_failure_ts": 1784448824.2146702,
+    "last_failure_ts": 1784526293.9253669,
     "latency_samples": [
-      26.454450130462646
+      26.454450130462646,
+      12.93936562538147
     ],
     "outcome_history": [
       [
@@ -22,6 +23,18 @@
       ],
       [
         1784448824.2146702,
+        "TRANSPORT_TIMEOUT"
+      ],
+      [
+        1784526032.7466373,
+        "TRANSPORT_CONNECTION_ERROR"
+      ],
+      [
+        1784526270.3299894,
+        "TRANSPORT_TIMEOUT"
+      ],
+      [
+        1784526293.9253669,
         "TRANSPORT_TIMEOUT"
       ]
     ],
@@ -41,33 +54,132 @@
     }
   },
   "47.81.56.193:8888": {
-    "score": 100.0,
+    "score": 0.0,
     "google_successes": 0,
     "google_captchas": 0,
     "google_429s": 0,
-    "consecutive_failures": 0,
+    "consecutive_failures": 4,
     "consecutive_blocks": {},
     "dead": true,
     "google_status": "healthy",
     "bing_status": "healthy",
-    "general_status": "dead",
-    "last_success_ts": null,
-    "last_failure_ts": null,
-    "latency_samples": [],
-    "outcome_history": [],
+    "general_status": "healthy",
+    "last_success_ts": 1784526193.9810169,
+    "last_failure_ts": 1784527361.3551884,
+    "latency_samples": [
+      10.557117938995361,
+      2.7198009490966797,
+      1.0015265941619873,
+      3.5192553997039795,
+      1.2464325428009033,
+      5.830589294433594,
+      2.057386875152588,
+      21.572901487350464,
+      22.841733694076538,
+      19.587578773498535
+    ],
+    "outcome_history": [
+      [
+        1784525409.2761984,
+        "TRANSPORT_CONNECTION_ERROR"
+      ],
+      [
+        1784526018.9283736,
+        "TRANSPORT_CONNECTION_ERROR"
+      ],
+      [
+        1784526095.963296,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1784526110.8884814,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1784526111.0789964,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1784526115.0333848,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1784526118.126881,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1784526125.908097,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1784526130.3080466,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1784526140.3733447,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1784526143.136653,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1784526146.0073237,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1784526160.8756275,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1784526168.8717177,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1784526177.4828937,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1784526185.705466,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1784526193.9810169,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1784526258.2604847,
+        "TRANSPORT_TIMEOUT"
+      ],
+      [
+        1784526668.2094495,
+        "TRANSPORT_CONNECTION_ERROR"
+      ],
+      [
+        1784527093.1539488,
+        "TRANSPORT_CONNECTION_ERROR"
+      ],
+      [
+        1784527361.3551884,
+        "TRANSPORT_CONNECTION_ERROR"
+      ]
+    ],
     "quarantine_until": null,
     "quarantine_step": 0,
     "inactive": false,
     "dead_for_google": false,
     "dead_for_bing": false,
-    "consecutive_timeouts": {},
+    "consecutive_timeouts": {
+      "linkedin.com": 0,
+      "clutch.co": 0
+    },
     "provider_capabilities": {
-      "google": "GOOD",
+      "google": "DEAD",
       "bing": "GOOD",
       "duckduckgo": "GOOD",
       "brave": "GOOD",
       "directory": "GOOD",
-      "general_crawl": "TLS_ERROR"
+      "general_crawl": "TIMEOUT"
     }
   },
   "217.182.203.184:8888": {
@@ -113,24 +225,29 @@
     }
   },
   "181.39.25.196:8118": {
-    "score": 94.0,
+    "score": 0.0,
     "google_successes": 0,
     "google_captchas": 0,
     "google_429s": 0,
-    "consecutive_failures": 1,
+    "consecutive_failures": 4,
     "consecutive_blocks": {},
-    "dead": false,
+    "dead": true,
     "google_status": "healthy",
     "bing_status": "healthy",
     "general_status": "healthy",
-    "last_success_ts": 1784455181.389385,
-    "last_failure_ts": 1784455958.1914601,
+    "last_success_ts": 1784526206.492913,
+    "last_failure_ts": 1784527340.316433,
     "latency_samples": [
-      3.25183367729187,
-      2.90877628326416,
-      4.114028692245483,
-      3.8894155025482178,
-      22.141679763793945
+      0.7443914413452148,
+      4.70428466796875,
+      1.9646103382110596,
+      1.9741837978363037,
+      4.757846117019653,
+      1.759950876235962,
+      6.401709794998169,
+      23.026846885681152,
+      21.952387809753418,
+      22.647526025772095
     ],
     "outcome_history": [
       [
@@ -156,6 +273,130 @@
       [
         1784455958.1914601,
         "TRANSPORT_CONNECTION_ERROR"
+      ],
+      [
+        1784525446.1122284,
+        "TRANSPORT_TIMEOUT"
+      ],
+      [
+        1784525997.09348,
+        "TRANSPORT_CONNECTION_ERROR"
+      ],
+      [
+        1784526066.1650772,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1784526066.376109,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1784526069.1401029,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1784526072.5719707,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1784526073.6158853,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1784526075.8159466,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1784526076.1933916,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1784526079.3632407,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1784526079.5052118,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1784526082.023081,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1784526083.0638864,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1784526105.2687116,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1784526112.2182398,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1784526117.088921,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1784526117.524166,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1784526122.453254,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1784526130.1921,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1784526141.8096101,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1784526142.9960213,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1784526158.699806,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1784526168.9965813,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1784526171.913538,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1784526171.9189875,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1784526178.7824771,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1784526181.3790755,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1784526206.4939098,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1784526692.5553114,
+        "TRANSPORT_CONNECTION_ERROR"
+      ],
+      [
+        1784527116.2386823,
+        "TRANSPORT_CONNECTION_ERROR"
+      ],
+      [
+        1784527340.316433,
+        "TRANSPORT_CONNECTION_ERROR"
       ]
     ],
     "quarantine_until": null,
@@ -165,23 +406,25 @@
     "dead_for_bing": false,
     "consecutive_timeouts": {
       "in.linkedin.com": 0,
-      "www.linkedin.com": 0
+      "www.linkedin.com": 0,
+      "linkedin.com": 0,
+      "clutch.co": 0
     },
     "provider_capabilities": {
       "google": "DEAD",
       "bing": "GOOD",
-      "duckduckgo": "GOOD",
+      "duckduckgo": "TIMEOUT",
       "brave": "GOOD",
       "directory": "GOOD",
       "general_crawl": "SLOW"
     }
   },
   "52.67.38.58:3128": {
-    "score": 84.0,
+    "score": 0.0,
     "google_successes": 0,
     "google_captchas": 1,
     "google_429s": 0,
-    "consecutive_failures": 1,
+    "consecutive_failures": 4,
     "consecutive_blocks": {
       "www.google.com": 1
     },
@@ -190,11 +433,14 @@
     "bing_status": "healthy",
     "general_status": "dead",
     "last_success_ts": null,
-    "last_failure_ts": 1784455935.399152,
+    "last_failure_ts": 1784527282.4417353,
     "latency_samples": [
       31.46100354194641,
       14.373963356018066,
-      35.272114276885986
+      35.272114276885986,
+      32.81086015701294,
+      27.640116453170776,
+      45.18041491508484
     ],
     "outcome_history": [
       [
@@ -207,6 +453,18 @@
       ],
       [
         1784455935.399152,
+        "TRANSPORT_CONNECTION_ERROR"
+      ],
+      [
+        1784525383.728986,
+        "TRANSPORT_CONNECTION_ERROR"
+      ],
+      [
+        1784525967.5735772,
+        "TRANSPORT_CONNECTION_ERROR"
+      ],
+      [
+        1784527282.4417353,
         "TRANSPORT_CONNECTION_ERROR"
       ]
     ],
@@ -226,24 +484,27 @@
     }
   },
   "34.134.231.117:3129": {
-    "score": 90.0,
+    "score": 72.0,
     "google_successes": 0,
     "google_captchas": 1,
     "google_429s": 0,
-    "consecutive_failures": 0,
+    "consecutive_failures": 3,
     "consecutive_blocks": {
       "www.google.com": 1
     },
-    "dead": true,
+    "dead": false,
     "google_status": "healthy",
     "bing_status": "healthy",
-    "general_status": "dead",
+    "general_status": "healthy",
     "last_success_ts": null,
-    "last_failure_ts": 1784455134.1655877,
+    "last_failure_ts": 1784527316.6707075,
     "latency_samples": [
       30.05495524406433,
       10.959033966064453,
-      2.750516891479492
+      2.750516891479492,
+      27.275470733642578,
+      26.150034427642822,
+      32.95997166633606
     ],
     "outcome_history": [
       [
@@ -257,6 +518,18 @@
       [
         1784455134.1655877,
         "GOOGLE_CAPTCHA"
+      ],
+      [
+        1784526645.5390196,
+        "TRANSPORT_CONNECTION_ERROR"
+      ],
+      [
+        1784527069.23911,
+        "TRANSPORT_CONNECTION_ERROR"
+      ],
+      [
+        1784527316.6717052,
+        "TRANSPORT_CONNECTION_ERROR"
       ]
     ],
     "quarantine_until": null,
@@ -266,7 +539,7 @@
     "dead_for_bing": false,
     "consecutive_timeouts": {},
     "provider_capabilities": {
-      "google": "CAPTCHA",
+      "google": "DEAD",
       "bing": "GOOD",
       "duckduckgo": "GOOD",
       "brave": "GOOD",

@@ -1478,8 +1478,8 @@
         "unavailable": 0,
         "failures": 0,
         "last_updated": 0.0,
-        "score": 1226,
-        "queries_run": 613
+        "score": 1238,
+        "queries_run": 619
     },
     "source:duckduckgo": {
         "success": 0,
@@ -1488,8 +1488,8 @@
         "unavailable": 0,
         "failures": 0,
         "last_updated": 0.0,
-        "score": 182,
-        "queries_run": 45
+        "score": 230,
+        "queries_run": 51
     },
     "django development company": {
         "score": 50.0,
@@ -1538,9 +1538,9 @@
         "parser": 0,
         "unavailable": 0,
         "failures": 0,
-        "last_updated": 1784281567.551629,
-        "score": 15,
-        "queries_run": 4,
+        "last_updated": 1784527038.7576215,
+        "score": 37,
+        "queries_run": 11,
         "leads_found": 1
     },
     "ai development company -site:wikipedia.org -site:play.google.com -site:apps.apple.com -site:chromewebstore.google.com -site:whatsapp.com": {
@@ -1560,8 +1560,8 @@
         "unavailable": 0,
         "failures": 0,
         "last_updated": 0.0,
-        "score": -45,
-        "queries_run": 30
+        "score": -55,
+        "queries_run": 35
     },
     "ai outsourcing company -site:wikipedia.org -site:play.google.com -site:apps.apple.com -site:chromewebstore.google.com -site:whatsapp.com": {
         "success": 0,
@@ -2072,5 +2072,45 @@
         "last_updated": 1784455976.2822807,
         "score": 6,
         "queries_run": 3
+    },
+    "ai company": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 3,
+        "last_updated": 1784527124.2204447,
+        "score": 4,
+        "queries_run": 4
+    },
+    "ai software company": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1784526041.3721998,
+        "score": 8,
+        "queries_run": 2
+    },
+    "site:linkedin.com/company custom software": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1784526699.781122,
+        "score": 8,
+        "queries_run": 2
+    },
+    "site:linkedin.com/company software": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1784527369.650517,
+        "score": 8,
+        "queries_run": 2
     }
 }
