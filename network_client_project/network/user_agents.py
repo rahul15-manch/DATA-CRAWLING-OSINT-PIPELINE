@@ -77,9 +77,8 @@ class UserAgentManager:
         """
         Highly specific UA. 
         Critical for consistency when generating sec-ch-ua headers later.
+        Locked to Chrome 124 to perfectly match curl_cffi's impersonate="chrome124".
         """
         def _get():
-            versions = ["122.0.0.0", "123.0.0.0", "124.0.0.0"]
-            v = random.choice(versions)
-            return f"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/{v} Safari/537.36"
+            return "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
         return self._rotate_ua(_get)

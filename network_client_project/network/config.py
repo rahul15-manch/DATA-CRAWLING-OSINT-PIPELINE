@@ -76,7 +76,7 @@ class NetworkConfig(BaseSettings):
     
     # --- FINGERPRINTING ---
     FALLBACK_USER_AGENT: str = Field(
-        default="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36",
+        default="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
         description="Used if fake_useragent fails"
     )
 
