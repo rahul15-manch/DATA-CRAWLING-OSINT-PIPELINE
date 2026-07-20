@@ -1,40 +1,5 @@
 #!/usr/bin/env python3
-"""
-Pillar 2 — OSINT Stack Integration
-Social & LinkedIn Presence Discovery Script (Step 5, after registry_matching.py)
 
-Requires internet access. Run this on your own machine, not in a sandbox.
-
-Install dependencies first:
-    pip install requests beautifulsoup4
-
-What it does:
-  For each lead, discovers social/professional profile links:
-    1. Scans the record's already-known pages (website, contact_page,
-       about_page, team_page) for outbound links to LinkedIn, X/Twitter,
-       Facebook, Instagram, and YouTube. These are REAL finds — the link
-       was actually present on the company's own site.
-    2. If no LinkedIn company page was found that way, builds a slug
-       guess (linkedin.com/company/<slug>) as a starting point for manual
-       review. It is always labeled "unconfirmed" — see note below.
-
-FIX — WHY GUESSED LINKEDIN URLS ARE NO LONGER MARKED "CONFIRMED":
-  An earlier version tried to confirm slug guesses with a HEAD request,
-  treating HTTP 200 as confirmation. Testing against real data showed
-  this was unreliable: LinkedIn returns HTTP 200 for almost any
-  /company/<slug> URL — including ones that don't correspond to a real
-  company — because it serves a generic login/authwall page with a 200
-  status instead of a clean 404. That meant obviously-fake guesses like
-  "delhi-co" or "it-company-in-noida-delhi" were coming back "confirmed"
-  just as often as real ones. Rather than ship a check that produces
-  false confidence, guessed LinkedIn URLs are now always labeled
-  unconfirmed. Treat them purely as a starting point for a human to
-  verify by opening the link, not as a verified fact.
-
-Input:  registry_matched_leads.json  (output of registry_matching.py)
-Output: socially_enriched_leads.json -> same records, with social links
-        added under "_social"
-"""
 
 import json
 import re
