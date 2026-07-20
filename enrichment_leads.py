@@ -1,85 +1,65 @@
 #!/usr/bin/env python3
 """
 Pillar 2 — OSINT Stack Integration
-Enrichment Script (Step 3, after verify_leads.py)
-
-Requires internet access. Run this on your own machine, not in a sandbox.
-
-Install dependencies first:
-    pip install requests python-whois
-
-What it does for records missing a website/email:
-  1. Domain guessing: builds candidate domains from the company name
-     (e.g. "Cloud Certitude" -> cloudcertitude.com, cloudcertitude.in, ...)
-     and checks which ones actually respond.
-  2. WHOIS lookup: for any domain found (guessed or existing), pulls
-     registrant org / creation date where the registry exposes it
-     (many are privacy-redacted — that's normal, not a bug).
-  3. (Optional) Hunter.io-style email-finder hook: if you have an API key
-     for a service like Hunter.io, Clearbit, or Apollo, plug it into
-     find_emails_via_api() to auto-discover emails for a found domain.
-     Left disabled by default since it needs a paid key.
-
-Input:  unverified_leads.json (or flagged_leads.json / cleaned_leads.json —
-        point INPUT_FILE at whichever file has the sparse records you want
-        to enrich)
-Output: enriched_leads.json  -> same records, with any newly discovered
-        website/domain/whois info added under "_enrichment"
+Enrichment Script - Optimized for Bulk Production Data
 """
 
 import json
 import re
-import requests
+import asyncio
+import aiohttp
+import logging
+from bs4 import BeautifulSoup
 
 try:
     import whois  # python-whois package
 except ImportError:
     whois = None
 
+# Configurations
 INPUT_FILE = "rescue_candidates.json"
-REQUEST_TIMEOUT = 6
+OUTPUT_FILE = "enriched_leads.json"
+REQUEST_TIMEOUT = 15
+MAX_CONCURRENT_REQUESTS = 8  # Connection pooling to prevent crashing
 CANDIDATE_TLDS = [".com", ".in", ".co.in", ".io", ".org"]
 
-# ---- Optional: paid API key for an email-finder service ----
-# Leave blank to skip. If you have a Hunter.io key, set it here.
-HUNTER_API_KEY = ""
+# Set your Paid Hunter API key here if available
+HUNTER_API_KEY = "07efc6bcd50e56afe5f128e524755a96c748a5e6" 
 
+logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 
 def slugify_company_name(name: str) -> str:
     """Turn 'Cloud Certitude Pvt Ltd' -> 'cloudcertitude'."""
+    if not name: return ""
     name = name.lower()
     name = re.sub(r"\b(pvt|ltd|private|limited|inc|llp|technologies|technology|solutions|services|consulting|group)\b", "", name)
     name = re.sub(r"[^a-z0-9]", "", name)
     return name
 
-
-def guess_domain(company_name: str):
-    """Try common TLDs against a slugified company name, return first that responds."""
+async def guess_domain(session: aiohttp.ClientSession, company_name: str):
+    """Parallel domain guessing using async connection pooling."""
     slug = slugify_company_name(company_name)
     if not slug:
         return None, []
 
     tried = []
+    headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) LeadEnricher/2.0"}
+    
     for tld in CANDIDATE_TLDS:
         candidate = f"{slug}{tld}"
         tried.append(candidate)
         url = f"https://{candidate}"
+        
         try:
-            resp = requests.get(
-                url,
-                timeout=REQUEST_TIMEOUT,
-                allow_redirects=True,
-                headers={"User-Agent": "Mozilla/5.0 (compatible; LeadEnricher/1.0)"},
-            )
-            if resp.status_code < 400:
-                return candidate, tried
-        except requests.exceptions.RequestException:
+            async with session.get(url, timeout=REQUEST_TIMEOUT, allow_redirects=True, headers=headers) as resp:
+                if resp.status < 400:
+                    return candidate, tried
+        except Exception:
             continue
     return None, tried
 
-
 def whois_lookup(domain: str) -> dict:
-    """Pull whatever WHOIS exposes (often privacy-redacted for orgs — that's expected)."""
+    """WHOIS Lookup - Keep synchronous as python-whois doesn't support async natively."""
     if whois is None:
         return {"error": "python-whois not installed"}
     try:
@@ -93,74 +73,117 @@ def whois_lookup(domain: str) -> dict:
     except Exception as e:
         return {"error": f"{type(e).__name__}: {e}"}
 
-
-def find_emails_via_api(domain: str) -> list:
-    """
-    Optional hook for a paid email-finder API (Hunter.io shown as example).
-    Returns [] if no API key is configured.
-    """
-    if not HUNTER_API_KEY:
+async def find_emails_via_api(session: aiohttp.ClientSession, domain: str) -> list:
+    """Async Hunter.io email finder hook."""
+    if not HUNTER_API_KEY or "YOUR_HUNTER_API_KEY" in HUNTER_API_KEY:
         return []
+    
+    url = "https://api.hunter.io/v2/domain-search"
+    params = {"domain": domain, "api_key": HUNTER_API_KEY}
+    
     try:
-        resp = requests.get(
-            "https://api.hunter.io/v2/domain-search",
-            params={"domain": domain, "api_key": HUNTER_API_KEY},
-            timeout=REQUEST_TIMEOUT,
-        )
-        data = resp.json()
-        emails = [e["value"] for e in data.get("data", {}).get("emails", [])]
-        return emails
+        async with session.get(url, params=params, timeout=REQUEST_TIMEOUT) as resp:
+            if resp.status == 200:
+                data = await resp.json()
+                return [e["value"] for e in data.get("data", {}).get("emails", [])]
+            elif resp.status == 429:
+                logging.warning(f"Hunter.io Rate limit hit for domain {domain}")
     except Exception:
-        return []
+        pass
+    return []
 
+async def fetch_social_profiles(session: aiohttp.ClientSession, company_name: str) -> dict:
+    """
+    OSINT Corporate Registry/Social Matching Method.
+    Updated with Error Handling for Bulk Data.
+    """
+    profiles = {"linkedin": None, "crunchbase": None}
+    if not company_name:
+        return profiles
+        
+    search_query = f"{company_name} LinkedIn Crunchbase"
+    url = "https://html.duckduckgo.com/html/"
+    headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36"}
+    
+    try:
+        async with session.post(url, data={'q': search_query}, headers=headers, timeout=10) as resp:
+            if resp.status == 200:
+                html = await resp.text()
+                soup = BeautifulSoup(html, 'html.parser')
+                links = soup.find_all('a', class_='url')
+                
+                for link in links:
+                    href = link.get('href', '')
+                    if "linkedin.com/company/" in href and not profiles["linkedin"]:
+                        profiles["linkedin"] = href
+                    if "crunchbase.com/organization/" in href and not profiles["crunchbase"]:
+                        profiles["crunchbase"] = href
+            else:
+                logging.warning(f"Got status {resp.status} for {company_name}")
+                await asyncio.sleep(5)  # Slow down if rate limited
+    except Exception as e:
+        # Silently fail for corporate profile, don't let it stop the whole pipeline
+        return {"linkedin": None, "crunchbase": None}
+        
+    return profiles
 
-def enrich_record(rec: dict) -> dict:
-    enrichment = {}
+async def enrich_record(session: aiohttp.ClientSession, semaphore: asyncio.Semaphore, rec: dict) -> dict:
+    """Enriches a single record wrapping it inside a semaphore control block to avoid network flooding."""
+    async with semaphore:
+        enrichment = {}
+        domain = None
+        company_name = rec.get("company_name", "")
 
-    domain = None
-    if rec.get("website"):
-        domain = re.sub(r"^https?://(www\.)?", "", rec["website"]).split("/")[0]
-        enrichment["domain_source"] = "existing_website"
-    else:
-        guessed, tried = guess_domain(rec.get("company_name", ""))
-        enrichment["domains_tried"] = tried
-        if guessed:
-            domain = guessed
-            enrichment["domain_source"] = "guessed_and_verified"
-            enrichment["discovered_website"] = f"https://{guessed}"
+        # 1. Corporate Registry / Social Profiles Lookup
+        social_profiles = await fetch_social_profiles(session, company_name)
+        enrichment["corporate_social_profiles"] = social_profiles
 
-    if domain:
-        enrichment["whois"] = whois_lookup(domain)
-        api_emails = find_emails_via_api(domain)
-        if api_emails:
-            enrichment["discovered_emails"] = api_emails
+        # 2. Domain Resolution / Guessing
+        if rec.get("website"):
+            domain = re.sub(r"^https?://(www\.)?", "", rec["website"]).split("/")[0]
+            enrichment["domain_source"] = "existing_website"
+        else:
+            guessed, tried = await guess_domain(session, company_name)
+            enrichment["domains_tried"] = tried
+            if guessed:
+                domain = guessed
+                enrichment["domain_source"] = "guessed_and_verified"
+                enrichment["discovered_website"] = f"https://{guessed}"
 
-    rec["_enrichment"] = enrichment
-    return rec
+        # 3. Deep Enrichment (WHOIS & Email APIs)
+        if domain:
+            # Sync wrapper thread run for WHOIS lookup to maintain async loop health
+            enrichment["whois"] = await asyncio.to_thread(whois_lookup, domain)
+            
+            api_emails = await find_emails_via_api(session, domain)
+            if api_emails:
+                enrichment["discovered_emails"] = api_emails
 
+        rec["_enrichment"] = enrichment
+        return rec
 
-def main():
-    with open(INPUT_FILE, "r", encoding="utf-8") as fh:
-        records = json.load(fh)
+async def process_bulk_leads():
+    try:
+        with open(INPUT_FILE, "r", encoding="utf-8") as fh:
+            records = json.load(fh)
+    except FileNotFoundError:
+        logging.error(f"Input file {INPUT_FILE} not found. Creating a mockup candidate list.")
+        records = [{"company_name": "Google"}, {"company_name": "Microsoft", "website": "https://microsoft.com"}]
 
-    print(f"Enriching {len(records)} records from {INPUT_FILE} (live web/WHOIS calls, may take a while)...")
+    logging.info(f"Loaded {len(records)} records. Initializing high-speed async pipeline...")
 
-    enriched = []
-    for i, rec in enumerate(records, 1):
-        enriched.append(enrich_record(rec))
-        if i % 10 == 0 or i == len(records):
-            print(f"  processed {i}/{len(records)}")
+    semaphore = asyncio.Semaphore(MAX_CONCURRENT_REQUESTS)
+    
+    async with aiohttp.ClientSession() as session:
+        tasks = [enrich_record(session, semaphore, rec) for rec in records]
+        enriched_records = await asyncio.gather(*tasks)
 
-    with open("enriched_leads.json", "w", encoding="utf-8") as fh:
-        json.dump(enriched, fh, indent=2, ensure_ascii=False)
+    with open(OUTPUT_FILE, "w", encoding="utf-8") as fh:
+        json.dump(enriched_records, fh, indent=2, ensure_ascii=False)
 
-    found_new_domain = sum(1 for r in enriched if r["_enrichment"].get("domain_source") == "guessed_and_verified")
-    print("\n" + "=" * 40)
-    print(f"Records processed: {len(enriched)}")
-    print(f"New domains discovered via guessing: {found_new_domain}")
-    print("Output written to enriched_leads.json")
-    print("=" * 40)
-
+    found_new_domain = sum(1 for r in enriched_records if r["_enrichment"].get("domain_source") == "guessed_and_verified")
+    logging.info(f"Bulk Process Finished. Output saved to {OUTPUT_FILE}.")
+    logging.info(f"Discovered {found_new_domain} new domains natively.")
 
 if __name__ == "__main__":
-    main()
+    asyncio.run(process_bulk_leads())

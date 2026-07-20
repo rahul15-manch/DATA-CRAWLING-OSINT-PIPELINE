@@ -256,6 +256,10 @@
         "org": null,
         "country": null
       }
+    },
+    "_registry": {
+      "matched": false,
+      "reason": "no_result_on_zauba"
     }
   },
   {
@@ -327,6 +331,10 @@
         "cpittman@coursera.org",
         "mnajem@coursera.org"
       ]
+    },
+    "_registry": {
+      "matched": false,
+      "reason": "article_title_or_invalid"
     }
   },
   {
@@ -403,6 +411,10 @@
         "justin@together.ai",
         "james@together.ai"
       ]
+    },
+    "_registry": {
+      "matched": false,
+      "reason": "no_result_on_zauba"
     }
   },
   {
@@ -476,6 +488,10 @@
         "andrew.sica@ibm.com",
         "latisha.robinson@ibm.com"
       ]
+    },
+    "_registry": {
+      "matched": false,
+      "reason": "article_title_or_invalid"
     }
   },
   {
@@ -545,6 +561,10 @@
         "lane.anderson@zoom.com",
         "ellis.nguyen@zoom.com"
       ]
+    },
+    "_registry": {
+      "matched": false,
+      "reason": "article_title_or_invalid"
     }
   },
   {
@@ -614,6 +634,10 @@
         "anna.ditchella@genesys.com",
         "hamza.nassar@genesys.com"
       ]
+    },
+    "_registry": {
+      "matched": false,
+      "reason": "article_title_or_invalid"
     }
   },
   {
@@ -672,6 +696,10 @@
         "blake.cross@dialpad.com",
         "robbie.mcdonald@dialpad.com"
       ]
+    },
+    "_registry": {
+      "matched": false,
+      "reason": "article_title_or_invalid"
     }
   },
   {
@@ -723,6 +751,10 @@
         "miranda.godinez@quillbot.com",
         "asif.jamil@quillbot.com"
       ]
+    },
+    "_registry": {
+      "matched": false,
+      "reason": "no_result_on_zauba"
     }
   },
   {
@@ -782,6 +814,10 @@
         "hi@mails.ai",
         "support@mails.ai"
       ]
+    },
+    "_registry": {
+      "matched": false,
+      "reason": "article_title_or_invalid"
     }
   },
   {
@@ -834,6 +870,10 @@
         "george@writemail.ai",
         "denise@writemail.ai"
       ]
+    },
+    "_registry": {
+      "matched": false,
+      "reason": "no_result_on_zauba"
     }
   },
   {
@@ -939,6 +979,10 @@
         "arun.r@samsung.com",
         "youngouk.cho@samsung.com"
       ]
+    },
+    "_registry": {
+      "matched": false,
+      "reason": "article_title_or_invalid"
     }
   },
   {
@@ -1014,6 +1058,10 @@
         "andrew.sica@ibm.com",
         "latisha.robinson@ibm.com"
       ]
+    },
+    "_registry": {
+      "matched": false,
+      "reason": "article_title_or_invalid"
     }
   },
   {
@@ -1055,6 +1103,10 @@
         "hello@phonely.ai",
         "careers@phonely.ai"
       ]
+    },
+    "_registry": {
+      "matched": false,
+      "reason": "no_result_on_zauba"
     }
   },
   {
@@ -1094,6 +1146,10 @@
         "org": "Amazon Technologies, Inc.",
         "country": "US"
       }
+    },
+    "_registry": {
+      "matched": false,
+      "reason": "no_result_on_zauba"
     }
   },
   {
@@ -1152,6 +1208,10 @@
         "andrew.sica@ibm.com",
         "latisha.robinson@ibm.com"
       ]
+    },
+    "_registry": {
+      "matched": false,
+      "reason": "article_title_or_invalid"
     }
   },
   {
@@ -1254,6 +1314,10 @@
         "nicolas.meudt@avenga.com",
         "boris.willms@avenga.com"
       ]
+    },
+    "_registry": {
+      "matched": false,
+      "reason": "article_title_or_invalid"
     }
   },
   {
@@ -1330,6 +1394,10 @@
         "org": null,
         "country": null
       }
+    },
+    "_registry": {
+      "matched": false,
+      "reason": "no_result_on_zauba"
     }
   },
   {
@@ -1397,6 +1465,10 @@
         "djohnson@forbes.com",
         "lboyers@forbes.com"
       ]
+    },
+    "_registry": {
+      "matched": false,
+      "reason": "no_result_on_zauba"
     }
   },
   {
@@ -1470,6 +1542,10 @@
         "alex@aible.com",
         "joe@aible.com"
       ]
+    },
+    "_registry": {
+      "matched": false,
+      "reason": "article_title_or_invalid"
     }
   },
   {
@@ -1513,6 +1589,10 @@
         "org": null,
         "country": "IN"
       }
+    },
+    "_registry": {
+      "matched": false,
+      "reason": "no_result_on_zauba"
     }
   },
   {
@@ -1558,6 +1638,10 @@
         "org": null,
         "country": null
       }
+    },
+    "_registry": {
+      "matched": false,
+      "reason": "no_result_on_zauba"
     }
   },
   {
@@ -1596,6 +1680,10 @@
         "genaiworks.io",
         "genaiworks.org"
       ]
+    },
+    "_registry": {
+      "matched": false,
+      "reason": "no_result_on_zauba"
     }
   },
   {
@@ -1634,6 +1722,10 @@
         "aiforgood.io",
         "aiforgood.org"
       ]
+    },
+    "_registry": {
+      "matched": false,
+      "reason": "no_result_on_zauba"
     }
   },
   {
@@ -1688,6 +1780,10 @@
         "webmaster@ai.com",
         "hyphen@ai.com"
       ]
+    },
+    "_registry": {
+      "matched": false,
+      "reason": "no_result_on_zauba"
     }
   },
   {
@@ -1730,6 +1826,10 @@
         "org": "Domains By Proxy, LLC",
         "country": "US"
       }
+    },
+    "_registry": {
+      "matched": false,
+      "reason": "no_result_on_zauba"
     }
   },
   {
@@ -1778,6 +1878,10 @@
         "info@globalai.com",
         "legal@globalai.com"
       ]
+    },
+    "_registry": {
+      "matched": false,
+      "reason": "no_result_on_zauba"
     }
   },
   {
@@ -1816,6 +1920,10 @@
         "theaijournal.io",
         "theaijournal.org"
       ]
+    },
+    "_registry": {
+      "matched": false,
+      "reason": "no_result_on_zauba"
     }
   },
   {
@@ -1948,6 +2056,10 @@
         "darren@goodfirms.co",
         "info@goodfirms.co"
       ]
+    },
+    "_registry": {
+      "matched": false,
+      "reason": "article_title_or_invalid"
     }
   },
   {
@@ -2078,6 +2190,10 @@
         "darren@goodfirms.co",
         "info@goodfirms.co"
       ]
+    },
+    "_registry": {
+      "matched": false,
+      "reason": "article_title_or_invalid"
     }
   },
   {
@@ -2211,6 +2327,10 @@
         "darren@goodfirms.co",
         "info@goodfirms.co"
       ]
+    },
+    "_registry": {
+      "matched": false,
+      "reason": "no_result_on_zauba"
     }
   },
   {
@@ -2341,6 +2461,10 @@
         "darren@goodfirms.co",
         "info@goodfirms.co"
       ]
+    },
+    "_registry": {
+      "matched": false,
+      "reason": "no_result_on_zauba"
     }
   },
   {
@@ -2389,6 +2513,10 @@
         "consult@squareops.com",
         "contact@squareops.com"
       ]
+    },
+    "_registry": {
+      "matched": false,
+      "reason": "no_result_on_zauba"
     }
   },
   {
@@ -2439,6 +2567,10 @@
         "murthy@turningcloud.com",
         "info@turningcloud.com"
       ]
+    },
+    "_registry": {
+      "matched": false,
+      "reason": "no_result_on_zauba"
     }
   },
   {
@@ -2478,6 +2610,10 @@
         "cloudcertitude.io",
         "cloudcertitude.org"
       ]
+    },
+    "_registry": {
+      "matched": false,
+      "reason": "no_result_on_zauba"
     }
   },
   {
@@ -2525,6 +2661,10 @@
         "hello@anantacloud.com",
         "hiring@anantacloud.com"
       ]
+    },
+    "_registry": {
+      "matched": false,
+      "reason": "no_result_on_zauba"
     }
   },
   {
@@ -2564,6 +2704,10 @@
         "bcloudglobal.io",
         "bcloudglobal.org"
       ]
+    },
+    "_registry": {
+      "matched": false,
+      "reason": "no_result_on_zauba"
     }
   },
   {
@@ -2603,6 +2747,10 @@
         "mpccloud.io",
         "mpccloud.org"
       ]
+    },
+    "_registry": {
+      "matched": false,
+      "reason": "no_result_on_zauba"
     }
   },
   {
@@ -2650,6 +2798,10 @@
         "gaganjot.singh@cloudzent.com",
         "info@cloudzent.com"
       ]
+    },
+    "_registry": {
+      "matched": false,
+      "reason": "no_result_on_zauba"
     }
   },
   {
@@ -2689,6 +2841,10 @@
         "acecloud.io",
         "acecloud.org"
       ]
+    },
+    "_registry": {
+      "matched": false,
+      "reason": "no_result_on_zauba"
     }
   },
   {
@@ -2744,6 +2900,10 @@
         "deepesh.yadav@progression.com",
         "abhishek.kumar@progression.com"
       ]
+    },
+    "_registry": {
+      "matched": false,
+      "reason": "no_result_on_zauba"
     }
   },
   {
@@ -2783,6 +2943,10 @@
         "cloudtechner.io",
         "cloudtechner.org"
       ]
+    },
+    "_registry": {
+      "matched": false,
+      "reason": "no_result_on_zauba"
     }
   },
   {
@@ -2835,6 +2999,10 @@
         "bikram.singh@gomilestone.com",
         "info@gomilestone.com"
       ]
+    },
+    "_registry": {
+      "matched": false,
+      "reason": "no_result_on_zauba"
     }
   },
   {
@@ -2874,6 +3042,10 @@
         "the10bestcompaniestoworkforindelhincrin2026.io",
         "the10bestcompaniestoworkforindelhincrin2026.org"
       ]
+    },
+    "_registry": {
+      "matched": false,
+      "reason": "article_title_or_invalid"
     }
   },
   {
@@ -2925,6 +3097,10 @@
         "vishal.goswami@progressive.in",
         "bhavik.ambani@progressive.in"
       ]
+    },
+    "_registry": {
+      "matched": false,
+      "reason": "no_result_on_zauba"
     }
   },
   {
@@ -2968,6 +3144,10 @@
         "org": "Domains By Proxy, LLC",
         "country": "US"
       }
+    },
+    "_registry": {
+      "matched": false,
+      "reason": "no_result_on_zauba"
     }
   },
   {
@@ -3007,6 +3187,10 @@
         "itindia.io",
         "itindia.org"
       ]
+    },
+    "_registry": {
+      "matched": false,
+      "reason": "no_result_on_zauba"
     }
   },
   {
@@ -3046,6 +3230,10 @@
         "itcompanyinnoidadelhi.io",
         "itcompanyinnoidadelhi.org"
       ]
+    },
+    "_registry": {
+      "matched": false,
+      "reason": "no_result_on_zauba"
     }
   },
   {
@@ -3085,6 +3273,10 @@
         "ntplworlditcompany.io",
         "ntplworlditcompany.org"
       ]
+    },
+    "_registry": {
+      "matched": false,
+      "reason": "no_result_on_zauba"
     }
   },
   {
@@ -3124,6 +3316,10 @@
         "webzonalitcompany.io",
         "webzonalitcompany.org"
       ]
+    },
+    "_registry": {
+      "matched": false,
+      "reason": "no_result_on_zauba"
     }
   },
   {
@@ -3164,6 +3360,10 @@
       "discovered_emails": [
         "info@meentosys.com"
       ]
+    },
+    "_registry": {
+      "matched": false,
+      "reason": "no_result_on_zauba"
     }
   },
   {
@@ -3219,6 +3419,10 @@
         "suman.kumari@teamcomputers.com",
         "vijay.bisht@teamcomputers.com"
       ]
+    },
+    "_registry": {
+      "matched": false,
+      "reason": "no_result_on_zauba"
     }
   },
   {
@@ -3262,6 +3466,10 @@
         "org": "ORGANIZATION NAME MASKED",
         "country": "US"
       }
+    },
+    "_registry": {
+      "matched": false,
+      "reason": "no_result_on_zauba"
     }
   },
   {
@@ -3301,6 +3509,10 @@
         "neccorporationindia.io",
         "neccorporationindia.org"
       ]
+    },
+    "_registry": {
+      "matched": false,
+      "reason": "no_result_on_zauba"
     }
   },
   {
@@ -3348,6 +3560,10 @@
         "palak@delhico.com",
         "hi@delhico.com"
       ]
+    },
+    "_registry": {
+      "matched": false,
+      "reason": "no_result_on_zauba"
     }
   },
   {
@@ -3387,6 +3603,10 @@
         "org": null,
         "country": "US"
       }
+    },
+    "_registry": {
+      "matched": false,
+      "reason": "no_result_on_zauba"
     }
   },
   {
@@ -3504,6 +3724,10 @@
         "ashishmishra@fitt-iitd.in",
         "priyasachdeva@fitt-iitd.in"
       ]
+    },
+    "_registry": {
+      "matched": false,
+      "reason": "no_result_on_zauba"
     }
   }
 ]

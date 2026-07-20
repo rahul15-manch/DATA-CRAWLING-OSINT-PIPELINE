@@ -1,54 +1,5 @@
 [
   {
-    "company_name": "ai.io",
-    "website": "https://aiio.org",
-    "linkedin_company": "https://www.linkedin.com/company/ai-io",
-    "industry": "ai",
-    "location": null,
-    "contact_page": null,
-    "about_page": null,
-    "team_page": null,
-    "emails": [],
-    "phones": [],
-    "social_links": {},
-    "people": [
-      {
-        "name": "Terence Mills",
-        "designation": "Founder",
-        "linkedin": "https://www.linkedin.com/in/terencemills"
-      }
-    ],
-    "source": "LinkedIn",
-    "_source_file": "data-1.json",
-    "_flags": [
-      "sparse_no_contact_channel"
-    ],
-    "_enrichment": {
-      "domains_tried": [
-        "aiio.com",
-        "aiio.in",
-        "aiio.co.in",
-        "aiio.io",
-        "aiio.org"
-      ],
-      "domain_source": "guessed_and_verified",
-      "discovered_website": "https://aiio.org",
-      "whois": {
-        "registrar": "GoDaddy.com, LLC",
-        "creation_date": "2017-09-13 14:30:13+00:00",
-        "org": null,
-        "country": null
-      }
-    },
-    "_verified_emails": [],
-    "_verified_phones": [],
-    "_website_reachable": false,
-    "_verification_notes": {
-      "website": "ssl_error"
-    },
-    "_verification_passed": false
-  },
-  {
     "company_name": "GenAI Works",
     "website": null,
     "linkedin_company": "https://www.linkedin.com/company/genai-works",
@@ -247,52 +198,6 @@
     "_verification_passed": false
   },
   {
-    "company_name": "IT Company India",
-    "website": "https://itcompanyindia.com",
-    "linkedin_company": "https://in.linkedin.com/company/itcompanyindia",
-    "location": "delhi",
-    "industry": "it company",
-    "lead_type": "b2b",
-    "contact_page": null,
-    "about_page": null,
-    "team_page": null,
-    "emails": [],
-    "phones": [],
-    "social_links": {},
-    "people": [
-      {
-        "name": "Kaushal Naresh",
-        "designation": "CEO",
-        "linkedin": "https://in.linkedin.com/in/kaushal-naresh-bb86976b"
-      }
-    ],
-    "source": "LinkedIn",
-    "_source_file": "data-3.json",
-    "_flags": [
-      "sparse_no_contact_channel"
-    ],
-    "_enrichment": {
-      "domains_tried": [
-        "itcompanyindia.com"
-      ],
-      "domain_source": "guessed_and_verified",
-      "discovered_website": "https://itcompanyindia.com",
-      "whois": {
-        "registrar": "GoDaddy.com, LLC",
-        "creation_date": "2011-08-20 17:02:30+00:00",
-        "org": null,
-        "country": null
-      }
-    },
-    "_verified_emails": [],
-    "_verified_phones": [],
-    "_website_reachable": false,
-    "_verification_notes": {
-      "website": "connection_failed"
-    },
-    "_verification_passed": false
-  },
-  {
     "company_name": "IT company in noida delhi",
     "website": null,
     "linkedin_company": "https://www.linkedin.com/company/it-company-in-noida-delhi",
@@ -410,52 +315,6 @@
     "_verified_phones": [],
     "_website_reachable": null,
     "_verification_notes": {},
-    "_verification_passed": false
-  },
-  {
-    "company_name": "Proactive Data Systems",
-    "website": "https://proactivedatasystems.com",
-    "linkedin_company": "https://in.linkedin.com/company/proactivedatasystems",
-    "location": "delhi",
-    "industry": "it company",
-    "lead_type": "b2b",
-    "contact_page": null,
-    "about_page": null,
-    "team_page": null,
-    "emails": [],
-    "phones": [],
-    "social_links": {},
-    "people": [
-      {
-        "name": "Rajiv Kumar",
-        "designation": "CEO",
-        "linkedin": "https://in.linkedin.com/in/rajivkumar1000"
-      }
-    ],
-    "source": "LinkedIn",
-    "_source_file": "data-3.json",
-    "_flags": [
-      "sparse_no_contact_channel"
-    ],
-    "_enrichment": {
-      "domains_tried": [
-        "proactivedatasystems.com"
-      ],
-      "domain_source": "guessed_and_verified",
-      "discovered_website": "https://proactivedatasystems.com",
-      "whois": {
-        "registrar": "FastDomain Inc.",
-        "creation_date": "2011-08-22 16:22:07+00:00",
-        "org": "ORGANIZATION NAME MASKED",
-        "country": "US"
-      }
-    },
-    "_verified_emails": [],
-    "_verified_phones": [],
-    "_website_reachable": false,
-    "_verification_notes": {
-      "website": "timeout"
-    },
     "_verification_passed": false
   },
   {

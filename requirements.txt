@@ -1,11 +1,8 @@
-<<<<<<< HEAD
 dnspython
 phonenumbers
 requests
 python-whois
-=======
 google-search-results
 googlesearch-python
-requests
 beautifulsoup4
->>>>>>> a0c0f5d1c5f4a18e206562fa7678a01415602e32
+python-dotenv
