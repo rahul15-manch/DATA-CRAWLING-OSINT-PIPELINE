@@ -10,11 +10,83 @@
   },
   "python": {
     "Python": {
-      "seen": 4,
-      "accepted": 2,
-      "confidence": 0.5,
+      "seen": 5,
+      "accepted": 3,
+      "confidence": 0.6,
       "first_seen": "2026-07-17",
-      "last_seen": "2026-07-17",
+      "last_seen": "2026-07-21",
+      "target_field": "concepts"
+    },
+    "Custom Software": {
+      "seen": 1,
+      "accepted": 1,
+      "confidence": 1.0,
+      "first_seen": "2026-07-21",
+      "last_seen": "2026-07-21",
+      "target_field": "concepts"
+    },
+    "Backend": {
+      "seen": 1,
+      "accepted": 1,
+      "confidence": 1.0,
+      "first_seen": "2026-07-21",
+      "last_seen": "2026-07-21",
+      "target_field": "concepts"
+    },
+    "Django": {
+      "seen": 1,
+      "accepted": 1,
+      "confidence": 1.0,
+      "first_seen": "2026-07-21",
+      "last_seen": "2026-07-21",
+      "target_field": "concepts"
+    },
+    "Saas": {
+      "seen": 1,
+      "accepted": 1,
+      "confidence": 1.0,
+      "first_seen": "2026-07-21",
+      "last_seen": "2026-07-21",
+      "target_field": "concepts"
+    },
+    "Vue": {
+      "seen": 1,
+      "accepted": 1,
+      "confidence": 1.0,
+      "first_seen": "2026-07-21",
+      "last_seen": "2026-07-21",
+      "target_field": "concepts"
+    },
+    "Web Development": {
+      "seen": 1,
+      "accepted": 1,
+      "confidence": 1.0,
+      "first_seen": "2026-07-21",
+      "last_seen": "2026-07-21",
+      "target_field": "concepts"
+    },
+    "Microservices": {
+      "seen": 1,
+      "accepted": 1,
+      "confidence": 1.0,
+      "first_seen": "2026-07-21",
+      "last_seen": "2026-07-21",
+      "target_field": "concepts"
+    },
+    "React": {
+      "seen": 1,
+      "accepted": 1,
+      "confidence": 1.0,
+      "first_seen": "2026-07-21",
+      "last_seen": "2026-07-21",
+      "target_field": "concepts"
+    },
+    "Software Development": {
+      "seen": 1,
+      "accepted": 1,
+      "confidence": 1.0,
+      "first_seen": "2026-07-21",
+      "last_seen": "2026-07-21",
       "target_field": "concepts"
     }
   },
@@ -87,5 +159,34 @@
       "target_field": "concepts"
     }
   },
-  "software": {}
+  "software": {},
+  "ai": {
+    "Llm": {
+      "seen": 1,
+      "accepted": 1,
+      "confidence": 1.0,
+      "first_seen": "2026-07-20",
+      "last_seen": "2026-07-20",
+      "target_field": "concepts"
+    },
+    "Ai": {
+      "seen": 1,
+      "accepted": 1,
+      "confidence": 1.0,
+      "first_seen": "2026-07-20",
+      "last_seen": "2026-07-20",
+      "target_field": "concepts"
+    }
+  },
+  "electronics": {},
+  "technology": {
+    "Technology": {
+      "seen": 8,
+      "accepted": 8,
+      "confidence": 1.0,
+      "first_seen": "2026-07-20",
+      "last_seen": "2026-07-20",
+      "target_field": "concepts"
+    }
+  }
 }

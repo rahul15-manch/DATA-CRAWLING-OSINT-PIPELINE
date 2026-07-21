@@ -35,30 +35,37 @@ import json
 import os
 import re
 
-_FEEDBACK_FILE = os.path.join("data", "query_feedback.json")
+def get_feedback_file_path() -> str:
+    import config
+    from config import SearchMode
+    search_mode = getattr(config, "SEARCH_MODE", SearchMode.SEMANTIC)
+    mode_str = search_mode.value if hasattr(search_mode, "value") else str(search_mode)
+    return os.path.join("data", f"query_feedback_{mode_str}.json")
 
 
 def _load_query_feedback():
     global _QUERY_FEEDBACK
-    if os.path.exists(_FEEDBACK_FILE):
+    filepath = get_feedback_file_path()
+    if os.path.exists(filepath):
         try:
-            with open(_FEEDBACK_FILE, "r", encoding="utf-8") as f:
+            with open(filepath, "r", encoding="utf-8") as f:
                 data = json.load(f)
                 with _QUERY_FEEDBACK_LOCK:
                     _QUERY_FEEDBACK.clear()
                     for k, v in data.items():
                         _QUERY_FEEDBACK[k] = v
-            logger.info(f"Loaded persistent query feedback from {_FEEDBACK_FILE}")
+            logger.info(f"Loaded persistent query feedback from {filepath}")
         except Exception as e:
             logger.error(f"Failed to load query feedback: {e}")
 
 
 def _save_query_feedback():
+    filepath = get_feedback_file_path()
     try:
-        os.makedirs(os.path.dirname(_FEEDBACK_FILE), exist_ok=True)
+        os.makedirs(os.path.dirname(filepath), exist_ok=True)
         with _QUERY_FEEDBACK_LOCK:
             data = {k: dict(v) for k, v in _QUERY_FEEDBACK.items()}
-        with open(_FEEDBACK_FILE, "w", encoding="utf-8") as f:
+        with open(filepath, "w", encoding="utf-8") as f:
             json.dump(data, f, indent=4)
     except Exception as e:
         logger.error(f"Failed to save query feedback: {e}")

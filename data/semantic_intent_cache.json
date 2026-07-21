@@ -1,606 +1,101 @@
 {
-  "python noida": {
+  "exact::python": {
     "ontology_version": "1.0.0",
     "intent_profile": {
-      "primary_domain": "Python Noida",
+      "primary_domain": "software",
       "concepts": [
-        "Noida",
-        "Python Noida",
-        "Python"
+        "python"
       ],
-      "positions": [
-        "Python Noida Specialist",
-        "Python Noida Developer",
-        "Python Noida Engineer"
-      ],
-      "services": [
-        "Python Noida Consulting",
-        "Python Noida Solutions",
-        "Python Noida Development"
-      ],
+      "positions": [],
+      "services": [],
       "products": [],
-      "ontology_version": "1.0.0"
-    }
-  },
-  "python automation noida": {
-    "ontology_version": "1.0.0",
-    "intent_profile": {
-      "primary_domain": "Automation",
-      "concepts": [
-        "Factory Automation",
-        "Scada",
-        "Rpa",
-        "Control Systems",
-        "Industrial Automation",
-        "Automation",
-        "Plc",
-        "Robotics",
-        "Mechatronics",
-        "IIoT",
-        "Mes",
-        "Dcs"
-      ],
-      "positions": [
-        "Control Engineer",
-        "Automation Engineer",
-        "Plc Programmer",
-        "Rpa Developer",
-        "Robotics Engineer"
-      ],
-      "services": [
-        "Plc Programming Services",
-        "Robotic Process Automation Implementation",
-        "Factory Automation Setup",
-        "Industrial Control Solutions"
-      ],
-      "products": [
-        "Rockwell",
-        "Abb",
-        "Siemens",
-        "Fanuc",
-        "Blue Prism",
-        "Kuka",
-        "Uipath"
-      ],
       "confidence": 1.0,
       "ontology_version": "1.0.0"
     }
   },
-  "python": {
+  "semantic::technology": {
     "ontology_version": "1.0.0",
     "intent_profile": {
-      "primary_domain": "Python",
+      "primary_domain": "Technology",
       "concepts": [
-        "Python"
+        "technology",
+        "Technology"
       ],
       "positions": [
-        "Python Engineer",
-        "Python Developer",
-        "Python Specialist"
+        "Technology Developer",
+        "Technology Engineer",
+        "Technology Specialist"
       ],
       "services": [
-        "Python Development",
-        "Python Solutions",
-        "Python Consulting"
+        "Technology Services",
+        "Technology Consulting",
+        "Technology Development",
+        "Technology Solutions"
       ],
       "products": [],
       "confidence": 0.4,
       "ontology_version": "1.0.0"
     }
   },
-  "ai": {
-    "ontology_version": "1.0.0",
-    "intent_profile": {
-      "primary_domain": "Ai",
-      "concepts": [
-        "Deep Learning",
-        "Computer Vision",
-        "Generative AI",
-        "NLP",
-        "Nlp",
-        "Llm",
-        "Ai",
-        "Neural Network",
-        "Transformers",
-        "Gpt",
-        "Rag",
-        "Vector DB",
-        "Ml"
-      ],
-      "positions": [
-        "Nlp Engineer",
-        "Machine Learning Engineer",
-        "Data Scientist",
-        "Ml Engineer",
-        "Computer Vision Specialist",
-        "Ai Engineer"
-      ],
-      "services": [
-        "Llm Fine-Tuning",
-        "Ai Consulting",
-        "Generative Ai Development",
-        "Machine Learning Solutions"
-      ],
-      "products": [
-        "Crewai",
-        "Claude",
-        "Openai",
-        "Dspy",
-        "Gemini",
-        "Ollama",
-        "Chatgpt",
-        "Langchain"
-      ],
-      "confidence": 1.0,
-      "ontology_version": "1.0.0"
-    }
-  },
-  "hardware": {
-    "ontology_version": "1.0.0",
-    "intent_profile": {
-      "primary_domain": "Hardware",
-      "concepts": [
-        "Hardware"
-      ],
-      "positions": [
-        "Hardware Specialist",
-        "Hardware Developer",
-        "Hardware Engineer"
-      ],
-      "services": [
-        "Hardware Consulting",
-        "Hardware Solutions",
-        "Hardware Development"
-      ],
-      "products": [],
-      "confidence": 0.4,
-      "ontology_version": "1.0.0"
-    }
-  },
-  "hardware software company": {
-    "ontology_version": "1.0.0",
-    "intent_profile": {
-      "primary_domain": "Hardware_Industrial",
-      "concepts": [
-        "Screws",
-        "Fasteners",
-        "Diy",
-        "Hardware",
-        "Equipment",
-        "Power Tools",
-        "Hardware Store",
-        "Machinery",
-        "Supplies",
-        "Retailer",
-        "Building Materials",
-        "Valves",
-        "Tools",
-        "Pumps"
-      ],
-      "positions": [
-        "Store Manager",
-        "Inventory Coordinator",
-        "Hardware Specialist",
-        "Sales Associate"
-      ],
-      "services": [
-        "Equipment Supply",
-        "Tool Rental",
-        "Hardware Retail",
-        "Industrial Supply"
-      ],
-      "products": [
-        "Mcmaster-Carr",
-        "Lowes",
-        "Grainger",
-        "Home Depot",
-        "Ace Hardware"
-      ],
-      "confidence": 1.0,
-      "ontology_version": "1.0.0"
-    }
-  },
-  "cloud": {
-    "ontology_version": "1.0.0",
-    "intent_profile": {
-      "primary_domain": "Cloud",
-      "concepts": [
-        "Cloud"
-      ],
-      "positions": [
-        "Cloud Specialist",
-        "Cloud Developer",
-        "Cloud Engineer"
-      ],
-      "services": [
-        "Cloud Solutions",
-        "Cloud Consulting",
-        "Cloud Development"
-      ],
-      "products": [],
-      "confidence": 0.4,
-      "ontology_version": "1.0.0"
-    }
-  },
-  "engineering": {
-    "ontology_version": "1.0.0",
-    "intent_profile": {
-      "primary_domain": "Hardware_Development",
-      "concepts": [
-        "Semiconductors",
-        "Hardware",
-        "Microcontrollers",
-        "IoT",
-        "Pcb Design",
-        "Circuit Design",
-        "Hardware Development",
-        "Electronics",
-        "Hardware Engineering",
-        "Embedded Systems",
-        "Firmware"
-      ],
-      "positions": [
-        "Electronics Engineer",
-        "Hardware Engineer",
-        "Firmware Engineer",
-        "Embedded Developer"
-      ],
-      "services": [
-        "Embedded Systems Development",
-        "Pcb Design Services",
-        "Iot Product Design",
-        "Hardware Design"
-      ],
-      "products": [
-        "Microcontrollers",
-        "Sensors",
-        "Arduino",
-        "Pcb",
-        "Raspberry Pi"
-      ],
-      "confidence": 1.0,
-      "ontology_version": "1.0.0"
-    }
-  },
-  "software": {
+  "semantic::python": {
     "ontology_version": "1.0.0",
     "intent_profile": {
       "primary_domain": "Software_Development",
       "concepts": [
-        "FastAPI",
-        "Node.Js",
-        "React",
-        "It Services",
-        "Api Development",
+        "Frontend",
         "Custom Software",
-        "Flask",
-        "Python",
         "Backend",
-        "Django",
+        "Software Consulting",
         "It Consulting",
-        "Graphql",
+        "Django",
+        "It Services",
+        "Python",
+        "Software Outsourcing",
+        "Api Development",
+        "Saas",
+        "Node.Js",
+        "Software Engineering",
+        "Vue",
+        "Rest Api",
         "Web Development",
         "Full Stack",
         "Microservices",
-        "Vue",
-        "Software House",
-        "Rest Api",
-        "Frontend",
-        "Software Outsourcing"
+        "React",
+        "Software Development",
+        "Graphql",
+        "Flask",
+        "FastAPI",
+        "Enterprise Software"
       ],
       "positions": [
-        "Python Developer",
-        "Software Engineer",
+        "Web Developer",
+        "Api Developer",
         "Backend Engineer",
-        "Web Developer",
-        "Api Developer",
-        "Full Stack Developer"
-      ],
-      "services": [
-        "Web Application Development",
-        "It Consulting",
-        "Api Development",
-        "Software Outsourcing",
-        "Python Development Services",
-        "Backend Development",
-        "Custom Software Development"
-      ],
-      "products": [
-        "Gcp",
-        "FastAPI",
-        "Aws",
-        "Azure",
-        "Django",
-        "Python",
-        "Kubernetes",
-        "Postgresql",
-        "Docker",
-        "Redis",
-        "Flask"
-      ],
-      "confidence": 1.0,
-      "ontology_version": "1.0.0"
-    }
-  },
-  "it consulting": {
-    "ontology_version": "1.0.0",
-    "intent_profile": {
-      "primary_domain": "Software_Development + Ai",
-      "concepts": [
-        "It Services",
-        "Full Stack",
-        "Transformers",
-        "Node.Js",
-        "NLP",
-        "Ml",
-        "Neural Network",
-        "Rest Api",
-        "Flask",
-        "Frontend",
-        "Nlp",
-        "React",
-        "Microservices",
-        "Web Development",
-        "Computer Vision",
-        "Ai",
-        "Vector DB",
-        "Python",
-        "Gpt",
-        "Software Outsourcing",
-        "Software House",
-        "Deep Learning",
-        "Vue",
-        "FastAPI",
-        "Graphql",
-        "Backend",
-        "Custom Software",
-        "It Consulting",
-        "Generative AI",
-        "Api Development",
-        "Llm",
-        "Django",
-        "Rag"
-      ],
-      "positions": [
-        "Data Scientist",
-        "Api Developer",
-        "Software Engineer",
-        "Web Developer",
-        "Ai Engineer",
-        "Nlp Engineer",
-        "Computer Vision Specialist",
         "Full Stack Developer",
-        "Backend Engineer",
-        "Machine Learning Engineer",
-        "Python Developer",
-        "Ml Engineer"
-      ],
-      "services": [
-        "Llm Fine-Tuning",
-        "It Consulting",
-        "Machine Learning Solutions",
-        "Generative Ai Development",
-        "Backend Development",
-        "Python Development Services",
-        "Api Development",
-        "Ai Consulting",
-        "Custom Software Development",
-        "Software Outsourcing",
-        "Web Application Development"
-      ],
-      "products": [
-        "Docker",
-        "Postgresql",
-        "Openai",
-        "Claude",
-        "Gcp",
-        "Flask",
-        "Chatgpt",
-        "Kubernetes",
-        "Crewai",
-        "Langchain",
-        "Gemini",
-        "Redis",
-        "Python",
-        "FastAPI",
-        "Aws",
-        "Dspy",
-        "Azure",
-        "Django",
-        "Ollama"
-      ],
-      "confidence": 0.7,
-      "ontology_version": "1.0.0"
-    }
-  },
-  "software development company": {
-    "ontology_version": "1.0.0",
-    "intent_profile": {
-      "primary_domain": "Software_Development",
-      "concepts": [
-        "It Services",
-        "Full Stack",
-        "Node.Js",
-        "Rest Api",
-        "Flask",
-        "Frontend",
-        "React",
-        "Microservices",
-        "Web Development",
-        "Python",
-        "Software Outsourcing",
-        "Software House",
-        "Vue",
-        "FastAPI",
-        "Graphql",
-        "Backend",
-        "Custom Software",
-        "It Consulting",
-        "Api Development",
-        "Django"
-      ],
-      "positions": [
-        "Api Developer",
         "Software Engineer",
-        "Web Developer",
-        "Full Stack Developer",
-        "Backend Engineer",
         "Python Developer"
       ],
       "services": [
-        "It Consulting",
-        "Backend Development",
-        "Python Development Services",
-        "Api Development",
+        "Web Application Development",
         "Custom Software Development",
+        "Backend Development",
+        "It Consulting",
+        "Api Development",
         "Software Outsourcing",
-        "Web Application Development"
+        "Python Development Services"
       ],
       "products": [
+        "Azure",
         "Gcp",
-        "Flask",
-        "Docker",
-        "FastAPI",
-        "Aws",
-        "Postgresql",
+        "Python",
         "Kubernetes",
         "Redis",
-        "Azure",
-        "Python",
-        "Django"
-      ],
-      "confidence": 1.0,
-      "ontology_version": "1.0.0"
-    }
-  },
-  "electronics\\": {
-    "ontology_version": "1.0.0",
-    "intent_profile": {
-      "primary_domain": "Electronics\\",
-      "concepts": [
-        "electronics\\",
-        "Electronics\\"
-      ],
-      "positions": [
-        "Electronics\\ Developer",
-        "Electronics\\ Specialist",
-        "Electronics\\ Engineer"
-      ],
-      "services": [
-        "Electronics\\ Development",
-        "Electronics\\ Consulting",
-        "Electronics\\ Services",
-        "Electronics\\ Solutions"
-      ],
-      "products": [],
-      "confidence": 0.4,
-      "ontology_version": "1.0.0"
-    }
-  },
-  "electronics": {
-    "ontology_version": "1.0.0",
-    "intent_profile": {
-      "primary_domain": "Hardware_Development",
-      "concepts": [
-        "Microcontrollers",
-        "Pcb Design",
-        "Hardware Engineering",
-        "IoT",
-        "Semiconductors",
-        "Electronics Design",
-        "Firmware",
-        "Hardware Development",
-        "Ems",
-        "Circuit Design",
-        "Electronics Manufacturing",
-        "Hardware Design",
-        "Electronics",
-        "Electronic Product Development",
-        "Embedded Systems",
-        "Hardware"
-      ],
-      "positions": [
-        "Embedded Developer",
-        "Firmware Engineer",
-        "Hardware Engineer",
-        "Electronics Engineer"
-      ],
-      "services": [
-        "Iot Product Design",
-        "Hardware Design",
-        "Embedded Systems Development",
-        "Pcb Design Services"
-      ],
-      "products": [
-        "Microcontrollers",
-        "Sensors",
-        "Raspberry Pi",
-        "Arduino",
-        "Pcb"
-      ],
-      "confidence": 1.0,
-      "ontology_version": "1.0.0"
-    }
-  },
-  "software company": {
-    "ontology_version": "1.0.0",
-    "intent_profile": {
-      "primary_domain": "Software_Development",
-      "concepts": [
-        "Microservices",
-        "Software Development",
-        "Node.Js",
-        "Software Engineering",
-        "Enterprise Software",
-        "Saas",
-        "It Consulting",
-        "React",
-        "Rest Api",
-        "Flask",
-        "FastAPI",
-        "Software Outsourcing",
-        "Software Consulting",
-        "Frontend",
-        "Api Development",
-        "Graphql",
-        "Backend",
-        "Custom Software",
-        "Web Development",
-        "It Services",
-        "Vue",
-        "Full Stack",
-        "Python",
-        "Django"
-      ],
-      "positions": [
-        "Python Developer",
-        "Full Stack Developer",
-        "Api Developer",
-        "Web Developer",
-        "Software Engineer",
-        "Backend Engineer"
-      ],
-      "services": [
-        "Custom Software Development",
-        "Backend Development",
-        "Python Development Services",
-        "Api Development",
-        "It Consulting",
-        "Web Application Development",
-        "Software Outsourcing"
-      ],
-      "products": [
-        "Azure",
         "Docker",
         "Aws",
-        "Postgresql",
-        "Redis",
-        "Gcp",
-        "Django",
         "Flask",
         "FastAPI",
-        "Python",
-        "Kubernetes"
+        "Django",
+        "Postgresql"
       ],
       "confidence": 1.0,
       "ontology_version": "1.0.0"

@@ -1,0 +1,255 @@
+[
+  {
+    "company_name": "Cyberark",
+    "website": "https://www.cyberark.com/partner-finder/outsourcing-technology-inc/",
+    "linkedin": null,
+    "industry": "Ai",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [
+      "admin@cyberark.com",
+      "contact@cyberark.com",
+      "hello@cyberark.com",
+      "info@cyberark.com",
+      "sales@cyberark.com",
+      "support@cyberark.com"
+    ],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "confidence_score": 95,
+    "lead_quality": "High",
+    "company_type": "Unknown",
+    "relevance_score": 95,
+    "relevance_tier": "HIGH",
+    "relevance_info": {
+      "score": 95,
+      "tier": "HIGH",
+      "matched_signals": [
+        "Description",
+        "Technologies"
+      ],
+      "rejected_signals": [
+        "Services",
+        "Products",
+        "Positions",
+        "Blog/Articles"
+      ],
+      "score_breakdown": {
+        "description": 39.5,
+        "services": 0.0,
+        "technologies": 23.0,
+        "products": 0.0,
+        "positions": 0.0,
+        "blog": 0.0
+      },
+      "industry": "Ai",
+      "confidence": 0.55,
+      "aborted": false,
+      "company_type": "Education",
+      "semantic_trace": [
+        "Matched Description with concepts: ['technology', 'Technology']",
+        "Matched Technologies: ['technology', 'Technology']"
+      ],
+      "technologies": [
+        "Technology",
+        "Technology"
+      ],
+      "products": [],
+      "website": "",
+      "website_source": ""
+    },
+    "_source_file": "output\\raw\\technology_20260720_162217.json",
+    "_flags": [],
+    "_verified_emails": [
+      "admin@cyberark.com",
+      "contact@cyberark.com",
+      "hello@cyberark.com",
+      "info@cyberark.com",
+      "sales@cyberark.com",
+      "support@cyberark.com"
+    ],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "emails": {
+        "admin@cyberark.com": "ok",
+        "contact@cyberark.com": "ok",
+        "hello@cyberark.com": "ok",
+        "info@cyberark.com": "ok",
+        "sales@cyberark.com": "ok",
+        "support@cyberark.com": "ok"
+      },
+      "website": "ok"
+    },
+    "_verification_passed": true
+  },
+  {
+    "company_name": "Outsourcingtechnologies",
+    "website": "https://www.outsourcingtechnologies.com/",
+    "linkedin": "https://in.linkedin.com/company/outsourcing-technologies",
+    "industry": "Software_Development",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [
+      "admin@outsourcingtechnologies.com",
+      "contact@outsourcingtechnologies.com",
+      "hello@outsourcingtechnologies.com",
+      "info@outsourcingtechnologies.com",
+      "sales@outsourcingtechnologies.com",
+      "support@outsourcingtechnologies.com"
+    ],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "confidence_score": 60,
+    "lead_quality": "Medium",
+    "company_type": "Unknown",
+    "relevance_score": 60,
+    "relevance_tier": "MEDIUM",
+    "relevance_info": {
+      "score": 60,
+      "tier": "MEDIUM",
+      "matched_signals": [
+        "Technologies"
+      ],
+      "rejected_signals": [
+        "Description",
+        "Services",
+        "Products",
+        "Positions",
+        "Blog/Articles"
+      ],
+      "score_breakdown": {
+        "description": 0.0,
+        "services": 0.0,
+        "technologies": 23.0,
+        "products": 0.0,
+        "positions": 0.0,
+        "blog": 0.0
+      },
+      "industry": "Software_Development",
+      "confidence": 0.2,
+      "aborted": false,
+      "company_type": "Consultancy",
+      "semantic_trace": [
+        "Matched Technologies: ['technology', 'Technology']"
+      ],
+      "technologies": [
+        "Technology",
+        "Technology"
+      ],
+      "products": [],
+      "website": "",
+      "website_source": ""
+    },
+    "_source_file": "output\\raw\\technology_20260720_162217.json",
+    "_flags": [],
+    "_verified_emails": [
+      "admin@outsourcingtechnologies.com",
+      "contact@outsourcingtechnologies.com",
+      "hello@outsourcingtechnologies.com",
+      "info@outsourcingtechnologies.com",
+      "sales@outsourcingtechnologies.com",
+      "support@outsourcingtechnologies.com"
+    ],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "emails": {
+        "admin@outsourcingtechnologies.com": "ok",
+        "contact@outsourcingtechnologies.com": "ok",
+        "hello@outsourcingtechnologies.com": "ok",
+        "info@outsourcingtechnologies.com": "ok",
+        "sales@outsourcingtechnologies.com": "ok",
+        "support@outsourcingtechnologies.com": "ok"
+      },
+      "website": "ok"
+    },
+    "_verification_passed": true
+  },
+  {
+    "company_name": "Outsourceasia",
+    "website": "https://www.outsourceasia.org/the-role-of-technology-in-outsourcing-success/",
+    "linkedin": null,
+    "industry": "technology",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [
+      "admin@outsourceasia.org",
+      "contact@outsourceasia.org",
+      "hello@outsourceasia.org",
+      "info@outsourceasia.org",
+      "sales@outsourceasia.org",
+      "support@outsourceasia.org"
+    ],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "confidence_score": 73,
+    "lead_quality": "High",
+    "company_type": "Unknown",
+    "relevance_score": 73,
+    "relevance_tier": "MEDIUM",
+    "relevance_info": {
+      "score": 73,
+      "tier": "MEDIUM",
+      "matched_signals": [
+        "Title"
+      ],
+      "rejected_signals": [
+        "Description",
+        "Positions"
+      ],
+      "score_breakdown": {
+        "title": 20.0,
+        "description": 0.0,
+        "positions": 0.0
+      },
+      "industry": "Unknown",
+      "confidence": 0.13,
+      "aborted": false,
+      "company_type": "B2B Software",
+      "semantic_trace": [
+        "Matched Title with concepts: ['technology', 'Technology']"
+      ],
+      "technologies": [],
+      "products": [],
+      "website": "",
+      "website_source": "homepage"
+    },
+    "_source_file": "output\\raw\\technology_20260720_162217.json",
+    "_flags": [],
+    "_verified_emails": [
+      "admin@outsourceasia.org",
+      "contact@outsourceasia.org",
+      "hello@outsourceasia.org",
+      "info@outsourceasia.org",
+      "sales@outsourceasia.org",
+      "support@outsourceasia.org"
+    ],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "emails": {
+        "admin@outsourceasia.org": "ok",
+        "contact@outsourceasia.org": "ok",
+        "hello@outsourceasia.org": "ok",
+        "info@outsourceasia.org": "ok",
+        "sales@outsourceasia.org": "ok",
+        "support@outsourceasia.org": "ok"
+      },
+      "website": "ok"
+    },
+    "_verification_passed": true
+  }
+]

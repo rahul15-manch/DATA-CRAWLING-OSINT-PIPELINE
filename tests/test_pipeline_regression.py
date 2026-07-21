@@ -104,9 +104,15 @@ def test_accepted_snippet_triggers_quick_crawl(mock_fetch):
             "url": url
         }
         
-        with patch("discovery.company_discovery.run_search", return_value=[mock_result]):
-            with patch("discovery.company_discovery.guess_company_name", return_value="SaaS Fast"):
-                results = discover_companies("saas")
+        import config
+        orig_bonus = getattr(config, "LITERAL_MATCH_BONUS", 40)
+        config.LITERAL_MATCH_BONUS = 0
+        try:
+            with patch("discovery.company_discovery.run_search", return_value=[mock_result]):
+                with patch("discovery.company_discovery.guess_company_name", return_value="SaaS Fast"):
+                    results = discover_companies("saas")
+        finally:
+            config.LITERAL_MATCH_BONUS = orig_bonus
                 
                 # Check that _fetch_homepage was triggered due to cache miss
                 assert mock_fetch.called

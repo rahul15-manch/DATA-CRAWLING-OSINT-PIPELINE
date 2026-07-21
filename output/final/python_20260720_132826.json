@@ -1,0 +1,319 @@
+[
+  {
+    "company_name": "Python",
+    "website": "https://python.org",
+    "linkedin": "https://www.linkedin.com/company/python-corp",
+    "industry": "Software_Development",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [
+      "brian@python.org",
+      "deb@python.org",
+      "di@python.org",
+      "ewa@python.org",
+      "guido@python.org",
+      "loren@python.org",
+      "mariatta@python.org",
+      "mike@python.org",
+      "olivia@python.org",
+      "pycon@python.org"
+    ],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "LinkedIn",
+    "confidence_score": 33,
+    "lead_quality": "Low",
+    "company_type": "Unknown",
+    "relevance_score": 33,
+    "relevance_tier": "REJECT",
+    "relevance_info": {
+      "score": 33,
+      "tier": "REJECT",
+      "matched_signals": [
+        "Title"
+      ],
+      "rejected_signals": [
+        "Description",
+        "Positions"
+      ],
+      "score_breakdown": {
+        "title": 20.0,
+        "description": 0.0,
+        "positions": 0.0
+      },
+      "industry": "Software_Development",
+      "confidence": 0.13,
+      "aborted": false,
+      "company_type": "B2B Software",
+      "semantic_trace": [
+        "Matched Title with concepts: ['Python']"
+      ],
+      "technologies": [],
+      "products": [],
+      "website": "",
+      "website_source": "homepage"
+    }
+  },
+  {
+    "company_name": "Super Fast Python",
+    "website": "https://superfastpython.com",
+    "linkedin": "https://www.linkedin.com/company/super-fast-python/",
+    "industry": "Software_Development",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [
+      "addressjason@superfastpython.com",
+      "jason@superfastpython.com"
+    ],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "LinkedIn",
+    "confidence_score": 33,
+    "lead_quality": "Low",
+    "company_type": "Unknown",
+    "relevance_score": 33,
+    "relevance_tier": "REJECT",
+    "relevance_info": {
+      "score": 33,
+      "tier": "REJECT",
+      "matched_signals": [
+        "Title"
+      ],
+      "rejected_signals": [
+        "Description",
+        "Positions"
+      ],
+      "score_breakdown": {
+        "title": 20.0,
+        "description": 0.0,
+        "positions": 0.0
+      },
+      "industry": "Software_Development",
+      "confidence": 0.13,
+      "aborted": false,
+      "company_type": "B2B Software",
+      "semantic_trace": [
+        "Matched Title with concepts: ['Python']"
+      ],
+      "technologies": [],
+      "products": [],
+      "website": "",
+      "website_source": "homepage"
+    }
+  },
+  {
+    "company_name": "Apyb",
+    "website": "https://apyb.com",
+    "linkedin": "https://www.linkedin.com/company/apyb",
+    "industry": "Software_Development",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [
+      "ella.goellner@apyb.com",
+      "nepomuk.doerner@apyb.com",
+      "piratuk@apyb.com",
+      "xanl@apyb.com"
+    ],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "LinkedIn",
+    "confidence_score": 33,
+    "lead_quality": "Low",
+    "company_type": "Unknown",
+    "relevance_score": 33,
+    "relevance_tier": "REJECT",
+    "relevance_info": {
+      "score": 33,
+      "tier": "REJECT",
+      "matched_signals": [
+        "Title"
+      ],
+      "rejected_signals": [
+        "Description",
+        "Positions"
+      ],
+      "score_breakdown": {
+        "title": 20.0,
+        "description": 0.0,
+        "positions": 0.0
+      },
+      "industry": "Software_Development",
+      "confidence": 0.13,
+      "aborted": false,
+      "company_type": "B2B Software",
+      "semantic_trace": [
+        "Matched Title with concepts: ['Python']"
+      ],
+      "technologies": [],
+      "products": [],
+      "website": "",
+      "website_source": "homepage"
+    }
+  },
+  {
+    "company_name": "Python Academy",
+    "website": "https://pythonacademy.in",
+    "linkedin": "https://in.linkedin.com/company/python-academy",
+    "industry": "Software_Development",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [
+      "admin@pythonacademy.in",
+      "contact@pythonacademy.in",
+      "hello@pythonacademy.in",
+      "info@pythonacademy.in",
+      "sales@pythonacademy.in",
+      "support@pythonacademy.in"
+    ],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "LinkedIn",
+    "confidence_score": 33,
+    "lead_quality": "Low",
+    "company_type": "Unknown",
+    "relevance_score": 33,
+    "relevance_tier": "REJECT",
+    "relevance_info": {
+      "score": 33,
+      "tier": "REJECT",
+      "matched_signals": [
+        "Title"
+      ],
+      "rejected_signals": [
+        "Description",
+        "Positions"
+      ],
+      "score_breakdown": {
+        "title": 20.0,
+        "description": 0.0,
+        "positions": 0.0
+      },
+      "industry": "Software_Development",
+      "confidence": 0.13,
+      "aborted": false,
+      "company_type": "Education",
+      "semantic_trace": [
+        "Matched Title with concepts: ['Python']"
+      ],
+      "technologies": [],
+      "products": [],
+      "website": "",
+      "website_source": "homepage"
+    }
+  },
+  {
+    "company_name": "Python Tools",
+    "website": "https://pythontools.com",
+    "linkedin": "https://in.linkedin.com/company/python-tools",
+    "industry": "Software_Development",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [
+      "info@pythontools.com"
+    ],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "LinkedIn",
+    "confidence_score": 33,
+    "lead_quality": "Low",
+    "company_type": "Unknown",
+    "relevance_score": 33,
+    "relevance_tier": "REJECT",
+    "relevance_info": {
+      "score": 33,
+      "tier": "REJECT",
+      "matched_signals": [
+        "Title"
+      ],
+      "rejected_signals": [
+        "Description",
+        "Positions"
+      ],
+      "score_breakdown": {
+        "title": 20.0,
+        "description": 0.0,
+        "positions": 0.0
+      },
+      "industry": "Software_Development",
+      "confidence": 0.13,
+      "aborted": false,
+      "company_type": "B2B Software",
+      "semantic_trace": [
+        "Matched Title with concepts: ['Python']"
+      ],
+      "technologies": [],
+      "products": [],
+      "website": "",
+      "website_source": "homepage"
+    }
+  },
+  {
+    "company_name": "Python Technologies",
+    "website": "https://python.co.in",
+    "linkedin": "https://www.linkedin.com/company/python-technologies",
+    "industry": "Software_Development",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [
+      "admin@python.co.in",
+      "contact@python.co.in",
+      "hello@python.co.in",
+      "info@python.co.in",
+      "sales@python.co.in",
+      "support@python.co.in"
+    ],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "LinkedIn",
+    "confidence_score": 33,
+    "lead_quality": "Low",
+    "company_type": "Unknown",
+    "relevance_score": 33,
+    "relevance_tier": "REJECT",
+    "relevance_info": {
+      "score": 33,
+      "tier": "REJECT",
+      "matched_signals": [
+        "Title"
+      ],
+      "rejected_signals": [
+        "Description",
+        "Positions"
+      ],
+      "score_breakdown": {
+        "title": 20.0,
+        "description": 0.0,
+        "positions": 0.0
+      },
+      "industry": "Software_Development",
+      "confidence": 0.13,
+      "aborted": false,
+      "company_type": "B2B Software",
+      "semantic_trace": [
+        "Matched Title with concepts: ['Python']"
+      ],
+      "technologies": [],
+      "products": [],
+      "website": "",
+      "website_source": "homepage"
+    }
+  }
+]

@@ -16,14 +16,43 @@ try:
 except ImportError:
     whois = None
 
+# Configurations
+import sys
 INPUT_FILE = "rescue_candidates.json"
-REQUEST_TIMEOUT = 6
+OUTPUT_FILE = "enriched_leads.json"
+
+if len(sys.argv) > 1:
+    INPUT_FILE = sys.argv[1]
+if len(sys.argv) > 2:
+    OUTPUT_FILE = sys.argv[2]
+
+REQUEST_TIMEOUT = 15
+MAX_CONCURRENT_REQUESTS = 8  # Connection pooling to prevent crashing
 CANDIDATE_TLDS = [".com", ".in", ".co.in", ".io", ".org"]
 
 # Set your Paid Hunter API key here if available
 HUNTER_API_KEY = "07efc6bcd50e56afe5f128e524755a96c748a5e6" 
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
+
+def check_domain_mx(domain: str) -> bool:
+    """Check if the domain has at least one valid MX record."""
+    try:
+        import dns.resolver
+        answers = dns.resolver.resolve(domain, "MX", lifetime=4)
+        return len(answers) > 0
+    except Exception:
+        return False
+
+
+def guess_emails_from_domain(domain: str) -> list:
+    """Generate common email prefixes for the domain if it has MX records."""
+    if not check_domain_mx(domain):
+        return []
+    
+    prefixes = ["info", "hello", "contact", "sales", "support", "admin"]
+    return [f"{p}@{domain}" for p in prefixes]
+
 
 def slugify_company_name(name: str) -> str:
     """Turn 'Cloud Certitude Pvt Ltd' -> 'cloudcertitude'."""
@@ -155,33 +184,36 @@ async def enrich_record(session: aiohttp.ClientSession, semaphore: asyncio.Semap
             api_emails = await find_emails_via_api(session, domain)
             if api_emails:
                 enrichment["discovered_emails"] = api_emails
+            else:
+                guessed_emails = await asyncio.to_thread(guess_emails_from_domain, domain)
+                if guessed_emails:
+                    enrichment["discovered_emails"] = guessed_emails
 
         rec["_enrichment"] = enrichment
         return rec
 
+async def process_bulk_leads():
+    try:
+        with open(INPUT_FILE, "r", encoding="utf-8") as fh:
+            records = json.load(fh)
+    except FileNotFoundError:
+        logging.error(f"Input file {INPUT_FILE} not found. Creating a mockup candidate list.")
+        records = [{"company_name": "Google"}, {"company_name": "Microsoft", "website": "https://microsoft.com"}]
 
-def main():
-    with open(INPUT_FILE, "r", encoding="utf-8") as fh:
-        records = json.load(fh)
+    logging.info(f"Loaded {len(records)} records. Initializing high-speed async pipeline...")
 
-    print(f"Enriching {len(records)} records from {INPUT_FILE} (live web/WHOIS calls, may take a while)...")
+    semaphore = asyncio.Semaphore(MAX_CONCURRENT_REQUESTS)
+    
+    async with aiohttp.ClientSession() as session:
+        tasks = [enrich_record(session, semaphore, rec) for rec in records]
+        enriched_records = await asyncio.gather(*tasks)
 
-    enriched = []
-    for i, rec in enumerate(records, 1):
-        enriched.append(enrich_record(rec))
-        if i % 10 == 0 or i == len(records):
-            print(f"  processed {i}/{len(records)}")
+    with open(OUTPUT_FILE, "w", encoding="utf-8") as fh:
+        json.dump(enriched_records, fh, indent=2, ensure_ascii=False)
 
-    with open("enriched_leads.json", "w", encoding="utf-8") as fh:
-        json.dump(enriched, fh, indent=2, ensure_ascii=False)
-
-    found_new_domain = sum(1 for r in enriched if r["_enrichment"].get("domain_source") == "guessed_and_verified")
-    print("\n" + "=" * 40)
-    print(f"Records processed: {len(enriched)}")
-    print(f"New domains discovered via guessing: {found_new_domain}")
-    print("Output written to enriched_leads.json")
-    print("=" * 40)
-
+    found_new_domain = sum(1 for r in enriched_records if r["_enrichment"].get("domain_source") == "guessed_and_verified")
+    logging.info(f"Bulk Process Finished. Output saved to {OUTPUT_FILE}.")
+    logging.info(f"Discovered {found_new_domain} new domains natively.")
 
 if __name__ == "__main__":
     asyncio.run(process_bulk_leads())

@@ -1,0 +1,274 @@
+[
+  {
+    "company_name": "Python Users Group",
+    "website": null,
+    "linkedin": "https://www.linkedin.com/company/python-users-group",
+    "industry": "Software_Development",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "LinkedIn",
+    "confidence_score": 33,
+    "lead_quality": "Low",
+    "company_type": "Unknown",
+    "relevance_score": 33,
+    "relevance_tier": "REJECT",
+    "relevance_info": {
+      "score": 33,
+      "tier": "REJECT",
+      "matched_signals": [
+        "Title"
+      ],
+      "rejected_signals": [
+        "Description",
+        "Positions"
+      ],
+      "score_breakdown": {
+        "title": 20.0,
+        "description": 0.0,
+        "positions": 0.0
+      },
+      "industry": "Software_Development",
+      "confidence": 0.13,
+      "aborted": false,
+      "company_type": "B2B Software",
+      "semantic_trace": [
+        "Matched Title with concepts: ['Python']"
+      ],
+      "technologies": [],
+      "products": [],
+      "website": "",
+      "website_source": "homepage"
+    },
+    "_source_file": "output\\raw\\python_20260720_132826.json",
+    "_flags": [],
+    "_verified_emails": [],
+    "_verified_phones": [],
+    "_website_reachable": null,
+    "_verification_notes": {},
+    "_verification_passed": true,
+    "_enrichment": {
+      "corporate_social_profiles": {
+        "linkedin": null,
+        "crunchbase": null
+      },
+      "domains_tried": [
+        "pythonusers.com",
+        "pythonusers.in",
+        "pythonusers.co.in",
+        "pythonusers.io",
+        "pythonusers.org"
+      ]
+    },
+    "_drop_reason": "nothing_usable_after_verification"
+  },
+  {
+    "company_name": "Python Geeks",
+    "website": null,
+    "linkedin": "https://in.linkedin.com/company/python-geeks",
+    "industry": "Software_Development",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "LinkedIn",
+    "confidence_score": 33,
+    "lead_quality": "Low",
+    "company_type": "Unknown",
+    "relevance_score": 33,
+    "relevance_tier": "REJECT",
+    "relevance_info": {
+      "score": 33,
+      "tier": "REJECT",
+      "matched_signals": [
+        "Title"
+      ],
+      "rejected_signals": [
+        "Description",
+        "Positions"
+      ],
+      "score_breakdown": {
+        "title": 20.0,
+        "description": 0.0,
+        "positions": 0.0
+      },
+      "industry": "Software_Development",
+      "confidence": 0.13,
+      "aborted": false,
+      "company_type": "B2B Software",
+      "semantic_trace": [
+        "Matched Title with concepts: ['Python']"
+      ],
+      "technologies": [],
+      "products": [],
+      "website": "",
+      "website_source": "homepage"
+    },
+    "_source_file": "output\\raw\\python_20260720_132826.json",
+    "_flags": [],
+    "_verified_emails": [],
+    "_verified_phones": [],
+    "_website_reachable": null,
+    "_verification_notes": {},
+    "_verification_passed": true,
+    "_enrichment": {
+      "corporate_social_profiles": {
+        "linkedin": null,
+        "crunchbase": null
+      },
+      "domains_tried": [
+        "pythongeeks.com",
+        "pythongeeks.in",
+        "pythongeeks.co.in",
+        "pythongeeks.io",
+        "pythongeeks.org"
+      ]
+    },
+    "_drop_reason": "nothing_usable_after_verification"
+  },
+  {
+    "company_name": "Pythoninstitute",
+    "website": null,
+    "linkedin": "https://www.linkedin.com/company/pythoninstitute",
+    "industry": "Software_Development",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "LinkedIn",
+    "confidence_score": 33,
+    "lead_quality": "Low",
+    "company_type": "Unknown",
+    "relevance_score": 33,
+    "relevance_tier": "REJECT",
+    "relevance_info": {
+      "score": 33,
+      "tier": "REJECT",
+      "matched_signals": [
+        "Title"
+      ],
+      "rejected_signals": [
+        "Description",
+        "Positions"
+      ],
+      "score_breakdown": {
+        "title": 20.0,
+        "description": 0.0,
+        "positions": 0.0
+      },
+      "industry": "Software_Development",
+      "confidence": 0.13,
+      "aborted": false,
+      "company_type": "B2B Software",
+      "semantic_trace": [
+        "Matched Title with concepts: ['Python']"
+      ],
+      "technologies": [],
+      "products": [],
+      "website": "",
+      "website_source": "homepage"
+    },
+    "_source_file": "output\\raw\\python_20260720_132826.json",
+    "_flags": [],
+    "_verified_emails": [],
+    "_verified_phones": [],
+    "_website_reachable": null,
+    "_verification_notes": {},
+    "_verification_passed": true,
+    "_enrichment": {
+      "corporate_social_profiles": {
+        "linkedin": null,
+        "crunchbase": null
+      },
+      "domains_tried": [
+        "pythoninstitute.com",
+        "pythoninstitute.in",
+        "pythoninstitute.co.in",
+        "pythoninstitute.io",
+        "pythoninstitute.org"
+      ]
+    },
+    "_drop_reason": "nothing_usable_after_verification"
+  },
+  {
+    "company_name": "Python Freelancer",
+    "website": null,
+    "linkedin": "https://www.linkedin.com/company/python-freelancer",
+    "industry": "Software_Development",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "LinkedIn",
+    "confidence_score": 33,
+    "lead_quality": "Low",
+    "company_type": "Unknown",
+    "relevance_score": 33,
+    "relevance_tier": "REJECT",
+    "relevance_info": {
+      "score": 33,
+      "tier": "REJECT",
+      "matched_signals": [
+        "Title"
+      ],
+      "rejected_signals": [
+        "Description",
+        "Positions"
+      ],
+      "score_breakdown": {
+        "title": 20.0,
+        "description": 0.0,
+        "positions": 0.0
+      },
+      "industry": "Software_Development",
+      "confidence": 0.13,
+      "aborted": false,
+      "company_type": "B2B Software",
+      "semantic_trace": [
+        "Matched Title with concepts: ['Python']"
+      ],
+      "technologies": [],
+      "products": [],
+      "website": "",
+      "website_source": "homepage"
+    },
+    "_source_file": "output\\raw\\python_20260720_132826.json",
+    "_flags": [],
+    "_verified_emails": [],
+    "_verified_phones": [],
+    "_website_reachable": null,
+    "_verification_notes": {},
+    "_verification_passed": true,
+    "_enrichment": {
+      "corporate_social_profiles": {
+        "linkedin": null,
+        "crunchbase": null
+      },
+      "domains_tried": [
+        "pythonfreelancer.com",
+        "pythonfreelancer.in",
+        "pythonfreelancer.co.in",
+        "pythonfreelancer.io",
+        "pythonfreelancer.org"
+      ]
+    },
+    "_drop_reason": "nothing_usable_after_verification"
+  }
+]

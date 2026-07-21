@@ -1,0 +1,452 @@
+[
+  {
+    "company_name": "Software Technology",
+    "website": null,
+    "linkedin": "https://www.linkedin.com/company/software-technology-inc",
+    "industry": "technology",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "LinkedIn",
+    "confidence_score": 73,
+    "lead_quality": "High",
+    "company_type": "Unknown",
+    "relevance_score": 73,
+    "relevance_tier": "MEDIUM",
+    "relevance_info": {
+      "score": 73,
+      "tier": "MEDIUM",
+      "matched_signals": [
+        "Title"
+      ],
+      "rejected_signals": [
+        "Description",
+        "Positions"
+      ],
+      "score_breakdown": {
+        "title": 20.0,
+        "description": 0.0,
+        "positions": 0.0
+      },
+      "industry": "Unknown",
+      "confidence": 0.13,
+      "aborted": false,
+      "company_type": "B2B Software",
+      "semantic_trace": [
+        "Matched Title with concepts: ['Technology', 'technology']"
+      ],
+      "technologies": [],
+      "products": [],
+      "website": "",
+      "website_source": "homepage"
+    },
+    "_source_file": "output\\raw\\technology_20260720_164944.json",
+    "_flags": [],
+    "_verified_emails": [],
+    "_verified_phones": [],
+    "_website_reachable": null,
+    "_verification_notes": {},
+    "_verification_passed": true
+  },
+  {
+    "company_name": "Softwaretechnologies",
+    "website": "https://softwaretechnologies.in/",
+    "linkedin": null,
+    "industry": "Software_Development",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [
+      "admin@softwaretechnologies.in",
+      "contact@softwaretechnologies.in",
+      "hello@softwaretechnologies.in",
+      "info@softwaretechnologies.in",
+      "sales@softwaretechnologies.in",
+      "support@softwaretechnologies.in"
+    ],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "confidence_score": 60,
+    "lead_quality": "Medium",
+    "company_type": "Unknown",
+    "relevance_score": 60,
+    "relevance_tier": "MEDIUM",
+    "relevance_info": {
+      "score": 60,
+      "tier": "MEDIUM",
+      "matched_signals": [
+        "Technologies"
+      ],
+      "rejected_signals": [
+        "Description",
+        "Services",
+        "Products",
+        "Positions",
+        "Blog/Articles"
+      ],
+      "score_breakdown": {
+        "description": 0.0,
+        "services": 0.0,
+        "technologies": 24.0,
+        "products": 0.0,
+        "positions": 0.0,
+        "blog": 0.0
+      },
+      "industry": "Software_Development",
+      "confidence": 0.21,
+      "aborted": false,
+      "company_type": "B2B Software",
+      "semantic_trace": [
+        "Matched Technologies: ['Technology', 'technology']"
+      ],
+      "technologies": [
+        "Technology",
+        "Technology"
+      ],
+      "products": [],
+      "website": "",
+      "website_source": ""
+    },
+    "_source_file": "output\\raw\\technology_20260720_164944.json",
+    "_flags": [],
+    "_verified_emails": [
+      "admin@softwaretechnologies.in",
+      "contact@softwaretechnologies.in",
+      "hello@softwaretechnologies.in",
+      "info@softwaretechnologies.in",
+      "sales@softwaretechnologies.in",
+      "support@softwaretechnologies.in"
+    ],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "emails": {
+        "admin@softwaretechnologies.in": "ok",
+        "contact@softwaretechnologies.in": "ok",
+        "hello@softwaretechnologies.in": "ok",
+        "info@softwaretechnologies.in": "ok",
+        "sales@softwaretechnologies.in": "ok",
+        "support@softwaretechnologies.in": "ok"
+      },
+      "website": "ok"
+    },
+    "_verification_passed": true
+  },
+  {
+    "company_name": "Reliablesoftech",
+    "website": "https://reliablesoftech.com/",
+    "linkedin": null,
+    "industry": "technology",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [
+      "admin@reliablesoftech.com",
+      "contact@reliablesoftech.com",
+      "hello@reliablesoftech.com",
+      "info@reliablesoftech.com",
+      "sales@reliablesoftech.com",
+      "support@reliablesoftech.com"
+    ],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "confidence_score": 40,
+    "lead_quality": "Medium",
+    "company_type": "Unknown",
+    "relevance_score": 40,
+    "relevance_tier": "LOW",
+    "relevance_info": {
+      "score": 40,
+      "tier": "LOW",
+      "matched_signals": [],
+      "rejected_signals": [
+        "Title",
+        "Description",
+        "Positions"
+      ],
+      "score_breakdown": {
+        "title": 0.0,
+        "description": 0.0,
+        "positions": 0.0
+      },
+      "industry": "Unknown",
+      "confidence": 0.0,
+      "aborted": false,
+      "company_type": "B2B Software",
+      "semantic_trace": [],
+      "technologies": [],
+      "products": [],
+      "website": "",
+      "website_source": "homepage"
+    },
+    "_source_file": "output\\raw\\technology_20260720_164944.json",
+    "_flags": [],
+    "_verified_emails": [
+      "admin@reliablesoftech.com",
+      "contact@reliablesoftech.com",
+      "hello@reliablesoftech.com",
+      "info@reliablesoftech.com",
+      "sales@reliablesoftech.com",
+      "support@reliablesoftech.com"
+    ],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "emails": {
+        "admin@reliablesoftech.com": "ok",
+        "contact@reliablesoftech.com": "ok",
+        "hello@reliablesoftech.com": "ok",
+        "info@reliablesoftech.com": "ok",
+        "sales@reliablesoftech.com": "ok",
+        "support@reliablesoftech.com": "ok"
+      },
+      "website": "ok"
+    },
+    "_verification_passed": true
+  },
+  {
+    "company_name": "Greatplacetowork",
+    "website": "https://www.greatplacetowork.in/great/company/applications-software-technology-llc/",
+    "linkedin": null,
+    "industry": "technology",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [
+      "admin@greatplacetowork.in",
+      "contact@greatplacetowork.in",
+      "hello@greatplacetowork.in",
+      "info@greatplacetowork.in",
+      "sales@greatplacetowork.in",
+      "support@greatplacetowork.in"
+    ],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "confidence_score": 73,
+    "lead_quality": "High",
+    "company_type": "Unknown",
+    "relevance_score": 73,
+    "relevance_tier": "MEDIUM",
+    "relevance_info": {
+      "score": 73,
+      "tier": "MEDIUM",
+      "matched_signals": [
+        "Title"
+      ],
+      "rejected_signals": [
+        "Description",
+        "Positions"
+      ],
+      "score_breakdown": {
+        "title": 20.0,
+        "description": 0.0,
+        "positions": 0.0
+      },
+      "industry": "Unknown",
+      "confidence": 0.13,
+      "aborted": false,
+      "company_type": "B2B Software",
+      "semantic_trace": [
+        "Matched Title with concepts: ['Technology', 'technology']"
+      ],
+      "technologies": [],
+      "products": [],
+      "website": "",
+      "website_source": "homepage"
+    },
+    "_source_file": "output\\raw\\technology_20260720_164944.json",
+    "_flags": [],
+    "_verified_emails": [
+      "admin@greatplacetowork.in",
+      "contact@greatplacetowork.in",
+      "hello@greatplacetowork.in",
+      "info@greatplacetowork.in",
+      "sales@greatplacetowork.in",
+      "support@greatplacetowork.in"
+    ],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "emails": {
+        "admin@greatplacetowork.in": "ok",
+        "contact@greatplacetowork.in": "ok",
+        "hello@greatplacetowork.in": "ok",
+        "info@greatplacetowork.in": "ok",
+        "sales@greatplacetowork.in": "ok",
+        "support@greatplacetowork.in": "ok"
+      },
+      "website": "ok"
+    },
+    "_verification_passed": true
+  },
+  {
+    "company_name": "Stiorg",
+    "website": "https://www.stiorg.com/",
+    "linkedin": null,
+    "industry": "Software_Development",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [
+      "admin@stiorg.com",
+      "contact@stiorg.com",
+      "hello@stiorg.com",
+      "info@stiorg.com",
+      "sales@stiorg.com",
+      "support@stiorg.com"
+    ],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "confidence_score": 73,
+    "lead_quality": "High",
+    "company_type": "Unknown",
+    "relevance_score": 73,
+    "relevance_tier": "MEDIUM",
+    "relevance_info": {
+      "score": 73,
+      "tier": "MEDIUM",
+      "matched_signals": [
+        "Title"
+      ],
+      "rejected_signals": [
+        "Description",
+        "Positions"
+      ],
+      "score_breakdown": {
+        "title": 20.0,
+        "description": 0.0,
+        "positions": 0.0
+      },
+      "industry": "Software_Development",
+      "confidence": 0.13,
+      "aborted": false,
+      "company_type": "Consultancy",
+      "semantic_trace": [
+        "Matched Title with concepts: ['Technology', 'technology']"
+      ],
+      "technologies": [],
+      "products": [],
+      "website": "",
+      "website_source": "homepage"
+    },
+    "_source_file": "output\\raw\\technology_20260720_164944.json",
+    "_flags": [],
+    "_verified_emails": [
+      "admin@stiorg.com",
+      "contact@stiorg.com",
+      "hello@stiorg.com",
+      "info@stiorg.com",
+      "sales@stiorg.com",
+      "support@stiorg.com"
+    ],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "emails": {
+        "admin@stiorg.com": "ok",
+        "contact@stiorg.com": "ok",
+        "hello@stiorg.com": "ok",
+        "info@stiorg.com": "ok",
+        "sales@stiorg.com": "ok",
+        "support@stiorg.com": "ok"
+      },
+      "website": "ok"
+    },
+    "_verification_passed": true
+  },
+  {
+    "company_name": "Sonata Software",
+    "website": "https://www.sonata-software.com/",
+    "linkedin": null,
+    "industry": "technology",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [
+      "admin@sonata-software.com",
+      "contact@sonata-software.com",
+      "hello@sonata-software.com",
+      "info@sonata-software.com",
+      "sales@sonata-software.com",
+      "support@sonata-software.com"
+    ],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "confidence_score": 73,
+    "lead_quality": "High",
+    "company_type": "Unknown",
+    "relevance_score": 73,
+    "relevance_tier": "MEDIUM",
+    "relevance_info": {
+      "score": 73,
+      "tier": "MEDIUM",
+      "matched_signals": [
+        "Title"
+      ],
+      "rejected_signals": [
+        "Description",
+        "Positions"
+      ],
+      "score_breakdown": {
+        "title": 20.0,
+        "description": 0.0,
+        "positions": 0.0
+      },
+      "industry": "Unknown",
+      "confidence": 0.13,
+      "aborted": false,
+      "company_type": "B2B Software",
+      "semantic_trace": [
+        "Matched Title with concepts: ['Technology', 'technology']"
+      ],
+      "technologies": [],
+      "products": [],
+      "website": "",
+      "website_source": "homepage"
+    },
+    "_source_file": "output\\raw\\technology_20260720_164944.json",
+    "_flags": [],
+    "_verified_emails": [
+      "admin@sonata-software.com",
+      "contact@sonata-software.com",
+      "hello@sonata-software.com",
+      "info@sonata-software.com",
+      "sales@sonata-software.com",
+      "support@sonata-software.com"
+    ],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "emails": {
+        "admin@sonata-software.com": "ok",
+        "contact@sonata-software.com": "ok",
+        "hello@sonata-software.com": "ok",
+        "info@sonata-software.com": "ok",
+        "sales@sonata-software.com": "ok",
+        "support@sonata-software.com": "ok"
+      },
+      "website": "ok"
+    },
+    "_verification_passed": true
+  }
+]

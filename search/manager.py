@@ -429,6 +429,11 @@ class SearchManager:
         signals.connect(_on_request_completed, signals.REQUEST_COMPLETED)
         signals.connect(_on_request_failed, signals.REQUEST_FAILED)
 
+        from utils.budget_manager import ProviderBudgetManager
+        self.budget_manager = ProviderBudgetManager()
+        self._consecutive_blocks = defaultdict(int)
+        self._google_disabled_until = 0.0
+
     # ── Public API ────────────────────────────────────────────────────────────
 
     def providers_available(self) -> bool:
@@ -561,7 +566,21 @@ class SearchManager:
                 print(f"[SearchManager] Skipping {pname!r} (in cooldown)")
                 continue
 
+            # Cooldown / consecutive blocks check for Google
+            if pname == "google_html":
+                if self._consecutive_blocks["google_html"] >= 3:
+                    if time.time() < self._google_disabled_until:
+                        remaining_cooldown = int(self._google_disabled_until - time.time())
+                        print(f"[SearchManager] Skipping google_html (Disabled globally for {remaining_cooldown}s due to 3 consecutive blocks)")
+                        continue
+                    else:
+                        self._consecutive_blocks["google_html"] = 0
 
+            # Provider budget check via ProviderBudgetManager
+            self.budget_manager.start_provider(pname)
+            if not self.budget_manager.can_execute(pname):
+                print(f"[SearchManager] Skipping {pname} (Budget or deadline check failed)")
+                continue
 
             # 2. Bing Captcha Early Stop
             if pname == "bing" and self._consecutive_captchas["bing"] >= 2:
@@ -688,6 +707,7 @@ class SearchManager:
                     provider_stats.record_search_outcome(pname, zero_results=True)
                     if pname == "google_html":
                         self.google_zero_result_queries += 1
+                        self._consecutive_blocks["google_html"] = 0
                         print(f"[SearchManager] GoogleHtml valid zero results.")
                     if not all_results:
                         self.cache.set(query, max_results, page, pname, [], kind="zero_result")
@@ -704,6 +724,8 @@ class SearchManager:
                 else:
                     self.stats[pname].successful_queries += 1
                     self._consecutive_zero_results[(pname, family)] = 0
+                    if pname == "google_html":
+                        self._consecutive_blocks["google_html"] = 0
                     self._keyword_accepted[(pname, family)] += accepted
                     self._keyword_results[(pname, family)] += len(raw)
                     record_query_outcome(query, "search_hit", len(raw), provider=pname)
@@ -744,12 +766,15 @@ class SearchManager:
                     retry_reasons = getattr(self._last_diag, "retry_reasons", [])
                     reasons_str = ", ".join(retry_reasons) if retry_reasons else "None"
                     from utils.deadline import Deadline
-                    switch_reason = f"Provider {pname} failed: {exc.reason}"
+
+                    is_permanent = exc.reason in ("ENABLE_JS", "CAPTCHA", "CONSENT_PAGE", "FORBIDDEN")
+                    decision = "Permanent failure" if is_permanent else "Transient failure"
+                    current_idx = ordered.index(provider) if provider in ordered else -1
+                    fallback_p = ordered[current_idx + 1].name if current_idx != -1 and current_idx + 1 < len(ordered) else "None"
+
                     print(
-                        f"[QUERY DETAIL] Provider: {pname} | Query: '{query}' | Latency: {latency:.2f}s "
-                        f"| Retry count: {retry_count} | Reason for retry: {reasons_str} "
-                        f"| Reason for rejection: N/A | Switch reason: {switch_reason} "
-                        f"| Remaining budget: {Deadline.remaining():.1f}s"
+                        f"[QUERY DETAIL] Provider: {pname} | Failure: {exc.reason} | Decision: {decision} "
+                        f"| Fallback: {fallback_p} | Remaining budget: {Deadline.remaining():.1f}s | Latency: {latency:.2f}s"
                     )
 
                     self.stats[pname].total_latency_s += latency
@@ -764,6 +789,12 @@ class SearchManager:
                     if pname == "google_html":
                         self.google_fallbacks += 1
                         self.queries_google_blocked += 1
+                        is_block = any(term in exc.reason for term in ("ENABLE_JS", "CAPTCHA", "CONSENT_PAGE", "FORBIDDEN", "RATE_LIMIT", "429", "sorry", "unusual traffic"))
+                        if is_block:
+                            self._consecutive_blocks["google_html"] += 1
+                            if self._consecutive_blocks["google_html"] >= 3:
+                                self._google_disabled_until = time.time() + 600.0
+                                print(f"[SearchManager] GoogleHtml consecutive blocks count reached 3. Disabling Google globally for 10 minutes.")
                     elif pname == "bing":
                         self.bing_failures += 1
                         self.queries_bing_blocked += 1
@@ -1314,8 +1345,15 @@ class SearchManager:
         if "directory" in pname.lower():
             return max(8.0, min(30.0, timeout))
         if "repository" in pname.lower():
-            return max(5.0, min(20.0, timeout))
-        return max(6.0, min(20.0, timeout))
+            timeout = max(5.0, min(20.0, timeout))
+        else:
+            timeout = max(6.0, min(20.0, timeout))
+
+        if hasattr(self, "budget_manager"):
+            remaining = self.budget_manager.remaining_provider_time(pname)
+            timeout = min(timeout, max(1.0, remaining))
+
+        return timeout
 
     def _get_ordered_providers(self) -> list[SearchProvider]:
         """
@@ -1358,14 +1396,24 @@ class SearchManager:
 
         def _sort_key(p):
             idx = priority_index.get(p.name, 999)
-            score = self._get_provider_score(p.name)
-            # Providers in cooldown / circuit-breaker OPEN get demoted to
-            # the end regardless of their priority position.
+            stats = self.stats.get(p.name)
+            if stats and stats.queries > 0:
+                success_rate = (stats.queries - stats.failures) / stats.queries
+            else:
+                success_rate = 1.0
+
+            # Demote low success-rate providers (Health < 0.2)
+            if success_rate < 0.2:
+                idx += 10
+            # Promote high success-rate free providers (Health > 0.8)
+            elif success_rate > 0.8 and idx > 0 and self.PROVIDER_COST_TIER.get(p.name, 0) == 0:
+                idx -= 1
+
             is_healthy = self.provider_health.get(p.name, True)
             breaker = self._provider_breaker_states.get(p.name, "CLOSED")
             if not is_healthy or breaker == "OPEN":
                 idx += 100  # push to end
-            return (idx, -score)  # lower idx = higher priority; higher score = better
+            return (idx, -success_rate)  # lower idx = higher priority; higher success_rate = better
 
         ordered.sort(key=_sort_key)
 

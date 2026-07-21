@@ -1051,11 +1051,11 @@
         "zero": 0,
         "parser": 0,
         "unavailable": 0,
-        "failures": 0,
-        "last_updated": 1784453476.217563,
+        "failures": 1,
+        "last_updated": 1784533579.097059,
         "leads_found": 6,
-        "queries_run": 410,
-        "score": 826
+        "queries_run": 411,
+        "score": 824
     },
     "best python": {
         "success": 1,
@@ -1393,20 +1393,20 @@
         "zero": 64,
         "parser": 0,
         "unavailable": 0,
-        "failures": 544,
-        "last_updated": 1784522355.8130279,
-        "queries_run": 544,
-        "score": -480
+        "failures": 664,
+        "last_updated": 1784543963.813067,
+        "queries_run": 664,
+        "score": -600
     },
     "python company": {
         "success": 0,
         "zero": 3,
         "parser": 3,
         "unavailable": 0,
-        "failures": 17,
-        "last_updated": 1784522356.1636302,
-        "queries_run": 38,
-        "score": 5
+        "failures": 21,
+        "last_updated": 1784543964.2988636,
+        "queries_run": 46,
+        "score": 1
     },
     "site:linkedin.com/company \"python software\" -site:wikipedia.org -site:play.google.com -site:apps.apple.com -site:chromewebstore.google.com -site:whatsapp.com": {
         "success": 0,
@@ -1490,8 +1490,8 @@
         "unavailable": 0,
         "failures": 0,
         "last_updated": 0.0,
-        "score": 193,
-        "queries_run": 64
+        "score": 215,
+        "queries_run": 77
     },
     "django development company": {
         "score": 50.0,
@@ -1509,20 +1509,20 @@
         "parser": 0,
         "unavailable": 0,
         "failures": 0,
-        "last_updated": 1784522356.0648808,
-        "score": 155,
-        "queries_run": 31,
-        "leads_found": 31
+        "last_updated": 1784543964.0305295,
+        "score": 175,
+        "queries_run": 35,
+        "leads_found": 35
     },
     "test query 2": {
         "success": 0,
         "zero": 0,
         "parser": 0,
         "unavailable": 0,
-        "failures": 31,
-        "last_updated": 1784522356.0686197,
-        "score": -31,
-        "queries_run": 31
+        "failures": 35,
+        "last_updated": 1784543964.0363023,
+        "score": -35,
+        "queries_run": 35
     },
     "Django development company": {
         "score": 50.0,
@@ -1540,9 +1540,9 @@
         "parser": 0,
         "unavailable": 0,
         "failures": 0,
-        "last_updated": 1784281567.551629,
-        "score": 15,
-        "queries_run": 4,
+        "last_updated": 1784532740.691227,
+        "score": 25,
+        "queries_run": 5,
         "leads_found": 1
     },
     "ai development company -site:wikipedia.org -site:play.google.com -site:apps.apple.com -site:chromewebstore.google.com -site:whatsapp.com": {
@@ -1562,8 +1562,8 @@
         "unavailable": 0,
         "failures": 0,
         "last_updated": 0.0,
-        "score": -56,
-        "queries_run": 43
+        "score": -59,
+        "queries_run": 67
     },
     "ai outsourcing company -site:wikipedia.org -site:play.google.com -site:apps.apple.com -site:chromewebstore.google.com -site:whatsapp.com": {
         "success": 0,
@@ -1592,8 +1592,8 @@
         "unavailable": 0,
         "failures": 0,
         "last_updated": 0.0,
-        "score": -4,
-        "queries_run": 27
+        "score": -8,
+        "queries_run": 31
     },
     "ai consulting company -site:wikipedia.org -site:play.google.com -site:apps.apple.com -site:chromewebstore.google.com -site:whatsapp.com": {
         "success": 0,
@@ -1660,10 +1660,10 @@
         "zero": 0,
         "parser": 0,
         "unavailable": 0,
-        "failures": 3,
-        "last_updated": 1784449487.8697264,
-        "score": 6,
-        "queries_run": 4
+        "failures": 4,
+        "last_updated": 1784542261.2739658,
+        "score": 15,
+        "queries_run": 6
     },
     "site:linkedin.com/in \"indias leading architectural hardware manufacturer\" founder or ceo or director": {
         "success": 0,
@@ -1790,10 +1790,10 @@
         "zero": 0,
         "parser": 0,
         "unavailable": 0,
-        "failures": 0,
-        "last_updated": 1784287002.3243713,
-        "score": 10,
-        "queries_run": 1
+        "failures": 2,
+        "last_updated": 1784529173.6296813,
+        "score": 6,
+        "queries_run": 3
     },
     "django software company": {
         "success": 0,
@@ -2295,16 +2295,6 @@
         "score": -2,
         "queries_run": 1
     },
-    "source:brave": {
-        "success": 0,
-        "zero": 0,
-        "parser": 0,
-        "unavailable": 0,
-        "failures": 0,
-        "last_updated": 0.0,
-        "score": 4,
-        "queries_run": 2
-    },
     "hardware engineering development company": {
         "success": 0,
         "zero": 0,
@@ -2314,5 +2304,155 @@
         "last_updated": 1784522714.1783412,
         "score": -2,
         "queries_run": 1
+    },
+    "software developer company 1": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 3,
+        "last_updated": 1784543964.4028323,
+        "score": -6,
+        "queries_run": 3
+    },
+    "software developer company 2": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 3,
+        "last_updated": 1784543964.4088616,
+        "score": -6,
+        "queries_run": 3
+    },
+    "software developer company 3": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 3,
+        "last_updated": 1784543964.4128802,
+        "score": -6,
+        "queries_run": 3
+    },
+    "site:goodfirms.co ai": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 2,
+        "last_updated": 1784524854.2387981,
+        "score": 6,
+        "queries_run": 3
+    },
+    "generative ai development company": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1784524862.7540467,
+        "score": 10,
+        "queries_run": 1
+    },
+    "site:linkedin.com/company generative ai": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 2,
+        "last_updated": 1784525269.2874436,
+        "score": 6,
+        "queries_run": 3
+    },
+    "site:goodfirms.co enterprise software": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1784529134.8459535,
+        "score": 10,
+        "queries_run": 1
+    },
+    "ai company": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1784532758.4801004,
+        "score": 10,
+        "queries_run": 1
+    },
+    "custom software software company": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1784533564.7922828,
+        "score": 8,
+        "queries_run": 2
+    },
+    "electronics": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1784533965.584162,
+        "score": 32,
+        "queries_run": 10
+    },
+    "electronics software company": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 2,
+        "last_updated": 1784533954.4330359,
+        "score": 6,
+        "queries_run": 3
+    },
+    "site:linkedin.com/company python": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 2,
+        "last_updated": 1784534305.6974041,
+        "score": 6,
+        "queries_run": 3
+    },
+    "technology": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1784542291.6201384,
+        "score": 12,
+        "queries_run": 2
+    },
+    "technology company": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1784542287.9500575,
+        "score": -2,
+        "queries_run": 1
+    },
+    "source:brave": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 0.0,
+        "score": 4,
+        "queries_run": 2
     }
 }

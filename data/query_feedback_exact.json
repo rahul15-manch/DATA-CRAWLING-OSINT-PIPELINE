@@ -1,0 +1,103 @@
+{
+    "site:clutch.co python company": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 30,
+        "last_updated": 1784544489.4902058,
+        "score": -30,
+        "queries_run": 30
+    },
+    "test query": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1784544489.7148888,
+        "score": 5,
+        "queries_run": 1,
+        "leads_found": 1
+    },
+    "source:brave": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 0.0,
+        "score": 4,
+        "queries_run": 2
+    },
+    "test query 2": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1784544489.715986,
+        "score": -1,
+        "queries_run": 1
+    },
+    "python company": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1784544489.923986,
+        "score": -1,
+        "queries_run": 2
+    },
+    "source:bing": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 0.0,
+        "score": -1,
+        "queries_run": 1
+    },
+    "software developer company 1": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1784544489.9975958,
+        "score": -2,
+        "queries_run": 1
+    },
+    "source:google_html": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 0.0,
+        "score": -6,
+        "queries_run": 3
+    },
+    "software developer company 2": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1784544489.9993322,
+        "score": -2,
+        "queries_run": 1
+    },
+    "software developer company 3": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1784544490.0009346,
+        "score": -2,
+        "queries_run": 1
+    }
+}

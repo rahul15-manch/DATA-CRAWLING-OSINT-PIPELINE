@@ -1,0 +1,163 @@
+{
+    "site:clutch.co python company": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 60,
+        "last_updated": 1784544606.3163567,
+        "score": -60,
+        "queries_run": 60
+    },
+    "test query": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1784544606.5230346,
+        "score": 10,
+        "queries_run": 2,
+        "leads_found": 2
+    },
+    "test query 2": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 2,
+        "last_updated": 1784544606.5235503,
+        "score": -2,
+        "queries_run": 2
+    },
+    "python company": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 2,
+        "last_updated": 1784544606.758369,
+        "score": -2,
+        "queries_run": 4
+    },
+    "source:bing": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 0.0,
+        "score": -2,
+        "queries_run": 2
+    },
+    "source:brave": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 0.0,
+        "score": 24,
+        "queries_run": 4
+    },
+    "software developer company 1": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1784544606.8054068,
+        "score": -2,
+        "queries_run": 1
+    },
+    "source:google_html": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 0.0,
+        "score": 20,
+        "queries_run": 15
+    },
+    "software developer company 2": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1784544606.8064668,
+        "score": -2,
+        "queries_run": 1
+    },
+    "software developer company 3": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1784544606.8075128,
+        "score": -2,
+        "queries_run": 1
+    },
+    "technology outsourcing": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1784544715.688705,
+        "score": 8,
+        "queries_run": 2
+    },
+    "source:duckduckgo": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 0.0,
+        "score": 4,
+        "queries_run": 4
+    },
+    "technology": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1784546383.9951696,
+        "score": 24,
+        "queries_run": 8
+    },
+    "technology software company": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 2,
+        "last_updated": 1784546374.4806669,
+        "score": 6,
+        "queries_run": 3
+    },
+    "django software company": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1784609696.4569273,
+        "score": 8,
+        "queries_run": 2
+    },
+    "python": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1784609714.348583,
+        "score": 4,
+        "queries_run": 3
+    }
+}

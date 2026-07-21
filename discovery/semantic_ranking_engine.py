@@ -79,6 +79,79 @@ class SemanticRanker(BaseRanker):
         self.extractor = CompanySemanticExtractor()
         self.matcher = WeightedMatcher()
 
+    def _normalize_text(self, text: str) -> str:
+        if not text:
+            return ""
+        import unicodedata
+        # 1. Unicode Normalize NFKD (strip accents/symbols)
+        text = unicodedata.normalize('NFKD', text)
+        # 2. Lowercase
+        text = text.lower()
+        # 3. Remove possessives
+        text = re.sub(r"\'s\b|s\'\b", "", text)
+        # 4. Remove punctuation/symbols (replace with spaces)
+        text = re.sub(r"[^\w\s]", " ", text)
+        # 5. Collapse whitespace
+        words = text.split()
+        
+        # 6. Normalize common roots/synonyms to a single standardized form
+        roots = {
+            "technology": "technolog",
+            "technologies": "technolog",
+            "tech": "technolog",
+            "electronics": "electron",
+            "electronic": "electron",
+            "python": "python",
+            "software": "softwar",
+            "hardware": "hardwar",
+            "developer": "develop",
+            "development": "develop",
+            "consulting": "consult",
+            "consultancy": "consult",
+            "automation": "automat",
+            "automated": "automat"
+        }
+        mapped = [roots.get(w, w) for w in words]
+        return " ".join(mapped)
+
+    def _is_literal_match(self, company_data: dict, keyword: str) -> bool:
+        if not keyword:
+            return True
+        
+        kw_clean = keyword.lower().strip()
+        words = kw_clean.split()
+        from query.query_planner import LOCATIONS
+        if len(words) > 1 and words[-1] in LOCATIONS:
+            kw_clean = " ".join(words[:-1])
+
+        norm_kw = self._normalize_text(kw_clean)
+        if not norm_kw:
+            return False
+
+        # Gather target text blocks from all specified fields
+        target_blocks = []
+        target_blocks.append(company_data.get("name") or "")
+        target_blocks.append(company_data.get("website_title") or "")
+        target_blocks.append(company_data.get("description") or "")
+        target_blocks.append(company_data.get("headline") or "")
+        target_blocks.append(company_data.get("about") or "")
+        target_blocks.extend(company_data.get("services") or [])
+        target_blocks.extend(company_data.get("positions") or [])
+        target_blocks.extend(company_data.get("industries") or [])
+        target_blocks.extend(company_data.get("technologies") or [])
+
+        # Normalize the targets (which will also apply root synonym standardization)
+        normalized_target = " ".join(self._normalize_text(str(b)) for b in target_blocks if b)
+
+        # Check if the normalized keyword (or its first word root) matches
+        if norm_kw in normalized_target:
+            return True
+        first_word = norm_kw.split()[0]
+        if first_word in normalized_target:
+            return True
+            
+        return False
+
     def detect_industry(self, text: str) -> str:
         if not text:
             return "Unknown"
@@ -158,9 +231,42 @@ class SemanticRanker(BaseRanker):
         stats.increment("time_semantic_matcher_ms", int(t_match_ms))
         stats.increment("count_semantic_matcher")
         
+        import config
+        from config import SearchMode
+        search_mode = getattr(config, "SEARCH_MODE", SearchMode.SEMANTIC)
+        
+        company_data = {
+            "name": title,
+            "website_title": title,
+            "description": snippet,
+            "headline": title,
+            "about": "",
+            "services": [s.get("value", "") for s in company.services] if hasattr(company, "services") else [],
+            "positions": [p.get("value", "") for p in company.positions] if hasattr(company, "positions") else [],
+            "industries": company.industries if hasattr(company, "industries") else [],
+            "technologies": [t.get("value", "") for t in company.technologies] if hasattr(company, "technologies") else [],
+        }
+        
+        literal_matched = self._is_literal_match(company_data, keyword)
+        score = res["score"]
+        
+        if literal_matched:
+            bonus = getattr(config, "LITERAL_MATCH_BONUS", 40)
+            score = min(100, score + bonus)
+            stats.increment("literal_matches")
+            stats.increment("literal_bonus_applied")
+        else:
+            stats.increment("rejected_literal_matches")
+            
+        tier = self.get_tier(score)
+        
+        if search_mode == SearchMode.EXACT and not literal_matched:
+            score = 0
+            tier = "REJECT"
+
         return {
-            "score": res["score"],
-            "tier": self.get_tier(res["score"]),
+            "score": score,
+            "tier": tier,
             "matched_signals": res["matched_signals"],
             "rejected_signals": res["rejected_signals"],
             "score_breakdown": res["score_breakdown"],
@@ -207,6 +313,39 @@ class SemanticRanker(BaseRanker):
         stats.increment("time_semantic_matcher_ms", int(t_match_ms))
         stats.increment("count_semantic_matcher")
 
+        import config
+        from config import SearchMode
+        search_mode = getattr(config, "SEARCH_MODE", SearchMode.SEMANTIC)
+        
+        company_data = {
+            "name": company.sections.get("homepage", ""),
+            "website_title": company.sections.get("homepage", ""),
+            "description": company.description.get("value", "") if isinstance(company.description, dict) else str(company.description or ""),
+            "headline": company.sections.get("homepage", ""),
+            "about": company.sections.get("about", ""),
+            "services": [s.get("value", "") for s in company.services] if hasattr(company, "services") else [],
+            "positions": [p.get("value", "") for p in company.positions] if hasattr(company, "positions") else [],
+            "industries": company.industries if hasattr(company, "industries") else [],
+            "technologies": [t.get("value", "") for t in company.technologies] if hasattr(company, "technologies") else [],
+        }
+        
+        literal_matched = self._is_literal_match(company_data, keyword)
+        score = res["score"]
+        
+        if literal_matched:
+            bonus = getattr(config, "LITERAL_MATCH_BONUS", 40)
+            score = min(100, score + bonus)
+            stats.increment("literal_matches")
+            stats.increment("literal_bonus_applied")
+        else:
+            stats.increment("rejected_literal_matches")
+            
+        tier = self.get_tier(score)
+        
+        if search_mode == SearchMode.EXACT and not literal_matched:
+            score = 0
+            tier = "REJECT"
+
         clean_profile_text = (
             (company.description.get("value", "") if isinstance(company.description, dict) else str(company.description or "")) + " " +
             company.sections.get("homepage", "") + " " +
@@ -215,8 +354,8 @@ class SemanticRanker(BaseRanker):
         )
 
         return {
-            "score": res["score"],
-            "tier": self.get_tier(res["score"]),
+            "score": score,
+            "tier": tier,
             "matched_signals": res["matched_signals"],
             "rejected_signals": res["rejected_signals"],
             "score_breakdown": res["score_breakdown"],

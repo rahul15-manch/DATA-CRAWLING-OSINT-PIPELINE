@@ -1,0 +1,35 @@
+{
+  "timestamp": "2026-07-20T10:57:29.910598",
+  "query": "site:linkedin.com/company Generative AI",
+  "classification": "ENABLE_JS_PAGE",
+  "url": "https://www.google.com/search?q=site%3Alinkedin.com%2Fcompany+Generative+AI&num=10&hl=en&gl=us",
+  "status_code": 200,
+  "redirect_chain": [
+    "https://www.google.com/search?q=site%3Alinkedin.com%2Fcompany+Generative+AI&num=10&hl=en&gl=us"
+  ],
+  "response_headers": {
+    "content-type": "text/html; charset=UTF-8",
+    "strict-transport-security": "max-age=31536000",
+    "content-security-policy": "object-src 'none';base-uri 'self';script-src 'nonce-171n_zn2VL041pD5KcsV4A' 'strict-dynamic' 'report-sample' 'unsafe-eval' 'unsafe-inline' https: http:;report-uri https://csp.withgoogle.com/csp/gws/cdt1",
+    "cross-origin-opener-policy": "same-origin-allow-popups; report-to=\"gws\"",
+    "report-to": "{\"group\":\"gws\",\"max_age\":2592000,\"endpoints\":[{\"url\":\"https://csp.withgoogle.com/csp/report-to/gws/cdt1\"}]}",
+    "accept-ch": "Sec-CH-Prefers-Color-Scheme, Downlink, RTT, Sec-CH-UA-Form-Factors, Sec-CH-UA-Platform, Sec-CH-UA-Platform-Version, Sec-CH-UA-Full-Version, Sec-CH-UA-Arch, Sec-CH-UA-Model, Sec-CH-UA-Bitness, Sec-CH-UA-Full-Version-List, Sec-CH-UA-WoW64",
+    "x-content-type-options": "nosniff",
+    "permissions-policy": "unload=()",
+    "p3p": "CP=\"This is not a P3P policy! See g.co/p3phelp for more info.\"",
+    "content-encoding": "br",
+    "date": "Mon, 20 Jul 2026 05:27:29 GMT",
+    "server": "gws",
+    "x-xss-protection": "0",
+    "x-frame-options": "SAMEORIGIN",
+    "expires": "Mon, 20 Jul 2026 05:27:29 GMT",
+    "cache-control": "private",
+    "set-cookie": "__Secure-STRP=ANmZwa3txFz0MaP80wmcjH0qE4UovqUCN_zZQ6_GSX1amc_CcX5H6rcmttZosyizSUk08YwxFTr3GOQh-a1EPUC3peQOSxtw_L6M; expires=Mon, 20-Jul-2026 05:32:29 GMT; path=/; domain=.google.com; Secure; SameSite=strict, AEC=AdJVEavdMcnPiBGakZQCjJgg2pUj3cVzIWO44cdJVIWzcsWxldhVt-ZwZ2g; expires=Sat, 16-Jan-2027 05:27:29 GMT; path=/; domain=.google.com; Secure; HttpOnly; SameSite=lax, NID=533=WnIWRFU2ZYUYy29Krx3_A_gYofn1SQ5mqyGEi7v-AHkFKAH4lKF1OE1JVeESc7ITpzizTNg4tiDdVquiDTCJkhYuj_eL7Vu6JgSVMtyAiSPTEihWXTTSb1r6P5S3C9qwAbGqBtxJe1Ev2g7bx5ZhqCKxhO_Bt3KN6tTQCJ0UysIk3QHfIjgVGut8wIcJN5ZrBFq19q4hsGnf85G3qZgyhGk; expires=Tue, 19-Jan-2027 05:27:29 GMT; path=/; domain=.google.com; Secure; HttpOnly; SameSite=none",
+    "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+  },
+  "layout_fingerprint": "2d776c7f0f4d13d3ca0db766ca6ecf79",
+  "detected_signals": [
+    "/httpservice/retry/enablejs",
+    "enablejs"
+  ]
+}

@@ -1,0 +1,542 @@
+[
+  {
+    "company_name": "Python",
+    "website": null,
+    "linkedin": "https://www.linkedin.com/company/python-corp",
+    "industry": "Software_Development",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "LinkedIn",
+    "confidence_score": 33,
+    "lead_quality": "Low",
+    "company_type": "Unknown",
+    "relevance_score": 33,
+    "relevance_tier": "REJECT",
+    "relevance_info": {
+      "score": 33,
+      "tier": "REJECT",
+      "matched_signals": [
+        "Title"
+      ],
+      "rejected_signals": [
+        "Description",
+        "Positions"
+      ],
+      "score_breakdown": {
+        "title": 20.0,
+        "description": 0.0,
+        "positions": 0.0
+      },
+      "industry": "Software_Development",
+      "confidence": 0.13,
+      "aborted": false,
+      "company_type": "B2B Software",
+      "semantic_trace": [
+        "Matched Title with concepts: ['Python']"
+      ],
+      "technologies": [],
+      "products": [],
+      "website": "",
+      "website_source": "homepage"
+    },
+    "_source_file": "output\\raw\\python_20260720_132826.json",
+    "_flags": [],
+    "_verified_emails": [],
+    "_verified_phones": [],
+    "_website_reachable": null,
+    "_verification_notes": {},
+    "_verification_passed": true
+  },
+  {
+    "company_name": "Python Users Group",
+    "website": null,
+    "linkedin": "https://www.linkedin.com/company/python-users-group",
+    "industry": "Software_Development",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "LinkedIn",
+    "confidence_score": 33,
+    "lead_quality": "Low",
+    "company_type": "Unknown",
+    "relevance_score": 33,
+    "relevance_tier": "REJECT",
+    "relevance_info": {
+      "score": 33,
+      "tier": "REJECT",
+      "matched_signals": [
+        "Title"
+      ],
+      "rejected_signals": [
+        "Description",
+        "Positions"
+      ],
+      "score_breakdown": {
+        "title": 20.0,
+        "description": 0.0,
+        "positions": 0.0
+      },
+      "industry": "Software_Development",
+      "confidence": 0.13,
+      "aborted": false,
+      "company_type": "B2B Software",
+      "semantic_trace": [
+        "Matched Title with concepts: ['Python']"
+      ],
+      "technologies": [],
+      "products": [],
+      "website": "",
+      "website_source": "homepage"
+    },
+    "_source_file": "output\\raw\\python_20260720_132826.json",
+    "_flags": [],
+    "_verified_emails": [],
+    "_verified_phones": [],
+    "_website_reachable": null,
+    "_verification_notes": {},
+    "_verification_passed": true
+  },
+  {
+    "company_name": "Python Geeks",
+    "website": null,
+    "linkedin": "https://in.linkedin.com/company/python-geeks",
+    "industry": "Software_Development",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "LinkedIn",
+    "confidence_score": 33,
+    "lead_quality": "Low",
+    "company_type": "Unknown",
+    "relevance_score": 33,
+    "relevance_tier": "REJECT",
+    "relevance_info": {
+      "score": 33,
+      "tier": "REJECT",
+      "matched_signals": [
+        "Title"
+      ],
+      "rejected_signals": [
+        "Description",
+        "Positions"
+      ],
+      "score_breakdown": {
+        "title": 20.0,
+        "description": 0.0,
+        "positions": 0.0
+      },
+      "industry": "Software_Development",
+      "confidence": 0.13,
+      "aborted": false,
+      "company_type": "B2B Software",
+      "semantic_trace": [
+        "Matched Title with concepts: ['Python']"
+      ],
+      "technologies": [],
+      "products": [],
+      "website": "",
+      "website_source": "homepage"
+    },
+    "_source_file": "output\\raw\\python_20260720_132826.json",
+    "_flags": [],
+    "_verified_emails": [],
+    "_verified_phones": [],
+    "_website_reachable": null,
+    "_verification_notes": {},
+    "_verification_passed": true
+  },
+  {
+    "company_name": "Super Fast Python",
+    "website": null,
+    "linkedin": "https://www.linkedin.com/company/super-fast-python/",
+    "industry": "Software_Development",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "LinkedIn",
+    "confidence_score": 33,
+    "lead_quality": "Low",
+    "company_type": "Unknown",
+    "relevance_score": 33,
+    "relevance_tier": "REJECT",
+    "relevance_info": {
+      "score": 33,
+      "tier": "REJECT",
+      "matched_signals": [
+        "Title"
+      ],
+      "rejected_signals": [
+        "Description",
+        "Positions"
+      ],
+      "score_breakdown": {
+        "title": 20.0,
+        "description": 0.0,
+        "positions": 0.0
+      },
+      "industry": "Software_Development",
+      "confidence": 0.13,
+      "aborted": false,
+      "company_type": "B2B Software",
+      "semantic_trace": [
+        "Matched Title with concepts: ['Python']"
+      ],
+      "technologies": [],
+      "products": [],
+      "website": "",
+      "website_source": "homepage"
+    },
+    "_source_file": "output\\raw\\python_20260720_132826.json",
+    "_flags": [],
+    "_verified_emails": [],
+    "_verified_phones": [],
+    "_website_reachable": null,
+    "_verification_notes": {},
+    "_verification_passed": true
+  },
+  {
+    "company_name": "Apyb",
+    "website": null,
+    "linkedin": "https://www.linkedin.com/company/apyb",
+    "industry": "Software_Development",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "LinkedIn",
+    "confidence_score": 33,
+    "lead_quality": "Low",
+    "company_type": "Unknown",
+    "relevance_score": 33,
+    "relevance_tier": "REJECT",
+    "relevance_info": {
+      "score": 33,
+      "tier": "REJECT",
+      "matched_signals": [
+        "Title"
+      ],
+      "rejected_signals": [
+        "Description",
+        "Positions"
+      ],
+      "score_breakdown": {
+        "title": 20.0,
+        "description": 0.0,
+        "positions": 0.0
+      },
+      "industry": "Software_Development",
+      "confidence": 0.13,
+      "aborted": false,
+      "company_type": "B2B Software",
+      "semantic_trace": [
+        "Matched Title with concepts: ['Python']"
+      ],
+      "technologies": [],
+      "products": [],
+      "website": "",
+      "website_source": "homepage"
+    },
+    "_source_file": "output\\raw\\python_20260720_132826.json",
+    "_flags": [],
+    "_verified_emails": [],
+    "_verified_phones": [],
+    "_website_reachable": null,
+    "_verification_notes": {},
+    "_verification_passed": true
+  },
+  {
+    "company_name": "Python Academy",
+    "website": null,
+    "linkedin": "https://in.linkedin.com/company/python-academy",
+    "industry": "Software_Development",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "LinkedIn",
+    "confidence_score": 33,
+    "lead_quality": "Low",
+    "company_type": "Unknown",
+    "relevance_score": 33,
+    "relevance_tier": "REJECT",
+    "relevance_info": {
+      "score": 33,
+      "tier": "REJECT",
+      "matched_signals": [
+        "Title"
+      ],
+      "rejected_signals": [
+        "Description",
+        "Positions"
+      ],
+      "score_breakdown": {
+        "title": 20.0,
+        "description": 0.0,
+        "positions": 0.0
+      },
+      "industry": "Software_Development",
+      "confidence": 0.13,
+      "aborted": false,
+      "company_type": "Education",
+      "semantic_trace": [
+        "Matched Title with concepts: ['Python']"
+      ],
+      "technologies": [],
+      "products": [],
+      "website": "",
+      "website_source": "homepage"
+    },
+    "_source_file": "output\\raw\\python_20260720_132826.json",
+    "_flags": [],
+    "_verified_emails": [],
+    "_verified_phones": [],
+    "_website_reachable": null,
+    "_verification_notes": {},
+    "_verification_passed": true
+  },
+  {
+    "company_name": "Pythoninstitute",
+    "website": null,
+    "linkedin": "https://www.linkedin.com/company/pythoninstitute",
+    "industry": "Software_Development",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "LinkedIn",
+    "confidence_score": 33,
+    "lead_quality": "Low",
+    "company_type": "Unknown",
+    "relevance_score": 33,
+    "relevance_tier": "REJECT",
+    "relevance_info": {
+      "score": 33,
+      "tier": "REJECT",
+      "matched_signals": [
+        "Title"
+      ],
+      "rejected_signals": [
+        "Description",
+        "Positions"
+      ],
+      "score_breakdown": {
+        "title": 20.0,
+        "description": 0.0,
+        "positions": 0.0
+      },
+      "industry": "Software_Development",
+      "confidence": 0.13,
+      "aborted": false,
+      "company_type": "B2B Software",
+      "semantic_trace": [
+        "Matched Title with concepts: ['Python']"
+      ],
+      "technologies": [],
+      "products": [],
+      "website": "",
+      "website_source": "homepage"
+    },
+    "_source_file": "output\\raw\\python_20260720_132826.json",
+    "_flags": [],
+    "_verified_emails": [],
+    "_verified_phones": [],
+    "_website_reachable": null,
+    "_verification_notes": {},
+    "_verification_passed": true
+  },
+  {
+    "company_name": "Python Freelancer",
+    "website": null,
+    "linkedin": "https://www.linkedin.com/company/python-freelancer",
+    "industry": "Software_Development",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "LinkedIn",
+    "confidence_score": 33,
+    "lead_quality": "Low",
+    "company_type": "Unknown",
+    "relevance_score": 33,
+    "relevance_tier": "REJECT",
+    "relevance_info": {
+      "score": 33,
+      "tier": "REJECT",
+      "matched_signals": [
+        "Title"
+      ],
+      "rejected_signals": [
+        "Description",
+        "Positions"
+      ],
+      "score_breakdown": {
+        "title": 20.0,
+        "description": 0.0,
+        "positions": 0.0
+      },
+      "industry": "Software_Development",
+      "confidence": 0.13,
+      "aborted": false,
+      "company_type": "B2B Software",
+      "semantic_trace": [
+        "Matched Title with concepts: ['Python']"
+      ],
+      "technologies": [],
+      "products": [],
+      "website": "",
+      "website_source": "homepage"
+    },
+    "_source_file": "output\\raw\\python_20260720_132826.json",
+    "_flags": [],
+    "_verified_emails": [],
+    "_verified_phones": [],
+    "_website_reachable": null,
+    "_verification_notes": {},
+    "_verification_passed": true
+  },
+  {
+    "company_name": "Python Tools",
+    "website": null,
+    "linkedin": "https://in.linkedin.com/company/python-tools",
+    "industry": "Software_Development",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "LinkedIn",
+    "confidence_score": 33,
+    "lead_quality": "Low",
+    "company_type": "Unknown",
+    "relevance_score": 33,
+    "relevance_tier": "REJECT",
+    "relevance_info": {
+      "score": 33,
+      "tier": "REJECT",
+      "matched_signals": [
+        "Title"
+      ],
+      "rejected_signals": [
+        "Description",
+        "Positions"
+      ],
+      "score_breakdown": {
+        "title": 20.0,
+        "description": 0.0,
+        "positions": 0.0
+      },
+      "industry": "Software_Development",
+      "confidence": 0.13,
+      "aborted": false,
+      "company_type": "B2B Software",
+      "semantic_trace": [
+        "Matched Title with concepts: ['Python']"
+      ],
+      "technologies": [],
+      "products": [],
+      "website": "",
+      "website_source": "homepage"
+    },
+    "_source_file": "output\\raw\\python_20260720_132826.json",
+    "_flags": [],
+    "_verified_emails": [],
+    "_verified_phones": [],
+    "_website_reachable": null,
+    "_verification_notes": {},
+    "_verification_passed": true
+  },
+  {
+    "company_name": "Python Technologies",
+    "website": null,
+    "linkedin": "https://www.linkedin.com/company/python-technologies",
+    "industry": "Software_Development",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "LinkedIn",
+    "confidence_score": 33,
+    "lead_quality": "Low",
+    "company_type": "Unknown",
+    "relevance_score": 33,
+    "relevance_tier": "REJECT",
+    "relevance_info": {
+      "score": 33,
+      "tier": "REJECT",
+      "matched_signals": [
+        "Title"
+      ],
+      "rejected_signals": [
+        "Description",
+        "Positions"
+      ],
+      "score_breakdown": {
+        "title": 20.0,
+        "description": 0.0,
+        "positions": 0.0
+      },
+      "industry": "Software_Development",
+      "confidence": 0.13,
+      "aborted": false,
+      "company_type": "B2B Software",
+      "semantic_trace": [
+        "Matched Title with concepts: ['Python']"
+      ],
+      "technologies": [],
+      "products": [],
+      "website": "",
+      "website_source": "homepage"
+    },
+    "_source_file": "output\\raw\\python_20260720_132826.json",
+    "_flags": [],
+    "_verified_emails": [],
+    "_verified_phones": [],
+    "_website_reachable": null,
+    "_verification_notes": {},
+    "_verification_passed": true
+  }
+]

@@ -59,7 +59,11 @@ def save_caches():
 # ---------- Public Get/Set API ----------
 
 def get_cached_intent(keyword: str) -> IntentProfile | None:
-    kw_key = keyword.lower().strip()
+    import config
+    from config import SearchMode
+    search_mode = getattr(config, "SEARCH_MODE", SearchMode.SEMANTIC)
+    mode_str = search_mode.value if hasattr(search_mode, "value") else str(search_mode)
+    kw_key = f"{mode_str}::{keyword.lower().strip()}"
     with _cache_lock:
         if kw_key in _intent_cache:
             entry = _intent_cache[kw_key]
@@ -71,7 +75,11 @@ def get_cached_intent(keyword: str) -> IntentProfile | None:
         return None
 
 def set_cached_intent(keyword: str, intent: IntentProfile):
-    kw_key = keyword.lower().strip()
+    import config
+    from config import SearchMode
+    search_mode = getattr(config, "SEARCH_MODE", SearchMode.SEMANTIC)
+    mode_str = search_mode.value if hasattr(search_mode, "value") else str(search_mode)
+    kw_key = f"{mode_str}::{keyword.lower().strip()}"
     with _cache_lock:
         _intent_cache[kw_key] = {
             "ontology_version": ONTOLOGY_VERSION,

@@ -1,0 +1,626 @@
+[
+  {
+    "company_name": "Escindia",
+    "website": "https://escindia.in/",
+    "linkedin": null,
+    "industry": "electronics",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [
+      "admin@escindia.in",
+      "contact@escindia.in",
+      "hello@escindia.in",
+      "info@escindia.in",
+      "sales@escindia.in",
+      "support@escindia.in"
+    ],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "confidence_score": 33,
+    "lead_quality": "Low",
+    "company_type": "Unknown",
+    "relevance_score": 33,
+    "relevance_tier": "REJECT",
+    "relevance_info": {
+      "score": 33,
+      "tier": "REJECT",
+      "matched_signals": [
+        "Title"
+      ],
+      "rejected_signals": [
+        "Description",
+        "Positions"
+      ],
+      "score_breakdown": {
+        "title": 20.0,
+        "description": 0.0,
+        "positions": 0.0
+      },
+      "industry": "Unknown",
+      "confidence": 0.13,
+      "aborted": false,
+      "company_type": "B2B Software",
+      "semantic_trace": [
+        "Matched Title with concepts: ['Electronics']"
+      ],
+      "technologies": [],
+      "products": [],
+      "website": "",
+      "website_source": "homepage"
+    },
+    "_source_file": "output\\raw\\electronics_20260720_132245.json",
+    "_flags": [],
+    "_verified_emails": [
+      "admin@escindia.in",
+      "contact@escindia.in",
+      "hello@escindia.in",
+      "info@escindia.in",
+      "sales@escindia.in",
+      "support@escindia.in"
+    ],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "emails": {
+        "admin@escindia.in": "ok",
+        "contact@escindia.in": "ok",
+        "hello@escindia.in": "ok",
+        "info@escindia.in": "ok",
+        "sales@escindia.in": "ok",
+        "support@escindia.in": "ok"
+      },
+      "website": "ok"
+    },
+    "_verification_passed": true
+  },
+  {
+    "company_name": "Bytesnap",
+    "website": "https://www.bytesnap.com/",
+    "linkedin": null,
+    "industry": "Software_Development",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [
+      "admin@bytesnap.com",
+      "contact@bytesnap.com",
+      "hello@bytesnap.com",
+      "info@bytesnap.com",
+      "sales@bytesnap.com",
+      "support@bytesnap.com"
+    ],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "confidence_score": 33,
+    "lead_quality": "Low",
+    "company_type": "Unknown",
+    "relevance_score": 33,
+    "relevance_tier": "REJECT",
+    "relevance_info": {
+      "score": 33,
+      "tier": "REJECT",
+      "matched_signals": [
+        "Title"
+      ],
+      "rejected_signals": [
+        "Description",
+        "Positions"
+      ],
+      "score_breakdown": {
+        "title": 20.0,
+        "description": 0.0,
+        "positions": 0.0
+      },
+      "industry": "Software_Development",
+      "confidence": 0.13,
+      "aborted": false,
+      "company_type": "B2B Software",
+      "semantic_trace": [
+        "Matched Title with concepts: ['Electronics']"
+      ],
+      "technologies": [],
+      "products": [],
+      "website": "",
+      "website_source": "homepage"
+    },
+    "_source_file": "output\\raw\\electronics_20260720_132245.json",
+    "_flags": [],
+    "_verified_emails": [
+      "admin@bytesnap.com",
+      "contact@bytesnap.com",
+      "hello@bytesnap.com",
+      "info@bytesnap.com",
+      "sales@bytesnap.com",
+      "support@bytesnap.com"
+    ],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "emails": {
+        "admin@bytesnap.com": "ok",
+        "contact@bytesnap.com": "ok",
+        "hello@bytesnap.com": "ok",
+        "info@bytesnap.com": "ok",
+        "sales@bytesnap.com": "ok",
+        "support@bytesnap.com": "ok"
+      },
+      "website": "ok"
+    },
+    "_verification_passed": true
+  },
+  {
+    "company_name": "Ventureradar",
+    "website": "https://www.ventureradar.com/keyword/electronics%20software",
+    "linkedin": null,
+    "industry": "Hardware_Development",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [
+      "admin@ventureradar.com",
+      "contact@ventureradar.com",
+      "hello@ventureradar.com",
+      "info@ventureradar.com",
+      "sales@ventureradar.com",
+      "support@ventureradar.com"
+    ],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "confidence_score": 33,
+    "lead_quality": "Low",
+    "company_type": "Unknown",
+    "relevance_score": 33,
+    "relevance_tier": "REJECT",
+    "relevance_info": {
+      "score": 33,
+      "tier": "REJECT",
+      "matched_signals": [
+        "Title"
+      ],
+      "rejected_signals": [
+        "Description",
+        "Positions"
+      ],
+      "score_breakdown": {
+        "title": 20.0,
+        "description": 0.0,
+        "positions": 0.0
+      },
+      "industry": "Hardware_Development",
+      "confidence": 0.13,
+      "aborted": false,
+      "company_type": "B2B Software",
+      "semantic_trace": [
+        "Matched Title with concepts: ['Electronics']"
+      ],
+      "technologies": [],
+      "products": [],
+      "website": "",
+      "website_source": "homepage"
+    },
+    "_source_file": "output\\raw\\electronics_20260720_132245.json",
+    "_flags": [],
+    "_verified_emails": [
+      "admin@ventureradar.com",
+      "contact@ventureradar.com",
+      "hello@ventureradar.com",
+      "info@ventureradar.com",
+      "sales@ventureradar.com",
+      "support@ventureradar.com"
+    ],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "emails": {
+        "admin@ventureradar.com": "ok",
+        "contact@ventureradar.com": "ok",
+        "hello@ventureradar.com": "ok",
+        "info@ventureradar.com": "ok",
+        "sales@ventureradar.com": "ok",
+        "support@ventureradar.com": "ok"
+      },
+      "website": "ok"
+    },
+    "_verification_passed": true
+  },
+  {
+    "company_name": "Sagesoftware",
+    "website": "https://www.sagesoftware.co.in/erp-for-electronics-manufacturing-industry/",
+    "linkedin": null,
+    "industry": "Hardware_Development",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [
+      "admin@sagesoftware.co.in",
+      "contact@sagesoftware.co.in",
+      "hello@sagesoftware.co.in",
+      "info@sagesoftware.co.in",
+      "sales@sagesoftware.co.in",
+      "support@sagesoftware.co.in"
+    ],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "confidence_score": 33,
+    "lead_quality": "Low",
+    "company_type": "Unknown",
+    "relevance_score": 33,
+    "relevance_tier": "REJECT",
+    "relevance_info": {
+      "score": 33,
+      "tier": "REJECT",
+      "matched_signals": [
+        "Title"
+      ],
+      "rejected_signals": [
+        "Description",
+        "Positions"
+      ],
+      "score_breakdown": {
+        "title": 20.0,
+        "description": 0.0,
+        "positions": 0.0
+      },
+      "industry": "Hardware_Development",
+      "confidence": 0.13,
+      "aborted": false,
+      "company_type": "B2B Software",
+      "semantic_trace": [
+        "Matched Title with concepts: ['Electronics', 'Electronics Manufacturing']"
+      ],
+      "technologies": [],
+      "products": [],
+      "website": "",
+      "website_source": "homepage"
+    },
+    "_source_file": "output\\raw\\electronics_20260720_132245.json",
+    "_flags": [],
+    "_verified_emails": [
+      "admin@sagesoftware.co.in",
+      "contact@sagesoftware.co.in",
+      "hello@sagesoftware.co.in",
+      "info@sagesoftware.co.in",
+      "sales@sagesoftware.co.in",
+      "support@sagesoftware.co.in"
+    ],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "emails": {
+        "admin@sagesoftware.co.in": "ok",
+        "contact@sagesoftware.co.in": "ok",
+        "hello@sagesoftware.co.in": "ok",
+        "info@sagesoftware.co.in": "ok",
+        "sales@sagesoftware.co.in": "ok",
+        "support@sagesoftware.co.in": "ok"
+      },
+      "website": "ok"
+    },
+    "_verification_passed": true
+  },
+  {
+    "company_name": "Jrpanel",
+    "website": "https://www.jrpanel.com/engineerhome/keyword/JRPanel_1_Professional_Electronic_Engineering_Softwares_Yo.html",
+    "linkedin": null,
+    "industry": "electronics",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [
+      "admin@jrpanel.com",
+      "contact@jrpanel.com",
+      "hello@jrpanel.com",
+      "info@jrpanel.com",
+      "sales@jrpanel.com",
+      "support@jrpanel.com"
+    ],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "confidence_score": 33,
+    "lead_quality": "Low",
+    "company_type": "Unknown",
+    "relevance_score": 33,
+    "relevance_tier": "REJECT",
+    "relevance_info": {
+      "score": 33,
+      "tier": "REJECT",
+      "matched_signals": [
+        "Title"
+      ],
+      "rejected_signals": [
+        "Description",
+        "Positions"
+      ],
+      "score_breakdown": {
+        "title": 20.0,
+        "description": 0.0,
+        "positions": 0.0
+      },
+      "industry": "Unknown",
+      "confidence": 0.13,
+      "aborted": false,
+      "company_type": "B2B Software",
+      "semantic_trace": [
+        "Matched Title with concepts: ['Electronics']"
+      ],
+      "technologies": [],
+      "products": [],
+      "website": "",
+      "website_source": "homepage"
+    },
+    "_source_file": "output\\raw\\electronics_20260720_132245.json",
+    "_flags": [],
+    "_verified_emails": [
+      "admin@jrpanel.com",
+      "contact@jrpanel.com",
+      "hello@jrpanel.com",
+      "info@jrpanel.com",
+      "sales@jrpanel.com",
+      "support@jrpanel.com"
+    ],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "emails": {
+        "admin@jrpanel.com": "ok",
+        "contact@jrpanel.com": "ok",
+        "hello@jrpanel.com": "ok",
+        "info@jrpanel.com": "ok",
+        "sales@jrpanel.com": "ok",
+        "support@jrpanel.com": "ok"
+      },
+      "website": "ok"
+    },
+    "_verification_passed": true
+  },
+  {
+    "company_name": "Hardwarebee",
+    "website": "https://hardwarebee.com/vendor_category/electronics-manufacturing-companies/",
+    "linkedin": null,
+    "industry": "Hardware_Development",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [
+      "admin@hardwarebee.com",
+      "contact@hardwarebee.com",
+      "hello@hardwarebee.com",
+      "info@hardwarebee.com",
+      "sales@hardwarebee.com",
+      "support@hardwarebee.com"
+    ],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "confidence_score": 33,
+    "lead_quality": "Low",
+    "company_type": "Unknown",
+    "relevance_score": 33,
+    "relevance_tier": "REJECT",
+    "relevance_info": {
+      "score": 33,
+      "tier": "REJECT",
+      "matched_signals": [
+        "Title"
+      ],
+      "rejected_signals": [
+        "Description",
+        "Positions"
+      ],
+      "score_breakdown": {
+        "title": 20.0,
+        "description": 0.0,
+        "positions": 0.0
+      },
+      "industry": "Hardware_Development",
+      "confidence": 0.13,
+      "aborted": false,
+      "company_type": "B2B Software",
+      "semantic_trace": [
+        "Matched Title with concepts: ['Electronics']"
+      ],
+      "technologies": [],
+      "products": [],
+      "website": "",
+      "website_source": "homepage"
+    },
+    "_source_file": "output\\raw\\electronics_20260720_132245.json",
+    "_flags": [],
+    "_verified_emails": [
+      "admin@hardwarebee.com",
+      "contact@hardwarebee.com",
+      "hello@hardwarebee.com",
+      "info@hardwarebee.com",
+      "sales@hardwarebee.com",
+      "support@hardwarebee.com"
+    ],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "emails": {
+        "admin@hardwarebee.com": "ok",
+        "contact@hardwarebee.com": "ok",
+        "hello@hardwarebee.com": "ok",
+        "info@hardwarebee.com": "ok",
+        "sales@hardwarebee.com": "ok",
+        "support@hardwarebee.com": "ok"
+      },
+      "website": "ok"
+    },
+    "_verification_passed": true
+  },
+  {
+    "company_name": "Ansys",
+    "website": "https://www.ansys.com/en-in/products/electronics",
+    "linkedin": null,
+    "industry": "Hardware_Development",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [
+      "admin@ansys.com",
+      "contact@ansys.com",
+      "hello@ansys.com",
+      "info@ansys.com",
+      "sales@ansys.com",
+      "support@ansys.com"
+    ],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "confidence_score": 33,
+    "lead_quality": "Low",
+    "company_type": "Unknown",
+    "relevance_score": 33,
+    "relevance_tier": "REJECT",
+    "relevance_info": {
+      "score": 33,
+      "tier": "REJECT",
+      "matched_signals": [
+        "Title"
+      ],
+      "rejected_signals": [
+        "Description",
+        "Positions"
+      ],
+      "score_breakdown": {
+        "title": 20.0,
+        "description": 0.0,
+        "positions": 0.0
+      },
+      "industry": "Hardware_Development",
+      "confidence": 0.13,
+      "aborted": false,
+      "company_type": "B2B Software",
+      "semantic_trace": [
+        "Matched Title with concepts: ['Electronics']"
+      ],
+      "technologies": [],
+      "products": [],
+      "website": "",
+      "website_source": "homepage"
+    },
+    "_source_file": "output\\raw\\electronics_20260720_132245.json",
+    "_flags": [],
+    "_verified_emails": [
+      "admin@ansys.com",
+      "contact@ansys.com",
+      "hello@ansys.com",
+      "info@ansys.com",
+      "sales@ansys.com",
+      "support@ansys.com"
+    ],
+    "_verified_phones": [],
+    "_website_reachable": false,
+    "_verification_notes": {
+      "emails": {
+        "admin@ansys.com": "ok",
+        "contact@ansys.com": "ok",
+        "hello@ansys.com": "ok",
+        "info@ansys.com": "ok",
+        "sales@ansys.com": "ok",
+        "support@ansys.com": "ok"
+      },
+      "website": "timeout"
+    },
+    "_verification_passed": true
+  },
+  {
+    "company_name": "Bermondseyelectronics",
+    "website": "https://www.bermondseyelectronics.com/",
+    "linkedin": null,
+    "industry": "Hardware_Development",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [
+      "admin@bermondseyelectronics.com",
+      "contact@bermondseyelectronics.com",
+      "hello@bermondseyelectronics.com",
+      "info@bermondseyelectronics.com",
+      "sales@bermondseyelectronics.com",
+      "support@bermondseyelectronics.com"
+    ],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "confidence_score": 33,
+    "lead_quality": "Low",
+    "company_type": "Unknown",
+    "relevance_score": 33,
+    "relevance_tier": "REJECT",
+    "relevance_info": {
+      "score": 33,
+      "tier": "REJECT",
+      "matched_signals": [
+        "Title"
+      ],
+      "rejected_signals": [
+        "Description",
+        "Positions"
+      ],
+      "score_breakdown": {
+        "title": 20.0,
+        "description": 0.0,
+        "positions": 0.0
+      },
+      "industry": "Hardware_Development",
+      "confidence": 0.13,
+      "aborted": false,
+      "company_type": "B2B Software",
+      "semantic_trace": [
+        "Matched Title with concepts: ['Electronics', 'Firmware']"
+      ],
+      "technologies": [],
+      "products": [],
+      "website": "",
+      "website_source": "homepage"
+    },
+    "_source_file": "output\\raw\\electronics_20260720_132245.json",
+    "_flags": [],
+    "_verified_emails": [
+      "admin@bermondseyelectronics.com",
+      "contact@bermondseyelectronics.com",
+      "hello@bermondseyelectronics.com",
+      "info@bermondseyelectronics.com",
+      "sales@bermondseyelectronics.com",
+      "support@bermondseyelectronics.com"
+    ],
+    "_verified_phones": [],
+    "_website_reachable": false,
+    "_verification_notes": {
+      "emails": {
+        "admin@bermondseyelectronics.com": "ok",
+        "contact@bermondseyelectronics.com": "ok",
+        "hello@bermondseyelectronics.com": "ok",
+        "info@bermondseyelectronics.com": "ok",
+        "sales@bermondseyelectronics.com": "ok",
+        "support@bermondseyelectronics.com": "ok"
+      },
+      "website": "timeout"
+    },
+    "_verification_passed": true
+  }
+]

@@ -1,0 +1,425 @@
+[
+    {
+        "company_name": "Leoai",
+        "website": null,
+        "linkedin": "https://www.linkedin.com/company/leoai",
+        "industry": "Ai",
+        "location": null,
+        "contact_page": null,
+        "about_page": null,
+        "team_page": null,
+        "emails": [],
+        "phones": [],
+        "social_links": {},
+        "people": [],
+        "source": "LinkedIn",
+        "confidence_score": 33,
+        "lead_quality": "Low",
+        "company_type": "Unknown",
+        "relevance_score": 33,
+        "relevance_tier": "REJECT",
+        "relevance_info": {
+            "score": 33,
+            "tier": "REJECT",
+            "matched_signals": [
+                "Title"
+            ],
+            "rejected_signals": [
+                "Description",
+                "Positions"
+            ],
+            "score_breakdown": {
+                "title": 20.0,
+                "description": 0.0,
+                "positions": 0.0
+            },
+            "industry": "Ai",
+            "confidence": 0.13,
+            "aborted": false,
+            "company_type": "B2B Software",
+            "semantic_trace": [
+                "Matched Title with concepts: ['Ai']"
+            ],
+            "technologies": [],
+            "products": [],
+            "website": "",
+            "website_source": "homepage"
+        }
+    },
+    {
+        "company_name": "Definedai",
+        "website": null,
+        "linkedin": "https://www.linkedin.com/company/definedai",
+        "industry": "Ai",
+        "location": null,
+        "contact_page": null,
+        "about_page": null,
+        "team_page": null,
+        "emails": [],
+        "phones": [],
+        "social_links": {},
+        "people": [],
+        "source": "LinkedIn",
+        "confidence_score": 33,
+        "lead_quality": "Low",
+        "company_type": "Unknown",
+        "relevance_score": 33,
+        "relevance_tier": "REJECT",
+        "relevance_info": {
+            "score": 33,
+            "tier": "REJECT",
+            "matched_signals": [
+                "Title"
+            ],
+            "rejected_signals": [
+                "Description",
+                "Positions"
+            ],
+            "score_breakdown": {
+                "title": 20.0,
+                "description": 0.0,
+                "positions": 0.0
+            },
+            "industry": "Ai",
+            "confidence": 0.13,
+            "aborted": false,
+            "company_type": "B2B Software",
+            "semantic_trace": [
+                "Matched Title with concepts: ['Ai']"
+            ],
+            "technologies": [],
+            "products": [],
+            "website": "",
+            "website_source": "homepage"
+        }
+    },
+    {
+        "company_name": "Native Ai",
+        "website": null,
+        "linkedin": "https://www.linkedin.com/company/native-ai",
+        "industry": "Ai",
+        "location": null,
+        "contact_page": null,
+        "about_page": null,
+        "team_page": null,
+        "emails": [],
+        "phones": [],
+        "social_links": {},
+        "people": [],
+        "source": "LinkedIn",
+        "confidence_score": 33,
+        "lead_quality": "Low",
+        "company_type": "Unknown",
+        "relevance_score": 33,
+        "relevance_tier": "REJECT",
+        "relevance_info": {
+            "score": 33,
+            "tier": "REJECT",
+            "matched_signals": [
+                "Title"
+            ],
+            "rejected_signals": [
+                "Description",
+                "Positions"
+            ],
+            "score_breakdown": {
+                "title": 20.0,
+                "description": 0.0,
+                "positions": 0.0
+            },
+            "industry": "Ai",
+            "confidence": 0.13,
+            "aborted": false,
+            "company_type": "B2B Software",
+            "semantic_trace": [
+                "Matched Title with concepts: ['Ai']"
+            ],
+            "technologies": [],
+            "products": [],
+            "website": "",
+            "website_source": "homepage"
+        }
+    },
+    {
+        "company_name": "Scaleai",
+        "website": null,
+        "linkedin": "https://www.linkedin.com/company/scaleai",
+        "industry": "Ai",
+        "location": null,
+        "contact_page": null,
+        "about_page": null,
+        "team_page": null,
+        "emails": [],
+        "phones": [],
+        "social_links": {},
+        "people": [],
+        "source": "LinkedIn",
+        "confidence_score": 33,
+        "lead_quality": "Low",
+        "company_type": "Unknown",
+        "relevance_score": 33,
+        "relevance_tier": "REJECT",
+        "relevance_info": {
+            "score": 33,
+            "tier": "REJECT",
+            "matched_signals": [
+                "Title"
+            ],
+            "rejected_signals": [
+                "Description",
+                "Positions"
+            ],
+            "score_breakdown": {
+                "title": 20.0,
+                "description": 0.0,
+                "positions": 0.0
+            },
+            "industry": "Ai",
+            "confidence": 0.13,
+            "aborted": false,
+            "company_type": "B2B Software",
+            "semantic_trace": [
+                "Matched Title with concepts: ['Ai']"
+            ],
+            "technologies": [],
+            "products": [],
+            "website": "",
+            "website_source": "homepage"
+        }
+    },
+    {
+        "company_name": "Genaisolutions",
+        "website": null,
+        "linkedin": "https://www.linkedin.com/company/genaisolutions",
+        "industry": "Ai",
+        "location": null,
+        "contact_page": null,
+        "about_page": null,
+        "team_page": null,
+        "emails": [],
+        "phones": [],
+        "social_links": {},
+        "people": [],
+        "source": "LinkedIn",
+        "confidence_score": 33,
+        "lead_quality": "Low",
+        "company_type": "Unknown",
+        "relevance_score": 33,
+        "relevance_tier": "REJECT",
+        "relevance_info": {
+            "score": 33,
+            "tier": "REJECT",
+            "matched_signals": [
+                "Title"
+            ],
+            "rejected_signals": [
+                "Description",
+                "Positions"
+            ],
+            "score_breakdown": {
+                "title": 20.0,
+                "description": 0.0,
+                "positions": 0.0
+            },
+            "industry": "Ai",
+            "confidence": 0.13,
+            "aborted": false,
+            "company_type": "B2B Software",
+            "semantic_trace": [
+                "Matched Title with concepts: ['Ai']"
+            ],
+            "technologies": [],
+            "products": [],
+            "website": "",
+            "website_source": "homepage"
+        }
+    },
+    {
+        "company_name": "Gen Ai France",
+        "website": null,
+        "linkedin": "https://www.linkedin.com/company/gen-ai-france",
+        "industry": "Ai",
+        "location": null,
+        "contact_page": null,
+        "about_page": null,
+        "team_page": null,
+        "emails": [],
+        "phones": [],
+        "social_links": {},
+        "people": [],
+        "source": "LinkedIn",
+        "confidence_score": 33,
+        "lead_quality": "Low",
+        "company_type": "Unknown",
+        "relevance_score": 33,
+        "relevance_tier": "REJECT",
+        "relevance_info": {
+            "score": 33,
+            "tier": "REJECT",
+            "matched_signals": [
+                "Title"
+            ],
+            "rejected_signals": [
+                "Description",
+                "Positions"
+            ],
+            "score_breakdown": {
+                "title": 20.0,
+                "description": 0.0,
+                "positions": 0.0
+            },
+            "industry": "Ai",
+            "confidence": 0.13,
+            "aborted": false,
+            "company_type": "B2B Software",
+            "semantic_trace": [
+                "Matched Title with concepts: ['Ai']"
+            ],
+            "technologies": [],
+            "products": [],
+            "website": "",
+            "website_source": "homepage"
+        }
+    },
+    {
+        "company_name": "Deepaitn",
+        "website": null,
+        "linkedin": "https://www.linkedin.com/company/deepaitn/",
+        "industry": "Ai",
+        "location": null,
+        "contact_page": null,
+        "about_page": null,
+        "team_page": null,
+        "emails": [],
+        "phones": [],
+        "social_links": {},
+        "people": [],
+        "source": "LinkedIn",
+        "confidence_score": 33,
+        "lead_quality": "Low",
+        "company_type": "Unknown",
+        "relevance_score": 33,
+        "relevance_tier": "REJECT",
+        "relevance_info": {
+            "score": 33,
+            "tier": "REJECT",
+            "matched_signals": [
+                "Title"
+            ],
+            "rejected_signals": [
+                "Description",
+                "Positions"
+            ],
+            "score_breakdown": {
+                "title": 20.0,
+                "description": 0.0,
+                "positions": 0.0
+            },
+            "industry": "Ai",
+            "confidence": 0.13,
+            "aborted": false,
+            "company_type": "B2B Software",
+            "semantic_trace": [
+                "Matched Title with concepts: ['Ai']"
+            ],
+            "technologies": [],
+            "products": [],
+            "website": "",
+            "website_source": "homepage"
+        }
+    },
+    {
+        "company_name": "Genai Works",
+        "website": null,
+        "linkedin": "https://www.linkedin.com/company/genai-works",
+        "industry": "Ai",
+        "location": null,
+        "contact_page": null,
+        "about_page": null,
+        "team_page": null,
+        "emails": [],
+        "phones": [],
+        "social_links": {},
+        "people": [],
+        "source": "LinkedIn",
+        "confidence_score": 33,
+        "lead_quality": "Low",
+        "company_type": "Unknown",
+        "relevance_score": 33,
+        "relevance_tier": "REJECT",
+        "relevance_info": {
+            "score": 33,
+            "tier": "REJECT",
+            "matched_signals": [
+                "Title"
+            ],
+            "rejected_signals": [
+                "Description",
+                "Positions"
+            ],
+            "score_breakdown": {
+                "title": 20.0,
+                "description": 0.0,
+                "positions": 0.0
+            },
+            "industry": "Ai",
+            "confidence": 0.13,
+            "aborted": false,
+            "company_type": "B2B Software",
+            "semantic_trace": [
+                "Matched Title with concepts: ['Ai']"
+            ],
+            "technologies": [],
+            "products": [],
+            "website": "",
+            "website_source": "homepage"
+        }
+    },
+    {
+        "company_name": "Generative Ai For The Creative Industries",
+        "website": null,
+        "linkedin": "https://uk.linkedin.com/company/generative-ai-for-the-creative-industries",
+        "industry": "Ai",
+        "location": null,
+        "contact_page": null,
+        "about_page": null,
+        "team_page": null,
+        "emails": [],
+        "phones": [],
+        "social_links": {},
+        "people": [],
+        "source": "LinkedIn",
+        "confidence_score": 33,
+        "lead_quality": "Low",
+        "company_type": "Unknown",
+        "relevance_score": 33,
+        "relevance_tier": "REJECT",
+        "relevance_info": {
+            "score": 33,
+            "tier": "REJECT",
+            "matched_signals": [
+                "Title"
+            ],
+            "rejected_signals": [
+                "Description",
+                "Positions"
+            ],
+            "score_breakdown": {
+                "title": 20.0,
+                "description": 0.0,
+                "positions": 0.0
+            },
+            "industry": "Ai",
+            "confidence": 0.13,
+            "aborted": false,
+            "company_type": "B2B Software",
+            "semantic_trace": [
+                "Matched Title with concepts: ['Ai']"
+            ],
+            "technologies": [],
+            "products": [],
+            "website": "",
+            "website_source": "homepage"
+        }
+    }
+]

@@ -200,9 +200,10 @@ class GoogleRequestScheduler:
         was_block = False
 
         while attempts < max_retries:
-            from utils.deadline import Deadline
-            if attempts > 0 and Deadline.is_exceeded():
-                logger.warning("[GoogleScheduler] Global deadline exceeded. Aborting Google search retries.")
+            from search.manager import get_search_manager
+            sm = get_search_manager()
+            if not sm.budget_manager.can_execute("google_html"):
+                logger.warning("[GoogleScheduler] Budget or fallback deadline constraint exceeded. Aborting Google search.")
                 break
 
             if self._is_circuit_open():
@@ -311,22 +312,24 @@ class GoogleRequestScheduler:
                     from search.manager import get_search_manager
                     sm = get_search_manager()
                     sm.google_retries += 1
-                    
                     if val_result.status == "RATE_LIMIT":
                         sm.google_429s += 1
                         sm.google_sorry_pages += 1
-                    elif val_result.status == "CAPTCHA":
-                        sm.google_captchas += 1
-                    elif val_result.status == "ENABLE_JS":
-                        sm.google_enable_js_queries += 1
-                        sm.google_enablejs_pages += 1
-                    elif val_result.status == "CONSENT_PAGE":
-                        sm.google_consent_pages += 1
-                        # Fail fast on consent page
-                        last_error = ProviderUnavailable(provider.name, "CONSENT_PAGE")
+                        if attempts >= max_retries:
+                            last_error = ProviderUnavailable(provider.name, "RATE_LIMIT")
+                            break
+                    elif val_result.status in ("CAPTCHA", "ENABLE_JS", "CONSENT_PAGE", "FORBIDDEN"):
+                        if val_result.status == "CAPTCHA":
+                            sm.google_captchas += 1
+                        elif val_result.status == "ENABLE_JS":
+                            sm.google_enable_js_queries += 1
+                            sm.google_enablejs_pages += 1
+                        elif val_result.status == "CONSENT_PAGE":
+                            sm.google_consent_pages += 1
+                        last_error = ProviderUnavailable(provider.name, val_result.status)
                         break
-
-                    last_error = ProviderUnavailable(provider.name, val_result.failure_reason or val_result.status)
+                    else:
+                        last_error = ProviderUnavailable(provider.name, val_result.failure_reason or val_result.status)
                     
             except ProviderParseError:
                 raise

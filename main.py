@@ -192,8 +192,29 @@ def _lead_quality_label(score: int) -> str:
 # Lead Card builder
 # ─────────────────────────────────────────────────────────────────────────────
 
-def build_lead_card(company: dict) -> dict | None:
+def build_lead_card(company: dict, keyword: str = "") -> dict | None:
+    from config import SearchMode
+    search_mode = getattr(config, "SEARCH_MODE", SearchMode.SEMANTIC)
     
+    # ── Strict pre-rejection in EXACT mode to prevent expensive crawling ──
+    if search_mode == SearchMode.EXACT:
+        company_data = {
+            "name": company.get("company") or "",
+            "website_title": company.get("company") or "",
+            "description": company.get("description") or "",
+            "headline": company.get("company") or "",
+            "about": "",
+            "services": [],
+            "positions": [],
+            "industries": [company.get("industry")] if company.get("industry") else [],
+            "technologies": [],
+        }
+        from discovery.semantic_ranking_engine import SemanticRanker
+        ranker = SemanticRanker()
+        if not ranker._is_literal_match(company_data, keyword):
+            print(f"[pipeline] Exact mode: pre-rejecting company '{company.get('company')}' — literal match check failed.")
+            return None
+
     website = company.get("website")
     homepage_html = None
 
@@ -211,7 +232,7 @@ def build_lead_card(company: dict) -> dict | None:
             if not homepage_html:
                 return None
             from discovery.homepage_evaluator import evaluate_homepage
-            new_classification = evaluate_homepage(homepage_html, website, "UNKNOWN")
+            new_classification = evaluate_homepage(homepage_html, website, "UNKNOWN", keyword=keyword, mode=search_mode.value)
             if new_classification == "REJECT":
                 print(f"[pipeline] rejected UNKNOWN candidate {company.get('company')!r} after homepage evaluation.")
                 return None
@@ -412,7 +433,7 @@ def run_pipeline(keyword: str):
     print(f"Building Lead Cards in parallel using {max_workers} workers...")
     with ThreadPoolExecutor(max_workers=max_workers) as executor:
         futures = {
-            executor.submit(build_lead_card, company): company
+            executor.submit(build_lead_card, company, keyword): company
             for company in companies
         }
         for future in as_completed(futures):

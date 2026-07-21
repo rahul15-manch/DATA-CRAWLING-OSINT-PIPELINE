@@ -32,6 +32,14 @@ def validate_search_response(provider_name: str, html: str, status_code: int, ur
         )
 
     if provider_name == "google_html":
+        if status_code == 403:
+            return SearchValidationResult(
+                status="FORBIDDEN",
+                result_count=0,
+                classification="FORBIDDEN_PAGE",
+                failure_reason="Google returned HTTP 403 Forbidden"
+            )
+
         analysis = classify_google_response(html, status_code, url)
         page_type = analysis["page_type"]
 

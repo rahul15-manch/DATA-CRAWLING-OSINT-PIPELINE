@@ -27,9 +27,22 @@ def render_dashboard(execution_time_s: float, keyword: str) -> None:
     print("=" * 60)
     avg_lead_cost = execution_time_s / max(1, pipeline_stats.unique_master_records)
     
+    import config
+    from config import SearchMode
+    search_mode = getattr(config, "SEARCH_MODE", SearchMode.SEMANTIC)
+    mode_str = search_mode.value if hasattr(search_mode, "value") else str(search_mode)
+    
+    lit_matches = stats.get().get("literal_matches", 0)
+    lit_rejected = stats.get().get("rejected_literal_matches", 0)
+    lit_bonus = stats.get().get("literal_bonus_applied", 0)
+    home_rejects = stats.get().get("homepage_literal_rejects", 0)
+
     print(f"  Target Keyword   : {keyword!r}")
+    print(f"  Search Mode      : {mode_str.upper()}")
     print(f"  Execution Time   : {execution_time_s:.2f}s")
     print(f"  Avg Lead Cost    : {avg_lead_cost:.2f}s/lead")
+    print(f"  Literal Matches  : {lit_matches:<12} | Rejected (No Match) : {lit_rejected}")
+    print(f"  Literal Bonuses  : {lit_bonus:<12} | Homepage Rejections : {home_rejects}")
     print("-" * 60)
 
     # 1. High-Level Summary

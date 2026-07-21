@@ -150,21 +150,44 @@ def _fetch_homepage(url: str) -> str:
 
     return html_content
 
-def evaluate_homepage(url: str) -> int:
+def evaluate_homepage(html: str, url: str = None, default_class: str = "UNKNOWN", keyword: str = "", mode: str = "semantic") -> str:
     """
     Score a homepage based on business signals.
     >= 80: ALLOW
     50-79: LIKELY_COMPANY
     < 50: REJECT
     """
-    if not url:
-        return 0
+    if not html and url:
+        html = _fetch_homepage(url)
         
-    html = _fetch_homepage(url)
     if not html:
-        return 0
+        return "REJECT"
         
     soup = BeautifulSoup(html, "html.parser")
+    
+    # ── Strict Literal Check in EXACT mode ──
+    from config import SearchMode
+    if mode == SearchMode.EXACT.value or mode == "exact":
+        from discovery.semantic_ranking_engine import SemanticRanker
+        ranker = SemanticRanker()
+        title_text = soup.title.string if soup.title else ""
+        company_data = {
+            "name": title_text,
+            "website_title": title_text,
+            "description": soup.get_text(),
+            "headline": title_text,
+            "about": "",
+            "services": [],
+            "positions": [],
+            "industries": [],
+            "technologies": [],
+        }
+        if not ranker._is_literal_match(company_data, keyword):
+            import utils.stats_tracker as stats
+            stats.increment("homepage_literal_rejects")
+            stats.increment("rejected_results")
+            return "REJECT"
+
     score = 0
     
     # 1. Look for explicit structural signals in links
@@ -226,4 +249,10 @@ def evaluate_homepage(url: str) -> int:
     if re.search(r'\+?\d{1,3}[-.\s]?\(?\d{2,3}\)?[-.\s]?\d{3}[-.\s]?\d{4}', body_text):
         score += 15
 
-    return min(100, score)
+    final_score = min(100, score)
+    if final_score >= 80:
+        return "ALLOW"
+    elif final_score >= 50:
+        return "LIKELY_COMPANY"
+    else:
+        return "REJECT"

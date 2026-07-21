@@ -1,0 +1,77 @@
+[
+  {
+    "company_name": "Bbc",
+    "website": "https://www.bbc.com/technology",
+    "linkedin": null,
+    "industry": "Ai",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [
+      "admin@bbc.com",
+      "alessia.marino@bbc.com",
+      "claire.hungate@bbc.com",
+      "contact@bbc.com",
+      "francesca.smith@bbc.com",
+      "hello@bbc.com",
+      "info@bbc.com",
+      "jennifer.lazo@bbc.com",
+      "kara.iaconis@bbc.com",
+      "kristen.bowers@bbc.com",
+      "markus.templin@bbc.com",
+      "michael.anderson@bbc.com",
+      "sales@bbc.com",
+      "sally.thomson@bbc.com",
+      "stephen.bowles@bbc.com",
+      "support@bbc.com"
+    ],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "confidence_score": 60,
+    "lead_quality": "Medium",
+    "company_type": "Unknown",
+    "relevance_score": 60,
+    "relevance_tier": "MEDIUM",
+    "relevance_info": {
+      "score": 60,
+      "tier": "MEDIUM",
+      "matched_signals": [
+        "Description",
+        "Technologies",
+        "Blog/Articles"
+      ],
+      "rejected_signals": [
+        "Services",
+        "Products",
+        "Positions"
+      ],
+      "score_breakdown": {
+        "description": 39.0,
+        "services": 0.0,
+        "technologies": 22.5,
+        "products": 0.0,
+        "positions": 0.0,
+        "blog": 6.0
+      },
+      "industry": "Ai",
+      "confidence": 0.61,
+      "aborted": false,
+      "company_type": "Education",
+      "semantic_trace": [
+        "Matched Description with concepts: ['technology', 'Technology']",
+        "Matched Technologies: ['technology', 'Technology']",
+        "Matched Blog/Articles with concepts: ['technology', 'Technology']"
+      ],
+      "technologies": [
+        "Technology",
+        "Technology"
+      ],
+      "products": [],
+      "website": "",
+      "website_source": ""
+    }
+  }
+]

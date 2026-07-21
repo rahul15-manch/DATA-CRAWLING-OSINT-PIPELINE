@@ -12,6 +12,21 @@ load_dotenv()
 # "auto" = pick first available; or specify a slug like "serpapi" / "bing"
 SEARCH_PROVIDER = os.getenv("SEARCH_PROVIDER", "auto").strip().lower()
 
+# Search Mode: "exact" (literal keyword matching only) or "semantic" (dynamic ontology expansion & semantic ranking) or "hybrid"
+from enum import Enum
+class SearchMode(Enum):
+    EXACT = "exact"
+    SEMANTIC = "semantic"
+    HYBRID = "hybrid"
+
+_raw_mode = os.getenv("SEARCH_MODE", "semantic").strip().lower()
+try:
+    SEARCH_MODE = SearchMode(_raw_mode)
+except ValueError:
+    SEARCH_MODE = SearchMode.SEMANTIC
+
+LITERAL_MATCH_BONUS = int(os.getenv("LITERAL_MATCH_BONUS", "40"))
+
 
 # Ordered list of providers to try (env: comma-separated string)
 # Free providers first, paid rescue provider (BrightData) last.
@@ -183,4 +198,15 @@ MAX_QUERIES_BUDGET = int(os.getenv("MAX_QUERIES_BUDGET", "20"))
 # Brave Search settings
 ENABLE_BRAVE = os.getenv("ENABLE_BRAVE", "true").lower() == "true"
 BRAVE_SEARCH_API_KEY = os.getenv("BRAVE_SEARCH_API_KEY", "")
+
+# Google Min Fallback Budget (seconds)
+GOOGLE_MIN_FALLBACK_BUDGET = float(os.getenv("GOOGLE_MIN_FALLBACK_BUDGET", "18.0"))
+
+# Provider Execution Time Budgets (seconds)
+PROVIDER_EXECUTION_BUDGETS = {
+    "google_html": float(os.getenv("BUDGET_GOOGLE_HTML", "8.0")),
+    "duckduckgo": float(os.getenv("BUDGET_DUCKDUCKGO", "7.0")),
+    "brave": float(os.getenv("BUDGET_BRAVE", "7.0")),
+    "bing": float(os.getenv("BUDGET_BING", "7.0")),
+}
 

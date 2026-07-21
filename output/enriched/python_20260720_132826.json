@@ -1,0 +1,744 @@
+[
+  {
+    "company_name": "Python",
+    "website": null,
+    "linkedin": "https://www.linkedin.com/company/python-corp",
+    "industry": "Software_Development",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "LinkedIn",
+    "confidence_score": 33,
+    "lead_quality": "Low",
+    "company_type": "Unknown",
+    "relevance_score": 33,
+    "relevance_tier": "REJECT",
+    "relevance_info": {
+      "score": 33,
+      "tier": "REJECT",
+      "matched_signals": [
+        "Title"
+      ],
+      "rejected_signals": [
+        "Description",
+        "Positions"
+      ],
+      "score_breakdown": {
+        "title": 20.0,
+        "description": 0.0,
+        "positions": 0.0
+      },
+      "industry": "Software_Development",
+      "confidence": 0.13,
+      "aborted": false,
+      "company_type": "B2B Software",
+      "semantic_trace": [
+        "Matched Title with concepts: ['Python']"
+      ],
+      "technologies": [],
+      "products": [],
+      "website": "",
+      "website_source": "homepage"
+    },
+    "_source_file": "output\\raw\\python_20260720_132826.json",
+    "_flags": [],
+    "_verified_emails": [],
+    "_verified_phones": [],
+    "_website_reachable": null,
+    "_verification_notes": {},
+    "_verification_passed": true,
+    "_enrichment": {
+      "corporate_social_profiles": {
+        "linkedin": null,
+        "crunchbase": null
+      },
+      "domains_tried": [
+        "python.com",
+        "python.in",
+        "python.co.in",
+        "python.io",
+        "python.org"
+      ],
+      "domain_source": "guessed_and_verified",
+      "discovered_website": "https://python.org",
+      "whois": {
+        "registrar": "Gandi SAS",
+        "creation_date": "1995-03-27 05:00:00+00:00",
+        "org": null,
+        "country": null
+      },
+      "discovered_emails": [
+        "olivia@python.org",
+        "deb@python.org",
+        "loren@python.org",
+        "mike@python.org",
+        "pycon@python.org",
+        "guido@python.org",
+        "brian@python.org",
+        "ewa@python.org",
+        "di@python.org",
+        "mariatta@python.org"
+      ]
+    }
+  },
+  {
+    "company_name": "Python Users Group",
+    "website": null,
+    "linkedin": "https://www.linkedin.com/company/python-users-group",
+    "industry": "Software_Development",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "LinkedIn",
+    "confidence_score": 33,
+    "lead_quality": "Low",
+    "company_type": "Unknown",
+    "relevance_score": 33,
+    "relevance_tier": "REJECT",
+    "relevance_info": {
+      "score": 33,
+      "tier": "REJECT",
+      "matched_signals": [
+        "Title"
+      ],
+      "rejected_signals": [
+        "Description",
+        "Positions"
+      ],
+      "score_breakdown": {
+        "title": 20.0,
+        "description": 0.0,
+        "positions": 0.0
+      },
+      "industry": "Software_Development",
+      "confidence": 0.13,
+      "aborted": false,
+      "company_type": "B2B Software",
+      "semantic_trace": [
+        "Matched Title with concepts: ['Python']"
+      ],
+      "technologies": [],
+      "products": [],
+      "website": "",
+      "website_source": "homepage"
+    },
+    "_source_file": "output\\raw\\python_20260720_132826.json",
+    "_flags": [],
+    "_verified_emails": [],
+    "_verified_phones": [],
+    "_website_reachable": null,
+    "_verification_notes": {},
+    "_verification_passed": true,
+    "_enrichment": {
+      "corporate_social_profiles": {
+        "linkedin": null,
+        "crunchbase": null
+      },
+      "domains_tried": [
+        "pythonusers.com",
+        "pythonusers.in",
+        "pythonusers.co.in",
+        "pythonusers.io",
+        "pythonusers.org"
+      ]
+    }
+  },
+  {
+    "company_name": "Python Geeks",
+    "website": null,
+    "linkedin": "https://in.linkedin.com/company/python-geeks",
+    "industry": "Software_Development",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "LinkedIn",
+    "confidence_score": 33,
+    "lead_quality": "Low",
+    "company_type": "Unknown",
+    "relevance_score": 33,
+    "relevance_tier": "REJECT",
+    "relevance_info": {
+      "score": 33,
+      "tier": "REJECT",
+      "matched_signals": [
+        "Title"
+      ],
+      "rejected_signals": [
+        "Description",
+        "Positions"
+      ],
+      "score_breakdown": {
+        "title": 20.0,
+        "description": 0.0,
+        "positions": 0.0
+      },
+      "industry": "Software_Development",
+      "confidence": 0.13,
+      "aborted": false,
+      "company_type": "B2B Software",
+      "semantic_trace": [
+        "Matched Title with concepts: ['Python']"
+      ],
+      "technologies": [],
+      "products": [],
+      "website": "",
+      "website_source": "homepage"
+    },
+    "_source_file": "output\\raw\\python_20260720_132826.json",
+    "_flags": [],
+    "_verified_emails": [],
+    "_verified_phones": [],
+    "_website_reachable": null,
+    "_verification_notes": {},
+    "_verification_passed": true,
+    "_enrichment": {
+      "corporate_social_profiles": {
+        "linkedin": null,
+        "crunchbase": null
+      },
+      "domains_tried": [
+        "pythongeeks.com",
+        "pythongeeks.in",
+        "pythongeeks.co.in",
+        "pythongeeks.io",
+        "pythongeeks.org"
+      ]
+    }
+  },
+  {
+    "company_name": "Super Fast Python",
+    "website": null,
+    "linkedin": "https://www.linkedin.com/company/super-fast-python/",
+    "industry": "Software_Development",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "LinkedIn",
+    "confidence_score": 33,
+    "lead_quality": "Low",
+    "company_type": "Unknown",
+    "relevance_score": 33,
+    "relevance_tier": "REJECT",
+    "relevance_info": {
+      "score": 33,
+      "tier": "REJECT",
+      "matched_signals": [
+        "Title"
+      ],
+      "rejected_signals": [
+        "Description",
+        "Positions"
+      ],
+      "score_breakdown": {
+        "title": 20.0,
+        "description": 0.0,
+        "positions": 0.0
+      },
+      "industry": "Software_Development",
+      "confidence": 0.13,
+      "aborted": false,
+      "company_type": "B2B Software",
+      "semantic_trace": [
+        "Matched Title with concepts: ['Python']"
+      ],
+      "technologies": [],
+      "products": [],
+      "website": "",
+      "website_source": "homepage"
+    },
+    "_source_file": "output\\raw\\python_20260720_132826.json",
+    "_flags": [],
+    "_verified_emails": [],
+    "_verified_phones": [],
+    "_website_reachable": null,
+    "_verification_notes": {},
+    "_verification_passed": true,
+    "_enrichment": {
+      "corporate_social_profiles": {
+        "linkedin": null,
+        "crunchbase": null
+      },
+      "domains_tried": [
+        "superfastpython.com"
+      ],
+      "domain_source": "guessed_and_verified",
+      "discovered_website": "https://superfastpython.com",
+      "whois": {
+        "registrar": "GoDaddy.com, LLC",
+        "creation_date": "[datetime.datetime(2021, 10, 15, 19, 56, 48, tzinfo=tzoffset('UTC', 0)), datetime.datetime(2021, 10, 15, 14, 56, 48, tzinfo=tzoffset('UTC', 0))]",
+        "org": "Domains By Proxy, LLC",
+        "country": "US"
+      },
+      "discovered_emails": [
+        "jason@superfastpython.com",
+        "addressjason@superfastpython.com"
+      ]
+    }
+  },
+  {
+    "company_name": "Apyb",
+    "website": null,
+    "linkedin": "https://www.linkedin.com/company/apyb",
+    "industry": "Software_Development",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "LinkedIn",
+    "confidence_score": 33,
+    "lead_quality": "Low",
+    "company_type": "Unknown",
+    "relevance_score": 33,
+    "relevance_tier": "REJECT",
+    "relevance_info": {
+      "score": 33,
+      "tier": "REJECT",
+      "matched_signals": [
+        "Title"
+      ],
+      "rejected_signals": [
+        "Description",
+        "Positions"
+      ],
+      "score_breakdown": {
+        "title": 20.0,
+        "description": 0.0,
+        "positions": 0.0
+      },
+      "industry": "Software_Development",
+      "confidence": 0.13,
+      "aborted": false,
+      "company_type": "B2B Software",
+      "semantic_trace": [
+        "Matched Title with concepts: ['Python']"
+      ],
+      "technologies": [],
+      "products": [],
+      "website": "",
+      "website_source": "homepage"
+    },
+    "_source_file": "output\\raw\\python_20260720_132826.json",
+    "_flags": [],
+    "_verified_emails": [],
+    "_verified_phones": [],
+    "_website_reachable": null,
+    "_verification_notes": {},
+    "_verification_passed": true,
+    "_enrichment": {
+      "corporate_social_profiles": {
+        "linkedin": null,
+        "crunchbase": null
+      },
+      "domains_tried": [
+        "apyb.com"
+      ],
+      "domain_source": "guessed_and_verified",
+      "discovered_website": "https://apyb.com",
+      "whois": {
+        "registrar": "Spaceship, Inc.",
+        "creation_date": "2013-05-05 18:03:04+00:00",
+        "org": null,
+        "country": null
+      },
+      "discovered_emails": [
+        "nepomuk.doerner@apyb.com",
+        "ella.goellner@apyb.com",
+        "xanl@apyb.com",
+        "piratuk@apyb.com"
+      ]
+    }
+  },
+  {
+    "company_name": "Python Academy",
+    "website": null,
+    "linkedin": "https://in.linkedin.com/company/python-academy",
+    "industry": "Software_Development",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "LinkedIn",
+    "confidence_score": 33,
+    "lead_quality": "Low",
+    "company_type": "Unknown",
+    "relevance_score": 33,
+    "relevance_tier": "REJECT",
+    "relevance_info": {
+      "score": 33,
+      "tier": "REJECT",
+      "matched_signals": [
+        "Title"
+      ],
+      "rejected_signals": [
+        "Description",
+        "Positions"
+      ],
+      "score_breakdown": {
+        "title": 20.0,
+        "description": 0.0,
+        "positions": 0.0
+      },
+      "industry": "Software_Development",
+      "confidence": 0.13,
+      "aborted": false,
+      "company_type": "Education",
+      "semantic_trace": [
+        "Matched Title with concepts: ['Python']"
+      ],
+      "technologies": [],
+      "products": [],
+      "website": "",
+      "website_source": "homepage"
+    },
+    "_source_file": "output\\raw\\python_20260720_132826.json",
+    "_flags": [],
+    "_verified_emails": [],
+    "_verified_phones": [],
+    "_website_reachable": null,
+    "_verification_notes": {},
+    "_verification_passed": true,
+    "_enrichment": {
+      "corporate_social_profiles": {
+        "linkedin": null,
+        "crunchbase": null
+      },
+      "domains_tried": [
+        "pythonacademy.com",
+        "pythonacademy.in"
+      ],
+      "domain_source": "guessed_and_verified",
+      "discovered_website": "https://pythonacademy.in",
+      "whois": {
+        "registrar": "GoDaddy.com, LLC",
+        "creation_date": "[datetime.datetime(2017, 9, 9, 9, 49, 43, 842000, tzinfo=tzoffset('UTC', 0)), datetime.datetime(2017, 9, 9, 9, 49, 43, tzinfo=tzoffset('UTC', 0))]",
+        "org": null,
+        "country": "IN"
+      },
+      "discovered_emails": [
+        "info@pythonacademy.in",
+        "hello@pythonacademy.in",
+        "contact@pythonacademy.in",
+        "sales@pythonacademy.in",
+        "support@pythonacademy.in",
+        "admin@pythonacademy.in"
+      ]
+    }
+  },
+  {
+    "company_name": "Pythoninstitute",
+    "website": null,
+    "linkedin": "https://www.linkedin.com/company/pythoninstitute",
+    "industry": "Software_Development",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "LinkedIn",
+    "confidence_score": 33,
+    "lead_quality": "Low",
+    "company_type": "Unknown",
+    "relevance_score": 33,
+    "relevance_tier": "REJECT",
+    "relevance_info": {
+      "score": 33,
+      "tier": "REJECT",
+      "matched_signals": [
+        "Title"
+      ],
+      "rejected_signals": [
+        "Description",
+        "Positions"
+      ],
+      "score_breakdown": {
+        "title": 20.0,
+        "description": 0.0,
+        "positions": 0.0
+      },
+      "industry": "Software_Development",
+      "confidence": 0.13,
+      "aborted": false,
+      "company_type": "B2B Software",
+      "semantic_trace": [
+        "Matched Title with concepts: ['Python']"
+      ],
+      "technologies": [],
+      "products": [],
+      "website": "",
+      "website_source": "homepage"
+    },
+    "_source_file": "output\\raw\\python_20260720_132826.json",
+    "_flags": [],
+    "_verified_emails": [],
+    "_verified_phones": [],
+    "_website_reachable": null,
+    "_verification_notes": {},
+    "_verification_passed": true,
+    "_enrichment": {
+      "corporate_social_profiles": {
+        "linkedin": null,
+        "crunchbase": null
+      },
+      "domains_tried": [
+        "pythoninstitute.com",
+        "pythoninstitute.in",
+        "pythoninstitute.co.in",
+        "pythoninstitute.io",
+        "pythoninstitute.org"
+      ]
+    }
+  },
+  {
+    "company_name": "Python Freelancer",
+    "website": null,
+    "linkedin": "https://www.linkedin.com/company/python-freelancer",
+    "industry": "Software_Development",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "LinkedIn",
+    "confidence_score": 33,
+    "lead_quality": "Low",
+    "company_type": "Unknown",
+    "relevance_score": 33,
+    "relevance_tier": "REJECT",
+    "relevance_info": {
+      "score": 33,
+      "tier": "REJECT",
+      "matched_signals": [
+        "Title"
+      ],
+      "rejected_signals": [
+        "Description",
+        "Positions"
+      ],
+      "score_breakdown": {
+        "title": 20.0,
+        "description": 0.0,
+        "positions": 0.0
+      },
+      "industry": "Software_Development",
+      "confidence": 0.13,
+      "aborted": false,
+      "company_type": "B2B Software",
+      "semantic_trace": [
+        "Matched Title with concepts: ['Python']"
+      ],
+      "technologies": [],
+      "products": [],
+      "website": "",
+      "website_source": "homepage"
+    },
+    "_source_file": "output\\raw\\python_20260720_132826.json",
+    "_flags": [],
+    "_verified_emails": [],
+    "_verified_phones": [],
+    "_website_reachable": null,
+    "_verification_notes": {},
+    "_verification_passed": true,
+    "_enrichment": {
+      "corporate_social_profiles": {
+        "linkedin": null,
+        "crunchbase": null
+      },
+      "domains_tried": [
+        "pythonfreelancer.com",
+        "pythonfreelancer.in",
+        "pythonfreelancer.co.in",
+        "pythonfreelancer.io",
+        "pythonfreelancer.org"
+      ]
+    }
+  },
+  {
+    "company_name": "Python Tools",
+    "website": null,
+    "linkedin": "https://in.linkedin.com/company/python-tools",
+    "industry": "Software_Development",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "LinkedIn",
+    "confidence_score": 33,
+    "lead_quality": "Low",
+    "company_type": "Unknown",
+    "relevance_score": 33,
+    "relevance_tier": "REJECT",
+    "relevance_info": {
+      "score": 33,
+      "tier": "REJECT",
+      "matched_signals": [
+        "Title"
+      ],
+      "rejected_signals": [
+        "Description",
+        "Positions"
+      ],
+      "score_breakdown": {
+        "title": 20.0,
+        "description": 0.0,
+        "positions": 0.0
+      },
+      "industry": "Software_Development",
+      "confidence": 0.13,
+      "aborted": false,
+      "company_type": "B2B Software",
+      "semantic_trace": [
+        "Matched Title with concepts: ['Python']"
+      ],
+      "technologies": [],
+      "products": [],
+      "website": "",
+      "website_source": "homepage"
+    },
+    "_source_file": "output\\raw\\python_20260720_132826.json",
+    "_flags": [],
+    "_verified_emails": [],
+    "_verified_phones": [],
+    "_website_reachable": null,
+    "_verification_notes": {},
+    "_verification_passed": true,
+    "_enrichment": {
+      "corporate_social_profiles": {
+        "linkedin": null,
+        "crunchbase": null
+      },
+      "domains_tried": [
+        "pythontools.com"
+      ],
+      "domain_source": "guessed_and_verified",
+      "discovered_website": "https://pythontools.com",
+      "whois": {
+        "registrar": "Go Montenegro Domains, LLC",
+        "creation_date": "[datetime.datetime(2009, 2, 28, 20, 9, 8, tzinfo=tzoffset('UTC', 0)), datetime.datetime(2009, 2, 28, 15, 9, 8, tzinfo=tzoffset('UTC', 0))]",
+        "org": "Domains By Proxy, LLC",
+        "country": "US"
+      },
+      "discovered_emails": [
+        "info@pythontools.com"
+      ]
+    }
+  },
+  {
+    "company_name": "Python Technologies",
+    "website": null,
+    "linkedin": "https://www.linkedin.com/company/python-technologies",
+    "industry": "Software_Development",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "LinkedIn",
+    "confidence_score": 33,
+    "lead_quality": "Low",
+    "company_type": "Unknown",
+    "relevance_score": 33,
+    "relevance_tier": "REJECT",
+    "relevance_info": {
+      "score": 33,
+      "tier": "REJECT",
+      "matched_signals": [
+        "Title"
+      ],
+      "rejected_signals": [
+        "Description",
+        "Positions"
+      ],
+      "score_breakdown": {
+        "title": 20.0,
+        "description": 0.0,
+        "positions": 0.0
+      },
+      "industry": "Software_Development",
+      "confidence": 0.13,
+      "aborted": false,
+      "company_type": "B2B Software",
+      "semantic_trace": [
+        "Matched Title with concepts: ['Python']"
+      ],
+      "technologies": [],
+      "products": [],
+      "website": "",
+      "website_source": "homepage"
+    },
+    "_source_file": "output\\raw\\python_20260720_132826.json",
+    "_flags": [],
+    "_verified_emails": [],
+    "_verified_phones": [],
+    "_website_reachable": null,
+    "_verification_notes": {},
+    "_verification_passed": true,
+    "_enrichment": {
+      "corporate_social_profiles": {
+        "linkedin": null,
+        "crunchbase": null
+      },
+      "domains_tried": [
+        "python.com",
+        "python.in",
+        "python.co.in"
+      ],
+      "domain_source": "guessed_and_verified",
+      "discovered_website": "https://python.co.in",
+      "whois": {
+        "registrar": "Endurance International Group India Private Limited",
+        "creation_date": "2016-10-06 20:03:07.472000+00:00",
+        "org": null,
+        "country": "IN"
+      },
+      "discovered_emails": [
+        "info@python.co.in",
+        "hello@python.co.in",
+        "contact@python.co.in",
+        "sales@python.co.in",
+        "support@python.co.in",
+        "admin@python.co.in"
+      ]
+    }
+  }
+]

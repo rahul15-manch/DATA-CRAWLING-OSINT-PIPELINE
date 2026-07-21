@@ -1,0 +1,178 @@
+[
+  {
+    "company_name": "Djangostars",
+    "website": "https://djangostars.com/main/",
+    "linkedin": null,
+    "industry": "Software_Development",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [
+      "admin@djangostars.com",
+      "contact@djangostars.com",
+      "hello@djangostars.com",
+      "info@djangostars.com",
+      "sales@djangostars.com",
+      "support@djangostars.com"
+    ],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "confidence_score": 100,
+    "lead_quality": "High",
+    "company_type": "Unknown",
+    "relevance_score": 100,
+    "relevance_tier": "HIGH",
+    "relevance_info": {
+      "score": 100,
+      "tier": "HIGH",
+      "matched_signals": [
+        "Description",
+        "Services",
+        "Technologies"
+      ],
+      "rejected_signals": [
+        "Products",
+        "Positions",
+        "Blog/Articles"
+      ],
+      "score_breakdown": {
+        "description": 40.0,
+        "services": 24.5,
+        "technologies": 24.5,
+        "products": 0.0,
+        "positions": 0.0,
+        "blog": 0.0
+      },
+      "industry": "Software_Development",
+      "confidence": 0.77,
+      "aborted": false,
+      "company_type": "Consultancy",
+      "semantic_trace": [
+        "Matched Description with concepts: ['Custom Software', 'Django', 'Software Development']",
+        "Matched Services with terms: ['Vue', 'Saas', 'Software Development', 'Web Development', 'Microservices', 'Django', 'React', 'Python']",
+        "Matched Technologies: ['Saas', 'Vue', 'Custom Software', 'Backend', 'Software Development', 'Web Development', 'Microservices', 'Django', 'React', 'Python']"
+      ],
+      "technologies": [
+        "Custom Software",
+        "Backend",
+        "Django",
+        "Python",
+        "Saas",
+        "Vue",
+        "Web Development",
+        "Microservices",
+        "React",
+        "Software Development"
+      ],
+      "products": [],
+      "website": "",
+      "website_source": ""
+    },
+    "_source_file": "output\\raw\\python_20260721_102514.json",
+    "_flags": [],
+    "_verified_emails": [
+      "admin@djangostars.com",
+      "contact@djangostars.com",
+      "hello@djangostars.com",
+      "info@djangostars.com",
+      "sales@djangostars.com",
+      "support@djangostars.com"
+    ],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "emails": {
+        "admin@djangostars.com": "ok",
+        "contact@djangostars.com": "ok",
+        "hello@djangostars.com": "ok",
+        "info@djangostars.com": "ok",
+        "sales@djangostars.com": "ok",
+        "support@djangostars.com": "ok"
+      },
+      "website": "ok"
+    },
+    "_verification_passed": true
+  },
+  {
+    "company_name": "Django",
+    "website": "https://www.djangoproject.com/",
+    "linkedin": null,
+    "industry": "Software_Development",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [
+      "admin@djangoproject.com",
+      "contact@djangoproject.com",
+      "hello@djangoproject.com",
+      "info@djangoproject.com",
+      "sales@djangoproject.com",
+      "support@djangoproject.com"
+    ],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "confidence_score": 100,
+    "lead_quality": "High",
+    "company_type": "Unknown",
+    "relevance_score": 100,
+    "relevance_tier": "HIGH",
+    "relevance_info": {
+      "score": 100,
+      "tier": "HIGH",
+      "matched_signals": [
+        "Title",
+        "Description"
+      ],
+      "rejected_signals": [
+        "Positions"
+      ],
+      "score_breakdown": {
+        "title": 20.0,
+        "description": 30.0,
+        "positions": 0.0
+      },
+      "industry": "Software_Development",
+      "confidence": 0.33,
+      "aborted": false,
+      "company_type": "B2B Software",
+      "semantic_trace": [
+        "Matched Title with concepts: ['Django']",
+        "Matched Description with concepts: ['Web Development', 'Python']"
+      ],
+      "technologies": [],
+      "products": [],
+      "website": "",
+      "website_source": "homepage"
+    },
+    "_source_file": "output\\raw\\python_20260721_102514.json",
+    "_flags": [],
+    "_verified_emails": [
+      "admin@djangoproject.com",
+      "contact@djangoproject.com",
+      "hello@djangoproject.com",
+      "info@djangoproject.com",
+      "sales@djangoproject.com",
+      "support@djangoproject.com"
+    ],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "emails": {
+        "admin@djangoproject.com": "ok",
+        "contact@djangoproject.com": "ok",
+        "hello@djangoproject.com": "ok",
+        "info@djangoproject.com": "ok",
+        "sales@djangoproject.com": "ok",
+        "support@djangoproject.com": "ok"
+      },
+      "website": "ok"
+    },
+    "_verification_passed": true
+  }
+]
