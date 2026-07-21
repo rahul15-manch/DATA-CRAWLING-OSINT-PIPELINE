@@ -1490,8 +1490,8 @@
         "unavailable": 0,
         "failures": 0,
         "last_updated": 0.0,
-        "score": 193,
-        "queries_run": 64
+        "score": 203,
+        "queries_run": 65
     },
     "django development company": {
         "score": 50.0,
@@ -1562,8 +1562,8 @@
         "unavailable": 0,
         "failures": 0,
         "last_updated": 0.0,
-        "score": -56,
-        "queries_run": 43
+        "score": -60,
+        "queries_run": 45
     },
     "ai outsourcing company -site:wikipedia.org -site:play.google.com -site:apps.apple.com -site:chromewebstore.google.com -site:whatsapp.com": {
         "success": 0,
@@ -2312,6 +2312,26 @@
         "unavailable": 0,
         "failures": 1,
         "last_updated": 1784522714.1783412,
+        "score": -2,
+        "queries_run": 1
+    },
+    "site:goodfirms.co enterprise software": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1784546356.6593204,
+        "score": 8,
+        "queries_run": 2
+    },
+    "enterprise software company": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1784546373.066414,
         "score": -2,
         "queries_run": 1
     }

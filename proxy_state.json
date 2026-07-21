@@ -1,23 +1,24 @@
 {
   "34.87.80.221:30000": {
-    "score": 100.0,
+    "score": 0.0,
     "google_successes": 0,
     "google_captchas": 0,
     "google_429s": 0,
-    "consecutive_failures": 6,
+    "consecutive_failures": 7,
     "consecutive_blocks": {},
-    "dead": false,
+    "dead": true,
     "google_status": "healthy",
     "bing_status": "healthy",
     "general_status": "healthy",
     "last_success_ts": null,
-    "last_failure_ts": 1784520793.1456077,
+    "last_failure_ts": 1784546349.1220958,
     "latency_samples": [
       26.454450130462646,
       10.5101478099823,
       21.95604372024536,
       23.070053339004517,
-      19.48735237121582
+      19.48735237121582,
+      4.4993486404418945
     ],
     "outcome_history": [
       [
@@ -43,15 +44,19 @@
       [
         1784520793.1456077,
         "TRANSPORT_CONNECTION_ERROR"
+      ],
+      [
+        1784546349.1220958,
+        "TRANSPORT_CONNECTION_ERROR"
       ]
     ],
     "quarantine_until": null,
     "quarantine_step": 0,
     "inactive": false,
-    "dead_for_google": false,
+    "dead_for_google": true,
     "dead_for_bing": false,
     "consecutive_timeouts": {
-      "google.com": 4
+      "google.com": 5
     },
     "provider_capabilities": {
       "google": "DEAD",
@@ -69,10 +74,10 @@
     "google_429s": 0,
     "consecutive_failures": 0,
     "consecutive_blocks": {},
-    "dead": false,
+    "dead": true,
     "google_status": "healthy",
     "bing_status": "healthy",
-    "general_status": "healthy",
+    "general_status": "dead",
     "last_success_ts": 1784520337.4763427,
     "last_failure_ts": 1784519960.2356775,
     "latency_samples": [
@@ -186,20 +191,19 @@
     }
   },
   "181.39.25.196:8118": {
-    "score": 100.0,
+    "score": 0.0,
     "google_successes": 0,
     "google_captchas": 0,
     "google_429s": 0,
-    "consecutive_failures": 5,
+    "consecutive_failures": 6,
     "consecutive_blocks": {},
-    "dead": false,
+    "dead": true,
     "google_status": "healthy",
     "bing_status": "healthy",
     "general_status": "healthy",
     "last_success_ts": 1784470762.6781447,
-    "last_failure_ts": 1784520363.0564313,
+    "last_failure_ts": 1784546373.0586414,
     "latency_samples": [
-      6.045925140380859,
       4.533697605133057,
       4.393979787826538,
       3.6763715744018555,
@@ -208,13 +212,10 @@
       20.068724155426025,
       26.6517493724823,
       22.79369616508484,
-      24.39800477027893
+      24.39800477027893,
+      10.4352388381958
     ],
     "outcome_history": [
-      [
-        1784466956.0946696,
-        "TRANSPORT_SUCCESS"
-      ],
       [
         1784466957.916064,
         "TRANSPORT_SUCCESS"
@@ -410,17 +411,21 @@
       [
         1784520363.0564313,
         "TRANSPORT_CONNECTION_ERROR"
+      ],
+      [
+        1784546373.0586414,
+        "TRANSPORT_CONNECTION_ERROR"
       ]
     ],
     "quarantine_until": null,
     "quarantine_step": 0,
     "inactive": false,
-    "dead_for_google": false,
+    "dead_for_google": true,
     "dead_for_bing": false,
     "consecutive_timeouts": {
       "in.linkedin.com": 0,
       "www.linkedin.com": 0,
-      "google.com": 6,
+      "google.com": 7,
       "clutch.co": 0,
       "linkedin.com": 0,
       "empat.tech": 0,
@@ -439,21 +444,21 @@
     }
   },
   "52.67.38.58:3128": {
-    "score": 95.0,
+    "score": 90.0,
     "google_successes": 0,
-    "google_captchas": 2,
+    "google_captchas": 3,
     "google_429s": 0,
     "consecutive_failures": 0,
     "consecutive_blocks": {
       "www.google.com": 1,
-      "google.com": 1
+      "google.com": 2
     },
     "dead": true,
     "google_status": "healthy",
     "bing_status": "healthy",
     "general_status": "dead",
     "last_success_ts": null,
-    "last_failure_ts": 1784522714.1773367,
+    "last_failure_ts": 1784546343.5979657,
     "latency_samples": [
       31.46100354194641,
       14.373963356018066,
@@ -462,7 +467,8 @@
       21.026538848876953,
       43.84447646141052,
       39.892173051834106,
-      14.256765842437744
+      14.256765842437744,
+      13.431782007217407
     ],
     "outcome_history": [
       [
@@ -496,9 +502,13 @@
       [
         1784522714.1773367,
         "GOOGLE_CAPTCHA"
+      ],
+      [
+        1784546343.5979657,
+        "GOOGLE_CAPTCHA"
       ]
     ],
-    "quarantine_until": 1784524514.1773367,
+    "quarantine_until": 1784548143.5979657,
     "quarantine_step": 1,
     "inactive": false,
     "dead_for_google": false,
@@ -523,10 +533,10 @@
     "consecutive_failures": 0,
     "consecutive_blocks": {
       "www.google.com": 1,
-      "google.com": 1
+      "google.com": 0
     },
     "dead": false,
-    "google_status": "blocked",
+    "google_status": "healthy",
     "bing_status": "healthy",
     "general_status": "healthy",
     "last_success_ts": null,
@@ -569,8 +579,8 @@
         "GOOGLE_CAPTCHA"
       ]
     ],
-    "quarantine_until": 1784524499.1633852,
-    "quarantine_step": 1,
+    "quarantine_until": null,
+    "quarantine_step": 0,
     "inactive": false,
     "dead_for_google": true,
     "dead_for_bing": false,

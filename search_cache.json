@@ -6074,5 +6074,62 @@
     "result_count": 0,
     "kind": "zero_result",
     "results": []
+  },
+  "default||site:goodfirms.co Enterprise Software||10||0": {
+    "query": "site:goodfirms.co Enterprise Software",
+    "provider": "duckduckgo",
+    "timestamp": 1784546356.6828284,
+    "result_count": 4,
+    "kind": "success",
+    "results": [
+      {
+        "title": "Enterprise IT Software - G2 Trusted Software List",
+        "url": "https://duckduckgo.com/y.js?ad_domain=g2.com&ad_provider=bingv7aa&ad_type=txad&click_metadata=77rJSXijcdy7dA7YDm6uqd5HoNXQiMKwpQavW5YNyMBb2QXkZ46Ry2Y0rl5p4GFyjhepnU381q37E_bSplk%2DsK5GQtPZR0IRjSX9AgBw7Eihl9Nw3ZxJMths1jRrKnwQaalIoYHCbEgx_24UIvGD8Wu9uspbrnjnSx9rxasPqB8.dGcQvKUm7aa4TopF9kKdlw&rut=87a30e9b072118cb6ded81ee5c8cc4d4c1d566cfc5637bf7c30532504b56883d&u3=https%3A%2F%2Fwww.bing.com%2Faclick%3Fld%3De8FjghA9suD52t_jutn9HJ0TVUCUyzrevp16AYFH6yqbDAPmE4OAwqgCb%2DT2_otQEyvTjKUn3c9XR7uhZ8021AVYp77hydOGKHsRmo5Oe6RUQNdubfY_iFuKtE6LU0TFQf9SgF%2Dz6PlA15no5hWw_oR9TVFY0an3a93kde9t_KMTxShI9QXPnhxZm03nX7zwDVtHtlEwiuRA4Dg%2DZZlRVCDAZ3i6c%26u%3DaHR0cHMlM2ElMmYlMmZ3d3cuZzIuY29tJTJmY2F0ZWdvcmllcyUyZmVudGVycHJpc2UtaXQtbWFuYWdlbWVudCUyZnNlbSUzZmNhbXBhaWduX2lkJTNkMjM3OTI0NDc5OTglMjZjYXRlZ29yeV9pZCUzZDY0OCUyNm1zY2xraWQlM2Q0NDU5MDI1MzI5MGMxZTQzY2EzMTY4MGQyZDNmNGY4ZCUyNnV0bV9zb3VyY2UlM2RiaW5nJTI2dXRtX21lZGl1bSUzZGNwYyUyNnV0bV9jYW1wYWlnbiUzZEVudGVycHJpc2UlMjUyMElUJTI1MjBNYW5hZ2VtZW50JTI2dXRtX3Rlcm0lM2RiZXN0JTI1MjBFbnRlcnByaXNlJTI1MjBJVCUyNTIwTWFuYWdlbWVudCUyNTIwc29mdHdhcmUlMjZ1dG1fY29udGVudCUzZEJyb2FkJTI1MjBNYXRjaCUyNTIwS1c%26rlid%3D44590253290c1e43ca31680d2d3f4f8d&vqd=4-50705326471660055815008483835904352738&iurl=%7B1%7DIG%3DD0BFB63778B847DFAF92F5FCCFF560D1%26CID%3D14D07BB1D3D568D62F9E6C2DD22D69FA%26ID%3DDevEx%2C5038.1",
+        "snippet": "Find the bestEnterpriseIT Management based on 3M+ user ratings and insights. 3M+ ratings spotlight the bestEnterpriseIT Management. Compare options, act fast.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784546356.644369
+      },
+      {
+        "title": "more info",
+        "url": "https://duckduckgo.com/duckduckgo-help-pages/company/ads-by-microsoft-on-duckduckgo-private-search/",
+        "snippet": "Find the bestEnterpriseIT Management based on 3M+ user ratings and insights. 3M+ ratings spotlight the bestEnterpriseIT Management. Compare options, act fast.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784546356.644369
+      },
+      {
+        "title": "Business Management Software",
+        "url": "https://www.goodfirms.co/business-management-software/",
+        "snippet": "Thesoftwareis a cloud-basedenterpriseresource planning (ERP) system that is designed to streamline business processes, such as accounting, inventory management, and order management.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784546356.644369
+      },
+      {
+        "title": "Top Software Development Companies - 2026 Reviews | Goodfirms",
+        "url": "https://www.goodfirms.co/directory/languages/top-software-development-companies",
+        "snippet": "Find a list of topsoftwaredevelopment companies. Select the topsoftwaredevelopment company based on verified client reviews, service offers & budgets.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1784546356.644369
+      }
+    ]
   }
 }
