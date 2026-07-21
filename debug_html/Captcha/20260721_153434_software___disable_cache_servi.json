@@ -1,0 +1,29 @@
+{
+  "timestamp": "2026-07-21T15:34:34.044038",
+  "query": "software --disable-cache services",
+  "classification": "CAPTCHA_PAGE",
+  "url": "https://www.google.com/search?q=software+--disable-cache+services&num=10&hl=en&gl=us",
+  "status_code": 200,
+  "redirect_chain": [
+    "https://www.google.com/search?q=software+--disable-cache+services&num=10&hl=en&gl=us"
+  ],
+  "response_headers": {
+    "content-type": "text/html; charset=UTF-8",
+    "date": "Tue, 21 Jul 2026 10:04:54 GMT",
+    "x-content-type-options": "nosniff",
+    "pragma": "no-cache",
+    "cache-control": "no-store, no-cache, max-age=0, must-revalidate",
+    "expires": "-1",
+    "content-security-policy": "default-src 'none'; script-src 'self' https://menlo.gutsenv.net; img-src 'self' data: https://menlo.gutsenv.net; style-src 'self' https://menlo.gutsenv.net; font-src 'self' https://menlo.gutsenv.net; connect-src 'self' https://menlo-inspect.gutsenv.net https://xhr-menlo.gutsenv.net; base-uri 'none'; report-uri /safeview-client-logger/csp-violation/290.23.5-1.285137.0;",
+    "vary": "Accept-Language",
+    "x-ua-compatible": "IE=edge",
+    "p3p": "CP=\"None specified\"",
+    "etag": "\"89db79c2ce9145b09659fd83954a56af8557a708\"",
+    "content-length": "5238",
+    "set-cookie": "safeview-id=\"2|1:0|10:1784628294|11:safeview-id|192:p7oxqDZ9yQfQemTASQpMc2Ig7NXfM/sgKiswf0R7faD0JS2et7ByR4Nhgbg2xcgETf82V8pmQMma+vJ3kVnILFoFiA1rJoWKnh3d0kFkc+6Kn9+IYxfIPrNkxDHMQHJNOMatyLcJKyb1nVxEDNXj1Zd3a+zm/2NfUHwwA6kvXru1o/UHng01aXvbUbeoGGqa|f63f9b998ad350812dd233e668317a2de2205136e9688b948f5550f2af463be3\"; expires=Wed, 21 Jul 2027 10:04:54 GMT; HttpOnly; Path=/; SameSite=None; Secure"
+  },
+  "layout_fingerprint": "8af0a9481059c417cb39a7a3ea8fd67a",
+  "detected_signals": [
+    "Menlo Security safeview proxy intercept"
+  ]
+}

@@ -1,0 +1,49 @@
+[
+  {
+    "company_name": "Noventum",
+    "website": "https://noventum.io",
+    "linkedin": null,
+    "industry": "Software_Development",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "GoodFirms",
+    "confidence_score": 73,
+    "lead_quality": "High",
+    "company_type": "Unknown",
+    "relevance_score": 73,
+    "relevance_tier": "MEDIUM",
+    "relevance_info": {
+      "score": 73,
+      "tier": "MEDIUM",
+      "matched_signals": [
+        "Title"
+      ],
+      "rejected_signals": [
+        "Description",
+        "Positions"
+      ],
+      "score_breakdown": {
+        "title": 20.0,
+        "description": 0.0,
+        "positions": 0.0
+      },
+      "industry": "Software_Development",
+      "confidence": 0.13,
+      "aborted": false,
+      "company_type": "B2B Software",
+      "semantic_trace": [
+        "Matched Title with concepts: ['Custom Software', 'Software Development']"
+      ],
+      "technologies": [],
+      "products": [],
+      "website": "",
+      "website_source": "homepage"
+    }
+  }
+]

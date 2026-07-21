@@ -179,6 +179,24 @@ def render_dashboard(execution_time_s: float, keyword: str) -> None:
     print(f"  - Profiling Latency  : Resolver={avg_res:.1f}ms | Extractor={avg_ext:.1f}ms | Matcher={avg_mat:.1f}ms | Validator={avg_val:.1f}ms")
     print("-" * 60)
 
+    # 4.7 Browser Telemetry
+    try:
+        from pillar1.browser.browser_manager import get_browser_manager
+        bm = get_browser_manager()
+        if bm._initialized and bm.pool and bm.pool.instances:
+            print("BROWSER TELEMETRY POOL:")
+            for inst in bm.pool.instances:
+                score = bm.pool.calculate_score(inst)
+                mem = inst.get_memory_usage()
+                print(
+                    f"  - Browser #{inst.index:<2} (Proxy: {inst.proxy_url or 'direct'}) | "
+                    f"Score: {score:.2f} | Reqs: {inst.requests_count} | Success: {inst.success_count} | "
+                    f"Failures: {inst.failure_count} | Active Tabs: {inst.active_pages} | Memory: {mem:.1f} MB"
+                )
+            print("-" * 60)
+    except Exception:
+        pass
+
     # 5. Source Attribution
     if pipeline_stats.source_breakdown:
         print("TOP SOURCES DISCOVERED:")

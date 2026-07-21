@@ -31,8 +31,14 @@ LITERAL_MATCH_BONUS = int(os.getenv("LITERAL_MATCH_BONUS", "40"))
 # Ordered list of providers to try (env: comma-separated string)
 # Free providers first, paid rescue provider (BrightData) last.
 # BrightData only fires after free engines fail, return zero, or hit rate limits.
-_raw_priority   = os.getenv("SEARCH_PROVIDER_PRIORITY", "google_html,duckduckgo,brave,bing,brightdata")
+_raw_priority   = os.getenv("SEARCH_PROVIDER_PRIORITY", "playwright_google,brave,google_html,duckduckgo,bing,brightdata,linkedin_playwright")
 SEARCH_PROVIDER_PRIORITY: list[str] = [p.strip() for p in _raw_priority.split(",") if p.strip()]
+
+# Playwright Browser Automation Pool Settings
+PLAYWRIGHT_POOL_SIZE = int(os.getenv("PLAYWRIGHT_POOL_SIZE", "3"))
+PLAYWRIGHT_BROWSER_RECYCLE_LIMIT = int(os.getenv("PLAYWRIGHT_BROWSER_RECYCLE_LIMIT", "50"))
+PLAYWRIGHT_HEADLESS = os.getenv("PLAYWRIGHT_HEADLESS", "True").lower() == "true"
+PLAYWRIGHT_IGNORE_CERTIFICATE_ERRORS = os.getenv("PLAYWRIGHT_IGNORE_CERTIFICATE_ERRORS", "True").lower() == "true"
 
 # ─────────────────────────────────────────────────────────────────────────────
 # Provider connection policy
@@ -40,11 +46,13 @@ SEARCH_PROVIDER_PRIORITY: list[str] = [p.strip() for p in _raw_priority.split(",
 # proxy_only   → always route through proxy pool (Google needs this)
 # direct_first → try direct IP; on failure (timeout/403/429), retry via proxy
 PROVIDER_CONNECTION_POLICY: dict[str, str] = {
-    "google_html":       "proxy_only",
-    "bing":              "proxy_only",
-    "duckduckgo":        "direct_first",
-    "brave":             "direct_first",
-    "directory_provider": "direct_first",
+    "google_html":         "proxy_only",
+    "playwright_google":   "proxy_only",
+    "linkedin_playwright": "proxy_only",
+    "bing":                "proxy_only",
+    "duckduckgo":          "direct_first",
+    "brave":               "direct_first",
+    "directory_provider":  "direct_first",
     "repository_provider": "direct_first",
 }
 
@@ -57,7 +65,9 @@ GOOGLE_MAX_CONCURRENT = int(os.getenv("GOOGLE_MAX_CONCURRENT", "2"))
 ENABLE_SERPAPI          = os.getenv("ENABLE_SERPAPI",          "true").lower()  == "true"
 ENABLE_GOOGLE_CSE       = os.getenv("ENABLE_GOOGLE_CSE",       "true").lower()  == "true"
 #ENABLE_CUSTOM_PROVIDER  = os.getenv("ENABLE_CUSTOM_PROVIDER",  "false").lower() == "true"
-ENABLE_GOOGLE_HTML      = os.getenv("ENABLE_GOOGLE_HTML",      "false").lower() == "true"  # experimental
+ENABLE_GOOGLE_HTML      = os.getenv("ENABLE_GOOGLE_HTML",      "false").lower()  == "true"  # experimental
+ENABLE_PLAYWRIGHT_GOOGLE = os.getenv("ENABLE_PLAYWRIGHT_GOOGLE", "true").lower()  == "true"
+ENABLE_LINKEDIN_PLAYWRIGHT = os.getenv("ENABLE_LINKEDIN_PLAYWRIGHT", "true").lower()  == "true"
 ENABLE_BING             = os.getenv("ENABLE_BING",             "true").lower()  == "true"
 
 

@@ -1,0 +1,132 @@
+[
+  {
+    "company_name": "Ebsco",
+    "website": "https://www.ebsco.com/research-starters/computer-science/computer-software",
+    "linkedin": null,
+    "industry": "Artificial Intelligence",
+    "location": null,
+    "contact_page": "https://www.ebsco.com/contact",
+    "about_page": "https://www.ebsco.com/about",
+    "team_page": null,
+    "emails": [
+      "information@ebsco.com"
+    ],
+    "phones": [
+      "(800) 633-4604",
+      "+1 205 991 1211",
+      "+1 978 356 6500"
+    ],
+    "social_links": {
+      "x.com": "https://x.com/ebsco",
+      "linkedin.com": "https://www.linkedin.com/company/ebsco-information-services",
+      "facebook.com": "https://www.facebook.com/EBSCOInfoServices",
+      "instagram.com": "https://www.instagram.com/ebscoinformationservices"
+    },
+    "people": [],
+    "source": "Google",
+    "confidence_score": 62,
+    "lead_quality": "Medium",
+    "company_type": "Software Company",
+    "relevance_score": 62,
+    "relevance_tier": "MEDIUM",
+    "relevance_info": {
+      "score": 62,
+      "tier": "MEDIUM",
+      "matched_signals": [
+        "Technologies"
+      ],
+      "rejected_signals": [
+        "Description",
+        "Services",
+        "Products",
+        "Positions",
+        "Blog/Articles"
+      ],
+      "score_breakdown": {
+        "description": 0.0,
+        "services": 0.0,
+        "technologies": 27.5,
+        "products": 0.0,
+        "positions": 0.0,
+        "blog": 0.0
+      },
+      "industry": "Hardware_Development",
+      "confidence": 0.22,
+      "aborted": false,
+      "company_type": "B2C/Marketplace",
+      "semantic_trace": [
+        "Matched Technologies: ['Software Development']"
+      ],
+      "technologies": [
+        "Software Development"
+      ],
+      "products": [],
+      "website": "",
+      "website_source": ""
+    }
+  },
+  {
+    "company_name": "Softwareag",
+    "website": "https://www.softwareag.com/en/",
+    "linkedin": null,
+    "industry": "Artificial Intelligence",
+    "location": null,
+    "contact_page": "https://www.softwareag.com/contact",
+    "about_page": "https://www.softwareag.com/company/trust-portal/",
+    "team_page": "https://www.softwareag.com/resources/data-movement/managed-services/",
+    "emails": [
+      "admin@softwareag.com",
+      "contact@softwareag.com",
+      "hello@softwareag.com",
+      "info@softwareag.com",
+      "sales@softwareag.com",
+      "support@softwareag.com"
+    ],
+    "phones": [],
+    "social_links": {
+      "linkedin.com": "https://www.linkedin.com/company/software-ag",
+      "facebook.com": "https://www.facebook.com/SoftwareAG",
+      "twitter.com": "https://twitter.com/softwareag"
+    },
+    "people": [],
+    "source": "Google",
+    "confidence_score": 75,
+    "lead_quality": "High",
+    "company_type": "Software Company",
+    "relevance_score": 75,
+    "relevance_tier": "MEDIUM",
+    "relevance_info": {
+      "score": 75,
+      "tier": "MEDIUM",
+      "matched_signals": [
+        "Description"
+      ],
+      "rejected_signals": [
+        "Services",
+        "Technologies",
+        "Products",
+        "Positions",
+        "Blog/Articles"
+      ],
+      "score_breakdown": {
+        "description": 44.0,
+        "services": 0.0,
+        "technologies": 0.0,
+        "products": 0.0,
+        "positions": 0.0,
+        "blog": 0.0
+      },
+      "industry": "Ai",
+      "confidence": 0.35,
+      "aborted": false,
+      "company_type": "Education",
+      "semantic_trace": [
+        "Matched Description with concepts: ['Enterprise Software']"
+      ],
+      "technologies": [],
+      "products": [],
+      "website": "",
+      "website_source": ""
+    }
+  }
+]

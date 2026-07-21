@@ -113,9 +113,8 @@ def test_accepted_snippet_triggers_quick_crawl(mock_fetch):
                     results = discover_companies("saas")
         finally:
             config.LITERAL_MATCH_BONUS = orig_bonus
-                
-                # Check that _fetch_homepage was triggered due to cache miss
-                assert mock_fetch.called
+            # Check that _fetch_homepage was triggered due to cache miss
+            assert mock_fetch.called
 
 
 def test_query_budget_limit():

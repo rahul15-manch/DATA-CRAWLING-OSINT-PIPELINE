@@ -1,0 +1,63 @@
+[
+  {
+    "company_name": "Ninite",
+    "website": "https://ninite.com/",
+    "linkedin": null,
+    "industry": "Software_Development",
+    "location": null,
+    "contact_page": "https://ninite.com/contact",
+    "about_page": "https://ninite.com/about",
+    "team_page": null,
+    "emails": [
+      "contact@ninite.com"
+    ],
+    "phones": [
+      "133.0.5932.60",
+      "150.0.4078.83",
+      "2024.1.0.3113"
+    ],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "confidence_score": 61,
+    "lead_quality": "Medium",
+    "company_type": "Software Company",
+    "relevance_score": 61,
+    "relevance_tier": "MEDIUM",
+    "relevance_info": {
+      "score": 61,
+      "tier": "MEDIUM",
+      "matched_signals": [
+        "Technologies"
+      ],
+      "rejected_signals": [
+        "Description",
+        "Services",
+        "Products",
+        "Positions",
+        "Blog/Articles"
+      ],
+      "score_breakdown": {
+        "description": 0.0,
+        "services": 0.0,
+        "technologies": 27.0,
+        "products": 0.0,
+        "positions": 0.0,
+        "blog": 0.0
+      },
+      "industry": "Software_Development",
+      "confidence": 0.22,
+      "aborted": false,
+      "company_type": "B2C/Marketplace",
+      "semantic_trace": [
+        "Matched Technologies: ['Python']"
+      ],
+      "technologies": [
+        "Python"
+      ],
+      "products": [],
+      "website": "",
+      "website_source": ""
+    }
+  }
+]

@@ -1,0 +1,52 @@
+[
+  {
+    "company_name": "Ninite",
+    "website": "https://ninite.com/",
+    "linkedin": null,
+    "industry": "software --disable-cache",
+    "location": null,
+    "contact_page": "https://ninite.com/contact",
+    "about_page": "https://ninite.com/about",
+    "team_page": null,
+    "emails": [
+      "contact@ninite.com"
+    ],
+    "phones": [
+      "133.0.5932.60",
+      "150.0.4078.83",
+      "2024.1.0.3113"
+    ],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "confidence_score": 40,
+    "lead_quality": "Medium",
+    "company_type": "Software Company",
+    "relevance_score": 40,
+    "relevance_tier": "LOW",
+    "relevance_info": {
+      "score": 40,
+      "tier": "LOW",
+      "matched_signals": [],
+      "rejected_signals": [
+        "Title",
+        "Description",
+        "Positions"
+      ],
+      "score_breakdown": {
+        "title": 0.0,
+        "description": 0.0,
+        "positions": 0.0
+      },
+      "industry": "Unknown",
+      "confidence": 0.0,
+      "aborted": false,
+      "company_type": "B2B Software",
+      "semantic_trace": [],
+      "technologies": [],
+      "products": [],
+      "website": "",
+      "website_source": "homepage"
+    }
+  }
+]

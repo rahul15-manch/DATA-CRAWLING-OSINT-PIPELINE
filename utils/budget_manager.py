@@ -79,3 +79,13 @@ class ProviderBudgetManager:
                 return False
 
         return True
+
+    def get_dynamic_timeout(self, pname: str, default_timeout: float = 8.0) -> float:
+        """
+        Calculate the maximum allowed timeout for an HTTP request to enforce budgets as hard limits.
+        """
+        remaining_provider = self.remaining_provider_time(pname)
+        remaining_global = Deadline.remaining()
+        # Leave a 0.2s safety buffer to avoid hitting strict deadline exceed in main logic
+        timeout = min(default_timeout, remaining_provider, remaining_global - 0.2)
+        return max(0.5, timeout)

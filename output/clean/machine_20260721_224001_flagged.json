@@ -1,0 +1,58 @@
+[
+  {
+    "company_name": "Machineconsulting",
+    "website": "https://www.machineconsulting.co/services",
+    "linkedin": null,
+    "industry": "Artificial Intelligence",
+    "location": null,
+    "contact_page": "https://www.machineconsulting.co/contact-us",
+    "about_page": "https://www.machineconsulting.co/about",
+    "team_page": null,
+    "emails": [
+      "hello@machineconsulting.co",
+      "user@domain.com"
+    ],
+    "phones": [
+      "55 619 417 186"
+    ],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "confidence_score": 90,
+    "lead_quality": "High",
+    "company_type": "Consultancy",
+    "relevance_score": 90,
+    "relevance_tier": "HIGH",
+    "relevance_info": {
+      "score": 90,
+      "tier": "HIGH",
+      "matched_signals": [
+        "Description"
+      ],
+      "rejected_signals": [
+        "Title",
+        "Positions"
+      ],
+      "score_breakdown": {
+        "title": 0.0,
+        "description": 30.0,
+        "positions": 0.0
+      },
+      "industry": "Hardware_Industrial",
+      "confidence": 0.2,
+      "aborted": false,
+      "company_type": "Consultancy",
+      "semantic_trace": [
+        "Matched Description with concepts: ['Equipment']"
+      ],
+      "technologies": [],
+      "products": [],
+      "website": "",
+      "website_source": "homepage"
+    },
+    "_source_file": "output\\raw\\machine_20260721_224001.json",
+    "_flags": [
+      "phone_malformed:"
+    ]
+  }
+]

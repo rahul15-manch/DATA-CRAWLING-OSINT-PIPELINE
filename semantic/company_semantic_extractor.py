@@ -225,10 +225,17 @@ class CompanySemanticExtractor:
         has_json_ld = bool(soup.find("script", attrs={"type": "application/ld+json"}))
         has_schema = bool(soup.find(attrs={"itemtype": re.compile(r"schema\.org")}))
         has_og = bool(soup.find("meta", attrs={"property": re.compile(r"^og:")}))
+        has_h1 = bool(soup.find("h1"))
+        has_footer = bool(soup.find("footer"))
+        has_domain = bool(web_url and "." in web_url)
+        
         meta_bonus = 0.0
         if has_json_ld: meta_bonus += 0.1
         if has_schema: meta_bonus += 0.1
         if has_og: meta_bonus += 0.1
+        if has_h1: meta_bonus += 0.05
+        if has_footer: meta_bonus += 0.05
+        if has_domain: meta_bonus += 0.1
         
         # Extraction consistency & signals bonus
         signals_bonus = 0.0

@@ -1,0 +1,78 @@
+[
+  {
+    "company_name": "Softonic",
+    "website": "https://en.softonic.com/windows",
+    "linkedin": null,
+    "industry": "software --disable-cache",
+    "location": null,
+    "contact_page": "https://en.softonic.com/contact",
+    "about_page": "https://en.softonic.com/about",
+    "team_page": "https://en.softonic.com/windows/board",
+    "emails": [],
+    "phones": [],
+    "social_links": {
+      "facebook.com": "https://www.facebook.com/softonic.en/",
+      "instagram.com": "https://www.instagram.com/Softonic/",
+      "x.com": "https://x.com/softonic",
+      "linkedin.com": "https://www.linkedin.com/company/softonic"
+    },
+    "people": [],
+    "source": "Google",
+    "confidence_score": 40,
+    "lead_quality": "Medium",
+    "company_type": "Software Company",
+    "relevance_score": 40,
+    "relevance_tier": "LOW",
+    "relevance_info": {
+      "score": 40,
+      "tier": "LOW",
+      "matched_signals": [],
+      "rejected_signals": [
+        "Title",
+        "Description",
+        "Positions"
+      ],
+      "score_breakdown": {
+        "title": 0.0,
+        "description": 0.0,
+        "positions": 0.0
+      },
+      "industry": "Unknown",
+      "confidence": 0.0,
+      "aborted": false,
+      "company_type": "B2B Software",
+      "semantic_trace": [],
+      "technologies": [],
+      "products": [],
+      "website": "",
+      "website_source": "homepage"
+    },
+    "_source_file": "output\\raw\\software_--disable-cache_20260721_153646.json",
+    "_flags": [],
+    "_verified_emails": [],
+    "_verified_phones": [],
+    "_website_reachable": false,
+    "_verification_notes": {
+      "website": "http_412"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "corporate_social_profiles": {
+        "linkedin": null,
+        "crunchbase": null
+      },
+      "domain_source": "existing_website",
+      "whois": {
+        "registrar": "Network Solutions, LLC",
+        "creation_date": "2000-01-28 17:34:55+00:00",
+        "org": null,
+        "country": "US"
+      },
+      "corporate_registry": {
+        "matched": false,
+        "reason": "not_found_in_registries"
+      }
+    },
+    "_drop_reason": "nothing_usable_after_verification"
+  }
+]

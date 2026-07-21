@@ -13,89 +13,44 @@
       "ontology_version": "1.0.0"
     }
   },
-  "semantic::technology": {
+  "semantic::machine": {
     "ontology_version": "1.0.0",
     "intent_profile": {
-      "primary_domain": "Technology",
+      "primary_domain": "Hardware_Industrial",
       "concepts": [
-        "technology",
-        "Technology"
+        "Hardware Store",
+        "Equipment",
+        "Tools",
+        "Machinery",
+        "Supplies",
+        "Building Materials",
+        "Diy",
+        "Retailer",
+        "Fasteners",
+        "Screws",
+        "Pumps",
+        "Valves",
+        "Industrial Hardware",
+        "Power Tools"
       ],
       "positions": [
-        "Technology Developer",
-        "Technology Engineer",
-        "Technology Specialist"
+        "Sales Associate",
+        "Hardware Specialist",
+        "Store Manager",
+        "Inventory Coordinator"
       ],
       "services": [
-        "Technology Services",
-        "Technology Consulting",
-        "Technology Development",
-        "Technology Solutions"
-      ],
-      "products": [],
-      "confidence": 0.4,
-      "ontology_version": "1.0.0"
-    }
-  },
-  "semantic::python": {
-    "ontology_version": "1.0.0",
-    "intent_profile": {
-      "primary_domain": "Software_Development",
-      "concepts": [
-        "Frontend",
-        "Custom Software",
-        "Backend",
-        "Software Consulting",
-        "It Consulting",
-        "Django",
-        "It Services",
-        "Python",
-        "Software Outsourcing",
-        "Api Development",
-        "Saas",
-        "Node.Js",
-        "Software Engineering",
-        "Vue",
-        "Rest Api",
-        "Web Development",
-        "Full Stack",
-        "Microservices",
-        "React",
-        "Software Development",
-        "Graphql",
-        "Flask",
-        "FastAPI",
-        "Enterprise Software"
-      ],
-      "positions": [
-        "Web Developer",
-        "Api Developer",
-        "Backend Engineer",
-        "Full Stack Developer",
-        "Software Engineer",
-        "Python Developer"
-      ],
-      "services": [
-        "Web Application Development",
-        "Custom Software Development",
-        "Backend Development",
-        "It Consulting",
-        "Api Development",
-        "Software Outsourcing",
-        "Python Development Services"
+        "Industrial Supply",
+        "Tool Rental",
+        "Equipment Supply",
+        "Hardware Retail"
       ],
       "products": [
-        "Azure",
-        "Gcp",
-        "Python",
-        "Kubernetes",
-        "Redis",
-        "Docker",
-        "Aws",
-        "Flask",
-        "FastAPI",
-        "Django",
-        "Postgresql"
+        "Lowes",
+        "Ace Hardware",
+        "Grainger",
+        "Mcmaster-Carr",
+        "Home Depot"
       ],
       "confidence": 1.0,
       "ontology_version": "1.0.0"

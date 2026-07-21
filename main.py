@@ -1,7 +1,10 @@
+import sys
+import os
+# Add the 'pillar1' subdirectory to sys.path so packages like 'search' and 'query' can be found
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "pillar1")))
 
 from search.manager import get_search_manager
 import json
-import os
 import time
 from datetime import datetime
 from concurrent.futures import ThreadPoolExecutor, as_completed
@@ -193,6 +196,11 @@ def _lead_quality_label(score: int) -> str:
 # ─────────────────────────────────────────────────────────────────────────────
 
 def build_lead_card(company: dict, keyword: str = "") -> dict | None:
+    from utils.deadline import Deadline
+    if Deadline.is_exceeded():
+        print(f"[pipeline] Skipping build_lead_card for {company.get('company')!r} — phase budget exhausted.")
+        return None
+
     from config import SearchMode
     search_mode = getattr(config, "SEARCH_MODE", SearchMode.SEMANTIC)
     
@@ -217,6 +225,12 @@ def build_lead_card(company: dict, keyword: str = "") -> dict | None:
 
     website = company.get("website")
     homepage_html = None
+
+    if website:
+        from utils.deadline import Deadline
+        if Deadline.remaining() < 30.0:
+            print(f"[pipeline] Homepage crawling budget exhausted. Skipping crawl for {company.get('company')!r}")
+            return None
 
     if website:
         if company.get("classification") == "UNKNOWN":
@@ -307,19 +321,23 @@ def build_lead_card(company: dict, keyword: str = "") -> dict | None:
     # 1. Company website is present.
     # 2. emails list is empty (no email has been extracted yet).
     if website and not emails and not raw_people:
-        sm = get_search_manager()
-        if sm.providers_available():
-            contact = discover_contact(company.get("company") or "")
-            if contact.get("contact_name"):
-                raw_people.append({
-                    "name": contact.get("contact_name"),
-                    "designation": contact.get("designation"),
-                    "linkedin": contact.get("linkedin"),})
-            if contact.get("email"):
-                emails.append(contact["email"])
-                emails = sorted(set(emails))
+        from utils.deadline import Deadline
+        if Deadline.is_exceeded():
+            print(f"[pipeline] Contact discovery budget exhausted. Skipping for {company.get('company')!r}")
         else:
-            print(f"[pipeline] Skipping contact discovery for {company.get('company')!r} — providers exhausted.")
+            sm = get_search_manager()
+            if sm.providers_available():
+                contact = discover_contact(company.get("company") or "")
+                if contact.get("contact_name"):
+                    raw_people.append({
+                        "name": contact.get("contact_name"),
+                        "designation": contact.get("designation"),
+                        "linkedin": contact.get("linkedin"),})
+                if contact.get("email"):
+                    emails.append(contact["email"])
+                    emails = sorted(set(emails))
+            else:
+                print(f"[pipeline] Skipping contact discovery for {company.get('company')!r} — providers exhausted.")
 
     # ── Final Pattern Generation fallback ──
     if website and not emails:
@@ -423,8 +441,13 @@ def run_pipeline(keyword: str):
     print(f"\nSearching for: {keyword}\n")
 
     # Discovering companies (Task 2 & 12 counts are handled inside)
+    from utils.deadline import Deadline
+    Deadline.set_timeout(40.0)
     companies = discover_companies(keyword)
     print(f"Companies Found: {len(companies)}")
+
+    # Set deadline for Homepage crawling (35s) + Contact discovery (30s) = 65s total
+    Deadline.set_timeout(65.0)
 
     leads = []
     max_workers = config.MAX_CRAWL_WORKERS

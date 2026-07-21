@@ -1,0 +1,29 @@
+{
+  "timestamp": "2026-07-21T16:03:42.029034",
+  "query": "Custom Software development company",
+  "classification": "CAPTCHA_PAGE",
+  "url": "https://www.google.com/search?q=Custom+Software+development+company&num=10&hl=en&gl=us",
+  "status_code": 200,
+  "redirect_chain": [
+    "https://www.google.com/search?q=Custom+Software+development+company&num=10&hl=en&gl=us"
+  ],
+  "response_headers": {
+    "content-type": "text/html; charset=UTF-8",
+    "date": "Tue, 21 Jul 2026 10:34:02 GMT",
+    "x-content-type-options": "nosniff",
+    "pragma": "no-cache",
+    "cache-control": "no-store, no-cache, max-age=0, must-revalidate",
+    "expires": "-1",
+    "content-security-policy": "default-src 'none'; script-src 'self' https://menlo.gutsenv.net; img-src 'self' data: https://menlo.gutsenv.net; style-src 'self' https://menlo.gutsenv.net; font-src 'self' https://menlo.gutsenv.net; connect-src 'self' https://menlo-inspect.gutsenv.net https://xhr-menlo.gutsenv.net; base-uri 'none'; report-uri /safeview-client-logger/csp-violation/290.23.5-1.285137.0;",
+    "vary": "Accept-Language",
+    "x-ua-compatible": "IE=edge",
+    "p3p": "CP=\"None specified\"",
+    "etag": "\"53819204ec225047f483fc48c3d8ca36efd94f41\"",
+    "content-length": "5240",
+    "set-cookie": "safeview-id=\"2|1:0|10:1784630042|11:safeview-id|192:lVqOM8uMjtxUMs2HtbEywkw/ByayXg8xik+mp/ptg6OGMXmusdMDR4L6tLrZq0QHcrHpg7bCMHRrjpJG+BXMxzotJUWt0Bm35HXG+0HCnORJqqeoAeu5sO2jEky/iBOy8PhdqW3Ucit4khUT/X6opdpNgZu2GXwY+2oyfFxk03nUivJAnWTRb0cOEDyEDZ8w|86546d8fdf4a3214cad0ef14b7e921761497ff1df11b5c9794d7bbde316e75b0\"; expires=Wed, 21 Jul 2027 10:34:02 GMT; HttpOnly; Path=/; SameSite=None; Secure"
+  },
+  "layout_fingerprint": "8af0a9481059c417cb39a7a3ea8fd67a",
+  "detected_signals": [
+    "Menlo Security safeview proxy intercept"
+  ]
+}

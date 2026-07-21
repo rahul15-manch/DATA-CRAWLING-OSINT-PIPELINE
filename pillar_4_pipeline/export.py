@@ -3,10 +3,13 @@ import json
 import os
 import sys
 
-# Ensure project root is in sys.path when run directly
+# Ensure project root and pillar1 subdirectory are in sys.path when run directly
 proj_root = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 if proj_root not in sys.path:
     sys.path.insert(0, proj_root)
+pillar1_path = os.path.join(proj_root, "pillar1")
+if pillar1_path not in sys.path:
+    sys.path.insert(0, pillar1_path)
 
 if sys.platform == "win32":
     sys.stdout.reconfigure(encoding="utf-8")

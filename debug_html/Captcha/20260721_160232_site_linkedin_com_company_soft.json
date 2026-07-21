@@ -1,0 +1,29 @@
+{
+  "timestamp": "2026-07-21T16:02:32.740381",
+  "query": "site:linkedin.com/company software --disable-cache",
+  "classification": "CAPTCHA_PAGE",
+  "url": "https://www.google.com/search?q=site%3Alinkedin.com%2Fcompany+software+--disable-cache&num=10&hl=en&gl=us",
+  "status_code": 200,
+  "redirect_chain": [
+    "https://www.google.com/search?q=site%3Alinkedin.com%2Fcompany+software+--disable-cache&num=10&hl=en&gl=us"
+  ],
+  "response_headers": {
+    "content-type": "text/html; charset=UTF-8",
+    "date": "Tue, 21 Jul 2026 10:32:53 GMT",
+    "x-content-type-options": "nosniff",
+    "pragma": "no-cache",
+    "cache-control": "no-store, no-cache, max-age=0, must-revalidate",
+    "expires": "-1",
+    "content-security-policy": "default-src 'none'; script-src 'self' https://menlo.gutsenv.net; img-src 'self' data: https://menlo.gutsenv.net; style-src 'self' https://menlo.gutsenv.net; font-src 'self' https://menlo.gutsenv.net; connect-src 'self' https://menlo-inspect.gutsenv.net https://xhr-menlo.gutsenv.net; base-uri 'none'; report-uri /safeview-client-logger/csp-violation/290.23.5-1.285137.0;",
+    "vary": "Accept-Language",
+    "x-ua-compatible": "IE=edge",
+    "p3p": "CP=\"None specified\"",
+    "etag": "\"94e5e46a876834ec7c39d65818752e1a88ad8262\"",
+    "content-length": "5259",
+    "set-cookie": "safeview-id=\"2|1:0|10:1784629973|11:safeview-id|192:q8poUkfiNTbq78nkg2i0E81pVzBRHcNOHQRTP/V8zVCeZA7XGb8GgKqJunQBQ17j5k+fUb/yQgnS8wZ04zoaNZGPIKBsLYA8E/b+uWNFBg1S3UmuRbzbYSb7fzfTSRtB9SdVK6RkZowQ2Gbq0BAbykWhHTy/7KNeyhJ0f2RVPmSDSOAbkz84wBjIL3QrMg7q|84f38506c2f07094c0a239cfb3e8505d8652d56b069747fa7f3e4f26913caaa6\"; expires=Wed, 21 Jul 2027 10:32:53 GMT; HttpOnly; Path=/; SameSite=None; Secure"
+  },
+  "layout_fingerprint": "8af0a9481059c417cb39a7a3ea8fd67a",
+  "detected_signals": [
+    "Menlo Security safeview proxy intercept"
+  ]
+}

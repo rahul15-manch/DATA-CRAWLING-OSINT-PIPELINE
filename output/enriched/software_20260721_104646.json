@@ -1,0 +1,574 @@
+[
+  {
+    "company_name": "Talentica",
+    "website": "https://www.talentica.com/",
+    "linkedin": null,
+    "industry": "software",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [
+      "admin@talentica.com",
+      "contact@talentica.com",
+      "hello@talentica.com",
+      "info@talentica.com",
+      "sales@talentica.com",
+      "support@talentica.com"
+    ],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "confidence_score": 40,
+    "lead_quality": "Medium",
+    "company_type": "Unknown",
+    "relevance_score": 40,
+    "relevance_tier": "LOW",
+    "relevance_info": {
+      "score": 40,
+      "tier": "LOW",
+      "matched_signals": [],
+      "rejected_signals": [
+        "Title",
+        "Description",
+        "Positions"
+      ],
+      "score_breakdown": {
+        "title": 0.0,
+        "description": 0.0,
+        "positions": 0.0
+      },
+      "industry": "Unknown",
+      "confidence": 0.0,
+      "aborted": false,
+      "company_type": "B2B Software",
+      "semantic_trace": [],
+      "technologies": [],
+      "products": [],
+      "website": "",
+      "website_source": "homepage"
+    },
+    "_source_file": "output\\raw\\software_20260721_104646.json",
+    "_flags": [],
+    "_verified_emails": [
+      "admin@talentica.com",
+      "contact@talentica.com",
+      "hello@talentica.com",
+      "info@talentica.com",
+      "sales@talentica.com",
+      "support@talentica.com"
+    ],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "emails": {
+        "admin@talentica.com": "ok",
+        "contact@talentica.com": "ok",
+        "hello@talentica.com": "ok",
+        "info@talentica.com": "ok",
+        "sales@talentica.com": "ok",
+        "support@talentica.com": "ok"
+      },
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "corporate_social_profiles": {
+        "linkedin": null,
+        "crunchbase": null
+      },
+      "domain_source": "existing_website",
+      "whois": {
+        "registrar": "ENOM, INC.",
+        "creation_date": "2003-03-25 12:14:44+00:00",
+        "org": "REDACTED FOR PRIVACY",
+        "country": "IN"
+      },
+      "corporate_registry": {
+        "matched": false,
+        "reason": "not_found_in_registries"
+      }
+    }
+  },
+  {
+    "company_name": "Sharescart",
+    "website": "https://www.sharescart.com/industry/it-software/",
+    "linkedin": null,
+    "industry": "software",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [
+      "admin@sharescart.com",
+      "contact@sharescart.com",
+      "hello@sharescart.com",
+      "info@sharescart.com",
+      "sales@sharescart.com",
+      "support@sharescart.com"
+    ],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "confidence_score": 40,
+    "lead_quality": "Medium",
+    "company_type": "Unknown",
+    "relevance_score": 40,
+    "relevance_tier": "LOW",
+    "relevance_info": {
+      "score": 40,
+      "tier": "LOW",
+      "matched_signals": [],
+      "rejected_signals": [
+        "Title",
+        "Description",
+        "Positions"
+      ],
+      "score_breakdown": {
+        "title": 0.0,
+        "description": 0.0,
+        "positions": 0.0
+      },
+      "industry": "Unknown",
+      "confidence": 0.0,
+      "aborted": false,
+      "company_type": "B2B Software",
+      "semantic_trace": [],
+      "technologies": [],
+      "products": [],
+      "website": "",
+      "website_source": "homepage"
+    },
+    "_source_file": "output\\raw\\software_20260721_104646.json",
+    "_flags": [],
+    "_verified_emails": [
+      "admin@sharescart.com",
+      "contact@sharescart.com",
+      "hello@sharescart.com",
+      "info@sharescart.com",
+      "sales@sharescart.com",
+      "support@sharescart.com"
+    ],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "emails": {
+        "admin@sharescart.com": "ok",
+        "contact@sharescart.com": "ok",
+        "hello@sharescart.com": "ok",
+        "info@sharescart.com": "ok",
+        "sales@sharescart.com": "ok",
+        "support@sharescart.com": "ok"
+      },
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "corporate_social_profiles": {
+        "linkedin": null,
+        "crunchbase": null
+      },
+      "domain_source": "existing_website",
+      "whois": {
+        "registrar": "Amazon Registrar, Inc.",
+        "creation_date": "2023-12-15 13:40:55+00:00",
+        "org": "c/o whoisproxy.com",
+        "country": "US"
+      },
+      "corporate_registry": {
+        "matched": false,
+        "reason": "not_found_in_registries"
+      }
+    }
+  },
+  {
+    "company_name": "Screener",
+    "website": "https://www.screener.in/market/IN08/IN0801/IN080101/",
+    "linkedin": null,
+    "industry": "software",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [
+      "admin@screener.in",
+      "contact@screener.in",
+      "hello@screener.in",
+      "info@screener.in",
+      "sales@screener.in",
+      "support@screener.in"
+    ],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "confidence_score": 40,
+    "lead_quality": "Medium",
+    "company_type": "Unknown",
+    "relevance_score": 40,
+    "relevance_tier": "LOW",
+    "relevance_info": {
+      "score": 40,
+      "tier": "LOW",
+      "matched_signals": [],
+      "rejected_signals": [
+        "Title",
+        "Description",
+        "Positions"
+      ],
+      "score_breakdown": {
+        "title": 0.0,
+        "description": 0.0,
+        "positions": 0.0
+      },
+      "industry": "Unknown",
+      "confidence": 0.0,
+      "aborted": false,
+      "company_type": "B2B Software",
+      "semantic_trace": [],
+      "technologies": [],
+      "products": [],
+      "website": "",
+      "website_source": "homepage"
+    },
+    "_source_file": "output\\raw\\software_20260721_104646.json",
+    "_flags": [],
+    "_verified_emails": [
+      "admin@screener.in",
+      "contact@screener.in",
+      "hello@screener.in",
+      "info@screener.in",
+      "sales@screener.in",
+      "support@screener.in"
+    ],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "emails": {
+        "admin@screener.in": "ok",
+        "contact@screener.in": "ok",
+        "hello@screener.in": "ok",
+        "info@screener.in": "ok",
+        "sales@screener.in": "ok",
+        "support@screener.in": "ok"
+      },
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "corporate_social_profiles": {
+        "linkedin": null,
+        "crunchbase": null
+      },
+      "domain_source": "existing_website",
+      "whois": {
+        "registrar": "Porkbun LLC",
+        "creation_date": "2009-11-06 05:05:28.345000+00:00",
+        "org": null,
+        "country": "IN"
+      },
+      "corporate_registry": {
+        "matched": false,
+        "reason": "not_found_in_registries"
+      }
+    }
+  },
+  {
+    "company_name": "Tatvasoft",
+    "website": "https://www.tatvasoft.com/india-software",
+    "linkedin": null,
+    "industry": "software",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [
+      "admin@tatvasoft.com",
+      "contact@tatvasoft.com",
+      "hello@tatvasoft.com",
+      "info@tatvasoft.com",
+      "sales@tatvasoft.com",
+      "support@tatvasoft.com"
+    ],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "confidence_score": 40,
+    "lead_quality": "Medium",
+    "company_type": "Unknown",
+    "relevance_score": 40,
+    "relevance_tier": "LOW",
+    "relevance_info": {
+      "score": 40,
+      "tier": "LOW",
+      "matched_signals": [],
+      "rejected_signals": [
+        "Title",
+        "Description",
+        "Positions"
+      ],
+      "score_breakdown": {
+        "title": 0.0,
+        "description": 0.0,
+        "positions": 0.0
+      },
+      "industry": "Unknown",
+      "confidence": 0.0,
+      "aborted": false,
+      "company_type": "B2B Software",
+      "semantic_trace": [],
+      "technologies": [],
+      "products": [],
+      "website": "",
+      "website_source": "homepage"
+    },
+    "_source_file": "output\\raw\\software_20260721_104646.json",
+    "_flags": [],
+    "_verified_emails": [
+      "admin@tatvasoft.com",
+      "contact@tatvasoft.com",
+      "hello@tatvasoft.com",
+      "info@tatvasoft.com",
+      "sales@tatvasoft.com",
+      "support@tatvasoft.com"
+    ],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "emails": {
+        "admin@tatvasoft.com": "ok",
+        "contact@tatvasoft.com": "ok",
+        "hello@tatvasoft.com": "ok",
+        "info@tatvasoft.com": "ok",
+        "sales@tatvasoft.com": "ok",
+        "support@tatvasoft.com": "ok"
+      },
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "corporate_social_profiles": {
+        "linkedin": null,
+        "crunchbase": null
+      },
+      "domain_source": "existing_website",
+      "whois": {
+        "registrar": "GoDaddy.com, LLC",
+        "creation_date": "[datetime.datetime(2002, 12, 13, 16, 48, 52, tzinfo=tzoffset('UTC', 0)), datetime.datetime(2002, 12, 13, 11, 48, 52, tzinfo=tzoffset('UTC', 0))]",
+        "org": "Domains By Proxy, LLC",
+        "country": "US"
+      },
+      "discovered_emails": [
+        "hit.vaghela@tatvasoft.com",
+        "kamal.sharma@tatvasoft.com",
+        "rakshit.toke@tatvasoft.com",
+        "aastha.pandita@tatvasoft.com",
+        "kanisha.pathak@tatvasoft.com",
+        "sumit.makwana@tatvasoft.com",
+        "bhavya.shah@tatvasoft.com",
+        "nidhi.singh@tatvasoft.com",
+        "rakesh.makwana@tatvasoft.com",
+        "aditya.sharma@tatvasoft.com"
+      ],
+      "corporate_registry": {
+        "matched": false,
+        "reason": "not_found_in_registries"
+      }
+    }
+  },
+  {
+    "company_name": "Sagesoftware",
+    "website": "https://www.sagesoftware.co.in/",
+    "linkedin": null,
+    "industry": "software",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [
+      "admin@sagesoftware.co.in",
+      "contact@sagesoftware.co.in",
+      "hello@sagesoftware.co.in",
+      "info@sagesoftware.co.in",
+      "sales@sagesoftware.co.in",
+      "support@sagesoftware.co.in"
+    ],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "confidence_score": 40,
+    "lead_quality": "Medium",
+    "company_type": "Unknown",
+    "relevance_score": 40,
+    "relevance_tier": "LOW",
+    "relevance_info": {
+      "score": 40,
+      "tier": "LOW",
+      "matched_signals": [],
+      "rejected_signals": [
+        "Title",
+        "Description",
+        "Positions"
+      ],
+      "score_breakdown": {
+        "title": 0.0,
+        "description": 0.0,
+        "positions": 0.0
+      },
+      "industry": "Unknown",
+      "confidence": 0.0,
+      "aborted": false,
+      "company_type": "B2B Software",
+      "semantic_trace": [],
+      "technologies": [],
+      "products": [],
+      "website": "",
+      "website_source": "homepage"
+    },
+    "_source_file": "output\\raw\\software_20260721_104646.json",
+    "_flags": [],
+    "_verified_emails": [
+      "admin@sagesoftware.co.in",
+      "contact@sagesoftware.co.in",
+      "hello@sagesoftware.co.in",
+      "info@sagesoftware.co.in",
+      "sales@sagesoftware.co.in",
+      "support@sagesoftware.co.in"
+    ],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "emails": {
+        "admin@sagesoftware.co.in": "ok",
+        "contact@sagesoftware.co.in": "ok",
+        "hello@sagesoftware.co.in": "ok",
+        "info@sagesoftware.co.in": "ok",
+        "sales@sagesoftware.co.in": "ok",
+        "support@sagesoftware.co.in": "ok"
+      },
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "corporate_social_profiles": {
+        "linkedin": null,
+        "crunchbase": null
+      },
+      "domain_source": "existing_website",
+      "whois": {
+        "registrar": "GoDaddy.com, LLC",
+        "creation_date": "[datetime.datetime(2006, 8, 24, 12, 28, 33, 289000, tzinfo=tzoffset('UTC', 0)), datetime.datetime(2006, 8, 24, 12, 28, 33, tzinfo=tzoffset('UTC', 0))]",
+        "org": null,
+        "country": "IN"
+      },
+      "discovered_emails": [
+        "rakesh.mahadik@sagesoftware.co.in",
+        "ishant.raina@sagesoftware.co.in",
+        "thomas.abhraham@sagesoftware.co.in",
+        "sales@sagesoftware.co.in",
+        "kalyani.chaudhari@sagesoftware.co.in",
+        "pribhat.sharma@sagesoftware.co.in"
+      ],
+      "corporate_registry": {
+        "matched": false,
+        "reason": "not_found_in_registries"
+      }
+    }
+  },
+  {
+    "company_name": "Cloud",
+    "website": "https://www.cloud.com/",
+    "linkedin": null,
+    "industry": "software",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [
+      "admin@cloud.com",
+      "contact@cloud.com",
+      "hello@cloud.com",
+      "info@cloud.com",
+      "sales@cloud.com",
+      "support@cloud.com"
+    ],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "confidence_score": 40,
+    "lead_quality": "Medium",
+    "company_type": "Unknown",
+    "relevance_score": 40,
+    "relevance_tier": "LOW",
+    "relevance_info": {
+      "score": 40,
+      "tier": "LOW",
+      "matched_signals": [],
+      "rejected_signals": [
+        "Title",
+        "Description",
+        "Positions"
+      ],
+      "score_breakdown": {
+        "title": 0.0,
+        "description": 0.0,
+        "positions": 0.0
+      },
+      "industry": "Unknown",
+      "confidence": 0.0,
+      "aborted": false,
+      "company_type": "B2B Software",
+      "semantic_trace": [],
+      "technologies": [],
+      "products": [],
+      "website": "",
+      "website_source": "homepage"
+    },
+    "_source_file": "output\\raw\\software_20260721_104646.json",
+    "_flags": [],
+    "_verified_emails": [
+      "admin@cloud.com",
+      "contact@cloud.com",
+      "hello@cloud.com",
+      "info@cloud.com",
+      "sales@cloud.com",
+      "support@cloud.com"
+    ],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "emails": {
+        "admin@cloud.com": "ok",
+        "contact@cloud.com": "ok",
+        "hello@cloud.com": "ok",
+        "info@cloud.com": "ok",
+        "sales@cloud.com": "ok",
+        "support@cloud.com": "ok"
+      },
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "corporate_social_profiles": {
+        "linkedin": null,
+        "crunchbase": null
+      },
+      "domain_source": "existing_website",
+      "whois": {
+        "registrar": "MarkMonitor, Inc.",
+        "creation_date": "2000-12-13 11:33:19+00:00",
+        "org": "Cloud Software Group, Inc.",
+        "country": "US"
+      },
+      "corporate_registry": {
+        "matched": false,
+        "reason": "not_found_in_registries"
+      }
+    }
+  }
+]

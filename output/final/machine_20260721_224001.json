@@ -1,0 +1,473 @@
+[
+  {
+    "company_name": "Stabilitytech",
+    "website": "https://www.stabilitytech.com/contact.html",
+    "linkedin": null,
+    "industry": "Hardware_Industrial",
+    "location": null,
+    "contact_page": "https://www.stabilitytech.com/contact",
+    "about_page": "https://www.stabilitytech.com/about",
+    "team_page": null,
+    "emails": [
+      "WSHoward@StabilityTech.com"
+    ],
+    "phones": [
+      "(770) 331 - 2283"
+    ],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "confidence_score": 100,
+    "lead_quality": "High",
+    "company_type": "Consultancy",
+    "relevance_score": 100,
+    "relevance_tier": "HIGH",
+    "relevance_info": {
+      "score": 100,
+      "tier": "HIGH",
+      "matched_signals": [
+        "Title",
+        "Description"
+      ],
+      "rejected_signals": [
+        "Positions"
+      ],
+      "score_breakdown": {
+        "title": 20.0,
+        "description": 30.0,
+        "positions": 0.0
+      },
+      "industry": "Hardware_Industrial",
+      "confidence": 0.33,
+      "aborted": false,
+      "company_type": "Consultancy",
+      "semantic_trace": [
+        "Matched Title with concepts: ['Equipment']",
+        "Matched Description with concepts: ['Equipment', 'Tools', 'Machinery']"
+      ],
+      "technologies": [],
+      "products": [],
+      "website": "",
+      "website_source": "homepage"
+    }
+  },
+  {
+    "company_name": "Brgmachinery",
+    "website": "https://www.brgmachinery.com/",
+    "linkedin": null,
+    "industry": "Artificial Intelligence",
+    "location": null,
+    "contact_page": "https://www.brgmachinery.com/contact",
+    "about_page": "https://www.brgmachinery.com/about",
+    "team_page": "https://www.brgmachinery.com/team",
+    "emails": [
+      "info@BRGmachinery.com",
+      "user@domain.com"
+    ],
+    "phones": [
+      "+1 (434) 293 9926"
+    ],
+    "social_links": {
+      "linkedin.com": "https://www.linkedin.com/company/brg-machinery-consulting/"
+    },
+    "people": [],
+    "source": "Google",
+    "confidence_score": 100,
+    "lead_quality": "High",
+    "company_type": "Consultancy",
+    "relevance_score": 100,
+    "relevance_tier": "HIGH",
+    "relevance_info": {
+      "score": 100,
+      "tier": "HIGH",
+      "matched_signals": [
+        "Title",
+        "Description"
+      ],
+      "rejected_signals": [
+        "Positions"
+      ],
+      "score_breakdown": {
+        "title": 20.0,
+        "description": 30.0,
+        "positions": 0.0
+      },
+      "industry": "Hardware_Industrial",
+      "confidence": 0.33,
+      "aborted": false,
+      "company_type": "Consultancy",
+      "semantic_trace": [
+        "Matched Title with concepts: ['Machinery']",
+        "Matched Description with concepts: ['Machinery']"
+      ],
+      "technologies": [],
+      "products": [],
+      "website": "",
+      "website_source": "homepage"
+    }
+  },
+  {
+    "company_name": "Bain",
+    "website": "https://www.bain.com/industry-expertise/industrial-machinery-equipment/",
+    "linkedin": null,
+    "industry": "Artificial Intelligence",
+    "location": null,
+    "contact_page": "https://www.bain.com/about/contact-us/",
+    "about_page": "https://www.bain.com/about/offices/",
+    "team_page": "https://www.bain.com/consulting-services/organization/",
+    "emails": [
+      "alumni.relations@bain.com",
+      "ann.lee@bain.com",
+      "dan.pinkney@bain.com",
+      "gary.duncan@bain.com"
+    ],
+    "phones": [
+      "+1 617 572 2000",
+      "+1 646 562 8102",
+      "+44 7788 163791",
+      "+65 6228 2960"
+    ],
+    "social_links": {
+      "linkedin.com": "http://www.linkedin.com/pub/jim-wininger/6/445/4ba/en",
+      "x.com": "https://x.com/bainandcompany",
+      "facebook.com": "https://www.facebook.com/bainandcompany",
+      "instagram.com": "https://www.instagram.com/bainandcompany/"
+    },
+    "people": [],
+    "source": "Google",
+    "confidence_score": 100,
+    "lead_quality": "High",
+    "company_type": "Consultancy",
+    "relevance_score": 100,
+    "relevance_tier": "HIGH",
+    "relevance_info": {
+      "score": 100,
+      "tier": "HIGH",
+      "matched_signals": [
+        "Title",
+        "Description"
+      ],
+      "rejected_signals": [
+        "Positions"
+      ],
+      "score_breakdown": {
+        "title": 20.0,
+        "description": 30.0,
+        "positions": 0.0
+      },
+      "industry": "Hardware_Industrial",
+      "confidence": 0.33,
+      "aborted": false,
+      "company_type": "Consultancy",
+      "semantic_trace": [
+        "Matched Title with concepts: ['Equipment', 'Machinery']",
+        "Matched Description with concepts: ['Equipment', 'Machinery']"
+      ],
+      "technologies": [],
+      "products": [],
+      "website": "",
+      "website_source": "homepage"
+    }
+  },
+  {
+    "company_name": "Kicindia",
+    "website": "https://www.kicindia.com/",
+    "linkedin": null,
+    "industry": "Artificial Intelligence",
+    "location": null,
+    "contact_page": "https://www.kicindia.com/contact-us.html",
+    "about_page": "https://www.kicindia.com/about-us.html",
+    "team_page": null,
+    "emails": [
+      "sales@kicindia.com"
+    ],
+    "phones": [
+      "0120-4572077",
+      "9717299409",
+      "9717971010",
+      "9810233417"
+    ],
+    "social_links": {
+      "facebook.com": "https://www.facebook.com/KIC-Private-Limited-1537022493211241/ ",
+      "linkedin.com": "https://www.linkedin.com/company/kaira-international-concepts"
+    },
+    "people": [],
+    "source": "Google",
+    "confidence_score": 50,
+    "lead_quality": "Medium",
+    "company_type": "Consultancy",
+    "relevance_score": 50,
+    "relevance_tier": "LOW",
+    "relevance_info": {
+      "score": 50,
+      "tier": "LOW",
+      "matched_signals": [
+        "Description"
+      ],
+      "rejected_signals": [
+        "Title",
+        "Positions"
+      ],
+      "score_breakdown": {
+        "title": 0.0,
+        "description": 30.0,
+        "positions": 0.0
+      },
+      "industry": "Hardware_Industrial",
+      "confidence": 0.2,
+      "aborted": false,
+      "company_type": "B2B Software",
+      "semantic_trace": [
+        "Matched Description with concepts: ['Equipment']"
+      ],
+      "technologies": [],
+      "products": [],
+      "website": "",
+      "website_source": "homepage"
+    }
+  },
+  {
+    "company_name": "Consulteer",
+    "website": "https://www.consulteer.com/industries/industrial-and-machinery",
+    "linkedin": null,
+    "industry": "Industrial Automation",
+    "location": null,
+    "contact_page": "https://www.consulteer.com/contact",
+    "about_page": "https://www.consulteer.com/about",
+    "team_page": null,
+    "emails": [
+      "career@consulteer.com",
+      "contact@consulteer.com",
+      "dominic.schindler@consulteer.com",
+      "francois-pierre.vivot@consulteer.com",
+      "jean-pierre.boillat@consulteer.com",
+      "lukas.wittwer@consulteer.com",
+      "maurus.riedweg@consulteer.com",
+      "rouven.weimann@consulteer.com",
+      "sales@consulteer.com",
+      "yves.ackermann@consulteer.com"
+    ],
+    "phones": [
+      "+351 224 0317 73",
+      "+381 236 000 35",
+      "+41 41 377 22 66",
+      "+43 5572 37 4272"
+    ],
+    "social_links": {
+      "linkedin.com": "https://www.linkedin.com/in/fran%C3%A7ois-pierre-vivot-a3a34bb/",
+      "instagram.com": "https://www.instagram.com/consulteer/"
+    },
+    "people": [],
+    "source": "Google",
+    "confidence_score": 83,
+    "lead_quality": "High",
+    "company_type": "Consultancy",
+    "relevance_score": 83,
+    "relevance_tier": "HIGH",
+    "relevance_info": {
+      "score": 83,
+      "tier": "HIGH",
+      "matched_signals": [
+        "Services",
+        "Technologies"
+      ],
+      "rejected_signals": [
+        "Description",
+        "Products",
+        "Positions",
+        "Blog/Articles"
+      ],
+      "score_breakdown": {
+        "description": 0.0,
+        "services": 26.0,
+        "technologies": 28.0,
+        "products": 0.0,
+        "positions": 0.0,
+        "blog": 0.0
+      },
+      "industry": "Automation",
+      "confidence": 0.43,
+      "aborted": false,
+      "company_type": "Consultancy",
+      "semantic_trace": [
+        "Matched Services with terms: ['Machinery']",
+        "Matched Technologies: ['Machinery']"
+      ],
+      "technologies": [
+        "Machinery"
+      ],
+      "products": [],
+      "website": "",
+      "website_source": ""
+    }
+  },
+  {
+    "company_name": "Bcg",
+    "website": "https://www.bcg.com/industries/industrial-goods/machinery-industrial-automation",
+    "linkedin": null,
+    "industry": "Hardware_Industrial",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [
+      "admin@bcg.com",
+      "contact@bcg.com",
+      "hello@bcg.com",
+      "info@bcg.com",
+      "sales@bcg.com",
+      "support@bcg.com"
+    ],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "confidence_score": 100,
+    "lead_quality": "High",
+    "company_type": "Unknown",
+    "relevance_score": 100,
+    "relevance_tier": "HIGH",
+    "relevance_info": {
+      "score": 100,
+      "tier": "HIGH",
+      "matched_signals": [
+        "Title",
+        "Description"
+      ],
+      "rejected_signals": [
+        "Positions"
+      ],
+      "score_breakdown": {
+        "title": 20.0,
+        "description": 30.0,
+        "positions": 0.0
+      },
+      "industry": "Hardware_Industrial",
+      "confidence": 0.33,
+      "aborted": false,
+      "company_type": "Consultancy",
+      "semantic_trace": [
+        "Matched Title with concepts: ['Machinery']",
+        "Matched Description with concepts: ['Tools', 'Machinery']"
+      ],
+      "technologies": [],
+      "products": [],
+      "website": "",
+      "website_source": "homepage"
+    }
+  },
+  {
+    "company_name": "Machineservice",
+    "website": "https://www.machineservice.com/",
+    "linkedin": null,
+    "industry": "Hardware_Industrial",
+    "location": null,
+    "contact_page": "https://www.machineservice.com/contact",
+    "about_page": "https://www.machineservice.com/about",
+    "team_page": null,
+    "emails": [
+      "admin@machineservice.com",
+      "contact@machineservice.com",
+      "hello@machineservice.com",
+      "info@machineservice.com",
+      "sales@machineservice.com",
+      "support@machineservice.com"
+    ],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "confidence_score": 62,
+    "lead_quality": "Medium",
+    "company_type": "Unknown",
+    "relevance_score": 62,
+    "relevance_tier": "MEDIUM",
+    "relevance_info": {
+      "score": 62,
+      "tier": "MEDIUM",
+      "matched_signals": [
+        "Technologies"
+      ],
+      "rejected_signals": [
+        "Description",
+        "Services",
+        "Products",
+        "Positions",
+        "Blog/Articles"
+      ],
+      "score_breakdown": {
+        "description": 0.0,
+        "services": 0.0,
+        "technologies": 28.0,
+        "products": 0.0,
+        "positions": 0.0,
+        "blog": 0.0
+      },
+      "industry": "Hardware_Industrial",
+      "confidence": 0.22,
+      "aborted": false,
+      "company_type": "B2C/Marketplace",
+      "semantic_trace": [
+        "Matched Technologies: ['Supplies', 'Equipment']"
+      ],
+      "technologies": [
+        "Equipment",
+        "Supplies"
+      ],
+      "products": [],
+      "website": "",
+      "website_source": ""
+    }
+  },
+  {
+    "company_name": "Kaymo",
+    "website": "https://kaymo.com/pages/service-centers",
+    "linkedin": null,
+    "industry": "machine",
+    "location": null,
+    "contact_page": null,
+    "about_page": null,
+    "team_page": null,
+    "emails": [
+      "admin@kaymo.com",
+      "contact@kaymo.com",
+      "hello@kaymo.com",
+      "info@kaymo.com",
+      "sales@kaymo.com",
+      "support@kaymo.com"
+    ],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "confidence_score": 40,
+    "lead_quality": "Medium",
+    "company_type": "Unknown",
+    "relevance_score": 40,
+    "relevance_tier": "LOW",
+    "relevance_info": {
+      "score": 40,
+      "tier": "LOW",
+      "matched_signals": [],
+      "rejected_signals": [
+        "Title",
+        "Description",
+        "Positions"
+      ],
+      "score_breakdown": {
+        "title": 0.0,
+        "description": 0.0,
+        "positions": 0.0
+      },
+      "industry": "Unknown",
+      "confidence": 0.0,
+      "aborted": false,
+      "company_type": "B2B Software",
+      "semantic_trace": [],
+      "technologies": [],
+      "products": [],
+      "website": "",
+      "website_source": "homepage"
+    }
+  }
+]

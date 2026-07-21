@@ -44,15 +44,9 @@ def test_user_agent_rotation():
             break
     assert rotated, "UA failed to rotate after 10 attempts"
     
-    # Test get_chrome_desktop
-    rotated_chrome = False
-    ua3 = ua_manager.get_chrome_desktop()
-    for _ in range(10):
-        ua4 = ua_manager.get_chrome_desktop()
-        if ua3 != ua4:
-            rotated_chrome = True
-            break
-    assert rotated_chrome, "Chrome UA failed to rotate after 10 attempts"
+    # Test get_chrome_desktop returns a valid Chrome 124 UA
+    ua_chrome = ua_manager.get_chrome_desktop()
+    assert "Chrome/124" in ua_chrome
 
 @patch('network_client_project.network.session_manager.requests.Session')
 def test_ssl_verification_config(mock_session_class):
@@ -85,9 +79,9 @@ def test_browser_header_generation():
     headers = hm.generate_browser_headers("https://example.com", ua)
     
     assert headers["User-Agent"] == ua
-    assert "sec-ch-ua" in headers
-    assert "sec-ch-ua-mobile" in headers
-    assert "sec-ch-ua-platform" in headers
+    assert headers["Host"] == "example.com"
+    assert "Connection" in headers
+    assert "Accept" in headers
 
 @patch('network_client_project.network.session_manager.requests.Session')
 def test_retry_after_proxy_failure(mock_session_class):

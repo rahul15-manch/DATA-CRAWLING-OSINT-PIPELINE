@@ -37,6 +37,10 @@ class ConceptNormalizer:
         "deep learning": "Deep Learning",
         "generative ai": "Generative AI",
         "open source": "Open Source",
+        "k8s": "Kubernetes",
+        "iac": "IaC",
+        "oem": "OEM",
+        "crm": "CRM",
     }
 
     @classmethod
@@ -132,11 +136,24 @@ BOOTSTRAP_ONTOLOGY = {
             "hardware", "hardware development", "embedded systems", "iot", "pcb design", "firmware",
             "microcontrollers", "semiconductors", "electronics", "circuit design", "hardware engineering",
             "electronics manufacturing", "electronics design", "ems", "electronic product development",
-            "hardware design"
+            "hardware design", "oem manufacturing", "industrial automation", "semiconductor startups",
+            "embedded software", "pcb assembly", "embedded systems companies", "electronics manufacturers"
         ],
         "positions": ["hardware engineer", "embedded developer", "electronics engineer", "firmware engineer"],
         "services": ["hardware design", "embedded systems development", "pcb design services", "iot product design"],
         "products": ["microcontrollers", "pcb", "sensors", "arduino", "raspberry pi"]
+    },
+    "devops_cloud": {
+        "concepts": ["devops", "cloud computing", "ci/cd", "serverless", "kubernetes", "containerization", "sre", "cloud infrastructure", "terraform", "iac"],
+        "positions": ["devops engineer", "cloud architect", "site reliability engineer", "sre", "cloud engineer"],
+        "services": ["cloud migration", "devops consulting", "kubernetes orchestration", "infrastructure automation"],
+        "products": ["kubernetes", "docker", "terraform", "aws", "azure", "gcp", "ansible"]
+    },
+    "b2b_saas_sales": {
+        "concepts": ["saas", "b2b saas", "crm", "marketing automation", "sales enablement", "customer success", "lead generation", "plg"],
+        "positions": ["saas founder", "account executive", "customer success manager", "sdr", "sales director"],
+        "services": ["saas development", "crm implementation", "sales automation", "b2b lead generation"],
+        "products": ["salesforce", "hubspot", "outreach", "gong", "apollo"]
     },
     "startup_services": {
         "concepts": ["incubator", "accelerator", "startup directory", "founder community", "funding platform", "venture capital", "investor network", "pitch deck", "equity management"],

@@ -4,10 +4,10 @@
         "zero": 0,
         "parser": 0,
         "unavailable": 0,
-        "failures": 60,
-        "last_updated": 1784544606.3163567,
-        "score": -60,
-        "queries_run": 60
+        "failures": 180,
+        "last_updated": 1784653285.9012392,
+        "score": -180,
+        "queries_run": 180
     },
     "test query": {
         "success": 0,
@@ -15,30 +15,30 @@
         "parser": 0,
         "unavailable": 0,
         "failures": 0,
-        "last_updated": 1784544606.5230346,
-        "score": 10,
-        "queries_run": 2,
-        "leads_found": 2
+        "last_updated": 1784653285.995109,
+        "score": 30,
+        "queries_run": 6,
+        "leads_found": 6
     },
     "test query 2": {
         "success": 0,
         "zero": 0,
         "parser": 0,
         "unavailable": 0,
-        "failures": 2,
-        "last_updated": 1784544606.5235503,
-        "score": -2,
-        "queries_run": 2
+        "failures": 6,
+        "last_updated": 1784653285.9968374,
+        "score": -6,
+        "queries_run": 6
     },
     "python company": {
         "success": 0,
         "zero": 0,
         "parser": 0,
         "unavailable": 0,
-        "failures": 2,
-        "last_updated": 1784544606.758369,
-        "score": -2,
-        "queries_run": 4
+        "failures": 6,
+        "last_updated": 1784653286.196884,
+        "score": -7,
+        "queries_run": 11
     },
     "source:bing": {
         "success": 0,
@@ -47,28 +47,18 @@
         "unavailable": 0,
         "failures": 0,
         "last_updated": 0.0,
-        "score": -2,
-        "queries_run": 2
-    },
-    "source:brave": {
-        "success": 0,
-        "zero": 0,
-        "parser": 0,
-        "unavailable": 0,
-        "failures": 0,
-        "last_updated": 0.0,
-        "score": 24,
-        "queries_run": 4
+        "score": 37,
+        "queries_run": 20
     },
     "software developer company 1": {
         "success": 0,
         "zero": 0,
         "parser": 0,
         "unavailable": 0,
-        "failures": 1,
-        "last_updated": 1784544606.8054068,
-        "score": -2,
-        "queries_run": 1
+        "failures": 4,
+        "last_updated": 1784653286.239915,
+        "score": -8,
+        "queries_run": 4
     },
     "source:google_html": {
         "success": 0,
@@ -77,28 +67,28 @@
         "unavailable": 0,
         "failures": 0,
         "last_updated": 0.0,
-        "score": 20,
-        "queries_run": 15
+        "score": 60,
+        "queries_run": 65
     },
     "software developer company 2": {
         "success": 0,
         "zero": 0,
         "parser": 0,
         "unavailable": 0,
-        "failures": 1,
-        "last_updated": 1784544606.8064668,
-        "score": -2,
-        "queries_run": 1
+        "failures": 4,
+        "last_updated": 1784653286.2415326,
+        "score": -8,
+        "queries_run": 4
     },
     "software developer company 3": {
         "success": 0,
         "zero": 0,
         "parser": 0,
         "unavailable": 0,
-        "failures": 1,
-        "last_updated": 1784544606.8075128,
-        "score": -2,
-        "queries_run": 1
+        "failures": 4,
+        "last_updated": 1784653286.2431338,
+        "score": -8,
+        "queries_run": 4
     },
     "technology outsourcing": {
         "success": 0,
@@ -117,8 +107,8 @@
         "unavailable": 0,
         "failures": 0,
         "last_updated": 0.0,
-        "score": 4,
-        "queries_run": 4
+        "score": -5,
+        "queries_run": 33
     },
     "technology": {
         "success": 0,
@@ -156,8 +146,538 @@
         "parser": 0,
         "unavailable": 0,
         "failures": 1,
-        "last_updated": 1784609714.348583,
-        "score": 4,
+        "last_updated": 1784642064.9117677,
+        "score": 20,
+        "queries_run": 6
+    },
+    "software company": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 2,
+        "last_updated": 1784611000.4975913,
+        "score": 6,
+        "queries_run": 3
+    },
+    "software": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1784647509.8386378,
+        "score": 42,
+        "queries_run": 11
+    },
+    "threat detection software company": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1784625549.5795834,
+        "score": 8,
+        "queries_run": 2
+    },
+    "threat detection development company": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1784625555.4015336,
+        "score": 10,
+        "queries_run": 1
+    },
+    "site:ventureradar.com email": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1784625576.1210911,
+        "score": 1,
+        "queries_run": 2
+    },
+    "site:ventureradar.com contact": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1784625578.863281,
+        "score": 3,
+        "queries_run": 1
+    },
+    "site:ventureradar.com phone": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1784625581.8669975,
+        "score": 3,
+        "queries_run": 1
+    },
+    "site:ventureradar.com team": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1784625585.4745235,
+        "score": 3,
+        "queries_run": 1
+    },
+    "site:linkedin.com/in \"ventureradar\" founder or ceo or director": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 4,
+        "last_updated": 1784625608.0084965,
+        "score": -5,
+        "queries_run": 4
+    },
+    "cybersecurity": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1784625637.9258478,
+        "score": 18,
+        "queries_run": 6
+    },
+    "site:dragos.com email": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 2,
+        "last_updated": 1784625612.9848158,
+        "score": -1,
+        "queries_run": 3
+    },
+    "source:brightdata": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 0.0,
+        "score": 22,
+        "queries_run": 12
+    },
+    "site:linkedin.com/in \"ventureradar\" \"co-founder\"": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 3,
+        "last_updated": 1784625617.3633082,
+        "score": -5,
+        "queries_run": 3
+    },
+    "site:dragos.com contact": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 2,
+        "last_updated": 1784625619.7682688,
+        "score": -1,
+        "queries_run": 3
+    },
+    "\"ventureradar\" site:linkedin.com": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1784625631.0684707,
+        "score": 5,
+        "queries_run": 1
+    },
+    "site:dragos.com phone": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1784625633.3483849,
+        "score": 3,
+        "queries_run": 1
+    },
+    "site:goodfirms.co custom software": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 2,
+        "last_updated": 1784627621.7793064,
+        "score": 6,
+        "queries_run": 3
+    },
+    "software --disable-cache": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 2,
+        "last_updated": 1784630981.8945231,
+        "score": 15,
+        "queries_run": 6
+    },
+    "custom software company": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1784627724.2800512,
+        "score": 10,
+        "queries_run": 1
+    },
+    "site:en.softonic.com email": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 7,
+        "last_updated": 1784641801.3466275,
+        "score": -10,
+        "queries_run": 8
+    },
+    "software --disable-cache services": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 2,
+        "last_updated": 1784628296.3676457,
+        "score": 6,
+        "queries_run": 3
+    },
+    "site:en.softonic.com contact": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 5,
+        "last_updated": 1784641862.324064,
+        "score": -4,
+        "queries_run": 7
+    },
+    "site:linkedin.com/company software --disable-cache": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 2,
+        "last_updated": 1784629969.555559,
+        "score": 1,
+        "queries_run": 3
+    },
+    "custom software software company": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1784629980.9958975,
+        "score": -2,
+        "queries_run": 1
+    },
+    "custom software development company": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 3,
+        "last_updated": 1784630048.1440785,
+        "score": -6,
+        "queries_run": 3
+    },
+    "software --disable-cache consulting": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 5,
+        "last_updated": 1784630963.2351573,
+        "score": -10,
+        "queries_run": 5
+    },
+    "ai outsourcing": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 2,
+        "last_updated": 1784630429.6545196,
+        "score": -4,
+        "queries_run": 2
+    },
+    "software outsourcing": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 2,
+        "last_updated": 1784630556.451953,
+        "score": -4,
+        "queries_run": 2
+    },
+    "custom software --disable-cache solutions": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 2,
+        "last_updated": 1784630773.6382163,
+        "score": 6,
+        "queries_run": 3
+    },
+    "custom software --disable-cache development": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1784630778.7450154,
+        "score": 10,
+        "queries_run": 1
+    },
+    "ai": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1784631321.5064003,
+        "score": -2,
+        "queries_run": 1
+    },
+    "software development company": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1784641779.4379168,
+        "score": -2,
+        "queries_run": 1
+    },
+    "source:playwright_google": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 0.0,
+        "score": -10,
+        "queries_run": 5
+    },
+    "custom python solutions": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 2,
+        "last_updated": 1784641943.0491352,
+        "score": 6,
+        "queries_run": 3
+    },
+    "site:onecompiler.com email": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 2,
+        "last_updated": 1784642062.8487484,
+        "score": -1,
+        "queries_run": 3
+    },
+    "site:online-python.com email": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1784642005.3850527,
+        "score": 1,
+        "queries_run": 2
+    },
+    "site:online-python.com contact": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1784642031.7971141,
+        "score": -1,
+        "queries_run": 1
+    },
+    "site:goodfirms.co software": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 2,
+        "last_updated": 1784646295.6153593,
+        "score": -4,
+        "queries_run": 2
+    },
+    "site:goodfirms.co ai": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1784646814.6494436,
+        "score": -2,
+        "queries_run": 1
+    },
+    "source:linkedin_playwright": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 0.0,
+        "score": -2,
+        "queries_run": 1
+    },
+    "custom software software companies": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1784647439.971051,
+        "score": -2,
+        "queries_run": 1
+    },
+    "site:softwareag.com email": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1784647478.0480266,
+        "score": 1,
+        "queries_run": 2
+    },
+    "site:softwareag.com contact": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1784647482.126699,
+        "score": 3,
+        "queries_run": 1
+    },
+    "site:softwareag.com phone": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1784647486.8766656,
+        "score": 3,
+        "queries_run": 1
+    },
+    "site:softwareag.com team": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1784647491.2184942,
+        "score": 2,
+        "queries_run": 1
+    },
+    "site:linkedin.com/in \"softwareag\" founder or ceo or director": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 2,
+        "last_updated": 1784647506.8380435,
+        "score": -3,
+        "queries_run": 2
+    },
+    "hardware startups": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 3,
+        "last_updated": 1784647610.9020844,
+        "score": -6,
+        "queries_run": 3
+    },
+    "source:brave": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 0.0,
+        "score": 10,
+        "queries_run": 4
+    },
+    "machine consulting": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1784653700.9574673,
+        "score": 10,
+        "queries_run": 1
+    },
+    "machine services": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1784653721.7061677,
+        "score": 10,
+        "queries_run": 1
+    },
+    "machine": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1784653801.348226,
+        "score": 27,
+        "queries_run": 9
+    },
+    "site:machineservice.com email": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 2,
+        "last_updated": 1784653795.189906,
+        "score": -1,
+        "queries_run": 3
+    },
+    "site:bcg.com email": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 2,
+        "last_updated": 1784653793.9098566,
+        "score": -1,
         "queries_run": 3
     }
 }

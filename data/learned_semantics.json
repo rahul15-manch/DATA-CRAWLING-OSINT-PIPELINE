@@ -159,7 +159,16 @@
       "target_field": "concepts"
     }
   },
-  "software": {},
+  "software": {
+    "Software Development": {
+      "seen": 1,
+      "accepted": 1,
+      "confidence": 1.0,
+      "first_seen": "2026-07-21",
+      "last_seen": "2026-07-21",
+      "target_field": "concepts"
+    }
+  },
   "ai": {
     "Llm": {
       "seen": 1,
@@ -186,6 +195,68 @@
       "confidence": 1.0,
       "first_seen": "2026-07-20",
       "last_seen": "2026-07-20",
+      "target_field": "concepts"
+    }
+  },
+  "cybersecurity": {
+    "Network Security": {
+      "seen": 1,
+      "accepted": 1,
+      "confidence": 1.0,
+      "first_seen": "2026-07-21",
+      "last_seen": "2026-07-21",
+      "target_field": "concepts"
+    },
+    "Cybersecurity": {
+      "seen": 3,
+      "accepted": 3,
+      "confidence": 1.0,
+      "first_seen": "2026-07-21",
+      "last_seen": "2026-07-21",
+      "target_field": "concepts"
+    },
+    "Threat Detection": {
+      "seen": 3,
+      "accepted": 3,
+      "confidence": 1.0,
+      "first_seen": "2026-07-21",
+      "last_seen": "2026-07-21",
+      "target_field": "concepts"
+    }
+  },
+  "software --disable-cache": {
+    "Python": {
+      "seen": 2,
+      "accepted": 2,
+      "confidence": 1.0,
+      "first_seen": "2026-07-21",
+      "last_seen": "2026-07-21",
+      "target_field": "concepts"
+    }
+  },
+  "machine": {
+    "Machinery": {
+      "seen": 1,
+      "accepted": 1,
+      "confidence": 1.0,
+      "first_seen": "2026-07-21",
+      "last_seen": "2026-07-21",
+      "target_field": "concepts"
+    },
+    "Equipment": {
+      "seen": 1,
+      "accepted": 1,
+      "confidence": 1.0,
+      "first_seen": "2026-07-21",
+      "last_seen": "2026-07-21",
+      "target_field": "concepts"
+    },
+    "Supplies": {
+      "seen": 1,
+      "accepted": 1,
+      "confidence": 1.0,
+      "first_seen": "2026-07-21",
+      "last_seen": "2026-07-21",
       "target_field": "concepts"
     }
   }

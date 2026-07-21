@@ -1,0 +1,116 @@
+[
+  {
+    "company_name": "Online Python",
+    "website": "https://www.online-python.com/",
+    "linkedin": null,
+    "industry": "Software_Development",
+    "location": null,
+    "contact_page": "https://www.online-python.com/cdn-cgi/l/email-protection#196a6c6969766b6d5976777570777c3469606d717677377a7674",
+    "about_page": "https://www.online-python.com/about",
+    "team_page": null,
+    "emails": [
+      "admin@online-python.com",
+      "contact@online-python.com",
+      "hello@online-python.com",
+      "info@online-python.com",
+      "sales@online-python.com",
+      "support@online-python.com"
+    ],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "confidence_score": 100,
+    "lead_quality": "High",
+    "company_type": "Software Company",
+    "relevance_score": 100,
+    "relevance_tier": "HIGH",
+    "relevance_info": {
+      "score": 100,
+      "tier": "HIGH",
+      "matched_signals": [
+        "Title",
+        "Description"
+      ],
+      "rejected_signals": [
+        "Positions"
+      ],
+      "score_breakdown": {
+        "title": 20.0,
+        "description": 30.0,
+        "positions": 0.0
+      },
+      "industry": "Software_Development",
+      "confidence": 0.33,
+      "aborted": false,
+      "company_type": "B2B Software",
+      "semantic_trace": [
+        "Matched Title with concepts: ['Python']",
+        "Matched Description with concepts: ['Python']"
+      ],
+      "technologies": [],
+      "products": [],
+      "website": "",
+      "website_source": "homepage"
+    },
+    "_source_file": "output\\raw\\python_20260721_192424.json",
+    "_flags": []
+  },
+  {
+    "company_name": "Python Online Compiler Interpreter",
+    "website": "https://onecompiler.com/python",
+    "linkedin": null,
+    "industry": "Artificial Intelligence",
+    "location": null,
+    "contact_page": "https://onecompiler.com/contact",
+    "about_page": "https://onecompiler.com/about",
+    "team_page": null,
+    "emails": [
+      "admin@onecompiler.com",
+      "contact@onecompiler.com",
+      "hello@onecompiler.com",
+      "info@onecompiler.com",
+      "sales@onecompiler.com",
+      "support@onecompiler.com"
+    ],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "confidence_score": 100,
+    "lead_quality": "High",
+    "company_type": "AI Startup",
+    "relevance_score": 100,
+    "relevance_tier": "HIGH",
+    "relevance_info": {
+      "score": 100,
+      "tier": "HIGH",
+      "matched_signals": [
+        "Title",
+        "Description"
+      ],
+      "rejected_signals": [
+        "Positions"
+      ],
+      "score_breakdown": {
+        "title": 20.0,
+        "description": 30.0,
+        "positions": 0.0
+      },
+      "industry": "Software_Development",
+      "confidence": 0.33,
+      "aborted": false,
+      "company_type": "B2B Software",
+      "semantic_trace": [
+        "Matched Title with concepts: ['Python']",
+        "Matched Description with concepts: ['Python']"
+      ],
+      "technologies": [],
+      "products": [],
+      "website": "",
+      "website_source": "homepage"
+    },
+    "_source_file": "output\\raw\\python_20260721_192424.json",
+    "_flags": []
+  }
+]

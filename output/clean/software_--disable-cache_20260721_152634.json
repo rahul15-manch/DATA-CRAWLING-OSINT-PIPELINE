@@ -1,0 +1,156 @@
+[
+  {
+    "company_name": "Ninite",
+    "website": "https://ninite.com/",
+    "linkedin": null,
+    "industry": "Software_Development",
+    "location": null,
+    "contact_page": "https://ninite.com/contact",
+    "about_page": "https://ninite.com/about",
+    "team_page": null,
+    "emails": [
+      "contact@ninite.com"
+    ],
+    "phones": [
+      "1.2.94.583",
+      "1.4.1.1032",
+      "10003-1502",
+      "12.13.10.3",
+      "133.0.5932.60",
+      "15.0.2201.2134",
+      "150.0.4078.83",
+      "150.0.7871.129",
+      "2.3.14.5270",
+      "2.7.0.2722",
+      "2015.10.19",
+      "2024.1.0.3113",
+      "2026.1.2.36540",
+      "26.113.0614.0004",
+      "26.6.11052.3712",
+      "26.6.11052.3716",
+      "260.4.2926",
+      "3.6.9403.32563",
+      "4.5.8.7128",
+      "5.112.9563.32325",
+      "5.9.2.10042",
+      "6.39.11548",
+      "64) 10.0.10.36226",
+      "64) 10.0.10.50000",
+      "64) 8.0.29.26325",
+      "64) 8.0.29.36225",
+      "64) 9.0.18.26323",
+      "64) 9.0.18.36217",
+      "7.1.5.43453",
+      "7.3.7.1155",
+      "8.1.4087.55",
+      "86) 10.0.10.36226",
+      "86) 10.0.10.50000",
+      "86) 8.0.29.26325",
+      "86) 8.0.29.36225",
+      "86) 9.0.18.26323",
+      "86) 9.0.18.36217"
+    ],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "confidence_score": 61,
+    "lead_quality": "Medium",
+    "company_type": "Software Company",
+    "relevance_score": 61,
+    "relevance_tier": "MEDIUM",
+    "relevance_info": {
+      "score": 61,
+      "tier": "MEDIUM",
+      "matched_signals": [
+        "Technologies"
+      ],
+      "rejected_signals": [
+        "Description",
+        "Services",
+        "Products",
+        "Positions",
+        "Blog/Articles"
+      ],
+      "score_breakdown": {
+        "description": 0.0,
+        "services": 0.0,
+        "technologies": 26.5,
+        "products": 0.0,
+        "positions": 0.0,
+        "blog": 0.0
+      },
+      "industry": "Software_Development",
+      "confidence": 0.22,
+      "aborted": false,
+      "company_type": "B2C/Marketplace",
+      "semantic_trace": [
+        "Matched Technologies: ['Python']"
+      ],
+      "technologies": [
+        "Python"
+      ],
+      "products": [],
+      "website": "",
+      "website_source": ""
+    },
+    "_source_file": "output\\raw\\software_--disable-cache_20260721_152634.json",
+    "_flags": []
+  },
+  {
+    "company_name": "Softonic",
+    "website": "https://en.softonic.com/windows",
+    "linkedin": null,
+    "industry": "Automation",
+    "location": null,
+    "contact_page": "https://en.softonic.com/contact",
+    "about_page": "https://en.softonic.com/about",
+    "team_page": "https://en.softonic.com/windows/board",
+    "emails": [],
+    "phones": [],
+    "social_links": {
+      "facebook.com": "https://www.facebook.com/softonic.en/",
+      "instagram.com": "https://www.instagram.com/Softonic/",
+      "x.com": "https://x.com/softonic",
+      "linkedin.com": "https://www.linkedin.com/company/softonic"
+    },
+    "people": [],
+    "source": "Google",
+    "confidence_score": 40,
+    "lead_quality": "Medium",
+    "company_type": "Software Company",
+    "relevance_score": 40,
+    "relevance_tier": "LOW",
+    "relevance_info": {
+      "score": 40,
+      "tier": "LOW",
+      "matched_signals": [],
+      "rejected_signals": [
+        "Description",
+        "Services",
+        "Technologies",
+        "Products",
+        "Positions",
+        "Blog/Articles"
+      ],
+      "score_breakdown": {
+        "description": 0.0,
+        "services": 0.0,
+        "technologies": 0.0,
+        "products": 0.0,
+        "positions": 0.0,
+        "blog": 0.0
+      },
+      "industry": "Automation",
+      "confidence": 0.0,
+      "aborted": false,
+      "company_type": "B2B Software",
+      "semantic_trace": [],
+      "technologies": [],
+      "products": [],
+      "website": "",
+      "website_source": ""
+    },
+    "_source_file": "output\\raw\\software_--disable-cache_20260721_152634.json",
+    "_flags": []
+  }
+]

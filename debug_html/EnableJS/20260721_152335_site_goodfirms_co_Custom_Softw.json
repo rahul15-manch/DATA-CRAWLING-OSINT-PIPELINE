@@ -1,0 +1,35 @@
+{
+  "timestamp": "2026-07-21T15:23:35.793910",
+  "query": "site:goodfirms.co Custom Software",
+  "classification": "ENABLE_JS_PAGE",
+  "url": "https://www.google.com/search?q=site%3Agoodfirms.co+Custom+Software&num=10&hl=en&gl=us",
+  "status_code": 200,
+  "redirect_chain": [
+    "https://www.google.com/search?q=site%3Agoodfirms.co+Custom+Software&num=10&hl=en&gl=us"
+  ],
+  "response_headers": {
+    "content-type": "text/html; charset=UTF-8",
+    "strict-transport-security": "max-age=31536000",
+    "content-security-policy": "object-src 'none';base-uri 'self';script-src 'nonce-l0S-rilt2IxepcXfYdOIPg' 'strict-dynamic' 'report-sample' 'unsafe-eval' 'unsafe-inline' https: http:;report-uri https://csp.withgoogle.com/csp/gws/cdt1",
+    "cross-origin-opener-policy": "same-origin-allow-popups; report-to=\"gws\"",
+    "report-to": "{\"group\":\"gws\",\"max_age\":2592000,\"endpoints\":[{\"url\":\"https://csp.withgoogle.com/csp/report-to/gws/cdt1\"}]}",
+    "accept-ch": "Sec-CH-Prefers-Color-Scheme, Downlink, RTT, Sec-CH-UA-Form-Factors, Sec-CH-UA-Platform, Sec-CH-UA-Platform-Version, Sec-CH-UA-Full-Version, Sec-CH-UA-Arch, Sec-CH-UA-Model, Sec-CH-UA-Bitness, Sec-CH-UA-Full-Version-List, Sec-CH-UA-WoW64",
+    "x-content-type-options": "nosniff",
+    "permissions-policy": "unload=()",
+    "p3p": "CP=\"This is not a P3P policy! See g.co/p3phelp for more info.\"",
+    "content-encoding": "br",
+    "date": "Tue, 21 Jul 2026 09:53:35 GMT",
+    "server": "gws",
+    "x-xss-protection": "0",
+    "x-frame-options": "SAMEORIGIN",
+    "expires": "Tue, 21 Jul 2026 09:53:35 GMT",
+    "cache-control": "private",
+    "set-cookie": "__Secure-STRP=ANmZwa3pO8bS4_A3HfQTb_BC4mQO7Uw_1CLnmEiQ78EiEYyGBs_rzSsHe1bdzlpS0Hu-F1_fTSee8A8Hg6Znw2trhGRg6QvFdg; expires=Tue, 21-Jul-2026 09:58:35 GMT; path=/; domain=.google.com; Secure; SameSite=strict, AEC=AdJVEauQv3qN2f5ptPOvaHLlBJ42O_MBwOJ6UyxRwwWSBzM_BtXai80dLg; expires=Sun, 17-Jan-2027 09:53:35 GMT; path=/; domain=.google.com; Secure; HttpOnly; SameSite=lax, NID=533=d77FeltPznTeOc9EjZC1TMU_ePf-jHJ-yWVBshmq-RbEXy__NrKniEZS3OZHnQxXeogSiz7E_gug7Xid3qiql2EbWfmkE-jSqnhwJK88cdJ_kL263-vYWcC5PAvj4J3iJsSazv4zLePPCJ9zJKTc-fPx_C-8UcgtRJKGoxoWslxOtDC0G56LLf_xXD6LGJIaVPwb-t3QahRNkPaLSpmV8CU; expires=Wed, 20-Jan-2027 09:53:35 GMT; path=/; domain=.google.com; Secure; HttpOnly; SameSite=none",
+    "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+  },
+  "layout_fingerprint": "2d776c7f0f4d13d3ca0db766ca6ecf79",
+  "detected_signals": [
+    "/httpservice/retry/enablejs",
+    "enablejs"
+  ]
+}

@@ -4,6 +4,7 @@ import time
 import logging
 import json
 import os
+from enum import Enum
 from typing import List, Optional, Dict, Tuple, Any
 from dataclasses import dataclass, field
 from collections import deque
@@ -67,6 +68,13 @@ _ERROR_TO_OUTCOME = {
 }
 
 
+class RatingTier(str, Enum):
+    EXCELLENT = "Excellent"
+    GOOD = "Good"
+    LIMITED = "Limited"
+    BAD = "Bad"
+    BLOCKED = "Blocked"
+
 @dataclass
 class Proxy:
     raw_url: str
@@ -80,6 +88,12 @@ class Proxy:
     google_captchas: int = 0
     google_429s: int = 0
     proxy_score: float = 100.0
+    
+    # Granular domain trust scores
+    google_trust_score: float = 100.0
+    linkedin_trust_score: float = 100.0
+    generic_trust_score: float = 100.0
+    
     consecutive_failures: int = 0
     consecutive_blocks: Dict[str, int] = field(default_factory=dict)
     dead: bool = False
@@ -101,6 +115,32 @@ class Proxy:
     dead_for_bing: bool = False
     consecutive_timeouts: Dict[str, int] = field(default_factory=dict)
     
+    def get_rating_tier(self, domain: str = "google.com") -> RatingTier:
+        dom = get_base_domain(domain)
+        if self.dead or self.inactive or self.is_cooling_down(dom):
+            return RatingTier.BLOCKED
+        if dom in ("google.com", "google") and self.dead_for_google:
+            return RatingTier.BLOCKED
+            
+        score = self.proxy_score
+        if dom in ("google.com", "google"):
+            score = (score + self.google_trust_score) / 2.0
+        elif "linkedin" in dom:
+            score = (score + self.linkedin_trust_score) / 2.0
+        else:
+            score = (score + self.generic_trust_score) / 2.0
+            
+        if score >= 85.0 and self.consecutive_failures == 0:
+            return RatingTier.EXCELLENT
+        elif score >= 70.0:
+            return RatingTier.GOOD
+        elif score >= 45.0:
+            return RatingTier.LIMITED
+        elif score >= 15.0:
+            return RatingTier.BAD
+        else:
+            return RatingTier.BLOCKED
+            
     # Track granular stats per provider dynamically
     provider_metrics: Dict[str, Dict[str, Any]] = field(default_factory=lambda: {
         "google": {"successes": 0, "timeouts": 0, "captchas": 0, "total_requests": 0, "latencies": []},
@@ -967,6 +1007,18 @@ class ProxyManager:
             # Apply min reuse interval
             fresh_candidates = [p for p in healthy_candidates if now - p.last_used >= min_reuse]
             final_candidates = fresh_candidates if fresh_candidates else healthy_candidates
+
+            # RatingTier selection
+            rating_buckets: Dict[RatingTier, List[Proxy]] = {}
+            for p in final_candidates:
+                rt = p.get_rating_tier(domain)
+                if rt != RatingTier.BLOCKED:
+                    rating_buckets.setdefault(rt, []).append(p)
+            
+            for rt in [RatingTier.EXCELLENT, RatingTier.GOOD, RatingTier.LIMITED, RatingTier.BAD]:
+                if rating_buckets.get(rt):
+                    final_candidates = rating_buckets[rt]
+                    break
 
             if is_google:
                 # ── Tier-based selection for Google ────────────────────────
