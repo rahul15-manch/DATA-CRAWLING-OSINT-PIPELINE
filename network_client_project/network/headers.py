@@ -19,29 +19,10 @@ class HeaderManager:
             "Upgrade-Insecure-Requests": "1",
             "User-Agent": user_agent,
             "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
-            "Accept-Encoding": "gzip, deflate, br",
-            "Accept-Language": random.choice([
-                "en-US,en;q=0.9",
-                "en-GB,en;q=0.9,en-US;q=0.8",
-                "en-US,en;q=0.9,fr;q=0.8",
-            ]),
+            "Accept-Language": "en-US,en;q=0.9",
         }
 
-    @staticmethod
-    def get_sec_ch_ua_headers(is_mobile: bool = False, chrome_version: str = "121") -> Dict[str, str]:
-        """
-        Generates modern Chromium Client Hint headers.
-        These are mandatory for bypassing Cloudflare and Datadome if you claim to be Chrome.
-        """
-        # The 'Grease' pattern: Browsers intentionally send a randomized brand 
-        # to ensure servers don't hardcode specific browser names.
-        grease_brand = f'"Chromium";v="{chrome_version}", "Not-A.Brand";v="99", "Google Chrome";v="{chrome_version}"'
-        
-        return {
-            "sec-ch-ua": grease_brand,
-            "sec-ch-ua-mobile": "?1" if is_mobile else "?0",
-            "sec-ch-ua-platform": '"Android"' if is_mobile else '"Windows"',
-        }
+
 
     @staticmethod
     def get_sec_fetch_headers(mode: str = "navigate", dest: str = "document", site: str = "none") -> Dict[str, str]:
@@ -54,13 +35,13 @@ class HeaderManager:
         # mode=cors, dest=empty, site=same-origin
         
         headers = {
-            "Sec-Fetch-Site": site,
-            "Sec-Fetch-Mode": mode,
-            "Sec-Fetch-Dest": dest,
+            "sec-fetch-site": site,
+            "sec-fetch-mode": mode,
+            "sec-fetch-dest": dest,
         }
         
         if mode == "navigate":
-            headers["Sec-Fetch-User"] = "?1"
+            headers["sec-fetch-user"] = "?1"
             
         return headers
 
@@ -75,15 +56,9 @@ class HeaderManager:
         headers = self.get_base_headers(user_agent)
         headers["Host"] = domain
 
-        # 2. Modern Chromium Client Hints (Only add if UA contains Chrome)
-        if "Chrome" in user_agent:
-            # Extract major version roughly (e.g. Chrome/121.0.0.0 -> 121)
-            try:
-                version = user_agent.split("Chrome/")[1].split(".")[0]
-            except IndexError:
-                version = "121"
-                
-            headers.update(self.get_sec_ch_ua_headers(is_mobile, version))
+        # Let curl_cffi handle sec-ch-ua, sec-ch-ua-mobile, and sec-ch-ua-platform automatically 
+        # based on its impersonate="chrome124" target. Injecting them manually risks using 
+        # outdated grease formats that don't match the TLS fingerprint.
 
         # 3. Fetch Metadata
         if is_xhr:
@@ -96,10 +71,5 @@ class HeaderManager:
             # Emulate a standard URL bar navigation
             headers.update(self.get_sec_fetch_headers(mode="navigate", dest="document", site="none"))
 
-        # 4. Viewport & Timezone Fingerprint Rotation
-        vw = random.choice([1280, 1366, 1440, 1920])
-        headers["sec-ch-viewport-width"] = str(vw)
-        headers["viewport-width"] = str(vw)
-        headers["sec-ch-timezone-offset"] = random.choice(["-300", "0", "300", "-480"])
 
         return headers

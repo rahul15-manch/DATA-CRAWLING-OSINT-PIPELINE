@@ -1,9 +1,5 @@
 #!/usr/bin/env python3
-"""
-Pillar 2 & 4 — Advanced OSINT & Data Pipeline (Fixed & Complete)
-Resolves SearchResult bugs, implements deep contact recovery (JSON-LD, Schema),
-and multi-registry corporate matching (MCA, OpenCorporates, Companies House, SEC).
-"""
+
 
 import json
 import re
@@ -166,4 +162,4 @@ async def process_pipeline():
     logging.info(f"Pipeline successfully completed! Full OSINT recovery saved to {OUTPUT_FILE}")
 
 if __name__ == "__main__":
-    asyncio.run(process_pipeline())
+    asyncio.run(process_pipeline())g
