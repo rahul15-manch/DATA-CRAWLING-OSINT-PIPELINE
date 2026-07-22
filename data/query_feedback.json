@@ -1490,8 +1490,13 @@
         "unavailable": 0,
         "failures": 0,
         "last_updated": 0.0,
+<<<<<<< HEAD
         "score": 215,
         "queries_run": 77
+=======
+        "score": 203,
+        "queries_run": 65
+>>>>>>> d3a8c8ba2680f52d96dfc46455e62864ed4c1562
     },
     "django development company": {
         "score": 50.0,
@@ -1562,8 +1567,13 @@
         "unavailable": 0,
         "failures": 0,
         "last_updated": 0.0,
+<<<<<<< HEAD
         "score": -59,
         "queries_run": 67
+=======
+        "score": -60,
+        "queries_run": 45
+>>>>>>> d3a8c8ba2680f52d96dfc46455e62864ed4c1562
     },
     "ai outsourcing company -site:wikipedia.org -site:play.google.com -site:apps.apple.com -site:chromewebstore.google.com -site:whatsapp.com": {
         "success": 0,
@@ -2305,6 +2315,7 @@
         "score": -2,
         "queries_run": 1
     },
+<<<<<<< HEAD
     "software developer company 1": {
         "success": 0,
         "zero": 0,
@@ -2365,11 +2376,14 @@
         "score": 6,
         "queries_run": 3
     },
+=======
+>>>>>>> d3a8c8ba2680f52d96dfc46455e62864ed4c1562
     "site:goodfirms.co enterprise software": {
         "success": 0,
         "zero": 0,
         "parser": 0,
         "unavailable": 0,
+<<<<<<< HEAD
         "failures": 0,
         "last_updated": 1784529134.8459535,
         "score": 10,
@@ -2396,11 +2410,20 @@
         "queries_run": 2
     },
     "electronics": {
+=======
+        "failures": 1,
+        "last_updated": 1784546356.6593204,
+        "score": 8,
+        "queries_run": 2
+    },
+    "enterprise software company": {
+>>>>>>> d3a8c8ba2680f52d96dfc46455e62864ed4c1562
         "success": 0,
         "zero": 0,
         "parser": 0,
         "unavailable": 0,
         "failures": 1,
+<<<<<<< HEAD
         "last_updated": 1784533965.584162,
         "score": 32,
         "queries_run": 10
@@ -2454,5 +2477,10 @@
         "last_updated": 0.0,
         "score": 4,
         "queries_run": 2
+=======
+        "last_updated": 1784546373.066414,
+        "score": -2,
+        "queries_run": 1
+>>>>>>> d3a8c8ba2680f52d96dfc46455e62864ed4c1562
     }
 }

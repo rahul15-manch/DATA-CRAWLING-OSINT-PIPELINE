@@ -1,0 +1,35 @@
+{
+  "timestamp": "2026-07-20T16:49:03.596967",
+  "query": "site:goodfirms.co Enterprise Software",
+  "classification": "ENABLE_JS_PAGE",
+  "url": "https://www.google.com/search?q=site%3Agoodfirms.co+Enterprise+Software&num=10&hl=en&gl=us",
+  "status_code": 200,
+  "redirect_chain": [
+    "https://www.google.com/search?q=site%3Agoodfirms.co+Enterprise+Software&num=10&hl=en&gl=us"
+  ],
+  "response_headers": {
+    "content-type": "text/html; charset=UTF-8",
+    "strict-transport-security": "max-age=31536000",
+    "content-security-policy": "object-src 'none';base-uri 'self';script-src 'nonce-HTxV8PXFswKbml64MrzwUg' 'strict-dynamic' 'report-sample' 'unsafe-eval' 'unsafe-inline' https: http:;report-uri https://csp.withgoogle.com/csp/gws/cdt1",
+    "cross-origin-opener-policy": "same-origin-allow-popups; report-to=\"gws\"",
+    "report-to": "{\"group\":\"gws\",\"max_age\":2592000,\"endpoints\":[{\"url\":\"https://csp.withgoogle.com/csp/report-to/gws/cdt1\"}]}",
+    "accept-ch": "Sec-CH-Prefers-Color-Scheme, Downlink, RTT, Sec-CH-UA-Form-Factors, Sec-CH-UA-Platform, Sec-CH-UA-Platform-Version, Sec-CH-UA-Full-Version, Sec-CH-UA-Arch, Sec-CH-UA-Model, Sec-CH-UA-Bitness, Sec-CH-UA-Full-Version-List, Sec-CH-UA-WoW64",
+    "x-content-type-options": "nosniff",
+    "permissions-policy": "unload=()",
+    "p3p": "CP=\"This is not a P3P policy! See g.co/p3phelp for more info.\"",
+    "content-encoding": "br",
+    "date": "Mon, 20 Jul 2026 11:19:02 GMT",
+    "server": "gws",
+    "x-xss-protection": "0",
+    "x-frame-options": "SAMEORIGIN",
+    "expires": "Mon, 20 Jul 2026 11:19:02 GMT",
+    "cache-control": "private",
+    "set-cookie": "__Secure-STRP=ANmZwa0qIzPNjTU9JEPSUqQ7NJdXj4G5_z1Sk9eaUIUaMI06mSopGKN0BtpWjMNydIsfUU5trCPPp_jXdojDXxAksV7HvQvX-g; expires=Mon, 20-Jul-2026 11:24:02 GMT; path=/; domain=.google.com; Secure; SameSite=strict, AEC=AdJVEaukPElT9udX47yMh8eYIsNe-gVoYMkn7q8Z-PsiG3nuPXY60ZNtaJQ; expires=Sat, 16-Jan-2027 11:19:02 GMT; path=/; domain=.google.com; Secure; HttpOnly; SameSite=lax, NID=533=AXYMZWxUtsSNTC4Jgj4OwylRuFlmaPo8Z8YDMunvHfWWiVF5qH_2A4f79zG5NCeBrQN_095L3vqZqHT2Vi34NEk8ASGSMfh5gk9vYNed2wYJ9-xpiGfNvfI9_ikBx8HXYOtmH5FZQi1S2hPbtzHckFx0Fu0AzkbxwIY_mcZ3N6FckjmZGVTpYl2YgnuseL_vaMBiXl_wZq8fNByrVb7S_oIv; expires=Tue, 19-Jan-2027 11:19:02 GMT; path=/; domain=.google.com; Secure; HttpOnly; SameSite=none",
+    "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+  },
+  "layout_fingerprint": "2d776c7f0f4d13d3ca0db766ca6ecf79",
+  "detected_signals": [
+    "/httpservice/retry/enablejs",
+    "enablejs"
+  ]
+}

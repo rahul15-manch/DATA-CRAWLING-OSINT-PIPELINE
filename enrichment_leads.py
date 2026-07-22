@@ -1,8 +1,4 @@
 #!/usr/bin/env python3
-"""
-Pillar 2 — OSINT Stack Integration
-Enrichment Script - Fully Fixed & Optimized for Flowiz Master Pipeline Orchestration
-"""
 
 import json
 import re
@@ -12,17 +8,15 @@ import logging
 from bs4 import BeautifulSoup
 
 try:
-    import whois  # python-whois package
+    import whois
 except ImportError:
     whois = None
 
-# Production File Configuration according to run_pipeline.py conventions
-INPUT_FILE = "output/verified/ai_20260720_110057.json" # Auto-resolved from the stream or your current file
+INPUT_FILE = "output/verified/ai_20260720_110057.json"
 OUTPUT_FILE = "output/enriched/enriched_leads.json"
 REQUEST_TIMEOUT = 6
 CANDIDATE_TLDS = [".com", ".in", ".co.in", ".io", ".org", ".ai"]
 
-# Paid Hunter API Key
 HUNTER_API_KEY = "07efc6bcd50e56afe5f128e524755a96c748a5e6" 
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
@@ -47,7 +41,6 @@ def guess_emails_from_domain(domain: str) -> list:
 
 
 def slugify_company_name(name: str) -> str:
-    """Turn 'Cloud Certitude Pvt Ltd' -> 'cloudcertitude'."""
     if not name: return ""
     name = name.lower()
     name = re.sub(r"\b(pvt|ltd|private|limited|inc|llp|technologies|technology|solutions|services|consulting|group)\b", "", name)
@@ -55,7 +48,6 @@ def slugify_company_name(name: str) -> str:
     return name
 
 async def guess_domain(session: aiohttp.ClientSession, company_name: str):
-    """Parallel domain guessing using async connection pooling."""
     slug = slugify_company_name(company_name)
     if not slug:
         return None, []
@@ -70,14 +62,19 @@ async def guess_domain(session: aiohttp.ClientSession, company_name: str):
         
         try:
             async with session.get(url, timeout=REQUEST_TIMEOUT, allow_redirects=True, headers=headers) as resp:
-                if resp.status < 400:
+                if resp.status < 400 and resp.status != 202:
                     return candidate, tried
+                
+                elif resp.status == 202:
+                    await asyncio.sleep(1.5)
+                    async with session.get(url, timeout=REQUEST_TIMEOUT, allow_redirects=True, headers=headers) as retry_resp:
+                        if retry_resp.status < 400:
+                            return candidate, tried
         except Exception:
             continue
     return None, tried
 
 def whois_lookup(domain: str) -> dict:
-    """WHOIS Lookup - Synchronous execution thread safe wrapper."""
     if whois is None:
         return {"error": "python-whois not installed"}
     try:
@@ -91,27 +88,63 @@ def whois_lookup(domain: str) -> dict:
     except Exception as e:
         return {"error": f"{type(e).__name__}: {e}"}
 
+async def extract_emails_from_web_page(session: aiohttp.ClientSession, domain: str) -> list:
+    emails = set()
+    headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) LeadEnricher/2.0"}
+    paths = ["", "/contact", "/about", "/contact-us", "/about-us"]
+    
+    email_pattern = re.compile(r'[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}')
+
+    for path in paths:
+        url = f"https://{domain}{path}"
+        try:
+            async with session.get(url, timeout=4, allow_redirects=True, headers=headers) as resp:
+                if resp.status == 200:
+                    html = await resp.text()
+                    matches = email_pattern.findall(html)
+                    for email in matches:
+                        if not any(email.lower().endswith(ext) for ext in ['.png', '.jpg', '.jpeg', '.svg', '.gif', '.webp']):
+                            emails.add(email.lower())
+                if len(emails) >= 3:
+                    break
+        except Exception:
+            continue
+            
+    return list(emails)
+
 async def find_emails_via_api(session: aiohttp.ClientSession, domain: str) -> list:
-    """Async Hunter.io email finder hook."""
-    if not HUNTER_API_KEY or "YOUR_HUNTER_API_KEY" in HUNTER_API_KEY:
-        return []
-    
-    url = "https://api.hunter.io/v2/domain-search"
-    params = {"domain": domain, "api_key": HUNTER_API_KEY}
-    
-    try:
-        async with session.get(url, params=params, timeout=REQUEST_TIMEOUT) as resp:
-            if resp.status == 200:
-                data = await resp.json()
-                return [e["value"] for e in data.get("data", {}).get("emails", [])]
-            elif resp.status == 429:
-                logging.warning(f"Hunter.io Rate limit hit for domain {domain}")
-    except Exception:
-        pass
-    return []
+    if HUNTER_API_KEY and "YOUR_HUNTER_API_KEY" not in HUNTER_API_KEY:
+        url = "https://api.hunter.io/v2/domain-search"
+        params = {"domain": domain, "api_key": HUNTER_API_KEY}
+        
+        try:
+            async with session.get(url, params=params, timeout=REQUEST_TIMEOUT) as resp:
+                if resp.status == 200:
+                    data = await resp.json()
+                    emails = [e["value"] for e in data.get("data", {}).get("emails", [])]
+                    if emails:
+                        return emails
+                
+                elif resp.status == 202:
+                    logging.info(f"Hunter.io returned 202 for {domain}. Waiting 2s for completion...")
+                    await asyncio.sleep(2)
+                    async with session.get(url, params=params, timeout=REQUEST_TIMEOUT) as retry_resp:
+                        if retry_resp.status == 200:
+                            data = await retry_resp.json()
+                            emails = [e["value"] for e in data.get("data", {}).get("emails", [])]
+                            if emails:
+                                return emails
+                
+                elif resp.status in (429, 401, 403):
+                    logging.warning(f"Hunter API limit/error hit ({resp.status}) for {domain}. Switching to Web Scraping...")
+                    
+        except Exception as e:
+            logging.debug(f"Hunter API Exception for {domain}: {e}")
+
+    scraped_emails = await extract_emails_from_web_page(session, domain)
+    return scraped_emails
 
 async def fetch_social_profiles(session: aiohttp.ClientSession, company_name: str) -> dict:
-    """OSINT Corporate Registry/Social Matching Method via DuckDuckGo HTML Scraper."""
     profiles = {"linkedin": None, "crunchbase": None}
     if not company_name:
         return profiles
@@ -142,7 +175,6 @@ async def fetch_social_profiles(session: aiohttp.ClientSession, company_name: st
     return profiles
 
 async def corporate_registry_match(session: aiohttp.ClientSession, company_name: str) -> dict:
-    """Global Corporate Registry verification logic (OpenCorporates Integration)."""
     oc_url = f"https://api.opencorporates.com/v0.7/companies/search?q={company_name}"
     try:
         async with session.get(oc_url, timeout=REQUEST_TIMEOUT) as resp:
@@ -163,17 +195,14 @@ async def corporate_registry_match(session: aiohttp.ClientSession, company_name:
     return {"matched": False, "reason": "not_found_in_registries"}
 
 async def enrich_record(session: aiohttp.ClientSession, semaphore: asyncio.Semaphore, rec: dict) -> dict:
-    """Enriches a single record using semaphores to prevent network choking."""
     async with semaphore:
         enrichment = {}
         domain = None
         company_name = rec.get("company_name", "")
 
-        # 1. Social Profile Search
         social_profiles = await fetch_social_profiles(session, company_name)
         enrichment["corporate_social_profiles"] = social_profiles
 
-        # 2. Domain Resolution
         if rec.get("website"):
             domain = re.sub(r"^https?://(www\.)?", "", rec["website"]).split("/")[0]
             enrichment["domain_source"] = "existing_website"
@@ -185,7 +214,6 @@ async def enrich_record(session: aiohttp.ClientSession, semaphore: asyncio.Semap
                 enrichment["domain_source"] = "guessed_and_verified"
                 enrichment["discovered_website"] = f"https://{guessed}"
 
-        # 3. Deep Identity Extraction (WHOIS, Hunter API, and Registries)
         if domain:
             enrichment["whois"] = await asyncio.to_thread(whois_lookup, domain)
             api_emails = await find_emails_via_api(session, domain)
@@ -199,19 +227,15 @@ async def enrich_record(session: aiohttp.ClientSession, semaphore: asyncio.Semap
         return rec
 
 async def process_bulk_leads():
-    """Flawless Master-Pipeline Coordinator supporting Dynamic Naming Stacks."""
     import os
     import sys
 
-    # 1. Dynamic File Resolution based on run_pipeline.py arguments
     if len(sys.argv) > 1:
         target_input = sys.argv[1]
-        # Dynamically map output naming matrix to match run_pipeline orchestration
         base_name = os.path.basename(target_input)
         global OUTPUT_FILE
         OUTPUT_FILE = os.path.join("output", "enriched", base_name)
     else:
-        # Standalone manual fallback layout
         target_input = INPUT_FILE
         if not os.path.exists(target_input) and os.path.exists("output/verified"):
             files = [os.path.join("output/verified", f) for f in os.listdir("output/verified") if f.endswith(".json")]
@@ -228,7 +252,6 @@ async def process_bulk_leads():
     with open(target_input, "r", encoding="utf-8") as fh:
         records = json.load(fh)
 
-    # Prevent execution on empty datasets gracefully without throwing FileNotFoundError downstream
     if not records:
         logging.warning("Empty records context received. Pre-seeding structure for pipeline continuum.")
         enriched = []
@@ -239,7 +262,6 @@ async def process_bulk_leads():
             tasks = [enrich_record(session, semaphore, rec) for rec in records]
             enriched = await asyncio.gather(*tasks)
 
-    # Ensure output tree infrastructure exists
     out_dir = os.path.dirname(OUTPUT_FILE)
     if out_dir:
         os.makedirs(out_dir, exist_ok=True)
