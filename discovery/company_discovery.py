@@ -862,8 +862,8 @@ def discover_companies(keyword: str) -> list:
     7. Update stats_tracker throughout.
     """
     # ── Priority Queue Scheduler Integration ──────────────────────────────────
-    from pillar3_network_resilience.network.scheduler import Scheduler
-    from pillar3_network_resilience.network.middleware.base import Request
+    from pillar3.network.scheduler import Scheduler
+    from pillar3.network.middleware.base import Request
     task_iterator = generate_search_tasks(keyword)
 
     from search.manager import get_search_manager

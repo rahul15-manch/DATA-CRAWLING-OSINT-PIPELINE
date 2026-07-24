@@ -412,7 +412,7 @@ class SearchManager:
         self._last_diag.retry_count = None
         self._last_diag.retry_reasons = []
 
-        from pillar3_network_resilience.network import signals
+        from pillar3.network import signals
 
         def _on_request_completed(request, response):
             self._last_diag.status_code = getattr(response, "status_code", 200)

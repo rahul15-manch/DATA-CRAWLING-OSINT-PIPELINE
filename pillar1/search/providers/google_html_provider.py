@@ -9,8 +9,8 @@ from datetime import datetime
 from urllib.parse import parse_qs, quote_plus, urlparse
 from bs4 import BeautifulSoup
 
-from pillar3_network_resilience.network import NetworkClient
-from pillar3_network_resilience.network.exceptions import NetworkClientError
+from pillar3.network import NetworkClient
+from pillar3.network.exceptions import NetworkClientError
 from search.exceptions import (
     ProviderParseError, ProviderUnavailable,
     CaptchaDetectedError, EnableJSDetectedError,
@@ -21,7 +21,7 @@ from search.google_parser_registry import GoogleParserRegistry
 from search.search_validator import SearchValidationResult
 from search.provider_base import Capabilities, SearchProvider
 from search.result import SearchResult
-from pillar3_network_resilience.network.middleware.base import Request
+from pillar3.network.middleware.base import Request
 
 _SKIP_DOMAINS = frozenset({
     "google.com", "google.co.in", "google.co.uk",

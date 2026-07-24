@@ -1,4 +1,4 @@
-from pillar3_network_resilience.network.proxy_manager import Proxy
+from pillar3.network.proxy_manager import Proxy
 
 
 def test_proxy_tracks_provider_capabilities():

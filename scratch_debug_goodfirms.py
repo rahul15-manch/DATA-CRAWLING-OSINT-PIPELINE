@@ -1,7 +1,7 @@
 import sys
 sys.path.append('.')
-from pillar3_network_resilience.network.client import NetworkClient
-from pillar3_network_resilience.network.middleware.base import Request
+from pillar3.network.client import NetworkClient
+from pillar3.network.middleware.base import Request
 
 client = NetworkClient()
 url = "https://www.goodfirms.co/artificial-intelligence/prompt-engineering"

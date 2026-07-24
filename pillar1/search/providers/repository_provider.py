@@ -4,7 +4,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from search.provider_base import SearchProvider, Capabilities
 from search.result import SearchResult
 from search.exceptions import ProviderUnavailable
-from pillar3_network_resilience.network.middleware.base import Request
+from pillar3.network.middleware.base import Request
 from search.providers.directory_provider import _build_query_candidates
 
 logger = logging.getLogger(__name__)
@@ -26,7 +26,7 @@ class RepositoryProvider(SearchProvider):
         else:
             query = request_or_query
 
-        from pillar3_network_resilience.network.client import get_network_client
+        from pillar3.network.client import get_network_client
         client = get_network_client()
         results = []
         seen_urls: set[str] = set()

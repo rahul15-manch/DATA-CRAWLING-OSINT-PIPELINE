@@ -7,7 +7,7 @@ from search.search_validator import SearchValidationResult
 from search.result import SearchResult
 from search.google_response_classifier import classify_google_response
 from search.google_parser_registry import GoogleParserRegistry
-from pillar3_network_resilience.network.middleware.base import Request
+from pillar3.network.middleware.base import Request
 import time
 
 class BrightDataProvider(GoogleHtmlProvider):

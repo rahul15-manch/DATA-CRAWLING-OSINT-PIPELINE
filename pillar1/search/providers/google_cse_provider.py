@@ -41,12 +41,12 @@ from __future__ import annotations
 import time
 
 import config
-from pillar3_network_resilience.network import NetworkClient
-from pillar3_network_resilience.network.exceptions import NetworkClientError
+from pillar3.network import NetworkClient
+from pillar3.network.exceptions import NetworkClientError
 from search.exceptions import ProviderUnavailable
 from search.provider_base import Capabilities, SearchProvider
 from search.result import SearchResult
-from pillar3_network_resilience.network.middleware.base import Request
+from pillar3.network.middleware.base import Request
 
 
 class GoogleCseProvider(SearchProvider):

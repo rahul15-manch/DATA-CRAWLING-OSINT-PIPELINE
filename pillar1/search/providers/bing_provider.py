@@ -15,12 +15,12 @@ from urllib.parse import parse_qs, quote_plus, urlparse
 from bs4 import BeautifulSoup
 
 import config
-from pillar3_network_resilience.network.client import get_network_client
+from pillar3.network.client import get_network_client
 from search.exceptions import ProviderUnavailable, ProviderParseError
 from search.provider_base import Capabilities, SearchProvider
 from search.result import SearchResult
 from search.search_validator import validate_search_response
-from pillar3_network_resilience.network.middleware.base import Request
+from pillar3.network.middleware.base import Request
 
 logger = logging.getLogger(__name__)
 

@@ -1,6 +1,6 @@
 import logging
 from typing import List, Callable, Optional, Any
-from pillar3_network_resilience.network import signals
+from pillar3.network import signals
 
 logger = logging.getLogger(__name__)
 
