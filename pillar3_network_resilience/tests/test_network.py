@@ -2,11 +2,11 @@ import pytest
 import time
 from unittest.mock import patch, MagicMock
 
-from network_client_project.network.config import config
-from network_client_project.network.proxy_manager import ProxyManager
-from network_client_project.network.user_agents import UserAgentManager
-from network_client_project.network.headers import HeaderManager
-from network_client_project.network.client import NetworkClient
+from pillar3_network_resilience.network.config import config
+from pillar3_network_resilience.network.proxy_manager import ProxyManager
+from pillar3_network_resilience.network.user_agents import UserAgentManager
+from pillar3_network_resilience.network.headers import HeaderManager
+from pillar3_network_resilience.network.client import NetworkClient
 
 def test_proxy_rotation_on_failure():
     """Test that a sticky session rotates to a new proxy if the current one fails."""
@@ -48,7 +48,7 @@ def test_user_agent_rotation():
     ua_chrome = ua_manager.get_chrome_desktop()
     assert "Chrome/124" in ua_chrome
 
-@patch('network_client_project.network.session_manager.requests.Session')
+@patch('pillar3_network_resilience.network.session_manager.requests.Session')
 def test_ssl_verification_config(mock_session_class):
     """Test that the VERIFY_SSL config is correctly applied."""
     client = NetworkClient()
@@ -83,7 +83,7 @@ def test_browser_header_generation():
     assert "Connection" in headers
     assert "Accept" in headers
 
-@patch('network_client_project.network.session_manager.requests.Session')
+@patch('pillar3_network_resilience.network.session_manager.requests.Session')
 def test_retry_after_proxy_failure(mock_session_class):
     """Test that the NetworkClient retries and requests a fresh proxy on network failure."""
     client = NetworkClient()
@@ -104,7 +104,7 @@ def test_retry_after_proxy_failure(mock_session_class):
     client.session_manager.get_or_create_session = MagicMock(return_value=mock_session)
     
     # Mock error detector so it doesn't trigger WAF
-    from network_client_project.network.exceptions import ErrorDetector
+    from pillar3_network_resilience.network.exceptions import ErrorDetector
     with patch.object(ErrorDetector, 'detect_waf_or_captcha', return_value=None):
         response = client.get("https://example.com", session_id="test_retry")
         assert response.status_code == 200

@@ -98,7 +98,7 @@ def _get_domain_budget_state(domain: str):
 
 def _penalise_proxy(proxy_url: str, canonical_url: str):
     try:
-        from network_client_project.network.proxy_manager import get_proxy_manager
+        from pillar3_network_resilience.network.proxy_manager import get_proxy_manager
         from urllib.parse import urlparse as _up
         pm = get_proxy_manager()
         proxy_obj = pm.get_proxy_by_url(proxy_url)
@@ -114,9 +114,9 @@ def fetch_page(url: str):
     Fetch a page's public HTML via a plain GET using NetworkClient.
     Applies RobotsChecker compliance, canonicalization, crawl budget, and duplicate content hashing.
     """
-    from network_client_project.network import NetworkClient
-    from network_client_project.network.robots import RobotsChecker
-    from network_client_project.network.frontier import get_frontier
+    from pillar3_network_resilience.network import NetworkClient
+    from pillar3_network_resilience.network.robots import RobotsChecker
+    from pillar3_network_resilience.network.frontier import get_frontier
 
     frontier = get_frontier()
     robots_checker = RobotsChecker()

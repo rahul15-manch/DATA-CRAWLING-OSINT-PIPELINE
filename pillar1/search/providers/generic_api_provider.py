@@ -37,12 +37,12 @@ import time
 from typing import Any
 
 import config
-from network_client_project.network import NetworkClient
-from network_client_project.network.exceptions import NetworkClientError
+from pillar3_network_resilience.network import NetworkClient
+from pillar3_network_resilience.network.exceptions import NetworkClientError
 from search.exceptions import ProviderUnavailable
 from search.provider_base import Capabilities, SearchProvider
 from search.result import SearchResult
-from network_client_project.network.middleware.base import Request
+from pillar3_network_resilience.network.middleware.base import Request
 
 
 class GenericApiProvider(SearchProvider):

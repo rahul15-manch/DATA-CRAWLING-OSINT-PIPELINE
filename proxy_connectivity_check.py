@@ -35,8 +35,8 @@ except ImportError:
 # ─────────────────────────────────────────────────────────────────────────────
 header("CHECK 2 — Network Client Import")
 try:
-    from network_client_project.network import NetworkClient
-    from network_client_project.network.config import config
+    from pillar3_network_resilience.network import NetworkClient
+    from pillar3_network_resilience.network.config import config
     ok("NetworkClient imported successfully")
     ok(f"VERIFY_SSL  : {config.VERIFY_SSL}")
     ok(f"MIN_DELAY   : {config.MIN_DELAY}s  MAX_DELAY: {config.MAX_DELAY}s")

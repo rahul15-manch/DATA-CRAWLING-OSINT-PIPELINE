@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 from search.provider_base import SearchProvider, Capabilities
 from search.result import SearchResult
 from search.exceptions import ProviderUnavailable, ProviderParseError
-from network_client_project.network.middleware.base import Request
+from pillar3_network_resilience.network.middleware.base import Request
 
 class DuckDuckGoProvider(SearchProvider):
     name = "duckduckgo"
@@ -30,7 +30,7 @@ class DuckDuckGoProvider(SearchProvider):
             raise ProviderUnavailable(self.name, f"DuckDuckGo cooling down for {remaining}s after anti-bot response")
 
         url = "https://lite.duckduckgo.com/lite/"
-        from network_client_project.network.client import get_network_client
+        from pillar3_network_resilience.network.client import get_network_client
         client = get_network_client()
         
         for attempt in range(2):

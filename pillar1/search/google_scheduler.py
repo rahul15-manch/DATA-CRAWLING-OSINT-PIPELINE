@@ -3,7 +3,7 @@ import time
 import random
 import logging
 from collections import deque
-from network_client_project.network.proxy_health import OutcomeType
+from pillar3_network_resilience.network.proxy_health import OutcomeType
 from typing import List
 from concurrent.futures import ThreadPoolExecutor
 import config

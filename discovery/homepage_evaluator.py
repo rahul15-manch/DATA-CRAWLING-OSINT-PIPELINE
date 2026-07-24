@@ -8,8 +8,8 @@ Scans DOM for business signals.
 
 import time
 from bs4 import BeautifulSoup
-from network_client_project.network.client import NetworkClient
-from network_client_project.network.middleware.base import Request
+from pillar3_network_resilience.network.client import NetworkClient
+from pillar3_network_resilience.network.middleware.base import Request
 from curl_cffi.requests.exceptions import RequestException
 
 # Initialize a separate client instance if needed, or use a global one

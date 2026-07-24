@@ -6,7 +6,7 @@ from urllib.parse import quote_plus
 from search.provider_base import SearchProvider, Capabilities
 from search.result import SearchResult
 from search.exceptions import ProviderUnavailable, ProviderParseError
-from network_client_project.network.middleware.base import Request
+from pillar3_network_resilience.network.middleware.base import Request
 import config
 
 logger = logging.getLogger(__name__)
@@ -57,7 +57,7 @@ class BraveProvider(SearchProvider):
             if page > 0:
                 url += f"&offset={page * max_results}"
             
-            from network_client_project.network.client import get_network_client
+            from pillar3_network_resilience.network.client import get_network_client
             client = get_network_client()
             
             try:
@@ -106,7 +106,7 @@ class BraveProvider(SearchProvider):
         if page > 0:
             url += f"&offset={page}" # Brave HTML offset
             
-        from network_client_project.network.client import get_network_client
+        from pillar3_network_resilience.network.client import get_network_client
         client = get_network_client()
 
         for attempt in range(1, 3):

@@ -1,6 +1,6 @@
 import logging
 from typing import Dict, Any, List
-from network_client_project.network import signals
+from pillar3_network_resilience.network import signals
 
 logger = logging.getLogger(__name__)
 
@@ -35,7 +35,7 @@ class ProxyStatsTracker:
         stats = self.stats[proxy_url]
         stats["requests"] += 1
         
-        from network_client_project.network.exceptions import ErrorDetector
+        from pillar3_network_resilience.network.exceptions import ErrorDetector
         waf_error = ErrorDetector.detect_waf_or_captcha(response)
         if waf_error:
             stats["failures"] += 1

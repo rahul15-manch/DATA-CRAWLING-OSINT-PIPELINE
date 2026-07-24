@@ -31,7 +31,7 @@ from abc import ABC, abstractmethod
 from dataclasses import dataclass
 
 from search.result import SearchResult
-from network_client_project.network.middleware.base import Request
+from pillar3_network_resilience.network.middleware.base import Request
 
 
 @dataclass(frozen=True)

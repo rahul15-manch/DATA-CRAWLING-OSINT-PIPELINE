@@ -1,14 +1,14 @@
 """Quick smoke tests for the proxy health module."""
 import time
 from collections import deque
-from network_client_project.network.proxy_health import (
+from pillar3_network_resilience.network.proxy_health import (
     OutcomeType, GoogleTier,
     freshness_factor, aging_decay, compute_google_tier,
     compute_google_confidence, combined_confidence,
     recent_success_ratio, avg_latency, compute_derived_score,
     quarantine_duration, DerivedScoreCache,
 )
-from network_client_project.network.proxy_manager import Proxy
+from pillar3_network_resilience.network.proxy_manager import Proxy
 
 def test_freshness_decay():
     now = time.time()

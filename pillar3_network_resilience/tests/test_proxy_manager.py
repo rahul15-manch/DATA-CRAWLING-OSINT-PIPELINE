@@ -1,6 +1,6 @@
 import pytest
 import time
-from network_client_project.network.proxy_manager import ProxyManager, Proxy, get_proxy_manager
+from pillar3_network_resilience.network.proxy_manager import ProxyManager, Proxy, get_proxy_manager
 
 @pytest.fixture
 def proxy_manager():

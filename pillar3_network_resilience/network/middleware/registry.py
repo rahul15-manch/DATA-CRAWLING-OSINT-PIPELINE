@@ -11,7 +11,7 @@ class MiddlewareRegistryClass(BaseRegistry):
         scan_dir = os.path.dirname(__file__)
         super().__init__(
             base_class=BaseMiddleware,
-            module_prefix="network_client_project.network.middleware",
+            module_prefix="pillar3_network_resilience.network.middleware",
             scan_path=scan_dir
         )
 

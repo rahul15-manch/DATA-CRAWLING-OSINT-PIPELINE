@@ -2,7 +2,7 @@ import time
 import pytest
 from unittest.mock import MagicMock, patch
 from extraction.page_extractor import fetch_page, _domain_cooldowns, _domain_consecutive_blocks
-from network_client_project.network.proxy_manager import Proxy
+from pillar3_network_resilience.network.proxy_manager import Proxy
 
 def test_domain_circuit_breaker():
     # Clear circuit breaker state
@@ -10,7 +10,7 @@ def test_domain_circuit_breaker():
     _domain_cooldowns.clear()
     
     # Mock NetworkClient to always fail with a non-HTML or block status
-    with patch("network_client_project.network.NetworkClient") as mock_client_cls:
+    with patch("pillar3_network_resilience.network.NetworkClient") as mock_client_cls:
         mock_client = mock_client_cls.return_value
         mock_resp = MagicMock()
         mock_resp.status_code = 403

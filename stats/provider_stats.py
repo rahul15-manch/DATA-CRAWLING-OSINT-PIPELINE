@@ -1,8 +1,8 @@
 import logging
 import numpy as np
 from typing import Dict, Any
-from network_client_project.network import signals
-from network_client_project.network.exceptions import ErrorDetector
+from pillar3_network_resilience.network import signals
+from pillar3_network_resilience.network.exceptions import ErrorDetector
 
 logger = logging.getLogger(__name__)
 

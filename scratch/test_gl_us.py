@@ -1,6 +1,6 @@
 import sys
 sys.path.insert(0, ".")
-from network_client_project.network.client import NetworkClient
+from pillar3_network_resilience.network.client import NetworkClient
 
 def test():
     client = NetworkClient()

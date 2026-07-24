@@ -5,7 +5,7 @@ from abc import ABC, abstractmethod
 from typing import List, Dict, Any, Optional
 
 from search.base_registry import BaseRegistry
-from network_client_project.network import signals
+from pillar3_network_resilience.network import signals
 
 logger = logging.getLogger(__name__)
 

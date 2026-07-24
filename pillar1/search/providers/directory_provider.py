@@ -9,7 +9,7 @@ from concurrent.futures import ThreadPoolExecutor
 
 from search.provider_base import SearchProvider, Capabilities
 from search.result import SearchResult
-from network_client_project.network.middleware.base import Request
+from pillar3_network_resilience.network.middleware.base import Request
 
 logger = logging.getLogger(__name__)
 
@@ -285,7 +285,7 @@ class DirectoryProvider(SearchProvider):
         else:
             query = request_or_query
 
-        from network_client_project.network.client import get_network_client
+        from pillar3_network_resilience.network.client import get_network_client
         client = get_network_client()
         results = []
         seen_urls: set[str] = set()
