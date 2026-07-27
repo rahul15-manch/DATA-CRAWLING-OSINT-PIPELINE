@@ -8028,3 +8028,328 @@ NameError: name 'Dict' is not defined. Did you mean: 'dict'?
 2026-07-21 22:39:42 | WARNING  | ThreadPoolExecutor-1_0 | network_client_project.network.middleware.retry | [Retry] Retrying query https://kaymo.com/pages/service-centers (attempt 1/3) after 15.00s delay due to: 429 Rate Limit (Same Proxy).
 2026-07-21 22:39:59 | WARNING  | ThreadPoolExecutor-1_0 | network_client_project.network.middleware.retry | [Retry] Global deadline exceeded (0.0s remaining). Aborting retry loop for https://kaymo.com/pages/service-centers
 2026-07-21 22:39:59 | WARNING  | ThreadPoolExecutor-1_0 | network_client_project.network.middleware.throttle | [AutoThrottle] 429 Rate Limit hit on kaymo.com. Reducing rate: 0.20 rps -> 0.08 rps.
+2026-07-22 14:25:11 | ERROR    | MainThread | search.base_registry | Failed to load module search.providers.linkedin_playwright_provider: name 'Dict' is not defined
+Traceback (most recent call last):
+  File "C:\Users\yasha\Downloads\pillar1\pillar1\search\base_registry.py", line 51, in load_plugins
+    module = importlib.import_module(full_module_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yasha\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "C:\Users\yasha\Downloads\pillar1\pillar1\search\providers\linkedin_playwright_provider.py", line 16, in <module>
+    from pillar1.browser.browser_manager import get_browser_manager
+  File "C:\Users\yasha\Downloads\pillar1\pillar1\browser\browser_manager.py", line 6, in <module>
+    from pillar1.browser.browser_pool import BrowserPool
+  File "C:\Users\yasha\Downloads\pillar1\pillar1\browser\browser_pool.py", line 13, in <module>
+    from pillar1.browser.browser_instance import BrowserInstance
+  File "C:\Users\yasha\Downloads\pillar1\pillar1\browser\browser_instance.py", line 10, in <module>
+    class BrowserInstance:
+  File "C:\Users\yasha\Downloads\pillar1\pillar1\browser\browser_instance.py", line 249, in BrowserInstance
+    def get_recycled_context_options(self) -> Dict[str, Any]:
+                                              ^^^^
+NameError: name 'Dict' is not defined. Did you mean: 'dict'?
+2026-07-22 14:25:11 | ERROR    | MainThread | search.base_registry | Failed to load module search.providers.playwright_google_provider: name 'Dict' is not defined
+Traceback (most recent call last):
+  File "C:\Users\yasha\Downloads\pillar1\pillar1\search\base_registry.py", line 51, in load_plugins
+    module = importlib.import_module(full_module_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yasha\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "C:\Users\yasha\Downloads\pillar1\pillar1\search\providers\playwright_google_provider.py", line 17, in <module>
+    from pillar1.browser.browser_manager import get_browser_manager
+  File "C:\Users\yasha\Downloads\pillar1\pillar1\browser\browser_manager.py", line 6, in <module>
+    from pillar1.browser.browser_pool import BrowserPool
+  File "C:\Users\yasha\Downloads\pillar1\pillar1\browser\browser_pool.py", line 13, in <module>
+    from pillar1.browser.browser_instance import BrowserInstance
+  File "C:\Users\yasha\Downloads\pillar1\pillar1\browser\browser_instance.py", line 10, in <module>
+    class BrowserInstance:
+  File "C:\Users\yasha\Downloads\pillar1\pillar1\browser\browser_instance.py", line 249, in BrowserInstance
+    def get_recycled_context_options(self) -> Dict[str, Any]:
+                                              ^^^^
+NameError: name 'Dict' is not defined. Did you mean: 'dict'?
+2026-07-22 14:25:21 | WARNING  | ThreadPoolExecutor-0_0 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 34.87.80.221:30000 -> Google 429 (15min cooldown)
+2026-07-22 14:25:21 | WARNING  | ThreadPoolExecutor-0_2 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 217.182.203.184:8888 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-22 14:25:24 | WARNING  | GoogleSchedulerWorker_0 | network_client_project.network.middleware.retry | [Retry] Retrying query https://www.google.com/search?q=Electronics+Manufacturing+software+company&num=10&hl=en&gl=us (attempt 1/1) after 0.10s delay due to: Timeout (Failed to perform, curl: (28) Connection timed out after 8011 milliseconds. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.).
+2026-07-22 14:25:24 | WARNING  | ThreadPoolExecutor-0_3 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 181.39.25.196:8118 -> Google 429 (15min cooldown)
+2026-07-22 14:25:27 | ERROR    | GoogleSchedulerWorker_0 | search.google_scheduler | [GoogleScheduler] All 1 retries failed for: 'Electronics Manufacturing software company'
+2026-07-22 14:25:35 | WARNING  | ThreadPoolExecutor-0_4 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 52.67.38.58:3128 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-22 14:25:52 | WARNING  | ThreadPoolExecutor-2_0 | network_client_project.network.middleware.retry | [Retry] Retrying query https://caisoft.com/industries/electronics-manufacturing-software (attempt 1/3) after 2.61s delay due to: Exception (WAF CAPTCHA/403 block).
+2026-07-22 14:25:54 | WARNING  | ThreadPoolExecutor-2_1 | network_client_project.network.middleware.retry | [Retry] Retrying query https://slashdot.org/software/electronics-manufacturing (attempt 1/3) after 3.04s delay due to: Exception (WAF CAPTCHA/403 block).
+2026-07-22 14:26:02 | WARNING  | ThreadPoolExecutor-2_1 | network_client_project.network.middleware.retry | [Retry] Retrying query https://slashdot.org/software/electronics-manufacturing (attempt 2/3) after 4.60s delay due to: Exception (WAF CAPTCHA/403 block).
+2026-07-22 14:26:07 | WARNING  | ThreadPoolExecutor-2_0 | network_client_project.network.middleware.retry | [Retry] Retrying query https://caisoft.com/industries/electronics-manufacturing-software (attempt 2/3) after 0.10s delay due to: Timeout (Failed to perform, curl: (28) Operation timed out after 10009 milliseconds with 0 bytes received. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.).
+2026-07-22 14:26:10 | WARNING  | ThreadPoolExecutor-2_0 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 181.39.25.196:8118 marked DEAD after 7 failures.
+2026-07-22 14:26:12 | WARNING  | ThreadPoolExecutor-2_0 | network_client_project.network.middleware.retry | [Retry] Retrying query https://caisoft.com/industries/electronics-manufacturing-software (attempt 1/3) after 2.87s delay due to: Exception (WAF CAPTCHA/403 block).
+2026-07-22 14:26:18 | WARNING  | ThreadPoolExecutor-2_1 | network_client_project.network.middleware.retry | [Retry] Query time budget exceeded (15.0s) for https://slashdot.org/software/electronics-manufacturing
+2026-07-22 14:26:21 | WARNING  | ThreadPoolExecutor-2_1 | network_client_project.network.middleware.retry | [Retry] Retrying query https://slashdot.org/software/electronics-manufacturing (attempt 1/3) after 3.04s delay due to: Exception (WAF CAPTCHA/403 block).
+2026-07-22 14:26:26 | WARNING  | ThreadPoolExecutor-2_0 | network_client_project.network.middleware.retry | [Retry] Retrying query https://caisoft.com/industries/electronics-manufacturing-software (attempt 2/3) after 0.10s delay due to: Timeout (Failed to perform, curl: (28) Connection timed out after 10005 milliseconds. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.).
+2026-07-22 14:26:36 | WARNING  | ThreadPoolExecutor-2_1 | network_client_project.network.middleware.retry | [Retry] Retrying query https://slashdot.org/software/electronics-manufacturing (attempt 2/3) after 0.10s delay due to: Timeout (Failed to perform, curl: (28) Connection timed out after 10008 milliseconds. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.).
+2026-07-22 14:26:38 | WARNING  | ThreadPoolExecutor-2_1 | network_client_project.network.middleware.retry | [Retry] Retrying query https://slashdot.org/software/electronics-manufacturing (attempt 1/3) after 3.32s delay due to: Exception (WAF CAPTCHA/403 block).
+2026-07-22 14:26:39 | WARNING  | ThreadPoolExecutor-2_0 | network_client_project.network.middleware.retry | [Retry] Query time budget exceeded (15.0s) for https://caisoft.com/industries/electronics-manufacturing-software
+2026-07-22 14:26:42 | WARNING  | ThreadPoolExecutor-2_0 | network_client_project.network.middleware.retry | [Retry] Retrying query https://caisoft.com/industries/electronics-manufacturing-software (attempt 1/3) after 3.11s delay due to: Exception (WAF CAPTCHA/403 block).
+2026-07-22 14:26:53 | WARNING  | ThreadPoolExecutor-2_1 | network_client_project.network.middleware.retry | [Retry] Global deadline exceeded (0.0s remaining). Aborting retry loop for https://slashdot.org/software/electronics-manufacturing
+2026-07-22 14:26:53 | WARNING  | ThreadPoolExecutor-2_1 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 34.87.80.221:30000 marked DEAD after 8 failures.
+2026-07-22 14:26:59 | WARNING  | ThreadPoolExecutor-2_0 | network_client_project.network.middleware.retry | [Retry] Global deadline exceeded (0.0s remaining). Aborting retry loop for https://caisoft.com/industries/electronics-manufacturing-software
+2026-07-22 14:26:59 | WARNING  | ThreadPoolExecutor-2_0 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 34.87.80.221:30000 marked DEAD after 9 failures.
+2026-07-22 14:46:01 | WARNING  | ThreadPoolExecutor-0_1 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 47.81.56.193:8888 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-22 14:46:02 | WARNING  | ThreadPoolExecutor-0_3 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 181.39.25.196:8118 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-22 14:46:03 | WARNING  | ThreadPoolExecutor-0_2 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 217.182.203.184:8888 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-22 14:46:06 | WARNING  | ThreadPoolExecutor-2_0 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 34.87.80.221:30000 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-22 14:46:06 | WARNING  | ThreadPoolExecutor-2_0 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 47.81.56.193:8888 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-22 14:46:06 | WARNING  | ThreadPoolExecutor-2_2 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 217.182.203.184:8888 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-22 14:46:06 | WARNING  | ThreadPoolExecutor-2_0 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 181.39.25.196:8118 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-22 14:46:06 | WARNING  | ThreadPoolExecutor-2_1 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 52.67.38.58:3128 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-22 14:46:06 | WARNING  | ThreadPoolExecutor-2_3 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 34.134.231.117:3129 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-22 14:46:06 | WARNING  | ThreadPoolExecutor-2_4 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 1.1.1.1 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-22 14:46:06 | WARNING  | ThreadPoolExecutor-2_2 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 2.2.2.2 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-22 14:46:07 | WARNING  | MainThread | network_client_project.network.middleware.retry | [Retry] Retrying query https://example.com (attempt 1/3) after 3.20s delay due to: RequestException (Network Error).
+2026-07-22 14:46:08 | WARNING  | ThreadPoolExecutor-0_5 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 34.134.231.117:3129 -> Google HTTP <MagicMock name='Session().__enter__().request().status_code' id='2690971586096'>
+2026-07-22 14:46:08 | WARNING  | ThreadPoolExecutor-0_4 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 52.67.38.58:3128 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-22 14:46:08 | WARNING  | ThreadPoolExecutor-0_0 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 34.87.80.221:30000 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-22 14:46:08 | WARNING  | ThreadPoolExecutor-1_1 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 2.2.2.2 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-22 14:46:08 | WARNING  | ThreadPoolExecutor-1_0 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 1.1.1.1 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-22 14:46:38 | WARNING  | ThreadPoolExecutor-3_1 | network_client_project.network.proxy_manager | [ProxyManager] Proxy http://user:pass@2.2.2.2:8000 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-22 14:46:38 | WARNING  | ThreadPoolExecutor-3_2 | network_client_project.network.proxy_manager | [ProxyManager] Proxy http://user:pass@3.3.3.3:8000 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-22 14:46:38 | WARNING  | ThreadPoolExecutor-3_0 | network_client_project.network.proxy_manager | [ProxyManager] Proxy http://user:pass@1.1.1.1:8000 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-22 14:46:38 | WARNING  | ThreadPoolExecutor-4_2 | network_client_project.network.proxy_manager | [ProxyManager] Proxy http://user:pass@3.3.3.3:8000 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-22 14:46:38 | WARNING  | ThreadPoolExecutor-4_1 | network_client_project.network.proxy_manager | [ProxyManager] Proxy http://user:pass@2.2.2.2:8000 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-22 14:46:38 | WARNING  | ThreadPoolExecutor-4_0 | network_client_project.network.proxy_manager | [ProxyManager] Proxy http://user:pass@1.1.1.1:8000 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-22 14:46:38 | WARNING  | ThreadPoolExecutor-5_0 | network_client_project.network.proxy_manager | [ProxyManager] Proxy http://user:pass@1.1.1.1:8000 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-22 14:46:38 | WARNING  | ThreadPoolExecutor-5_2 | network_client_project.network.proxy_manager | [ProxyManager] Proxy http://user:pass@3.3.3.3:8000 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-22 14:46:38 | WARNING  | ThreadPoolExecutor-5_1 | network_client_project.network.proxy_manager | [ProxyManager] Proxy http://user:pass@2.2.2.2:8000 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-22 14:46:38 | WARNING  | ThreadPoolExecutor-6_1 | network_client_project.network.proxy_manager | [ProxyManager] Proxy http://user:pass@2.2.2.2:8000 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-22 14:46:38 | WARNING  | ThreadPoolExecutor-6_0 | network_client_project.network.proxy_manager | [ProxyManager] Proxy http://user:pass@1.1.1.1:8000 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-22 14:46:38 | WARNING  | ThreadPoolExecutor-6_2 | network_client_project.network.proxy_manager | [ProxyManager] Proxy http://user:pass@3.3.3.3:8000 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-22 14:47:41 | WARNING  | MainThread | pillar1.browser | [BrowserCircuitBreaker] CAPTCHA threshold reached for 'test_provider'. Tripping circuit breaker. Cooldown active for 1.0s.
+2026-07-22 14:47:42 | WARNING  | MainThread | pillar1.browser | [BrowserPool] Connection policy is 'proxy_only' for provider 'playwright_google', but no healthy proxies are available. Aborting browser launch to prevent direct connection.
+2026-07-22 14:47:42 | WARNING  | MainThread | search.manager | [SearchManager] google_html failure score reached 12.0. Tripping breaker to OPEN.
+2026-07-22 14:47:42 | WARNING  | MainThread | search.manager | [SearchManager] google_html failed probe query (Reason: Probe query failure). Tripping breaker back to OPEN.
+2026-07-22 14:47:43 | WARNING  | MainThread | utils.budget_manager | [ProviderBudgetManager] Blocked Google Search: remaining budget too low (10.0s remaining), minimum required fallback budget is 18.0s.
+2026-07-22 14:51:49 | WARNING  | MainThread | utils.budget_manager | [ProviderBudgetManager] Blocked Google Search: remaining budget too low (10.0s remaining), minimum required fallback budget is 18.0s.
+2026-07-22 14:51:57 | WARNING  | ThreadPoolExecutor-0_3 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 181.39.25.196:8118 -> Google 429 (15min cooldown)
+2026-07-22 14:51:59 | WARNING  | ThreadPoolExecutor-0_2 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 217.182.203.184:8888 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-22 14:52:13 | WARNING  | ThreadPoolExecutor-0_5 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 34.134.231.117:3129 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-22 14:52:13 | WARNING  | ThreadPoolExecutor-0_0 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 34.87.80.221:30000 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-22 14:52:13 | WARNING  | ThreadPoolExecutor-0_4 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 52.67.38.58:3128 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-22 14:54:35 | WARNING  | ThreadPoolExecutor-0_1 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 47.81.56.193:8888 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-22 14:54:36 | WARNING  | ThreadPoolExecutor-0_3 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 181.39.25.196:8118 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-22 14:54:38 | WARNING  | ThreadPoolExecutor-0_2 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 217.182.203.184:8888 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-22 14:54:39 | WARNING  | ThreadPoolExecutor-2_0 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 34.87.80.221:30000 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-22 14:54:39 | WARNING  | ThreadPoolExecutor-2_1 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 47.81.56.193:8888 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-22 14:54:39 | WARNING  | ThreadPoolExecutor-2_0 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 217.182.203.184:8888 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-22 14:54:39 | WARNING  | ThreadPoolExecutor-2_2 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 181.39.25.196:8118 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-22 14:54:39 | WARNING  | ThreadPoolExecutor-2_0 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 52.67.38.58:3128 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-22 14:54:39 | WARNING  | ThreadPoolExecutor-2_1 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 34.134.231.117:3129 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-22 14:54:39 | WARNING  | ThreadPoolExecutor-2_3 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 1.1.1.1 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-22 14:54:39 | WARNING  | ThreadPoolExecutor-2_2 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 2.2.2.2 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-22 14:54:40 | WARNING  | MainThread | network_client_project.network.middleware.retry | [Retry] Retrying query https://example.com (attempt 1/3) after 2.69s delay due to: RequestException (Network Error).
+2026-07-22 14:54:42 | WARNING  | ThreadPoolExecutor-0_5 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 34.134.231.117:3129 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-22 14:54:42 | WARNING  | ThreadPoolExecutor-0_0 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 34.87.80.221:30000 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-22 14:54:42 | WARNING  | ThreadPoolExecutor-0_4 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 52.67.38.58:3128 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-22 14:54:42 | WARNING  | ThreadPoolExecutor-1_1 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 2.2.2.2 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-22 14:54:42 | WARNING  | ThreadPoolExecutor-1_0 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 1.1.1.1 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-22 14:55:08 | WARNING  | ThreadPoolExecutor-4_2 | network_client_project.network.proxy_manager | [ProxyManager] Proxy http://user:pass@3.3.3.3:8000 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-22 14:55:08 | WARNING  | ThreadPoolExecutor-5_1 | network_client_project.network.proxy_manager | [ProxyManager] Proxy http://user:pass@2.2.2.2:8000 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-22 14:55:08 | WARNING  | ThreadPoolExecutor-6_0 | network_client_project.network.proxy_manager | [ProxyManager] Proxy http://user:pass@1.1.1.1:8000 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-22 14:55:08 | WARNING  | ThreadPoolExecutor-4_1 | network_client_project.network.proxy_manager | [ProxyManager] Proxy http://user:pass@2.2.2.2:8000 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-22 14:55:08 | WARNING  | ThreadPoolExecutor-3_2 | network_client_project.network.proxy_manager | [ProxyManager] Proxy http://user:pass@3.3.3.3:8000 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-22 14:55:08 | WARNING  | ThreadPoolExecutor-5_0 | network_client_project.network.proxy_manager | [ProxyManager] Proxy http://user:pass@1.1.1.1:8000 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-22 14:55:08 | WARNING  | ThreadPoolExecutor-4_0 | network_client_project.network.proxy_manager | [ProxyManager] Proxy http://user:pass@1.1.1.1:8000 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-22 14:55:08 | WARNING  | ThreadPoolExecutor-3_1 | network_client_project.network.proxy_manager | [ProxyManager] Proxy http://user:pass@2.2.2.2:8000 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-22 14:55:08 | WARNING  | ThreadPoolExecutor-3_0 | network_client_project.network.proxy_manager | [ProxyManager] Proxy http://user:pass@1.1.1.1:8000 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-22 14:55:08 | WARNING  | ThreadPoolExecutor-6_2 | network_client_project.network.proxy_manager | [ProxyManager] Proxy http://user:pass@3.3.3.3:8000 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-22 14:55:08 | WARNING  | ThreadPoolExecutor-6_1 | network_client_project.network.proxy_manager | [ProxyManager] Proxy http://user:pass@2.2.2.2:8000 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-22 14:55:08 | WARNING  | ThreadPoolExecutor-5_2 | network_client_project.network.proxy_manager | [ProxyManager] Proxy http://user:pass@3.3.3.3:8000 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-22 14:55:18 | WARNING  | MainThread | pillar1.browser | [BrowserCircuitBreaker] CAPTCHA threshold reached for 'test_provider'. Tripping circuit breaker. Cooldown active for 1.0s.
+2026-07-22 14:55:18 | WARNING  | MainThread | pillar1.browser | [BrowserPool] Connection policy is 'proxy_only' for provider 'playwright_google', but no healthy proxies are available. Aborting browser launch to prevent direct connection.
+2026-07-22 14:55:18 | WARNING  | MainThread | search.manager | [SearchManager] google_html failure score reached 12.0. Tripping breaker to OPEN.
+2026-07-22 14:55:18 | WARNING  | MainThread | search.manager | [SearchManager] google_html failed probe query (Reason: Probe query failure). Tripping breaker back to OPEN.
+2026-07-22 14:55:19 | WARNING  | MainThread | utils.budget_manager | [ProviderBudgetManager] Blocked Google Search: remaining budget too low (10.0s remaining), minimum required fallback budget is 18.0s.
+2026-07-22 15:40:50 | WARNING  | ThreadPoolExecutor-0_1 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 47.81.56.193:8888 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-22 15:40:50 | WARNING  | ThreadPoolExecutor-0_3 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 181.39.25.196:8118 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-22 15:40:52 | WARNING  | ThreadPoolExecutor-0_2 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 217.182.203.184:8888 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-22 15:40:53 | WARNING  | ThreadPoolExecutor-2_0 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 34.87.80.221:30000 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-22 15:40:53 | WARNING  | ThreadPoolExecutor-2_0 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 47.81.56.193:8888 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-22 15:40:53 | WARNING  | ThreadPoolExecutor-2_1 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 217.182.203.184:8888 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-22 15:40:53 | WARNING  | ThreadPoolExecutor-2_2 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 181.39.25.196:8118 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-22 15:40:53 | WARNING  | ThreadPoolExecutor-2_0 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 52.67.38.58:3128 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-22 15:40:53 | WARNING  | ThreadPoolExecutor-2_1 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 34.134.231.117:3129 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-22 15:40:53 | WARNING  | ThreadPoolExecutor-2_0 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 1.1.1.1 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-22 15:40:53 | WARNING  | ThreadPoolExecutor-2_1 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 2.2.2.2 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-22 15:40:56 | WARNING  | MainThread | network_client_project.network.middleware.retry | [Retry] Retrying query https://example.com (attempt 1/3) after 2.57s delay due to: RequestException (Network Error).
+2026-07-22 15:40:56 | WARNING  | ThreadPoolExecutor-0_4 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 52.67.38.58:3128 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-22 15:40:56 | WARNING  | ThreadPoolExecutor-0_0 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 34.87.80.221:30000 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-22 15:40:56 | WARNING  | ThreadPoolExecutor-0_5 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 34.134.231.117:3129 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-22 15:40:56 | WARNING  | ThreadPoolExecutor-1_1 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 2.2.2.2 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-22 15:40:56 | WARNING  | ThreadPoolExecutor-1_0 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 1.1.1.1 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-22 15:41:25 | WARNING  | ThreadPoolExecutor-3_1 | network_client_project.network.proxy_manager | [ProxyManager] Proxy http://user:pass@2.2.2.2:8000 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-22 15:41:25 | WARNING  | ThreadPoolExecutor-3_0 | network_client_project.network.proxy_manager | [ProxyManager] Proxy http://user:pass@1.1.1.1:8000 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-22 15:41:25 | WARNING  | ThreadPoolExecutor-3_2 | network_client_project.network.proxy_manager | [ProxyManager] Proxy http://user:pass@3.3.3.3:8000 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-22 15:41:25 | WARNING  | ThreadPoolExecutor-5_1 | network_client_project.network.proxy_manager | [ProxyManager] Proxy http://user:pass@2.2.2.2:8000 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-22 15:41:25 | WARNING  | ThreadPoolExecutor-5_2 | network_client_project.network.proxy_manager | [ProxyManager] Proxy http://user:pass@3.3.3.3:8000 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-22 15:41:25 | WARNING  | ThreadPoolExecutor-5_0 | network_client_project.network.proxy_manager | [ProxyManager] Proxy http://user:pass@1.1.1.1:8000 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-22 15:41:25 | WARNING  | ThreadPoolExecutor-4_0 | network_client_project.network.proxy_manager | [ProxyManager] Proxy http://user:pass@1.1.1.1:8000 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-22 15:41:25 | WARNING  | ThreadPoolExecutor-4_2 | network_client_project.network.proxy_manager | [ProxyManager] Proxy http://user:pass@3.3.3.3:8000 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-22 15:41:25 | WARNING  | ThreadPoolExecutor-4_1 | network_client_project.network.proxy_manager | [ProxyManager] Proxy http://user:pass@2.2.2.2:8000 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-22 15:41:25 | WARNING  | ThreadPoolExecutor-6_0 | network_client_project.network.proxy_manager | [ProxyManager] Proxy http://user:pass@1.1.1.1:8000 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-22 15:41:25 | WARNING  | ThreadPoolExecutor-6_2 | network_client_project.network.proxy_manager | [ProxyManager] Proxy http://user:pass@3.3.3.3:8000 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-22 15:41:25 | WARNING  | ThreadPoolExecutor-6_1 | network_client_project.network.proxy_manager | [ProxyManager] Proxy http://user:pass@2.2.2.2:8000 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-22 15:41:29 | WARNING  | MainThread | pillar1.browser | [BrowserCircuitBreaker] CAPTCHA threshold reached for 'test_provider'. Tripping circuit breaker. Cooldown active for 1.0s.
+2026-07-22 15:41:29 | WARNING  | MainThread | pillar1.browser | [BrowserPool] Connection policy is 'proxy_only' for provider 'playwright_google', but no healthy proxies are available. Aborting browser launch to prevent direct connection.
+2026-07-22 15:41:29 | WARNING  | MainThread | search.manager | [SearchManager] google_html failure score reached 12.0. Tripping breaker to OPEN.
+2026-07-22 15:41:29 | WARNING  | MainThread | search.manager | [SearchManager] google_html failed probe query (Reason: Probe query failure). Tripping breaker back to OPEN.
+2026-07-22 15:41:30 | WARNING  | MainThread | utils.budget_manager | [ProviderBudgetManager] Blocked Google Search: remaining budget too low (10.0s remaining), minimum required fallback budget is 18.0s.
+2026-07-22 15:41:59 | WARNING  | ThreadPoolExecutor-0_3 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 181.39.25.196:8118 -> Google 429 (15min cooldown)
+2026-07-22 15:42:04 | WARNING  | ThreadPoolExecutor-0_2 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 217.182.203.184:8888 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-22 15:42:18 | WARNING  | ThreadPoolExecutor-0_4 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 52.67.38.58:3128 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-22 15:42:18 | WARNING  | ThreadPoolExecutor-0_0 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 34.87.80.221:30000 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-22 15:42:21 | ERROR    | MainThread | pillar1.search.playwright_google | [PlaywrightGoogleProvider] Query error: Page.goto: Timeout 15000ms exceeded.
+Call log:
+  - navigating to "https://www.google.com/search?q=Electronics+Manufacturing+EMS+company&num=10&hl=en&gl=us", waiting until "domcontentloaded"
+
+2026-07-22 16:25:46 | WARNING  | ThreadPoolExecutor-0_2 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 217.182.203.184:8888 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-22 16:25:48 | WARNING  | ThreadPoolExecutor-0_3 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 181.39.25.196:8118 -> Google 429 (15min cooldown)
+2026-07-22 16:25:57 | WARNING  | MainThread | network_client_project.network.middleware.retry | [Retry] Retrying query https://www.arrow.com/en/manufacturers.html (attempt 1/3) after 3.00s delay due to: Exception (WAF CAPTCHA/403 block).
+2026-07-22 16:25:59 | WARNING  | ThreadPoolExecutor-0_0 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 34.87.80.221:30000 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-22 16:25:59 | WARNING  | ThreadPoolExecutor-0_4 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 52.67.38.58:3128 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-22 16:26:02 | WARNING  | MainThread | network_client_project.network.middleware.retry | [Retry] Retrying query https://www.arrow.com/en/manufacturers.html (attempt 2/3) after 4.91s delay due to: Exception (WAF CAPTCHA/403 block).
+2026-07-22 16:26:11 | WARNING  | MainThread | network_client_project.network.middleware.retry | [Retry] Retrying query https://www.arrow.com/en/manufacturers.html (attempt 3/3) after 9.45s delay due to: Exception (WAF CAPTCHA/403 block).
+2026-07-22 16:27:13 | WARNING  | ThreadPoolExecutor-3_4 | pillar1.browser | [BrowserInstance #0] Warm-up: Proxy connection/tunnel failed: Page.goto: net::ERR_TIMED_OUT at https://www.google.com/
+Call log:
+  - navigating to "https://www.google.com/", waiting until "domcontentloaded"
+
+2026-07-22 16:27:13 | WARNING  | ThreadPoolExecutor-3_4 | pillar1.browser | [BrowserInstance] Marking proxy as dead due to tunnel failure: 181.39.25.196:8118
+2026-07-22 16:27:13 | WARNING  | ThreadPoolExecutor-3_4 | pillar1.browser | [BrowserPool] BrowserInstance #0 failed warm-up check. Closing.
+2026-07-22 16:27:13 | WARNING  | ThreadPoolExecutor-3_4 | pillar1.browser | [BrowserPool] All active instances are currently blocked for 'google'.
+2026-07-22 16:27:20 | ERROR    | ThreadPoolExecutor-3_0 | pillar1.search.playwright_google | [PlaywrightGoogleProvider] Query error: Cannot switch to a different thread
+	Current:  <greenlet.greenlet object at 0x00000185D5E026C0 (otid=0x00000185C58472D0) current active started main>
+	Expected: <greenlet.greenlet object at 0x00000185DADD7B40 (otid=0x00000185D4CA9DA0) suspended active started main>
+2026-07-22 16:27:20 | ERROR    | ThreadPoolExecutor-3_3 | pillar1.search.playwright_google | [PlaywrightGoogleProvider] Query error: Cannot switch to a different thread
+	Current:  <greenlet.greenlet object at 0x00000185D5E03200 (otid=0x00000185D4E12700) current active started main>
+	Expected: <greenlet.greenlet object at 0x00000185DADD7B40 (otid=0x00000185D4CA9DA0) suspended active started main>
+2026-07-22 16:27:20 | ERROR    | ThreadPoolExecutor-3_4 | asyncio | Exception in callback SyncBase._sync.<locals>.<lambda>(<Task finishe...9.0.7827.55>>>) at C:\Users\yasha\Downloads\pillar1\.venv\Lib\site-packages\playwright\_impl\_sync_base.py:111
+handle: <Handle SyncBase._sync.<locals>.<lambda>(<Task finishe...9.0.7827.55>>>) at C:\Users\yasha\Downloads\pillar1\.venv\Lib\site-packages\playwright\_impl\_sync_base.py:111>
+Traceback (most recent call last):
+  File "C:\Users\yasha\AppData\Local\Programs\Python\Python312\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\yasha\Downloads\pillar1\.venv\Lib\site-packages\playwright\_impl\_sync_base.py", line 111, in <lambda>
+    task.add_done_callback(lambda _: g_self.switch())
+                                     ^^^^^^^^^^^^^^^
+greenlet.error: Cannot switch to a different thread
+	Current:  <greenlet.greenlet object at 0x00000185DADD7B40 (otid=0x00000185D4CA9DA0) suspended active started main>
+	Expected: <greenlet.greenlet object at 0x00000185D5E026C0 (otid=0x00000185C58472D0) suspended active started main>
+2026-07-22 16:27:20 | ERROR    | ThreadPoolExecutor-3_4 | asyncio | Exception in callback SyncBase._sync.<locals>.<lambda>(<Task finishe...9.0.7827.55>>>) at C:\Users\yasha\Downloads\pillar1\.venv\Lib\site-packages\playwright\_impl\_sync_base.py:111
+handle: <Handle SyncBase._sync.<locals>.<lambda>(<Task finishe...9.0.7827.55>>>) at C:\Users\yasha\Downloads\pillar1\.venv\Lib\site-packages\playwright\_impl\_sync_base.py:111>
+Traceback (most recent call last):
+  File "C:\Users\yasha\AppData\Local\Programs\Python\Python312\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\yasha\Downloads\pillar1\.venv\Lib\site-packages\playwright\_impl\_sync_base.py", line 111, in <lambda>
+    task.add_done_callback(lambda _: g_self.switch())
+                                     ^^^^^^^^^^^^^^^
+greenlet.error: Cannot switch to a different thread
+	Current:  <greenlet.greenlet object at 0x00000185DADD7B40 (otid=0x00000185D4CA9DA0) suspended active started main>
+	Expected: <greenlet.greenlet object at 0x00000185D5E03200 (otid=0x00000185D4E12700) suspended active started main>
+2026-07-22 16:27:26 | WARNING  | GoogleSchedulerWorker_0 | network_client_project.network.middleware.retry | [Retry] Search provider google_html hit block/CAPTCHA/429 (HTTP 429). Bubbling up immediately for fail-fast.
+2026-07-22 16:27:26 | WARNING  | GoogleSchedulerWorker_0 | network_client_project.network.middleware.throttle | [AutoThrottle] 429 Rate Limit hit on www.google.com. Reducing rate: 0.50 rps -> 0.20 rps.
+2026-07-22 16:27:26 | WARNING  | GoogleSchedulerWorker_0 | search.google_scheduler | [GoogleScheduler] No more healthy proxies after 1 attempts.
+2026-07-22 16:27:26 | ERROR    | GoogleSchedulerWorker_0 | search.google_scheduler | [GoogleScheduler] All 1 retries failed for: 'site:sourceindia-electronics.com email'
+2026-07-22 16:27:29 | WARNING  | ThreadPoolExecutor-3_4 | pillar1.browser | [BrowserCircuitBreaker] CAPTCHA threshold reached for 'playwright_google'. Tripping circuit breaker. Cooldown active for 600.0s.
+2026-07-22 16:27:29 | ERROR    | ThreadPoolExecutor-3_4 | pillar1.search.playwright_google | [PlaywrightGoogleProvider] Query error: Page.goto: Timeout 8000ms exceeded.
+Call log:
+  - navigating to "https://www.google.com/search?q=site%3Aecelectronics.com+email&num=3&hl=en&gl=us", waiting until "domcontentloaded"
+
+2026-07-22 16:27:29 | WARNING  | GoogleSchedulerWorker_0 | search.google_scheduler | [GoogleScheduler] No more healthy proxies after 0 attempts.
+2026-07-22 16:27:29 | ERROR    | GoogleSchedulerWorker_0 | search.google_scheduler | [GoogleScheduler] All 0 retries failed for: 'site:companiesmarketcap.com email'
+2026-07-22 16:27:43 | WARNING  | ThreadPoolExecutor-3_3 | network_client_project.network.middleware.retry | [Retry] Search provider brave hit block/CAPTCHA/429 (HTTP 429). Bubbling up immediately for fail-fast.
+2026-07-22 16:27:43 | WARNING  | ThreadPoolExecutor-3_3 | network_client_project.network.middleware.throttle | [AutoThrottle] 429 Rate Limit hit on search.brave.com. Reducing rate: 0.89 rps -> 0.35 rps.
+2026-07-22 16:27:44 | WARNING  | ThreadPoolExecutor-3_4 | network_client_project.network.middleware.retry | [Retry] Search provider brave hit block/CAPTCHA/429 (HTTP 429). Bubbling up immediately for fail-fast.
+2026-07-22 16:27:44 | WARNING  | ThreadPoolExecutor-3_4 | network_client_project.network.middleware.throttle | [AutoThrottle] 429 Rate Limit hit on search.brave.com. Reducing rate: 0.35 rps -> 0.14 rps.
+2026-07-22 16:27:49 | WARNING  | ThreadPoolExecutor-3_3 | network_client_project.network.middleware.retry | [Retry] Search provider brave hit block/CAPTCHA/429 (HTTP 429). Bubbling up immediately for fail-fast.
+2026-07-22 16:27:49 | WARNING  | ThreadPoolExecutor-3_3 | network_client_project.network.middleware.throttle | [AutoThrottle] 429 Rate Limit hit on search.brave.com. Reducing rate: 0.14 rps -> 0.06 rps.
+2026-07-22 16:27:54 | WARNING  | ThreadPoolExecutor-3_4 | network_client_project.network.middleware.retry | [Retry] Search provider brave hit block/CAPTCHA/429 (HTTP 429). Bubbling up immediately for fail-fast.
+2026-07-22 16:27:54 | WARNING  | ThreadPoolExecutor-3_4 | network_client_project.network.middleware.throttle | [AutoThrottle] 429 Rate Limit hit on search.brave.com. Reducing rate: 0.06 rps -> 0.05 rps.
+2026-07-22 16:27:54 | WARNING  | ThreadPoolExecutor-3_4 | search.manager | [SearchManager] brave failure score reached 12.0. Tripping breaker to OPEN.
+2026-07-22 16:27:59 | WARNING  | ThreadPoolExecutor-3_3 | search.providers.bing_provider | [BingProvider] Global deadline exceeded. Aborting Bing search retries.
+2026-07-22 16:27:59 | ERROR    | ThreadPoolExecutor-3_3 | search.manager | [SearchManager] Unexpected provider 'bing' error: object of type 'NoneType' has no len()
+2026-07-22 16:28:16 | WARNING  | ThreadPoolExecutor-3_4 | search.providers.bing_provider | [BingProvider] Global deadline exceeded. Aborting Bing search retries.
+2026-07-22 16:28:16 | ERROR    | ThreadPoolExecutor-3_4 | search.manager | [SearchManager] Unexpected provider 'bing' error: object of type 'NoneType' has no len()
+2026-07-22 16:28:46 | WARNING  | MainThread | pillar1.browser | [BrowserInstance #0] Error closing browser: cannot switch to a different thread (which happens to have exited)
+2026-07-22 16:28:46 | ERROR    | MainThread | pillar1.browser | [BrowserManager] Error stopping Playwright: cannot switch to a different thread (which happens to have exited)
+2026-07-22 16:30:44 | WARNING  | ThreadPoolExecutor-0_3 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 181.39.25.196:8118 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-22 16:30:46 | WARNING  | ThreadPoolExecutor-2_0 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 34.87.80.221:30000 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-22 16:30:46 | WARNING  | ThreadPoolExecutor-2_0 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 47.81.56.193:8888 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-22 16:30:46 | WARNING  | ThreadPoolExecutor-2_0 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 217.182.203.184:8888 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-22 16:30:46 | WARNING  | ThreadPoolExecutor-2_1 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 181.39.25.196:8118 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-22 16:30:46 | WARNING  | ThreadPoolExecutor-2_0 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 52.67.38.58:3128 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-22 16:30:46 | WARNING  | ThreadPoolExecutor-2_3 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 34.134.231.117:3129 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-22 16:30:46 | WARNING  | ThreadPoolExecutor-2_1 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 1.1.1.1 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-22 16:30:46 | WARNING  | ThreadPoolExecutor-2_0 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 2.2.2.2 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-22 16:30:47 | WARNING  | ThreadPoolExecutor-0_2 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 217.182.203.184:8888 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-22 16:30:49 | WARNING  | MainThread | network_client_project.network.middleware.retry | [Retry] Retrying query https://example.com (attempt 1/3) after 2.64s delay due to: RequestException (Network Error).
+2026-07-22 16:30:51 | WARNING  | ThreadPoolExecutor-0_1 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 47.81.56.193:8888 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-22 16:30:52 | WARNING  | ThreadPoolExecutor-0_0 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 34.87.80.221:30000 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-22 16:30:52 | WARNING  | ThreadPoolExecutor-0_4 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 52.67.38.58:3128 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-22 16:30:52 | WARNING  | ThreadPoolExecutor-0_5 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 34.134.231.117:3129 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-22 16:30:52 | WARNING  | ThreadPoolExecutor-1_0 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 1.1.1.1 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-22 16:30:52 | WARNING  | ThreadPoolExecutor-1_1 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 2.2.2.2 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-22 16:31:19 | WARNING  | ThreadPoolExecutor-4_0 | network_client_project.network.proxy_manager | [ProxyManager] Proxy http://user:pass@1.1.1.1:8000 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-22 16:31:19 | WARNING  | ThreadPoolExecutor-3_2 | network_client_project.network.proxy_manager | [ProxyManager] Proxy http://user:pass@3.3.3.3:8000 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-22 16:31:19 | WARNING  | ThreadPoolExecutor-3_0 | network_client_project.network.proxy_manager | [ProxyManager] Proxy http://user:pass@1.1.1.1:8000 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-22 16:31:19 | WARNING  | ThreadPoolExecutor-3_1 | network_client_project.network.proxy_manager | [ProxyManager] Proxy http://user:pass@2.2.2.2:8000 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-22 16:31:19 | WARNING  | ThreadPoolExecutor-4_2 | network_client_project.network.proxy_manager | [ProxyManager] Proxy http://user:pass@3.3.3.3:8000 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-22 16:31:19 | WARNING  | ThreadPoolExecutor-4_1 | network_client_project.network.proxy_manager | [ProxyManager] Proxy http://user:pass@2.2.2.2:8000 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-22 16:31:19 | WARNING  | ThreadPoolExecutor-5_0 | network_client_project.network.proxy_manager | [ProxyManager] Proxy http://user:pass@1.1.1.1:8000 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-22 16:31:19 | WARNING  | ThreadPoolExecutor-5_1 | network_client_project.network.proxy_manager | [ProxyManager] Proxy http://user:pass@2.2.2.2:8000 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-22 16:31:19 | WARNING  | ThreadPoolExecutor-6_0 | network_client_project.network.proxy_manager | [ProxyManager] Proxy http://user:pass@1.1.1.1:8000 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-22 16:31:19 | WARNING  | ThreadPoolExecutor-5_2 | network_client_project.network.proxy_manager | [ProxyManager] Proxy http://user:pass@3.3.3.3:8000 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-22 16:31:19 | WARNING  | ThreadPoolExecutor-6_1 | network_client_project.network.proxy_manager | [ProxyManager] Proxy http://user:pass@2.2.2.2:8000 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-22 16:31:19 | WARNING  | ThreadPoolExecutor-6_2 | network_client_project.network.proxy_manager | [ProxyManager] Proxy http://user:pass@3.3.3.3:8000 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-22 16:31:26 | WARNING  | MainThread | pillar1.browser | [BrowserCircuitBreaker] CAPTCHA threshold reached for 'test_provider'. Tripping circuit breaker. Cooldown active for 1.0s.
+2026-07-22 16:31:27 | WARNING  | MainThread | pillar1.browser | [BrowserPool] Connection policy is 'proxy_only' for provider 'playwright_google', but no healthy proxies are available. Aborting browser launch to prevent direct connection.
+2026-07-22 16:31:27 | WARNING  | MainThread | search.manager | [SearchManager] google_html failure score reached 12.0. Tripping breaker to OPEN.
+2026-07-22 16:31:27 | WARNING  | MainThread | search.manager | [SearchManager] google_html failed probe query (Reason: Probe query failure). Tripping breaker back to OPEN.
+2026-07-22 16:31:27 | WARNING  | MainThread | utils.budget_manager | [ProviderBudgetManager] Blocked Google Search: remaining budget too low (10.0s remaining), minimum required fallback budget is 18.0s.
+2026-07-23 13:59:51 | WARNING  | ThreadPoolExecutor-0_3 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 181.39.25.196:8118 -> Google 429 (15min cooldown)
+2026-07-23 13:59:55 | WARNING  | ThreadPoolExecutor-0_2 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 217.182.203.184:8888 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-23 14:00:04 | WARNING  | MainThread | pillar1.browser | [BrowserInstance #0] Warm-up: Proxy connection/tunnel failed: Page.goto: net::ERR_TIMED_OUT at https://www.google.com/
+Call log:
+  - navigating to "https://www.google.com/", waiting until "domcontentloaded"
+
+2026-07-23 14:00:04 | WARNING  | MainThread | pillar1.browser | [BrowserInstance] Marking proxy as dead due to tunnel failure: 52.67.38.58:3128
+2026-07-23 14:00:04 | WARNING  | MainThread | pillar1.browser | [BrowserPool] BrowserInstance #0 failed warm-up check. Closing.
+2026-07-23 14:00:05 | WARNING  | MainThread | pillar1.browser | [BrowserPool] All active instances are currently blocked for 'google'.
+2026-07-23 14:00:09 | WARNING  | ThreadPoolExecutor-0_0 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 34.87.80.221:30000 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-23 14:00:09 | WARNING  | ThreadPoolExecutor-0_4 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 52.67.38.58:3128 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-23 14:00:17 | WARNING  | ThreadPoolExecutor-0_5 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 34.134.231.117:3129 -> Google UNREACHABLE (Failed to perform, curl: (28) Connection timed out after 8006 milliseconds. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.)
+2026-07-23 14:00:20 | WARNING  | MainThread | pillar1.browser | [BrowserInstance #0] Warm-up homepage navigation error: Page.goto: Timeout 15000ms exceeded.
+Call log:
+  - navigating to "https://www.google.com/", waiting until "domcontentloaded"
+
+2026-07-23 14:00:20 | WARNING  | MainThread | pillar1.browser | [BrowserPool] BrowserInstance #0 failed warm-up check. Closing.
+2026-07-23 14:00:20 | WARNING  | MainThread | pillar1.search.playwright_google | [PlaywrightGoogleProvider] BrowserPool exhausted or unavailable: All browser instances in the pool are currently blocked for provider 'google'.. Tripping circuit breaker.
+2026-07-23 14:00:20 | WARNING  | MainThread | utils.budget_manager | [ProviderBudgetManager] Blocked Google Search: remaining budget too low (4.2s remaining), minimum required fallback budget is 18.0s.
+2026-07-23 14:00:58 | WARNING  | GoogleSchedulerWorker_0 | network_client_project.network.middleware.retry | [Retry] Search provider google_html hit block/CAPTCHA/429 (HTTP 429). Bubbling up immediately for fail-fast.
+2026-07-23 14:00:58 | WARNING  | GoogleSchedulerWorker_0 | network_client_project.network.middleware.throttle | [AutoThrottle] 429 Rate Limit hit on www.google.com. Reducing rate: 0.50 rps -> 0.20 rps.
+2026-07-23 14:00:58 | WARNING  | GoogleSchedulerWorker_0 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 181.39.25.196:8118 marked dead_for_google after 3 consecutive timeouts.
+2026-07-23 14:00:58 | WARNING  | GoogleSchedulerWorker_0 | utils.budget_manager | [ProviderBudgetManager] Blocked 'google_html': provider execution budget exhausted (10.2s elapsed, limit was 8.0s).
+2026-07-23 14:00:58 | WARNING  | GoogleSchedulerWorker_0 | search.google_scheduler | [GoogleScheduler] Budget or fallback deadline constraint exceeded. Aborting Google search.
+2026-07-23 14:00:58 | ERROR    | GoogleSchedulerWorker_0 | search.google_scheduler | [GoogleScheduler] All 1 retries failed for: 'site:startupsavant.com email'
+2026-07-23 14:01:31 | WARNING  | ThreadPoolExecutor-3_0 | network_client_project.network.middleware.retry | [Retry] Search provider brave hit block/CAPTCHA/429 (HTTP 429). Bubbling up immediately for fail-fast.
+2026-07-23 14:01:31 | WARNING  | ThreadPoolExecutor-3_0 | network_client_project.network.middleware.throttle | [AutoThrottle] 429 Rate Limit hit on search.brave.com. Reducing rate: 0.67 rps -> 0.27 rps.
+2026-07-23 14:01:38 | WARNING  | ThreadPoolExecutor-3_0 | network_client_project.network.middleware.retry | [Retry] Search provider brave hit block/CAPTCHA/429 (HTTP 429). Bubbling up immediately for fail-fast.
+2026-07-23 14:01:38 | WARNING  | ThreadPoolExecutor-3_0 | network_client_project.network.middleware.throttle | [AutoThrottle] 429 Rate Limit hit on search.brave.com. Reducing rate: 0.27 rps -> 0.11 rps.
+2026-07-26 20:56:04 | WARNING  | ThreadPoolExecutor-0_5 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 34.134.231.117:3129 -> Google UNREACHABLE (Failed to perform, curl: (28) Operation timed out after 8008 milliseconds with 0 bytes received. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.)
+2026-07-26 20:56:05 | WARNING  | ThreadPoolExecutor-0_2 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 217.182.203.184:8888 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-26 20:56:14 | WARNING  | ThreadPoolExecutor-0_4 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 52.67.38.58:3128 -> DEAD (all 3 general HTTPS tests failed)

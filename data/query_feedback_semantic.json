@@ -4,10 +4,10 @@
         "zero": 0,
         "parser": 0,
         "unavailable": 0,
-        "failures": 180,
-        "last_updated": 1784653285.9012392,
-        "score": -180,
-        "queries_run": 180
+        "failures": 300,
+        "last_updated": 1784718087.5573418,
+        "score": -300,
+        "queries_run": 300
     },
     "test query": {
         "success": 0,
@@ -15,30 +15,30 @@
         "parser": 0,
         "unavailable": 0,
         "failures": 0,
-        "last_updated": 1784653285.995109,
-        "score": 30,
-        "queries_run": 6,
-        "leads_found": 6
+        "last_updated": 1784718087.7133932,
+        "score": 50,
+        "queries_run": 10,
+        "leads_found": 10
     },
     "test query 2": {
         "success": 0,
         "zero": 0,
         "parser": 0,
         "unavailable": 0,
-        "failures": 6,
-        "last_updated": 1784653285.9968374,
-        "score": -6,
-        "queries_run": 6
+        "failures": 10,
+        "last_updated": 1784718087.7160823,
+        "score": -10,
+        "queries_run": 10
     },
     "python company": {
         "success": 0,
         "zero": 0,
         "parser": 0,
         "unavailable": 0,
-        "failures": 6,
-        "last_updated": 1784653286.196884,
-        "score": -7,
-        "queries_run": 11
+        "failures": 10,
+        "last_updated": 1784718087.9419026,
+        "score": -11,
+        "queries_run": 19
     },
     "source:bing": {
         "success": 0,
@@ -47,18 +47,18 @@
         "unavailable": 0,
         "failures": 0,
         "last_updated": 0.0,
-        "score": 37,
-        "queries_run": 20
+        "score": 31,
+        "queries_run": 25
     },
     "software developer company 1": {
         "success": 0,
         "zero": 0,
         "parser": 0,
         "unavailable": 0,
-        "failures": 4,
-        "last_updated": 1784653286.239915,
-        "score": -8,
-        "queries_run": 4
+        "failures": 9,
+        "last_updated": 1784718088.0015204,
+        "score": -18,
+        "queries_run": 9
     },
     "source:google_html": {
         "success": 0,
@@ -67,8 +67,8 @@
         "unavailable": 0,
         "failures": 0,
         "last_updated": 0.0,
-        "score": 60,
-        "queries_run": 65
+        "score": 66,
+        "queries_run": 82
     },
     "software developer company 2": {
         "success": 0,
@@ -107,8 +107,8 @@
         "unavailable": 0,
         "failures": 0,
         "last_updated": 0.0,
-        "score": -5,
-        "queries_run": 33
+        "score": 17,
+        "queries_run": 40
     },
     "technology": {
         "success": 0,
@@ -267,8 +267,8 @@
         "unavailable": 0,
         "failures": 0,
         "last_updated": 0.0,
-        "score": 22,
-        "queries_run": 12
+        "score": 25,
+        "queries_run": 13
     },
     "site:linkedin.com/in \"ventureradar\" \"co-founder\"": {
         "success": 0,
@@ -456,9 +456,9 @@
         "parser": 0,
         "unavailable": 0,
         "failures": 1,
-        "last_updated": 1784631321.5064003,
-        "score": -2,
-        "queries_run": 1
+        "last_updated": 1784795500.0530047,
+        "score": 4,
+        "queries_run": 3
     },
     "software development company": {
         "success": 0,
@@ -477,8 +477,8 @@
         "unavailable": 0,
         "failures": 0,
         "last_updated": 0.0,
-        "score": -10,
-        "queries_run": 5
+        "score": -18,
+        "queries_run": 9
     },
     "custom python solutions": {
         "success": 0,
@@ -620,16 +620,6 @@
         "score": -6,
         "queries_run": 3
     },
-    "source:brave": {
-        "success": 0,
-        "zero": 0,
-        "parser": 0,
-        "unavailable": 0,
-        "failures": 0,
-        "last_updated": 0.0,
-        "score": 10,
-        "queries_run": 4
-    },
     "machine consulting": {
         "success": 0,
         "zero": 0,
@@ -679,5 +669,265 @@
         "last_updated": 1784653793.9098566,
         "score": -1,
         "queries_run": 3
+    },
+    "electronics manufacturing software company": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1784710534.8344097,
+        "score": 8,
+        "queries_run": 2
+    },
+    "pcb design company": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1784710548.3133695,
+        "score": -2,
+        "queries_run": 1
+    },
+    "electronics": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1784717898.8484628,
+        "score": 21,
+        "queries_run": 8
+    },
+    "electronics manufacturers manufacturer": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1784717755.6689408,
+        "score": 8,
+        "queries_run": 2
+    },
+    "source:google": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 0.0,
+        "score": 6,
+        "queries_run": 3
+    },
+    "site:companiesmarketcap.com email": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 2,
+        "last_updated": 1784717854.239864,
+        "score": -1,
+        "queries_run": 3
+    },
+    "site:sourceindia-electronics.com email": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 2,
+        "last_updated": 1784717851.6850216,
+        "score": -1,
+        "queries_run": 3
+    },
+    "site:ecelectronics.com email": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1784717854.286152,
+        "score": 1,
+        "queries_run": 2
+    },
+    "site:sourceindia-electronics.com contact": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1784717857.6158,
+        "score": 3,
+        "queries_run": 1
+    },
+    "site:companiesmarketcap.com contact": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1784717858.5355718,
+        "score": 3,
+        "queries_run": 1
+    },
+    "site:ecelectronics.com contact": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1784717859.8029099,
+        "score": 3,
+        "queries_run": 1
+    },
+    "site:sourceindia-electronics.com phone": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1784717869.5644329,
+        "score": -2,
+        "queries_run": 1
+    },
+    "site:companiesmarketcap.com phone": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 2,
+        "last_updated": 1784717878.9777865,
+        "score": -1,
+        "queries_run": 3
+    },
+    "site:ecelectronics.com phone": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1784717874.483861,
+        "score": -2,
+        "queries_run": 1
+    },
+    "source:brave": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 0.0,
+        "score": 21,
+        "queries_run": 10
+    },
+    "generative ai ai startup": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1784795427.3766797,
+        "score": 8,
+        "queries_run": 2
+    },
+    "site:startupsavant.com email": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 2,
+        "last_updated": 1784795474.8916752,
+        "score": -1,
+        "queries_run": 3
+    },
+    "site:ycombinator.com email": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1784795477.798978,
+        "score": 1,
+        "queries_run": 2
+    },
+    "site:startupsavant.com contact": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1784795480.2905667,
+        "score": 3,
+        "queries_run": 1
+    },
+    "site:ycombinator.com contact": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1784795481.6256394,
+        "score": 3,
+        "queries_run": 1
+    },
+    "site:startupsavant.com phone": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1784795485.701124,
+        "score": 3,
+        "queries_run": 1
+    },
+    "site:ycombinator.com phone": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1784795487.5870364,
+        "score": 2,
+        "queries_run": 1
+    },
+    "site:ycombinator.com team": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1784795492.5195901,
+        "score": 2,
+        "queries_run": 1
+    },
+    "site:startupsavant.com team": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1784795498.0186012,
+        "score": -2,
+        "queries_run": 1
+    },
+    "automobile consulting": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1785079556.5415995,
+        "score": 10,
+        "queries_run": 1
+    },
+    "automobile": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1785079582.069186,
+        "score": 3,
+        "queries_run": 1
     }
 }

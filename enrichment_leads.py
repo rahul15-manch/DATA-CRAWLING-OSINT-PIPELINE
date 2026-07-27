@@ -17,7 +17,9 @@ OUTPUT_FILE = "output/enriched/enriched_leads.json"
 REQUEST_TIMEOUT = 6
 CANDIDATE_TLDS = [".com", ".in", ".co.in", ".io", ".org", ".ai"]
 
-HUNTER_API_KEY = "07efc6bcd50e56afe5f128e524755a96c748a5e6" 
+import os
+
+HUNTER_API_KEY = os.getenv("HUNTER_API_KEY", "")
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 

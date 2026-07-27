@@ -432,10 +432,13 @@ class SearchManager:
         signals.connect(_on_request_failed, signals.REQUEST_FAILED)
 
         from utils.budget_manager import ProviderBudgetManager
+        from collections import deque
         self.budget_manager = ProviderBudgetManager()
         self._consecutive_blocks = defaultdict(int)
         self._google_disabled_until = 0.0
         self._provider_disabled_until = defaultdict(float)
+        # Rolling window deque (maxlen=30) for provider learning per family
+        self._provider_family_outcomes = defaultdict(lambda: deque(maxlen=30))
 
     # ── Public API ────────────────────────────────────────────────────────────
 
@@ -818,12 +821,12 @@ class SearchManager:
                         self.queries_google_blocked += 1
                         is_block = any(term in exc.reason for term in ("ENABLE_JS", "CAPTCHA", "CONSENT_PAGE", "FORBIDDEN", "RATE_LIMIT", "429", "sorry", "unusual traffic"))
                         if is_block:
-                            self._consecutive_blocks[pname] += 1
-                            if self._consecutive_blocks[pname] >= 3:
-                                self._provider_disabled_until[pname] = time.time() + 600.0
-                                if pname == "google_html":
-                                    self._google_disabled_until = self._provider_disabled_until[pname]
-                                print(f"[SearchManager] {pname} consecutive blocks count reached 3. Disabling globally for 10 minutes.")
+                            # Instant block failover: trigger 10 min cooldown immediately
+                            self._consecutive_blocks[pname] = 3
+                            self._provider_disabled_until[pname] = time.time() + 600.0
+                            if pname == "google_html":
+                                self._google_disabled_until = self._provider_disabled_until[pname]
+                            print(f"[SearchManager] {pname} hit block/ENABLE_JS ({exc.reason}). Instantly disabling globally for 10 minutes and failing over to Brave/Bing.")
                     elif pname == "bing":
                         self.bing_failures += 1
                         self.queries_bing_blocked += 1
@@ -907,7 +910,13 @@ class SearchManager:
                     pass
                 continue
 
-        # Rank final results
+            except Exception as exc:
+                latency = time.time() - t0
+                logger.error(f"[SearchManager] Unexpected provider '{pname}' error: {exc}")
+                self.stats[pname].total_latency_s += latency
+                self.stats[pname].failures += 1
+                self._record_provider_failure_score(pname, 3.0, f"Unexpected Error ({str(exc)[:30]})")
+                continue
         for global_rank, r in enumerate(all_results, start=1):
             r.rank = global_rank
         self.total_results += len(all_results)

@@ -1,17 +1,17 @@
 {
   "34.87.80.221:30000": {
-    "score": 0.0,
+    "score": 100.0,
     "google_successes": 0,
     "google_captchas": 0,
     "google_429s": 0,
-    "consecutive_failures": 7,
+    "consecutive_failures": 9,
     "consecutive_blocks": {},
-    "dead": true,
+    "dead": false,
     "google_status": "healthy",
     "bing_status": "healthy",
     "general_status": "healthy",
     "last_success_ts": null,
-    "last_failure_ts": 1784546349.1220958,
+    "last_failure_ts": 1784710619.58712,
     "latency_samples": [
       26.454450130462646,
       10.5101478099823,
@@ -48,15 +48,25 @@
       [
         1784546349.1220958,
         "TRANSPORT_CONNECTION_ERROR"
+      ],
+      [
+        1784710613.721789,
+        "TRANSPORT_TIMEOUT"
+      ],
+      [
+        1784710619.58712,
+        "TRANSPORT_TIMEOUT"
       ]
     ],
     "quarantine_until": null,
     "quarantine_step": 0,
     "inactive": false,
-    "dead_for_google": true,
+    "dead_for_google": false,
     "dead_for_bing": false,
     "consecutive_timeouts": {
-      "google.com": 5
+      "google.com": 5,
+      "slashdot.org": 1,
+      "caisoft.com": 1
     },
     "provider_capabilities": {
       "google": "DEAD",
@@ -74,22 +84,23 @@
     "google_429s": 0,
     "consecutive_failures": 0,
     "consecutive_blocks": {},
-    "dead": true,
+    "dead": false,
     "google_status": "healthy",
     "bing_status": "healthy",
-    "general_status": "dead",
-    "last_success_ts": 1784520337.4763427,
-    "last_failure_ts": 1784519960.2356775,
+    "general_status": "healthy",
+    "last_success_ts": 1785079582.0378087,
+    "last_failure_ts": 1784717846.009753,
     "latency_samples": [
-      23.63414716720581,
-      1.5693378448486328,
-      2.5100913047790527,
-      1.20088791847229,
-      1.4465692043304443,
-      2.696584701538086,
-      1.1060869693756104,
-      1.4235773086547852,
-      1.3672549724578857
+      0.8166320323944092,
+      0.9233372211456299,
+      0.9613778591156006,
+      1.5982913970947266,
+      1.3833980560302734,
+      3.5758819580078125,
+      1.8637046813964844,
+      0.727287769317627,
+      0.922269344329834,
+      0.8524668216705322
     ],
     "outcome_history": [
       [
@@ -127,6 +138,86 @@
       [
         1784520337.4763427,
         "TRANSPORT_SUCCESS"
+      ],
+      [
+        1784711762.9769719,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1784717798.6711931,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1784717800.9474287,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1784717803.7219534,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1784717806.9942844,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1784717820.5099995,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1784717824.5233681,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1784717835.2516465,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1784717846.009753,
+        "TRANSPORT_CONNECTION_ERROR"
+      ],
+      [
+        1784795436.6152532,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1784795440.0373173,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1784795443.9036362,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1784795447.9286637,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1784795448.2710133,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1784795452.470034,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1784795459.4445148,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1785079566.898435,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1785079572.2160664,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1785079577.6556597,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1785079582.0378087,
+        "TRANSPORT_SUCCESS"
       ]
     ],
     "quarantine_until": null,
@@ -135,9 +226,16 @@
     "dead_for_google": false,
     "dead_for_bing": false,
     "consecutive_timeouts": {
-      "google.com": 1,
+      "google.com": 2,
       "starnexttechnologies.com": 0,
-      "daffodilsw.com": 0
+      "daffodilsw.com": 0,
+      "example.com": 0,
+      "linkedin.com": 0,
+      "screener.in": 0,
+      "syrmasgs.com": 0,
+      "startupsavant.com": 0,
+      "ycombinator.com": 0,
+      "solutionbuggy.com": 0
     },
     "provider_capabilities": {
       "google": "DEAD",
@@ -191,21 +289,19 @@
     }
   },
   "181.39.25.196:8118": {
-    "score": 0.0,
+    "score": 94.0,
     "google_successes": 0,
     "google_captchas": 0,
     "google_429s": 0,
-    "consecutive_failures": 6,
+    "consecutive_failures": 1,
     "consecutive_blocks": {},
-    "dead": true,
+    "dead": false,
     "google_status": "healthy",
     "bing_status": "healthy",
     "general_status": "healthy",
-    "last_success_ts": 1784470762.6781447,
-    "last_failure_ts": 1784546373.0586414,
+    "last_success_ts": 1784795442.5053403,
+    "last_failure_ts": 1784795458.9784803,
     "latency_samples": [
-      4.533697605133057,
-      4.393979787826538,
       3.6763715744018555,
       3.4387636184692383,
       5.590297698974609,
@@ -213,21 +309,11 @@
       26.6517493724823,
       22.79369616508484,
       24.39800477027893,
-      10.4352388381958
+      10.4352388381958,
+      6.156238794326782,
+      6.214860677719116
     ],
     "outcome_history": [
-      [
-        1784466957.916064,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784466961.550674,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784466964.2952833,
-        "TRANSPORT_SUCCESS"
-      ],
       [
         1784466968.4934874,
         "TRANSPORT_SUCCESS"
@@ -415,24 +501,38 @@
       [
         1784546373.0586414,
         "TRANSPORT_CONNECTION_ERROR"
+      ],
+      [
+        1784710570.6100953,
+        "TRANSPORT_CONNECTION_ERROR"
+      ],
+      [
+        1784795442.5053403,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1784795458.9784803,
+        "TRANSPORT_CONNECTION_ERROR"
       ]
     ],
     "quarantine_until": null,
     "quarantine_step": 0,
     "inactive": false,
-    "dead_for_google": true,
+    "dead_for_google": false,
     "dead_for_bing": false,
     "consecutive_timeouts": {
       "in.linkedin.com": 0,
       "www.linkedin.com": 0,
-      "google.com": 7,
+      "google.com": 8,
       "clutch.co": 0,
       "linkedin.com": 0,
       "empat.tech": 0,
       "cybo.com": 0,
       "thecompanycheck.com": 0,
       "keyaenterprises.in": 0,
-      "dalisantmetrics.com": 1
+      "dalisantmetrics.com": 1,
+      "caisoft.com": 1,
+      "ycombinator.com": 0
     },
     "provider_capabilities": {
       "google": "DEAD",
@@ -440,25 +540,26 @@
       "duckduckgo": "GOOD",
       "brave": "GOOD",
       "directory": "GOOD",
-      "general_crawl": "TIMEOUT"
+      "general_crawl": "SLOW"
     }
   },
   "52.67.38.58:3128": {
-    "score": 90.0,
+    "score": 95.0,
     "google_successes": 0,
-    "google_captchas": 3,
+    "google_captchas": 4,
     "google_429s": 0,
-    "consecutive_failures": 0,
+    "consecutive_failures": 1,
     "consecutive_blocks": {
       "www.google.com": 1,
-      "google.com": 2
+      "google.com": 3,
+      "example.com": 0
     },
     "dead": true,
     "google_status": "healthy",
     "bing_status": "healthy",
     "general_status": "dead",
-    "last_success_ts": null,
-    "last_failure_ts": 1784546343.5979657,
+    "last_success_ts": 1784718046.9166212,
+    "last_failure_ts": 1784795404.9357908,
     "latency_samples": [
       31.46100354194641,
       14.373963356018066,
@@ -468,7 +569,8 @@
       43.84447646141052,
       39.892173051834106,
       14.256765842437744,
-      13.431782007217407
+      13.431782007217407,
+      12.410750389099121
     ],
     "outcome_history": [
       [
@@ -506,15 +608,40 @@
       [
         1784546343.5979657,
         "GOOGLE_CAPTCHA"
+      ],
+      [
+        1784710527.555853,
+        "GOOGLE_CAPTCHA"
+      ],
+      [
+        1784711766.2408357,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1784712276.0541282,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1784712278.8830004,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1784718045.4141955,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1784718046.9166212,
+        "TRANSPORT_SUCCESS"
       ]
     ],
-    "quarantine_until": 1784548143.5979657,
-    "quarantine_step": 1,
+    "quarantine_until": null,
+    "quarantine_step": 0,
     "inactive": false,
     "dead_for_google": false,
     "dead_for_bing": false,
     "consecutive_timeouts": {
-      "google.com": 4
+      "google.com": 4,
+      "example.com": 0
     },
     "provider_capabilities": {
       "google": "CAPTCHA",
@@ -526,28 +653,40 @@
     }
   },
   "34.134.231.117:3129": {
-    "score": 68.0,
-    "google_successes": 0,
+    "score": 93.0,
+    "google_successes": 3,
     "google_captchas": 2,
     "google_429s": 0,
-    "consecutive_failures": 0,
+    "consecutive_failures": 1,
     "consecutive_blocks": {
       "www.google.com": 1,
-      "google.com": 0
+      "google.com": 0,
+      "example.com": 0,
+      "arrow.com": 0,
+      "linkedin.com": 0,
+      "syrmasgs.com": 0,
+      "ecelectronics.com": 0,
+      "companiesmarketcap.com": 0,
+      "sourceindia-electronics.com": 0,
+      "screener.in": 0
     },
     "dead": false,
-    "google_status": "healthy",
+    "google_status": "blocked",
     "bing_status": "healthy",
     "general_status": "healthy",
-    "last_success_ts": null,
-    "last_failure_ts": 1784522699.1633852,
+    "last_success_ts": 1784717843.169259,
+    "last_failure_ts": 1784717849.0492322,
     "latency_samples": [
-      30.05495524406433,
-      10.959033966064453,
-      2.750516891479492,
-      28.66707682609558,
-      33.04285430908203,
-      15.702677726745605
+      2.4507362842559814,
+      3.2599053382873535,
+      7.397415637969971,
+      5.01120138168335,
+      7.246239185333252,
+      8.37638521194458,
+      8.975414276123047,
+      5.734287261962891,
+      7.499980926513672,
+      5.572616338729858
     ],
     "outcome_history": [
       [
@@ -577,6 +716,90 @@
       [
         1784522699.1633852,
         "GOOGLE_CAPTCHA"
+      ],
+      [
+        1784710578.6695595,
+        "TRANSPORT_TIMEOUT"
+      ],
+      [
+        1784710599.2000802,
+        "TRANSPORT_TIMEOUT"
+      ],
+      [
+        1784711774.4190328,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1784711787.7534199,
+        "GOOGLE_SERP"
+      ],
+      [
+        1784711807.3593178,
+        "GOOGLE_SERP"
+      ],
+      [
+        1784711836.9126725,
+        "GOOGLE_SERP"
+      ],
+      [
+        1784715051.8426123,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1784715053.7667909,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1784715141.307673,
+        "TRANSPORT_TIMEOUT"
+      ],
+      [
+        1784717790.3011265,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1784717803.921918,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1784717805.6551409,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1784717813.4426234,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1784717821.3597043,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1784717823.7875159,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1784717825.4203837,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1784717826.7561574,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1784717830.906804,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1784717835.7641366,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1784717843.169259,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1784717849.0492322,
+        "TRANSPORT_TIMEOUT"
       ]
     ],
     "quarantine_until": null,
@@ -586,15 +809,25 @@
     "dead_for_bing": false,
     "consecutive_timeouts": {
       "google.com": 2,
-      "clutch.co": 1
+      "clutch.co": 1,
+      "slashdot.org": 1,
+      "caisoft.com": 1,
+      "example.com": 0,
+      "arrow.com": 0,
+      "linkedin.com": 0,
+      "syrmasgs.com": 0,
+      "ecelectronics.com": 0,
+      "companiesmarketcap.com": 0,
+      "sourceindia-electronics.com": 0,
+      "screener.in": 0
     },
     "provider_capabilities": {
-      "google": "CAPTCHA",
+      "google": "TIMEOUT",
       "bing": "GOOD",
       "duckduckgo": "GOOD",
       "brave": "GOOD",
       "directory": "GOOD",
-      "general_crawl": "TIMEOUT"
+      "general_crawl": "SLOW"
     }
   }
 }

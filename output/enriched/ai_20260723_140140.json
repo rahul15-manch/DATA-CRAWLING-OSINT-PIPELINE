@@ -1,0 +1,529 @@
+[
+  {
+    "company_name": "Ycombinator",
+    "website": "https://www.ycombinator.com/companies/industry/generative-ai",
+    "linkedin": null,
+    "industry": "Artificial Intelligence",
+    "location": null,
+    "contact_page": "https://www.ycombinator.com/contact",
+    "about_page": "https://www.ycombinator.com/about",
+    "team_page": "https://www.ycombinator.com/people",
+    "emails": [
+      "admin@ycombinator.com",
+      "contact@ycombinator.com",
+      "hello@ycombinator.com",
+      "info@ycombinator.com",
+      "sales@ycombinator.com",
+      "support@ycombinator.com"
+    ],
+    "phones": [],
+    "social_links": {
+      "twitter.com": "https://twitter.com/ycombinator",
+      "facebook.com": "https://www.facebook.com/YCombinator/",
+      "instagram.com": "https://www.instagram.com/ycombinator",
+      "linkedin.com": "https://www.linkedin.com/school/y-combinator/"
+    },
+    "people": [
+      {
+        "name": "Garry Tan",
+        "designation": "CEO",
+        "decision_maker_score": 90
+      },
+      {
+        "name": "Harshita Arora General Partner",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Harshita Arora",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Grey Baker General Partner",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Grey Baker",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Tom Blomfield General Partner",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Tom Blomfield",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Tyler Bosmeny General Partner",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Tyler Bosmeny",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Nicolas Dessaigne General Partner",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Nicolas Dessaigne",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Aaron Epstein General Partner",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Aaron Epstein",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Brad Flora General Partner",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Brad Flora",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Jared Friedman Managing Partner",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Jared Friedman",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Chris Golda General Partner",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Chris Golda",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Ankit Gupta General Partner",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Ankit Gupta",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Diana Hu Managing Partner",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Diana Hu",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Pete Koomen General Partner",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Pete Koomen",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "David Lieb General Partner",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "David Lieb",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Andrew Miklas General Partner",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Andrew Miklas",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Harj Taggar Managing Partner",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Harj Taggar",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Jon Xu General Partner",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Jon Xu",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Trevor Blackwell",
+        "designation": "Founder",
+        "decision_maker_score": 100
+      },
+      {
+        "name": "Paul Graham",
+        "designation": "Founder",
+        "decision_maker_score": 100
+      },
+      {
+        "name": "Jessica Livingston",
+        "designation": "Founder",
+        "decision_maker_score": 100
+      },
+      {
+        "name": "Robert Morris",
+        "designation": "Founder",
+        "decision_maker_score": 100
+      },
+      {
+        "name": "Victoria Holst Executive Assistant",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Victoria Holst Executive Assistant",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Gabrielle Rokeach Executive Coordinator",
+        "designation": "COO",
+        "decision_maker_score": 75
+      },
+      {
+        "name": "Gabrielle Rokeach",
+        "designation": "COO",
+        "decision_maker_score": 75
+      },
+      {
+        "name": "Jessica Shapiro Head of Events",
+        "designation": "Head Of",
+        "decision_maker_score": 60
+      },
+      {
+        "name": "Jessica Shapiro",
+        "designation": "Head Of",
+        "decision_maker_score": 60
+      },
+      {
+        "name": "Mark Thurman",
+        "designation": "Head Of",
+        "decision_maker_score": 60
+      },
+      {
+        "name": "Post Batch",
+        "designation": "Head Of",
+        "decision_maker_score": 60
+      },
+      {
+        "name": "Eric Bakan Head of Data",
+        "designation": "Head Of",
+        "decision_maker_score": 60
+      },
+      {
+        "name": "Eric Bakan",
+        "designation": "Head Of",
+        "decision_maker_score": 60
+      },
+      {
+        "name": "Jon Levy",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Carolynn Levy",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Angela Prochnow",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Tatyana Veremyova",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Allison Bryan Director of Accounting",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Allison Bryan",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Celia Cheung Director of Finance",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Celia Cheung",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Kirsty Nathoo Partner Emeritus",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Kirsty Nathoo",
+        "designation": "Partner",
+        "decision_maker_score": 55
+      },
+      {
+        "name": "Verena Prescher Head of Finance",
+        "designation": "Head Of",
+        "decision_maker_score": 60
+      },
+      {
+        "name": "Verena Prescher",
+        "designation": "Head Of",
+        "decision_maker_score": 60
+      },
+      {
+        "name": "Shaun Weber Director of Tax",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Shaun Weber",
+        "designation": "CTO",
+        "decision_maker_score": 80
+      },
+      {
+        "name": "Steven Pham Head of Media",
+        "designation": "Head Of",
+        "decision_maker_score": 60
+      },
+      {
+        "name": "Steven Pham",
+        "designation": "Head Of",
+        "decision_maker_score": 60
+      },
+      {
+        "name": "Renee Mars",
+        "designation": "Head Of",
+        "decision_maker_score": 60
+      },
+      {
+        "name": "Luther Lowe",
+        "designation": "Head Of",
+        "decision_maker_score": 60
+      }
+    ],
+    "source": "Google",
+    "confidence_score": 73,
+    "lead_quality": "High",
+    "company_type": "AI Startup",
+    "relevance_score": 73,
+    "relevance_tier": "MEDIUM",
+    "relevance_info": {
+      "score": 73,
+      "tier": "MEDIUM",
+      "matched_signals": [
+        "Title"
+      ],
+      "rejected_signals": [
+        "Description",
+        "Positions"
+      ],
+      "score_breakdown": {
+        "title": 20.0,
+        "description": 0.0,
+        "positions": 0.0
+      },
+      "industry": "Ai",
+      "confidence": 0.13,
+      "aborted": false,
+      "company_type": "B2B Software",
+      "semantic_trace": [
+        "Matched Title with concepts: ['Ai', 'Generative AI']"
+      ],
+      "technologies": [],
+      "products": [],
+      "website": "",
+      "website_source": "homepage"
+    },
+    "_source_file": "output\\raw\\ai_20260723_140140.json",
+    "_flags": [],
+    "_verified_emails": [
+      "admin@ycombinator.com",
+      "contact@ycombinator.com",
+      "hello@ycombinator.com",
+      "info@ycombinator.com",
+      "sales@ycombinator.com",
+      "support@ycombinator.com"
+    ],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "emails": {
+        "admin@ycombinator.com": "ok",
+        "contact@ycombinator.com": "ok",
+        "hello@ycombinator.com": "ok",
+        "info@ycombinator.com": "ok",
+        "sales@ycombinator.com": "ok",
+        "support@ycombinator.com": "ok"
+      },
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "corporate_social_profiles": {
+        "linkedin": null,
+        "crunchbase": null
+      },
+      "domain_source": "existing_website",
+      "whois": {
+        "registrar": "Gandi SAS",
+        "creation_date": "[datetime.datetime(2005, 3, 20, 23, 51, 7, tzinfo=tzoffset('UTC', 0)), datetime.datetime(2005, 3, 20, 22, 51, 7, tzinfo=tzoffset('UTC', 0))]",
+        "org": "Y Combinator",
+        "country": "FR"
+      },
+      "corporate_registry": {
+        "matched": false,
+        "reason": "not_found_in_registries"
+      }
+    }
+  },
+  {
+    "company_name": "Startupsavant",
+    "website": "https://startupsavant.com/startups-to-watch/generative-ai",
+    "linkedin": null,
+    "industry": "Artificial Intelligence",
+    "location": null,
+    "contact_page": "https://startupsavant.com/contact",
+    "about_page": "https://startupsavant.com/startup-center/company-profiles",
+    "team_page": "https://startupsavant.com/startup-leadership",
+    "emails": [
+      "admin@startupsavant.com",
+      "contact@startupsavant.com",
+      "hello@startupsavant.com",
+      "info@startupsavant.com",
+      "sales@startupsavant.com",
+      "support@startupsavant.com"
+    ],
+    "phones": [],
+    "social_links": {
+      "facebook.com": "https://www.facebook.com/startupsavant",
+      "instagram.com": "https://www.instagram.com/startupsavant/",
+      "x.com": "https://x.com/StartupSavant",
+      "linkedin.com": "https://www.linkedin.com/company/startup-savant"
+    },
+    "people": [],
+    "source": "Google",
+    "confidence_score": 100,
+    "lead_quality": "High",
+    "company_type": "AI Startup",
+    "relevance_score": 100,
+    "relevance_tier": "HIGH",
+    "relevance_info": {
+      "score": 100,
+      "tier": "HIGH",
+      "matched_signals": [
+        "Title",
+        "Description"
+      ],
+      "rejected_signals": [
+        "Positions"
+      ],
+      "score_breakdown": {
+        "title": 20.0,
+        "description": 30.0,
+        "positions": 0.0
+      },
+      "industry": "Ai",
+      "confidence": 0.33,
+      "aborted": false,
+      "company_type": "B2B Software",
+      "semantic_trace": [
+        "Matched Title with concepts: ['Ai', 'Generative AI']",
+        "Matched Description with concepts: ['Ai']"
+      ],
+      "technologies": [],
+      "products": [],
+      "website": "",
+      "website_source": "homepage"
+    },
+    "_source_file": "output\\raw\\ai_20260723_140140.json",
+    "_flags": [],
+    "_verified_emails": [
+      "admin@startupsavant.com",
+      "contact@startupsavant.com",
+      "hello@startupsavant.com",
+      "info@startupsavant.com",
+      "sales@startupsavant.com",
+      "support@startupsavant.com"
+    ],
+    "_verified_phones": [],
+    "_website_reachable": true,
+    "_verification_notes": {
+      "emails": {
+        "admin@startupsavant.com": "ok",
+        "contact@startupsavant.com": "ok",
+        "hello@startupsavant.com": "ok",
+        "info@startupsavant.com": "ok",
+        "sales@startupsavant.com": "ok",
+        "support@startupsavant.com": "ok"
+      },
+      "website": "ok"
+    },
+    "_verification_passed": true,
+    "_enrichment": {
+      "corporate_social_profiles": {
+        "linkedin": null,
+        "crunchbase": null
+      },
+      "domain_source": "existing_website",
+      "whois": {
+        "registrar": "NameSilo, LLC",
+        "creation_date": "[datetime.datetime(2013, 9, 6, 4, 29, 2, tzinfo=tzoffset('UTC', 0)), datetime.datetime(2013, 9, 5, 7, 0, tzinfo=tzoffset('UTC', 0))]",
+        "org": "See PrivacyGuardian.org",
+        "country": "US"
+      },
+      "corporate_registry": {
+        "matched": false,
+        "reason": "not_found_in_registries"
+      }
+    }
+  }
+]

@@ -113,16 +113,28 @@ class QueryPlanner:
 
         concept_focus = concepts[0] if concepts else kw_no_loc
 
-        # 1. Tech & Concept Family (Dynamic threshold expansion)
+        from query.company_template import INDUSTRY_SEMANTIC_TEMPLATES
+
+        # 1. Tech & Concept Family (Dynamic threshold expansion with industry-aware B2B templates)
         for concept in concepts:
-            add_task("google", f"{concept} software companies{loc_suffix}")
-            add_task("google", f"{concept} startups{loc_suffix}")
-            add_task("google", f"{concept} company{loc_suffix}")
-            add_task("google", f"{concept} software company{loc_suffix}")
-            add_task("google", f"{concept} development company{loc_suffix}")
-            add_task("brave", f"{concept} company{loc_suffix}")
-            add_task("duckduckgo", f"{concept} software company{loc_suffix}")
-            add_task("bing", f"{concept} development company{loc_suffix}")
+            # Check if domain templates exist for any of the target domains
+            applied_industry_templates = []
+            for d in domains:
+                if d in INDUSTRY_SEMANTIC_TEMPLATES:
+                    applied_industry_templates.extend(INDUSTRY_SEMANTIC_TEMPLATES[d])
+
+            if applied_industry_templates:
+                for tmpl in applied_industry_templates[:5]:
+                    query_str = tmpl.format(concept=concept) + loc_suffix
+                    add_task("google", query_str)
+                    add_task("brave", query_str)
+            else:
+                add_task("google", f"{concept} company{loc_suffix}")
+                add_task("google", f"{concept} startups{loc_suffix}")
+                add_task("google", f"{concept} software company{loc_suffix}")
+                add_task("brave", f"{concept} company{loc_suffix}")
+                add_task("duckduckgo", f"{concept} company{loc_suffix}")
+                add_task("bing", f"{concept} company{loc_suffix}")
 
         # Domain-specific B2B intent expansions for hardware/electronics
         if "hardware_development" in domains:

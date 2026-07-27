@@ -180,14 +180,22 @@ def run(keyword: str, disable_cache: bool = False) -> None:
 
 
 if __name__ == "__main__":
-    argv = sys.argv[1:]
-    disable_cache = "--no-cache" in argv
-    if disable_cache:
-        argv = [arg for arg in argv if arg != "--no-cache"]
+    import argparse
+    parser = argparse.ArgumentParser(description="Pillar 1 Discovery Pipeline")
+    parser.add_argument("keyword", nargs="*", help="Keyword for discovery")
+    parser.add_argument("--no-cache", action="store_true", help="Bypass search cache")
+    parser.add_argument("--target-leads", type=int, default=10, help="Target lead count threshold (default: 10, 0=unlimited)")
+    
+    args, unknown = parser.parse_known_args()
+    disable_cache = args.no_cache
+    target_leads = args.target_leads
+    
+    import config
+    setattr(config, "TARGET_LEADS_LIMIT", target_leads)
+    setattr(config, "TARGET_HIGH_CONFIDENCE", target_leads if target_leads > 0 else 999999)
 
-    if argv:
-        kw = " ".join(argv).strip()
-    else:
+    kw = " ".join(args.keyword).strip()
+    if not kw:
         kw = input("Enter keyword: ").strip()
 
     if not kw:

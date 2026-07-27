@@ -1,10 +1,4 @@
-#!/usr/bin/env python3
-"""
-Pillar 2 — Promote Script
-After running enrich on rescue_candidates.json, some records may have
-gotten a "_enrichment.discovered_website". This copies it into the main
-"website" field so verify_leads.py can check it.
-"""
+
 
 import json
 

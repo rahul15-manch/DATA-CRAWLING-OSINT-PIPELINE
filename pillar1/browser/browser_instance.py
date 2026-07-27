@@ -3,6 +3,7 @@ import sys
 import time
 import logging
 import psutil
+from typing import Dict, Any, Optional, List
 from playwright.sync_api import Browser, BrowserContext, Page
 
 logger = logging.getLogger("pillar1.browser")
@@ -23,6 +24,15 @@ class BrowserInstance:
         self.launched_at = 0.0
         self.blocked_until = {}
         self.consecutive_failures = 0
+
+    def get_health_score(self) -> float:
+        """Calculate dynamic health score [0.0 - 100.0] for instance selection."""
+        score = 100.0
+        score -= min(50.0, self.failure_count * 15.0)
+        score += min(20.0, self.success_count * 5.0)
+        if self.requests_count > 0:
+            score -= min(20.0, (self.requests_count / float(self.recycle_limit)) * 20.0)
+        return max(0.0, score)
 
     def launch(self) -> bool:
         try:
@@ -120,56 +130,11 @@ class BrowserInstance:
             # Handle consent popups (Google cookie consent page, etc.)
             self._handle_consent(page)
             
-            # At this point, the homepage successfully loaded. The browser itself is healthy!
+            # Handle consent popups (Google cookie consent page, etc.)
+            self._handle_consent(page)
             
-            # 2. Run test search query to verify proxy reputation (Phase 2)
-            search_url = f"{provider_url.rstrip('/')}/search?q={test_query}"
-            logger.info(f"[BrowserInstance #{self.index}] Warm-up: Executing test search query...")
-            try:
-                response = page.goto(search_url, timeout=15000, wait_until="domcontentloaded")
-                
-                # Check for 429 rate limit
-                if response and response.status == 429:
-                    logger.warning(f"[BrowserInstance #{self.index}] Google warm-up search blocked with HTTP 429. Flagging proxy cooldown.")
-                    self.blocked_until["google"] = time.time() + 600.0
-                    if self.proxy_url:
-                        try:
-                            from network_client_project.network.proxy_manager import get_proxy_manager
-                            pm = get_proxy_manager()
-                            proxy_obj = pm.get_proxy_by_url(self.proxy_url)
-                            if proxy_obj:
-                                proxy_obj.record_failure(domain="google.com", error=Exception("Playwright Google 429"), cooldown_seconds=600)
-                        except Exception:
-                            pass
-                    return True # Keep browser, it's healthy, but proxy is cooling down
-
-                # Check for CAPTCHA page content
-                content = page.content()
-                if "captcha" in content.lower() or "did not match any documents" in content.lower() or "sorry/index" in page.url:
-                    logger.warning(f"[BrowserInstance #{self.index}] Google warm-up search flagged or blocked by CAPTCHA.")
-                    self.blocked_until["google"] = time.time() + 600.0
-                    if self.proxy_url:
-                        try:
-                            from network_client_project.network.proxy_manager import get_proxy_manager
-                            pm = get_proxy_manager()
-                            proxy_obj = pm.get_proxy_by_url(self.proxy_url)
-                            if proxy_obj:
-                                proxy_obj.record_failure(domain="google.com", error=Exception("Playwright Google CAPTCHA"), cooldown_seconds=600)
-                        except Exception:
-                            pass
-                    return True # Keep browser, it's healthy, but proxy is cooling down
-
-            except Exception as e:
-                logger.warning(f"[BrowserInstance #{self.index}] Exception executing test search query: {e}")
-                err_str = str(e).lower()
-                is_tunnel_err = any(x in err_str for x in ["net::err_tunnel_connection_failed", "net::err_connection_refused", "net::err_timed_out", "net::err_name_not_resolved", "net::err_connection_closed"])
-                if is_tunnel_err:
-                    logger.warning(f"[BrowserInstance #{self.index}] Tunnel failed during search warm-up.")
-                    return False
-                self.blocked_until["google"] = time.time() + 600.0
-                return True
-
-            logger.info(f"[BrowserInstance #{self.index}] Warm-up pre-flight complete. Browser & proxy are healthy!")
+            # At this point, the homepage successfully loaded. The browser itself is healthy!
+            logger.info(f"[BrowserInstance #{self.index}] Fast warm-up pre-flight complete. Browser & proxy are healthy!")
             return True
         except Exception as e:
             logger.error(f"[BrowserInstance #{self.index}] Warm-up exception: {e}")

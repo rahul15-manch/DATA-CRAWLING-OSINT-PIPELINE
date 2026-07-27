@@ -944,9 +944,22 @@ def discover_companies(keyword: str) -> list:
     if hasattr(manager, "_client") and hasattr(manager._client, "proxy_manager"):
         manager._client.proxy_manager.is_crawling = True
     
+    # 4-Way Granular Budget Allocation (30% Search, 20% Directory, 35% Homepage, 15% Verification)
+    search_budget_s = timeout_cap * 0.30
+    directory_budget_s = timeout_cap * 0.20
+    homepage_budget_s = timeout_cap * 0.35
+    verification_budget_s = timeout_cap * 0.15
+    
     exit_reason = "All enqueued tasks completed"
 
+    search_phase_start_time = time.time()
     while not scheduler.is_empty():
+        # Check if Search Phase budget (30%) is exhausted
+        if (time.time() - search_phase_start_time) >= search_budget_s:
+            print(f"[company_discovery] Search phase budget ({search_budget_s:.1f}s) exhausted. Transitioning to directory & homepage crawling.")
+            exit_reason = f"Search phase budget ({search_budget_s:.1f}s) completed"
+            break
+
         req = scheduler.next()
         if not req:
             break
@@ -1222,10 +1235,10 @@ def discover_companies(keyword: str) -> list:
             exit_reason = "No new accepted companies for 10s"
             break
 
-        # Check rolling query yields (no accepted companies in last 8 queries)
-        if len(recent_yields) >= 8 and sum(recent_yields) == 0:
-            print("[company_discovery] Stopping: No accepted companies from the last 8 executed queries.")
-            exit_reason = "Last 8 queries yielded 0 results"
+        # Coverage saturation check (stop if last 5 queries yielded 0 new unique companies)
+        if len(recent_yields) >= 5 and sum(list(recent_yields)[-5:]) == 0 and len(accumulator) >= 3:
+            print("[company_discovery] Stopping: Coverage saturation reached (Last 5 queries yielded 0 new companies).")
+            exit_reason = "Coverage saturation reached (5 zero-yield queries)"
             break
 
         # Early exit when target reached
@@ -1245,34 +1258,53 @@ def discover_companies(keyword: str) -> list:
 
     # ── Process Directory Queue (Secondary Queue) ──────────────────────────────
     if directory_urls_to_mine:
-        print(f"\n[Discovery] Processing directory queue: {len(directory_urls_to_mine)} directories collected")
+        dir_count = len(directory_urls_to_mine)
+        # Workload-scaled adaptive directory budget (10 dirs -> 15s, 40 dirs -> 30s, 100 dirs -> 45s)
+        dir_budget_s = min(45.0, max(15.0, dir_count * 1.5))
+        print(f"\n[Discovery] Processing directory queue: {dir_count} directories collected (Adaptive Budget: {dir_budget_s:.1f}s)")
+        
+        # Reset deadline timer for directory phase
+        Deadline.set_timeout(dir_budget_s)
+        
         from discovery.directory_extractor import extract_company_links
         from discovery.homepage_evaluator import _fetch_homepage
-        import random
+        from concurrent.futures import ThreadPoolExecutor
         
         all_candidate_profiles = []
-        for dir_url, dir_title, dir_family in directory_urls_to_mine:
+        
+        def _mine_single_directory(item):
+            dir_url, dir_title, dir_family = item
             print(f"[Discovery] Mining directory: {dir_url}")
             dir_html = _fetch_homepage(dir_url)
             if not dir_html:
                 print(f"[Discovery] Failed to fetch directory page: {dir_url}")
-                continue
-                
+                return []
             extracted_links = extract_company_links(dir_html, dir_url)
             print(f"[Discovery] Extracted {len(extracted_links)} links from directory {dir_url}")
             stats.increment("directory_mined", len(extracted_links))
-            
-            for ext_url in extracted_links:
-                if ext_url not in processed_company_urls:
-                    all_candidate_profiles.append((ext_url, dir_title, dir_family))
+            return [(ext_url, dir_title, dir_family) for ext_url in extracted_links if ext_url not in processed_company_urls]
+
+        with ThreadPoolExecutor(max_workers=5) as executor:
+            results_list = list(executor.map(_mine_single_directory, directory_urls_to_mine))
+            for res in results_list:
+                all_candidate_profiles.extend(res)
                     
-        # Interleave candidates by domain
+        # Interleave candidates by domain and prioritize High-confidence / relevant candidates first
         interleaved_candidates = interleave_urls_by_domain(all_candidate_profiles)
+        
+        # Sort candidates by title/url relevance priority (High -> Medium -> Low)
+        def candidate_priority_key(cand):
+            url, title, _ = cand
+            from discovery.semantic_ranking_engine import SemanticRanker
+            s_res = SemanticRanker().score_snippet(title, url, keyword)
+            return s_res.get("score", 0.0)
+            
+        interleaved_candidates.sort(key=candidate_priority_key, reverse=True)
         
         # Limit candidate evaluation queue to avoid hammering directories and blowing budget
         max_eval = getattr(config, "MAX_DIRECTORY_CANDIDATES_TO_EVALUATE", 50)
         candidates_to_process = interleaved_candidates[:max_eval]
-        print(f"[Discovery] Interleaved {len(interleaved_candidates)} directory candidate profiles across domains.")
+        print(f"[Discovery] Prioritized {len(interleaved_candidates)} directory candidate profiles by confidence score (High -> Medium -> Low).")
         print(f"[Discovery] Capping candidate processing queue at {len(candidates_to_process)} (Max allowed: {max_eval}).")
         
         # Concurrently evaluate candidate profiles in parallel to reduce sequential delay

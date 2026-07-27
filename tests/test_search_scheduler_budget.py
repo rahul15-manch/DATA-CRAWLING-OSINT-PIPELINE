@@ -48,17 +48,8 @@ def test_google_block_cooldown_logic(monkeypatch):
 
     monkeypatch.setattr(manager, "_get_ordered_providers", lambda: [_MockBlockProvider()])
     
-    # Query 1: block -> consecutive_blocks = 1
+    # Instant Failover: Query 1 hits block -> consecutive_blocks = 3 -> disabled globally immediately
     manager.search("software developer company 1", max_results=10)
-    assert manager._consecutive_blocks["google_html"] == 1
-    assert manager._google_disabled_until == 0.0
-
-    # Query 2: block -> consecutive_blocks = 2
-    manager.search("software developer company 2", max_results=10)
-    assert manager._consecutive_blocks["google_html"] == 2
-    
-    # Query 3: block -> consecutive_blocks = 3 -> disabled
-    manager.search("software developer company 3", max_results=10)
     assert manager._consecutive_blocks["google_html"] == 3
     assert manager._google_disabled_until > time.time()
 

@@ -13,46 +13,74 @@
       "ontology_version": "1.0.0"
     }
   },
-  "semantic::machine": {
+  "semantic::ai": {
     "ontology_version": "1.0.0",
     "intent_profile": {
-      "primary_domain": "Hardware_Industrial",
+      "primary_domain": "Ai",
       "concepts": [
-        "Hardware Store",
-        "Equipment",
-        "Tools",
-        "Machinery",
-        "Supplies",
-        "Building Materials",
-        "Diy",
-        "Retailer",
-        "Fasteners",
-        "Screws",
-        "Pumps",
-        "Valves",
-        "Industrial Hardware",
-        "Power Tools"
+        "Nlp",
+        "Rag",
+        "Ml",
+        "Generative AI",
+        "Transformers",
+        "Vector DB",
+        "Deep Learning",
+        "Ai",
+        "Computer Vision",
+        "NLP",
+        "Gpt",
+        "Neural Network",
+        "Llm"
       ],
       "positions": [
-        "Sales Associate",
-        "Hardware Specialist",
-        "Store Manager",
-        "Inventory Coordinator"
+        "Ml Engineer",
+        "Nlp Engineer",
+        "Data Scientist",
+        "Ai Engineer",
+        "Computer Vision Specialist",
+        "Machine Learning Engineer"
       ],
       "services": [
-        "Industrial Supply",
-        "Tool Rental",
-        "Equipment Supply",
-        "Hardware Retail"
+        "Ai Consulting",
+        "Machine Learning Solutions",
+        "Generative Ai Development",
+        "Llm Fine-Tuning"
       ],
       "products": [
-        "Lowes",
-        "Ace Hardware",
-        "Grainger",
-        "Mcmaster-Carr",
-        "Home Depot"
+        "Openai",
+        "Gemini",
+        "Claude",
+        "Ollama",
+        "Chatgpt",
+        "Crewai",
+        "Dspy",
+        "Langchain"
       ],
       "confidence": 1.0,
+      "ontology_version": "1.0.0"
+    }
+  },
+  "semantic::automobile": {
+    "ontology_version": "1.0.0",
+    "intent_profile": {
+      "primary_domain": "Automobile",
+      "concepts": [
+        "Automobile",
+        "automobile"
+      ],
+      "positions": [
+        "Automobile Specialist",
+        "Automobile Developer",
+        "Automobile Engineer"
+      ],
+      "services": [
+        "Automobile Consulting",
+        "Automobile Solutions",
+        "Automobile Development",
+        "Automobile Services"
+      ],
+      "products": [],
+      "confidence": 0.4,
       "ontology_version": "1.0.0"
     }
   }

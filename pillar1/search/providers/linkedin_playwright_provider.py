@@ -96,7 +96,7 @@ class LinkedinPlaywrightProvider(SearchProvider):
             page = context.new_page()
 
             logger.info(f"[LinkedinPlaywrightProvider] Navigating to LinkedIn company profile: {target_url}")
-            response = page.goto(target_url, timeout=15000, wait_until="domcontentloaded")
+            response = page.goto(target_url, timeout=8000, wait_until="domcontentloaded")
             
             # Handle redirect to login screen (which is common if cookie gets expired/invalid)
             if "linkedin.com/checkpoint/lg" in page.url or "login" in page.url:
@@ -220,7 +220,9 @@ class LinkedinPlaywrightProvider(SearchProvider):
             from pillar1.browser.browser_breaker import BrowserCircuitBreaker
             BrowserCircuitBreaker.get_instance().record_failure(self.name)
             logger.error(f"[LinkedinPlaywrightProvider] Scrape error: {e}")
-            raise
+            if isinstance(e, ProviderUnavailable):
+                raise e
+            raise ProviderUnavailable(self.name, f"LinkedIn Playwright error: {e}")
 
         finally:
             if page:

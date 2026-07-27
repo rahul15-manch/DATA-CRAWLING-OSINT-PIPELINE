@@ -125,14 +125,14 @@ class PlaywrightGoogleProvider(SearchProvider):
 
             # 3. Load page
             logger.info(f"[PlaywrightGoogleProvider] Fetching search page: {url}")
-            response = page_obj.goto(url, timeout=15000, wait_until="domcontentloaded")
+            response = page_obj.goto(url, timeout=8000, wait_until="domcontentloaded")
             
             # Handle cookie consent walls if we get redirected or blocked
             if "consent.google.com" in page_obj.url or page_obj.locator("form[action*='consent']").count() > 0:
                 logger.info("[PlaywrightGoogleProvider] Consent popup/redirect detected on search page. Handling...")
                 self._handle_consent(page_obj)
                 # Re-load search page after consent accepted
-                response = page_obj.goto(url, timeout=15000, wait_until="domcontentloaded")
+                response = page_obj.goto(url, timeout=8000, wait_until="domcontentloaded")
 
             if not response:
                 instance.failure_count += 1
@@ -242,7 +242,9 @@ class PlaywrightGoogleProvider(SearchProvider):
             if is_block:
                 instance.blocked_until["google"] = time.time() + 600.0
 
-            raise
+            if isinstance(e, ProviderUnavailable):
+                raise e
+            raise ProviderUnavailable(self.name, f"Playwright error: {e}")
 
         finally:
             if page_obj:

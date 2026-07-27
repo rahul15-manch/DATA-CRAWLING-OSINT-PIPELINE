@@ -52,3 +52,73 @@ COMPANY_TEMPLATES = [
         ]
     },
 ]
+
+# Industry-aware semantic templates for domain B2B expansion
+INDUSTRY_SEMANTIC_TEMPLATES = {
+    "hardware_development": [
+        "{concept} manufacturer",
+        "{concept} OEM",
+        "{concept} EMS company",
+        "{concept} systems company",
+        "{concept} assembly",
+        "{concept} supplier",
+        "{concept} contract manufacturer",
+        "{concept} electronics company"
+    ],
+    "hardware_industrial": [
+        "{concept} manufacturer",
+        "{concept} supplier",
+        "{concept} industrial distributor",
+        "{concept} equipment manufacturer"
+    ],
+    "manufacturing": [
+        "{concept} manufacturer",
+        "{concept} OEM",
+        "{concept} EMS company",
+        "{concept} systems company",
+        "{concept} assembly",
+        "{concept} supplier",
+        "{concept} contract manufacturer"
+    ],
+    "healthcare": [
+        "{concept} medical devices",
+        "{concept} digital health company",
+        "{concept} healthtech startup",
+        "{concept} clinical software",
+        "{concept} EHR provider",
+        "{concept} telemedicine company"
+    ],
+    "fintech": [
+        "{concept} payment gateway",
+        "{concept} banking platform",
+        "{concept} fintech startup",
+        "{concept} trading software",
+        "{concept} ledger technology"
+    ],
+    "ai": [
+        "{concept} AI startup",
+        "{concept} machine learning lab",
+        "{concept} LLM solutions provider",
+        "{concept} computer vision company",
+        "{concept} generative AI company"
+    ],
+    "logistics": [
+        "{concept} freight forwarding",
+        "{concept} supply chain solutions",
+        "{concept} 3PL provider",
+        "{concept} warehouse automation",
+        "{concept} fleet tracking company"
+    ],
+    "retail": [
+        "{concept} ecommerce platform",
+        "{concept} D2C brand",
+        "{concept} retail tech company",
+        "{concept} omnichannel solutions"
+    ],
+    "construction": [
+        "{concept} building materials manufacturer",
+        "{concept} construction software",
+        "{concept} HVAC manufacturer",
+        "{concept} heavy equipment supplier"
+    ]
+}

@@ -259,5 +259,15 @@
       "last_seen": "2026-07-21",
       "target_field": "concepts"
     }
+  },
+  "automobile": {
+    "Automobile": {
+      "seen": 2,
+      "accepted": 2,
+      "confidence": 1.0,
+      "first_seen": "2026-07-26",
+      "last_seen": "2026-07-26",
+      "target_field": "concepts"
+    }
   }
 }
