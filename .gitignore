@@ -1,1 +1,11 @@
 .env
+# Pycache & Python temp files
+**/__pycache__/
+*.pyc
+
+# Logs and Debug files
+debug_html/
+data/rejection_stats.json
+
+# Output JSONs and reports
+output/
