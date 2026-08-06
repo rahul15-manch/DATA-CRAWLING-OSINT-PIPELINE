@@ -8353,3 +8353,433 @@ Call log:
 2026-07-26 20:56:04 | WARNING  | ThreadPoolExecutor-0_5 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 34.134.231.117:3129 -> Google UNREACHABLE (Failed to perform, curl: (28) Operation timed out after 8008 milliseconds with 0 bytes received. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.)
 2026-07-26 20:56:05 | WARNING  | ThreadPoolExecutor-0_2 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 217.182.203.184:8888 -> DEAD (all 3 general HTTPS tests failed)
 2026-07-26 20:56:14 | WARNING  | ThreadPoolExecutor-0_4 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 52.67.38.58:3128 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-27 10:21:27 | ERROR    | MainThread | search.base_registry | Failed to load module search.providers.linkedin_playwright_provider: No module named 'playwright'
+Traceback (most recent call last):
+  File "C:\Users\admin\Desktop\data-old\pipeline2_final\DATA-CRAWLING-OSINT-PIPELINE\pillar1\search\base_registry.py", line 51, in load_plugins
+    module = importlib.import_module(full_module_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "C:\Users\admin\Desktop\data-old\pipeline2_final\DATA-CRAWLING-OSINT-PIPELINE\pillar1\search\providers\linkedin_playwright_provider.py", line 16, in <module>
+    from pillar1.browser.browser_manager import get_browser_manager
+  File "C:\Users\admin\Desktop\data-old\pipeline2_final\DATA-CRAWLING-OSINT-PIPELINE\pillar1\browser\browser_manager.py", line 4, in <module>
+    from playwright.sync_api import sync_playwright, Playwright
+ModuleNotFoundError: No module named 'playwright'
+2026-07-27 10:21:27 | ERROR    | MainThread | search.base_registry | Failed to load module search.providers.playwright_google_provider: No module named 'playwright'
+Traceback (most recent call last):
+  File "C:\Users\admin\Desktop\data-old\pipeline2_final\DATA-CRAWLING-OSINT-PIPELINE\pillar1\search\base_registry.py", line 51, in load_plugins
+    module = importlib.import_module(full_module_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "C:\Users\admin\Desktop\data-old\pipeline2_final\DATA-CRAWLING-OSINT-PIPELINE\pillar1\search\providers\playwright_google_provider.py", line 17, in <module>
+    from pillar1.browser.browser_manager import get_browser_manager
+  File "C:\Users\admin\Desktop\data-old\pipeline2_final\DATA-CRAWLING-OSINT-PIPELINE\pillar1\browser\browser_manager.py", line 4, in <module>
+    from playwright.sync_api import sync_playwright, Playwright
+ModuleNotFoundError: No module named 'playwright'
+2026-07-27 10:21:27 | WARNING  | MainThread | network_client_project.network.user_agents | Failed to initialize fake_useragent, using fallback. Error: No module named 'fake_useragent'
+2026-07-27 10:21:36 | WARNING  | ThreadPoolExecutor-0_2 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 217.182.203.184:8888 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-27 10:21:51 | WARNING  | ThreadPoolExecutor-0_4 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 52.67.38.58:3128 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-27 10:21:51 | WARNING  | ThreadPoolExecutor-0_0 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 34.87.80.221:30000 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-27 10:23:23 | ERROR    | MainThread | search.base_registry | Failed to load module search.providers.linkedin_playwright_provider: No module named 'playwright'
+Traceback (most recent call last):
+  File "C:\Users\admin\Desktop\data-old\pipeline2_final\DATA-CRAWLING-OSINT-PIPELINE\pillar1\search\base_registry.py", line 51, in load_plugins
+    module = importlib.import_module(full_module_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "C:\Users\admin\Desktop\data-old\pipeline2_final\DATA-CRAWLING-OSINT-PIPELINE\pillar1\search\providers\linkedin_playwright_provider.py", line 16, in <module>
+    from pillar1.browser.browser_manager import get_browser_manager
+  File "C:\Users\admin\Desktop\data-old\pipeline2_final\DATA-CRAWLING-OSINT-PIPELINE\pillar1\browser\browser_manager.py", line 4, in <module>
+    from playwright.sync_api import sync_playwright, Playwright
+ModuleNotFoundError: No module named 'playwright'
+2026-07-27 10:23:23 | ERROR    | MainThread | search.base_registry | Failed to load module search.providers.playwright_google_provider: No module named 'playwright'
+Traceback (most recent call last):
+  File "C:\Users\admin\Desktop\data-old\pipeline2_final\DATA-CRAWLING-OSINT-PIPELINE\pillar1\search\base_registry.py", line 51, in load_plugins
+    module = importlib.import_module(full_module_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "C:\Users\admin\Desktop\data-old\pipeline2_final\DATA-CRAWLING-OSINT-PIPELINE\pillar1\search\providers\playwright_google_provider.py", line 17, in <module>
+    from pillar1.browser.browser_manager import get_browser_manager
+  File "C:\Users\admin\Desktop\data-old\pipeline2_final\DATA-CRAWLING-OSINT-PIPELINE\pillar1\browser\browser_manager.py", line 4, in <module>
+    from playwright.sync_api import sync_playwright, Playwright
+ModuleNotFoundError: No module named 'playwright'
+2026-07-27 10:23:23 | WARNING  | MainThread | network_client_project.network.user_agents | Failed to initialize fake_useragent, using fallback. Error: No module named 'fake_useragent'
+2026-07-27 10:23:23 | WARNING  | MainThread | network_client_project.network.user_agents | Failed to initialize fake_useragent, using fallback. Error: No module named 'fake_useragent'
+2026-07-27 10:23:23 | WARNING  | MainThread | network_client_project.network.user_agents | Failed to initialize fake_useragent, using fallback. Error: No module named 'fake_useragent'
+2026-07-27 10:23:29 | WARNING  | MainThread | network_client_project.network.user_agents | Failed to initialize fake_useragent, using fallback. Error: No module named 'fake_useragent'
+2026-07-27 10:23:33 | WARNING  | ThreadPoolExecutor-0_2 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 217.182.203.184:8888 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-27 10:23:47 | WARNING  | ThreadPoolExecutor-0_4 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 52.67.38.58:3128 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-27 10:23:47 | WARNING  | ThreadPoolExecutor-0_0 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 34.87.80.221:30000 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-27 10:25:22 | WARNING  | ThreadPoolExecutor-3_0 | network_client_project.network.user_agents | Failed to initialize fake_useragent, using fallback. Error: No module named 'fake_useragent'
+2026-07-27 10:25:43 | WARNING  | GoogleSchedulerWorker_0 | network_client_project.network.middleware.retry | [Retry] Retrying query https://www.google.com/search?q=site%3Atatamotors.com+email&num=3&hl=en&gl=us (attempt 1/1) after 0.10s delay due to: Timeout (Failed to perform, curl: (28) Connection timed out after 8002 milliseconds. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.).
+2026-07-27 10:25:45 | ERROR    | GoogleSchedulerWorker_0 | search.google_scheduler | [GoogleScheduler] All 1 retries failed for: 'site:tatamotors.com email'
+2026-07-27 14:47:47 | ERROR    | MainThread | search.base_registry | Failed to load module search.providers.linkedin_playwright_provider: No module named 'playwright'
+Traceback (most recent call last):
+  File "C:\Users\admin\Desktop\data-old\pipeline2_final\DATA-CRAWLING-OSINT-PIPELINE\pillar1\search\base_registry.py", line 51, in load_plugins
+    module = importlib.import_module(full_module_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "C:\Users\admin\Desktop\data-old\pipeline2_final\DATA-CRAWLING-OSINT-PIPELINE\pillar1\search\providers\linkedin_playwright_provider.py", line 16, in <module>
+    from pillar1.browser.browser_manager import get_browser_manager
+  File "C:\Users\admin\Desktop\data-old\pipeline2_final\DATA-CRAWLING-OSINT-PIPELINE\pillar1\browser\browser_manager.py", line 4, in <module>
+    from playwright.sync_api import sync_playwright, Playwright
+ModuleNotFoundError: No module named 'playwright'
+2026-07-27 14:47:47 | ERROR    | MainThread | search.base_registry | Failed to load module search.providers.playwright_google_provider: No module named 'playwright'
+Traceback (most recent call last):
+  File "C:\Users\admin\Desktop\data-old\pipeline2_final\DATA-CRAWLING-OSINT-PIPELINE\pillar1\search\base_registry.py", line 51, in load_plugins
+    module = importlib.import_module(full_module_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "C:\Users\admin\Desktop\data-old\pipeline2_final\DATA-CRAWLING-OSINT-PIPELINE\pillar1\search\providers\playwright_google_provider.py", line 17, in <module>
+    from pillar1.browser.browser_manager import get_browser_manager
+  File "C:\Users\admin\Desktop\data-old\pipeline2_final\DATA-CRAWLING-OSINT-PIPELINE\pillar1\browser\browser_manager.py", line 4, in <module>
+    from playwright.sync_api import sync_playwright, Playwright
+ModuleNotFoundError: No module named 'playwright'
+2026-07-27 14:47:47 | WARNING  | MainThread | network_client_project.network.user_agents | Failed to initialize fake_useragent, using fallback. Error: No module named 'fake_useragent'
+2026-07-27 14:47:47 | WARNING  | MainThread | network_client_project.network.user_agents | Failed to initialize fake_useragent, using fallback. Error: No module named 'fake_useragent'
+2026-07-27 14:47:47 | WARNING  | MainThread | network_client_project.network.user_agents | Failed to initialize fake_useragent, using fallback. Error: No module named 'fake_useragent'
+2026-07-27 14:47:56 | WARNING  | ThreadPoolExecutor-0_1 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 47.81.56.193:8888 -> Google UNREACHABLE (Failed to perform, curl: (56) Connection closed abruptly. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.)
+2026-07-27 14:47:58 | WARNING  | ThreadPoolExecutor-0_2 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 217.182.203.184:8888 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-27 14:48:00 | WARNING  | GoogleSchedulerWorker_0 | network_client_project.network.middleware.retry | [Retry] Retrying query https://www.google.com/search?q=Enterprise+Software+software+company&num=10&hl=en&gl=us (attempt 1/1) after 0.10s delay due to: Timeout (Failed to perform, curl: (28) Connection timed out after 1422 milliseconds. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.).
+2026-07-27 14:48:04 | ERROR    | GoogleSchedulerWorker_0 | search.google_scheduler | [GoogleScheduler] All 1 retries failed for: 'Enterprise Software software company'
+2026-07-27 14:48:10 | WARNING  | ThreadPoolExecutor-0_5 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 34.134.231.117:3129 -> Google UNREACHABLE (Failed to perform, curl: (28) Connection timed out after 1804 milliseconds. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.)
+2026-07-27 14:48:11 | WARNING  | ThreadPoolExecutor-0_0 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 34.87.80.221:30000 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-27 14:48:11 | WARNING  | ThreadPoolExecutor-0_4 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 52.67.38.58:3128 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-27 14:48:12 | WARNING  | MainThread | network_client_project.network.user_agents | Failed to initialize fake_useragent, using fallback. Error: No module named 'fake_useragent'
+2026-07-27 14:48:44 | WARNING  | ThreadPoolExecutor-3_0 | network_client_project.network.user_agents | Failed to initialize fake_useragent, using fallback. Error: No module named 'fake_useragent'
+2026-07-27 14:48:45 | WARNING  | ThreadPoolExecutor-3_2 | network_client_project.network.user_agents | Failed to initialize fake_useragent, using fallback. Error: No module named 'fake_useragent'
+2026-07-27 14:48:48 | WARNING  | ThreadPoolExecutor-3_1 | network_client_project.network.user_agents | Failed to initialize fake_useragent, using fallback. Error: No module named 'fake_useragent'
+2026-07-27 14:48:50 | WARNING  | ThreadPoolExecutor-3_0 | network_client_project.network.middleware.retry | [Retry] Retrying query https://craft.co/enterprise-software-companies (attempt 1/3) after 2.69s delay due to: Exception (WAF CAPTCHA/403 block).
+2026-07-27 14:48:57 | WARNING  | ThreadPoolExecutor-3_2 | network_client_project.network.middleware.retry | [Retry] Retrying query https://topstartups.io (attempt 1/3) after 0.10s delay due to: Timeout (Failed to perform, curl: (28) Connection timed out after 10006 milliseconds. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.).
+2026-07-27 14:49:01 | WARNING  | ThreadPoolExecutor-3_1 | network_client_project.network.middleware.retry | [Retry] Retrying query https://infor.com (attempt 1/3) after 3.38s delay due to: Exception (WAF CAPTCHA/403 block).
+2026-07-27 14:49:01 | WARNING  | ThreadPoolExecutor-3_0 | network_client_project.network.middleware.retry | [Retry] Retrying query https://craft.co/enterprise-software-companies (attempt 1/3) after 3.33s delay due to: Exception (WAF CAPTCHA/403 block).
+2026-07-27 14:49:08 | WARNING  | ThreadPoolExecutor-3_0 | network_client_project.network.middleware.retry | [Retry] Retrying query https://craft.co/enterprise-software-companies (attempt 1/3) after 3.07s delay due to: Exception (WAF CAPTCHA/403 block).
+2026-07-27 14:49:17 | WARNING  | ThreadPoolExecutor-3_1 | network_client_project.network.middleware.retry | [Retry] Retrying query https://infor.com (attempt 1/3) after 3.13s delay due to: Exception (WAF CAPTCHA/403 block).
+2026-07-27 14:49:21 | WARNING  | ThreadPoolExecutor-3_0 | network_client_project.network.middleware.retry | [Retry] Retrying query https://craft.co/enterprise-software-companies (attempt 1/3) after 2.93s delay due to: Exception (WAF CAPTCHA/403 block).
+2026-07-27 14:49:34 | WARNING  | ThreadPoolExecutor-3_1 | network_client_project.network.middleware.retry | [Retry] Retrying query https://infor.com (attempt 1/3) after 0.10s delay due to: Timeout (Failed to perform, curl: (28) Connection timed out after 6176 milliseconds. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.).
+2026-07-27 14:49:46 | WARNING  | ThreadPoolExecutor-3_1 | network_client_project.network.middleware.retry | [Retry] Retrying query https://infor.com (attempt 1/3) after 0.10s delay due to: Timeout (Failed to perform, curl: (28) Connection timed out after 4936 milliseconds. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.).
+2026-07-27 14:59:53 | ERROR    | MainThread | search.base_registry | Failed to load module search.providers.linkedin_playwright_provider: No module named 'playwright'
+Traceback (most recent call last):
+  File "C:\Users\admin\Desktop\data-old\pipeline2_final\DATA-CRAWLING-OSINT-PIPELINE\pillar1\search\base_registry.py", line 51, in load_plugins
+    module = importlib.import_module(full_module_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "C:\Users\admin\Desktop\data-old\pipeline2_final\DATA-CRAWLING-OSINT-PIPELINE\pillar1\search\providers\linkedin_playwright_provider.py", line 16, in <module>
+    from pillar1.browser.browser_manager import get_browser_manager
+  File "C:\Users\admin\Desktop\data-old\pipeline2_final\DATA-CRAWLING-OSINT-PIPELINE\pillar1\browser\browser_manager.py", line 4, in <module>
+    from playwright.sync_api import sync_playwright, Playwright
+ModuleNotFoundError: No module named 'playwright'
+2026-07-27 14:59:53 | ERROR    | MainThread | search.base_registry | Failed to load module search.providers.playwright_google_provider: No module named 'playwright'
+Traceback (most recent call last):
+  File "C:\Users\admin\Desktop\data-old\pipeline2_final\DATA-CRAWLING-OSINT-PIPELINE\pillar1\search\base_registry.py", line 51, in load_plugins
+    module = importlib.import_module(full_module_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "C:\Users\admin\Desktop\data-old\pipeline2_final\DATA-CRAWLING-OSINT-PIPELINE\pillar1\search\providers\playwright_google_provider.py", line 17, in <module>
+    from pillar1.browser.browser_manager import get_browser_manager
+  File "C:\Users\admin\Desktop\data-old\pipeline2_final\DATA-CRAWLING-OSINT-PIPELINE\pillar1\browser\browser_manager.py", line 4, in <module>
+    from playwright.sync_api import sync_playwright, Playwright
+ModuleNotFoundError: No module named 'playwright'
+2026-07-27 14:59:53 | WARNING  | MainThread | network_client_project.network.user_agents | Failed to initialize fake_useragent, using fallback. Error: No module named 'fake_useragent'
+2026-07-27 14:59:53 | WARNING  | MainThread | network_client_project.network.user_agents | Failed to initialize fake_useragent, using fallback. Error: No module named 'fake_useragent'
+2026-07-27 14:59:53 | WARNING  | MainThread | network_client_project.network.user_agents | Failed to initialize fake_useragent, using fallback. Error: No module named 'fake_useragent'
+2026-07-27 15:00:09 | WARNING  | GoogleSchedulerWorker_0 | network_client_project.network.middleware.retry | [Retry] Retrying query https://www.google.com/search?q=pizza+services&num=10&hl=en&gl=us (attempt 1/1) after 0.10s delay due to: Timeout (Failed to perform, curl: (28) Connection timed out after 8010 milliseconds. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.).
+2026-07-27 15:00:13 | ERROR    | GoogleSchedulerWorker_0 | search.google_scheduler | [GoogleScheduler] All 1 retries failed for: 'pizza services'
+2026-07-27 15:00:15 | WARNING  | ThreadPoolExecutor-0_2 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 217.182.203.184:8888 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-27 15:00:17 | WARNING  | ThreadPoolExecutor-0_0 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 34.87.80.221:30000 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-27 15:00:18 | WARNING  | ThreadPoolExecutor-0_4 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 52.67.38.58:3128 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-27 15:00:18 | WARNING  | ThreadPoolExecutor-0_5 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 34.134.231.117:3129 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-27 15:00:34 | WARNING  | MainThread | network_client_project.network.user_agents | Failed to initialize fake_useragent, using fallback. Error: No module named 'fake_useragent'
+2026-07-27 15:00:40 | WARNING  | ThreadPoolExecutor-3_3 | network_client_project.network.user_agents | Failed to initialize fake_useragent, using fallback. Error: No module named 'fake_useragent'
+2026-07-27 15:00:40 | WARNING  | ThreadPoolExecutor-3_4 | network_client_project.network.user_agents | Failed to initialize fake_useragent, using fallback. Error: No module named 'fake_useragent'
+2026-07-27 15:00:41 | WARNING  | ThreadPoolExecutor-3_0 | network_client_project.network.user_agents | Failed to initialize fake_useragent, using fallback. Error: No module named 'fake_useragent'
+2026-07-27 15:00:41 | WARNING  | ThreadPoolExecutor-3_2 | network_client_project.network.user_agents | Failed to initialize fake_useragent, using fallback. Error: No module named 'fake_useragent'
+2026-07-27 15:00:41 | WARNING  | ThreadPoolExecutor-3_1 | network_client_project.network.user_agents | Failed to initialize fake_useragent, using fallback. Error: No module named 'fake_useragent'
+2026-07-27 15:00:46 | WARNING  | ThreadPoolExecutor-3_1 | network_client_project.network.middleware.retry | [Retry] Retrying query https://dominos.co.in/pizza-near-me (attempt 1/3) after 2.97s delay due to: Exception (WAF CAPTCHA/403 block).
+2026-07-27 15:00:46 | WARNING  | ThreadPoolExecutor-3_4 | network_client_project.network.user_agents | Failed to initialize fake_useragent, using fallback. Error: No module named 'fake_useragent'
+2026-07-27 15:00:46 | WARNING  | ThreadPoolExecutor-3_2 | network_client_project.network.middleware.retry | [Retry] Retrying query https://dominos.co.in (attempt 1/3) after 2.82s delay due to: Exception (WAF CAPTCHA/403 block).
+2026-07-27 15:00:49 | WARNING  | ThreadPoolExecutor-3_3 | network_client_project.network.user_agents | Failed to initialize fake_useragent, using fallback. Error: No module named 'fake_useragent'
+2026-07-27 15:00:49 | WARNING  | ThreadPoolExecutor-3_0 | network_client_project.network.user_agents | Failed to initialize fake_useragent, using fallback. Error: No module named 'fake_useragent'
+2026-07-27 15:00:53 | WARNING  | ThreadPoolExecutor-3_2 | network_client_project.network.middleware.retry | [Retry] Retrying query https://dominos.co.in (attempt 2/3) after 5.16s delay due to: Exception (WAF CAPTCHA/403 block).
+2026-07-27 15:00:53 | WARNING  | ThreadPoolExecutor-3_1 | network_client_project.network.middleware.retry | [Retry] Retrying query https://dominos.co.in/pizza-near-me (attempt 2/3) after 4.74s delay due to: Exception (WAF CAPTCHA/403 block).
+2026-07-27 15:00:55 | WARNING  | ThreadPoolExecutor-3_0 | network_client_project.network.user_agents | Failed to initialize fake_useragent, using fallback. Error: No module named 'fake_useragent'
+2026-07-27 15:00:58 | WARNING  | ThreadPoolExecutor-3_4 | network_client_project.network.user_agents | Failed to initialize fake_useragent, using fallback. Error: No module named 'fake_useragent'
+2026-07-27 15:00:59 | WARNING  | ThreadPoolExecutor-3_3 | network_client_project.network.user_agents | Failed to initialize fake_useragent, using fallback. Error: No module named 'fake_useragent'
+2026-07-27 15:01:08 | WARNING  | ThreadPoolExecutor-3_0 | network_client_project.network.user_agents | Failed to initialize fake_useragent, using fallback. Error: No module named 'fake_useragent'
+2026-07-27 15:01:11 | WARNING  | ThreadPoolExecutor-3_4 | network_client_project.network.user_agents | Failed to initialize fake_useragent, using fallback. Error: No module named 'fake_useragent'
+2026-07-27 15:01:14 | WARNING  | ThreadPoolExecutor-3_0 | network_client_project.network.middleware.retry | [Retry] Retrying query https://takeaway.com/be-en/pizza-service (attempt 1/3) after 3.25s delay due to: Exception (WAF CAPTCHA/403 block).
+2026-07-27 15:01:20 | WARNING  | ThreadPoolExecutor-3_4 | network_client_project.network.middleware.retry | [Retry] Retrying query https://swiggy.com/collections/83631 (attempt 1/3) after 3.01s delay due to: Exception (WAF CAPTCHA/403 block).
+2026-07-27 15:01:23 | WARNING  | ThreadPoolExecutor-3_0 | network_client_project.network.middleware.retry | [Retry] Retrying query https://takeaway.com/be-en/pizza-service (attempt 2/3) after 4.52s delay due to: Exception (WAF CAPTCHA/403 block).
+2026-07-27 15:01:30 | WARNING  | ThreadPoolExecutor-3_4 | network_client_project.network.user_agents | Failed to initialize fake_useragent, using fallback. Error: No module named 'fake_useragent'
+2026-07-27 15:01:31 | WARNING  | ThreadPoolExecutor-3_0 | network_client_project.network.middleware.retry | [Retry] Query time budget exceeded (15.0s) for https://takeaway.com/be-en/pizza-service
+2026-07-27 15:01:37 | WARNING  | ThreadPoolExecutor-3_0 | network_client_project.network.middleware.retry | [Retry] Retrying query https://takeaway.com/be-en/pizza-service (attempt 1/3) after 3.35s delay due to: Exception (WAF CAPTCHA/403 block).
+2026-07-27 15:01:43 | WARNING  | ThreadPoolExecutor-3_0 | network_client_project.network.middleware.retry | [Retry] Retrying query https://takeaway.com/be-en/pizza-service (attempt 2/3) after 5.06s delay due to: Exception (WAF CAPTCHA/403 block).
+2026-07-27 15:04:20 | ERROR    | MainThread | search.base_registry | Failed to load module search.providers.linkedin_playwright_provider: No module named 'psutil'
+Traceback (most recent call last):
+  File "C:\Users\admin\Desktop\data-old\pipeline2_final\DATA-CRAWLING-OSINT-PIPELINE\pillar1\search\base_registry.py", line 51, in load_plugins
+    module = importlib.import_module(full_module_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "C:\Users\admin\Desktop\data-old\pipeline2_final\DATA-CRAWLING-OSINT-PIPELINE\pillar1\search\providers\linkedin_playwright_provider.py", line 16, in <module>
+    from pillar1.browser.browser_manager import get_browser_manager
+  File "C:\Users\admin\Desktop\data-old\pipeline2_final\DATA-CRAWLING-OSINT-PIPELINE\pillar1\browser\browser_manager.py", line 6, in <module>
+    from pillar1.browser.browser_pool import BrowserPool
+  File "C:\Users\admin\Desktop\data-old\pipeline2_final\DATA-CRAWLING-OSINT-PIPELINE\pillar1\browser\browser_pool.py", line 13, in <module>
+    from pillar1.browser.browser_instance import BrowserInstance
+  File "C:\Users\admin\Desktop\data-old\pipeline2_final\DATA-CRAWLING-OSINT-PIPELINE\pillar1\browser\browser_instance.py", line 5, in <module>
+    import psutil
+ModuleNotFoundError: No module named 'psutil'
+2026-07-27 15:04:20 | ERROR    | MainThread | search.base_registry | Failed to load module search.providers.playwright_google_provider: No module named 'psutil'
+Traceback (most recent call last):
+  File "C:\Users\admin\Desktop\data-old\pipeline2_final\DATA-CRAWLING-OSINT-PIPELINE\pillar1\search\base_registry.py", line 51, in load_plugins
+    module = importlib.import_module(full_module_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "C:\Users\admin\Desktop\data-old\pipeline2_final\DATA-CRAWLING-OSINT-PIPELINE\pillar1\search\providers\playwright_google_provider.py", line 17, in <module>
+    from pillar1.browser.browser_manager import get_browser_manager
+  File "C:\Users\admin\Desktop\data-old\pipeline2_final\DATA-CRAWLING-OSINT-PIPELINE\pillar1\browser\browser_manager.py", line 6, in <module>
+    from pillar1.browser.browser_pool import BrowserPool
+  File "C:\Users\admin\Desktop\data-old\pipeline2_final\DATA-CRAWLING-OSINT-PIPELINE\pillar1\browser\browser_pool.py", line 13, in <module>
+    from pillar1.browser.browser_instance import BrowserInstance
+  File "C:\Users\admin\Desktop\data-old\pipeline2_final\DATA-CRAWLING-OSINT-PIPELINE\pillar1\browser\browser_instance.py", line 5, in <module>
+    import psutil
+ModuleNotFoundError: No module named 'psutil'
+2026-07-27 15:04:28 | WARNING  | ThreadPoolExecutor-0_1 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 47.81.56.193:8888 -> Google UNREACHABLE (Failed to perform, curl: (56) Recv failure: Connection was reset. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.)
+2026-07-27 15:04:35 | WARNING  | ThreadPoolExecutor-0_2 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 217.182.203.184:8888 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-27 15:04:45 | WARNING  | ThreadPoolExecutor-0_0 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 34.87.80.221:30000 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-27 15:04:45 | WARNING  | ThreadPoolExecutor-0_4 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 52.67.38.58:3128 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-27 15:04:45 | WARNING  | ThreadPoolExecutor-0_5 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 34.134.231.117:3129 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-27 15:04:53 | WARNING  | MainThread | network_client_project.network.middleware.retry | [Retry] Retrying query https://www.swiggy.com/city/mumbai/build-your-own-pizza-lower-parel-worli-rest225170 (attempt 1/3) after 3.43s delay due to: Exception (WAF CAPTCHA/403 block).
+2026-07-27 15:05:14 | WARNING  | ThreadPoolExecutor-3_3 | network_client_project.network.middleware.retry | [Retry] Retrying query https://pizzanova.com/customize/create-your-own-pizza (attempt 1/3) after 0.10s delay due to: Timeout (Failed to perform, curl: (28) Connection timed out after 10020 milliseconds. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.).
+2026-07-27 15:05:19 | WARNING  | ThreadPoolExecutor-3_3 | network_client_project.network.middleware.retry | [Retry] Retrying query https://pizzanova.com/customize/create-your-own-pizza (attempt 2/3) after 5.02s delay due to: Exception (WAF CAPTCHA/403 block).
+2026-07-27 15:05:30 | WARNING  | ThreadPoolExecutor-3_1 | network_client_project.network.middleware.retry | [Retry] Retrying query https://swiggy.com/city/mumbai/build-your-own-pizza-lower-parel-worli-rest225170 (attempt 1/3) after 0.10s delay due to: Timeout (Failed to perform, curl: (28) Connection timed out after 2067 milliseconds. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.).
+2026-07-27 15:05:40 | WARNING  | GoogleSchedulerWorker_0 | network_client_project.network.middleware.retry | [Retry] Search provider google_html hit block/CAPTCHA/429 (HTTP 429). Bubbling up immediately for fail-fast.
+2026-07-27 15:05:40 | WARNING  | GoogleSchedulerWorker_0 | network_client_project.network.middleware.throttle | [AutoThrottle] 429 Rate Limit hit on www.google.com. Reducing rate: 0.50 rps -> 0.20 rps.
+2026-07-27 15:05:40 | WARNING  | GoogleSchedulerWorker_0 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 181.39.25.196:8118 marked dead_for_google after 3 consecutive timeouts.
+2026-07-27 15:05:41 | WARNING  | ThreadPoolExecutor-3_1 | network_client_project.network.middleware.retry | [Retry] Retrying query https://swiggy.com/city/mumbai/build-your-own-pizza-lower-parel-worli-rest225170 (attempt 1/3) after 2.85s delay due to: Exception (WAF CAPTCHA/403 block).
+2026-07-27 15:05:41 | WARNING  | GoogleSchedulerWorker_0 | search.google_scheduler | [GoogleScheduler] No more healthy proxies after 1 attempts.
+2026-07-27 15:05:41 | ERROR    | GoogleSchedulerWorker_0 | search.google_scheduler | [GoogleScheduler] All 1 retries failed for: 'site:moontechnolabs.com email'
+2026-07-27 15:05:41 | WARNING  | GoogleSchedulerWorker_0 | utils.budget_manager | [ProviderBudgetManager] Blocked 'google_html': provider execution budget exhausted (8.2s elapsed, limit was 8.0s).
+2026-07-27 15:05:41 | WARNING  | GoogleSchedulerWorker_0 | search.google_scheduler | [GoogleScheduler] Budget or fallback deadline constraint exceeded. Aborting Google search.
+2026-07-27 15:05:41 | ERROR    | GoogleSchedulerWorker_0 | search.google_scheduler | [GoogleScheduler] All 0 retries failed for: 'site:pizzanova.com email'
+2026-07-27 15:05:58 | WARNING  | ThreadPoolExecutor-3_1 | network_client_project.network.middleware.retry | [Retry] Search provider brave hit block/CAPTCHA/429 (HTTP 429). Bubbling up immediately for fail-fast.
+2026-07-27 15:05:58 | WARNING  | ThreadPoolExecutor-3_1 | network_client_project.network.middleware.throttle | [AutoThrottle] 429 Rate Limit hit on search.brave.com. Reducing rate: 0.67 rps -> 0.27 rps.
+2026-07-27 15:06:03 | WARNING  | ThreadPoolExecutor-3_0 | network_client_project.network.middleware.retry | [Retry] Search provider brave hit block/CAPTCHA/429 (HTTP 429). Bubbling up immediately for fail-fast.
+2026-07-27 15:06:03 | WARNING  | ThreadPoolExecutor-3_0 | network_client_project.network.middleware.throttle | [AutoThrottle] 429 Rate Limit hit on search.brave.com. Reducing rate: 0.27 rps -> 0.11 rps.
+2026-07-27 15:06:06 | WARNING  | ThreadPoolExecutor-3_1 | network_client_project.network.middleware.retry | [Retry] Search provider brave hit block/CAPTCHA/429 (HTTP 429). Bubbling up immediately for fail-fast.
+2026-07-27 15:06:06 | WARNING  | ThreadPoolExecutor-3_1 | network_client_project.network.middleware.throttle | [AutoThrottle] 429 Rate Limit hit on search.brave.com. Reducing rate: 0.11 rps -> 0.05 rps.
+2026-07-27 15:06:08 | WARNING  | ThreadPoolExecutor-3_2 | search.providers.bing_provider | [BingProvider] Global deadline exceeded. Aborting Bing search retries.
+2026-07-27 15:06:08 | ERROR    | ThreadPoolExecutor-3_2 | search.manager | [SearchManager] Unexpected provider 'bing' error: object of type 'NoneType' has no len()
+2026-07-27 15:06:09 | WARNING  | ThreadPoolExecutor-3_0 | search.providers.brave_provider | [BraveProvider] Global deadline exceeded. Aborting Brave search retries.
+2026-07-27 15:06:09 | ERROR    | ThreadPoolExecutor-3_0 | search.manager | [SearchManager] Unexpected provider 'brave' error: object of type 'NoneType' has no len()
+2026-07-27 15:06:09 | WARNING  | ThreadPoolExecutor-3_0 | search.manager | [SearchManager] brave failure score reached 11.0. Tripping breaker to OPEN.
+2026-07-27 15:09:13 | WARNING  | ThreadPoolExecutor-0_2 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 217.182.203.184:8888 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-27 15:09:19 | ERROR    | MainThread | pillar1.search.playwright_google | [PlaywrightGoogleProvider] Query error: Page.goto: Timeout 8000ms exceeded.
+Call log:
+  - navigating to "https://www.google.com/search?q=pizza+startups&num=10&hl=en&gl=us", waiting until "domcontentloaded"
+
+2026-07-27 15:09:19 | WARNING  | MainThread | network_client_project.network.proxy_manager | [ProxyManager] Proxy 34.134.231.117:3129 marked dead_for_google after 3 consecutive timeouts.
+2026-07-27 15:09:19 | WARNING  | MainThread | utils.budget_manager | [ProviderBudgetManager] Blocked Google Search: remaining budget too low (16.0s remaining), minimum required fallback budget is 18.0s.
+2026-07-27 15:09:20 | WARNING  | ThreadPoolExecutor-0_0 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 34.87.80.221:30000 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-27 15:09:20 | WARNING  | ThreadPoolExecutor-0_4 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 52.67.38.58:3128 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-27 15:09:52 | WARNING  | ThreadPoolExecutor-1_4 | network_client_project.network.middleware.retry | [Retry] Retrying query https://yourstory.com/2020/03/instapizza-pizzas-business-model-profitability (attempt 1/3) after 0.10s delay due to: Timeout (Failed to perform, curl: (28) Operation timed out after 10005 milliseconds with 15431 bytes received. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.).
+2026-07-27 15:09:57 | WARNING  | ThreadPoolExecutor-1_1 | network_client_project.network.middleware.retry | [Retry] Retrying query https://startupsharks.in/us-pizza-franchise-opportunity (attempt 1/3) after 0.10s delay due to: Timeout (Failed to perform, curl: (28) Operation timed out after 10011 milliseconds with 0 bytes received. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.).
+2026-07-27 15:10:02 | WARNING  | ThreadPoolExecutor-1_1 | network_client_project.network.middleware.retry | [Retry] Retrying query https://startupsharks.in/us-pizza-franchise-opportunity (attempt 1/2) after 3.33s delay due to: HTTP Status 503.
+2026-07-27 15:10:05 | WARNING  | GoogleSchedulerWorker_0 | network_client_project.network.middleware.retry | [Retry] Search provider google_html hit block/CAPTCHA/429 (HTTP 429). Bubbling up immediately for fail-fast.
+2026-07-27 15:10:05 | WARNING  | GoogleSchedulerWorker_0 | network_client_project.network.middleware.throttle | [AutoThrottle] 429 Rate Limit hit on www.google.com. Reducing rate: 0.50 rps -> 0.20 rps.
+2026-07-27 15:10:05 | WARNING  | GoogleSchedulerWorker_0 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 181.39.25.196:8118 marked dead_for_google after 3 consecutive timeouts.
+2026-07-27 15:10:08 | WARNING  | ThreadPoolExecutor-1_3 | network_client_project.network.middleware.retry | [Retry] Retrying query https://pizzastartup19038.com/contact (attempt 1/3) after 0.10s delay due to: Timeout (Failed to perform, curl: (28) Operation timed out after 10002 milliseconds with 0 bytes received. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.).
+2026-07-27 15:10:10 | WARNING  | GoogleSchedulerWorker_0 | network_client_project.network.middleware.retry | [Retry] Search provider google_html hit block/CAPTCHA/429 (HTTP 429). Bubbling up immediately for fail-fast.
+2026-07-27 15:10:10 | WARNING  | GoogleSchedulerWorker_0 | network_client_project.network.middleware.throttle | [AutoThrottle] 429 Rate Limit hit on www.google.com. Reducing rate: 0.20 rps -> 0.08 rps.
+2026-07-27 15:10:10 | WARNING  | GoogleSchedulerWorker_0 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 47.81.56.193:8888 marked dead_for_google after 3 consecutive timeouts.
+2026-07-27 15:10:10 | ERROR    | GoogleSchedulerWorker_0 | search.google_scheduler | [GoogleScheduler] All 2 retries failed for: 'site:eu-startups.com email'
+2026-07-27 15:10:14 | WARNING  | GoogleSchedulerWorker_0 | search.google_scheduler | [GoogleScheduler] No more healthy proxies after 0 attempts.
+2026-07-27 15:10:14 | ERROR    | GoogleSchedulerWorker_0 | search.google_scheduler | [GoogleScheduler] All 0 retries failed for: 'site:yourstory.com email'
+2026-07-27 15:10:16 | WARNING  | GoogleSchedulerWorker_0 | search.google_scheduler | [GoogleScheduler] No more healthy proxies after 0 attempts.
+2026-07-27 15:10:16 | ERROR    | GoogleSchedulerWorker_0 | search.google_scheduler | [GoogleScheduler] All 0 retries failed for: 'site:startupsharks.in email'
+2026-07-27 15:10:16 | WARNING  | ThreadPoolExecutor-1_1 | search.manager | [SearchManager] google_html failure score reached 10.0. Tripping breaker to OPEN.
+2026-07-27 15:10:19 | WARNING  | GoogleSchedulerWorker_0 | search.google_scheduler | [GoogleScheduler] No more healthy proxies after 0 attempts.
+2026-07-27 15:10:19 | ERROR    | GoogleSchedulerWorker_0 | search.google_scheduler | [GoogleScheduler] All 0 retries failed for: 'site:pizzaneed.com email'
+2026-07-27 15:10:20 | WARNING  | ThreadPoolExecutor-1_3 | network_client_project.network.middleware.retry | [Retry] Retrying query https://pizzastartup19038.com/contact (attempt 2/3) after 0.10s delay due to: Timeout (Failed to perform, curl: (28) Operation timed out after 10003 milliseconds with 0 bytes received. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.).
+2026-07-27 15:10:25 | WARNING  | ThreadPoolExecutor-1_4 | network_client_project.network.middleware.retry | [Retry] Search provider brave hit block/CAPTCHA/429 (HTTP 429). Bubbling up immediately for fail-fast.
+2026-07-27 15:10:25 | WARNING  | ThreadPoolExecutor-1_4 | network_client_project.network.middleware.throttle | [AutoThrottle] 429 Rate Limit hit on search.brave.com. Reducing rate: 0.73 rps -> 0.29 rps.
+2026-07-27 15:10:25 | WARNING  | ThreadPoolExecutor-1_2 | network_client_project.network.middleware.retry | [Retry] Search provider brave hit block/CAPTCHA/429 (HTTP 429). Bubbling up immediately for fail-fast.
+2026-07-27 15:10:25 | WARNING  | ThreadPoolExecutor-1_2 | network_client_project.network.middleware.throttle | [AutoThrottle] 429 Rate Limit hit on search.brave.com. Reducing rate: 0.29 rps -> 0.12 rps.
+2026-07-27 15:10:27 | WARNING  | ThreadPoolExecutor-1_1 | network_client_project.network.middleware.retry | [Retry] Search provider brave hit block/CAPTCHA/429 (HTTP 429). Bubbling up immediately for fail-fast.
+2026-07-27 15:10:27 | WARNING  | ThreadPoolExecutor-1_1 | network_client_project.network.middleware.throttle | [AutoThrottle] 429 Rate Limit hit on search.brave.com. Reducing rate: 0.12 rps -> 0.05 rps.
+2026-07-27 15:10:32 | WARNING  | ThreadPoolExecutor-1_4 | network_client_project.network.middleware.retry | [Retry] Search provider brave hit block/CAPTCHA/429 (HTTP 429). Bubbling up immediately for fail-fast.
+2026-07-27 15:10:32 | WARNING  | ThreadPoolExecutor-1_4 | network_client_project.network.middleware.throttle | [AutoThrottle] 429 Rate Limit hit on search.brave.com. Reducing rate: 0.05 rps -> 0.05 rps.
+2026-07-27 15:10:33 | WARNING  | ThreadPoolExecutor-1_2 | network_client_project.network.middleware.retry | [Retry] Search provider brave hit block/CAPTCHA/429 (HTTP 429). Bubbling up immediately for fail-fast.
+2026-07-27 15:10:33 | WARNING  | ThreadPoolExecutor-1_2 | network_client_project.network.middleware.throttle | [AutoThrottle] 429 Rate Limit hit on search.brave.com. Reducing rate: 0.05 rps -> 0.05 rps.
+2026-07-27 15:10:43 | WARNING  | ThreadPoolExecutor-1_1 | network_client_project.network.middleware.retry | [Retry] Search provider brave hit block/CAPTCHA/429 (HTTP 429). Bubbling up immediately for fail-fast.
+2026-07-27 15:10:43 | WARNING  | ThreadPoolExecutor-1_1 | network_client_project.network.middleware.throttle | [AutoThrottle] 429 Rate Limit hit on search.brave.com. Reducing rate: 0.05 rps -> 0.05 rps.
+2026-07-27 15:10:44 | WARNING  | ThreadPoolExecutor-1_1 | search.manager | [SearchManager] brave failure score reached 13.0. Tripping breaker to OPEN.
+2026-07-27 15:10:46 | WARNING  | ThreadPoolExecutor-1_2 | search.providers.bing_provider | [BingProvider] Global deadline exceeded. Aborting Bing search retries.
+2026-07-27 15:10:46 | ERROR    | ThreadPoolExecutor-1_2 | search.manager | [SearchManager] Unexpected provider 'bing' error: object of type 'NoneType' has no len()
+2026-07-27 15:10:55 | WARNING  | ThreadPoolExecutor-1_1 | search.providers.bing_provider | [BingProvider] Global deadline exceeded. Aborting Bing search retries.
+2026-07-27 15:10:55 | ERROR    | ThreadPoolExecutor-1_1 | search.manager | [SearchManager] Unexpected provider 'bing' error: object of type 'NoneType' has no len()
+2026-07-27 15:10:55 | WARNING  | ThreadPoolExecutor-1_1 | search.manager | [SearchManager] bing failure score reached 12.0. Tripping breaker to OPEN.
+2026-07-27 15:11:39 | WARNING  | ThreadPoolExecutor-1_0 | network_client_project.network.middleware.retry | [Retry] Global deadline exceeded (0.0s remaining). Aborting retry loop for https://api.brightdata.com/request
+2026-08-06 13:44:14 | WARNING  | ThreadPoolExecutor-0_2 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 217.182.203.184:8888 -> DEAD (all 3 general HTTPS tests failed)
+2026-08-06 13:44:21 | WARNING  | GoogleSchedulerWorker_0 | network_client_project.network.middleware.retry | [Retry] Retrying query https://www.google.com/search?q=Enterprise+Software+company&num=10&hl=en&gl=us (attempt 1/1) after 0.10s delay due to: Timeout (Failed to perform, curl: (28) Connection timed out after 8011 milliseconds. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.).
+2026-08-06 13:44:25 | ERROR    | GoogleSchedulerWorker_0 | search.google_scheduler | [GoogleScheduler] All 1 retries failed for: 'Enterprise Software company'
+2026-08-06 13:44:29 | WARNING  | ThreadPoolExecutor-0_4 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 52.67.38.58:3128 -> DEAD (all 3 general HTTPS tests failed)
+2026-08-06 13:44:29 | WARNING  | ThreadPoolExecutor-0_0 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 34.87.80.221:30000 -> DEAD (all 3 general HTTPS tests failed)
+2026-08-06 13:44:29 | WARNING  | ThreadPoolExecutor-0_5 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 34.134.231.117:3129 -> DEAD (all 3 general HTTPS tests failed)
+2026-08-06 13:44:40 | ERROR    | MainThread | pillar1.search.playwright_google | [PlaywrightGoogleProvider] Query error: [playwright_google] unavailable: CAPTCHA block page detected on Playwright session.
+2026-08-06 13:45:04 | WARNING  | ThreadPoolExecutor-3_2 | network_client_project.network.middleware.retry | [Retry] Retrying query https://ignitetech.ai (attempt 1/3) after 2.91s delay due to: Exception (WAF CAPTCHA/403 block).
+2026-08-06 13:45:09 | WARNING  | ThreadPoolExecutor-3_1 | network_client_project.network.middleware.retry | [Retry] Retrying query https://infor.com (attempt 1/3) after 2.78s delay due to: Exception (WAF CAPTCHA/403 block).
+2026-08-06 13:45:14 | WARNING  | ThreadPoolExecutor-3_2 | network_client_project.network.middleware.retry | [Retry] Retrying query https://ignitetech.ai/contact (attempt 1/3) after 2.88s delay due to: Exception (WAF CAPTCHA/403 block).
+2026-08-06 13:45:28 | WARNING  | ThreadPoolExecutor-3_1 | network_client_project.network.middleware.retry | [Retry] Retrying query https://infor.com/about/contact (attempt 1/3) after 3.24s delay due to: Exception (WAF CAPTCHA/403 block).
+2026-08-06 13:48:49 | WARNING  | ThreadPoolExecutor-0_2 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 217.182.203.184:8888 -> DEAD (all 3 general HTTPS tests failed)
+2026-08-06 13:49:01 | WARNING  | ThreadPoolExecutor-0_4 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 52.67.38.58:3128 -> DEAD (all 3 general HTTPS tests failed)
+2026-08-06 13:49:08 | WARNING  | ThreadPoolExecutor-0_5 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 34.134.231.117:3129 -> Google UNREACHABLE (Failed to perform, curl: (28) Connection timed out after 1594 milliseconds. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.)
+2026-08-06 13:50:10 | WARNING  | ThreadPoolExecutor-0_2 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 217.182.203.184:8888 -> DEAD (all 3 general HTTPS tests failed)
+2026-08-06 13:50:17 | WARNING  | MainThread | network_client_project.network.middleware.retry | [Retry] Retrying query https://www.hotelierindia.com/development/ds-group-brings-marriotts-w-hotel-to-delhi-ncr (attempt 1/3) after 2.54s delay due to: DatadomeBlockError (Datadome WAF detected in headers.).
+2026-08-06 13:50:21 | WARNING  | ThreadPoolExecutor-0_5 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 34.134.231.117:3129 -> Google UNREACHABLE (Failed to perform, curl: (28) Connection timed out after 2655 milliseconds. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.)
+2026-08-06 13:50:23 | WARNING  | MainThread | network_client_project.network.middleware.retry | [Retry] Retrying query https://www.hotelierindia.com/development/ds-group-brings-marriotts-w-hotel-to-delhi-ncr (attempt 2/3) after 4.84s delay due to: Exception (WAF CAPTCHA/403 block).
+2026-08-06 13:50:24 | WARNING  | ThreadPoolExecutor-0_0 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 34.87.80.221:30000 -> DEAD (all 3 general HTTPS tests failed)
+2026-08-06 13:50:24 | WARNING  | ThreadPoolExecutor-0_4 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 52.67.38.58:3128 -> DEAD (all 3 general HTTPS tests failed)
+2026-08-06 13:50:58 | ERROR    | ThreadPoolExecutor-1_1 | pillar1.search.playwright_google | [PlaywrightGoogleProvider] Query error: [playwright_google] unavailable: CAPTCHA block page detected on Playwright session.
+2026-08-06 13:51:08 | WARNING  | GoogleSchedulerWorker_0 | network_client_project.network.middleware.retry | [Retry] Search provider google_html hit block/CAPTCHA/429 (HTTP 429). Bubbling up immediately for fail-fast.
+2026-08-06 13:51:08 | WARNING  | GoogleSchedulerWorker_0 | network_client_project.network.middleware.throttle | [AutoThrottle] 429 Rate Limit hit on www.google.com. Reducing rate: 0.50 rps -> 0.20 rps.
+2026-08-06 13:51:08 | WARNING  | GoogleSchedulerWorker_0 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 47.81.56.193:8888 marked dead_for_google after 3 consecutive timeouts.
+2026-08-06 13:51:08 | WARNING  | GoogleSchedulerWorker_0 | utils.budget_manager | [ProviderBudgetManager] Blocked 'google_html': provider execution budget exhausted (9.4s elapsed, limit was 8.0s).
+2026-08-06 13:51:08 | WARNING  | GoogleSchedulerWorker_0 | search.google_scheduler | [GoogleScheduler] Budget or fallback deadline constraint exceeded. Aborting Google search.
+2026-08-06 13:51:08 | ERROR    | GoogleSchedulerWorker_0 | search.google_scheduler | [GoogleScheduler] All 1 retries failed for: 'site:archetype-group.com email'
+2026-08-06 13:51:58 | WARNING  | MainThread | pillar1.browser | [BrowserInstance #0] Error closing browser: cannot switch to a different thread (which happens to have exited)
+2026-08-06 13:51:58 | ERROR    | MainThread | pillar1.browser | [BrowserManager] Error stopping Playwright: cannot switch to a different thread (which happens to have exited)
+2026-08-06 13:54:13 | WARNING  | ThreadPoolExecutor-0_2 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 217.182.203.184:8888 -> DEAD (all 3 general HTTPS tests failed)
+2026-08-06 13:54:24 | WARNING  | MainThread | network_client_project.network.middleware.retry | [Retry] Retrying query https://www.tripadvisor.in/Hotels-g644043-Noida_Gautam_Buddha_Nagar_District_Uttar_Pradesh-Hotels.html (attempt 1/3) after 2.57s delay due to: DatadomeBlockError (Datadome WAF detected in headers.).
+2026-08-06 13:54:27 | WARNING  | ThreadPoolExecutor-0_4 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 52.67.38.58:3128 -> DEAD (all 3 general HTTPS tests failed)
+2026-08-06 13:54:27 | WARNING  | ThreadPoolExecutor-0_0 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 34.87.80.221:30000 -> DEAD (all 3 general HTTPS tests failed)
+2026-08-06 13:54:37 | WARNING  | MainThread | network_client_project.network.middleware.retry | [Retry] Retrying query https://www.tripadvisor.in/Hotels-g644043-Noida_Gautam_Buddha_Nagar_District_Uttar_Pradesh-Hotels.html (attempt 2/3) after 0.10s delay due to: Timeout (Failed to perform, curl: (28) Connection timed out after 8004 milliseconds. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.).
+2026-08-06 13:54:47 | WARNING  | MainThread | network_client_project.network.middleware.retry | [Retry] Global deadline exceeded (0.0s remaining). Aborting retry loop for https://www.tripadvisor.in/Hotels-g644043-Noida_Gautam_Buddha_Nagar_District_Uttar_Pradesh-Hotels.html
+2026-08-06 13:55:02 | WARNING  | ThreadPoolExecutor-3_3 | network_client_project.network.middleware.retry | [Retry] Retrying query https://goibibo.com/hotels/hotels-in-noida-ct (attempt 1/3) after 2.83s delay due to: Exception (WAF CAPTCHA/403 block).
+2026-08-06 13:55:02 | WARNING  | ThreadPoolExecutor-3_1 | network_client_project.network.middleware.retry | [Retry] Retrying query https://duckduckgo.com/y.js (attempt 1/3) after 0.10s delay due to: Timeout (Failed to perform, curl: (28) Connection timed out after 10006 milliseconds. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.).
+2026-08-06 13:55:05 | WARNING  | ThreadPoolExecutor-3_2 | network_client_project.network.middleware.retry | [Retry] Retrying query https://tripadvisor.in/hotels-g644043-noida_gautam_buddha_nagar_district_uttar_pradesh-hotels.html (attempt 1/3) after 0.10s delay due to: Timeout (Failed to perform, curl: (28) Connection timed out after 10013 milliseconds. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.).
+2026-08-06 13:55:09 | WARNING  | ThreadPoolExecutor-3_2 | network_client_project.network.middleware.retry | [Retry] Retrying query https://tripadvisor.in/hotels-g644043-noida_gautam_buddha_nagar_district_uttar_pradesh-hotels.html (attempt 2/3) after 4.53s delay due to: DatadomeBlockError (Datadome WAF detected in headers.).
+2026-08-06 13:55:18 | WARNING  | ThreadPoolExecutor-3_2 | network_client_project.network.middleware.retry | [Retry] Retrying query https://tripadvisor.in/hotels-g644043-noida_gautam_buddha_nagar_district_uttar_pradesh-hotels.html (attempt 3/3) after 9.49s delay due to: DatadomeBlockError (Datadome WAF detected in headers.).
+2026-08-06 13:55:25 | WARNING  | ThreadPoolExecutor-3_3 | network_client_project.network.middleware.retry | [Retry] Retrying query https://goibibo.com/contact (attempt 1/3) after 0.10s delay due to: Timeout (Failed to perform, curl: (28) Operation timed out after 10006 milliseconds with 0 bytes received. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.).
+2026-08-06 13:55:31 | WARNING  | ThreadPoolExecutor-3_2 | network_client_project.network.middleware.retry | [Retry] Query time budget exceeded (15.0s) for https://tripadvisor.in/hotels-g644043-noida_gautam_buddha_nagar_district_uttar_pradesh-hotels.html
+2026-08-06 13:55:31 | WARNING  | ThreadPoolExecutor-3_2 | network_client_project.network.middleware.throttle | [AutoThrottle] Block detected on tripadvisor.in. Reducing rate: 0.50 rps -> 0.25 rps.
+2026-08-06 13:55:31 | WARNING  | ThreadPoolExecutor-3_3 | network_client_project.network.middleware.retry | [Retry] Retrying query https://goibibo.com/contact (attempt 2/3) after 4.64s delay due to: Exception (WAF CAPTCHA/403 block).
+2026-08-06 13:55:35 | ERROR    | ThreadPoolExecutor-3_4 | pillar1.search.playwright_google | [PlaywrightGoogleProvider] Query error: Cannot switch to a different thread
+	Current:  <greenlet.greenlet object at 0x0000022F2E85D9C0 (otid=0x0000022F28A65D80) current active started main>
+	Expected: <greenlet.greenlet object at 0x0000022F28054580 (otid=0x0000022F28801D20) suspended active started main>
+2026-08-06 13:55:35 | ERROR    | ThreadPoolExecutor-3_0 | asyncio | Exception in callback SyncBase._sync.<locals>.<lambda>(<Task finishe...9.0.7827.55>>>) at C:\Users\admin\Desktop\data-old\pipeline2_final\DATA-CRAWLING-OSINT-PIPELINE\venv\Lib\site-packages\playwright\_impl\_sync_base.py:111
+handle: <Handle SyncBase._sync.<locals>.<lambda>(<Task finishe...9.0.7827.55>>>) at C:\Users\admin\Desktop\data-old\pipeline2_final\DATA-CRAWLING-OSINT-PIPELINE\venv\Lib\site-packages\playwright\_impl\_sync_base.py:111>
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python312\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\admin\Desktop\data-old\pipeline2_final\DATA-CRAWLING-OSINT-PIPELINE\venv\Lib\site-packages\playwright\_impl\_sync_base.py", line 111, in <lambda>
+    task.add_done_callback(lambda _: g_self.switch())
+                                     ^^^^^^^^^^^^^^^
+greenlet.error: Cannot switch to a different thread
+	Current:  <greenlet.greenlet object at 0x0000022F28054580 (otid=0x0000022F28801D20) suspended active started main>
+	Expected: <greenlet.greenlet object at 0x0000022F2E85D9C0 (otid=0x0000022F28A65D80) suspended active started main>
+2026-08-06 13:55:37 | WARNING  | ThreadPoolExecutor-3_2 | network_client_project.network.middleware.retry | [Retry] Retrying query https://tripadvisor.in/hotels-g644043-noida_gautam_buddha_nagar_district_uttar_pradesh-hotels.html (attempt 1/3) after 3.27s delay due to: DatadomeBlockError (Datadome WAF detected in headers.).
+2026-08-06 13:55:40 | ERROR    | ThreadPoolExecutor-3_0 | pillar1.search.playwright_google | [PlaywrightGoogleProvider] Query error: Page.goto: Timeout 8000ms exceeded.
+Call log:
+  - navigating to "https://www.google.com/search?q=site%3Amakemytrip.com+email&num=3&hl=en&gl=us", waiting until "domcontentloaded"
+
+2026-08-06 13:55:40 | WARNING  | ThreadPoolExecutor-3_0 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 34.134.231.117:3129 marked dead_for_google after 3 consecutive timeouts.
+2026-08-06 13:55:40 | WARNING  | ThreadPoolExecutor-3_0 | utils.budget_manager | [ProviderBudgetManager] Blocked Google Search: remaining budget too low (14.9s remaining), minimum required fallback budget is 18.0s.
+2026-08-06 13:55:45 | WARNING  | ThreadPoolExecutor-3_0 | utils.budget_manager | [ProviderBudgetManager] Blocked Google Search: remaining budget too low (10.2s remaining), minimum required fallback budget is 18.0s.
+2026-08-06 13:55:48 | WARNING  | GoogleSchedulerWorker_0 | network_client_project.network.middleware.retry | [Retry] Search provider google_html hit block/CAPTCHA/429 (HTTP 429). Bubbling up immediately for fail-fast.
+2026-08-06 13:55:48 | WARNING  | GoogleSchedulerWorker_0 | network_client_project.network.middleware.throttle | [AutoThrottle] 429 Rate Limit hit on www.google.com. Reducing rate: 0.50 rps -> 0.20 rps.
+2026-08-06 13:55:48 | WARNING  | GoogleSchedulerWorker_0 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 181.39.25.196:8118 marked dead_for_google after 3 consecutive timeouts.
+2026-08-06 13:55:48 | WARNING  | GoogleSchedulerWorker_0 | utils.budget_manager | [ProviderBudgetManager] Blocked Google Search: remaining budget too low (7.1s remaining), minimum required fallback budget is 18.0s.
+2026-08-06 13:55:48 | WARNING  | GoogleSchedulerWorker_0 | search.google_scheduler | [GoogleScheduler] Budget or fallback deadline constraint exceeded. Aborting Google search.
+2026-08-06 13:55:48 | ERROR    | GoogleSchedulerWorker_0 | search.google_scheduler | [GoogleScheduler] All 1 retries failed for: 'site:makemytrip.com email'
+2026-08-06 13:55:48 | WARNING  | ThreadPoolExecutor-3_3 | network_client_project.network.middleware.retry | [Retry] Query time budget exceeded (15.0s) for https://goibibo.com/contact
+2026-08-06 13:55:52 | WARNING  | ThreadPoolExecutor-3_2 | network_client_project.network.middleware.retry | [Retry] Retrying query https://tripadvisor.in/hotels-g644043-noida_gautam_buddha_nagar_district_uttar_pradesh-hotels.html (attempt 2/3) after 0.10s delay due to: Timeout (Failed to perform, curl: (28) Connection timed out after 10008 milliseconds. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.).
+2026-08-06 13:55:53 | WARNING  | ThreadPoolExecutor-3_4 | network_client_project.network.middleware.retry | [Retry] Search provider brave hit block/CAPTCHA/429 (HTTP 429). Bubbling up immediately for fail-fast.
+2026-08-06 13:55:53 | WARNING  | ThreadPoolExecutor-3_4 | network_client_project.network.middleware.throttle | [AutoThrottle] 429 Rate Limit hit on search.brave.com. Reducing rate: 0.55 rps -> 0.22 rps.
+2026-08-06 13:55:54 | WARNING  | ThreadPoolExecutor-3_0 | network_client_project.network.middleware.retry | [Retry] Search provider brave hit block/CAPTCHA/429 (HTTP 429). Bubbling up immediately for fail-fast.
+2026-08-06 13:55:54 | WARNING  | ThreadPoolExecutor-3_0 | network_client_project.network.middleware.throttle | [AutoThrottle] 429 Rate Limit hit on search.brave.com. Reducing rate: 0.22 rps -> 0.09 rps.
+2026-08-06 13:55:57 | WARNING  | ThreadPoolExecutor-3_4 | search.providers.brave_provider | [BraveProvider] Global deadline exceeded. Aborting Brave search retries.
+2026-08-06 13:55:57 | ERROR    | ThreadPoolExecutor-3_4 | search.manager | [SearchManager] Unexpected provider 'brave' error: object of type 'NoneType' has no len()
+2026-08-06 13:55:59 | WARNING  | ThreadPoolExecutor-3_3 | network_client_project.network.middleware.retry | [Retry] Global deadline exceeded (0.0s remaining). Aborting retry loop for https://goibibo.com/contact
+2026-08-06 13:56:00 | WARNING  | ThreadPoolExecutor-3_0 | search.providers.brave_provider | [BraveProvider] Global deadline exceeded. Aborting Brave search retries.
+2026-08-06 13:56:00 | ERROR    | ThreadPoolExecutor-3_0 | search.manager | [SearchManager] Unexpected provider 'brave' error: object of type 'NoneType' has no len()
+2026-08-06 13:56:51 | WARNING  | MainThread | pillar1.browser | [BrowserInstance #0] Error closing browser: cannot switch to a different thread (which happens to have exited)
+2026-08-06 13:56:51 | ERROR    | MainThread | pillar1.browser | [BrowserManager] Error stopping Playwright: cannot switch to a different thread (which happens to have exited)

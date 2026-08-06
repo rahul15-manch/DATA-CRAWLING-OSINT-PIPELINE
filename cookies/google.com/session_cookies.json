@@ -10,25 +10,53 @@
     "sameSite": "None"
   },
   {
-    "name": "_sc_token",
-    "value": "v2%3AyyCqRUu61dvhijy6uvr3DfFOeU3sNSwSgXyuhq7M_5QQcp5jpKADcn-es-kQPSm3FE6LxDXIDU3QgxvVSjESLY06HUCPSmwTrXXJ05qgI2cg-inMIuXX8dF0Xk9-ImXYKjD4nrAFZbsmLqfWnbYPjBIj1Vz1ZUJOvy_dU33Ynsd4dtqQTKVS_iW_v6sXNqHqc7ZoeAVWlMeZG1U45Rs2sZQHgo9zsZyG55uQMSYp2Ns4UYjLSJ4Lsl7OkyLGtFYdRXXfzl-ScY6ZIvIf1_1l2gQ-7DW8xGCjRVEmo5uoNNnRbJwUCtaP0gv7TSQt4lwq",
+    "name": "GOOGLE_ABUSE_EXEMPTION",
+    "value": "ID=c9cf195c9d6fc76a:TM=1786004077:C=>:IP=181.39.25.196-:S=K-Vf0HwUtnHCOguN68GNtg",
     "domain": ".google.com",
     "path": "/",
-    "expires": 1784653479.160773,
+    "expires": 1786014877.897388,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "SEARCH_SAMESITE",
+    "value": "CgQIv6EB",
+    "domain": ".google.com",
+    "path": "/",
+    "expires": 1801556079.601914,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Strict"
+  },
+  {
+    "name": "AEC",
+    "value": "AdJVEavFEs0Num_yoDjDjQCyP87G4lCUk_P6Sk3j_0j4tDwPX-6THLeBlgM",
+    "domain": ".google.com",
+    "path": "/",
+    "expires": 1801556079.602039,
+    "httpOnly": true,
+    "secure": true,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "NID",
+    "value": "533=KFfsR7xqI_NeGWXLi4NeTUC9GviXdT29YIoO2QwFTWCNd-jgX5oenaG_ukj24pqTeSNNdcf_9FzMueegYVvgtW6PeQKjMjZEaqBBChyc_fAstPPRTljl4eJBFl7yv8eP99sLJIRzWSptsFwWYx3fEsEwZB47V7qhnYA_XHx-bUtLmoFIBuroR37ds7fmFyWzxE7S_EglhEAk3_3-27c",
+    "domain": ".google.com",
+    "path": "/",
+    "expires": 1801815279.602164,
     "httpOnly": true,
     "secure": true,
     "sameSite": "None"
   },
   {
-    "name": "__Host-_sc_token",
-    "value": "v2%3AyyCqRUu61dvhijy6uvr3DfFOeU3sNSwSgXyuhq7M_5QQcp5jpKADcn-es-kQPSm3FE6LxDXIDU3QgxvVSjESLY06HUCPSmwTrXXJ05qgI2cg-inMIuXX8dF0Xk9-ImXYKjD4nrAFZbsmLqfWnbYPjBIj1Vz1ZUJOvy_dU33Ynsd4dtqQTKVS_iW_v6sXNqHqc7ZoeAVWlMeZG1U45Rs2sZQHgo9zsZyG55uQMSYp2Ns4UYjLSJ4Lsl7OkyLGtFYdRXXfzl-ScY6ZIvIf1_1l2gQ-7DW8xGCjRVEmo5uoNNnRbJwUCtaP0gv7TSQt4lwq",
-    "domain": "www.google.com",
+    "name": "__Secure-STRP",
+    "value": "ANmZwa3k8opIatxi_5I1dWtpRDSB0oKpS73chLnA-XlwtyrzQwgJJgxaqJwIekqPcTNSCVbSG1hZCukI9i9PSc5Xx6QSjih-cA",
+    "domain": ".google.com",
     "path": "/",
-    "expires": 1784653479.161053,
-    "httpOnly": true,
+    "expires": 1786004758.197758,
+    "httpOnly": false,
     "secure": true,
-    "sameSite": "None",
-    "partitionKey": "https://google.com",
-    "_crHasCrossSiteAncestor": false
+    "sameSite": "Strict"
   }
 ]

@@ -83,5 +83,166 @@
       "confidence": 0.4,
       "ontology_version": "1.0.0"
     }
+  },
+  "semantic::software": {
+    "ontology_version": "1.0.0",
+    "intent_profile": {
+      "primary_domain": "Software_Development",
+      "concepts": [
+        "Flask",
+        "Frontend",
+        "Backend",
+        "Django",
+        "Graphql",
+        "Rest Api",
+        "Software Development",
+        "Api Development",
+        "Software Consulting",
+        "Web Development",
+        "Custom Software",
+        "React",
+        "Saas",
+        "FastAPI",
+        "Python",
+        "Software Engineering",
+        "It Consulting",
+        "Node.Js",
+        "Vue",
+        "Microservices",
+        "Enterprise Software",
+        "Software Outsourcing",
+        "Full Stack",
+        "It Services"
+      ],
+      "positions": [
+        "Backend Engineer",
+        "Api Developer",
+        "Web Developer",
+        "Full Stack Developer",
+        "Software Engineer",
+        "Python Developer"
+      ],
+      "services": [
+        "Python Development Services",
+        "Software Outsourcing",
+        "Backend Development",
+        "Api Development",
+        "It Consulting",
+        "Custom Software Development",
+        "Web Application Development"
+      ],
+      "products": [
+        "Flask",
+        "Aws",
+        "Postgresql",
+        "FastAPI",
+        "Gcp",
+        "Python",
+        "Azure",
+        "Docker",
+        "Redis",
+        "Kubernetes",
+        "Django"
+      ],
+      "confidence": 1.0,
+      "ontology_version": "1.0.0"
+    }
+  },
+  "semantic::pizza": {
+    "ontology_version": "1.0.0",
+    "intent_profile": {
+      "primary_domain": "Pizza",
+      "concepts": [
+        "pizza",
+        "Pizza"
+      ],
+      "positions": [
+        "Pizza Specialist",
+        "Pizza Developer",
+        "Pizza Engineer"
+      ],
+      "services": [
+        "Pizza Development",
+        "Pizza Consulting",
+        "Pizza Solutions",
+        "Pizza Services"
+      ],
+      "products": [],
+      "confidence": 0.4,
+      "ontology_version": "1.0.0"
+    }
+  },
+  "semantic::delhi": {
+    "ontology_version": "1.0.0",
+    "intent_profile": {
+      "primary_domain": "Delhi",
+      "concepts": [
+        "Delhi"
+      ],
+      "positions": [
+        "Delhi Developer",
+        "Delhi Engineer",
+        "Delhi Specialist"
+      ],
+      "services": [
+        "Delhi Consulting",
+        "Delhi Solutions",
+        "Delhi Development",
+        "Delhi Services"
+      ],
+      "products": [],
+      "confidence": 0.4,
+      "ontology_version": "1.0.0"
+    }
+  },
+  "semantic::hotel in delhi": {
+    "ontology_version": "1.0.0",
+    "intent_profile": {
+      "primary_domain": "Hotel In Delhi",
+      "concepts": [
+        "hotel",
+        "Hotel In Delhi",
+        "Hotel"
+      ],
+      "positions": [
+        "Hotel In Delhi Developer",
+        "Hotel In Delhi Engineer",
+        "Hotel In Delhi Specialist"
+      ],
+      "services": [
+        "Hotel In Delhi Services",
+        "Hotel In Delhi Development",
+        "Hotel In Delhi Solutions",
+        "Hotel In Delhi Consulting"
+      ],
+      "products": [],
+      "confidence": 0.4,
+      "ontology_version": "1.0.0"
+    }
+  },
+  "semantic::hotels in noida": {
+    "ontology_version": "1.0.0",
+    "intent_profile": {
+      "primary_domain": "Hotels In Noida",
+      "concepts": [
+        "Hotels In Noida",
+        "hotels",
+        "Hotels"
+      ],
+      "positions": [
+        "Hotels In Noida Engineer",
+        "Hotels In Noida Specialist",
+        "Hotels In Noida Developer"
+      ],
+      "services": [
+        "Hotels In Noida Solutions",
+        "Hotels In Noida Services",
+        "Hotels In Noida Consulting",
+        "Hotels In Noida Development"
+      ],
+      "products": [],
+      "confidence": 0.4,
+      "ontology_version": "1.0.0"
+    }
   }
 }

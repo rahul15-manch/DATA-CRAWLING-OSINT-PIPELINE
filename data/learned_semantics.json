@@ -167,6 +167,22 @@
       "first_seen": "2026-07-21",
       "last_seen": "2026-07-21",
       "target_field": "concepts"
+    },
+    "It Services": {
+      "seen": 1,
+      "accepted": 1,
+      "confidence": 1.0,
+      "first_seen": "2026-07-27",
+      "last_seen": "2026-07-27",
+      "target_field": "concepts"
+    },
+    "Enterprise Software": {
+      "seen": 1,
+      "accepted": 1,
+      "confidence": 1.0,
+      "first_seen": "2026-07-27",
+      "last_seen": "2026-07-27",
+      "target_field": "concepts"
     }
   },
   "ai": {
@@ -267,6 +283,35 @@
       "confidence": 1.0,
       "first_seen": "2026-07-26",
       "last_seen": "2026-07-26",
+      "target_field": "concepts"
+    }
+  },
+  "pizza": {},
+  "hotel in delhi": {
+    "Hotel": {
+      "seen": 4,
+      "accepted": 4,
+      "confidence": 1.0,
+      "first_seen": "2026-08-06",
+      "last_seen": "2026-08-06",
+      "target_field": "concepts"
+    }
+  },
+  "hotels in noida": {
+    "Hotels In Noida": {
+      "seen": 1,
+      "accepted": 1,
+      "confidence": 1.0,
+      "first_seen": "2026-08-06",
+      "last_seen": "2026-08-06",
+      "target_field": "concepts"
+    },
+    "Hotels": {
+      "seen": 2,
+      "accepted": 2,
+      "confidence": 1.0,
+      "first_seen": "2026-08-06",
+      "last_seen": "2026-08-06",
       "target_field": "concepts"
     }
   }

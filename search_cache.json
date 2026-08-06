@@ -994,14 +994,6 @@
     "kind": "zero_result",
     "results": []
   },
-  "default||site:linkedin.com/in \"F6s\" founder OR CEO OR director||5||0": {
-    "query": "site:linkedin.com/in \"F6s\" founder OR CEO OR director",
-    "provider": "google_html",
-    "timestamp": 1784220720.4461524,
-    "result_count": 0,
-    "kind": "zero_result",
-    "results": []
-  },
   "default||best python||20||0": {
     "query": "best python",
     "provider": "duckduckgo",
@@ -7083,6 +7075,2090 @@
         "query": "",
         "page": 0,
         "timestamp": 1785079556.5396037
+      }
+    ]
+  },
+  "default||automobile company||20||0": {
+    "query": "automobile company",
+    "provider": "duckduckgo",
+    "timestamp": 1785128009.7006748,
+    "result_count": 8,
+    "kind": "success",
+    "results": [
+      {
+        "title": "Top 19 Automotive Companies in Chandigarh - Emails & Contacts",
+        "url": "https://aeroleads.com/list/top-automotive-companies-in-chandigarh",
+        "snippet": "This directory brings together 19 automotive companies in Chandigarh for side-by-side comparison ofcompanyidentity, location, employee estimates, founding year, and available contact coverage. Across the current source records, commonly observed industries include automotive and the most frequent recorded locations are Chandigarh, India.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1785128009.6962404
+      },
+      {
+        "title": "List of Automobile Companies in Chandigarh",
+        "url": "https://topcompanieslist.com/Automobile-industry/Chandigarh-state/company.htm",
+        "snippet": "In this Section, I have provided List ofAutomobileCompanies in Chandigarh.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1785128009.6962404
+      },
+      {
+        "title": "Tata Motors - Largest Automobile Manufacturer, Biggest Automobile ...",
+        "url": "https://www.tatamotors.com/",
+        "snippet": "Tata Motors, a USD 42 billion organization, is a leading globalautomobilemanufacturer of cars, utility vehicles, pick-ups, trucks and buses.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1785128009.6962404
+      },
+      {
+        "title": "Automotive Manufacturers Pvt Ltd - Group Website",
+        "url": "https://automotiveml.com/",
+        "snippet": "Automotive Manufacturers Private Limited [\"AMPL\"/ \"TheCompany\"] is a leading distributor of passenger and commercial vehicles since the last over 70 years, having a nationwide network of dealerships.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1785128009.6962404
+      },
+      {
+        "title": "Top 10 Car Companies in India 2025",
+        "url": "https://www.businessoutreach.in/top-10-car-companies-in-india/",
+        "snippet": "Discover the top 10 car companies in India in 2025, their best-selling models, price range, and why they lead the auto market.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1785128009.6962404
+      },
+      {
+        "title": "The Mahindra Group Official Website | Together We Rise",
+        "url": "https://www.mahindra.com/",
+        "snippet": "Of these, 8 are publicly listed. The Group is present in over 20+ industries across Auto, Farm and Services. Our Auto sector includes SUVs, LCVs, electric 3-wheelers, trucks & buses and motorcycles. We are world's largest tractorcompanyby volume. In services we have Mahindra Finance and Tech Mahindra.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1785128009.6962404
+      },
+      {
+        "title": "Official Global Website | Stellantis",
+        "url": "https://www.stellantis.com/en",
+        "snippet": "Welcome to the Official Global Website of Stellantis, a leading global automaker and provider of innovative mobility solutions.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1785128009.6962404
+      },
+      {
+        "title": "Hyundai Motor Company Official Website | Hyundai Worldwide",
+        "url": "https://www.hyundai.com/worldwide/en",
+        "snippet": "Hyundai Official Website. Explore Hyundai Motor's various vehicle lineups ,brand vision and global campaign like clean mobility, sustainability, art and sports partnership.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1785128009.6962404
+      }
+    ]
+  },
+  "default||site:tatamotors.com email||3||0": {
+    "query": "site:tatamotors.com email",
+    "provider": "brave",
+    "timestamp": 1785128163.4237065,
+    "result_count": 3,
+    "kind": "success",
+    "results": [
+      {
+        "title": "Tata Motorstatamotors.com› contact-usTata Motors | Agile, new-age & future-ready",
+        "url": "https://www.tatamotors.com/contact-us/",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 1,
+        "query": "site:tatamotors.com email",
+        "page": 0,
+        "timestamp": 1785128163.4205244
+      },
+      {
+        "title": "Home",
+        "url": "https://www.tatamotors.com/",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 2,
+        "query": "site:tatamotors.com email",
+        "page": 0,
+        "timestamp": 1785128163.4205244
+      },
+      {
+        "title": "Truck and Bus Manufacturers in India, Commercial Vehicles",
+        "url": "https://www.tatamotors.com/products/trucks-buses/",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 3,
+        "query": "site:tatamotors.com email",
+        "page": 0,
+        "timestamp": 1785128163.4205244
+      }
+    ]
+  },
+  "default||site:tatamotors.com contact||3||0": {
+    "query": "site:tatamotors.com contact",
+    "provider": "brave",
+    "timestamp": 1785128168.7456908,
+    "result_count": 3,
+    "kind": "success",
+    "results": [
+      {
+        "title": "Tata Motorstatamotors.com› contact-usContact us – Tata Motors",
+        "url": "https://www.tatamotors.com/contact-us/",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 1,
+        "query": "site:tatamotors.com contact",
+        "page": 0,
+        "timestamp": 1785128168.7422354
+      },
+      {
+        "title": "Home",
+        "url": "https://www.tatamotors.com/",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 2,
+        "query": "site:tatamotors.com contact",
+        "page": 0,
+        "timestamp": 1785128168.7422354
+      },
+      {
+        "title": "Truck and Bus Manufacturers in India, Commercial Vehicles",
+        "url": "https://www.tatamotors.com/products/trucks-buses/",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 3,
+        "query": "site:tatamotors.com contact",
+        "page": 0,
+        "timestamp": 1785128168.7432325
+      }
+    ]
+  },
+  "default||site:tatamotors.com phone||3||0": {
+    "query": "site:tatamotors.com phone",
+    "provider": "brave",
+    "timestamp": 1785128173.9592168,
+    "result_count": 2,
+    "kind": "success",
+    "results": [
+      {
+        "title": "Tata Motorstatamotors.com› contact-usTata Motors | Agile, new-age & future-ready",
+        "url": "https://www.tatamotors.com/contact-us/",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 2,
+        "query": "site:tatamotors.com phone",
+        "page": 0,
+        "timestamp": 1785128173.9551666
+      },
+      {
+        "title": "Tatamotorstmlcars.tatamotors.com› service  › owners  › phone-bluetooth-compatibility-with-car-infotainment-systemPhone Bluetooth Compatibility with Car/Infotaiment System | Tata Motors Service",
+        "url": "https://tmlcars.tatamotors.com/service/owners/phone-bluetooth-compatibility-with-car-infotainment-system",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 3,
+        "query": "site:tatamotors.com phone",
+        "page": 0,
+        "timestamp": 1785128173.9551666
+      }
+    ]
+  },
+  "default||site:tatamotors.com team||3||0": {
+    "query": "site:tatamotors.com team",
+    "provider": "brave",
+    "timestamp": 1785128179.455978,
+    "result_count": 3,
+    "kind": "success",
+    "results": [
+      {
+        "title": "Tata Motorscars.tatamotors.com› organisation  › our-leadership.htmlTata Motors Leadership Team - Meet Our Executives | Tata Motors",
+        "url": "https://cars.tatamotors.com/organisation/our-leadership.html",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 1,
+        "query": "site:tatamotors.com team",
+        "page": 0,
+        "timestamp": 1785128179.45099
+      },
+      {
+        "title": "Tata Nexon",
+        "url": "https://cars.tatamotors.com/suv/nexon",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 2,
+        "query": "site:tatamotors.com team",
+        "page": 0,
+        "timestamp": 1785128179.45099
+      },
+      {
+        "title": "The New Harrier",
+        "url": "https://cars.tatamotors.com/suv/harrier",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 3,
+        "query": "site:tatamotors.com team",
+        "page": 0,
+        "timestamp": 1785128179.45099
+      }
+    ]
+  },
+  "default||Enterprise Software software company||20||0": {
+    "query": "Enterprise Software software company",
+    "provider": "duckduckgo",
+    "timestamp": 1785143892.2395983,
+    "result_count": 5,
+    "kind": "success",
+    "results": [
+      {
+        "title": "100 Top Enterprise Software Companies in United States - F6S",
+        "url": "https://www.f6s.com/companies/enterprise-software/united-states/co",
+        "snippet": "Detailed info and reviews on 100 topEnterpriseSoftwarecompanies and startups in United States in 2026. Get the latest updates on their products, jobs, funding, investors, founders and more.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1785143892.229161
+      },
+      {
+        "title": "Enterprise software companies - Craft.co",
+        "url": "https://craft.co/enterprise-software-companies",
+        "snippet": "Enterprisesoftwarecompanies include Microsoft, Meta, Oracle, IBM, Broadcom and 520 other companies.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1785143892.229161
+      },
+      {
+        "title": "Infor | Cloud Enterprise Software & AI for Your Industry",
+        "url": "https://www.infor.com/",
+        "snippet": "Infor is a global leader in cloudenterprisesoftwarebuilt for the way industries actually work. We combine deep industry expertise and proven processes with AI agents, adaptive experiences, and intelligent automation - so your operations don't just run, they think, adapt, and act. Turn your business into an agenticenterprise, and set the pace for your industry.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1785143892.229161
+      },
+      {
+        "title": "Top Enterprise Software Companies 2026: Market Share & VMR Evaluation",
+        "url": "https://www.verifiedmarketresearch.com/blog/best-enterprise-software-companies/",
+        "snippet": "VMR analysts audit the topenterprisesoftwareplayers of 2026. Discover which 7 companies dominate with a 28% market share and 12% CAGR in agentic AI.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1785143892.229161
+      },
+      {
+        "title": "Top 228 Enterprise Software Startups 2026 | Funded by Sequoia, YC, A16Z",
+        "url": "https://topstartups.io/?industries=Enterprise%20Software",
+        "snippet": "TopEnterpriseSoftwarestartups and newEnterpriseSoftwarecompanies hiring now. Sort by valuation and recent funding. Funded by Sequoia, YC, A16Z, Benchmark - the very best.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1785143892.229161
+      }
+    ]
+  },
+  "default||site:craft.co email||3||0": {
+    "query": "site:craft.co email",
+    "provider": "brave",
+    "timestamp": 1785143983.7744267,
+    "result_count": 3,
+    "kind": "success",
+    "results": [
+      {
+        "title": "Craftcraft.co› email chopperEmail Chopper Company Profile - Office Locations, Competitors, Revenue, Financials, Employees, Key People, Subsidiaries | Craft.co",
+        "url": "https://craft.co/email-chopper",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 1,
+        "query": "site:craft.co email",
+        "page": 0,
+        "timestamp": 1785143983.746359
+      },
+      {
+        "title": "SMTP Company Profile",
+        "url": "https://craft.co/smtp",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 2,
+        "query": "site:craft.co email",
+        "page": 0,
+        "timestamp": 1785143983.746359
+      },
+      {
+        "title": "EmailOpen Company Profile",
+        "url": "https://craft.co/emailopen",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 3,
+        "query": "site:craft.co email",
+        "page": 0,
+        "timestamp": 1785143983.746359
+      }
+    ]
+  },
+  "default||site:craft.co contact||3||0": {
+    "query": "site:craft.co contact",
+    "provider": "brave",
+    "timestamp": 1785143991.2631638,
+    "result_count": 3,
+    "kind": "success",
+    "results": [
+      {
+        "title": "Craftglobal.craft.co› home  › contact usContact Us | Craft.co",
+        "url": "https://global.craft.co/contact-us/",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 1,
+        "query": "site:craft.co contact",
+        "page": 0,
+        "timestamp": 1785143991.2451832
+      },
+      {
+        "title": "Home",
+        "url": "https://global.craft.co/",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 2,
+        "query": "site:craft.co contact",
+        "page": 0,
+        "timestamp": 1785143991.2451832
+      },
+      {
+        "title": "About Us",
+        "url": "https://global.craft.co/about-us/",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 3,
+        "query": "site:craft.co contact",
+        "page": 0,
+        "timestamp": 1785143991.2464705
+      }
+    ]
+  },
+  "default||site:infor.com email||3||0": {
+    "query": "site:infor.com email",
+    "provider": "brave",
+    "timestamp": 1785143992.3357298,
+    "result_count": 0,
+    "kind": "zero_result",
+    "results": []
+  },
+  "default||pizza services||20||0": {
+    "query": "pizza services",
+    "provider": "brave",
+    "timestamp": 1785144634.1079164,
+    "result_count": 11,
+    "kind": "success",
+    "results": [
+      {
+        "title": "Pizza-servicespizza-services.comPizza Antony, Pizza Service Antony livre des pizzas à Antony.",
+        "url": "https://www.pizza-services.com/",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 1,
+        "query": "pizza services",
+        "page": 0,
+        "timestamp": 1785144634.0465724
+      },
+      {
+        "title": "Domino's Pizzadominos.co.in› dominos pizzaPizza Near Me - Order Pizza Delivery Online from Domino's Nearby Restaurants",
+        "url": "https://www.dominos.co.in/pizza-near-me/",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 4,
+        "query": "pizza services",
+        "page": 0,
+        "timestamp": 1785144634.0465724
+      },
+      {
+        "title": "Domino's Pizzadominos.co.inDomino’s Pizza – Order Online | Get 2 Regular Pizza @99 Each",
+        "url": "https://www.dominos.co.in/",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 5,
+        "query": "pizza services",
+        "page": 0,
+        "timestamp": 1785144634.0465724
+      },
+      {
+        "title": "EatSureovenstory.in› order-pizza-onlineOrder Pizza Online, Pizza Delivery from Ovenstory",
+        "url": "https://www.ovenstory.in/order-pizza-online",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 8,
+        "query": "pizza services",
+        "page": 0,
+        "timestamp": 1785144634.048854
+      },
+      {
+        "title": "MojoPizzamojopizza.inMojoPizza - Pizza delivery | Order pizza online in Mumbai, Delhi NCR, Bangalore, Hyderabad, Pune, Chennai & Kolkata",
+        "url": "https://mojopizza.in/",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 10,
+        "query": "pizza services",
+        "page": 0,
+        "timestamp": 1785144634.0490882
+      },
+      {
+        "title": "JustDialjustdial.com› bhopal  › home delivery restaurants in bhopal  › pizza delivery services in bhopal  › 187+ listingsTop Pizza Delivery Services in Bhopal near me - Justdial",
+        "url": "https://www.justdial.com/Bhopal/Pizza-Delivery-Services/nct-11960353",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 14,
+        "query": "pizza services",
+        "page": 0,
+        "timestamp": 1785144634.0499654
+      },
+      {
+        "title": "Pizzaservicecorbeilpizzaservicecorbeil.frPizza Corbeil-Essonnes, Pizza Service Corbeil livre des pizzas italiennes à Corbeil-Essonnes.",
+        "url": "https://www.pizzaservicecorbeil.fr/",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 15,
+        "query": "pizza services",
+        "page": 0,
+        "timestamp": 1785144634.051331
+      },
+      {
+        "title": "Takeawaytakeaway.com› be-en  › pizza-servicePizza service Delivery - Order online | Takeaway.com",
+        "url": "https://www.takeaway.com/be-en/pizza-service",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 16,
+        "query": "pizza services",
+        "page": 0,
+        "timestamp": 1785144634.05195
+      },
+      {
+        "title": "JustDialjustdial.com› chennai  › home delivery restaurants in chennai  › pizza home delivery services in chennai  › 480+ listingsPizza Home Delivery Services in Chennai - Order Pizza online - Justdial",
+        "url": "https://www.justdial.com/Chennai/Best-Pizza-Home-Delivery-Services",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 17,
+        "query": "pizza services",
+        "page": 0,
+        "timestamp": 1785144634.05195
+      },
+      {
+        "title": "Swiggyswiggy.com› collections  › 83631Pizza",
+        "url": "https://www.swiggy.com/collections/83631?collection_id=83631&search_context=pizza&tags=layout_CCS_Pizza&type=rcv2",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 18,
+        "query": "pizza services",
+        "page": 0,
+        "timestamp": 1785144634.0531685
+      },
+      {
+        "title": "JustDialjustdial.com› bhopal  › home delivery restaurants in bhopal  › pizza home delivery services in bhopal  › 67+ listingsPizza Home Delivery Services in Bhopal - Order Pizza online - Justdial",
+        "url": "https://www.justdial.com/Bhopal/Pizza-Home-Delivery-Services/nct-10370622",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 19,
+        "query": "pizza services",
+        "page": 0,
+        "timestamp": 1785144634.0531685
+      }
+    ]
+  },
+  "default||custom pizza development||20||0": {
+    "query": "custom pizza development",
+    "provider": "brave",
+    "timestamp": 1785144880.3644376,
+    "result_count": 15,
+    "kind": "success",
+    "results": [
+      {
+        "title": "Smart Mouthsmartmouthfoods.com› pizza-builderThe Smart Mouth Pizza Builder | Build Your Own Pizza",
+        "url": "https://smartmouthfoods.com/pizza-builder/",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 1,
+        "query": "custom pizza development",
+        "page": 0,
+        "timestamp": 1785144880.3176854
+      },
+      {
+        "title": "Swiggyswiggy.com› city  › mumbai  › build-your-own-pizza-lower-parel-worli-rest225170Build Your Own Pizza - Lower Parel Worli",
+        "url": "https://www.swiggy.com/city/mumbai/build-your-own-pizza-lower-parel-worli-rest225170",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 2,
+        "query": "custom pizza development",
+        "page": 0,
+        "timestamp": 1785144880.3176854
+      },
+      {
+        "title": "Moon Technolabsmoontechnolabs.com› solution  › pizza-delivery-app-developmentPizza Delivery App Development Company | Moon Technolabs",
+        "url": "https://www.moontechnolabs.com/solution/pizza-delivery-app-development/",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 4,
+        "query": "custom pizza development",
+        "page": 0,
+        "timestamp": 1785144880.3176854
+      },
+      {
+        "title": "GitHubgithub.com› HimanshuKumar27  › PizzaByteGitHub - HimanshuKumar27/PizzaByte: Full-Stack Pizza 🍕 Delivery Platform",
+        "url": "https://github.com/HimanshuKumar27/PizzaByte",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 5,
+        "query": "custom pizza development",
+        "page": 0,
+        "timestamp": 1785144880.3176854
+      },
+      {
+        "title": "Pizzanovapizzanova.com› customize  › create-your-own-pizzaCreate Your Own Pizza",
+        "url": "https://pizzanova.com/customize/create-your-own-pizza?cb=%2Fproducts%2Fcreate-your-own",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 7,
+        "query": "custom pizza development",
+        "page": 0,
+        "timestamp": 1785144880.3176854
+      },
+      {
+        "title": "Valuetreevaluetree.io› home  › custom pizza delivery app developmentCustom Pizza Delivery App Development - Valuetree",
+        "url": "https://valuetree.io/pizza-delivery-app-development/",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 8,
+        "query": "custom pizza development",
+        "page": 0,
+        "timestamp": 1785144880.3176854
+      },
+      {
+        "title": "PizzaTimewppizzatime.com› home  › shop  › uncategorized  › custom pizza demoCustom pizza demo | PizzaTime",
+        "url": "https://wppizzatime.com/product/custom-pizza-demo/",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 9,
+        "query": "custom pizza development",
+        "page": 0,
+        "timestamp": 1785144880.3176854
+      },
+      {
+        "title": "Amazonamazon.in› ABC-Games-Pizza-Maker  › dp  › B09ZY3KLH6ABC Pizza Maker - App on Amazon Appstore",
+        "url": "https://www.amazon.in/ABC-Games-Pizza-Maker/dp/B09ZY3KLH6",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 10,
+        "query": "custom pizza development",
+        "page": 0,
+        "timestamp": 1785144880.3203065
+      },
+      {
+        "title": "Packmanpackman.co.in› food-packaging-box-manufacturer-supplier  › custom-pizza-box.htmlCustom Printed Pizza Box Manufacturers, Wholesalers & Supplier Delhi India",
+        "url": "https://www.packman.co.in/food-packaging-box-manufacturer-supplier/custom-pizza-box.html",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 12,
+        "query": "custom pizza development",
+        "page": 0,
+        "timestamp": 1785144880.3203065
+      },
+      {
+        "title": "Figmafigma.com› home  › design inspirations  › pizza app - designing your own pizzaPizza App - Designing Your Own Pizza | Figma",
+        "url": "https://www.figma.com/community/file/1044705362530258339/pizza-app-designing-your-own-pizza",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 14,
+        "query": "custom pizza development",
+        "page": 0,
+        "timestamp": 1785144880.3203065
+      },
+      {
+        "title": "BuzzFeedbuzzfeed.com› aaronhirsch  › create-a-custom-pizzaCreate A Custom Pizza That’s As Unhinged (Or Delicious) As You Are",
+        "url": "https://www.buzzfeed.com/aaronhirsch/create-a-custom-pizza",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 15,
+        "query": "custom pizza development",
+        "page": 0,
+        "timestamp": 1785144880.3203065
+      },
+      {
+        "title": "Pomodori Pizzapomodori.com› product  › CustomPizza  › 118Build Your Own Pizza - Customizable & Delicious | Pomodori Pizza",
+        "url": "https://www.pomodori.com/product/CustomPizza/118",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 17,
+        "query": "custom pizza development",
+        "page": 0,
+        "timestamp": 1785144880.3203065
+      },
+      {
+        "title": "Canvacanva.com› home  › templates  › pizzaFree and customizable pizza templates | Canva",
+        "url": "https://www.canva.com/templates/s/pizza/",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 18,
+        "query": "custom pizza development",
+        "page": 0,
+        "timestamp": 1785144880.3213024
+      },
+      {
+        "title": "Must Have Menusmusthavemenus.com› menu-template  › custom-pizza-menu.htmlCustom Pizza Menu",
+        "url": "https://www.musthavemenus.com/menu-template/custom-pizza-menu.html",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 19,
+        "query": "custom pizza development",
+        "page": 0,
+        "timestamp": 1785144880.3213024
+      },
+      {
+        "title": "Printoprinto.in› categories  › pizza-boxesCustomized Printed Pizza Boxes | Order Packaging Boxes Online",
+        "url": "https://printo.in/categories/pizza-boxes",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 20,
+        "query": "custom pizza development",
+        "page": 0,
+        "timestamp": 1785144880.3213024
+      }
+    ]
+  },
+  "default||site:moontechnolabs.com email||3||0": {
+    "query": "site:moontechnolabs.com email",
+    "provider": "brave",
+    "timestamp": 1785144945.8887217,
+    "result_count": 2,
+    "kind": "success",
+    "results": [
+      {
+        "title": "ReactJS Development Services",
+        "url": "https://www.moontechnolabs.com/services/reactjs-development/",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 2,
+        "query": "site:moontechnolabs.com email",
+        "page": 0,
+        "timestamp": 1785144945.8666472
+      },
+      {
+        "title": "Blockchain Development Services",
+        "url": "https://www.moontechnolabs.com/services/blockchain-development/",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 3,
+        "query": "site:moontechnolabs.com email",
+        "page": 0,
+        "timestamp": 1785144945.8672028
+      }
+    ]
+  },
+  "default||site:pizzanova.com email||3||0": {
+    "query": "site:pizzanova.com email",
+    "provider": "brave",
+    "timestamp": 1785144946.2591991,
+    "result_count": 3,
+    "kind": "success",
+    "results": [
+      {
+        "title": "Pizzanovapizzanova.com› terms-and-conditionsTerms and Conditions | Pizza Nova",
+        "url": "https://www.pizzanova.com/terms-and-conditions",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 1,
+        "query": "site:pizzanova.com email",
+        "page": 0,
+        "timestamp": 1785144946.2439744
+      },
+      {
+        "title": "Pizzanovapizzanova.com› about-us  › contact-usContact Us",
+        "url": "https://www.pizzanova.com/about-us/contact-us",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 2,
+        "query": "site:pizzanova.com email",
+        "page": 0,
+        "timestamp": 1785144946.2439744
+      },
+      {
+        "title": "Pizzanovaweborders.pizzanova.com› PNAPI  › order  › contact-usPizzanova",
+        "url": "https://weborders.pizzanova.com/PNAPI/order/contact-us",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 3,
+        "query": "site:pizzanova.com email",
+        "page": 0,
+        "timestamp": 1785144946.2447119
+      }
+    ]
+  },
+  "default||site:pizzanova.com contact||3||0": {
+    "query": "site:pizzanova.com contact",
+    "provider": "brave",
+    "timestamp": 1785144951.4261653,
+    "result_count": 3,
+    "kind": "success",
+    "results": [
+      {
+        "title": "Pizzanovapizzanova.com› about-us  › contact-usContact Us",
+        "url": "https://www.pizzanova.com/about-us/contact-us",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 1,
+        "query": "site:pizzanova.com contact",
+        "page": 0,
+        "timestamp": 1785144951.4096167
+      },
+      {
+        "title": "Terms and Conditions",
+        "url": "https://www.pizzanova.com/terms-and-conditions",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 2,
+        "query": "site:pizzanova.com contact",
+        "page": 0,
+        "timestamp": 1785144951.4096167
+      },
+      {
+        "title": "Store Location",
+        "url": "https://www.pizzanova.com/stores",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 3,
+        "query": "site:pizzanova.com contact",
+        "page": 0,
+        "timestamp": 1785144951.412766
+      }
+    ]
+  },
+  "default||site:moontechnolabs.com contact||3||0": {
+    "query": "site:moontechnolabs.com contact",
+    "provider": "brave",
+    "timestamp": 1785144952.406098,
+    "result_count": 3,
+    "kind": "success",
+    "results": [
+      {
+        "title": "Moon Technolabsmoontechnolabs.com› contact-usGet or Request A Free Quote - Contact Moon Technolabs",
+        "url": "https://www.moontechnolabs.com/contact-us/",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 1,
+        "query": "site:moontechnolabs.com contact",
+        "page": 0,
+        "timestamp": 1785144952.3743565
+      },
+      {
+        "title": "Billing Software",
+        "url": "https://www.moontechnolabs.com/services/billing-software-development/",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 2,
+        "query": "site:moontechnolabs.com contact",
+        "page": 0,
+        "timestamp": 1785144952.3748653
+      },
+      {
+        "title": "Cloud App",
+        "url": "https://www.moontechnolabs.com/services/cloud-application-development/",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 3,
+        "query": "site:moontechnolabs.com contact",
+        "page": 0,
+        "timestamp": 1785144952.3750415
+      }
+    ]
+  },
+  "default||site:swiggy.com email||3||0": {
+    "query": "site:swiggy.com email",
+    "provider": "brave",
+    "timestamp": 1785144954.5220113,
+    "result_count": 3,
+    "kind": "success",
+    "results": [
+      {
+        "title": "Swiggyswiggy.com› home  › contact usContact Us - Swiggy",
+        "url": "https://www.swiggy.com/corporate/contact-us/",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 1,
+        "query": "site:swiggy.com email",
+        "page": 0,
+        "timestamp": 1785144954.499368
+      },
+      {
+        "title": "Swiggy Dineout",
+        "url": "https://www.swiggy.com/dineout",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 2,
+        "query": "site:swiggy.com email",
+        "page": 0,
+        "timestamp": 1785144954.499368
+      },
+      {
+        "title": "Swiggy Instamart",
+        "url": "https://www.swiggy.com/instamart",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 3,
+        "query": "site:swiggy.com email",
+        "page": 0,
+        "timestamp": 1785144954.499368
+      }
+    ]
+  },
+  "default||site:wppizzatime.com email||3||0": {
+    "query": "site:wppizzatime.com email",
+    "provider": "brave",
+    "timestamp": 1785144956.832604,
+    "result_count": 3,
+    "kind": "success",
+    "results": [
+      {
+        "title": "PizzaTimewppizzatime.com› homePizzaTime - WordPress pizza plugin",
+        "url": "https://wppizzatime.com/",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 1,
+        "query": "site:wppizzatime.com email",
+        "page": 0,
+        "timestamp": 1785144956.8237624
+      },
+      {
+        "title": "Products -",
+        "url": "http://wppizzatime.com/shop/",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 2,
+        "query": "site:wppizzatime.com email",
+        "page": 0,
+        "timestamp": 1785144956.8237624
+      },
+      {
+        "title": "Features",
+        "url": "https://wppizzatime.com/features/",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 3,
+        "query": "site:wppizzatime.com email",
+        "page": 0,
+        "timestamp": 1785144956.824342
+      }
+    ]
+  },
+  "default||site:moontechnolabs.com phone||3||0": {
+    "query": "site:moontechnolabs.com phone",
+    "provider": "brave",
+    "timestamp": 1785144958.8799353,
+    "result_count": 2,
+    "kind": "success",
+    "results": [
+      {
+        "title": "Moon Technolabsmoontechnolabs.com› blog  › best-sip-softphoneA Guide to the 13 Best SIP Softphone of 2026",
+        "url": "https://www.moontechnolabs.com/blog/best-sip-softphone/",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 2,
+        "query": "site:moontechnolabs.com phone",
+        "page": 0,
+        "timestamp": 1785144958.8638737
+      },
+      {
+        "title": "Moon Technolabsmoontechnolabs.com› portfolio  › moon-dialer-voip-calling-softwareCustom VoIP Calling App – Moon Dialer",
+        "url": "https://www.moontechnolabs.com/portfolio/moon-dialer-voip-calling-software/",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 3,
+        "query": "site:moontechnolabs.com phone",
+        "page": 0,
+        "timestamp": 1785144958.8651268
+      }
+    ]
+  },
+  "default||pizza startups||20||0": {
+    "query": "pizza startups",
+    "provider": "brave",
+    "timestamp": 1785145179.4056501,
+    "result_count": 5,
+    "kind": "success",
+    "results": [
+      {
+        "title": "Pizza Needpizzaneed.com› pizza-startupsPizza Startups: New Companies Switching Up The Way We Make and Eat Pizza",
+        "url": "https://pizzaneed.com/pizza-startups/",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 2,
+        "query": "pizza startups",
+        "page": 0,
+        "timestamp": 1785145179.3492916
+      },
+      {
+        "title": "YourStoryyourstory.com› 2020  › 03  › instapizza-pizzas-business-model-profitabilityThis banker sold 5 million pizzas and achieved unit-level ...",
+        "url": "https://yourstory.com/2020/03/instapizza-pizzas-business-model-profitability",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 3,
+        "query": "pizza startups",
+        "page": 0,
+        "timestamp": 1785145179.3492916
+      },
+      {
+        "title": "Startupsharksstartupsharks.in› us-pizza-franchise-opportunityUS Pizza",
+        "url": "https://startupsharks.in/us-pizza-franchise-opportunity/",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 13,
+        "query": "pizza startups",
+        "page": 0,
+        "timestamp": 1785145179.3492916
+      },
+      {
+        "title": "EU-Startupseu-startups.com› home  › funding  › berlin-based virtual pizza chain milano vice cooks up €5.9 million to launchBerlin-based virtual pizza chain Milano Vice cooks up €5.9 million to launch | EU-Startups",
+        "url": "https://www.eu-startups.com/2022/07/berlin-based-virtual-pizza-chain-milano-vice-cooks-up-e5-9-million-to-launch/",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 19,
+        "query": "pizza startups",
+        "page": 0,
+        "timestamp": 1785145179.353073
+      },
+      {
+        "title": "pizza startuppizzastartup19038.comPizza Startup - Takeaway food - Glenside - Order online",
+        "url": "https://www.pizzastartup19038.com/",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 20,
+        "query": "pizza startups",
+        "page": 0,
+        "timestamp": 1785145179.3532772
+      }
+    ]
+  },
+  "default||site:eu-startups.com email||3||0": {
+    "query": "site:eu-startups.com email",
+    "provider": "brave",
+    "timestamp": 1785145215.652443,
+    "result_count": 3,
+    "kind": "success",
+    "results": [
+      {
+        "title": "EU-Startupseu-startups.com› home  › owl emailOwl Email | EU-Startups",
+        "url": "https://www.eu-startups.com/directory/owl-email/",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 1,
+        "query": "site:eu-startups.com email",
+        "page": 0,
+        "timestamp": 1785145215.6314437
+      },
+      {
+        "title": "Atomic Mail",
+        "url": "https://www.eu-startups.com/directory/atomic-mail/",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 2,
+        "query": "site:eu-startups.com email",
+        "page": 0,
+        "timestamp": 1785145215.6314437
+      },
+      {
+        "title": "Bare Metal Email",
+        "url": "https://www.eu-startups.com/directory/bare-metal-email/",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 3,
+        "query": "site:eu-startups.com email",
+        "page": 0,
+        "timestamp": 1785145215.6314437
+      }
+    ]
+  },
+  "default||site:yourstory.com email||3||0": {
+    "query": "site:yourstory.com email",
+    "provider": "brave",
+    "timestamp": 1785145219.8312438,
+    "result_count": 2,
+    "kind": "success",
+    "results": [
+      {
+        "title": "YourStoryyourstory.com› 2021  › 08  › product-roadmap-starting-sms-netcore-cloud-manage-asia-email-trafficYourstory",
+        "url": "https://yourstory.com/2021/08/product-roadmap-starting-sms-netcore-cloud-manage-asia-email-traffic",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 1,
+        "query": "site:yourstory.com email",
+        "page": 0,
+        "timestamp": 1785145219.821845
+      },
+      {
+        "title": "YourStoryyourstory.com› 2021  › 07  › funding-alert-mailmodo-raises-2-million-from-sequo[Funding alert] Email marketing startup Mailmodo raises $2 ...",
+        "url": "https://yourstory.com/2021/07/funding-alert-mailmodo-raises-2-million-from-sequo",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 3,
+        "query": "site:yourstory.com email",
+        "page": 0,
+        "timestamp": 1785145219.821845
+      }
+    ]
+  },
+  "default||site:eu-startups.com contact||3||0": {
+    "query": "site:eu-startups.com contact",
+    "provider": "brave",
+    "timestamp": 1785145220.3275328,
+    "result_count": 3,
+    "kind": "success",
+    "results": [
+      {
+        "title": "EU-Startupseu-startups.com› home  › x-ray.contactX-Ray.contact | EU-Startups",
+        "url": "https://www.eu-startups.com/directory/x-ray-contact/",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 1,
+        "query": "site:eu-startups.com contact",
+        "page": 0,
+        "timestamp": 1785145220.2957625
+      },
+      {
+        "title": "About EU-Startups",
+        "url": "https://www.eu-startups.com/about/",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 2,
+        "query": "site:eu-startups.com contact",
+        "page": 0,
+        "timestamp": 1785145220.2957625
+      },
+      {
+        "title": "20VC | EU-Startups",
+        "url": "https://www.eu-startups.com/investor/20vc/",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 3,
+        "query": "site:eu-startups.com contact",
+        "page": 0,
+        "timestamp": 1785145220.2957625
+      }
+    ]
+  },
+  "default||site:startupsharks.in email||3||0": {
+    "query": "site:startupsharks.in email",
+    "provider": "brave",
+    "timestamp": 1785145222.5957594,
+    "result_count": 3,
+    "kind": "success",
+    "results": [
+      {
+        "title": "Startup Sharksstartupsharks.in› contactContact - Startup Sharks",
+        "url": "https://startupsharks.in/contact/",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 1,
+        "query": "site:startupsharks.in email",
+        "page": 0,
+        "timestamp": 1785145222.5821953
+      },
+      {
+        "title": "Startup Sharksstartupsharks.in› events-isproutEvents Isprout - Startup Sharks",
+        "url": "https://startupsharks.in/events-isprout/",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 2,
+        "query": "site:startupsharks.in email",
+        "page": 0,
+        "timestamp": 1785145222.5824702
+      },
+      {
+        "title": "Startupsharksstartupsharks.in› kritungaBusiness Opportunities | Franchise Opportunities by Startup Sharks",
+        "url": "https://startupsharks.in/kritunga/",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 3,
+        "query": "site:startupsharks.in email",
+        "page": 0,
+        "timestamp": 1785145222.5824702
+      }
+    ]
+  },
+  "default||site:pizzaneed.com email||3||0": {
+    "query": "site:pizzaneed.com email",
+    "provider": "brightdata",
+    "timestamp": 1785145299.8612814,
+    "result_count": 0,
+    "kind": "zero_result",
+    "results": []
+  },
+  "default||Enterprise Software company||20||0": {
+    "query": "Enterprise Software company",
+    "provider": "duckduckgo",
+    "timestamp": 1786004087.0319912,
+    "result_count": 6,
+    "kind": "success",
+    "results": [
+      {
+        "title": "100 Top Enterprise Software Companies in India · July 2026",
+        "url": "https://www.f6s.com/companies/enterprise-software/india/co",
+        "snippet": "Detailed info and reviews on 100 topEnterpriseSoftwarecompanies and startups in India in 2026. Get the latest updates on their products, jobs, funding, investors, founders and more.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1786004087.02676
+      },
+      {
+        "title": "100 Top Enterprise Software Companies in United States - F6S",
+        "url": "https://www.f6s.com/companies/enterprise-software/united-states/co",
+        "snippet": "Detailed info and reviews on 100 topEnterpriseSoftwarecompanies and startups in United States in 2026. Get the latest updates on their products, jobs, funding, investors, founders and more.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1786004087.02676
+      },
+      {
+        "title": "Infor | Cloud Enterprise Software & AI for Your Industry",
+        "url": "https://www.infor.com/",
+        "snippet": "Infor is a global leader in cloud-based, industry-specificenterprisesoftware. Our solutions combine deep industry expertise with purpose-built AI technologies.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1786004087.02676
+      },
+      {
+        "title": "The AI Enterprise Software Company",
+        "url": "https://ignitetech.ai/",
+        "snippet": "IgniteTech is anenterprisesoftwarecompanywith AI DNA—delivering AI-first innovations that help businesses automate, grow, and transform.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1786004087.02676
+      },
+      {
+        "title": "11 Best Enterprise Software Companies to Consider in 2026 - PandaDoc",
+        "url": "https://www.pandadoc.com/blog/best-enterprise-software-companies/",
+        "snippet": "Looking to boost your business productivity? We look at the bestenterprisesoftwarecompanies operating in 2026 to help you in a range of areas.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1786004087.02676
+      },
+      {
+        "title": "Top Enterprise Software Companies 2026: Market Share & VMR Evaluation",
+        "url": "https://www.verifiedmarketresearch.com/blog/best-enterprise-software-companies/",
+        "snippet": "VMR analysts audit the topenterprisesoftwareplayers of 2026. Discover which 7 companies dominate with a 28% market share and 12% CAGR in agentic AI.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1786004087.02676
+      }
+    ]
+  },
+  "default||site:f6s.com email||3||0": {
+    "query": "site:f6s.com email",
+    "provider": "brave",
+    "timestamp": 1786004128.5307446,
+    "result_count": 3,
+    "kind": "success",
+    "results": [
+      {
+        "title": "F6Sf6s.com› software  › category  › multi-format-email-deduplicationBest Multi-Format Email Deduplication Software • April 2026",
+        "url": "https://www.f6s.com/software/category/multi-format-email-deduplication",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 1,
+        "query": "site:f6s.com email",
+        "page": 0,
+        "timestamp": 1786004128.5270069
+      },
+      {
+        "title": "Get Free Deals that help you grow",
+        "url": "https://www.f6s.com/deals",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 2,
+        "query": "site:f6s.com email",
+        "page": 0,
+        "timestamp": 1786004128.5270069
+      },
+      {
+        "title": "Apply to programs in 2026",
+        "url": "https://www.f6s.com/programs",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 3,
+        "query": "site:f6s.com email",
+        "page": 0,
+        "timestamp": 1786004128.5270069
+      }
+    ]
+  },
+  "default||site:f6s.com contact||3||0": {
+    "query": "site:f6s.com contact",
+    "provider": "brave",
+    "timestamp": 1786004133.884095,
+    "result_count": 3,
+    "kind": "success",
+    "results": [
+      {
+        "title": "F6Sf6s.com› termsF6S Terms of Service | F6S",
+        "url": "https://www.f6s.com/terms",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 1,
+        "query": "site:f6s.com contact",
+        "page": 0,
+        "timestamp": 1786004133.88045
+      },
+      {
+        "title": "Get Free Deals that help you grow",
+        "url": "https://www.f6s.com/deals",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 2,
+        "query": "site:f6s.com contact",
+        "page": 0,
+        "timestamp": 1786004133.88045
+      },
+      {
+        "title": "Apply to programs in 2026",
+        "url": "https://www.f6s.com/programs",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 3,
+        "query": "site:f6s.com contact",
+        "page": 0,
+        "timestamp": 1786004133.88045
+      }
+    ]
+  },
+  "default||site:f6s.com phone||3||0": {
+    "query": "site:f6s.com phone",
+    "provider": "brave",
+    "timestamp": 1786004140.1936665,
+    "result_count": 3,
+    "kind": "success",
+    "results": [
+      {
+        "title": "F6Sf6s.com› company  › twinphone-cheap-callsTwin-Phone",
+        "url": "https://www.f6s.com/company/twinphone-cheap-calls",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 1,
+        "query": "site:f6s.com phone",
+        "page": 0,
+        "timestamp": 1786004140.1905682
+      },
+      {
+        "title": "F6Sf6s.com› privacy-policyF6S Privacy Policy | F6S",
+        "url": "https://www.f6s.com/privacy-policy",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 2,
+        "query": "site:f6s.com phone",
+        "page": 0,
+        "timestamp": 1786004140.1905682
+      },
+      {
+        "title": "F6Sf6s.com› company  › dr-phone-rxDr Phone RX",
+        "url": "https://www.f6s.com/company/dr-phone-rx",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 3,
+        "query": "site:f6s.com phone",
+        "page": 0,
+        "timestamp": 1786004140.1905682
+      }
+    ]
+  },
+  "default||site:f6s.com team||3||0": {
+    "query": "site:f6s.com team",
+    "provider": "brave",
+    "timestamp": 1786004145.8380919,
+    "result_count": 3,
+    "kind": "success",
+    "results": [
+      {
+        "title": "F6Sf6s.com› home  › companies  › hack teamHACK TEAM | F6S",
+        "url": "https://www.f6s.com/company/hackteam",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 1,
+        "query": "site:f6s.com team",
+        "page": 0,
+        "timestamp": 1786004145.8346252
+      },
+      {
+        "title": "F6Sf6s.com› home  › companies  › team n timeTeam n Time | F6S",
+        "url": "https://www.f6s.com/company/team-n-time",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 2,
+        "query": "site:f6s.com team",
+        "page": 0,
+        "timestamp": 1786004145.8346252
+      },
+      {
+        "title": "F6Sf6s.com› home  › companies  › team on the runTeam on the Run | F6S",
+        "url": "https://www.f6s.com/company/teamontherun?flow=seePage",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 3,
+        "query": "site:f6s.com team",
+        "page": 0,
+        "timestamp": 1786004145.8346252
+      }
+    ]
+  },
+  "default||site:linkedin.com/in \"F6s\" founder OR CEO OR director||5||0": {
+    "query": "site:linkedin.com/in \"F6s\" founder OR CEO OR director",
+    "provider": "brightdata",
+    "timestamp": 1786004183.087905,
+    "result_count": 0,
+    "kind": "zero_result",
+    "results": []
+  },
+  "default||delhi||20||0": {
+    "query": "delhi",
+    "provider": "duckduckgo",
+    "timestamp": 1786004324.794702,
+    "result_count": 4,
+    "kind": "success",
+    "results": [
+      {
+        "title": "Welcome to Delhi Tourism: Official Tourism Website for Government of ...",
+        "url": "https://delhitourism.gov.in/",
+        "snippet": "AboutDelhiDelhiTourism, a government undertaking facilitating tourism since 1975 will take you to a guided tour of theDelhithrough this website. It explores the wonders ofDelhi, its heritage, the art and craft, the diverse cuisine and culture. A symbol of the country's rich past and thriving present,Delhiis a city where ancient and modern blend seamlessly together. It is a place that ...",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1786004324.7907143
+      },
+      {
+        "title": "Home | Government of National Capital Territory of Delhi",
+        "url": "https://delhi.gov.in/",
+        "snippet": "Government of National Capital Territory ofDelhi, 3rd level,DelhiSecretariat, I.P. Estate, NewDelhi-110002 (India) Office Timing 09:30 AM to 06:00 PM",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1786004324.7907143
+      },
+      {
+        "title": "Delhi - incredibleindia.gov.in",
+        "url": "https://www.incredibleindia.gov.in/en/delhi",
+        "snippet": "Dilli hain hum (We'reDelhi!) A city of beautiful contrastsDelhi, India's vibrant capital, is a world within itself. With its kaleidoscope of scents, sounds, and sights,Delhinever fails to captivate. From its rich history and architectural marvels to its delectable cuisine and vibrant nightlife, the city offers an unforgettable experience. One of the world's oldest continuously inhabited ...",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1786004324.7907143
+      },
+      {
+        "title": "11 best things to do in Delhi - Lonely Planet",
+        "url": "https://www.lonelyplanet.com/articles/top-things-to-do-in-delhi",
+        "snippet": "In the south, Mehrauli was the heart of the medievalDelhisultanate, while the remains ofDelhi'sother ancient capitals lie dotted around the suburbs. From touring the historic Red Fort in OldDelhito visiting the multi-faith Bahai House of Worship in NewDelhi, here's our pick of the best things to do inDelhi. 1.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1786004324.7907143
+      }
+    ]
+  },
+  "default||custom hotel in development Delhi||20||0": {
+    "query": "custom hotel in development Delhi",
+    "provider": "duckduckgo",
+    "timestamp": 1786004406.9762747,
+    "result_count": 4,
+    "kind": "success",
+    "results": [
+      {
+        "title": "Hospitality Project in Delhi, NCR - Unity Group",
+        "url": "https://www.unitygroup.in/portfolio-hotels.html",
+        "snippet": "W e are also planning to build a sprawling 5 starhotelinDwarka,Delhialong with a BusinessHotel. We believe that a world class hospitality service will contribute to building a new outlook of India. GingerHotelFaridabad offers facilities that match the advanced city life, while still providing a warm and comfortable stay to the guests.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1786004406.9702907
+      },
+      {
+        "title": "Novotel & Pullman New Delhi Aerocity - Archetype Group",
+        "url": "https://www.archetype-group.com/projects/novotel-pullman-hotels/",
+        "snippet": "Pullman NewDelhiAerocity is a 100,000 sqm hospitalitydevelopmentlocated inDelhi, India. The project comprises the Novotel and PullmanhotelswithinDelhi'sAerocity district near the international airport. Archetype Group provided project management services for thedevelopment, applying its hospitality and construction experience to meet the operational and quality standards required ...",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1786004406.9702907
+      },
+      {
+        "title": "Hotel Development - Araiya Hotels & Resorts",
+        "url": "https://www.araiyahotels.com/services.html",
+        "snippet": "BespokeHotelDevelopmentServices in India At the heart of Araiya's success lies our robusthoteldevelopmentservices, meticulously tailored for longevity and profitability. Strategic Personalization: We conduct individualized project assessments, aligning each property'sdevelopmentwith owner aspirations and guest expectations.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1786004406.971288
+      },
+      {
+        "title": "DS Group partners Marriott to launch ₹400 Crore W Hotel in Delhi NCR",
+        "url": "https://www.hotelierindia.com/development/ds-group-brings-marriotts-w-hotel-to-delhi-ncr",
+        "snippet": "Strengthening its hospitality portfolio, the Dharampal Satyapal Group (DS Group), a leading FMCG conglomerate and multi-business corporation, has announced the launch of a new luxury hospitality project in partnership with Marriott International under the WHotelsbrand. . DS Group brings Marriott's WHoteltoDelhiNCR. Kiran Andicot, Marriott International, Whotels.Development.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1786004406.971288
+      }
+    ]
+  },
+  "default||site:archetype-group.com email||3||0": {
+    "query": "site:archetype-group.com email",
+    "provider": "brave",
+    "timestamp": 1786004485.263514,
+    "result_count": 3,
+    "kind": "success",
+    "results": [
+      {
+        "title": "Archetype Grouparchetype-group.com› home  › contact usContact Us - Archetype Group",
+        "url": "https://www.archetype-group.com/contact-us/",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 1,
+        "query": "site:archetype-group.com email",
+        "page": 0,
+        "timestamp": 1786004485.2597144
+      },
+      {
+        "title": "Our Team",
+        "url": "https://www.archetype-group.com/people/",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 2,
+        "query": "site:archetype-group.com email",
+        "page": 0,
+        "timestamp": 1786004485.2597144
+      },
+      {
+        "title": "All Services",
+        "url": "https://www.archetype-group.com/services/",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 3,
+        "query": "site:archetype-group.com email",
+        "page": 0,
+        "timestamp": 1786004485.260522
+      }
+    ]
+  },
+  "default||site:archetype-group.com contact||3||0": {
+    "query": "site:archetype-group.com contact",
+    "provider": "brave",
+    "timestamp": 1786004490.6173334,
+    "result_count": 3,
+    "kind": "success",
+    "results": [
+      {
+        "title": "Archetype Grouparchetype-group.com› home  › contact usContact Us - Archetype Group",
+        "url": "https://www.archetype-group.com/contact-us/",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 1,
+        "query": "site:archetype-group.com contact",
+        "page": 0,
+        "timestamp": 1786004490.6141987
+      },
+      {
+        "title": "Our Team",
+        "url": "https://www.archetype-group.com/people/",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 2,
+        "query": "site:archetype-group.com contact",
+        "page": 0,
+        "timestamp": 1786004490.6141987
+      },
+      {
+        "title": "All Services",
+        "url": "https://www.archetype-group.com/services/",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 3,
+        "query": "site:archetype-group.com contact",
+        "page": 0,
+        "timestamp": 1786004490.6141987
+      }
+    ]
+  },
+  "default||site:archetype-group.com phone||3||0": {
+    "query": "site:archetype-group.com phone",
+    "provider": "brave",
+    "timestamp": 1786004496.2507665,
+    "result_count": 3,
+    "kind": "success",
+    "results": [
+      {
+        "title": "Archetype Grouparchetype-group.com› home  › contact usContact Us - Archetype Group",
+        "url": "https://www.archetype-group.com/contact-us/",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 1,
+        "query": "site:archetype-group.com phone",
+        "page": 0,
+        "timestamp": 1786004496.2471287
+      },
+      {
+        "title": "Our Team",
+        "url": "https://www.archetype-group.com/people/",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 2,
+        "query": "site:archetype-group.com phone",
+        "page": 0,
+        "timestamp": 1786004496.2471287
+      },
+      {
+        "title": "All Services",
+        "url": "https://www.archetype-group.com/services/",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 3,
+        "query": "site:archetype-group.com phone",
+        "page": 0,
+        "timestamp": 1786004496.2471287
+      }
+    ]
+  },
+  "default||site:archetype-group.com team||3||0": {
+    "query": "site:archetype-group.com team",
+    "provider": "brave",
+    "timestamp": 1786004501.1997795,
+    "result_count": 3,
+    "kind": "success",
+    "results": [
+      {
+        "title": "Archetype Grouparchetype-group.com› home  › our team of expertsArchetype Group | Meet Our Leadership Team",
+        "url": "https://www.archetype-group.com/people/",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 1,
+        "query": "site:archetype-group.com team",
+        "page": 0,
+        "timestamp": 1786004501.1958895
+      },
+      {
+        "title": "All Services",
+        "url": "https://www.archetype-group.com/services/",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 2,
+        "query": "site:archetype-group.com team",
+        "page": 0,
+        "timestamp": 1786004501.1958895
+      },
+      {
+        "title": "Building & Infrastructure Engineering",
+        "url": "https://www.archetype-group.com/services/building-engineering/",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 3,
+        "query": "site:archetype-group.com team",
+        "page": 0,
+        "timestamp": 1786004501.1958895
+      }
+    ]
+  },
+  "default||site:linkedin.com/in \"Archetype Group\" founder OR CEO OR director||5||0": {
+    "query": "site:linkedin.com/in \"Archetype Group\" founder OR CEO OR director",
+    "provider": "brave",
+    "timestamp": 1786004504.7594047,
+    "result_count": 0,
+    "kind": "zero_result",
+    "results": []
+  },
+  "default||hotels in Noida||20||0": {
+    "query": "hotels in Noida",
+    "provider": "duckduckgo",
+    "timestamp": 1786004650.0634236,
+    "result_count": 9,
+    "kind": "success",
+    "results": [
+      {
+        "title": "more info",
+        "url": "https://duckduckgo.com/duckduckgo-help-pages/company/ads-by-microsoft-on-duckduckgo-private-search/",
+        "snippet": "Always Great Deals: Search for The BestNoidaHotelPrices on Tripadvisor. Find Discounts on the BestHotelsInNoida. Tripadvisor Helps You Spend Less.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1786004650.04959
+      },
+      {
+        "title": "Hotels in Noida - Same Room, Different Price",
+        "url": "https://duckduckgo.com/y.js?ad_domain=trivago.in&ad_provider=bingv7aa&ad_type=txad&click_metadata=o7a95zw3jjcccJQ3BEEcSq6uOvZyw3mUL3jok5uQbeU%2DOfAXXOrrBCWiTZFMJ4XF6PonO7SXL_xTlia6qI4LPgH_GkzT5sqUqNTCuZfFr_QPA7pkLm2l5fYyZc50GNQbz8yR1kruh99x9Y0PkjQuUcNdV6hgelUQHwToMLjV8OY.fFVySiIK9fMfFXJB6ZoZCQ&rut=aa4e8ba7df3739ce462aafe3162f3d6ae9caed59041964cfce2f0d915aa01384&u3=https%3A%2F%2Fwww.bing.com%2Faclick%3Fld%3De8Puvqi_X6f7YGOCOZPRpP6TVUCUxHaiHziQ6dNQopAkgKvVgNkbW25DjwS%2DgL2ESGPySqiut1uw4Urx9MrSdf4Cg0j6_ecBVaalK27cH71s7bUbI5wyZK6mG7NtqcvoQmkxudftuKhXRHWsy9sbPqLeyDu8AeZ815xvy5U8sndtQ3FTubwQiepEWmzb6WXyYwe0rMciPDdkr3JcEXExChf9DIWrQ%26u%3DaHR0cHMlM2ElMmYlMmZ3d3cudHJpdmFnby5pbiUyZmVuLUlOJTJmbG0lM2Z0aGVtZUlkJTNkMSUyNnNlYXJjaCUzZDIwMC0zOTQ3MzclMjZzZW1fa2V5d29yZCUzZGhvdGVscyUyNTIwaW4lMjUyMG5vaWRhJTI2c2VtX2NyZWF0aXZlaWQlM2Q3NzY1MzIyNDE0NDc0MyUyNnNlbV9tYXRjaHR5cGUlM2RiZSUyNnNlbV9uZXR3b3JrJTNkcyUyNnNlbV9kZXZpY2UlM2RjJTI2c2VtX2NhbXBhaWduaWQlM2QxODA4MzE1OTAlMjZzZW1fYWRncm91cGlkJTNkMTIwNzI2NDIyMDc4MTA3MiUyNnNlbV90YXJnZXRpZCUzZGt3ZC03NTQ1NDM0NzA2MjE0NSUzYWxvYy05MCUyNmNpcGMlM2RzZW0lMjZjaXAlM2Q5MTI5MDAxMzYzJTI2bXNjbGtpZCUzZDlmMGVkNTJiOGM0YjExMTYyYmFkYmY1ZmM4ZTJjZmJk%26rlid%3D9f0ed52b8c4b11162badbf5fc8e2cfbd&vqd=4-101654707565535129296725939732843317665&iurl=%7B1%7DIG%3DD66C567A89C4475DAF9B385A976102A4%26CID%3D103B13385AFB6B8F39D904955B996A97%26ID%3DDevEx%2C5039.1",
+        "snippet": "HotelsinNoida- Search, Compare and Save with trivago™! Great Offer for Your Next Stay.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1786004650.04959
+      },
+      {
+        "title": "Hotels in Noida Book with 𝗙𝗥𝗘𝗘 𝗖𝗮𝗻𝗰𝗲𝗹𝗹𝗮𝘁𝗶𝗼𝗻",
+        "url": "https://www.makemytrip.com/hotels/noida-hotels.html",
+        "snippet": "Choose from 826hotelsinNoidaon MakeMyTrip.com. OurNoidahotelsoffer Free Cancellation and Pay atHoteloptions. You can also save more on yourNoidahotelbookings with MMT wallet money and stellar cashbacks.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1786004650.04959
+      },
+      {
+        "title": "𝗧𝗛𝗘 𝟭𝟬 𝗕𝗘𝗦𝗧 Hotels in Noida of 2026 (with Prices) - Tripadvisor",
+        "url": "https://www.tripadvisor.in/Hotels-g644043-Noida_Gautam_Buddha_Nagar_District_Uttar_Pradesh-Hotels.html",
+        "snippet": "BestNoidaHotelson Tripadvisor: Find 19,701 traveller reviews, 20,601 candid photos, and prices forhotelsinNoida, Uttar Pradesh, India.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1786004650.04959
+      },
+      {
+        "title": "Hotels in Noida Book from 811 Hotels - Goibibo",
+        "url": "https://www.goibibo.com/hotels/hotels-in-noida-ct/",
+        "snippet": "BookHotelsinNoidaat lowest Prices on Goibibo. Get Free Cancellation & Instant Refund on 811NoidaRoom Booking starting from ₹572. Use code GOSMARTDEAL to get instant discounts onNoidaRoom Booking.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1786004650.04959
+      },
+      {
+        "title": "20 Best Hotels in Noida - Holidify",
+        "url": "https://www.holidify.com/hotel-collections/best-hotels-in-noida",
+        "snippet": "Read about 20 BestHotelsinNoidaon Holidify. Get the latest deals & offers on the best stay options for your trip. Check availability, photos & prices and decide the best stay for your trip.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1786004650.04959
+      },
+      {
+        "title": "5 Star Hotels in Noida Book Now - MakeMyTrip",
+        "url": "https://www.makemytrip.com/hotels/five_star-hotels-noida.html",
+        "snippet": "Book 5 StarHotelsinNoidaonline with greathoteldeals at MakeMyTrip. Use coupon code & Get Upto 70% OFF instantly on 5 StarHotelsinNoida.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1786004650.04959
+      },
+      {
+        "title": "Hotels in Noida: Up to 60% off, Hotel Booking Starts @ Rs.934",
+        "url": "https://www.fabhotels.com/hotels-in-noida/",
+        "snippet": "HotelsinNoidafor stay: Use coupon code STAYFAB and get up to 60% discount on online booking of centrally located Safe & hygienic budgethotelsinNoida, price starts at Rs.934. Get Rs.750 on Sign up. #StayFab at the best reviewedNoidahotels.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1786004650.04959
+      },
+      {
+        "title": "Noida Hotels | Find and compare great deals on trivago",
+        "url": "https://www.trivago.com/en-US/odr/hotels-noida-india?search=200-394737",
+        "snippet": "Compare the prices of 3132hotelsinNoida, India. Find your ideal accommodation from hundreds of great deals and save with www.trivago.com",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1786004650.04959
+      }
+    ]
+  },
+  "default||site:makemytrip.com email||3||0": {
+    "query": "site:makemytrip.com email",
+    "provider": "brave",
+    "timestamp": 1786004745.0110116,
+    "result_count": 3,
+    "kind": "success",
+    "results": [
+      {
+        "title": "MakeMyTripmakemytrip.com› support  › popups  › popupex.htmwe're here for you - Email Us",
+        "url": "https://www.makemytrip.com/support/popups/popupex.htm",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 1,
+        "query": "site:makemytrip.com email",
+        "page": 0,
+        "timestamp": 1786004745.0032666
+      },
+      {
+        "title": "Online Train Ticket Booking, IRCTC Ticket Booking Platform",
+        "url": "https://www.makemytrip.com/railways/",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 2,
+        "query": "site:makemytrip.com email",
+        "page": 0,
+        "timestamp": 1786004745.0032666
+      },
+      {
+        "title": "Bus ticket booking",
+        "url": "https://www.makemytrip.com/bus-tickets/",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 3,
+        "query": "site:makemytrip.com email",
+        "page": 0,
+        "timestamp": 1786004745.0032666
+      }
+    ]
+  },
+  "default||site:makemytrip.com contact||3||0": {
+    "query": "site:makemytrip.com contact",
+    "provider": "brave",
+    "timestamp": 1786004749.7350712,
+    "result_count": 3,
+    "kind": "success",
+    "results": [
+      {
+        "title": "MakeMyTripmakemytrip.com› support  › contact-us.phpSupport Contact Us",
+        "url": "https://www.makemytrip.com/support/contact-us.php",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 1,
+        "query": "site:makemytrip.com contact",
+        "page": 0,
+        "timestamp": 1786004749.7311153
+      },
+      {
+        "title": "Online Train Ticket Booking, IRCTC Ticket Booking Platform",
+        "url": "https://www.makemytrip.com/railways/",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 2,
+        "query": "site:makemytrip.com contact",
+        "page": 0,
+        "timestamp": 1786004749.7311153
+      },
+      {
+        "title": "Bus ticket booking",
+        "url": "https://www.makemytrip.com/bus-tickets/",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 3,
+        "query": "site:makemytrip.com contact",
+        "page": 0,
+        "timestamp": 1786004749.7311153
       }
     ]
   }

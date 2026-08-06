@@ -47,8 +47,8 @@
         "unavailable": 0,
         "failures": 0,
         "last_updated": 0.0,
-        "score": 31,
-        "queries_run": 25
+        "score": 23,
+        "queries_run": 29
     },
     "software developer company 1": {
         "success": 0,
@@ -67,8 +67,8 @@
         "unavailable": 0,
         "failures": 0,
         "last_updated": 0.0,
-        "score": 66,
-        "queries_run": 82
+        "score": 114,
+        "queries_run": 118
     },
     "software developer company 2": {
         "success": 0,
@@ -107,8 +107,8 @@
         "unavailable": 0,
         "failures": 0,
         "last_updated": 0.0,
-        "score": 17,
-        "queries_run": 40
+        "score": 57,
+        "queries_run": 56
     },
     "technology": {
         "success": 0,
@@ -166,9 +166,9 @@
         "parser": 0,
         "unavailable": 0,
         "failures": 1,
-        "last_updated": 1784647509.8386378,
-        "score": 42,
-        "queries_run": 11
+        "last_updated": 1786004144.9260592,
+        "score": 45,
+        "queries_run": 12
     },
     "threat detection software company": {
         "success": 0,
@@ -267,8 +267,8 @@
         "unavailable": 0,
         "failures": 0,
         "last_updated": 0.0,
-        "score": 25,
-        "queries_run": 13
+        "score": 23,
+        "queries_run": 15
     },
     "site:linkedin.com/in \"ventureradar\" \"co-founder\"": {
         "success": 0,
@@ -477,8 +477,8 @@
         "unavailable": 0,
         "failures": 0,
         "last_updated": 0.0,
-        "score": -18,
-        "queries_run": 9
+        "score": -28,
+        "queries_run": 14
     },
     "custom python solutions": {
         "success": 0,
@@ -717,8 +717,8 @@
         "unavailable": 0,
         "failures": 0,
         "last_updated": 0.0,
-        "score": 6,
-        "queries_run": 3
+        "score": 8,
+        "queries_run": 4
     },
     "site:companiesmarketcap.com email": {
         "success": 0,
@@ -817,8 +817,8 @@
         "unavailable": 0,
         "failures": 0,
         "last_updated": 0.0,
-        "score": 21,
-        "queries_run": 10
+        "score": 116,
+        "queries_run": 49
     },
     "generative ai ai startup": {
         "success": 0,
@@ -926,7 +926,487 @@
         "parser": 0,
         "unavailable": 0,
         "failures": 0,
-        "last_updated": 1785079582.069186,
+        "last_updated": 1785128034.3452814,
+        "score": 5,
+        "queries_run": 2
+    },
+    "automobile company": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1785128009.6982346,
+        "score": 10,
+        "queries_run": 1
+    },
+    "site:tatamotors.com email": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 2,
+        "last_updated": 1785128163.42147,
+        "score": -1,
+        "queries_run": 3
+    },
+    "site:tatamotors.com contact": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1785128168.7432325,
+        "score": 3,
+        "queries_run": 1
+    },
+    "site:tatamotors.com phone": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1785128173.956152,
+        "score": 2,
+        "queries_run": 1
+    },
+    "site:tatamotors.com team": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1785128179.4520717,
+        "score": 3,
+        "queries_run": 1
+    },
+    "enterprise software software company": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1785143892.234643,
+        "score": 8,
+        "queries_run": 2
+    },
+    "site:craft.co email": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1785143983.7498662,
+        "score": 1,
+        "queries_run": 2
+    },
+    "site:craft.co contact": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1785143991.254836,
+        "score": 3,
+        "queries_run": 1
+    },
+    "site:infor.com email": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1785143992.3231275,
+        "score": -1,
+        "queries_run": 1
+    },
+    "pizza services": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 2,
+        "last_updated": 1785144634.0747988,
+        "score": 6,
+        "queries_run": 3
+    },
+    "pizza": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1785145302.171548,
+        "score": 45,
+        "queries_run": 15
+    },
+    "custom pizza development": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1785144880.3522675,
+        "score": 8,
+        "queries_run": 2
+    },
+    "site:moontechnolabs.com email": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1785144945.8751254,
+        "score": 1,
+        "queries_run": 2
+    },
+    "site:pizzanova.com email": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1785144946.2475066,
+        "score": 1,
+        "queries_run": 2
+    },
+    "site:pizzanova.com contact": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1785144951.4155922,
+        "score": 3,
+        "queries_run": 1
+    },
+    "site:moontechnolabs.com contact": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1785144952.38252,
+        "score": 3,
+        "queries_run": 1
+    },
+    "site:swiggy.com email": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1785144954.5023835,
+        "score": 3,
+        "queries_run": 1
+    },
+    "site:wppizzatime.com email": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1785144956.82627,
+        "score": 3,
+        "queries_run": 1
+    },
+    "site:moontechnolabs.com phone": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1785144958.8671188,
+        "score": 2,
+        "queries_run": 1
+    },
+    "site:moontechnolabs.com team": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1785144958.9757075,
+        "score": -2,
+        "queries_run": 1
+    },
+    "site:pizzanova.com phone": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1785144965.7967145,
+        "score": -2,
+        "queries_run": 1
+    },
+    "site:swiggy.com contact": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1785144966.5162473,
+        "score": -2,
+        "queries_run": 1
+    },
+    "pizza startups": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 2,
+        "last_updated": 1785145179.3936713,
+        "score": 6,
+        "queries_run": 3
+    },
+    "site:eu-startups.com email": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1785145215.6371787,
+        "score": 1,
+        "queries_run": 2
+    },
+    "site:yourstory.com email": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1785145219.824887,
+        "score": 1,
+        "queries_run": 2
+    },
+    "site:startupsharks.in email": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1785145222.5861201,
+        "score": 1,
+        "queries_run": 2
+    },
+    "site:pizzaneed.com email": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 4,
+        "last_updated": 1785145299.8350623,
+        "score": -6,
+        "queries_run": 4
+    },
+    "site:eu-startups.com contact": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1785145220.3137121,
+        "score": 3,
+        "queries_run": 1
+    },
+    "site:yourstory.com contact": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 2,
+        "last_updated": 1785145247.3605225,
+        "score": -4,
+        "queries_run": 2
+    },
+    "site:eu-startups.com phone": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1785145233.615467,
+        "score": -2,
+        "queries_run": 1
+    },
+    "site:startupsharks.in contact": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1785145243.9989295,
+        "score": -2,
+        "queries_run": 1
+    },
+    "enterprise software company": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 2,
+        "last_updated": 1786004087.0287564,
+        "score": 6,
+        "queries_run": 3
+    },
+    "site:f6s.com email": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1786004128.5278811,
+        "score": 1,
+        "queries_run": 2
+    },
+    "site:f6s.com contact": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1786004133.881702,
+        "score": 3,
+        "queries_run": 1
+    },
+    "site:f6s.com phone": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1786004140.1912904,
+        "score": 3,
+        "queries_run": 1
+    },
+    "site:f6s.com team": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1786004145.8356225,
+        "score": 3,
+        "queries_run": 1
+    },
+    "site:linkedin.com/in \"f6s\" founder or ceo or director": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 4,
+        "last_updated": 1786004183.0847821,
+        "score": -6,
+        "queries_run": 4
+    },
+    "delhi": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1786004324.7927077,
+        "score": 10,
+        "queries_run": 1
+    },
+    "custom hotel in development delhi": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1786004406.9732883,
+        "score": 10,
+        "queries_run": 1
+    },
+    "site:archetype-group.com email": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 3,
+        "last_updated": 1786004485.260522,
+        "score": -3,
+        "queries_run": 4
+    },
+    "hotel in delhi": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1786004505.1310346,
+        "score": 6,
+        "queries_run": 2
+    },
+    "site:archetype-group.com contact": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1786004490.6148696,
+        "score": 3,
+        "queries_run": 1
+    },
+    "site:archetype-group.com phone": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1786004496.2480776,
+        "score": 3,
+        "queries_run": 1
+    },
+    "site:archetype-group.com team": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1786004501.19716,
+        "score": 3,
+        "queries_run": 1
+    },
+    "site:linkedin.com/in \"archetype group\" founder or ceo or director": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1786004504.7560773,
+        "score": -1,
+        "queries_run": 1
+    },
+    "hotels in noida": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1786004764.1491904,
+        "score": 28,
+        "queries_run": 7
+    },
+    "site:makemytrip.com email": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 5,
+        "last_updated": 1786004748.123088,
+        "score": -7,
+        "queries_run": 6
+    },
+    "site:makemytrip.com contact": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1786004749.7325585,
         "score": 3,
         "queries_run": 1
     }

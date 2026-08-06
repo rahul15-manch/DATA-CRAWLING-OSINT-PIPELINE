@@ -6,10 +6,10 @@
     "google_429s": 0,
     "consecutive_failures": 9,
     "consecutive_blocks": {},
-    "dead": false,
+    "dead": true,
     "google_status": "healthy",
     "bing_status": "healthy",
-    "general_status": "healthy",
+    "general_status": "dead",
     "last_success_ts": null,
     "last_failure_ts": 1784710619.58712,
     "latency_samples": [
@@ -78,59 +78,31 @@
     }
   },
   "47.81.56.193:8888": {
-    "score": 100.0,
+    "score": 94.0,
     "google_successes": 0,
     "google_captchas": 0,
     "google_429s": 0,
-    "consecutive_failures": 0,
+    "consecutive_failures": 1,
     "consecutive_blocks": {},
     "dead": false,
     "google_status": "healthy",
     "bing_status": "healthy",
     "general_status": "healthy",
-    "last_success_ts": 1785079582.0378087,
-    "last_failure_ts": 1784717846.009753,
+    "last_success_ts": 1786004742.2778091,
+    "last_failure_ts": 1786004759.3641856,
     "latency_samples": [
-      0.8166320323944092,
-      0.9233372211456299,
-      0.9613778591156006,
-      1.5982913970947266,
-      1.3833980560302734,
-      3.5758819580078125,
-      1.8637046813964844,
-      0.727287769317627,
-      0.922269344329834,
-      0.8524668216705322
+      1.7903149127960205,
+      3.999483823776245,
+      3.2578089237213135,
+      3.737308979034424,
+      3.6097614765167236,
+      1.460097312927246,
+      2.3372652530670166,
+      4.109028577804565,
+      1.8158042430877686,
+      3.506866931915283
     ],
     "outcome_history": [
-      [
-        1784519960.2356775,
-        "TRANSPORT_CONNECTION_ERROR"
-      ],
-      [
-        1784520323.4917247,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784520325.5456436,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784520326.8007467,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784520330.1943817,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784520330.5141602,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784520333.384833,
-        "TRANSPORT_SUCCESS"
-      ],
       [
         1784520333.8170767,
         "TRANSPORT_SUCCESS"
@@ -218,6 +190,118 @@
       [
         1785079582.0378087,
         "TRANSPORT_SUCCESS"
+      ],
+      [
+        1785128025.4081318,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1785128027.439978,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1785128030.3408408,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1785128031.3987718,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1785128032.4189131,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1785128033.1525156,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1785128037.0710006,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1785143935.5347195,
+        "TRANSPORT_CONNECTION_ERROR"
+      ],
+      [
+        1785143942.5877032,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1785144688.3981314,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1785144695.2659616,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1785144889.722985,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1785144912.527169,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1785144914.7484064,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1785144918.4406905,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1785144933.3647835,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1785144937.8467987,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1785144947.9751987,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1785144949.4777772,
+        "TRANSPORT_CONNECTION_ERROR"
+      ],
+      [
+        1785145210.308558,
+        "TRANSPORT_CONNECTION_ERROR"
+      ],
+      [
+        1785145227.0021224,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1786004095.5118234,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1786004096.8532324,
+        "TRANSPORT_CONNECTION_ERROR"
+      ],
+      [
+        1786004100.8576798,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1786004468.1893544,
+        "TRANSPORT_CONNECTION_ERROR"
+      ],
+      [
+        1786004710.2680168,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1786004742.2778091,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1786004759.3641856,
+        "TRANSPORT_CONNECTION_ERROR"
       ]
     ],
     "quarantine_until": null,
@@ -226,7 +310,7 @@
     "dead_for_google": false,
     "dead_for_bing": false,
     "consecutive_timeouts": {
-      "google.com": 2,
+      "google.com": 4,
       "starnexttechnologies.com": 0,
       "daffodilsw.com": 0,
       "example.com": 0,
@@ -235,7 +319,15 @@
       "syrmasgs.com": 0,
       "startupsavant.com": 0,
       "ycombinator.com": 0,
-      "solutionbuggy.com": 0
+      "solutionbuggy.com": 0,
+      "craft.co": 1,
+      "topstartups.io": 0,
+      "swiggy.com": 1,
+      "smartmouthfoods.com": 0,
+      "wppizzatime.com": 0,
+      "pizzastartup19038.com": 0,
+      "goibibo.com": 1,
+      "fabhotels.com": 0
     },
     "provider_capabilities": {
       "google": "DEAD",
@@ -243,7 +335,7 @@
       "duckduckgo": "GOOD",
       "brave": "GOOD",
       "directory": "GOOD",
-      "general_crawl": "GOOD"
+      "general_crawl": "DEAD"
     }
   },
   "217.182.203.184:8888": {
@@ -291,189 +383,34 @@
   "181.39.25.196:8118": {
     "score": 94.0,
     "google_successes": 0,
-    "google_captchas": 0,
+    "google_captchas": 2,
     "google_429s": 0,
     "consecutive_failures": 1,
-    "consecutive_blocks": {},
+    "consecutive_blocks": {
+      "google.com": 2,
+      "unitygroup.in": 0,
+      "makemytrip.com": 0,
+      "fabhotels.com": 0
+    },
     "dead": false,
     "google_status": "healthy",
     "bing_status": "healthy",
     "general_status": "healthy",
-    "last_success_ts": 1784795442.5053403,
-    "last_failure_ts": 1784795458.9784803,
+    "last_success_ts": 1786004733.7108467,
+    "last_failure_ts": 1786004748.1168704,
     "latency_samples": [
-      3.6763715744018555,
-      3.4387636184692383,
-      5.590297698974609,
-      20.068724155426025,
-      26.6517493724823,
-      22.79369616508484,
-      24.39800477027893,
-      10.4352388381958,
-      6.156238794326782,
-      6.214860677719116
+      4.37970495223999,
+      3.8878140449523926,
+      4.190526247024536,
+      3.6023287773132324,
+      3.4137537479400635,
+      3.9597935676574707,
+      4.481364488601685,
+      5.503242015838623,
+      5.3746232986450195,
+      7.295398473739624
     ],
     "outcome_history": [
-      [
-        1784466968.4934874,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784466971.2009366,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784466974.301986,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784466976.4965115,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784466978.7266147,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784466983.3663173,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784466984.335993,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784466988.9064703,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784466992.2315667,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784466997.4841592,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784467002.7960744,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784467006.2847526,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784467008.6237276,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784467010.1602337,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784467012.633824,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784467013.0110857,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784467014.23004,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784467014.8461165,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784467017.559561,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784467020.7084298,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784467024.1058753,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784467026.8540175,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784467031.5679588,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784467033.414746,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784467037.0941055,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784467038.9812093,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784467042.3498123,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784467045.9188776,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784467047.5337148,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784467050.7928827,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784467053.9987993,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784467058.2920542,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784467060.563214,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784469997.2948,
-        "TRANSPORT_CONNECTION_ERROR"
-      ],
-      [
-        1784470044.237836,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784470053.4925234,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784470058.5385149,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784470061.1898286,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784470069.064633,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784470079.1184638,
-        "TRANSPORT_SUCCESS"
-      ],
       [
         1784470762.6781447,
         "TRANSPORT_SUCCESS"
@@ -513,17 +450,177 @@
       [
         1784795458.9784803,
         "TRANSPORT_CONNECTION_ERROR"
+      ],
+      [
+        1785143914.8089075,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1785143922.9942167,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1785144645.3915858,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1785144647.194137,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1785144648.2527661,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1785144653.1838892,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1785144657.6049511,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1785144657.959954,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1785144665.1874964,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1785144667.2732892,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1785144669.1912663,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1785144912.3717742,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1785144913.894772,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1785144925.3305042,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1785144927.7737648,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1785144928.5677829,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1785144940.640282,
+        "TRANSPORT_CONNECTION_ERROR"
+      ],
+      [
+        1785144943.3398802,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1785144952.330691,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1785144958.8513727,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1785144966.0971482,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1785145182.4538326,
+        "TRANSPORT_CONNECTION_ERROR"
+      ],
+      [
+        1785145188.7902193,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1785145197.0403378,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1785145205.5280364,
+        "TRANSPORT_CONNECTION_ERROR"
+      ],
+      [
+        1785145206.6034162,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1786004080.5414894,
+        "GOOGLE_CAPTCHA"
+      ],
+      [
+        1786004458.7291381,
+        "GOOGLE_CAPTCHA"
+      ],
+      [
+        1786004459.981361,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1786004700.27689,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1786004702.4709587,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1786004706.0938191,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1786004709.3174696,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1786004711.628236,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1786004715.8661418,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1786004718.6378431,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1786004723.089159,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1786004725.0598738,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1786004733.7108467,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1786004748.1168704,
+        "TRANSPORT_CONNECTION_ERROR"
       ]
     ],
     "quarantine_until": null,
     "quarantine_step": 0,
     "inactive": false,
-    "dead_for_google": false,
+    "dead_for_google": true,
     "dead_for_bing": false,
     "consecutive_timeouts": {
       "in.linkedin.com": 0,
       "www.linkedin.com": 0,
-      "google.com": 8,
+      "google.com": 11,
       "clutch.co": 0,
       "linkedin.com": 0,
       "empat.tech": 0,
@@ -532,7 +629,19 @@
       "keyaenterprises.in": 0,
       "dalisantmetrics.com": 1,
       "caisoft.com": 1,
-      "ycombinator.com": 0
+      "ycombinator.com": 0,
+      "mojopizza.in": 0,
+      "pizza-services.com": 0,
+      "ovenstory.in": 0,
+      "valuetree.io": 0,
+      "moontechnolabs.com": 0,
+      "smartmouthfoods.com": 0,
+      "amazon.in": 0,
+      "startupsharks.in": 1,
+      "pizzaneed.com": 0,
+      "unitygroup.in": 0,
+      "makemytrip.com": 0,
+      "fabhotels.com": 0
     },
     "provider_capabilities": {
       "google": "DEAD",
@@ -655,9 +764,9 @@
   "34.134.231.117:3129": {
     "score": 93.0,
     "google_successes": 3,
-    "google_captchas": 2,
+    "google_captchas": 6,
     "google_429s": 0,
-    "consecutive_failures": 1,
+    "consecutive_failures": 0,
     "consecutive_blocks": {
       "www.google.com": 1,
       "google.com": 0,
@@ -668,25 +777,33 @@
       "ecelectronics.com": 0,
       "companiesmarketcap.com": 0,
       "sourceindia-electronics.com": 0,
-      "screener.in": 0
+      "screener.in": 0,
+      "pizzastartup19038.com": 0,
+      "eu-startups.com": 0,
+      "yourstory.com": 0,
+      "hotelierindia.com": 0,
+      "unitygroup.in": 0,
+      "archetype-group.com": 0,
+      "duckduckgo.com": 0,
+      "tripadvisor.in": 0
     },
     "dead": false,
-    "google_status": "blocked",
+    "google_status": "healthy",
     "bing_status": "healthy",
     "general_status": "healthy",
-    "last_success_ts": 1784717843.169259,
-    "last_failure_ts": 1784717849.0492322,
+    "last_success_ts": 1786004762.809115,
+    "last_failure_ts": 1786004748.358864,
     "latency_samples": [
-      2.4507362842559814,
-      3.2599053382873535,
-      7.397415637969971,
-      5.01120138168335,
-      7.246239185333252,
-      8.37638521194458,
-      8.975414276123047,
-      5.734287261962891,
-      7.499980926513672,
-      5.572616338729858
+      4.8037636280059814,
+      6.334960222244263,
+      4.317331075668335,
+      15.416430711746216,
+      6.897547006607056,
+      4.266587257385254,
+      6.903169393539429,
+      6.911440849304199,
+      8.736607551574707,
+      7.916998386383057
     ],
     "outcome_history": [
       [
@@ -800,6 +917,78 @@
       [
         1784717849.0492322,
         "TRANSPORT_TIMEOUT"
+      ],
+      [
+        1785128034.3343775,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1785128145.8980687,
+        "GOOGLE_CAPTCHA"
+      ],
+      [
+        1785143884.7347963,
+        "GOOGLE_CAPTCHA"
+      ],
+      [
+        1785144613.4581423,
+        "GOOGLE_CAPTCHA"
+      ],
+      [
+        1785145159.105223,
+        "TRANSPORT_TIMEOUT"
+      ],
+      [
+        1785145191.8740523,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1785145193.3307126,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1785145199.21828,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1786004065.8799715,
+        "GOOGLE_CAPTCHA"
+      ],
+      [
+        1786004438.5299416,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1786004445.2533574,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1786004448.6764145,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1786004454.3692834,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1786004687.6288505,
+        "TRANSPORT_TIMEOUT"
+      ],
+      [
+        1786004714.3550372,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1786004740.259433,
+        "TRANSPORT_TIMEOUT"
+      ],
+      [
+        1786004748.358864,
+        "TRANSPORT_TIMEOUT"
+      ],
+      [
+        1786004762.809115,
+        "TRANSPORT_SUCCESS"
       ]
     ],
     "quarantine_until": null,
@@ -808,7 +997,7 @@
     "dead_for_google": true,
     "dead_for_bing": false,
     "consecutive_timeouts": {
-      "google.com": 2,
+      "google.com": 4,
       "clutch.co": 1,
       "slashdot.org": 1,
       "caisoft.com": 1,
@@ -819,12 +1008,21 @@
       "ecelectronics.com": 0,
       "companiesmarketcap.com": 0,
       "sourceindia-electronics.com": 0,
-      "screener.in": 0
+      "screener.in": 0,
+      "pizzastartup19038.com": 0,
+      "eu-startups.com": 0,
+      "yourstory.com": 0,
+      "hotelierindia.com": 0,
+      "unitygroup.in": 0,
+      "archetype-group.com": 0,
+      "tripadvisor.in": 0,
+      "duckduckgo.com": 0,
+      "goibibo.com": 1
     },
     "provider_capabilities": {
       "google": "TIMEOUT",
       "bing": "GOOD",
-      "duckduckgo": "GOOD",
+      "duckduckgo": "SLOW",
       "brave": "GOOD",
       "directory": "GOOD",
       "general_crawl": "SLOW"
