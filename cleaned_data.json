@@ -21,5 +21,84 @@
     },
     "people": [],
     "source": "Google"
+  },
+  {
+    "company_name": "Runo Call Management CRM",
+    "website": "https://web.runo.in/",
+    "domain": "web.runo.in",
+    "industry": "B2B_Saas_Sales",
+    "contact_page": "https://web.runo.in/contact",
+    "about_page": "https://web.runo.in/about",
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google"
+  },
+  {
+    "company_name": "Runo Crm",
+    "website": "https://runocrm.com",
+    "domain": "runocrm.com",
+    "industry": "Runo Ai",
+    "emails": [],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "LinkedIn"
+  },
+  {
+    "company_name": "Whats New in Runo",
+    "website": "https://runo.ai/runo-updates",
+    "domain": "runo.ai",
+    "industry": "AI",
+    "emails": [
+      "sales@runo.ai",
+      "care@runo.ai",
+      "contact@runo.ai",
+      "admin@runo.ai",
+      "info@runo.ai",
+      "hello@runo.ai",
+      "support@runo.ai"
+    ],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google"
+  },
+  {
+    "company_name": "Runotech",
+    "website": "https://runotech.com/",
+    "domain": "runotech.com",
+    "industry": "AI",
+    "emails": [
+      "admin@runotech.com",
+      "contact@runotech.com",
+      "hello@runotech.com",
+      "info@runotech.com",
+      "sales@runotech.com",
+      "support@runotech.com"
+    ],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google"
+  },
+  {
+    "company_name": "Tracxn",
+    "website": "https://tracxn.com/d/companies/runo/__O9aMOMVuRfRQqGbRjpN3P0loMxaaYQhBprZSKfdykVY",
+    "domain": "tracxn.com",
+    "industry": "B2B_Saas_Sales",
+    "emails": [
+      "admin@tracxn.com",
+      "contact@tracxn.com",
+      "hello@tracxn.com",
+      "info@tracxn.com",
+      "sales@tracxn.com",
+      "support@tracxn.com"
+    ],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google"
   }
 ]

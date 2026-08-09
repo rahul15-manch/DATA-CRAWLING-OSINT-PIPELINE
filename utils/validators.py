@@ -172,17 +172,87 @@ def _is_ignored_email(email: str) -> bool:
     return any(pat in local for pat in EMAIL_IGNORE_PATTERNS)
 
 
-def rank_emails(emails: list) -> list:
+def score_email(email: str, company_domain: str = "") -> dict:
     """
-    Remove junk emails and sort the remainder by business relevance.
+    Score an email's confidence (0-100) based on:
+      - Domain match (+35 pts)
+      - Business role prefix (+25 pts)
+      - MX record presence (+25 pts)
+      - Not a disposable email domain (+15 pts)
 
-    Priority order:  founder > ceo > cto > … > support
-    Filtered:        noreply, tracking, unsubscribe, notifications, etc.
+    Returns dict: {"email": str, "confidence": int, "reasons": list[str]}
+    """
+    if not email or "@" not in email:
+        return {"email": email, "confidence": 0, "reasons": ["invalid_format"]}
 
-    Returns a deduplicated, sorted new list. Input is not mutated.
+    local, domain = email.lower().split("@", 1)
+    reasons = []
+    score = 0
+
+    # 1. Disposable check
+    from utils.constants import DISPOSABLE_EMAIL_DOMAINS
+    if domain in DISPOSABLE_EMAIL_DOMAINS:
+        reasons.append("disposable_domain")
+    else:
+        score += 15
+        reasons.append("valid_domain_provider")
+
+    # 2. Business prefix relevance
+    if not _is_ignored_email(email):
+        prio = _email_priority(email)
+        if prio < len(EMAIL_PRIORITY_PREFIXES):
+            score += 25
+            reasons.append("business_role_prefix")
+        else:
+            score += 10
+            reasons.append("standard_prefix")
+    else:
+        reasons.append("system_ignored_prefix")
+
+    # 3. Domain match
+    if company_domain:
+        clean_company = company_domain.lower().lstrip("www.")
+        if domain == clean_company or clean_company in domain:
+            score += 35
+            reasons.append("domain_match")
+
+    # 4. MX record lookup (fast cached check via dns.resolver)
+    try:
+        import dns.resolver
+        answers = dns.resolver.resolve(domain, "MX", lifetime=2.0)
+        if answers:
+            score += 25
+            reasons.append("mx_records_verified")
+    except Exception:
+        # Fallback stdlib socket getaddrinfo check
+        try:
+            import socket
+            socket.getaddrinfo(domain, 80)
+            score += 15
+            reasons.append("domain_dns_resolves")
+        except Exception:
+            reasons.append("no_dns_resolution")
+
+    confidence = min(100, score)
+    return {"email": email, "confidence": confidence, "reasons": reasons}
+
+
+def rank_emails(emails: list, company_domain: str = "") -> list:
+    """
+    Remove junk emails and sort by email score (descending) and role priority.
+
+    Returns a deduplicated, sorted list of email strings. Input is not mutated.
     """
     cleaned = [e for e in emails if e and not _is_ignored_email(e)]
-    return sorted(set(cleaned), key=_email_priority)
+    if not cleaned:
+        return []
+
+    # Score each email and sort by (-confidence, _email_priority)
+    scored = [score_email(e, company_domain) for e in set(cleaned)]
+    scored.sort(key=lambda item: (-item["confidence"], _email_priority(item["email"])))
+
+    return [item["email"] for item in scored]
+
 
 
 # ─────────────────────────────────────────────────────────────────────────────

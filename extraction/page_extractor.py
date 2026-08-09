@@ -23,13 +23,21 @@ _cb_lock = threading.Lock()
 EMAIL_PATTERN = re.compile(r"[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}")
 PHONE_CAPTURE_PATTERN = re.compile(r"(\+?[\d(][\d\s\-().]{5,20}[\d])")
 
-SOCIAL_DOMAINS = [
-    "linkedin.com",
-    "twitter.com",
-    "x.com",
-    "facebook.com",
-    "instagram.com",
-]
+# Maps domain substring → clean key used in the output dict
+SOCIAL_DOMAIN_MAP = {
+    "linkedin.com":   "linkedin",
+    "twitter.com":    "twitter",
+    "x.com":          "twitter",   # X is twitter's successor
+    "facebook.com":   "facebook",
+    "instagram.com":  "instagram",
+    "github.com":     "github",
+    "youtube.com":    "youtube",
+    "youtu.be":       "youtube",
+    "linktree.ee":    "linktree",
+    "linktr.ee":      "linktree",
+}
+# Keep backward-compat list for any code that iterates SOCIAL_DOMAINS
+SOCIAL_DOMAINS = list(SOCIAL_DOMAIN_MAP.keys())
 
 # ── Sub-page keyword map (Task 5 — expanded) ──────────────────────────────────
 
@@ -63,9 +71,21 @@ PAGE_KEYWORDS = {
         "join-us",
         "work-with-us",
     ],
+    "services_page": [
+        "services",
+        "our-services",
+        "what-we-do",
+        "solutions",
+        "offerings",
+    ],
+    "products_page": [
+        "products",
+        "our-products",
+        "product",
+        "platform",
+    ],
     "privacy_page": [
         "privacy",
-        "privacy-policy",
         "privacy-policy",
         "data-protection",
     ],
@@ -354,7 +374,11 @@ def extract_phone_numbers(html: str) -> list:
 
 
 def extract_social_links(html: str, base_url: str) -> dict:
-    """Extract social media profile links from the page."""
+    """Extract social media profile links from the page.
+
+    Returns a dict keyed by clean platform name (e.g. "github", "youtube")
+    rather than by raw domain.  x.com and twitter.com both map to "twitter".
+    """
     if not html:
         return {}
     try:
@@ -362,14 +386,15 @@ def extract_social_links(html: str, base_url: str) -> dict:
     except Exception as exc:  # noqa: BLE001
         print(f"[page_extractor] HTML parse error in social extraction: {exc}")
         return {}
-    links = {}
+    links: dict[str, str] = {}
     for a in soup.find_all("a", href=True):
         try:
             href = urljoin(base_url, a["href"])
             domain = urlparse(href).netloc.lower()
-            for social in SOCIAL_DOMAINS:
-                if social in domain and social not in links:
-                    links[social] = href
+            for social_domain, platform_key in SOCIAL_DOMAIN_MAP.items():
+                if social_domain in domain and platform_key not in links:
+                    links[platform_key] = href
+                    break
         except Exception:  # noqa: BLE001
             continue
     return links
@@ -525,6 +550,100 @@ def find_subpages(html: str, base_url: str) -> dict:
 
 
 # ─────────────────────────────────────────────────────────────────────────────
+# Sitemap mining  (robots.txt → sitemap XML → important sub-pages)
+# ─────────────────────────────────────────────────────────────────────────────
+
+_SITEMAP_PAGE_PATTERNS = {
+    "contact_page":  ["contact", "contact-us", "get-in-touch", "reach-us"],
+    "about_page":    ["about", "about-us", "who-we-are", "company"],
+    "team_page":     ["team", "people", "leadership", "founders", "executives"],
+    "services_page": ["services", "solutions", "what-we-do", "offerings"],
+    "products_page": ["products", "product", "platform"],
+}
+
+
+def fetch_sitemap(base_url: str) -> dict:
+    """
+    Read robots.txt to discover sitemap URLs, then scan each sitemap for
+    Contact / About / Team / Services / Products pages.
+
+    Returns a dict like {"contact_page": "https://...", "about_page": "https://..."}
+    Only fills keys that were not already found via link discovery.
+    """
+    from urllib.parse import urlparse, urljoin
+    try:
+        from network_client_project.network import NetworkClient
+        client = NetworkClient()
+    except Exception:
+        return {}
+
+    found: dict[str, str] = {}
+    base = base_url.rstrip("/")
+    parsed = urlparse(base)
+    origin = f"{parsed.scheme}://{parsed.netloc}"
+
+    # 1. Fetch robots.txt
+    robots_url = f"{origin}/robots.txt"
+    sitemap_urls: list[str] = []
+    try:
+        resp = client.get(robots_url, require_proxy=False, timeout=5)
+        if resp and resp.status_code == 200:
+            for line in (resp.text or "").splitlines():
+                if line.strip().lower().startswith("sitemap:"):
+                    sm_url = line.split(":", 1)[1].strip()
+                    if sm_url:
+                        sitemap_urls.append(sm_url)
+    except Exception:
+        pass
+
+    # Always try /sitemap.xml and /sitemap_index.xml as fallback
+    for fallback in ("/sitemap.xml", "/sitemap_index.xml"):
+        candidate = origin + fallback
+        if candidate not in sitemap_urls:
+            sitemap_urls.append(candidate)
+
+    # 2. Parse each sitemap XML (process max 3 sitemaps)
+    import re as _re
+    loc_pattern = _re.compile(r"<loc>(.*?)</loc>", _re.IGNORECASE | _re.DOTALL)
+
+    for sm_url in sitemap_urls[:3]:
+        if len(found) >= len(_SITEMAP_PAGE_PATTERNS):
+            break
+        try:
+            resp = client.get(sm_url, require_proxy=False, timeout=5)
+            if not resp or resp.status_code != 200:
+                continue
+            content = resp.text or ""
+            # Handle sitemap index: extract nested sitemaps
+            nested = loc_pattern.findall(content)
+            for loc in nested:
+                loc = loc.strip()
+                if not loc:
+                    continue
+                # Check if this loc is a nested sitemap
+                if loc.endswith(".xml") or "sitemap" in loc.lower():
+                    # Recursively scan (1 level deep)
+                    try:
+                        sub_resp = client.get(loc, require_proxy=False, timeout=5)
+                        if sub_resp and sub_resp.status_code == 200:
+                            nested.extend(loc_pattern.findall(sub_resp.text or ""))
+                    except Exception:
+                        pass
+                    continue
+                # Check if this loc matches any important page pattern
+                loc_lower = loc.lower()
+                for page_type, patterns in _SITEMAP_PAGE_PATTERNS.items():
+                    if page_type not in found:
+                        if any(p in loc_lower for p in patterns):
+                            found[page_type] = loc
+                            break
+        except Exception:
+            continue
+
+    return found
+
+
+# ─────────────────────────────────────────────────────────────────────────────
 # People extraction (Task 8)
 # ─────────────────────────────────────────────────────────────────────────────
 
@@ -586,16 +705,138 @@ def extract_people(html: str) -> list:
 
 
 # ─────────────────────────────────────────────────────────────────────────────
-# Main extraction entry-point  (Tasks 5, 6, 7)
+# Company profile field helpers
+# ─────────────────────────────────────────────────────────────────────────────
+
+_EMPLOYEES_PATTERN = re.compile(
+    r"(\d[\d,]*)\s*[-–+]?\s*(\d[\d,]*)?\s*"
+    r"(employees|team members|professionals|people|staff|headcount|workforce)",
+    re.IGNORECASE,
+)
+_FOUNDED_PATTERN = re.compile(
+    r"(?:founded|established|incorporated|since|est\.?)\s+(?:in\s+)?(\d{4})",
+    re.IGNORECASE,
+)
+
+
+def _extract_employees(text: str) -> str:
+    """Extract employee count/range from page text."""
+    m = _EMPLOYEES_PATTERN.search(text or "")
+    if not m:
+        return ""
+    lo = m.group(1).replace(",", "")
+    hi = m.group(2)
+    if hi:
+        return f"{lo}-{hi.replace(',', '')}"
+    return lo
+
+
+def _extract_founded(html: str) -> str:
+    """Extract founding year from JSON-LD or visible text."""
+    # 1. Try JSON-LD first
+    try:
+        import json as _json
+        from bs4 import BeautifulSoup as _BS
+        soup = _BS(html, "html.parser")
+        for script in soup.find_all("script", type="application/ld+json"):
+            try:
+                data = _json.loads(script.string or "")
+                def _seek(node):
+                    if isinstance(node, dict):
+                        for k, v in node.items():
+                            if k.lower() in ("foundingyear", "foundingdate") and v:
+                                return str(v)[:4]
+                            r = _seek(v)
+                            if r:
+                                return r
+                    elif isinstance(node, list):
+                        for item in node:
+                            r = _seek(item)
+                            if r:
+                                return r
+                    return None
+                found = _seek(data)
+                if found and found.isdigit():
+                    return found
+            except Exception:
+                continue
+    except Exception:
+        pass
+    # 2. Regex on plain text
+    try:
+        from bs4 import BeautifulSoup as _BS
+        text = _BS(html, "html.parser").get_text(" ")
+        m = _FOUNDED_PATTERN.search(text)
+        if m:
+            return m.group(1)
+    except Exception:
+        pass
+    return ""
+
+
+def _extract_country(html: str) -> str:
+    """Extract country from JSON-LD address or <address> tags."""
+    try:
+        import json as _json
+        from bs4 import BeautifulSoup as _BS
+        soup = _BS(html, "html.parser")
+        # JSON-LD
+        for script in soup.find_all("script", type="application/ld+json"):
+            try:
+                data = _json.loads(script.string or "")
+                def _seek_country(node):
+                    if isinstance(node, dict):
+                        addr = node.get("address") or {}
+                        if isinstance(addr, dict):
+                            country = addr.get("addressCountry") or addr.get("country")
+                            if country:
+                                return str(country)
+                        for v in node.values():
+                            r = _seek_country(v)
+                            if r:
+                                return r
+                    elif isinstance(node, list):
+                        for item in node:
+                            r = _seek_country(item)
+                            if r:
+                                return r
+                    return None
+                found = _seek_country(data)
+                if found:
+                    return found
+            except Exception:
+                continue
+        # itemprop="addressCountry"
+        for elem in soup.find_all(itemprop="addressCountry"):
+            v = (elem.get("content") or elem.get_text()).strip()
+            if v:
+                return v
+    except Exception:
+        pass
+    return ""
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Main extraction entry-point  (Tasks 5, 6, 7 + new profile fields)
 # ─────────────────────────────────────────────────────────────────────────────
 
 def extract_from_website(homepage_url: str, homepage_html: str | None = None) -> dict:
     """
     Full public-data extraction pass:
-    homepage → contact/about/team subpages → emails, phones, socials, people.
+    homepage → contact/about/team/services/products subpages
+             → emails, phones, socials, people.
 
     New fields added in this revision
     ----------------------------------
+    tech_stack        : detected frontend/backend technologies (list)
+    services_page     : URL of the services page if discovered
+    products_page     : URL of the products page if discovered
+    employees         : employee count/range string if found on site
+    founded           : founding year string if found
+    country           : country from structured data / address tags
+    description       : rich description (meta + about text, 800 chars)
+    emails_scored     : list of {email, confidence} dicts (after scoring)
+
     company_type      (Task 6): Software Company / Consultancy / Agency / …
     industry_detected (Task 7): Artificial Intelligence / Cloud Computing / …
     meta_description  : raw meta description text for downstream use
@@ -609,13 +850,21 @@ def extract_from_website(homepage_url: str, homepage_html: str | None = None) ->
         "contact_page":      None,
         "about_page":        None,
         "team_page":         None,
+        "services_page":     None,
+        "products_page":     None,
         "emails":            [],
+        "emails_scored":     [],
         "phones":            [],
         "social_links":      {},
         "people":            [],
         "company_type":      "Unknown",
         "industry_detected": "Unknown",
         "meta_description":  "",
+        "tech_stack":        [],
+        "employees":         "",
+        "founded":           "",
+        "country":           "",
+        "description":       "",
     }
 
     from urllib.parse import urlparse
@@ -645,27 +894,58 @@ def extract_from_website(homepage_url: str, homepage_html: str | None = None) ->
     result["emails"].extend(struct_info["emails"])
     result["phones"].extend(struct_info["phones"])
 
+    # ── Tech stack detection ──────────────────────────────────────────────
+    try:
+        from extraction.tech_detector import detect_tech_stack
+        result["tech_stack"] = detect_tech_stack(homepage_html, {})
+    except Exception:
+        pass
+
     # ── Tasks 6 & 7: Enrichment from meta / headings ──────────────────────
     meta_text = extract_meta_text(homepage_html)
     result["meta_description"] = meta_text[:500] if meta_text else ""
     result["company_type"] = detect_company_type(meta_text)
     result["industry_detected"] = detect_industry(meta_text)
 
-    # ── Discover sub-pages ────────────────────────────────────────────────
-    subpages = find_subpages(homepage_html, homepage_url)
-    result["contact_page"] = subpages.get("contact_page")
-    result["about_page"] = subpages.get("about_page")
-    result["team_page"] = subpages.get("team_page")
+    # ── Profile field extraction from homepage ────────────────────────────
+    try:
+        from bs4 import BeautifulSoup as _BS
+        hp_text = _BS(homepage_html, "html.parser").get_text(" ")
+    except Exception:
+        hp_text = ""
+    result["employees"] = _extract_employees(hp_text)
+    result["founded"]   = _extract_founded(homepage_html)
+    result["country"]   = _extract_country(homepage_html)
+    result["description"] = meta_text[:800] if meta_text else ""
 
-    # Fallback paths for contact and about pages
+    # ── Discover sub-pages via link scanning ─────────────────────────────
+    subpages = find_subpages(homepage_html, homepage_url)
+    result["contact_page"]  = subpages.get("contact_page")
+    result["about_page"]    = subpages.get("about_page")
+    result["team_page"]     = subpages.get("team_page")
+    result["services_page"] = subpages.get("services_page")
+    result["products_page"] = subpages.get("products_page")
+
+    # ── Sitemap fallback for pages not found via links ────────────────────
+    missing_pages = [k for k in ("contact_page", "about_page", "team_page",
+                                  "services_page", "products_page")
+                     if not result[k]]
+    if missing_pages:
+        sitemap_pages = fetch_sitemap(homepage_url)
+        for page_type in missing_pages:
+            if page_type in sitemap_pages:
+                result[page_type] = sitemap_pages[page_type]
+
+    # ── Hard fallback paths for critical pages ────────────────────────────
     if not result["contact_page"]:
         result["contact_page"] = urljoin(homepage_url, "/contact")
     if not result["about_page"]:
         result["about_page"] = urljoin(homepage_url, "/about")
 
-    # Consolidate pages to crawl
-    pages_to_scrape = {}
-    for page_type in ("contact_page", "about_page", "team_page"):
+    # ── Consolidate pages to crawl ────────────────────────────────────────
+    pages_to_scrape: dict[str, str] = {}
+    for page_type in ("contact_page", "about_page", "team_page",
+                      "services_page", "products_page"):
         url = result[page_type]
         if url:
             pages_to_scrape[url] = page_type
@@ -683,28 +963,56 @@ def extract_from_website(homepage_url: str, homepage_html: str | None = None) ->
         html = fetch_page(url)
         if not html:
             continue
-        
+
         # 1. Standard text-based extraction
         result["emails"].extend(extract_emails(html))
         result["phones"].extend(extract_phone_numbers(html))
-        
+
         # 2. Structured JSON-LD / microdata extraction
         sub_struct = extract_structured_contact_info(html)
         result["emails"].extend(sub_struct["emails"])
         result["phones"].extend(sub_struct["phones"])
-        
-        # Improve enrichment if about page has more content
-        if page_type == "about_page" and result["industry_detected"] == "Unknown":
-            about_meta = extract_meta_text(html)
-            result["industry_detected"] = detect_industry(about_meta)
+
+        # Improve enrichment if about/services page has more content
+        if page_type in ("about_page", "services_page", "products_page"):
+            page_meta = extract_meta_text(html)
+            if result["industry_detected"] == "Unknown":
+                result["industry_detected"] = detect_industry(page_meta)
             if result["company_type"] == "Unknown":
-                result["company_type"] = detect_company_type(about_meta)
+                result["company_type"] = detect_company_type(page_meta)
+            # Richer description from about page
+            if page_type == "about_page" and not result["description"]:
+                result["description"] = page_meta[:800]
+            # Profile fields from about page (override blanks)
+            if not result["employees"]:
+                try:
+                    from bs4 import BeautifulSoup as _BS
+                    pg_text = _BS(html, "html.parser").get_text(" ")
+                    result["employees"] = _extract_employees(pg_text)
+                except Exception:
+                    pass
+            if not result["founded"]:
+                result["founded"] = _extract_founded(html)
+            if not result["country"]:
+                result["country"] = _extract_country(html)
+
         if page_type == "team_page":
             result["people"].extend(extract_people(html))
 
     # ── Final dedup + ranking ─────────────────────────────────────────────
     result["emails"] = rank_emails(result["emails"])
     result["phones"] = sorted(set(result["phones"]))
+
+    # ── Email confidence scoring ──────────────────────────────────────────
+    try:
+        from utils.validators import score_email
+        company_domain = urlparse(homepage_url).netloc.lower().lstrip("www.")
+        result["emails_scored"] = [
+            score_email(email, company_domain)
+            for email in result["emails"]
+        ]
+    except Exception:
+        pass
 
     return result
 
@@ -716,3 +1024,4 @@ def extract_from_website(homepage_url: str, homepage_html: str | None = None) ->
 if __name__ == "__main__":
     import json
     print(json.dumps(extract_from_website("https://anthropic.com"), indent=2))
+

@@ -1,24 +1,27 @@
 {
   "34.87.80.221:30000": {
-    "score": 100.0,
+    "score": 95.0,
     "google_successes": 0,
-    "google_captchas": 0,
+    "google_captchas": 1,
     "google_429s": 0,
-    "consecutive_failures": 9,
-    "consecutive_blocks": {},
-    "dead": false,
+    "consecutive_failures": 0,
+    "consecutive_blocks": {
+      "google.com": 1
+    },
+    "dead": true,
     "google_status": "healthy",
     "bing_status": "healthy",
-    "general_status": "healthy",
+    "general_status": "dead",
     "last_success_ts": null,
-    "last_failure_ts": 1784710619.58712,
+    "last_failure_ts": 1785497317.8487687,
     "latency_samples": [
       26.454450130462646,
       10.5101478099823,
       21.95604372024536,
       23.070053339004517,
       19.48735237121582,
-      4.4993486404418945
+      4.4993486404418945,
+      4.041053295135498
     ],
     "outcome_history": [
       [
@@ -56,6 +59,10 @@
       [
         1784710619.58712,
         "TRANSPORT_TIMEOUT"
+      ],
+      [
+        1785497317.8487687,
+        "GOOGLE_CAPTCHA"
       ]
     ],
     "quarantine_until": null,
@@ -69,7 +76,7 @@
       "caisoft.com": 1
     },
     "provider_capabilities": {
-      "google": "DEAD",
+      "google": "CAPTCHA",
       "bing": "GOOD",
       "duckduckgo": "GOOD",
       "brave": "GOOD",
@@ -78,29 +85,29 @@
     }
   },
   "47.81.56.193:8888": {
-    "score": 100.0,
+    "score": 98.0,
     "google_successes": 0,
     "google_captchas": 0,
     "google_429s": 0,
     "consecutive_failures": 0,
     "consecutive_blocks": {},
-    "dead": false,
+    "dead": true,
     "google_status": "healthy",
     "bing_status": "healthy",
-    "general_status": "healthy",
-    "last_success_ts": 1785079582.0378087,
-    "last_failure_ts": 1784717846.009753,
+    "general_status": "dead",
+    "last_success_ts": 1785497520.5537093,
+    "last_failure_ts": 1785497491.8897078,
     "latency_samples": [
-      0.8166320323944092,
-      0.9233372211456299,
-      0.9613778591156006,
-      1.5982913970947266,
-      1.3833980560302734,
       3.5758819580078125,
       1.8637046813964844,
       0.727287769317627,
       0.922269344329834,
-      0.8524668216705322
+      0.8524668216705322,
+      4.0640716552734375,
+      2.5842502117156982,
+      2.700817584991455,
+      1.3920245170593262,
+      0.7051634788513184
     ],
     "outcome_history": [
       [
@@ -218,6 +225,30 @@
       [
         1785079582.0378087,
         "TRANSPORT_SUCCESS"
+      ],
+      [
+        1785128234.308461,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1785128498.9644933,
+        "TRANSPORT_CONNECTION_ERROR"
+      ],
+      [
+        1785497326.2197633,
+        "TRANSPORT_CONNECTION_ERROR"
+      ],
+      [
+        1785497491.8897078,
+        "TRANSPORT_CONNECTION_ERROR"
+      ],
+      [
+        1785497509.1309576,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1785497520.5537093,
+        "TRANSPORT_SUCCESS"
       ]
     ],
     "quarantine_until": null,
@@ -226,7 +257,7 @@
     "dead_for_google": false,
     "dead_for_bing": false,
     "consecutive_timeouts": {
-      "google.com": 2,
+      "google.com": 5,
       "starnexttechnologies.com": 0,
       "daffodilsw.com": 0,
       "example.com": 0,
@@ -235,7 +266,8 @@
       "syrmasgs.com": 0,
       "startupsavant.com": 0,
       "ycombinator.com": 0,
-      "solutionbuggy.com": 0
+      "solutionbuggy.com": 0,
+      "runo.in": 0
     },
     "provider_capabilities": {
       "google": "DEAD",
@@ -289,21 +321,19 @@
     }
   },
   "181.39.25.196:8118": {
-    "score": 94.0,
+    "score": 82.0,
     "google_successes": 0,
     "google_captchas": 0,
     "google_429s": 0,
-    "consecutive_failures": 1,
+    "consecutive_failures": 3,
     "consecutive_blocks": {},
-    "dead": false,
+    "dead": true,
     "google_status": "healthy",
     "bing_status": "healthy",
-    "general_status": "healthy",
+    "general_status": "dead",
     "last_success_ts": 1784795442.5053403,
-    "last_failure_ts": 1784795458.9784803,
+    "last_failure_ts": 1785497498.9719284,
     "latency_samples": [
-      3.6763715744018555,
-      3.4387636184692383,
       5.590297698974609,
       20.068724155426025,
       26.6517493724823,
@@ -311,17 +341,11 @@
       24.39800477027893,
       10.4352388381958,
       6.156238794326782,
-      6.214860677719116
+      6.214860677719116,
+      4.736645698547363,
+      5.676661014556885
     ],
     "outcome_history": [
-      [
-        1784466968.4934874,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1784466971.2009366,
-        "TRANSPORT_SUCCESS"
-      ],
       [
         1784466974.301986,
         "TRANSPORT_SUCCESS"
@@ -513,6 +537,14 @@
       [
         1784795458.9784803,
         "TRANSPORT_CONNECTION_ERROR"
+      ],
+      [
+        1785497332.3629036,
+        "TRANSPORT_CONNECTION_ERROR"
+      ],
+      [
+        1785497498.9719284,
+        "TRANSPORT_CONNECTION_ERROR"
       ]
     ],
     "quarantine_until": null,
@@ -523,7 +555,7 @@
     "consecutive_timeouts": {
       "in.linkedin.com": 0,
       "www.linkedin.com": 0,
-      "google.com": 8,
+      "google.com": 10,
       "clutch.co": 0,
       "linkedin.com": 0,
       "empat.tech": 0,
@@ -653,14 +685,14 @@
     }
   },
   "34.134.231.117:3129": {
-    "score": 93.0,
+    "score": 90.0,
     "google_successes": 3,
-    "google_captchas": 2,
+    "google_captchas": 6,
     "google_429s": 0,
-    "consecutive_failures": 1,
+    "consecutive_failures": 0,
     "consecutive_blocks": {
       "www.google.com": 1,
-      "google.com": 0,
+      "google.com": 4,
       "example.com": 0,
       "arrow.com": 0,
       "linkedin.com": 0,
@@ -668,25 +700,28 @@
       "ecelectronics.com": 0,
       "companiesmarketcap.com": 0,
       "sourceindia-electronics.com": 0,
-      "screener.in": 0
+      "screener.in": 0,
+      "runo.ai": 0,
+      "runo.in": 0,
+      "runotech.com": 0
     },
-    "dead": false,
-    "google_status": "blocked",
+    "dead": true,
+    "google_status": "healthy",
     "bing_status": "healthy",
-    "general_status": "healthy",
-    "last_success_ts": 1784717843.169259,
-    "last_failure_ts": 1784717849.0492322,
+    "general_status": "dead",
+    "last_success_ts": 1785497497.7280836,
+    "last_failure_ts": 1785497510.0271795,
     "latency_samples": [
-      2.4507362842559814,
-      3.2599053382873535,
-      7.397415637969971,
-      5.01120138168335,
-      7.246239185333252,
-      8.37638521194458,
-      8.975414276123047,
-      5.734287261962891,
-      7.499980926513672,
-      5.572616338729858
+      3.777165174484253,
+      2.6303017139434814,
+      1.1056735515594482,
+      6.5096306800842285,
+      5.50019645690918,
+      4.684078216552734,
+      6.475586414337158,
+      5.934361934661865,
+      4.470825672149658,
+      5.706500053405762
     ],
     "outcome_history": [
       [
@@ -800,12 +835,76 @@
       [
         1784717849.0492322,
         "TRANSPORT_TIMEOUT"
+      ],
+      [
+        1785128236.5578892,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1785128490.8826134,
+        "GOOGLE_CAPTCHA"
+      ],
+      [
+        1785497248.4023585,
+        "GOOGLE_CAPTCHA"
+      ],
+      [
+        1785497314.0448008,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1785497314.992574,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1785497316.7831178,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1785497319.7560782,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1785497325.4850101,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1785497329.2809193,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1785497342.6178913,
+        "GOOGLE_CAPTCHA"
+      ],
+      [
+        1785497491.687219,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1785497491.7089653,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1785497492.296747,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1785497492.3027868,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1785497497.7280836,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1785497510.0271795,
+        "GOOGLE_CAPTCHA"
       ]
     ],
     "quarantine_until": null,
     "quarantine_step": 0,
     "inactive": false,
-    "dead_for_google": true,
+    "dead_for_google": false,
     "dead_for_bing": false,
     "consecutive_timeouts": {
       "google.com": 2,
@@ -819,10 +918,13 @@
       "ecelectronics.com": 0,
       "companiesmarketcap.com": 0,
       "sourceindia-electronics.com": 0,
-      "screener.in": 0
+      "screener.in": 0,
+      "runo.ai": 0,
+      "runo.in": 0,
+      "runotech.com": 0
     },
     "provider_capabilities": {
-      "google": "TIMEOUT",
+      "google": "CAPTCHA",
       "bing": "GOOD",
       "duckduckgo": "GOOD",
       "brave": "GOOD",

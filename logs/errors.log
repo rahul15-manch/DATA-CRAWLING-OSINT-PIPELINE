@@ -8353,3 +8353,286 @@ Call log:
 2026-07-26 20:56:04 | WARNING  | ThreadPoolExecutor-0_5 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 34.134.231.117:3129 -> Google UNREACHABLE (Failed to perform, curl: (28) Operation timed out after 8008 milliseconds with 0 bytes received. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.)
 2026-07-26 20:56:05 | WARNING  | ThreadPoolExecutor-0_2 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 217.182.203.184:8888 -> DEAD (all 3 general HTTPS tests failed)
 2026-07-26 20:56:14 | WARNING  | ThreadPoolExecutor-0_4 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 52.67.38.58:3128 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-27 10:27:11 | WARNING  | ThreadPoolExecutor-0_1 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 47.81.56.193:8888 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-27 10:27:11 | WARNING  | ThreadPoolExecutor-0_3 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 181.39.25.196:8118 -> Google HTTP <MagicMock name='Session().__enter__().request().status_code' id='1766762358896'>
+2026-07-27 10:27:12 | WARNING  | ThreadPoolExecutor-0_0 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 34.87.80.221:30000 -> Google HTTP <MagicMock name='Session().__enter__().request().status_code' id='1766762358896'>
+2026-07-27 10:27:12 | WARNING  | ThreadPoolExecutor-0_5 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 34.134.231.117:3129 -> Google HTTP <MagicMock name='Session().__enter__().request().status_code' id='1766762358896'>
+2026-07-27 10:27:13 | WARNING  | ThreadPoolExecutor-0_2 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 217.182.203.184:8888 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-27 10:27:16 | WARNING  | ThreadPoolExecutor-2_0 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 34.87.80.221:30000 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-27 10:27:16 | WARNING  | ThreadPoolExecutor-2_1 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 47.81.56.193:8888 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-27 10:27:16 | WARNING  | ThreadPoolExecutor-2_0 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 217.182.203.184:8888 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-27 10:27:16 | WARNING  | ThreadPoolExecutor-2_1 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 181.39.25.196:8118 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-27 10:27:16 | WARNING  | ThreadPoolExecutor-2_0 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 52.67.38.58:3128 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-27 10:27:16 | WARNING  | ThreadPoolExecutor-2_2 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 34.134.231.117:3129 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-27 10:27:16 | WARNING  | ThreadPoolExecutor-2_3 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 1.1.1.1 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-27 10:27:16 | WARNING  | ThreadPoolExecutor-2_1 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 2.2.2.2 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-27 10:27:18 | WARNING  | ThreadPoolExecutor-0_4 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 52.67.38.58:3128 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-27 10:27:18 | WARNING  | MainThread | network_client_project.network.middleware.retry | [Retry] Retrying query https://example.com (attempt 1/3) after 3.00s delay due to: RequestException (Network Error).
+2026-07-27 10:27:18 | WARNING  | ThreadPoolExecutor-1_0 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 1.1.1.1 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-27 10:27:18 | WARNING  | ThreadPoolExecutor-1_1 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 2.2.2.2 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-27 10:27:46 | WARNING  | ThreadPoolExecutor-3_0 | network_client_project.network.proxy_manager | [ProxyManager] Proxy http://user:pass@1.1.1.1:8000 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-27 10:27:46 | WARNING  | ThreadPoolExecutor-3_1 | network_client_project.network.proxy_manager | [ProxyManager] Proxy http://user:pass@2.2.2.2:8000 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-27 10:27:46 | WARNING  | ThreadPoolExecutor-3_2 | network_client_project.network.proxy_manager | [ProxyManager] Proxy http://user:pass@3.3.3.3:8000 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-27 10:27:46 | WARNING  | ThreadPoolExecutor-4_2 | network_client_project.network.proxy_manager | [ProxyManager] Proxy http://user:pass@3.3.3.3:8000 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-27 10:27:46 | WARNING  | ThreadPoolExecutor-5_0 | network_client_project.network.proxy_manager | [ProxyManager] Proxy http://user:pass@1.1.1.1:8000 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-27 10:27:46 | WARNING  | ThreadPoolExecutor-5_2 | network_client_project.network.proxy_manager | [ProxyManager] Proxy http://user:pass@3.3.3.3:8000 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-27 10:27:46 | WARNING  | ThreadPoolExecutor-4_0 | network_client_project.network.proxy_manager | [ProxyManager] Proxy http://user:pass@1.1.1.1:8000 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-27 10:27:46 | WARNING  | ThreadPoolExecutor-5_1 | network_client_project.network.proxy_manager | [ProxyManager] Proxy http://user:pass@2.2.2.2:8000 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-27 10:27:46 | WARNING  | ThreadPoolExecutor-4_1 | network_client_project.network.proxy_manager | [ProxyManager] Proxy http://user:pass@2.2.2.2:8000 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-27 10:27:46 | WARNING  | ThreadPoolExecutor-6_0 | network_client_project.network.proxy_manager | [ProxyManager] Proxy http://user:pass@1.1.1.1:8000 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-27 10:27:46 | WARNING  | ThreadPoolExecutor-6_1 | network_client_project.network.proxy_manager | [ProxyManager] Proxy http://user:pass@2.2.2.2:8000 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-27 10:27:47 | WARNING  | ThreadPoolExecutor-6_2 | network_client_project.network.proxy_manager | [ProxyManager] Proxy http://user:pass@3.3.3.3:8000 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-27 10:28:04 | WARNING  | MainThread | pillar1.browser | [BrowserCircuitBreaker] CAPTCHA threshold reached for 'test_provider'. Tripping circuit breaker. Cooldown active for 1.0s.
+2026-07-27 10:28:05 | WARNING  | MainThread | pillar1.browser | [BrowserPool] Connection policy is 'proxy_only' for provider 'playwright_google', but no healthy proxies are available. Aborting browser launch to prevent direct connection.
+2026-07-27 10:28:05 | WARNING  | MainThread | search.manager | [SearchManager] google_html failure score reached 12.0. Tripping breaker to OPEN.
+2026-07-27 10:28:05 | WARNING  | MainThread | search.manager | [SearchManager] google_html failed probe query (Reason: Probe query failure). Tripping breaker back to OPEN.
+2026-07-27 10:28:06 | WARNING  | MainThread | utils.budget_manager | [ProviderBudgetManager] Blocked Google Search: remaining budget too low (10.0s remaining), minimum required fallback budget is 18.0s.
+2026-07-27 10:31:30 | ERROR    | MainThread | pillar1.search.playwright_google | [PlaywrightGoogleProvider] Query error: [playwright_google] unavailable: CAPTCHA block page detected on Playwright session.
+2026-07-27 10:31:31 | WARNING  | ThreadPoolExecutor-0_2 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 217.182.203.184:8888 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-27 10:31:38 | WARNING  | GoogleSchedulerWorker_0 | network_client_project.network.middleware.retry | [Retry] Search provider google_html hit block/CAPTCHA/429 (HTTP 429). Bubbling up immediately for fail-fast.
+2026-07-27 10:31:38 | WARNING  | GoogleSchedulerWorker_0 | network_client_project.network.middleware.throttle | [AutoThrottle] 429 Rate Limit hit on www.google.com. Reducing rate: 0.50 rps -> 0.20 rps.
+2026-07-27 10:31:38 | WARNING  | GoogleSchedulerWorker_0 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 47.81.56.193:8888 marked dead_for_google after 3 consecutive timeouts.
+2026-07-27 10:31:38 | WARNING  | GoogleSchedulerWorker_0 | utils.budget_manager | [ProviderBudgetManager] Blocked 'google_html': provider execution budget exhausted (8.1s elapsed, limit was 8.0s).
+2026-07-27 10:31:38 | WARNING  | GoogleSchedulerWorker_0 | search.google_scheduler | [GoogleScheduler] Budget or fallback deadline constraint exceeded. Aborting Google search.
+2026-07-27 10:31:38 | ERROR    | GoogleSchedulerWorker_0 | search.google_scheduler | [GoogleScheduler] All 1 retries failed for: 'automobile startups'
+2026-07-27 10:31:46 | WARNING  | ThreadPoolExecutor-0_4 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 52.67.38.58:3128 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-27 10:31:46 | WARNING  | ThreadPoolExecutor-0_0 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 34.87.80.221:30000 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-31 16:57:16 | ERROR    | MainThread | search.base_registry | Failed to load module search.providers.linkedin_playwright_provider: No module named 'playwright'
+Traceback (most recent call last):
+  File "C:\Users\yasha\Downloads\pillar1\pillar1\search\base_registry.py", line 51, in load_plugins
+    module = importlib.import_module(full_module_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yasha\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "C:\Users\yasha\Downloads\pillar1\pillar1\search\providers\linkedin_playwright_provider.py", line 16, in <module>
+    from pillar1.browser.browser_manager import get_browser_manager
+  File "C:\Users\yasha\Downloads\pillar1\pillar1\browser\browser_manager.py", line 4, in <module>
+    from playwright.sync_api import sync_playwright, Playwright
+ModuleNotFoundError: No module named 'playwright'
+2026-07-31 16:57:16 | ERROR    | MainThread | search.base_registry | Failed to load module search.providers.playwright_google_provider: No module named 'playwright'
+Traceback (most recent call last):
+  File "C:\Users\yasha\Downloads\pillar1\pillar1\search\base_registry.py", line 51, in load_plugins
+    module = importlib.import_module(full_module_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yasha\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "C:\Users\yasha\Downloads\pillar1\pillar1\search\providers\playwright_google_provider.py", line 17, in <module>
+    from pillar1.browser.browser_manager import get_browser_manager
+  File "C:\Users\yasha\Downloads\pillar1\pillar1\browser\browser_manager.py", line 4, in <module>
+    from playwright.sync_api import sync_playwright, Playwright
+ModuleNotFoundError: No module named 'playwright'
+2026-07-31 16:57:28 | WARNING  | ThreadPoolExecutor-0_2 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 217.182.203.184:8888 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-31 16:57:28 | ERROR    | GoogleSchedulerWorker_0 | search.google_scheduler | [GoogleScheduler] All 1 retries failed for: 'runo ai company'
+2026-07-31 16:57:40 | WARNING  | ThreadPoolExecutor-0_4 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 52.67.38.58:3128 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-31 16:58:01 | ERROR    | MainThread | search.base_registry | Failed to load module search.providers.linkedin_playwright_provider: No module named 'playwright'
+Traceback (most recent call last):
+  File "C:\Users\yasha\Downloads\pillar1\pillar1\search\base_registry.py", line 51, in load_plugins
+    module = importlib.import_module(full_module_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yasha\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "C:\Users\yasha\Downloads\pillar1\pillar1\search\providers\linkedin_playwright_provider.py", line 16, in <module>
+    from pillar1.browser.browser_manager import get_browser_manager
+  File "C:\Users\yasha\Downloads\pillar1\pillar1\browser\browser_manager.py", line 4, in <module>
+    from playwright.sync_api import sync_playwright, Playwright
+ModuleNotFoundError: No module named 'playwright'
+2026-07-31 16:58:01 | ERROR    | MainThread | search.base_registry | Failed to load module search.providers.playwright_google_provider: No module named 'playwright'
+Traceback (most recent call last):
+  File "C:\Users\yasha\Downloads\pillar1\pillar1\search\base_registry.py", line 51, in load_plugins
+    module = importlib.import_module(full_module_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yasha\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "C:\Users\yasha\Downloads\pillar1\pillar1\search\providers\playwright_google_provider.py", line 17, in <module>
+    from pillar1.browser.browser_manager import get_browser_manager
+  File "C:\Users\yasha\Downloads\pillar1\pillar1\browser\browser_manager.py", line 4, in <module>
+    from playwright.sync_api import sync_playwright, Playwright
+ModuleNotFoundError: No module named 'playwright'
+2026-07-31 16:58:12 | WARNING  | ThreadPoolExecutor-0_2 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 217.182.203.184:8888 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-31 16:58:27 | WARNING  | ThreadPoolExecutor-0_4 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 52.67.38.58:3128 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-31 16:58:37 | ERROR    | GoogleSchedulerWorker_0 | search.google_scheduler | [GoogleScheduler] All 1 retries failed for: 'site:tracxn.com email'
+2026-07-31 16:58:46 | WARNING  | GoogleSchedulerWorker_0 | network_client_project.network.middleware.retry | [Retry] Search provider google_html hit block/CAPTCHA/429 (HTTP 429). Bubbling up immediately for fail-fast.
+2026-07-31 16:58:46 | WARNING  | GoogleSchedulerWorker_0 | network_client_project.network.middleware.throttle | [AutoThrottle] 429 Rate Limit hit on www.google.com. Reducing rate: 0.50 rps -> 0.20 rps.
+2026-07-31 16:58:46 | WARNING  | GoogleSchedulerWorker_0 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 47.81.56.193:8888 marked dead_for_google after 3 consecutive timeouts.
+2026-07-31 16:58:52 | WARNING  | GoogleSchedulerWorker_0 | network_client_project.network.middleware.retry | [Retry] Search provider google_html hit block/CAPTCHA/429 (HTTP 429). Bubbling up immediately for fail-fast.
+2026-07-31 16:58:52 | WARNING  | GoogleSchedulerWorker_0 | network_client_project.network.middleware.throttle | [AutoThrottle] 429 Rate Limit hit on www.google.com. Reducing rate: 0.20 rps -> 0.08 rps.
+2026-07-31 16:58:52 | WARNING  | GoogleSchedulerWorker_0 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 181.39.25.196:8118 marked dead_for_google after 3 consecutive timeouts.
+2026-07-31 16:58:52 | ERROR    | GoogleSchedulerWorker_0 | search.google_scheduler | [GoogleScheduler] All 2 retries failed for: 'site:runo.ai email'
+2026-07-31 16:59:02 | ERROR    | GoogleSchedulerWorker_0 | search.google_scheduler | [GoogleScheduler] All 1 retries failed for: 'site:web.runo.in email'
+2026-07-31 16:59:02 | WARNING  | ThreadPoolExecutor-1_1 | search.manager | [SearchManager] google_html failure score reached 10.0. Tripping breaker to OPEN.
+2026-07-31 16:59:11 | WARNING  | ThreadPoolExecutor-1_0 | network_client_project.network.middleware.retry | [Retry] Search provider brave hit block/CAPTCHA/429 (HTTP 429). Bubbling up immediately for fail-fast.
+2026-07-31 16:59:11 | WARNING  | ThreadPoolExecutor-1_0 | network_client_project.network.middleware.throttle | [AutoThrottle] 429 Rate Limit hit on search.brave.com. Reducing rate: 0.73 rps -> 0.29 rps.
+2026-07-31 16:59:12 | WARNING  | ThreadPoolExecutor-1_2 | network_client_project.network.middleware.retry | [Retry] Search provider brave hit block/CAPTCHA/429 (HTTP 429). Bubbling up immediately for fail-fast.
+2026-07-31 16:59:12 | WARNING  | ThreadPoolExecutor-1_2 | network_client_project.network.middleware.throttle | [AutoThrottle] 429 Rate Limit hit on search.brave.com. Reducing rate: 0.29 rps -> 0.12 rps.
+2026-07-31 16:59:15 | WARNING  | ThreadPoolExecutor-1_1 | network_client_project.network.middleware.retry | [Retry] Search provider brave hit block/CAPTCHA/429 (HTTP 429). Bubbling up immediately for fail-fast.
+2026-07-31 16:59:15 | WARNING  | ThreadPoolExecutor-1_1 | network_client_project.network.middleware.throttle | [AutoThrottle] 429 Rate Limit hit on search.brave.com. Reducing rate: 0.12 rps -> 0.05 rps.
+2026-07-31 16:59:20 | WARNING  | ThreadPoolExecutor-1_0 | network_client_project.network.middleware.retry | [Retry] Search provider brave hit block/CAPTCHA/429 (HTTP 429). Bubbling up immediately for fail-fast.
+2026-07-31 16:59:20 | WARNING  | ThreadPoolExecutor-1_0 | network_client_project.network.middleware.throttle | [AutoThrottle] 429 Rate Limit hit on search.brave.com. Reducing rate: 0.05 rps -> 0.05 rps.
+2026-07-31 16:59:20 | WARNING  | ThreadPoolExecutor-1_0 | search.manager | [SearchManager] duckduckgo failure score reached 12.0. Tripping breaker to OPEN.
+2026-07-31 16:59:22 | WARNING  | ThreadPoolExecutor-1_2 | network_client_project.network.middleware.retry | [Retry] Search provider brave hit block/CAPTCHA/429 (HTTP 429). Bubbling up immediately for fail-fast.
+2026-07-31 16:59:22 | WARNING  | ThreadPoolExecutor-1_2 | network_client_project.network.middleware.throttle | [AutoThrottle] 429 Rate Limit hit on search.brave.com. Reducing rate: 0.05 rps -> 0.05 rps.
+2026-07-31 16:59:30 | WARNING  | ThreadPoolExecutor-1_1 | network_client_project.network.middleware.retry | [Retry] Search provider brave hit block/CAPTCHA/429 (HTTP 429). Bubbling up immediately for fail-fast.
+2026-07-31 16:59:30 | WARNING  | ThreadPoolExecutor-1_1 | network_client_project.network.middleware.throttle | [AutoThrottle] 429 Rate Limit hit on search.brave.com. Reducing rate: 0.05 rps -> 0.05 rps.
+2026-07-31 16:59:30 | WARNING  | ThreadPoolExecutor-1_1 | search.manager | [SearchManager] brave failure score reached 12.0. Tripping breaker to OPEN.
+2026-07-31 16:59:33 | WARNING  | ThreadPoolExecutor-1_2 | search.providers.bing_provider | [BingProvider] Global deadline exceeded. Aborting Bing search retries.
+2026-07-31 16:59:33 | ERROR    | ThreadPoolExecutor-1_2 | search.manager | [SearchManager] Unexpected provider 'bing' error: object of type 'NoneType' has no len()
+2026-07-31 16:59:39 | WARNING  | ThreadPoolExecutor-1_1 | search.providers.bing_provider | [BingProvider] Global deadline exceeded. Aborting Bing search retries.
+2026-07-31 16:59:39 | ERROR    | ThreadPoolExecutor-1_1 | search.manager | [SearchManager] Unexpected provider 'bing' error: object of type 'NoneType' has no len()
+2026-07-31 17:00:45 | ERROR    | MainThread | search.base_registry | Failed to load module search.providers.linkedin_playwright_provider: No module named 'playwright'
+Traceback (most recent call last):
+  File "C:\Users\yasha\Downloads\pillar1\pillar1\search\base_registry.py", line 51, in load_plugins
+    module = importlib.import_module(full_module_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yasha\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "C:\Users\yasha\Downloads\pillar1\pillar1\search\providers\linkedin_playwright_provider.py", line 16, in <module>
+    from pillar1.browser.browser_manager import get_browser_manager
+  File "C:\Users\yasha\Downloads\pillar1\pillar1\browser\browser_manager.py", line 4, in <module>
+    from playwright.sync_api import sync_playwright, Playwright
+ModuleNotFoundError: No module named 'playwright'
+2026-07-31 17:00:45 | ERROR    | MainThread | search.base_registry | Failed to load module search.providers.playwright_google_provider: No module named 'playwright'
+Traceback (most recent call last):
+  File "C:\Users\yasha\Downloads\pillar1\pillar1\search\base_registry.py", line 51, in load_plugins
+    module = importlib.import_module(full_module_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yasha\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "C:\Users\yasha\Downloads\pillar1\pillar1\search\providers\playwright_google_provider.py", line 17, in <module>
+    from pillar1.browser.browser_manager import get_browser_manager
+  File "C:\Users\yasha\Downloads\pillar1\pillar1\browser\browser_manager.py", line 4, in <module>
+    from playwright.sync_api import sync_playwright, Playwright
+ModuleNotFoundError: No module named 'playwright'
+2026-07-31 17:00:55 | WARNING  | ThreadPoolExecutor-0_0 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 34.87.80.221:30000 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-31 17:00:55 | WARNING  | ThreadPoolExecutor-0_2 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 217.182.203.184:8888 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-31 17:01:09 | WARNING  | ThreadPoolExecutor-0_4 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 52.67.38.58:3128 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-31 17:01:31 | WARNING  | GoogleSchedulerWorker_0 | network_client_project.network.middleware.retry | [Retry] Search provider google_html hit block/CAPTCHA/429 (HTTP 429). Bubbling up immediately for fail-fast.
+2026-07-31 17:01:31 | WARNING  | GoogleSchedulerWorker_0 | network_client_project.network.middleware.throttle | [AutoThrottle] 429 Rate Limit hit on www.google.com. Reducing rate: 0.50 rps -> 0.20 rps.
+2026-07-31 17:01:31 | WARNING  | GoogleSchedulerWorker_0 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 47.81.56.193:8888 marked dead_for_google after 3 consecutive timeouts.
+2026-07-31 17:01:38 | WARNING  | GoogleSchedulerWorker_0 | network_client_project.network.middleware.retry | [Retry] Search provider google_html hit block/CAPTCHA/429 (HTTP 429). Bubbling up immediately for fail-fast.
+2026-07-31 17:01:38 | WARNING  | GoogleSchedulerWorker_0 | network_client_project.network.middleware.throttle | [AutoThrottle] 429 Rate Limit hit on www.google.com. Reducing rate: 0.20 rps -> 0.08 rps.
+2026-07-31 17:01:38 | WARNING  | GoogleSchedulerWorker_0 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 181.39.25.196:8118 marked dead_for_google after 3 consecutive timeouts.
+2026-07-31 17:01:38 | ERROR    | GoogleSchedulerWorker_0 | search.google_scheduler | [GoogleScheduler] All 2 retries failed for: 'site:tracxn.com team'
+2026-07-31 17:01:46 | WARNING  | ThreadPoolExecutor-1_1 | network_client_project.network.middleware.retry | [Retry] Retrying query https://web.runo.in/sitemap.xml (attempt 1/3) after 0.10s delay due to: Timeout (Failed to perform, curl: (28) Operation timed out after 5002 milliseconds with 0 bytes received. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.).
+2026-07-31 17:01:50 | ERROR    | GoogleSchedulerWorker_0 | search.google_scheduler | [GoogleScheduler] All 1 retries failed for: 'site:runo.ai team'
+2026-07-31 17:01:52 | WARNING  | GoogleSchedulerWorker_0 | search.google_scheduler | [GoogleScheduler] No more healthy proxies after 0 attempts.
+2026-07-31 17:01:52 | ERROR    | GoogleSchedulerWorker_0 | search.google_scheduler | [GoogleScheduler] All 0 retries failed for: 'site:runo.ai team'
+2026-07-31 17:01:52 | WARNING  | ThreadPoolExecutor-1_3 | search.manager | [SearchManager] google_html failure score reached 10.0. Tripping breaker to OPEN.
+2026-07-31 17:01:55 | WARNING  | GoogleSchedulerWorker_0 | search.google_scheduler | [GoogleScheduler] No more healthy proxies after 0 attempts.
+2026-07-31 17:01:55 | ERROR    | GoogleSchedulerWorker_0 | search.google_scheduler | [GoogleScheduler] All 0 retries failed for: 'site:runotech.com email'
+2026-07-31 17:01:57 | WARNING  | ThreadPoolExecutor-1_1 | network_client_project.network.middleware.retry | [Retry] Retrying query https://web.runo.in/sitemap_index.xml (attempt 1/3) after 0.10s delay due to: Timeout (Failed to perform, curl: (28) Operation timed out after 5009 milliseconds with 0 bytes received. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.).
+2026-07-31 17:01:59 | WARNING  | ThreadPoolExecutor-1_0 | network_client_project.network.middleware.retry | [Retry] Search provider brave hit block/CAPTCHA/429 (HTTP 429). Bubbling up immediately for fail-fast.
+2026-07-31 17:01:59 | WARNING  | ThreadPoolExecutor-1_0 | network_client_project.network.middleware.throttle | [AutoThrottle] 429 Rate Limit hit on search.brave.com. Reducing rate: 0.55 rps -> 0.22 rps.
+2026-07-31 17:02:02 | WARNING  | ThreadPoolExecutor-1_4 | network_client_project.network.middleware.retry | [Retry] Search provider brave hit block/CAPTCHA/429 (HTTP 429). Bubbling up immediately for fail-fast.
+2026-07-31 17:02:02 | WARNING  | ThreadPoolExecutor-1_4 | network_client_project.network.middleware.throttle | [AutoThrottle] 429 Rate Limit hit on search.brave.com. Reducing rate: 0.22 rps -> 0.09 rps.
+2026-07-31 17:02:03 | WARNING  | ThreadPoolExecutor-1_3 | network_client_project.network.middleware.retry | [Retry] Search provider brave hit block/CAPTCHA/429 (HTTP 429). Bubbling up immediately for fail-fast.
+2026-07-31 17:02:03 | WARNING  | ThreadPoolExecutor-1_3 | network_client_project.network.middleware.throttle | [AutoThrottle] 429 Rate Limit hit on search.brave.com. Reducing rate: 0.09 rps -> 0.05 rps.
+2026-07-31 17:02:06 | WARNING  | ThreadPoolExecutor-1_0 | network_client_project.network.middleware.retry | [Retry] Search provider brave hit block/CAPTCHA/429 (HTTP 429). Bubbling up immediately for fail-fast.
+2026-07-31 17:02:06 | WARNING  | ThreadPoolExecutor-1_0 | network_client_project.network.middleware.throttle | [AutoThrottle] 429 Rate Limit hit on search.brave.com. Reducing rate: 0.05 rps -> 0.05 rps.
+2026-07-31 17:02:12 | WARNING  | ThreadPoolExecutor-1_4 | network_client_project.network.middleware.retry | [Retry] Search provider brave hit block/CAPTCHA/429 (HTTP 429). Bubbling up immediately for fail-fast.
+2026-07-31 17:02:12 | WARNING  | ThreadPoolExecutor-1_4 | network_client_project.network.middleware.throttle | [AutoThrottle] 429 Rate Limit hit on search.brave.com. Reducing rate: 0.05 rps -> 0.05 rps.
+2026-07-31 17:02:20 | WARNING  | ThreadPoolExecutor-1_3 | network_client_project.network.middleware.retry | [Retry] Search provider brave hit block/CAPTCHA/429 (HTTP 429). Bubbling up immediately for fail-fast.
+2026-07-31 17:02:20 | WARNING  | ThreadPoolExecutor-1_3 | network_client_project.network.middleware.throttle | [AutoThrottle] 429 Rate Limit hit on search.brave.com. Reducing rate: 0.05 rps -> 0.05 rps.
+2026-07-31 17:02:20 | WARNING  | ThreadPoolExecutor-1_3 | search.manager | [SearchManager] brave failure score reached 12.0. Tripping breaker to OPEN.
+2026-07-31 17:02:25 | WARNING  | ThreadPoolExecutor-1_3 | search.manager | [SearchManager] duckduckgo failure score reached 12.0. Tripping breaker to OPEN.
+2026-07-31 18:26:39 | WARNING  | ThreadPoolExecutor-0_0 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 34.87.80.221:30000 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-31 18:26:39 | WARNING  | ThreadPoolExecutor-0_2 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 217.182.203.184:8888 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-31 18:26:39 | WARNING  | ThreadPoolExecutor-0_4 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 52.67.38.58:3128 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-31 18:26:39 | WARNING  | ThreadPoolExecutor-0_1 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 47.81.56.193:8888 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-31 18:26:39 | WARNING  | ThreadPoolExecutor-0_3 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 181.39.25.196:8118 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-31 18:26:39 | WARNING  | ThreadPoolExecutor-0_5 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 34.134.231.117:3129 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-31 18:36:55 | ERROR    | MainThread | whois.whois | Error trying to connect to socket: closing socket - [Errno 11001] getaddrinfo failed
+2026-07-31 18:36:55 | ERROR    | MainThread | whois.whois | Error trying to connect to socket: closing socket - [Errno 11001] getaddrinfo failed
+2026-07-31 18:37:04 | WARNING  | ThreadPoolExecutor-1_3 | pillar1.browser | [BrowserPool] Connection policy is 'proxy_only' for provider 'google', but no healthy proxies are available. Aborting browser launch to prevent direct connection.
+2026-07-31 18:37:04 | WARNING  | ThreadPoolExecutor-1_3 | pillar1.browser | [BrowserPool] All active instances are currently blocked for 'google'.
+2026-07-31 18:37:04 | WARNING  | ThreadPoolExecutor-1_3 | pillar1.browser | [BrowserPool] Connection policy is 'proxy_only' for provider 'google', but no healthy proxies are available. Aborting browser launch to prevent direct connection.
+2026-07-31 18:37:04 | WARNING  | ThreadPoolExecutor-1_3 | pillar1.search.playwright_google | [PlaywrightGoogleProvider] BrowserPool exhausted or unavailable: All browser instances in the pool are currently blocked for provider 'google'.. Tripping circuit breaker.
+2026-07-31 18:37:04 | WARNING  | ThreadPoolExecutor-1_2 | pillar1.browser | [BrowserPool] Connection policy is 'proxy_only' for provider 'google', but no healthy proxies are available. Aborting browser launch to prevent direct connection.
+2026-07-31 18:37:04 | WARNING  | ThreadPoolExecutor-1_2 | pillar1.browser | [BrowserPool] All active instances are currently blocked for 'google'.
+2026-07-31 18:37:04 | WARNING  | ThreadPoolExecutor-1_2 | pillar1.browser | [BrowserPool] Connection policy is 'proxy_only' for provider 'google', but no healthy proxies are available. Aborting browser launch to prevent direct connection.
+2026-07-31 18:37:04 | WARNING  | ThreadPoolExecutor-1_2 | pillar1.search.playwright_google | [PlaywrightGoogleProvider] BrowserPool exhausted or unavailable: All browser instances in the pool are currently blocked for provider 'google'.. Tripping circuit breaker.
+2026-07-31 18:37:04 | WARNING  | ThreadPoolExecutor-1_0 | pillar1.browser | [BrowserPool] Connection policy is 'proxy_only' for provider 'playwright_google', but no healthy proxies are available. Aborting browser launch to prevent direct connection.
+2026-07-31 18:37:04 | WARNING  | ThreadPoolExecutor-1_0 | pillar1.browser | [BrowserPool] No active browser instances available. Creating rescue instance...
+2026-07-31 18:37:04 | WARNING  | ThreadPoolExecutor-1_0 | pillar1.browser | [BrowserPool] Connection policy is 'proxy_only' for provider 'playwright_google', but no healthy proxies are available. Aborting browser launch to prevent direct connection.
+2026-07-31 18:37:04 | ERROR    | ThreadPoolExecutor-1_0 | search.manager | [SearchManager] Unexpected provider 'linkedin_playwright' error: BrowserPool exhausted and failed to spin up any active browser instances.
+2026-07-31 18:37:04 | WARNING  | ThreadPoolExecutor-1_1 | pillar1.browser | [BrowserPool] Connection policy is 'proxy_only' for provider 'google', but no healthy proxies are available. Aborting browser launch to prevent direct connection.
+2026-07-31 18:37:04 | WARNING  | ThreadPoolExecutor-1_1 | pillar1.browser | [BrowserPool] All active instances are currently blocked for 'google'.
+2026-07-31 18:37:04 | WARNING  | ThreadPoolExecutor-1_2 | search.google_scheduler | [GoogleScheduler] No healthy proxies with budget. Aborting Google search.
+2026-07-31 18:37:04 | WARNING  | ThreadPoolExecutor-1_3 | search.google_scheduler | [GoogleScheduler] No healthy proxies with budget. Aborting Google search.
+2026-07-31 18:37:04 | WARNING  | ThreadPoolExecutor-1_1 | pillar1.browser | [BrowserPool] Connection policy is 'proxy_only' for provider 'google', but no healthy proxies are available. Aborting browser launch to prevent direct connection.
+2026-07-31 18:37:04 | WARNING  | ThreadPoolExecutor-1_1 | pillar1.search.playwright_google | [PlaywrightGoogleProvider] BrowserPool exhausted or unavailable: All browser instances in the pool are currently blocked for provider 'google'.. Tripping circuit breaker.
+2026-07-31 18:37:04 | WARNING  | ThreadPoolExecutor-1_1 | pillar1.browser | [BrowserCircuitBreaker] CAPTCHA threshold reached for 'playwright_google'. Tripping circuit breaker. Cooldown active for 600.0s.
+2026-07-31 18:37:04 | WARNING  | ThreadPoolExecutor-1_0 | pillar1.browser | [BrowserPool] Connection policy is 'proxy_only' for provider 'google', but no healthy proxies are available. Aborting browser launch to prevent direct connection.
+2026-07-31 18:37:04 | WARNING  | ThreadPoolExecutor-1_0 | pillar1.browser | [BrowserPool] All active instances are currently blocked for 'google'.
+2026-07-31 18:37:04 | WARNING  | ThreadPoolExecutor-1_0 | pillar1.browser | [BrowserPool] Connection policy is 'proxy_only' for provider 'google', but no healthy proxies are available. Aborting browser launch to prevent direct connection.
+2026-07-31 18:37:04 | WARNING  | ThreadPoolExecutor-1_0 | pillar1.search.playwright_google | [PlaywrightGoogleProvider] BrowserPool exhausted or unavailable: All browser instances in the pool are currently blocked for provider 'google'.. Tripping circuit breaker.
+2026-07-31 18:37:04 | WARNING  | ThreadPoolExecutor-1_0 | pillar1.browser | [BrowserCircuitBreaker] CAPTCHA threshold reached for 'playwright_google'. Tripping circuit breaker. Cooldown active for 600.0s.
+2026-07-31 18:37:04 | WARNING  | ThreadPoolExecutor-1_0 | search.manager | [SearchManager] playwright_google failure score reached 12.0. Tripping breaker to OPEN.
+2026-07-31 18:37:10 | WARNING  | ThreadPoolExecutor-1_0 | search.manager | [SearchManager] duckduckgo failure score reached 12.0. Tripping breaker to OPEN.
+2026-07-31 18:37:16 | WARNING  | ThreadPoolExecutor-1_2 | pillar1.browser | [BrowserPool] Connection policy is 'proxy_only' for provider 'playwright_google', but no healthy proxies are available. Aborting browser launch to prevent direct connection.
+2026-07-31 18:37:16 | WARNING  | ThreadPoolExecutor-1_2 | pillar1.browser | [BrowserPool] No active browser instances available. Creating rescue instance...
+2026-07-31 18:37:16 | WARNING  | ThreadPoolExecutor-1_2 | pillar1.browser | [BrowserPool] Connection policy is 'proxy_only' for provider 'playwright_google', but no healthy proxies are available. Aborting browser launch to prevent direct connection.
+2026-07-31 18:37:16 | ERROR    | ThreadPoolExecutor-1_2 | search.manager | [SearchManager] Unexpected provider 'linkedin_playwright' error: BrowserPool exhausted and failed to spin up any active browser instances.
+2026-07-31 18:37:16 | WARNING  | ThreadPoolExecutor-1_0 | search.manager | [SearchManager] brave failure score reached 12.0. Tripping breaker to OPEN.
+2026-07-31 18:37:18 | WARNING  | ThreadPoolExecutor-1_3 | pillar1.browser | [BrowserPool] Connection policy is 'proxy_only' for provider 'playwright_google', but no healthy proxies are available. Aborting browser launch to prevent direct connection.
+2026-07-31 18:37:18 | WARNING  | ThreadPoolExecutor-1_3 | pillar1.browser | [BrowserPool] No active browser instances available. Creating rescue instance...
+2026-07-31 18:37:18 | WARNING  | ThreadPoolExecutor-1_3 | pillar1.browser | [BrowserPool] Connection policy is 'proxy_only' for provider 'playwright_google', but no healthy proxies are available. Aborting browser launch to prevent direct connection.
+2026-07-31 18:37:18 | ERROR    | ThreadPoolExecutor-1_3 | search.manager | [SearchManager] Unexpected provider 'linkedin_playwright' error: BrowserPool exhausted and failed to spin up any active browser instances.
+2026-07-31 18:37:18 | WARNING  | ThreadPoolExecutor-1_3 | pillar1.browser | [BrowserPool] Connection policy is 'proxy_only' for provider 'playwright_google', but no healthy proxies are available. Aborting browser launch to prevent direct connection.
+2026-07-31 18:37:18 | WARNING  | ThreadPoolExecutor-1_3 | pillar1.browser | [BrowserPool] No active browser instances available. Creating rescue instance...
+2026-07-31 18:37:18 | WARNING  | ThreadPoolExecutor-1_3 | pillar1.browser | [BrowserPool] Connection policy is 'proxy_only' for provider 'playwright_google', but no healthy proxies are available. Aborting browser launch to prevent direct connection.
+2026-07-31 18:37:18 | ERROR    | ThreadPoolExecutor-1_3 | search.manager | [SearchManager] Unexpected provider 'linkedin_playwright' error: BrowserPool exhausted and failed to spin up any active browser instances.
+2026-07-31 18:37:18 | WARNING  | ThreadPoolExecutor-1_3 | search.manager | [SearchManager] linkedin_playwright failure score reached 12.0. Tripping breaker to OPEN.
+2026-07-31 18:37:25 | ERROR    | MainThread | pillar1.browser | [BrowserManager] Error stopping Playwright: cannot switch to a different thread (which happens to have exited)
+2026-07-31 18:40:34 | WARNING  | ThreadPoolExecutor-0_1 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 47.81.56.193:8888 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-31 18:40:34 | WARNING  | ThreadPoolExecutor-0_0 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 34.87.80.221:30000 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-31 18:40:34 | WARNING  | ThreadPoolExecutor-0_5 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 34.134.231.117:3129 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-31 18:40:34 | WARNING  | ThreadPoolExecutor-0_2 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 217.182.203.184:8888 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-31 18:40:34 | WARNING  | ThreadPoolExecutor-0_4 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 52.67.38.58:3128 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-31 18:40:34 | WARNING  | ThreadPoolExecutor-0_3 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 181.39.25.196:8118 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-31 18:40:35 | WARNING  | MainThread | pillar1.browser | [BrowserPool] Connection policy is 'proxy_only' for provider 'google', but no healthy proxies are available. Aborting browser launch to prevent direct connection.
+2026-07-31 18:40:35 | WARNING  | MainThread | pillar1.browser | [BrowserPool] All active instances are currently blocked for 'google'.
+2026-07-31 18:40:35 | WARNING  | MainThread | pillar1.browser | [BrowserPool] Connection policy is 'proxy_only' for provider 'google', but no healthy proxies are available. Aborting browser launch to prevent direct connection.
+2026-07-31 18:40:35 | WARNING  | MainThread | pillar1.search.playwright_google | [PlaywrightGoogleProvider] BrowserPool exhausted or unavailable: All browser instances in the pool are currently blocked for provider 'google'.. Tripping circuit breaker.
+2026-07-31 18:40:35 | WARNING  | MainThread | search.google_scheduler | [GoogleScheduler] No healthy proxies with budget. Aborting Google search.

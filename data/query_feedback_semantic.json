@@ -4,10 +4,10 @@
         "zero": 0,
         "parser": 0,
         "unavailable": 0,
-        "failures": 300,
-        "last_updated": 1784718087.5573418,
-        "score": -300,
-        "queries_run": 300
+        "failures": 330,
+        "last_updated": 1785128285.799265,
+        "score": -330,
+        "queries_run": 330
     },
     "test query": {
         "success": 0,
@@ -15,30 +15,30 @@
         "parser": 0,
         "unavailable": 0,
         "failures": 0,
-        "last_updated": 1784718087.7133932,
-        "score": 50,
-        "queries_run": 10,
-        "leads_found": 10
+        "last_updated": 1785128286.3534787,
+        "score": 55,
+        "queries_run": 11,
+        "leads_found": 11
     },
     "test query 2": {
         "success": 0,
         "zero": 0,
         "parser": 0,
         "unavailable": 0,
-        "failures": 10,
-        "last_updated": 1784718087.7160823,
-        "score": -10,
-        "queries_run": 10
+        "failures": 11,
+        "last_updated": 1785128286.3638315,
+        "score": -11,
+        "queries_run": 11
     },
     "python company": {
         "success": 0,
         "zero": 0,
         "parser": 0,
         "unavailable": 0,
-        "failures": 10,
-        "last_updated": 1784718087.9419026,
-        "score": -11,
-        "queries_run": 19
+        "failures": 11,
+        "last_updated": 1785128286.8181996,
+        "score": -12,
+        "queries_run": 21
     },
     "source:bing": {
         "success": 0,
@@ -47,18 +47,18 @@
         "unavailable": 0,
         "failures": 0,
         "last_updated": 0.0,
-        "score": 31,
-        "queries_run": 25
+        "score": 14,
+        "queries_run": 34
     },
     "software developer company 1": {
         "success": 0,
         "zero": 0,
         "parser": 0,
         "unavailable": 0,
-        "failures": 9,
-        "last_updated": 1784718088.0015204,
-        "score": -18,
-        "queries_run": 9
+        "failures": 10,
+        "last_updated": 1785128287.0054512,
+        "score": -20,
+        "queries_run": 10
     },
     "source:google_html": {
         "success": 0,
@@ -67,8 +67,8 @@
         "unavailable": 0,
         "failures": 0,
         "last_updated": 0.0,
-        "score": 66,
-        "queries_run": 82
+        "score": 55,
+        "queries_run": 100
     },
     "software developer company 2": {
         "success": 0,
@@ -107,8 +107,8 @@
         "unavailable": 0,
         "failures": 0,
         "last_updated": 0.0,
-        "score": 17,
-        "queries_run": 40
+        "score": -3,
+        "queries_run": 56
     },
     "technology": {
         "success": 0,
@@ -267,8 +267,8 @@
         "unavailable": 0,
         "failures": 0,
         "last_updated": 0.0,
-        "score": 25,
-        "queries_run": 13
+        "score": 14,
+        "queries_run": 24
     },
     "site:linkedin.com/in \"ventureradar\" \"co-founder\"": {
         "success": 0,
@@ -477,8 +477,8 @@
         "unavailable": 0,
         "failures": 0,
         "last_updated": 0.0,
-        "score": -18,
-        "queries_run": 9
+        "score": -30,
+        "queries_run": 15
     },
     "custom python solutions": {
         "success": 0,
@@ -810,16 +810,6 @@
         "score": -2,
         "queries_run": 1
     },
-    "source:brave": {
-        "success": 0,
-        "zero": 0,
-        "parser": 0,
-        "unavailable": 0,
-        "failures": 0,
-        "last_updated": 0.0,
-        "score": 21,
-        "queries_run": 10
-    },
     "generative ai ai startup": {
         "success": 0,
         "zero": 0,
@@ -929,5 +919,255 @@
         "last_updated": 1785079582.069186,
         "score": 3,
         "queries_run": 1
+    },
+    "source:brave": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 0.0,
+        "score": 28,
+        "queries_run": 27
+    },
+    "automobile startups": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 3,
+        "last_updated": 1785128520.2002368,
+        "score": 4,
+        "queries_run": 4
+    },
+    "runo ai company": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1785497248.5022407,
+        "score": -2,
+        "queries_run": 1
+    },
+    "runo ai": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1785497555.229228,
+        "score": 28,
+        "queries_run": 7
+    },
+    "site:tracxn.com email": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 2,
+        "last_updated": 1785497334.897667,
+        "score": -1,
+        "queries_run": 3
+    },
+    "site:runo.ai email": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 2,
+        "last_updated": 1785497337.5525222,
+        "score": -1,
+        "queries_run": 3
+    },
+    "site:tracxn.com contact": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1785497341.4659085,
+        "score": 3,
+        "queries_run": 1
+    },
+    "site:runo.ai contact": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1785497342.176557,
+        "score": 3,
+        "queries_run": 1
+    },
+    "site:web.runo.in email": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 2,
+        "last_updated": 1785497348.6399872,
+        "score": -2,
+        "queries_run": 3
+    },
+    "site:tracxn.com phone": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1785497346.4463289,
+        "score": 3,
+        "queries_run": 1
+    },
+    "site:runo.ai phone": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1785497348.4469116,
+        "score": 3,
+        "queries_run": 1
+    },
+    "site:runo.ai team": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 5,
+        "last_updated": 1785497518.3724406,
+        "score": -4,
+        "queries_run": 7
+    },
+    "site:tracxn.com team": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 2,
+        "last_updated": 1785497505.8711221,
+        "score": -1,
+        "queries_run": 3
+    },
+    "site:web.runo.in contact": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 6,
+        "last_updated": 1785503238.6312895,
+        "score": -11,
+        "queries_run": 6
+    },
+    "custom runo ai development": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1785497473.8311844,
+        "score": 8,
+        "queries_run": 2
+    },
+    "site:linkedin.com/in \"tracxn\" founder or ceo or director": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 10,
+        "last_updated": 1785503238.4191222,
+        "score": -17,
+        "queries_run": 10
+    },
+    "site:runotech.com email": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 4,
+        "last_updated": 1785497547.525169,
+        "score": -7,
+        "queries_run": 4
+    },
+    "site:linkedin.com/in \"runo\" founder or ceo or director": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 8,
+        "last_updated": 1785503237.5556557,
+        "score": -14,
+        "queries_run": 8
+    },
+    "site:linkedin.com/in \"whats new in runo\" founder or ceo or director": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 3,
+        "last_updated": 1785497545.6830544,
+        "score": -5,
+        "queries_run": 3
+    },
+    "site:linkedin.com/in \"tracxn\" \"co-founder\"": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 2,
+        "last_updated": 1785497551.530956,
+        "score": -3,
+        "queries_run": 2
+    },
+    "source:linkedin": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 0.0,
+        "score": 3,
+        "queries_run": 1
+    },
+    "site:linkedin.com/in \"runoai\" founder or ceo or director": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 6,
+        "last_updated": 1785503236.452729,
+        "score": -11,
+        "queries_run": 6
+    },
+    "site:linkedin.com/in \"runo\" \"co-founder\"": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1785503239.0768194,
+        "score": -1,
+        "queries_run": 1
+    },
+    "site:linkedin.com/in \"runoai\" \"co-founder\"": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1785503242.019021,
+        "score": -2,
+        "queries_run": 1
+    },
+    "piet services": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 6,
+        "last_updated": 1785503449.185068,
+        "score": -11,
+        "queries_run": 6
     }
 }

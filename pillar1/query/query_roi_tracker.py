@@ -58,7 +58,32 @@ class QueryRoiTracker:
                 
         self.save()
 
-    def get_template_weight(self, template_str: str) -> float:
-        return self.stats.get(template_str, {}).get("weight", 1.0)
+    def record_provider_yield(self, provider_name: str, industry: str, leads_yielded: int):
+        key = f"provider:{provider_name}:{industry.lower()}"
+        if key not in self.stats:
+            self.stats[key] = {"runs": 0, "total_leads": 0, "weight": 1.0}
+        
+        entry = self.stats[key]
+        entry["runs"] += 1
+        entry["total_leads"] += leads_yielded
+        if entry["runs"] >= self.min_sample_threshold:
+            avg = entry["total_leads"] / float(entry["runs"])
+            entry["weight"] = 1.5 if avg > 2.0 else (1.0 if avg > 0.5 else 0.5)
+        self.save()
+
+    def get_best_provider_for_industry(self, industry: str, default: str = "google_html") -> str:
+        prefix = f"provider:"
+        suffix = f":{industry.lower()}"
+        candidates = []
+        for key, entry in self.stats.items():
+            if key.startswith(prefix) and key.endswith(suffix):
+                provider = key[len(prefix):-len(suffix)]
+                weight = entry.get("weight", 1.0)
+                candidates.append((provider, weight))
+        if not candidates:
+            return default
+        candidates.sort(key=lambda x: x[1], reverse=True)
+        return candidates[0][0]
 
 query_roi_tracker = QueryRoiTracker()
+

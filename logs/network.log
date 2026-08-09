@@ -38896,3 +38896,1036 @@ Call log:
 2026-07-26 20:56:33 | INFO     | MainThread | query.expansion | Loaded persistent query feedback from data\query_feedback_semantic.json
 2026-07-26 20:56:33 | INFO     | MainThread | search.base_registry | Scanning for plugins in C:\Users\yasha\Downloads\pillar1\pillar_4_pipeline\exporters...
 2026-07-26 20:56:33 | INFO     | MainThread | pillar_4_pipeline.exporters.sqlite_exporter | [SQLiteExporter] Successfully exported 1 records to SQLite database: leads.db
+2026-07-27 10:27:07 | INFO     | MainThread | network_client_project.network.logger | Network Logging System Initialized.
+2026-07-27 10:27:09 | INFO     | MainThread | network_client_project.network.proxy_manager | Loaded 6 proxies into the manager.
+2026-07-27 10:27:09 | INFO     | MainThread | network_client_project.network.proxy_manager | Loaded proxy state from proxy_state.json
+2026-07-27 10:27:09 | INFO     | MainThread | network_client_project.network.proxy_manager | [ProxyManager] Loaded proxy state
+2026-07-27 10:27:09 | INFO     | MainThread | network_client_project.network.proxy_manager |   Total non-zero: 6 | Average score: 96.0
+2026-07-27 10:27:09 | INFO     | MainThread | network_client_project.network.proxy_manager |   Top 5 by score:
+2026-07-27 10:27:09 | INFO     | MainThread | network_client_project.network.proxy_manager |     34.87.80.221:30000 = 100.0
+2026-07-27 10:27:09 | INFO     | MainThread | network_client_project.network.proxy_manager |     47.81.56.193:8888 = 100.0
+2026-07-27 10:27:09 | INFO     | MainThread | network_client_project.network.proxy_manager |     52.67.38.58:3128 = 95.0
+2026-07-27 10:27:09 | INFO     | MainThread | network_client_project.network.proxy_manager |     217.182.203.184:8888 = 94.0
+2026-07-27 10:27:09 | INFO     | MainThread | network_client_project.network.proxy_manager |     181.39.25.196:8118 = 94.0
+2026-07-27 10:27:09 | INFO     | MainThread | network_client_project.network.proxy_manager |   Bottom 5 by score:
+2026-07-27 10:27:09 | INFO     | MainThread | network_client_project.network.proxy_manager |     47.81.56.193:8888 = 100.0
+2026-07-27 10:27:09 | INFO     | MainThread | network_client_project.network.proxy_manager |     52.67.38.58:3128 = 95.0
+2026-07-27 10:27:09 | INFO     | MainThread | network_client_project.network.proxy_manager |     217.182.203.184:8888 = 94.0
+2026-07-27 10:27:10 | INFO     | MainThread | network_client_project.network.proxy_manager |     181.39.25.196:8118 = 94.0
+2026-07-27 10:27:10 | INFO     | MainThread | network_client_project.network.proxy_manager |     34.134.231.117:3129 = 93.0
+2026-07-27 10:27:10 | INFO     | ProxyManager-StartupValidator | network_client_project.network.proxy_manager | [ProxyManager] Starting background proxy validation thread...
+2026-07-27 10:27:10 | INFO     | MainThread | search.base_registry | Scanning for plugins in C:\Users\yasha\Downloads\pillar1\network_client_project\network\middleware...
+2026-07-27 10:27:10 | INFO     | MainThread | network_client_project.network.client | NetworkClient initialized with decoupled Downloader Middleware stack.
+2026-07-27 10:27:10 | INFO     | MainThread | network_client_project.network.proxy_manager | Loaded 2 proxies into the manager.
+2026-07-27 10:27:10 | INFO     | MainThread | network_client_project.network.proxy_manager | Loaded proxy state from proxy_state.json
+2026-07-27 10:27:10 | INFO     | MainThread | network_client_project.network.proxy_manager | [ProxyManager] Loaded proxy state
+2026-07-27 10:27:10 | INFO     | MainThread | network_client_project.network.proxy_manager |   Total non-zero: 2 | Average score: 100.0
+2026-07-27 10:27:10 | INFO     | MainThread | network_client_project.network.proxy_manager |   Top 5 by score:
+2026-07-27 10:27:10 | INFO     | MainThread | network_client_project.network.proxy_manager |     1.1.1.1 = 100.0
+2026-07-27 10:27:10 | INFO     | MainThread | network_client_project.network.proxy_manager |     2.2.2.2 = 100.0
+2026-07-27 10:27:10 | INFO     | MainThread | network_client_project.network.proxy_manager |   Bottom 5 by score:
+2026-07-27 10:27:10 | INFO     | MainThread | network_client_project.network.proxy_manager |     1.1.1.1 = 100.0
+2026-07-27 10:27:10 | INFO     | MainThread | network_client_project.network.proxy_manager |     2.2.2.2 = 100.0
+2026-07-27 10:27:10 | INFO     | ProxyManager-StartupValidator | network_client_project.network.proxy_manager | [ProxyManager] Starting background proxy validation thread...
+2026-07-27 10:27:10 | INFO     | MainThread | network_client_project.network.proxy_manager | [Proxy Scoring] Proxy: 1.1.1.1 | Old score: 100.0 | Reason: FAILURE (GENERIC) | New score: 95.0
+2026-07-27 10:27:10 | INFO     | MainThread | network_client_project.network.proxy_manager | [ProxyManager] Proxy 1.1.1.1 score changed by -5.0 (Reason: GENERIC)
+2026-07-27 10:27:10 | INFO     | MainThread | network_client_project.network.client | NetworkClient initialized with decoupled Downloader Middleware stack.
+2026-07-27 10:27:11 | WARNING  | ThreadPoolExecutor-0_1 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 47.81.56.193:8888 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-27 10:27:11 | INFO     | ThreadPoolExecutor-0_3 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 181.39.25.196:8118 -> ALIVE (general HTTPS OK)
+2026-07-27 10:27:11 | WARNING  | ThreadPoolExecutor-0_3 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 181.39.25.196:8118 -> Google HTTP <MagicMock name='Session().__enter__().request().status_code' id='1766762358896'>
+2026-07-27 10:27:12 | INFO     | ThreadPoolExecutor-0_0 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 34.87.80.221:30000 -> ALIVE (general HTTPS OK)
+2026-07-27 10:27:12 | WARNING  | ThreadPoolExecutor-0_0 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 34.87.80.221:30000 -> Google HTTP <MagicMock name='Session().__enter__().request().status_code' id='1766762358896'>
+2026-07-27 10:27:12 | INFO     | ThreadPoolExecutor-0_5 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 34.134.231.117:3129 -> ALIVE (general HTTPS OK)
+2026-07-27 10:27:12 | WARNING  | ThreadPoolExecutor-0_5 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 34.134.231.117:3129 -> Google HTTP <MagicMock name='Session().__enter__().request().status_code' id='1766762358896'>
+2026-07-27 10:27:13 | WARNING  | ThreadPoolExecutor-0_2 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 217.182.203.184:8888 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-27 10:27:14 | INFO     | MainThread | network_client_project.network.proxy_manager | [Proxy Scoring] Proxy: 47.81.56.193:8888 | Old score: 100.0 | Reason: SUCCESS (VALID_RESULTS) | New score: 100.0
+2026-07-27 10:27:14 | INFO     | MainThread | network_client_project.network.proxy_manager | [ProxyManager] Proxy 47.81.56.193:8888 score changed by +0.0 (Reason: VALID_RESULTS)
+2026-07-27 10:27:16 | INFO     | MainThread | network_client_project.network.proxy_manager | [Proxy Scoring] Proxy: 34.134.231.117:3129 | Old score: 93.0 | Reason: SUCCESS (VALID_RESULTS) | New score: 100.0
+2026-07-27 10:27:16 | INFO     | MainThread | network_client_project.network.proxy_manager | [ProxyManager] Proxy 34.134.231.117:3129 score changed by +7.0 (Reason: VALID_RESULTS)
+2026-07-27 10:27:16 | INFO     | MainThread | network_client_project.network.client | NetworkClient initialized with decoupled Downloader Middleware stack.
+2026-07-27 10:27:16 | INFO     | MainThread | network_client_project.network.proxy_manager | Loaded 2 proxies into the manager.
+2026-07-27 10:27:16 | INFO     | ProxyManager-StartupValidator | network_client_project.network.proxy_manager | [ProxyManager] Starting background proxy validation thread...
+2026-07-27 10:27:16 | WARNING  | ThreadPoolExecutor-2_0 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 34.87.80.221:30000 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-27 10:27:16 | WARNING  | ThreadPoolExecutor-2_1 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 47.81.56.193:8888 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-27 10:27:16 | WARNING  | ThreadPoolExecutor-2_0 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 217.182.203.184:8888 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-27 10:27:16 | WARNING  | ThreadPoolExecutor-2_1 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 181.39.25.196:8118 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-27 10:27:16 | WARNING  | ThreadPoolExecutor-2_0 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 52.67.38.58:3128 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-27 10:27:16 | WARNING  | ThreadPoolExecutor-2_2 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 34.134.231.117:3129 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-27 10:27:16 | WARNING  | ThreadPoolExecutor-2_3 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 1.1.1.1 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-27 10:27:16 | WARNING  | ThreadPoolExecutor-2_1 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 2.2.2.2 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-27 10:27:16 | INFO     | ProxyManager-StartupValidator | network_client_project.network.proxy_manager | [ProxyManager] Background proxy validation complete. Alive: 0/8, Google-capable: 0/8
+2026-07-27 10:27:18 | WARNING  | ThreadPoolExecutor-0_4 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 52.67.38.58:3128 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-27 10:27:18 | INFO     | ProxyManager-StartupValidator | network_client_project.network.proxy_manager | [ProxyManager] Background proxy validation complete. Alive: 0/6, Google-capable: 0/6
+2026-07-27 10:27:18 | WARNING  | MainThread | network_client_project.network.middleware.retry | [Retry] Retrying query https://example.com (attempt 1/3) after 3.00s delay due to: RequestException (Network Error).
+2026-07-27 10:27:18 | WARNING  | ThreadPoolExecutor-1_0 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 1.1.1.1 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-27 10:27:18 | WARNING  | ThreadPoolExecutor-1_1 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 2.2.2.2 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-27 10:27:18 | INFO     | ProxyManager-StartupValidator | network_client_project.network.proxy_manager | [ProxyManager] Background proxy validation complete. Alive: 0/2, Google-capable: 0/2
+2026-07-27 10:27:22 | INFO     | MainThread | network_client_project.network.proxy_manager | Loaded 3 proxies into the manager.
+2026-07-27 10:27:22 | INFO     | MainThread | network_client_project.network.proxy_manager | Loaded proxy state from proxy_state.json
+2026-07-27 10:27:22 | INFO     | MainThread | network_client_project.network.proxy_manager | [ProxyManager] Loaded proxy state
+2026-07-27 10:27:22 | INFO     | MainThread | network_client_project.network.proxy_manager |   Total non-zero: 3 | Average score: 100.0
+2026-07-27 10:27:22 | INFO     | MainThread | network_client_project.network.proxy_manager |   Top 5 by score:
+2026-07-27 10:27:22 | INFO     | MainThread | network_client_project.network.proxy_manager |     http://user:pass@1.1.1.1:8000 = 100.0
+2026-07-27 10:27:22 | INFO     | MainThread | network_client_project.network.proxy_manager |     http://user:pass@2.2.2.2:8000 = 100.0
+2026-07-27 10:27:22 | INFO     | MainThread | network_client_project.network.proxy_manager |     http://user:pass@3.3.3.3:8000 = 100.0
+2026-07-27 10:27:22 | INFO     | MainThread | network_client_project.network.proxy_manager |   Bottom 5 by score:
+2026-07-27 10:27:22 | INFO     | MainThread | network_client_project.network.proxy_manager |     http://user:pass@1.1.1.1:8000 = 100.0
+2026-07-27 10:27:22 | INFO     | MainThread | network_client_project.network.proxy_manager |     http://user:pass@2.2.2.2:8000 = 100.0
+2026-07-27 10:27:22 | INFO     | MainThread | network_client_project.network.proxy_manager |     http://user:pass@3.3.3.3:8000 = 100.0
+2026-07-27 10:27:22 | INFO     | ProxyManager-StartupValidator | network_client_project.network.proxy_manager | [ProxyManager] Starting background proxy validation thread...
+2026-07-27 10:27:22 | INFO     | MainThread | network_client_project.network.proxy_manager | Loaded 3 proxies into the manager.
+2026-07-27 10:27:22 | INFO     | MainThread | network_client_project.network.proxy_manager | Loaded proxy state from proxy_state.json
+2026-07-27 10:27:22 | INFO     | MainThread | network_client_project.network.proxy_manager | [ProxyManager] Loaded proxy state
+2026-07-27 10:27:22 | INFO     | MainThread | network_client_project.network.proxy_manager |   Total non-zero: 3 | Average score: 100.0
+2026-07-27 10:27:22 | INFO     | MainThread | network_client_project.network.proxy_manager |   Top 5 by score:
+2026-07-27 10:27:22 | INFO     | MainThread | network_client_project.network.proxy_manager |     http://user:pass@1.1.1.1:8000 = 100.0
+2026-07-27 10:27:22 | INFO     | MainThread | network_client_project.network.proxy_manager |     http://user:pass@2.2.2.2:8000 = 100.0
+2026-07-27 10:27:22 | INFO     | MainThread | network_client_project.network.proxy_manager |     http://user:pass@3.3.3.3:8000 = 100.0
+2026-07-27 10:27:22 | INFO     | MainThread | network_client_project.network.proxy_manager |   Bottom 5 by score:
+2026-07-27 10:27:22 | INFO     | MainThread | network_client_project.network.proxy_manager |     http://user:pass@1.1.1.1:8000 = 100.0
+2026-07-27 10:27:22 | INFO     | MainThread | network_client_project.network.proxy_manager |     http://user:pass@2.2.2.2:8000 = 100.0
+2026-07-27 10:27:22 | INFO     | MainThread | network_client_project.network.proxy_manager |     http://user:pass@3.3.3.3:8000 = 100.0
+2026-07-27 10:27:22 | INFO     | ProxyManager-StartupValidator | network_client_project.network.proxy_manager | [ProxyManager] Starting background proxy validation thread...
+2026-07-27 10:27:22 | INFO     | MainThread | network_client_project.network.proxy_manager | [Proxy Scoring] Proxy: http://user:pass@1.1.1.1:8000 | Old score: 100.0 | Reason: FAILURE (GENERIC) | New score: 95.0
+2026-07-27 10:27:22 | INFO     | MainThread | network_client_project.network.proxy_manager | [ProxyManager] Proxy http://user:pass@1.1.1.1:8000 score changed by -5.0 (Reason: GENERIC)
+2026-07-27 10:27:22 | INFO     | MainThread | network_client_project.network.proxy_manager | Loaded 3 proxies into the manager.
+2026-07-27 10:27:22 | INFO     | MainThread | network_client_project.network.proxy_manager | Loaded proxy state from proxy_state.json
+2026-07-27 10:27:22 | INFO     | MainThread | network_client_project.network.proxy_manager | [ProxyManager] Loaded proxy state
+2026-07-27 10:27:22 | INFO     | MainThread | network_client_project.network.proxy_manager |   Total non-zero: 3 | Average score: 100.0
+2026-07-27 10:27:22 | INFO     | MainThread | network_client_project.network.proxy_manager |   Top 5 by score:
+2026-07-27 10:27:22 | INFO     | MainThread | network_client_project.network.proxy_manager |     http://user:pass@1.1.1.1:8000 = 100.0
+2026-07-27 10:27:22 | INFO     | MainThread | network_client_project.network.proxy_manager |     http://user:pass@2.2.2.2:8000 = 100.0
+2026-07-27 10:27:22 | INFO     | MainThread | network_client_project.network.proxy_manager |     http://user:pass@3.3.3.3:8000 = 100.0
+2026-07-27 10:27:22 | INFO     | MainThread | network_client_project.network.proxy_manager |   Bottom 5 by score:
+2026-07-27 10:27:22 | INFO     | MainThread | network_client_project.network.proxy_manager |     http://user:pass@1.1.1.1:8000 = 100.0
+2026-07-27 10:27:22 | INFO     | MainThread | network_client_project.network.proxy_manager |     http://user:pass@2.2.2.2:8000 = 100.0
+2026-07-27 10:27:22 | INFO     | MainThread | network_client_project.network.proxy_manager |     http://user:pass@3.3.3.3:8000 = 100.0
+2026-07-27 10:27:22 | INFO     | ProxyManager-StartupValidator | network_client_project.network.proxy_manager | [ProxyManager] Starting background proxy validation thread...
+2026-07-27 10:27:22 | INFO     | MainThread | network_client_project.network.proxy_manager | Loaded 3 proxies into the manager.
+2026-07-27 10:27:22 | INFO     | MainThread | network_client_project.network.proxy_manager | Loaded proxy state from proxy_state.json
+2026-07-27 10:27:22 | INFO     | MainThread | network_client_project.network.proxy_manager | [ProxyManager] Loaded proxy state
+2026-07-27 10:27:22 | INFO     | MainThread | network_client_project.network.proxy_manager |   Total non-zero: 3 | Average score: 100.0
+2026-07-27 10:27:22 | INFO     | MainThread | network_client_project.network.proxy_manager |   Top 5 by score:
+2026-07-27 10:27:22 | INFO     | MainThread | network_client_project.network.proxy_manager |     http://user:pass@1.1.1.1:8000 = 100.0
+2026-07-27 10:27:22 | INFO     | MainThread | network_client_project.network.proxy_manager |     http://user:pass@2.2.2.2:8000 = 100.0
+2026-07-27 10:27:22 | INFO     | MainThread | network_client_project.network.proxy_manager |     http://user:pass@3.3.3.3:8000 = 100.0
+2026-07-27 10:27:22 | INFO     | MainThread | network_client_project.network.proxy_manager |   Bottom 5 by score:
+2026-07-27 10:27:22 | INFO     | MainThread | network_client_project.network.proxy_manager |     http://user:pass@1.1.1.1:8000 = 100.0
+2026-07-27 10:27:22 | INFO     | MainThread | network_client_project.network.proxy_manager |     http://user:pass@2.2.2.2:8000 = 100.0
+2026-07-27 10:27:22 | INFO     | MainThread | network_client_project.network.proxy_manager |     http://user:pass@3.3.3.3:8000 = 100.0
+2026-07-27 10:27:22 | INFO     | ProxyManager-StartupValidator | network_client_project.network.proxy_manager | [ProxyManager] Starting background proxy validation thread...
+2026-07-27 10:27:22 | INFO     | MainThread | network_client_project.network.proxy_manager | [Proxy Scoring] Proxy: http://user:pass@2.2.2.2:8000 | Old score: 100.0 | Reason: FAILURE (GENERIC) | New score: 95.0
+2026-07-27 10:27:22 | INFO     | MainThread | network_client_project.network.proxy_manager | [ProxyManager] Proxy http://user:pass@2.2.2.2:8000 score changed by -5.0 (Reason: GENERIC)
+2026-07-27 10:27:22 | INFO     | MainThread | network_client_project.network.proxy_manager | [Proxy Scoring] Proxy: http://user:pass@2.2.2.2:8000 | Old score: 95.0 | Reason: FAILURE (GENERIC) | New score: 90.0
+2026-07-27 10:27:22 | INFO     | MainThread | network_client_project.network.proxy_manager | [ProxyManager] Proxy http://user:pass@2.2.2.2:8000 score changed by -5.0 (Reason: GENERIC)
+2026-07-27 10:27:22 | INFO     | MainThread | network_client_project.network.proxy_manager | [Proxy Scoring] Proxy: http://user:pass@2.2.2.2:8000 | Old score: 90.0 | Reason: FAILURE (GENERIC) | New score: 85.0
+2026-07-27 10:27:22 | INFO     | MainThread | network_client_project.network.proxy_manager | [ProxyManager] Proxy http://user:pass@2.2.2.2:8000 score changed by -5.0 (Reason: GENERIC)
+2026-07-27 10:27:22 | INFO     | MainThread | network_client_project.network.proxy_manager | [Proxy Scoring] Proxy: http://user:pass@2.2.2.2:8000 | Old score: 85.0 | Reason: FAILURE (GENERIC) | New score: 80.0
+2026-07-27 10:27:22 | INFO     | MainThread | network_client_project.network.proxy_manager | [ProxyManager] Proxy http://user:pass@2.2.2.2:8000 score changed by -5.0 (Reason: GENERIC)
+2026-07-27 10:27:22 | INFO     | MainThread | network_client_project.network.proxy_manager | [Proxy Scoring] Proxy: http://user:pass@2.2.2.2:8000 | Old score: 80.0 | Reason: FAILURE (GENERIC) | New score: 75.0
+2026-07-27 10:27:22 | INFO     | MainThread | network_client_project.network.proxy_manager | [ProxyManager] Proxy http://user:pass@2.2.2.2:8000 score changed by -5.0 (Reason: GENERIC)
+2026-07-27 10:27:23 | INFO     | MainThread | network_client_project.network.client | NetworkClient initialized with decoupled Downloader Middleware stack.
+2026-07-27 10:27:31 | INFO     | MainThread | network_client_project.network.client | NetworkClient initialized with decoupled Downloader Middleware stack.
+2026-07-27 10:27:46 | WARNING  | ThreadPoolExecutor-3_0 | network_client_project.network.proxy_manager | [ProxyManager] Proxy http://user:pass@1.1.1.1:8000 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-27 10:27:46 | WARNING  | ThreadPoolExecutor-3_1 | network_client_project.network.proxy_manager | [ProxyManager] Proxy http://user:pass@2.2.2.2:8000 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-27 10:27:46 | WARNING  | ThreadPoolExecutor-3_2 | network_client_project.network.proxy_manager | [ProxyManager] Proxy http://user:pass@3.3.3.3:8000 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-27 10:27:46 | WARNING  | ThreadPoolExecutor-4_2 | network_client_project.network.proxy_manager | [ProxyManager] Proxy http://user:pass@3.3.3.3:8000 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-27 10:27:46 | INFO     | ProxyManager-StartupValidator | network_client_project.network.proxy_manager | [ProxyManager] Background proxy validation complete. Alive: 0/3, Google-capable: 0/3
+2026-07-27 10:27:46 | WARNING  | ThreadPoolExecutor-5_0 | network_client_project.network.proxy_manager | [ProxyManager] Proxy http://user:pass@1.1.1.1:8000 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-27 10:27:46 | WARNING  | ThreadPoolExecutor-5_2 | network_client_project.network.proxy_manager | [ProxyManager] Proxy http://user:pass@3.3.3.3:8000 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-27 10:27:46 | WARNING  | ThreadPoolExecutor-4_0 | network_client_project.network.proxy_manager | [ProxyManager] Proxy http://user:pass@1.1.1.1:8000 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-27 10:27:46 | WARNING  | ThreadPoolExecutor-5_1 | network_client_project.network.proxy_manager | [ProxyManager] Proxy http://user:pass@2.2.2.2:8000 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-27 10:27:46 | WARNING  | ThreadPoolExecutor-4_1 | network_client_project.network.proxy_manager | [ProxyManager] Proxy http://user:pass@2.2.2.2:8000 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-27 10:27:46 | INFO     | ProxyManager-StartupValidator | network_client_project.network.proxy_manager | [ProxyManager] Background proxy validation complete. Alive: 0/3, Google-capable: 0/3
+2026-07-27 10:27:46 | INFO     | ProxyManager-StartupValidator | network_client_project.network.proxy_manager | [ProxyManager] Background proxy validation complete. Alive: 0/3, Google-capable: 0/3
+2026-07-27 10:27:46 | WARNING  | ThreadPoolExecutor-6_0 | network_client_project.network.proxy_manager | [ProxyManager] Proxy http://user:pass@1.1.1.1:8000 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-27 10:27:46 | WARNING  | ThreadPoolExecutor-6_1 | network_client_project.network.proxy_manager | [ProxyManager] Proxy http://user:pass@2.2.2.2:8000 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-27 10:27:47 | WARNING  | ThreadPoolExecutor-6_2 | network_client_project.network.proxy_manager | [ProxyManager] Proxy http://user:pass@3.3.3.3:8000 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-27 10:27:47 | INFO     | ProxyManager-StartupValidator | network_client_project.network.proxy_manager | [ProxyManager] Background proxy validation complete. Alive: 0/3, Google-capable: 0/3
+2026-07-27 10:27:51 | INFO     | MainThread | pillar1.browser | [CookieManager] Successfully saved 3 cookies for google.com
+2026-07-27 10:27:51 | INFO     | MainThread | pillar1.browser | [BrowserManager] Lazy-initializing Playwright driver (sync)...
+2026-07-27 10:27:59 | INFO     | MainThread | pillar1.browser | [BrowserPool] Initializing pool (CPU cores: 8, Healthy proxies: 1, Config limit: 3) -> Pool Size: 1
+2026-07-27 10:27:59 | INFO     | MainThread | pillar1.browser | [BrowserPool] Lazy initialization configured. Pool capacity: 1. Instances will launch on-demand.
+2026-07-27 10:27:59 | INFO     | MainThread | pillar1.browser | [BrowserPool] No active browser instances. Creating on-demand instance.
+2026-07-27 10:28:03 | INFO     | MainThread | pillar1.browser | [BrowserInstance #0] Launched successfully (Proxy: None, IgnoreCerts: True)
+2026-07-27 10:28:04 | INFO     | MainThread | pillar1.browser | [BrowserManager] Shutting down BrowserManager pool...
+2026-07-27 10:28:04 | INFO     | MainThread | pillar1.browser | [BrowserPool] Stopping all browser instances...
+2026-07-27 10:28:04 | INFO     | MainThread | pillar1.browser | [BrowserInstance #0] Browser instance closed cleanly.
+2026-07-27 10:28:04 | WARNING  | MainThread | pillar1.browser | [BrowserCircuitBreaker] CAPTCHA threshold reached for 'test_provider'. Tripping circuit breaker. Cooldown active for 1.0s.
+2026-07-27 10:28:04 | INFO     | MainThread | pillar1.browser | [BrowserManager] Lazy-initializing Playwright driver (sync)...
+2026-07-27 10:28:05 | INFO     | MainThread | pillar1.browser | [BrowserPool] Initializing pool (CPU cores: 8, Healthy proxies: 1, Config limit: 3) -> Pool Size: 1
+2026-07-27 10:28:05 | INFO     | MainThread | pillar1.browser | [BrowserPool] Lazy initialization configured. Pool capacity: 1. Instances will launch on-demand.
+2026-07-27 10:28:05 | WARNING  | MainThread | pillar1.browser | [BrowserPool] Connection policy is 'proxy_only' for provider 'playwright_google', but no healthy proxies are available. Aborting browser launch to prevent direct connection.
+2026-07-27 10:28:05 | INFO     | MainThread | pillar1.browser | [BrowserManager] Shutting down BrowserManager pool...
+2026-07-27 10:28:05 | INFO     | MainThread | pillar1.browser | [BrowserPool] Stopping all browser instances...
+2026-07-27 10:28:05 | INFO     | MainThread | search.base_registry | Scanning for plugins in C:\Users\yasha\Downloads\pillar1\pillar1\search\providers...
+2026-07-27 10:28:05 | INFO     | MainThread | search.manager | [SearchManager] google_html recorded 4.0 failure points (Reason: 429 Rate Limit). Total: 4.0/10.0
+2026-07-27 10:28:05 | INFO     | MainThread | search.manager | [SearchManager] google_html recorded 4.0 failure points (Reason: 429 Rate Limit). Total: 8.0/10.0
+2026-07-27 10:28:05 | INFO     | MainThread | search.manager | [SearchManager] google_html recorded 4.0 failure points (Reason: 429 Rate Limit). Total: 12.0/10.0
+2026-07-27 10:28:05 | WARNING  | MainThread | search.manager | [SearchManager] google_html failure score reached 12.0. Tripping breaker to OPEN.
+2026-07-27 10:28:05 | INFO     | MainThread | search.manager | [SearchManager] google_html entered cooldown for 300s (until 1785128585) | Breaker state is OPEN
+2026-07-27 10:28:05 | INFO     | MainThread | search.manager | [SearchManager] google_html recovered from cooldown. Breaker is HALF_OPEN.
+2026-07-27 10:28:05 | WARNING  | MainThread | search.manager | [SearchManager] google_html failed probe query (Reason: Probe query failure). Tripping breaker back to OPEN.
+2026-07-27 10:28:05 | INFO     | MainThread | search.manager | [SearchManager] google_html entered cooldown for 300s (until 1785128585) | Breaker state is OPEN
+2026-07-27 10:28:05 | INFO     | MainThread | search.manager | [SearchManager] google_html recovered from cooldown. Breaker is HALF_OPEN.
+2026-07-27 10:28:06 | INFO     | MainThread | network_client_project.network.proxy_manager | [ProxyManager] Proxy http://proxy.example:8080 quarantined for 1800s (step 1) for domain google. Score changed by -10.0.
+2026-07-27 10:28:06 | INFO     | MainThread | network_client_project.network.proxy_manager | [Proxy Scoring] Proxy: http://proxy.example:8080 | Old score: 100.0 | Reason: FAILURE (CAPTCHA) | New score: 90.0
+2026-07-27 10:28:06 | INFO     | MainThread | network_client_project.network.proxy_manager | [ProxyManager] Proxy http://proxy.example:8080 score changed by -10.0 (Reason: CAPTCHA)
+2026-07-27 10:28:06 | INFO     | MainThread | network_client_project.network.proxy_manager | [ProxyManager] Proxy http://proxy.example:8080 quarantine cleared after success.
+2026-07-27 10:28:06 | INFO     | MainThread | network_client_project.network.proxy_manager | [Proxy Scoring] Proxy: http://proxy.example:8080 | Old score: 90.0 | Reason: SUCCESS (VALID_RESULTS) | New score: 98.0
+2026-07-27 10:28:06 | INFO     | MainThread | network_client_project.network.proxy_manager | [ProxyManager] Proxy http://proxy.example:8080 score changed by +8.0 (Reason: VALID_RESULTS)
+2026-07-27 10:28:06 | INFO     | MainThread | network_client_project.network.proxy_manager | [Proxy Scoring] Proxy: http://proxy.example:8080 | Old score: 98.0 | Reason: SUCCESS (VALID_RESULTS) | New score: 100.0
+2026-07-27 10:28:06 | INFO     | MainThread | network_client_project.network.proxy_manager | [ProxyManager] Proxy http://proxy.example:8080 score changed by +2.0 (Reason: VALID_RESULTS)
+2026-07-27 10:28:06 | INFO     | MainThread | network_client_project.network.proxy_manager | [Proxy Scoring] Proxy: test:1234 | Old score: 100.0 | Reason: SUCCESS (VALID_RESULTS) | New score: 100.0
+2026-07-27 10:28:06 | INFO     | MainThread | network_client_project.network.proxy_manager | [ProxyManager] Proxy test:1234 score changed by +0.0 (Reason: VALID_RESULTS)
+2026-07-27 10:28:06 | INFO     | MainThread | network_client_project.network.proxy_manager | [ProxyManager] Proxy test:1234 quarantined for 1800s (step 1) for domain google.com. Score changed by -10.0.
+2026-07-27 10:28:06 | INFO     | MainThread | network_client_project.network.proxy_manager | [Proxy Scoring] Proxy: test:1234 | Old score: 100.0 | Reason: FAILURE (CAPTCHA) | New score: 90.0
+2026-07-27 10:28:06 | INFO     | MainThread | network_client_project.network.proxy_manager | [ProxyManager] Proxy test:1234 score changed by -10.0 (Reason: CAPTCHA)
+2026-07-27 10:28:06 | INFO     | MainThread | network_client_project.network.proxy_manager | [ProxyManager] Proxy http://12.34.56.78:8080 quarantined for 900s (step 1) for domain google.com. Score changed by -8.0.
+2026-07-27 10:28:06 | INFO     | MainThread | network_client_project.network.proxy_manager | [Proxy Scoring] Proxy: http://12.34.56.78:8080 | Old score: 100.0 | Reason: FAILURE (RATE_LIMIT) | New score: 92.0
+2026-07-27 10:28:06 | INFO     | MainThread | network_client_project.network.proxy_manager | [ProxyManager] Proxy http://12.34.56.78:8080 score changed by -8.0 (Reason: RATE_LIMIT)
+2026-07-27 10:28:06 | INFO     | MainThread | network_client_project.network.proxy_manager | [ProxyManager] Proxy http://12.34.56.78:8080 quarantined for 1800s (step 2) for domain google.com. Score changed by -10.0.
+2026-07-27 10:28:06 | INFO     | MainThread | network_client_project.network.proxy_manager | [Proxy Scoring] Proxy: http://12.34.56.78:8080 | Old score: 92.0 | Reason: FAILURE (CAPTCHA) | New score: 82.0
+2026-07-27 10:28:06 | INFO     | MainThread | network_client_project.network.proxy_manager | [ProxyManager] Proxy http://12.34.56.78:8080 score changed by -10.0 (Reason: CAPTCHA)
+2026-07-27 10:28:06 | INFO     | MainThread | utils.budget_manager | [ProviderBudgetManager] Starting provider 'bing' with budget limit of 7.0s.
+2026-07-27 10:28:06 | INFO     | MainThread | search.manager | [SearchManager] bing recorded 1.0 failure points (Reason: VALID_ZERO_RESULTS for high expectation query (1.00)). Total: 1.0/10.0
+2026-07-27 10:28:06 | INFO     | MainThread | utils.budget_manager | [ProviderBudgetManager] Starting provider 'bing' with budget limit of 7.0s.
+2026-07-27 10:28:06 | WARNING  | MainThread | utils.budget_manager | [ProviderBudgetManager] Blocked Google Search: remaining budget too low (10.0s remaining), minimum required fallback budget is 18.0s.
+2026-07-27 10:28:07 | INFO     | MainThread | utils.budget_manager | [ProviderBudgetManager] Starting provider 'google_html' with budget limit of 8.0s.
+2026-07-27 10:28:07 | INFO     | MainThread | search.manager | [SearchManager] google_html recorded 3.0 failure points (Reason: Unavailable (ENABLE_JS)). Total: 3.0/10.0
+2026-07-27 10:28:07 | INFO     | MainThread | network_client_project.network.client | NetworkClient initialized with decoupled Downloader Middleware stack.
+2026-07-27 10:28:07 | INFO     | MainThread | network_client_project.network.client | NetworkClient initialized with decoupled Downloader Middleware stack.
+2026-07-27 10:28:07 | INFO     | MainThread | network_client_project.network.client | NetworkClient initialized with decoupled Downloader Middleware stack.
+2026-07-27 10:31:22 | INFO     | MainThread | network_client_project.network.logger | Network Logging System Initialized.
+2026-07-27 10:31:22 | INFO     | MainThread | query.expansion | Loaded persistent query feedback from data\query_feedback_semantic.json
+2026-07-27 10:31:22 | INFO     | MainThread | search.base_registry | Scanning for plugins in C:\Users\yasha\Downloads\pillar1\pillar1\search\providers...
+2026-07-27 10:31:22 | INFO     | MainThread | network_client_project.network.proxy_manager | Loaded 6 proxies into the manager.
+2026-07-27 10:31:22 | INFO     | MainThread | network_client_project.network.proxy_manager | Loaded proxy state from proxy_state.json
+2026-07-27 10:31:22 | INFO     | MainThread | network_client_project.network.proxy_manager | [ProxyManager] Loaded proxy state
+2026-07-27 10:31:22 | INFO     | MainThread | network_client_project.network.proxy_manager |   Total non-zero: 6 | Average score: 97.2
+2026-07-27 10:31:22 | INFO     | MainThread | network_client_project.network.proxy_manager |   Top 5 by score:
+2026-07-27 10:31:22 | INFO     | MainThread | network_client_project.network.proxy_manager |     34.87.80.221:30000 = 100.0
+2026-07-27 10:31:22 | INFO     | MainThread | network_client_project.network.proxy_manager |     47.81.56.193:8888 = 100.0
+2026-07-27 10:31:22 | INFO     | MainThread | network_client_project.network.proxy_manager |     34.134.231.117:3129 = 100.0
+2026-07-27 10:31:22 | INFO     | MainThread | network_client_project.network.proxy_manager |     52.67.38.58:3128 = 95.0
+2026-07-27 10:31:22 | INFO     | MainThread | network_client_project.network.proxy_manager |     217.182.203.184:8888 = 94.0
+2026-07-27 10:31:22 | INFO     | MainThread | network_client_project.network.proxy_manager |   Bottom 5 by score:
+2026-07-27 10:31:22 | INFO     | MainThread | network_client_project.network.proxy_manager |     47.81.56.193:8888 = 100.0
+2026-07-27 10:31:22 | INFO     | MainThread | network_client_project.network.proxy_manager |     34.134.231.117:3129 = 100.0
+2026-07-27 10:31:22 | INFO     | MainThread | network_client_project.network.proxy_manager |     52.67.38.58:3128 = 95.0
+2026-07-27 10:31:22 | INFO     | MainThread | network_client_project.network.proxy_manager |     217.182.203.184:8888 = 94.0
+2026-07-27 10:31:22 | INFO     | MainThread | network_client_project.network.proxy_manager |     181.39.25.196:8118 = 94.0
+2026-07-27 10:31:22 | INFO     | ProxyManager-StartupValidator | network_client_project.network.proxy_manager | [ProxyManager] Starting background proxy validation thread...
+2026-07-27 10:31:22 | INFO     | MainThread | search.base_registry | Scanning for plugins in C:\Users\yasha\Downloads\pillar1\network_client_project\network\middleware...
+2026-07-27 10:31:22 | INFO     | MainThread | network_client_project.network.client | NetworkClient initialized with decoupled Downloader Middleware stack.
+2026-07-27 10:31:22 | INFO     | MainThread | network_client_project.network.client | NetworkClient initialized with decoupled Downloader Middleware stack.
+2026-07-27 10:31:22 | INFO     | MainThread | network_client_project.network.client | NetworkClient initialized with decoupled Downloader Middleware stack.
+2026-07-27 10:31:22 | INFO     | MainThread | utils.budget_manager | [ProviderBudgetManager] Starting provider 'playwright_google' with budget limit of 15.0s.
+2026-07-27 10:31:22 | INFO     | MainThread | pillar1.search.playwright_google | [PlaywrightGoogleProvider] Current thread: MainThread
+2026-07-27 10:31:22 | INFO     | MainThread | pillar1.search.playwright_google | [PlaywrightGoogleProvider] No running event loop detected in this thread.
+2026-07-27 10:31:22 | INFO     | MainThread | pillar1.browser | [BrowserManager] Lazy-initializing Playwright driver (sync)...
+2026-07-27 10:31:23 | INFO     | MainThread | pillar1.browser | [BrowserPool] Initializing pool (CPU cores: 8, Healthy proxies: 6, Config limit: 3) -> Pool Size: 3
+2026-07-27 10:31:23 | INFO     | MainThread | pillar1.browser | [BrowserPool] Lazy initialization configured. Pool capacity: 3. Instances will launch on-demand.
+2026-07-27 10:31:23 | INFO     | MainThread | pillar1.browser | [BrowserPool] No eligible browser instances for provider 'google'. Creating on-demand instance.
+2026-07-27 10:31:23 | INFO     | MainThread | network_client_project.network.proxy_manager | [ProxyManager] Proxy 34.87.80.221:30000 transitioned to healthy.
+2026-07-27 10:31:23 | INFO     | MainThread | network_client_project.network.proxy_manager | [ProxyManager] Proxy 181.39.25.196:8118 transitioned to healthy.
+2026-07-27 10:31:23 | INFO     | MainThread | network_client_project.network.proxy_manager | [ProxyManager] Proxy 34.134.231.117:3129 transitioned to healthy.
+2026-07-27 10:31:23 | INFO     | MainThread | network_client_project.network.proxy_manager | [ProxyManager] Selected proxy 34.134.231.117:3129 (Tier B, derived=0.380, score=100.0, freshness=0.8)
+2026-07-27 10:31:23 | INFO     | MainThread | pillar1.browser | [BrowserInstance #0] Launched successfully (Proxy: 34.134.231.117:3129, IgnoreCerts: True)
+2026-07-27 10:31:23 | INFO     | MainThread | pillar1.browser | [BrowserInstance #0] Warm-up: Navigating to https://www.google.com...
+2026-07-27 10:31:24 | INFO     | ThreadPoolExecutor-0_3 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 181.39.25.196:8118 -> ALIVE (general HTTPS OK)
+2026-07-27 10:31:25 | INFO     | ThreadPoolExecutor-0_5 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 34.134.231.117:3129 -> ALIVE (general HTTPS OK)
+2026-07-27 10:31:25 | INFO     | MainThread | pillar1.browser | [BrowserInstance #0] Fast warm-up pre-flight complete. Browser & proxy are healthy!
+2026-07-27 10:31:26 | INFO     | MainThread | pillar1.search.playwright_google | [PlaywrightGoogleProvider] Fetching search page: https://www.google.com/search?q=automobile+startups&num=10&hl=en&gl=us
+2026-07-27 10:31:26 | INFO     | ThreadPoolExecutor-0_3 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 181.39.25.196:8118 -> Google OK
+2026-07-27 10:31:27 | INFO     | ThreadPoolExecutor-0_5 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 34.134.231.117:3129 -> Google OK
+2026-07-27 10:31:30 | INFO     | MainThread | pillar1.browser | [CookieManager] Successfully saved 4 cookies for google.com
+2026-07-27 10:31:30 | INFO     | MainThread | pillar1.search.playwright_google | [PlaywrightGoogleProvider] HTML Size: 28,902 bytes. Page classification: CAPTCHA_PAGE
+2026-07-27 10:31:30 | ERROR    | MainThread | pillar1.search.playwright_google | [PlaywrightGoogleProvider] Query error: [playwright_google] unavailable: CAPTCHA block page detected on Playwright session.
+2026-07-27 10:31:30 | INFO     | MainThread | network_client_project.network.proxy_manager | [ProxyManager] Proxy 34.134.231.117:3129 quarantined for 1800s (step 1) for domain google.com. Score changed by -10.0.
+2026-07-27 10:31:30 | INFO     | MainThread | network_client_project.network.proxy_manager | [Proxy Scoring] Proxy: 34.134.231.117:3129 | Old score: 100.0 | Reason: FAILURE (CAPTCHA) | New score: 90.0
+2026-07-27 10:31:30 | INFO     | MainThread | network_client_project.network.proxy_manager | [ProxyManager] Proxy 34.134.231.117:3129 score changed by -10.0 (Reason: CAPTCHA)
+2026-07-27 10:31:30 | INFO     | MainThread | search.manager | [SearchManager] playwright_google recorded 3.0 failure points (Reason: Captcha/Block). Total: 3.0/10.0
+2026-07-27 10:31:30 | INFO     | MainThread | utils.budget_manager | [ProviderBudgetManager] Starting provider 'google_html' with budget limit of 8.0s.
+2026-07-27 10:31:30 | INFO     | MainThread | search.google_scheduler | [GoogleScheduler] Initialized with max_workers=2, circuit breaker window=20, threshold=80%
+2026-07-27 10:31:30 | INFO     | MainThread | search.google_scheduler | [GoogleScheduler] Resized max_workers to 1 (Healthy proxies: 5)
+2026-07-27 10:31:30 | INFO     | MainThread | search.google_scheduler | [GoogleScheduler] Submitting query to executor: 'automobile startups'
+2026-07-27 10:31:30 | INFO     | GoogleSchedulerWorker_0 | search.google_scheduler | [GoogleScheduler] Pacing delay: 3.99s
+2026-07-27 10:31:31 | INFO     | ThreadPoolExecutor-0_1 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 47.81.56.193:8888 -> ALIVE (general HTTPS OK)
+2026-07-27 10:31:31 | WARNING  | ThreadPoolExecutor-0_2 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 217.182.203.184:8888 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-27 10:31:31 | INFO     | ThreadPoolExecutor-0_1 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 47.81.56.193:8888 -> Google OK
+2026-07-27 10:31:34 | INFO     | GoogleSchedulerWorker_0 | network_client_project.network.proxy_manager | [ProxyManager] Selected proxy 47.81.56.193:8888 (Tier E, derived=0.462, score=100.0, freshness=0.8)
+2026-07-27 10:31:34 | INFO     | GoogleSchedulerWorker_0 | search.google_scheduler | [GoogleScheduler] [Attempt 1/2] Query: 'automobile startups' via proxy 47.81.56.193:8888 (Tier E, derived=0.462, score=100.0)
+2026-07-27 10:31:38 | WARNING  | GoogleSchedulerWorker_0 | network_client_project.network.middleware.retry | [Retry] Search provider google_html hit block/CAPTCHA/429 (HTTP 429). Bubbling up immediately for fail-fast.
+2026-07-27 10:31:38 | WARNING  | GoogleSchedulerWorker_0 | network_client_project.network.middleware.throttle | [AutoThrottle] 429 Rate Limit hit on www.google.com. Reducing rate: 0.50 rps -> 0.20 rps.
+2026-07-27 10:31:38 | INFO     | GoogleSchedulerWorker_0 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 47.81.56.193:8888 connection failed (step 1). Score changed by -6.0.
+2026-07-27 10:31:38 | WARNING  | GoogleSchedulerWorker_0 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 47.81.56.193:8888 marked dead_for_google after 3 consecutive timeouts.
+2026-07-27 10:31:38 | INFO     | GoogleSchedulerWorker_0 | network_client_project.network.proxy_manager | [Proxy Scoring] Proxy: 47.81.56.193:8888 | Old score: 100.0 | Reason: FAILURE (NETWORK_FAILURE) | New score: 94.0
+2026-07-27 10:31:38 | INFO     | GoogleSchedulerWorker_0 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 47.81.56.193:8888 score changed by -6.0 (Reason: NETWORK_FAILURE)
+2026-07-27 10:31:38 | WARNING  | GoogleSchedulerWorker_0 | utils.budget_manager | [ProviderBudgetManager] Blocked 'google_html': provider execution budget exhausted (8.1s elapsed, limit was 8.0s).
+2026-07-27 10:31:38 | WARNING  | GoogleSchedulerWorker_0 | search.google_scheduler | [GoogleScheduler] Budget or fallback deadline constraint exceeded. Aborting Google search.
+2026-07-27 10:31:38 | ERROR    | GoogleSchedulerWorker_0 | search.google_scheduler | [GoogleScheduler] All 1 retries failed for: 'automobile startups'
+2026-07-27 10:31:38 | INFO     | MainThread | search.manager | [SearchManager] google_html recorded 4.0 failure points (Reason: 429 Rate Limit). Total: 4.0/10.0
+2026-07-27 10:31:38 | INFO     | MainThread | utils.budget_manager | [ProviderBudgetManager] Starting provider 'duckduckgo' with budget limit of 7.0s.
+2026-07-27 10:31:46 | WARNING  | ThreadPoolExecutor-0_4 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 52.67.38.58:3128 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-27 10:31:46 | WARNING  | ThreadPoolExecutor-0_0 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 34.87.80.221:30000 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-27 10:31:46 | INFO     | ProxyManager-StartupValidator | network_client_project.network.proxy_manager | [ProxyManager] Background proxy validation complete. Alive: 3/6, Google-capable: 2/6
+2026-07-27 10:31:53 | INFO     | MainThread | search.manager | [SearchManager] duckduckgo recorded 3.0 failure points (Reason: Unavailable (Temporary anti-bot response (2)). Total: 3.0/10.0
+2026-07-27 10:31:53 | INFO     | MainThread | utils.budget_manager | [ProviderBudgetManager] Starting provider 'brave' with budget limit of 7.0s.
+2026-07-27 10:32:02 | INFO     | MainThread | search.base_registry | Scanning for plugins in C:\Users\yasha\Downloads\pillar1\pillar_4_pipeline\exporters...
+2026-07-27 10:32:03 | INFO     | MainThread | pillar_4_pipeline.exporters.json_exporter | [JsonExporter] Successfully exported 1 records to JSON file: cleaned_data.json
+2026-07-27 10:32:04 | INFO     | MainThread | network_client_project.network.logger | Network Logging System Initialized.
+2026-07-27 10:32:04 | INFO     | MainThread | query.expansion | Loaded persistent query feedback from data\query_feedback_semantic.json
+2026-07-27 10:32:04 | INFO     | MainThread | search.base_registry | Scanning for plugins in C:\Users\yasha\Downloads\pillar1\pillar_4_pipeline\exporters...
+2026-07-27 10:32:04 | INFO     | MainThread | pillar_4_pipeline.exporters.sqlite_exporter | [SQLiteExporter] Successfully exported 1 records to SQLite database: leads.db
+2026-07-27 10:32:04 | INFO     | MainThread | pillar1.browser | [BrowserManager] Shutting down BrowserManager pool...
+2026-07-27 10:32:04 | INFO     | MainThread | pillar1.browser | [BrowserPool] Stopping all browser instances...
+2026-07-27 10:32:04 | INFO     | MainThread | pillar1.browser | [BrowserInstance #0] Browser instance closed cleanly.
+2026-07-31 16:57:15 | INFO     | MainThread | network_client_project.network.logger | Network Logging System Initialized.
+2026-07-31 16:57:15 | INFO     | MainThread | query.expansion | Loaded persistent query feedback from data\query_feedback_semantic.json
+2026-07-31 16:57:15 | INFO     | MainThread | search.base_registry | Scanning for plugins in C:\Users\yasha\Downloads\pillar1\pillar1\search\providers...
+2026-07-31 16:57:16 | ERROR    | MainThread | search.base_registry | Failed to load module search.providers.linkedin_playwright_provider: No module named 'playwright'
+Traceback (most recent call last):
+  File "C:\Users\yasha\Downloads\pillar1\pillar1\search\base_registry.py", line 51, in load_plugins
+    module = importlib.import_module(full_module_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yasha\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "C:\Users\yasha\Downloads\pillar1\pillar1\search\providers\linkedin_playwright_provider.py", line 16, in <module>
+    from pillar1.browser.browser_manager import get_browser_manager
+  File "C:\Users\yasha\Downloads\pillar1\pillar1\browser\browser_manager.py", line 4, in <module>
+    from playwright.sync_api import sync_playwright, Playwright
+ModuleNotFoundError: No module named 'playwright'
+2026-07-31 16:57:16 | ERROR    | MainThread | search.base_registry | Failed to load module search.providers.playwright_google_provider: No module named 'playwright'
+Traceback (most recent call last):
+  File "C:\Users\yasha\Downloads\pillar1\pillar1\search\base_registry.py", line 51, in load_plugins
+    module = importlib.import_module(full_module_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yasha\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "C:\Users\yasha\Downloads\pillar1\pillar1\search\providers\playwright_google_provider.py", line 17, in <module>
+    from pillar1.browser.browser_manager import get_browser_manager
+  File "C:\Users\yasha\Downloads\pillar1\pillar1\browser\browser_manager.py", line 4, in <module>
+    from playwright.sync_api import sync_playwright, Playwright
+ModuleNotFoundError: No module named 'playwright'
+2026-07-31 16:57:16 | INFO     | MainThread | network_client_project.network.proxy_manager | Loaded 6 proxies into the manager.
+2026-07-31 16:57:16 | INFO     | MainThread | network_client_project.network.proxy_manager | Loaded proxy state from proxy_state.json
+2026-07-31 16:57:16 | INFO     | MainThread | network_client_project.network.proxy_manager | [ProxyManager] Loaded proxy state
+2026-07-31 16:57:16 | INFO     | MainThread | network_client_project.network.proxy_manager |   Total non-zero: 6 | Average score: 94.5
+2026-07-31 16:57:16 | INFO     | MainThread | network_client_project.network.proxy_manager |   Top 5 by score:
+2026-07-31 16:57:16 | INFO     | MainThread | network_client_project.network.proxy_manager |     34.87.80.221:30000 = 100.0
+2026-07-31 16:57:16 | INFO     | MainThread | network_client_project.network.proxy_manager |     52.67.38.58:3128 = 95.0
+2026-07-31 16:57:16 | INFO     | MainThread | network_client_project.network.proxy_manager |     47.81.56.193:8888 = 94.0
+2026-07-31 16:57:16 | INFO     | MainThread | network_client_project.network.proxy_manager |     217.182.203.184:8888 = 94.0
+2026-07-31 16:57:16 | INFO     | MainThread | network_client_project.network.proxy_manager |     181.39.25.196:8118 = 94.0
+2026-07-31 16:57:16 | INFO     | MainThread | network_client_project.network.proxy_manager |   Bottom 5 by score:
+2026-07-31 16:57:16 | INFO     | MainThread | network_client_project.network.proxy_manager |     52.67.38.58:3128 = 95.0
+2026-07-31 16:57:16 | INFO     | MainThread | network_client_project.network.proxy_manager |     47.81.56.193:8888 = 94.0
+2026-07-31 16:57:16 | INFO     | MainThread | network_client_project.network.proxy_manager |     217.182.203.184:8888 = 94.0
+2026-07-31 16:57:16 | INFO     | MainThread | network_client_project.network.proxy_manager |     181.39.25.196:8118 = 94.0
+2026-07-31 16:57:16 | INFO     | MainThread | network_client_project.network.proxy_manager |     34.134.231.117:3129 = 90.0
+2026-07-31 16:57:16 | INFO     | ProxyManager-StartupValidator | network_client_project.network.proxy_manager | [ProxyManager] Starting background proxy validation thread...
+2026-07-31 16:57:16 | INFO     | MainThread | search.base_registry | Scanning for plugins in C:\Users\yasha\Downloads\pillar1\network_client_project\network\middleware...
+2026-07-31 16:57:16 | INFO     | MainThread | network_client_project.network.client | NetworkClient initialized with decoupled Downloader Middleware stack.
+2026-07-31 16:57:16 | INFO     | MainThread | network_client_project.network.client | NetworkClient initialized with decoupled Downloader Middleware stack.
+2026-07-31 16:57:16 | INFO     | MainThread | network_client_project.network.client | NetworkClient initialized with decoupled Downloader Middleware stack.
+2026-07-31 16:57:17 | INFO     | MainThread | utils.budget_manager | [ProviderBudgetManager] Starting provider 'google_html' with budget limit of 8.0s.
+2026-07-31 16:57:17 | INFO     | MainThread | search.google_scheduler | [GoogleScheduler] Initialized with max_workers=2, circuit breaker window=20, threshold=80%
+2026-07-31 16:57:17 | INFO     | MainThread | search.google_scheduler | [GoogleScheduler] Resized max_workers to 1 (Healthy proxies: 6)
+2026-07-31 16:57:17 | INFO     | MainThread | search.google_scheduler | [GoogleScheduler] Submitting query to executor: 'runo ai company'
+2026-07-31 16:57:17 | INFO     | GoogleSchedulerWorker_0 | search.google_scheduler | [GoogleScheduler] Pacing delay: 4.19s
+2026-07-31 16:57:19 | INFO     | ThreadPoolExecutor-0_1 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 47.81.56.193:8888 -> ALIVE (general HTTPS OK)
+2026-07-31 16:57:20 | INFO     | ThreadPoolExecutor-0_1 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 47.81.56.193:8888 -> Google OK
+2026-07-31 16:57:20 | INFO     | ThreadPoolExecutor-0_3 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 181.39.25.196:8118 -> ALIVE (general HTTPS OK)
+2026-07-31 16:57:21 | INFO     | GoogleSchedulerWorker_0 | network_client_project.network.proxy_manager | [ProxyManager] Selected proxy 34.134.231.117:3129 (Tier B, derived=0.173, score=90.0, freshness=0.0)
+2026-07-31 16:57:21 | INFO     | GoogleSchedulerWorker_0 | search.google_scheduler | [GoogleScheduler] [Attempt 1/2] Query: 'runo ai company' via proxy 34.134.231.117:3129 (Tier B, derived=0.173, score=90.0)
+2026-07-31 16:57:21 | INFO     | ThreadPoolExecutor-0_5 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 34.134.231.117:3129 -> ALIVE (general HTTPS OK)
+2026-07-31 16:57:23 | INFO     | ThreadPoolExecutor-0_3 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 181.39.25.196:8118 -> Google OK
+2026-07-31 16:57:26 | INFO     | ThreadPoolExecutor-0_5 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 34.134.231.117:3129 -> Google OK
+2026-07-31 16:57:28 | INFO     | GoogleSchedulerWorker_0 | network_client_project.network.middleware.throttle | [AutoThrottle] High latency (4.94s) on www.google.com. Reducing rate: 0.50 rps -> 0.40 rps.
+2026-07-31 16:57:28 | WARNING  | ThreadPoolExecutor-0_2 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 217.182.203.184:8888 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-31 16:57:28 | INFO     | GoogleSchedulerWorker_0 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 34.134.231.117:3129 quarantined for 1800s (step 1) for domain google.com. Score changed by -10.0.
+2026-07-31 16:57:28 | INFO     | GoogleSchedulerWorker_0 | network_client_project.network.proxy_manager | [Proxy Scoring] Proxy: 34.134.231.117:3129 | Old score: 90.0 | Reason: FAILURE (CAPTCHA) | New score: 80.0
+2026-07-31 16:57:28 | INFO     | GoogleSchedulerWorker_0 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 34.134.231.117:3129 score changed by -10.0 (Reason: CAPTCHA)
+2026-07-31 16:57:28 | ERROR    | GoogleSchedulerWorker_0 | search.google_scheduler | [GoogleScheduler] All 1 retries failed for: 'runo ai company'
+2026-07-31 16:57:28 | INFO     | MainThread | search.manager | [SearchManager] google_html recorded 3.0 failure points (Reason: Captcha/Block). Total: 3.0/10.0
+2026-07-31 16:57:28 | INFO     | MainThread | utils.budget_manager | [ProviderBudgetManager] Starting provider 'duckduckgo' with budget limit of 7.0s.
+2026-07-31 16:57:33 | INFO     | ThreadPoolExecutor-0_0 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 34.87.80.221:30000 -> ALIVE (general HTTPS OK)
+2026-07-31 16:57:35 | INFO     | ThreadPoolExecutor-0_0 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 34.87.80.221:30000 -> Google OK
+2026-07-31 16:57:40 | WARNING  | ThreadPoolExecutor-0_4 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 52.67.38.58:3128 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-31 16:57:40 | INFO     | ProxyManager-StartupValidator | network_client_project.network.proxy_manager | [ProxyManager] Background proxy validation complete. Alive: 4/6, Google-capable: 4/6
+2026-07-31 16:58:01 | INFO     | MainThread | network_client_project.network.logger | Network Logging System Initialized.
+2026-07-31 16:58:01 | INFO     | MainThread | query.expansion | Loaded persistent query feedback from data\query_feedback_semantic.json
+2026-07-31 16:58:01 | INFO     | MainThread | search.base_registry | Scanning for plugins in C:\Users\yasha\Downloads\pillar1\pillar1\search\providers...
+2026-07-31 16:58:01 | ERROR    | MainThread | search.base_registry | Failed to load module search.providers.linkedin_playwright_provider: No module named 'playwright'
+Traceback (most recent call last):
+  File "C:\Users\yasha\Downloads\pillar1\pillar1\search\base_registry.py", line 51, in load_plugins
+    module = importlib.import_module(full_module_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yasha\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "C:\Users\yasha\Downloads\pillar1\pillar1\search\providers\linkedin_playwright_provider.py", line 16, in <module>
+    from pillar1.browser.browser_manager import get_browser_manager
+  File "C:\Users\yasha\Downloads\pillar1\pillar1\browser\browser_manager.py", line 4, in <module>
+    from playwright.sync_api import sync_playwright, Playwright
+ModuleNotFoundError: No module named 'playwright'
+2026-07-31 16:58:01 | ERROR    | MainThread | search.base_registry | Failed to load module search.providers.playwright_google_provider: No module named 'playwright'
+Traceback (most recent call last):
+  File "C:\Users\yasha\Downloads\pillar1\pillar1\search\base_registry.py", line 51, in load_plugins
+    module = importlib.import_module(full_module_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yasha\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "C:\Users\yasha\Downloads\pillar1\pillar1\search\providers\playwright_google_provider.py", line 17, in <module>
+    from pillar1.browser.browser_manager import get_browser_manager
+  File "C:\Users\yasha\Downloads\pillar1\pillar1\browser\browser_manager.py", line 4, in <module>
+    from playwright.sync_api import sync_playwright, Playwright
+ModuleNotFoundError: No module named 'playwright'
+2026-07-31 16:58:02 | INFO     | MainThread | network_client_project.network.proxy_manager | Loaded 6 proxies into the manager.
+2026-07-31 16:58:02 | INFO     | MainThread | network_client_project.network.proxy_manager | Loaded proxy state from proxy_state.json
+2026-07-31 16:58:02 | INFO     | MainThread | network_client_project.network.proxy_manager | [ProxyManager] Loaded proxy state
+2026-07-31 16:58:02 | INFO     | MainThread | network_client_project.network.proxy_manager |   Total non-zero: 6 | Average score: 92.8
+2026-07-31 16:58:02 | INFO     | MainThread | network_client_project.network.proxy_manager |   Top 5 by score:
+2026-07-31 16:58:02 | INFO     | MainThread | network_client_project.network.proxy_manager |     34.87.80.221:30000 = 100.0
+2026-07-31 16:58:02 | INFO     | MainThread | network_client_project.network.proxy_manager |     52.67.38.58:3128 = 95.0
+2026-07-31 16:58:02 | INFO     | MainThread | network_client_project.network.proxy_manager |     47.81.56.193:8888 = 94.0
+2026-07-31 16:58:02 | INFO     | MainThread | network_client_project.network.proxy_manager |     217.182.203.184:8888 = 94.0
+2026-07-31 16:58:02 | INFO     | MainThread | network_client_project.network.proxy_manager |     181.39.25.196:8118 = 94.0
+2026-07-31 16:58:02 | INFO     | MainThread | network_client_project.network.proxy_manager |   Bottom 5 by score:
+2026-07-31 16:58:02 | INFO     | MainThread | network_client_project.network.proxy_manager |     52.67.38.58:3128 = 95.0
+2026-07-31 16:58:02 | INFO     | MainThread | network_client_project.network.proxy_manager |     47.81.56.193:8888 = 94.0
+2026-07-31 16:58:02 | INFO     | MainThread | network_client_project.network.proxy_manager |     217.182.203.184:8888 = 94.0
+2026-07-31 16:58:02 | INFO     | MainThread | network_client_project.network.proxy_manager |     181.39.25.196:8118 = 94.0
+2026-07-31 16:58:02 | INFO     | MainThread | network_client_project.network.proxy_manager |     34.134.231.117:3129 = 80.0
+2026-07-31 16:58:02 | INFO     | ProxyManager-StartupValidator | network_client_project.network.proxy_manager | [ProxyManager] Starting background proxy validation thread...
+2026-07-31 16:58:02 | INFO     | MainThread | search.base_registry | Scanning for plugins in C:\Users\yasha\Downloads\pillar1\network_client_project\network\middleware...
+2026-07-31 16:58:02 | INFO     | MainThread | network_client_project.network.client | NetworkClient initialized with decoupled Downloader Middleware stack.
+2026-07-31 16:58:03 | INFO     | MainThread | network_client_project.network.client | NetworkClient initialized with decoupled Downloader Middleware stack.
+2026-07-31 16:58:03 | INFO     | MainThread | network_client_project.network.client | NetworkClient initialized with decoupled Downloader Middleware stack.
+2026-07-31 16:58:03 | INFO     | MainThread | utils.budget_manager | [ProviderBudgetManager] Starting provider 'duckduckgo' with budget limit of 7.0s.
+2026-07-31 16:58:08 | INFO     | ThreadPoolExecutor-0_5 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 34.134.231.117:3129 -> ALIVE (general HTTPS OK)
+2026-07-31 16:58:11 | INFO     | ThreadPoolExecutor-0_0 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 34.87.80.221:30000 -> ALIVE (general HTTPS OK)
+2026-07-31 16:58:11 | INFO     | ThreadPoolExecutor-0_1 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 47.81.56.193:8888 -> ALIVE (general HTTPS OK)
+2026-07-31 16:58:11 | INFO     | MainThread | network_client_project.network.client | NetworkClient initialized with decoupled Downloader Middleware stack.
+2026-07-31 16:58:12 | INFO     | ThreadPoolExecutor-0_0 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 34.87.80.221:30000 -> Google OK
+2026-07-31 16:58:12 | INFO     | ThreadPoolExecutor-0_3 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 181.39.25.196:8118 -> ALIVE (general HTTPS OK)
+2026-07-31 16:58:12 | INFO     | ThreadPoolExecutor-0_1 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 47.81.56.193:8888 -> Google OK
+2026-07-31 16:58:12 | WARNING  | ThreadPoolExecutor-0_2 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 217.182.203.184:8888 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-31 16:58:14 | INFO     | ThreadPoolExecutor-0_5 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 34.134.231.117:3129 -> Google OK
+2026-07-31 16:58:14 | INFO     | ThreadPoolExecutor-0_3 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 181.39.25.196:8118 -> Google OK
+2026-07-31 16:58:27 | WARNING  | ThreadPoolExecutor-0_4 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 52.67.38.58:3128 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-31 16:58:27 | INFO     | ProxyManager-StartupValidator | network_client_project.network.proxy_manager | [ProxyManager] Background proxy validation complete. Alive: 4/6, Google-capable: 4/6
+2026-07-31 16:58:28 | INFO     | ThreadPoolExecutor-1_3 | network_client_project.network.client | NetworkClient initialized with decoupled Downloader Middleware stack.
+2026-07-31 16:58:28 | INFO     | ThreadPoolExecutor-1_0 | network_client_project.network.client | NetworkClient initialized with decoupled Downloader Middleware stack.
+2026-07-31 16:58:28 | INFO     | ThreadPoolExecutor-1_1 | network_client_project.network.client | NetworkClient initialized with decoupled Downloader Middleware stack.
+2026-07-31 16:58:29 | INFO     | ThreadPoolExecutor-1_2 | utils.budget_manager | [ProviderBudgetManager] Starting provider 'google_html' with budget limit of 8.0s.
+2026-07-31 16:58:29 | INFO     | ThreadPoolExecutor-1_2 | search.google_scheduler | [GoogleScheduler] Initialized with max_workers=2, circuit breaker window=20, threshold=80%
+2026-07-31 16:58:29 | INFO     | ThreadPoolExecutor-1_2 | search.google_scheduler | [GoogleScheduler] Resized max_workers to 1 (Healthy proxies: 4)
+2026-07-31 16:58:29 | INFO     | ThreadPoolExecutor-1_2 | search.google_scheduler | [GoogleScheduler] Submitting query to executor: 'site:tracxn.com email'
+2026-07-31 16:58:29 | INFO     | GoogleSchedulerWorker_0 | search.google_scheduler | [GoogleScheduler] Pacing delay: 4.80s
+2026-07-31 16:58:33 | INFO     | GoogleSchedulerWorker_0 | network_client_project.network.proxy_manager | [ProxyManager] Selected proxy 34.87.80.221:30000 (Tier D, derived=0.253, score=100.0, freshness=0.0)
+2026-07-31 16:58:33 | INFO     | GoogleSchedulerWorker_0 | search.google_scheduler | [GoogleScheduler] [Attempt 1/2] Query: 'site:tracxn.com email' via proxy 34.87.80.221:30000 (Tier D, derived=0.253, score=100.0)
+2026-07-31 16:58:34 | INFO     | ThreadPoolExecutor-1_3 | network_client_project.network.middleware.throttle | [AutoThrottle] High latency (4.26s) on runo.ai. Reducing rate: 0.50 rps -> 0.40 rps.
+2026-07-31 16:58:34 | INFO     | ThreadPoolExecutor-1_3 | network_client_project.network.proxy_manager | [Proxy Scoring] Proxy: 34.134.231.117:3129 | Old score: 80.0 | Reason: SUCCESS (VALID_RESULTS) | New score: 88.0
+2026-07-31 16:58:34 | INFO     | ThreadPoolExecutor-1_3 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 34.134.231.117:3129 score changed by +8.0 (Reason: VALID_RESULTS)
+2026-07-31 16:58:34 | INFO     | ThreadPoolExecutor-1_3 | network_client_project.network.client | NetworkClient initialized with decoupled Downloader Middleware stack.
+2026-07-31 16:58:34 | INFO     | ThreadPoolExecutor-1_0 | network_client_project.network.middleware.throttle | [AutoThrottle] High latency (3.66s) on runo.ai. Reducing rate: 0.50 rps -> 0.40 rps.
+2026-07-31 16:58:34 | INFO     | ThreadPoolExecutor-1_0 | network_client_project.network.proxy_manager | [Proxy Scoring] Proxy: 34.134.231.117:3129 | Old score: 88.0 | Reason: SUCCESS (VALID_RESULTS) | New score: 96.0
+2026-07-31 16:58:34 | INFO     | ThreadPoolExecutor-1_0 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 34.134.231.117:3129 score changed by +8.0 (Reason: VALID_RESULTS)
+2026-07-31 16:58:34 | INFO     | ThreadPoolExecutor-1_0 | network_client_project.network.frontier | [Frontier] Duplicate content detected for https://runo.ai. Skipping pipeline.
+2026-07-31 16:58:34 | INFO     | ThreadPoolExecutor-1_0 | utils.budget_manager | [ProviderBudgetManager] Starting provider 'google_html' with budget limit of 8.0s.
+2026-07-31 16:58:34 | INFO     | ThreadPoolExecutor-1_0 | search.google_scheduler | [GoogleScheduler] Submitting query to executor: 'site:runo.ai email'
+2026-07-31 16:58:36 | INFO     | ThreadPoolExecutor-1_1 | network_client_project.network.middleware.throttle | [AutoThrottle] High latency (5.03s) on web.runo.in. Reducing rate: 0.50 rps -> 0.40 rps.
+2026-07-31 16:58:36 | INFO     | ThreadPoolExecutor-1_1 | network_client_project.network.proxy_manager | [Proxy Scoring] Proxy: 34.134.231.117:3129 | Old score: 96.0 | Reason: SUCCESS (VALID_RESULTS) | New score: 100.0
+2026-07-31 16:58:36 | INFO     | ThreadPoolExecutor-1_1 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 34.134.231.117:3129 score changed by +4.0 (Reason: VALID_RESULTS)
+2026-07-31 16:58:36 | INFO     | ThreadPoolExecutor-1_1 | network_client_project.network.frontier | [Frontier] Duplicate content detected for https://web.runo.in. Skipping pipeline.
+2026-07-31 16:58:36 | INFO     | ThreadPoolExecutor-1_1 | utils.budget_manager | [ProviderBudgetManager] Starting provider 'google_html' with budget limit of 8.0s.
+2026-07-31 16:58:36 | INFO     | ThreadPoolExecutor-1_1 | search.google_scheduler | [GoogleScheduler] Submitting query to executor: 'site:web.runo.in email'
+2026-07-31 16:58:37 | INFO     | GoogleSchedulerWorker_0 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 34.87.80.221:30000 quarantined for 1800s (step 1) for domain google.com. Score changed by -5.0.
+2026-07-31 16:58:37 | INFO     | GoogleSchedulerWorker_0 | network_client_project.network.proxy_manager | [Proxy Scoring] Proxy: 34.87.80.221:30000 | Old score: 100.0 | Reason: FAILURE (ENABLE_JS) | New score: 95.0
+2026-07-31 16:58:37 | INFO     | GoogleSchedulerWorker_0 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 34.87.80.221:30000 score changed by -5.0 (Reason: ENABLE_JS)
+2026-07-31 16:58:37 | ERROR    | GoogleSchedulerWorker_0 | search.google_scheduler | [GoogleScheduler] All 1 retries failed for: 'site:tracxn.com email'
+2026-07-31 16:58:37 | INFO     | GoogleSchedulerWorker_0 | search.google_scheduler | [GoogleScheduler] Pacing delay: 5.78s
+2026-07-31 16:58:37 | INFO     | ThreadPoolExecutor-1_2 | search.manager | [SearchManager] google_html recorded 3.0 failure points (Reason: Unavailable (Google search failed after 1 p)). Total: 3.0/10.0
+2026-07-31 16:58:37 | INFO     | ThreadPoolExecutor-1_2 | utils.budget_manager | [ProviderBudgetManager] Starting provider 'duckduckgo' with budget limit of 7.0s.
+2026-07-31 16:58:39 | INFO     | ThreadPoolExecutor-1_3 | network_client_project.network.middleware.throttle | [AutoThrottle] High latency (3.78s) on runo.ai. Reducing rate: 0.50 rps -> 0.40 rps.
+2026-07-31 16:58:39 | INFO     | ThreadPoolExecutor-1_3 | network_client_project.network.proxy_manager | [Proxy Scoring] Proxy: 34.134.231.117:3129 | Old score: 100.0 | Reason: SUCCESS (VALID_RESULTS) | New score: 100.0
+2026-07-31 16:58:39 | INFO     | ThreadPoolExecutor-1_3 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 34.134.231.117:3129 score changed by +0.0 (Reason: VALID_RESULTS)
+2026-07-31 16:58:43 | INFO     | GoogleSchedulerWorker_0 | network_client_project.network.proxy_manager | [ProxyManager] Selected proxy 47.81.56.193:8888 (Tier E, derived=0.265, score=94.0, freshness=0.0)
+2026-07-31 16:58:43 | INFO     | GoogleSchedulerWorker_0 | search.google_scheduler | [GoogleScheduler] [Attempt 1/2] Query: 'site:runo.ai email' via proxy 47.81.56.193:8888 (Tier E, derived=0.265, score=94.0)
+2026-07-31 16:58:45 | INFO     | ThreadPoolExecutor-1_3 | network_client_project.network.middleware.throttle | [AutoThrottle] High latency (2.63s) on runo.ai. Reducing rate: 0.40 rps -> 0.32 rps.
+2026-07-31 16:58:45 | INFO     | ThreadPoolExecutor-1_3 | network_client_project.network.proxy_manager | [Proxy Scoring] Proxy: 34.134.231.117:3129 | Old score: 100.0 | Reason: SUCCESS (VALID_RESULTS) | New score: 100.0
+2026-07-31 16:58:45 | INFO     | ThreadPoolExecutor-1_3 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 34.134.231.117:3129 score changed by +0.0 (Reason: VALID_RESULTS)
+2026-07-31 16:58:46 | WARNING  | GoogleSchedulerWorker_0 | network_client_project.network.middleware.retry | [Retry] Search provider google_html hit block/CAPTCHA/429 (HTTP 429). Bubbling up immediately for fail-fast.
+2026-07-31 16:58:46 | WARNING  | GoogleSchedulerWorker_0 | network_client_project.network.middleware.throttle | [AutoThrottle] 429 Rate Limit hit on www.google.com. Reducing rate: 0.50 rps -> 0.20 rps.
+2026-07-31 16:58:46 | INFO     | GoogleSchedulerWorker_0 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 47.81.56.193:8888 connection failed (step 2). Score changed by -6.0.
+2026-07-31 16:58:46 | WARNING  | GoogleSchedulerWorker_0 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 47.81.56.193:8888 marked dead_for_google after 3 consecutive timeouts.
+2026-07-31 16:58:46 | INFO     | GoogleSchedulerWorker_0 | network_client_project.network.proxy_manager | [Proxy Scoring] Proxy: 47.81.56.193:8888 | Old score: 94.0 | Reason: FAILURE (NETWORK_FAILURE) | New score: 88.0
+2026-07-31 16:58:46 | INFO     | GoogleSchedulerWorker_0 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 47.81.56.193:8888 score changed by -6.0 (Reason: NETWORK_FAILURE)
+2026-07-31 16:58:46 | INFO     | GoogleSchedulerWorker_0 | search.google_scheduler | [GoogleScheduler] Pacing delay: 1.40s
+2026-07-31 16:58:47 | INFO     | GoogleSchedulerWorker_0 | network_client_project.network.proxy_manager | [ProxyManager] Selected proxy 181.39.25.196:8118 (Tier E, derived=0.239, score=94.0, freshness=0.0)
+2026-07-31 16:58:47 | INFO     | GoogleSchedulerWorker_0 | search.google_scheduler | [GoogleScheduler] [Attempt 2/2] Query: 'site:runo.ai email' via proxy 181.39.25.196:8118 (Tier E, derived=0.239, score=94.0)
+2026-07-31 16:58:47 | INFO     | GoogleSchedulerWorker_0 | search.google_scheduler | [GoogleScheduler] Rotated session/User-Agent for thread session: google_html_8540
+2026-07-31 16:58:49 | INFO     | ThreadPoolExecutor-1_3 | network_client_project.network.proxy_manager | [Proxy Scoring] Proxy: 34.134.231.117:3129 | Old score: 100.0 | Reason: SUCCESS (VALID_RESULTS) | New score: 100.0
+2026-07-31 16:58:49 | INFO     | ThreadPoolExecutor-1_3 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 34.134.231.117:3129 score changed by +0.0 (Reason: VALID_RESULTS)
+2026-07-31 16:58:50 | INFO     | ThreadPoolExecutor-1_2 | search.manager | [SearchManager] duckduckgo recorded 3.0 failure points (Reason: Unavailable (Temporary anti-bot response (2)). Total: 3.0/10.0
+2026-07-31 16:58:50 | INFO     | ThreadPoolExecutor-1_2 | utils.budget_manager | [ProviderBudgetManager] Starting provider 'brave' with budget limit of 7.0s.
+2026-07-31 16:58:52 | WARNING  | GoogleSchedulerWorker_0 | network_client_project.network.middleware.retry | [Retry] Search provider google_html hit block/CAPTCHA/429 (HTTP 429). Bubbling up immediately for fail-fast.
+2026-07-31 16:58:52 | WARNING  | GoogleSchedulerWorker_0 | network_client_project.network.middleware.throttle | [AutoThrottle] 429 Rate Limit hit on www.google.com. Reducing rate: 0.20 rps -> 0.08 rps.
+2026-07-31 16:58:52 | INFO     | GoogleSchedulerWorker_0 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 181.39.25.196:8118 connection failed (step 2). Score changed by -6.0.
+2026-07-31 16:58:52 | WARNING  | GoogleSchedulerWorker_0 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 181.39.25.196:8118 marked dead_for_google after 3 consecutive timeouts.
+2026-07-31 16:58:52 | INFO     | GoogleSchedulerWorker_0 | network_client_project.network.proxy_manager | [Proxy Scoring] Proxy: 181.39.25.196:8118 | Old score: 94.0 | Reason: FAILURE (NETWORK_FAILURE) | New score: 88.0
+2026-07-31 16:58:52 | INFO     | GoogleSchedulerWorker_0 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 181.39.25.196:8118 score changed by -6.0 (Reason: NETWORK_FAILURE)
+2026-07-31 16:58:52 | ERROR    | GoogleSchedulerWorker_0 | search.google_scheduler | [GoogleScheduler] All 2 retries failed for: 'site:runo.ai email'
+2026-07-31 16:58:52 | INFO     | GoogleSchedulerWorker_0 | search.google_scheduler | [GoogleScheduler] Pacing delay: 3.73s
+2026-07-31 16:58:52 | INFO     | ThreadPoolExecutor-1_0 | search.manager | [SearchManager] google_html recorded 4.0 failure points (Reason: 429 Rate Limit). Total: 7.0/10.0
+2026-07-31 16:58:52 | INFO     | ThreadPoolExecutor-1_0 | utils.budget_manager | [ProviderBudgetManager] Starting provider 'duckduckgo' with budget limit of 7.0s.
+2026-07-31 16:58:52 | INFO     | ThreadPoolExecutor-1_0 | search.manager | [SearchManager] duckduckgo recorded 3.0 failure points (Reason: Unavailable (DuckDuckGo cooling down for 28)). Total: 6.0/10.0
+2026-07-31 16:58:52 | INFO     | ThreadPoolExecutor-1_0 | utils.budget_manager | [ProviderBudgetManager] Starting provider 'brave' with budget limit of 7.0s.
+2026-07-31 16:58:54 | INFO     | ThreadPoolExecutor-1_2 | utils.budget_manager | [ProviderBudgetManager] Starting provider 'brave' with budget limit of 7.0s.
+2026-07-31 16:58:56 | INFO     | GoogleSchedulerWorker_0 | network_client_project.network.proxy_manager | [ProxyManager] Selected proxy 34.134.231.117:3129 (Tier B, derived=0.706, score=100.0, freshness=1.0)
+2026-07-31 16:58:56 | INFO     | GoogleSchedulerWorker_0 | search.google_scheduler | [GoogleScheduler] [Attempt 1/2] Query: 'site:web.runo.in email' via proxy 34.134.231.117:3129 (Tier B, derived=0.706, score=100.0)
+2026-07-31 16:58:57 | INFO     | ThreadPoolExecutor-1_0 | utils.budget_manager | [ProviderBudgetManager] Starting provider 'brave' with budget limit of 7.0s.
+2026-07-31 16:59:01 | INFO     | ThreadPoolExecutor-1_2 | utils.budget_manager | [ProviderBudgetManager] Starting provider 'brave' with budget limit of 7.0s.
+2026-07-31 16:59:02 | INFO     | ThreadPoolExecutor-1_0 | utils.budget_manager | [ProviderBudgetManager] Starting provider 'brave' with budget limit of 7.0s.
+2026-07-31 16:59:02 | INFO     | GoogleSchedulerWorker_0 | network_client_project.network.middleware.throttle | [AutoThrottle] High latency (3.82s) on www.google.com. Reducing rate: 0.08 rps -> 0.10 rps.
+2026-07-31 16:59:02 | INFO     | GoogleSchedulerWorker_0 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 34.134.231.117:3129 quarantined for 1800s (step 1) for domain google.com. Score changed by -10.0.
+2026-07-31 16:59:02 | INFO     | GoogleSchedulerWorker_0 | network_client_project.network.proxy_manager | [Proxy Scoring] Proxy: 34.134.231.117:3129 | Old score: 100.0 | Reason: FAILURE (CAPTCHA) | New score: 90.0
+2026-07-31 16:59:02 | INFO     | GoogleSchedulerWorker_0 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 34.134.231.117:3129 score changed by -10.0 (Reason: CAPTCHA)
+2026-07-31 16:59:02 | ERROR    | GoogleSchedulerWorker_0 | search.google_scheduler | [GoogleScheduler] All 1 retries failed for: 'site:web.runo.in email'
+2026-07-31 16:59:02 | INFO     | ThreadPoolExecutor-1_1 | search.manager | [SearchManager] google_html recorded 3.0 failure points (Reason: Captcha/Block). Total: 10.0/10.0
+2026-07-31 16:59:02 | WARNING  | ThreadPoolExecutor-1_1 | search.manager | [SearchManager] google_html failure score reached 10.0. Tripping breaker to OPEN.
+2026-07-31 16:59:02 | INFO     | ThreadPoolExecutor-1_1 | search.manager | [SearchManager] google_html entered cooldown for 300s (until 1785497642) | Breaker state is OPEN
+2026-07-31 16:59:02 | INFO     | ThreadPoolExecutor-1_1 | utils.budget_manager | [ProviderBudgetManager] Starting provider 'duckduckgo' with budget limit of 7.0s.
+2026-07-31 16:59:02 | INFO     | ThreadPoolExecutor-1_1 | search.manager | [SearchManager] duckduckgo recorded 3.0 failure points (Reason: Unavailable (DuckDuckGo cooling down for 18)). Total: 9.0/10.0
+2026-07-31 16:59:02 | INFO     | ThreadPoolExecutor-1_1 | utils.budget_manager | [ProviderBudgetManager] Starting provider 'brave' with budget limit of 7.0s.
+2026-07-31 16:59:06 | INFO     | ThreadPoolExecutor-1_2 | utils.budget_manager | [ProviderBudgetManager] Starting provider 'brave' with budget limit of 7.0s.
+2026-07-31 16:59:08 | INFO     | ThreadPoolExecutor-1_0 | utils.budget_manager | [ProviderBudgetManager] Starting provider 'brave' with budget limit of 7.0s.
+2026-07-31 16:59:08 | INFO     | ThreadPoolExecutor-1_1 | utils.budget_manager | [ProviderBudgetManager] Starting provider 'brave' with budget limit of 7.0s.
+2026-07-31 16:59:11 | WARNING  | ThreadPoolExecutor-1_0 | network_client_project.network.middleware.retry | [Retry] Search provider brave hit block/CAPTCHA/429 (HTTP 429). Bubbling up immediately for fail-fast.
+2026-07-31 16:59:11 | WARNING  | ThreadPoolExecutor-1_0 | network_client_project.network.middleware.throttle | [AutoThrottle] 429 Rate Limit hit on search.brave.com. Reducing rate: 0.73 rps -> 0.29 rps.
+2026-07-31 16:59:12 | WARNING  | ThreadPoolExecutor-1_2 | network_client_project.network.middleware.retry | [Retry] Search provider brave hit block/CAPTCHA/429 (HTTP 429). Bubbling up immediately for fail-fast.
+2026-07-31 16:59:12 | WARNING  | ThreadPoolExecutor-1_2 | network_client_project.network.middleware.throttle | [AutoThrottle] 429 Rate Limit hit on search.brave.com. Reducing rate: 0.29 rps -> 0.12 rps.
+2026-07-31 16:59:15 | WARNING  | ThreadPoolExecutor-1_1 | network_client_project.network.middleware.retry | [Retry] Search provider brave hit block/CAPTCHA/429 (HTTP 429). Bubbling up immediately for fail-fast.
+2026-07-31 16:59:15 | WARNING  | ThreadPoolExecutor-1_1 | network_client_project.network.middleware.throttle | [AutoThrottle] 429 Rate Limit hit on search.brave.com. Reducing rate: 0.12 rps -> 0.05 rps.
+2026-07-31 16:59:20 | WARNING  | ThreadPoolExecutor-1_0 | network_client_project.network.middleware.retry | [Retry] Search provider brave hit block/CAPTCHA/429 (HTTP 429). Bubbling up immediately for fail-fast.
+2026-07-31 16:59:20 | WARNING  | ThreadPoolExecutor-1_0 | network_client_project.network.middleware.throttle | [AutoThrottle] 429 Rate Limit hit on search.brave.com. Reducing rate: 0.05 rps -> 0.05 rps.
+2026-07-31 16:59:20 | INFO     | ThreadPoolExecutor-1_0 | search.manager | [SearchManager] brave recorded 4.0 failure points (Reason: 429 Rate Limit). Total: 4.0/10.0
+2026-07-31 16:59:20 | INFO     | ThreadPoolExecutor-1_0 | utils.budget_manager | [ProviderBudgetManager] Starting provider 'duckduckgo' with budget limit of 7.0s.
+2026-07-31 16:59:20 | INFO     | ThreadPoolExecutor-1_0 | search.manager | [SearchManager] duckduckgo recorded 3.0 failure points (Reason: Unavailable (DuckDuckGo cooling down for 0s)). Total: 12.0/10.0
+2026-07-31 16:59:20 | WARNING  | ThreadPoolExecutor-1_0 | search.manager | [SearchManager] duckduckgo failure score reached 12.0. Tripping breaker to OPEN.
+2026-07-31 16:59:20 | INFO     | ThreadPoolExecutor-1_0 | search.manager | [SearchManager] duckduckgo entered cooldown for 300s (until 1785497660) | Breaker state is OPEN
+2026-07-31 16:59:20 | INFO     | ThreadPoolExecutor-1_0 | utils.budget_manager | [ProviderBudgetManager] Starting provider 'bing' with budget limit of 7.0s.
+2026-07-31 16:59:22 | WARNING  | ThreadPoolExecutor-1_2 | network_client_project.network.middleware.retry | [Retry] Search provider brave hit block/CAPTCHA/429 (HTTP 429). Bubbling up immediately for fail-fast.
+2026-07-31 16:59:22 | WARNING  | ThreadPoolExecutor-1_2 | network_client_project.network.middleware.throttle | [AutoThrottle] 429 Rate Limit hit on search.brave.com. Reducing rate: 0.05 rps -> 0.05 rps.
+2026-07-31 16:59:22 | INFO     | ThreadPoolExecutor-1_2 | search.manager | [SearchManager] brave recorded 4.0 failure points (Reason: 429 Rate Limit). Total: 8.0/10.0
+2026-07-31 16:59:22 | INFO     | ThreadPoolExecutor-1_2 | utils.budget_manager | [ProviderBudgetManager] Starting provider 'bing' with budget limit of 7.0s.
+2026-07-31 16:59:30 | WARNING  | ThreadPoolExecutor-1_1 | network_client_project.network.middleware.retry | [Retry] Search provider brave hit block/CAPTCHA/429 (HTTP 429). Bubbling up immediately for fail-fast.
+2026-07-31 16:59:30 | WARNING  | ThreadPoolExecutor-1_1 | network_client_project.network.middleware.throttle | [AutoThrottle] 429 Rate Limit hit on search.brave.com. Reducing rate: 0.05 rps -> 0.05 rps.
+2026-07-31 16:59:30 | INFO     | ThreadPoolExecutor-1_1 | search.manager | [SearchManager] brave recorded 4.0 failure points (Reason: 429 Rate Limit). Total: 12.0/10.0
+2026-07-31 16:59:30 | WARNING  | ThreadPoolExecutor-1_1 | search.manager | [SearchManager] brave failure score reached 12.0. Tripping breaker to OPEN.
+2026-07-31 16:59:30 | INFO     | ThreadPoolExecutor-1_1 | search.manager | [SearchManager] brave entered cooldown for 300s (until 1785497670) | Breaker state is OPEN
+2026-07-31 16:59:30 | INFO     | ThreadPoolExecutor-1_1 | utils.budget_manager | [ProviderBudgetManager] Starting provider 'bing' with budget limit of 7.0s.
+2026-07-31 16:59:30 | INFO     | ThreadPoolExecutor-1_2 | network_client_project.network.middleware.throttle | [AutoThrottle] High latency (2.59s) on www.bing.com. Reducing rate: 0.50 rps -> 0.40 rps.
+2026-07-31 16:59:33 | WARNING  | ThreadPoolExecutor-1_2 | search.providers.bing_provider | [BingProvider] Global deadline exceeded. Aborting Bing search retries.
+2026-07-31 16:59:33 | ERROR    | ThreadPoolExecutor-1_2 | search.manager | [SearchManager] Unexpected provider 'bing' error: object of type 'NoneType' has no len()
+2026-07-31 16:59:33 | INFO     | ThreadPoolExecutor-1_2 | search.manager | [SearchManager] bing recorded 3.0 failure points (Reason: Unexpected Error (object of type 'NoneType' has )). Total: 3.0/10.0
+2026-07-31 16:59:34 | INFO     | ThreadPoolExecutor-1_0 | search.manager | [SearchManager] bing recorded 3.0 failure points (Reason: Captcha/Block). Total: 6.0/10.0
+2026-07-31 16:59:39 | WARNING  | ThreadPoolExecutor-1_1 | search.providers.bing_provider | [BingProvider] Global deadline exceeded. Aborting Bing search retries.
+2026-07-31 16:59:39 | ERROR    | ThreadPoolExecutor-1_1 | search.manager | [SearchManager] Unexpected provider 'bing' error: object of type 'NoneType' has no len()
+2026-07-31 16:59:39 | INFO     | ThreadPoolExecutor-1_1 | search.manager | [SearchManager] bing recorded 3.0 failure points (Reason: Unexpected Error (object of type 'NoneType' has )). Total: 9.0/10.0
+2026-07-31 17:00:45 | INFO     | MainThread | network_client_project.network.logger | Network Logging System Initialized.
+2026-07-31 17:00:45 | INFO     | MainThread | query.expansion | Loaded persistent query feedback from data\query_feedback_semantic.json
+2026-07-31 17:00:45 | INFO     | MainThread | search.base_registry | Scanning for plugins in C:\Users\yasha\Downloads\pillar1\pillar1\search\providers...
+2026-07-31 17:00:45 | ERROR    | MainThread | search.base_registry | Failed to load module search.providers.linkedin_playwright_provider: No module named 'playwright'
+Traceback (most recent call last):
+  File "C:\Users\yasha\Downloads\pillar1\pillar1\search\base_registry.py", line 51, in load_plugins
+    module = importlib.import_module(full_module_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yasha\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "C:\Users\yasha\Downloads\pillar1\pillar1\search\providers\linkedin_playwright_provider.py", line 16, in <module>
+    from pillar1.browser.browser_manager import get_browser_manager
+  File "C:\Users\yasha\Downloads\pillar1\pillar1\browser\browser_manager.py", line 4, in <module>
+    from playwright.sync_api import sync_playwright, Playwright
+ModuleNotFoundError: No module named 'playwright'
+2026-07-31 17:00:45 | ERROR    | MainThread | search.base_registry | Failed to load module search.providers.playwright_google_provider: No module named 'playwright'
+Traceback (most recent call last):
+  File "C:\Users\yasha\Downloads\pillar1\pillar1\search\base_registry.py", line 51, in load_plugins
+    module = importlib.import_module(full_module_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yasha\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "C:\Users\yasha\Downloads\pillar1\pillar1\search\providers\playwright_google_provider.py", line 17, in <module>
+    from pillar1.browser.browser_manager import get_browser_manager
+  File "C:\Users\yasha\Downloads\pillar1\pillar1\browser\browser_manager.py", line 4, in <module>
+    from playwright.sync_api import sync_playwright, Playwright
+ModuleNotFoundError: No module named 'playwright'
+2026-07-31 17:00:45 | INFO     | MainThread | network_client_project.network.proxy_manager | Loaded 6 proxies into the manager.
+2026-07-31 17:00:45 | INFO     | MainThread | network_client_project.network.proxy_manager | Loaded proxy state from proxy_state.json
+2026-07-31 17:00:45 | INFO     | MainThread | network_client_project.network.proxy_manager | [ProxyManager] Loaded proxy state
+2026-07-31 17:00:45 | INFO     | MainThread | network_client_project.network.proxy_manager |   Total non-zero: 6 | Average score: 91.7
+2026-07-31 17:00:45 | INFO     | MainThread | network_client_project.network.proxy_manager |   Top 5 by score:
+2026-07-31 17:00:45 | INFO     | MainThread | network_client_project.network.proxy_manager |     34.87.80.221:30000 = 95.0
+2026-07-31 17:00:45 | INFO     | MainThread | network_client_project.network.proxy_manager |     52.67.38.58:3128 = 95.0
+2026-07-31 17:00:45 | INFO     | MainThread | network_client_project.network.proxy_manager |     217.182.203.184:8888 = 94.0
+2026-07-31 17:00:45 | INFO     | MainThread | network_client_project.network.proxy_manager |     34.134.231.117:3129 = 90.0
+2026-07-31 17:00:45 | INFO     | MainThread | network_client_project.network.proxy_manager |     47.81.56.193:8888 = 88.0
+2026-07-31 17:00:45 | INFO     | MainThread | network_client_project.network.proxy_manager |   Bottom 5 by score:
+2026-07-31 17:00:45 | INFO     | MainThread | network_client_project.network.proxy_manager |     52.67.38.58:3128 = 95.0
+2026-07-31 17:00:45 | INFO     | MainThread | network_client_project.network.proxy_manager |     217.182.203.184:8888 = 94.0
+2026-07-31 17:00:45 | INFO     | MainThread | network_client_project.network.proxy_manager |     34.134.231.117:3129 = 90.0
+2026-07-31 17:00:45 | INFO     | MainThread | network_client_project.network.proxy_manager |     47.81.56.193:8888 = 88.0
+2026-07-31 17:00:45 | INFO     | MainThread | network_client_project.network.proxy_manager |     181.39.25.196:8118 = 88.0
+2026-07-31 17:00:45 | INFO     | ProxyManager-StartupValidator | network_client_project.network.proxy_manager | [ProxyManager] Starting background proxy validation thread...
+2026-07-31 17:00:45 | INFO     | MainThread | search.base_registry | Scanning for plugins in C:\Users\yasha\Downloads\pillar1\network_client_project\network\middleware...
+2026-07-31 17:00:45 | INFO     | MainThread | network_client_project.network.client | NetworkClient initialized with decoupled Downloader Middleware stack.
+2026-07-31 17:00:47 | INFO     | ThreadPoolExecutor-0_1 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 47.81.56.193:8888 -> ALIVE (general HTTPS OK)
+2026-07-31 17:00:48 | INFO     | ThreadPoolExecutor-0_1 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 47.81.56.193:8888 -> Google OK
+2026-07-31 17:00:48 | INFO     | ThreadPoolExecutor-0_3 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 181.39.25.196:8118 -> ALIVE (general HTTPS OK)
+2026-07-31 17:00:50 | INFO     | ThreadPoolExecutor-0_5 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 34.134.231.117:3129 -> ALIVE (general HTTPS OK)
+2026-07-31 17:00:50 | INFO     | ThreadPoolExecutor-0_3 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 181.39.25.196:8118 -> Google OK
+2026-07-31 17:00:54 | INFO     | ThreadPoolExecutor-0_5 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 34.134.231.117:3129 -> Google OK
+2026-07-31 17:00:54 | INFO     | MainThread | network_client_project.network.client | NetworkClient initialized with decoupled Downloader Middleware stack.
+2026-07-31 17:00:54 | INFO     | MainThread | network_client_project.network.client | NetworkClient initialized with decoupled Downloader Middleware stack.
+2026-07-31 17:00:54 | INFO     | MainThread | network_client_project.network.client | NetworkClient initialized with decoupled Downloader Middleware stack.
+2026-07-31 17:00:54 | INFO     | MainThread | utils.budget_manager | [ProviderBudgetManager] Starting provider 'duckduckgo' with budget limit of 7.0s.
+2026-07-31 17:00:55 | WARNING  | ThreadPoolExecutor-0_0 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 34.87.80.221:30000 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-31 17:00:55 | WARNING  | ThreadPoolExecutor-0_2 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 217.182.203.184:8888 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-31 17:01:07 | INFO     | MainThread | search.manager | [SearchManager] duckduckgo recorded 3.0 failure points (Reason: Unavailable (Temporary anti-bot response (2)). Total: 3.0/10.0
+2026-07-31 17:01:07 | INFO     | MainThread | utils.budget_manager | [ProviderBudgetManager] Starting provider 'brave' with budget limit of 7.0s.
+2026-07-31 17:01:09 | WARNING  | ThreadPoolExecutor-0_4 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 52.67.38.58:3128 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-31 17:01:09 | INFO     | ProxyManager-StartupValidator | network_client_project.network.proxy_manager | [ProxyManager] Background proxy validation complete. Alive: 3/6, Google-capable: 3/6
+2026-07-31 17:01:24 | INFO     | ThreadPoolExecutor-1_0 | network_client_project.network.client | NetworkClient initialized with decoupled Downloader Middleware stack.
+2026-07-31 17:01:24 | INFO     | ThreadPoolExecutor-1_3 | network_client_project.network.client | NetworkClient initialized with decoupled Downloader Middleware stack.
+2026-07-31 17:01:24 | INFO     | ThreadPoolExecutor-1_1 | network_client_project.network.client | NetworkClient initialized with decoupled Downloader Middleware stack.
+2026-07-31 17:01:24 | INFO     | ThreadPoolExecutor-1_4 | network_client_project.network.client | NetworkClient initialized with decoupled Downloader Middleware stack.
+2026-07-31 17:01:24 | INFO     | ThreadPoolExecutor-1_2 | utils.budget_manager | [ProviderBudgetManager] Starting provider 'google_html' with budget limit of 8.0s.
+2026-07-31 17:01:24 | INFO     | ThreadPoolExecutor-1_2 | search.google_scheduler | [GoogleScheduler] Initialized with max_workers=2, circuit breaker window=20, threshold=80%
+2026-07-31 17:01:24 | INFO     | ThreadPoolExecutor-1_2 | search.google_scheduler | [GoogleScheduler] Resized max_workers to 1 (Healthy proxies: 3)
+2026-07-31 17:01:24 | INFO     | ThreadPoolExecutor-1_2 | search.google_scheduler | [GoogleScheduler] Submitting query to executor: 'site:tracxn.com team'
+2026-07-31 17:01:24 | INFO     | GoogleSchedulerWorker_0 | search.google_scheduler | [GoogleScheduler] Pacing delay: 4.42s
+2026-07-31 17:01:29 | INFO     | GoogleSchedulerWorker_0 | network_client_project.network.proxy_manager | [ProxyManager] Selected proxy 47.81.56.193:8888 (Tier E, derived=0.247, score=88.0, freshness=0.0)
+2026-07-31 17:01:29 | INFO     | GoogleSchedulerWorker_0 | search.google_scheduler | [GoogleScheduler] [Attempt 1/2] Query: 'site:tracxn.com team' via proxy 47.81.56.193:8888 (Tier E, derived=0.247, score=88.0)
+2026-07-31 17:01:31 | INFO     | ThreadPoolExecutor-1_1 | network_client_project.network.middleware.throttle | [AutoThrottle] High latency (5.50s) on web.runo.in. Reducing rate: 0.50 rps -> 0.40 rps.
+2026-07-31 17:01:31 | INFO     | ThreadPoolExecutor-1_1 | network_client_project.network.proxy_manager | [Proxy Scoring] Proxy: 34.134.231.117:3129 | Old score: 90.0 | Reason: SUCCESS (VALID_RESULTS) | New score: 98.0
+2026-07-31 17:01:31 | INFO     | ThreadPoolExecutor-1_1 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 34.134.231.117:3129 score changed by +8.0 (Reason: VALID_RESULTS)
+2026-07-31 17:01:31 | INFO     | ThreadPoolExecutor-1_0 | network_client_project.network.middleware.throttle | [AutoThrottle] High latency (4.68s) on runo.ai. Reducing rate: 0.50 rps -> 0.40 rps.
+2026-07-31 17:01:31 | INFO     | ThreadPoolExecutor-1_0 | network_client_project.network.proxy_manager | [Proxy Scoring] Proxy: 34.134.231.117:3129 | Old score: 98.0 | Reason: SUCCESS (VALID_RESULTS) | New score: 100.0
+2026-07-31 17:01:31 | INFO     | ThreadPoolExecutor-1_0 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 34.134.231.117:3129 score changed by +2.0 (Reason: VALID_RESULTS)
+2026-07-31 17:01:31 | INFO     | ThreadPoolExecutor-1_0 | network_client_project.network.frontier | [Frontier] Duplicate content detected for https://runo.ai. Skipping pipeline.
+2026-07-31 17:01:31 | INFO     | ThreadPoolExecutor-1_0 | utils.budget_manager | [ProviderBudgetManager] Starting provider 'google_html' with budget limit of 8.0s.
+2026-07-31 17:01:31 | INFO     | ThreadPoolExecutor-1_0 | search.google_scheduler | [GoogleScheduler] Submitting query to executor: 'site:runo.ai team'
+2026-07-31 17:01:31 | INFO     | ThreadPoolExecutor-1_1 | network_client_project.network.client | NetworkClient initialized with decoupled Downloader Middleware stack.
+2026-07-31 17:01:31 | WARNING  | GoogleSchedulerWorker_0 | network_client_project.network.middleware.retry | [Retry] Search provider google_html hit block/CAPTCHA/429 (HTTP 429). Bubbling up immediately for fail-fast.
+2026-07-31 17:01:31 | WARNING  | GoogleSchedulerWorker_0 | network_client_project.network.middleware.throttle | [AutoThrottle] 429 Rate Limit hit on www.google.com. Reducing rate: 0.50 rps -> 0.20 rps.
+2026-07-31 17:01:31 | INFO     | GoogleSchedulerWorker_0 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 47.81.56.193:8888 connection failed (step 3). Score changed by -6.0.
+2026-07-31 17:01:31 | WARNING  | GoogleSchedulerWorker_0 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 47.81.56.193:8888 marked dead_for_google after 3 consecutive timeouts.
+2026-07-31 17:01:31 | INFO     | GoogleSchedulerWorker_0 | network_client_project.network.proxy_manager | [Proxy Scoring] Proxy: 47.81.56.193:8888 | Old score: 88.0 | Reason: FAILURE (NETWORK_FAILURE) | New score: 82.0
+2026-07-31 17:01:31 | INFO     | GoogleSchedulerWorker_0 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 47.81.56.193:8888 score changed by -6.0 (Reason: NETWORK_FAILURE)
+2026-07-31 17:01:31 | INFO     | GoogleSchedulerWorker_0 | search.google_scheduler | [GoogleScheduler] Pacing delay: 1.40s
+2026-07-31 17:01:32 | INFO     | ThreadPoolExecutor-1_3 | network_client_project.network.middleware.throttle | [AutoThrottle] High latency (6.48s) on runo.ai. Reducing rate: 0.50 rps -> 0.40 rps.
+2026-07-31 17:01:32 | INFO     | ThreadPoolExecutor-1_3 | network_client_project.network.proxy_manager | [Proxy Scoring] Proxy: 34.134.231.117:3129 | Old score: 100.0 | Reason: SUCCESS (VALID_RESULTS) | New score: 100.0
+2026-07-31 17:01:32 | INFO     | ThreadPoolExecutor-1_3 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 34.134.231.117:3129 score changed by +0.0 (Reason: VALID_RESULTS)
+2026-07-31 17:01:32 | INFO     | ThreadPoolExecutor-1_3 | network_client_project.network.frontier | [Frontier] Duplicate content detected for https://runo.ai/runo-updates. Skipping pipeline.
+2026-07-31 17:01:32 | INFO     | ThreadPoolExecutor-1_4 | network_client_project.network.middleware.throttle | [AutoThrottle] High latency (5.93s) on runotech.com. Reducing rate: 0.50 rps -> 0.40 rps.
+2026-07-31 17:01:32 | INFO     | ThreadPoolExecutor-1_4 | network_client_project.network.proxy_manager | [Proxy Scoring] Proxy: 34.134.231.117:3129 | Old score: 100.0 | Reason: SUCCESS (VALID_RESULTS) | New score: 100.0
+2026-07-31 17:01:32 | INFO     | ThreadPoolExecutor-1_3 | utils.budget_manager | [ProviderBudgetManager] Starting provider 'google_html' with budget limit of 8.0s.
+2026-07-31 17:01:32 | INFO     | ThreadPoolExecutor-1_4 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 34.134.231.117:3129 score changed by +0.0 (Reason: VALID_RESULTS)
+2026-07-31 17:01:32 | INFO     | ThreadPoolExecutor-1_3 | search.google_scheduler | [GoogleScheduler] Submitting query to executor: 'site:runo.ai team'
+2026-07-31 17:01:32 | INFO     | ThreadPoolExecutor-1_4 | network_client_project.network.frontier | [Frontier] Duplicate content detected for https://runotech.com. Skipping pipeline.
+2026-07-31 17:01:32 | INFO     | ThreadPoolExecutor-1_4 | utils.budget_manager | [ProviderBudgetManager] Starting provider 'google_html' with budget limit of 8.0s.
+2026-07-31 17:01:32 | INFO     | ThreadPoolExecutor-1_4 | search.google_scheduler | [GoogleScheduler] Submitting query to executor: 'site:runotech.com email'
+2026-07-31 17:01:33 | INFO     | GoogleSchedulerWorker_0 | network_client_project.network.proxy_manager | [ProxyManager] Selected proxy 181.39.25.196:8118 (Tier E, derived=0.224, score=88.0, freshness=0.0)
+2026-07-31 17:01:33 | INFO     | GoogleSchedulerWorker_0 | search.google_scheduler | [GoogleScheduler] [Attempt 2/2] Query: 'site:tracxn.com team' via proxy 181.39.25.196:8118 (Tier E, derived=0.224, score=88.0)
+2026-07-31 17:01:33 | INFO     | GoogleSchedulerWorker_0 | search.google_scheduler | [GoogleScheduler] Rotated session/User-Agent for thread session: google_html_25040
+2026-07-31 17:01:37 | INFO     | ThreadPoolExecutor-1_1 | network_client_project.network.middleware.throttle | [AutoThrottle] High latency (4.47s) on web.runo.in. Reducing rate: 0.50 rps -> 0.40 rps.
+2026-07-31 17:01:37 | INFO     | ThreadPoolExecutor-1_1 | network_client_project.network.proxy_manager | [Proxy Scoring] Proxy: 34.134.231.117:3129 | Old score: 100.0 | Reason: SUCCESS (VALID_RESULTS) | New score: 100.0
+2026-07-31 17:01:37 | INFO     | ThreadPoolExecutor-1_1 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 34.134.231.117:3129 score changed by +0.0 (Reason: VALID_RESULTS)
+2026-07-31 17:01:38 | WARNING  | GoogleSchedulerWorker_0 | network_client_project.network.middleware.retry | [Retry] Search provider google_html hit block/CAPTCHA/429 (HTTP 429). Bubbling up immediately for fail-fast.
+2026-07-31 17:01:38 | WARNING  | GoogleSchedulerWorker_0 | network_client_project.network.middleware.throttle | [AutoThrottle] 429 Rate Limit hit on www.google.com. Reducing rate: 0.20 rps -> 0.08 rps.
+2026-07-31 17:01:38 | INFO     | GoogleSchedulerWorker_0 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 181.39.25.196:8118 connection failed (step 3). Score changed by -6.0.
+2026-07-31 17:01:38 | WARNING  | GoogleSchedulerWorker_0 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 181.39.25.196:8118 marked dead_for_google after 3 consecutive timeouts.
+2026-07-31 17:01:38 | INFO     | GoogleSchedulerWorker_0 | network_client_project.network.proxy_manager | [Proxy Scoring] Proxy: 181.39.25.196:8118 | Old score: 88.0 | Reason: FAILURE (NETWORK_FAILURE) | New score: 82.0
+2026-07-31 17:01:38 | INFO     | GoogleSchedulerWorker_0 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 181.39.25.196:8118 score changed by -6.0 (Reason: NETWORK_FAILURE)
+2026-07-31 17:01:38 | ERROR    | GoogleSchedulerWorker_0 | search.google_scheduler | [GoogleScheduler] All 2 retries failed for: 'site:tracxn.com team'
+2026-07-31 17:01:38 | INFO     | GoogleSchedulerWorker_0 | search.google_scheduler | [GoogleScheduler] Pacing delay: 5.34s
+2026-07-31 17:01:38 | INFO     | ThreadPoolExecutor-1_2 | search.manager | [SearchManager] google_html recorded 4.0 failure points (Reason: 429 Rate Limit). Total: 4.0/10.0
+2026-07-31 17:01:38 | INFO     | ThreadPoolExecutor-1_2 | utils.budget_manager | [ProviderBudgetManager] Starting provider 'brave' with budget limit of 7.0s.
+2026-07-31 17:01:44 | INFO     | GoogleSchedulerWorker_0 | network_client_project.network.proxy_manager | [ProxyManager] Selected proxy 34.134.231.117:3129 (Tier C, derived=0.659, score=100.0, freshness=1.0)
+2026-07-31 17:01:44 | INFO     | GoogleSchedulerWorker_0 | search.google_scheduler | [GoogleScheduler] [Attempt 1/2] Query: 'site:runo.ai team' via proxy 34.134.231.117:3129 (Tier C, derived=0.659, score=100.0)
+2026-07-31 17:01:45 | INFO     | ThreadPoolExecutor-1_2 | utils.budget_manager | [ProviderBudgetManager] Starting provider 'brave' with budget limit of 7.0s.
+2026-07-31 17:01:46 | WARNING  | ThreadPoolExecutor-1_1 | network_client_project.network.middleware.retry | [Retry] Retrying query https://web.runo.in/sitemap.xml (attempt 1/3) after 0.10s delay due to: Timeout (Failed to perform, curl: (28) Operation timed out after 5002 milliseconds with 0 bytes received. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.).
+2026-07-31 17:01:49 | INFO     | ThreadPoolExecutor-1_1 | network_client_project.network.proxy_manager | [Proxy Scoring] Proxy: 47.81.56.193:8888 | Old score: 82.0 | Reason: SUCCESS (VALID_RESULTS) | New score: 90.0
+2026-07-31 17:01:49 | INFO     | ThreadPoolExecutor-1_1 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 47.81.56.193:8888 score changed by +8.0 (Reason: VALID_RESULTS)
+2026-07-31 17:01:50 | INFO     | GoogleSchedulerWorker_0 | network_client_project.network.middleware.throttle | [AutoThrottle] High latency (4.32s) on www.google.com. Reducing rate: 0.08 rps -> 0.10 rps.
+2026-07-31 17:01:50 | INFO     | GoogleSchedulerWorker_0 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 34.134.231.117:3129 quarantined for 1800s (step 1) for domain google.com. Score changed by -10.0.
+2026-07-31 17:01:50 | INFO     | GoogleSchedulerWorker_0 | network_client_project.network.proxy_manager | [Proxy Scoring] Proxy: 34.134.231.117:3129 | Old score: 100.0 | Reason: FAILURE (CAPTCHA) | New score: 90.0
+2026-07-31 17:01:50 | INFO     | GoogleSchedulerWorker_0 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 34.134.231.117:3129 score changed by -10.0 (Reason: CAPTCHA)
+2026-07-31 17:01:50 | ERROR    | GoogleSchedulerWorker_0 | search.google_scheduler | [GoogleScheduler] All 1 retries failed for: 'site:runo.ai team'
+2026-07-31 17:01:50 | INFO     | GoogleSchedulerWorker_0 | search.google_scheduler | [GoogleScheduler] Pacing delay: 2.17s
+2026-07-31 17:01:50 | INFO     | ThreadPoolExecutor-1_0 | search.manager | [SearchManager] google_html recorded 3.0 failure points (Reason: Captcha/Block). Total: 7.0/10.0
+2026-07-31 17:01:50 | INFO     | ThreadPoolExecutor-1_0 | utils.budget_manager | [ProviderBudgetManager] Starting provider 'brave' with budget limit of 7.0s.
+2026-07-31 17:01:52 | INFO     | ThreadPoolExecutor-1_2 | utils.budget_manager | [ProviderBudgetManager] Starting provider 'bing' with budget limit of 7.0s.
+2026-07-31 17:01:52 | WARNING  | GoogleSchedulerWorker_0 | search.google_scheduler | [GoogleScheduler] No more healthy proxies after 0 attempts.
+2026-07-31 17:01:52 | ERROR    | GoogleSchedulerWorker_0 | search.google_scheduler | [GoogleScheduler] All 0 retries failed for: 'site:runo.ai team'
+2026-07-31 17:01:52 | INFO     | GoogleSchedulerWorker_0 | search.google_scheduler | [GoogleScheduler] Pacing delay: 3.67s
+2026-07-31 17:01:52 | INFO     | ThreadPoolExecutor-1_3 | search.manager | [SearchManager] google_html recorded 3.0 failure points (Reason: Unavailable (Google search failed after 0 p)). Total: 10.0/10.0
+2026-07-31 17:01:52 | WARNING  | ThreadPoolExecutor-1_3 | search.manager | [SearchManager] google_html failure score reached 10.0. Tripping breaker to OPEN.
+2026-07-31 17:01:52 | INFO     | ThreadPoolExecutor-1_3 | search.manager | [SearchManager] google_html entered cooldown for 300s (until 1785497812) | Breaker state is OPEN
+2026-07-31 17:01:52 | INFO     | ThreadPoolExecutor-1_3 | utils.budget_manager | [ProviderBudgetManager] Starting provider 'brave' with budget limit of 7.0s.
+2026-07-31 17:01:55 | WARNING  | GoogleSchedulerWorker_0 | search.google_scheduler | [GoogleScheduler] No more healthy proxies after 0 attempts.
+2026-07-31 17:01:55 | ERROR    | GoogleSchedulerWorker_0 | search.google_scheduler | [GoogleScheduler] All 0 retries failed for: 'site:runotech.com email'
+2026-07-31 17:01:55 | INFO     | ThreadPoolExecutor-1_4 | utils.budget_manager | [ProviderBudgetManager] Starting provider 'brave' with budget limit of 7.0s.
+2026-07-31 17:01:57 | INFO     | ThreadPoolExecutor-1_0 | utils.budget_manager | [ProviderBudgetManager] Starting provider 'brave' with budget limit of 7.0s.
+2026-07-31 17:01:57 | WARNING  | ThreadPoolExecutor-1_1 | network_client_project.network.middleware.retry | [Retry] Retrying query https://web.runo.in/sitemap_index.xml (attempt 1/3) after 0.10s delay due to: Timeout (Failed to perform, curl: (28) Operation timed out after 5009 milliseconds with 0 bytes received. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.).
+2026-07-31 17:01:58 | INFO     | ThreadPoolExecutor-1_3 | utils.budget_manager | [ProviderBudgetManager] Starting provider 'brave' with budget limit of 7.0s.
+2026-07-31 17:01:59 | WARNING  | ThreadPoolExecutor-1_0 | network_client_project.network.middleware.retry | [Retry] Search provider brave hit block/CAPTCHA/429 (HTTP 429). Bubbling up immediately for fail-fast.
+2026-07-31 17:01:59 | WARNING  | ThreadPoolExecutor-1_0 | network_client_project.network.middleware.throttle | [AutoThrottle] 429 Rate Limit hit on search.brave.com. Reducing rate: 0.55 rps -> 0.22 rps.
+2026-07-31 17:01:59 | INFO     | ThreadPoolExecutor-1_2 | search.manager | [SearchManager] bing recorded 3.0 failure points (Reason: Captcha/Block). Total: 3.0/10.0
+2026-07-31 17:01:59 | INFO     | ThreadPoolExecutor-1_2 | utils.budget_manager | [ProviderBudgetManager] Starting provider 'brightdata' with budget limit of 28.4s.
+2026-07-31 17:02:00 | INFO     | ThreadPoolExecutor-1_1 | network_client_project.network.proxy_manager | [Proxy Scoring] Proxy: 47.81.56.193:8888 | Old score: 90.0 | Reason: SUCCESS (VALID_RESULTS) | New score: 98.0
+2026-07-31 17:02:00 | INFO     | ThreadPoolExecutor-1_1 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 47.81.56.193:8888 score changed by +8.0 (Reason: VALID_RESULTS)
+2026-07-31 17:02:02 | WARNING  | ThreadPoolExecutor-1_4 | network_client_project.network.middleware.retry | [Retry] Search provider brave hit block/CAPTCHA/429 (HTTP 429). Bubbling up immediately for fail-fast.
+2026-07-31 17:02:02 | WARNING  | ThreadPoolExecutor-1_4 | network_client_project.network.middleware.throttle | [AutoThrottle] 429 Rate Limit hit on search.brave.com. Reducing rate: 0.22 rps -> 0.09 rps.
+2026-07-31 17:02:03 | WARNING  | ThreadPoolExecutor-1_3 | network_client_project.network.middleware.retry | [Retry] Search provider brave hit block/CAPTCHA/429 (HTTP 429). Bubbling up immediately for fail-fast.
+2026-07-31 17:02:03 | WARNING  | ThreadPoolExecutor-1_3 | network_client_project.network.middleware.throttle | [AutoThrottle] 429 Rate Limit hit on search.brave.com. Reducing rate: 0.09 rps -> 0.05 rps.
+2026-07-31 17:02:06 | WARNING  | ThreadPoolExecutor-1_0 | network_client_project.network.middleware.retry | [Retry] Search provider brave hit block/CAPTCHA/429 (HTTP 429). Bubbling up immediately for fail-fast.
+2026-07-31 17:02:06 | WARNING  | ThreadPoolExecutor-1_0 | network_client_project.network.middleware.throttle | [AutoThrottle] 429 Rate Limit hit on search.brave.com. Reducing rate: 0.05 rps -> 0.05 rps.
+2026-07-31 17:02:06 | INFO     | ThreadPoolExecutor-1_0 | search.manager | [SearchManager] brave recorded 4.0 failure points (Reason: 429 Rate Limit). Total: 4.0/10.0
+2026-07-31 17:02:06 | INFO     | ThreadPoolExecutor-1_0 | utils.budget_manager | [ProviderBudgetManager] Starting provider 'bing' with budget limit of 7.0s.
+2026-07-31 17:02:07 | INFO     | ThreadPoolExecutor-1_2 | network_client_project.network.middleware.throttle | [AutoThrottle] High latency (5.38s) on api.brightdata.com. Reducing rate: 0.50 rps -> 0.40 rps.
+2026-07-31 17:02:07 | INFO     | ThreadPoolExecutor-1_2 | utils.budget_manager | [ProviderBudgetManager] Starting provider 'duckduckgo' with budget limit of 7.0s.
+2026-07-31 17:02:12 | WARNING  | ThreadPoolExecutor-1_4 | network_client_project.network.middleware.retry | [Retry] Search provider brave hit block/CAPTCHA/429 (HTTP 429). Bubbling up immediately for fail-fast.
+2026-07-31 17:02:12 | WARNING  | ThreadPoolExecutor-1_4 | network_client_project.network.middleware.throttle | [AutoThrottle] 429 Rate Limit hit on search.brave.com. Reducing rate: 0.05 rps -> 0.05 rps.
+2026-07-31 17:02:12 | INFO     | ThreadPoolExecutor-1_4 | search.manager | [SearchManager] brave recorded 4.0 failure points (Reason: 429 Rate Limit). Total: 8.0/10.0
+2026-07-31 17:02:12 | INFO     | ThreadPoolExecutor-1_4 | utils.budget_manager | [ProviderBudgetManager] Starting provider 'bing' with budget limit of 7.0s.
+2026-07-31 17:02:18 | INFO     | ThreadPoolExecutor-1_0 | search.manager | [SearchManager] bing recorded 3.0 failure points (Reason: Captcha/Block). Total: 6.0/10.0
+2026-07-31 17:02:18 | INFO     | ThreadPoolExecutor-1_0 | utils.budget_manager | [ProviderBudgetManager] Starting provider 'brightdata' with budget limit of 10.3s.
+2026-07-31 17:02:20 | WARNING  | ThreadPoolExecutor-1_3 | network_client_project.network.middleware.retry | [Retry] Search provider brave hit block/CAPTCHA/429 (HTTP 429). Bubbling up immediately for fail-fast.
+2026-07-31 17:02:20 | WARNING  | ThreadPoolExecutor-1_3 | network_client_project.network.middleware.throttle | [AutoThrottle] 429 Rate Limit hit on search.brave.com. Reducing rate: 0.05 rps -> 0.05 rps.
+2026-07-31 17:02:20 | INFO     | ThreadPoolExecutor-1_3 | search.manager | [SearchManager] brave recorded 4.0 failure points (Reason: 429 Rate Limit). Total: 12.0/10.0
+2026-07-31 17:02:20 | WARNING  | ThreadPoolExecutor-1_3 | search.manager | [SearchManager] brave failure score reached 12.0. Tripping breaker to OPEN.
+2026-07-31 17:02:20 | INFO     | ThreadPoolExecutor-1_3 | search.manager | [SearchManager] brave entered cooldown for 300s (until 1785497840) | Breaker state is OPEN
+2026-07-31 17:02:20 | INFO     | ThreadPoolExecutor-1_3 | utils.budget_manager | [ProviderBudgetManager] Starting provider 'bing' with budget limit of 7.0s.
+2026-07-31 17:02:20 | INFO     | ThreadPoolExecutor-1_3 | utils.budget_manager | [ProviderBudgetManager] Starting provider 'brightdata' with budget limit of 7.6s.
+2026-07-31 17:02:22 | INFO     | ThreadPoolExecutor-1_4 | search.manager | [SearchManager] bing recorded 3.0 failure points (Reason: Captcha/Block). Total: 9.0/10.0
+2026-07-31 17:02:22 | INFO     | ThreadPoolExecutor-1_4 | utils.budget_manager | [ProviderBudgetManager] Starting provider 'brightdata' with budget limit of 5.8s.
+2026-07-31 17:02:22 | INFO     | ThreadPoolExecutor-1_0 | network_client_project.network.middleware.throttle | [AutoThrottle] High latency (2.86s) on api.brightdata.com. Reducing rate: 0.40 rps -> 0.32 rps.
+2026-07-31 17:02:23 | INFO     | ThreadPoolExecutor-1_0 | utils.budget_manager | [ProviderBudgetManager] Starting provider 'duckduckgo' with budget limit of 7.0s.
+2026-07-31 17:02:23 | INFO     | ThreadPoolExecutor-1_2 | search.manager | [SearchManager] duckduckgo recorded 3.0 failure points (Reason: Unavailable (Temporary anti-bot response (2)). Total: 6.0/10.0
+2026-07-31 17:02:23 | INFO     | ThreadPoolExecutor-1_2 | utils.budget_manager | [ProviderBudgetManager] Starting provider 'duckduckgo' with budget limit of 7.0s.
+2026-07-31 17:02:23 | INFO     | ThreadPoolExecutor-1_2 | search.manager | [SearchManager] duckduckgo recorded 3.0 failure points (Reason: Unavailable (DuckDuckGo cooling down for 59)). Total: 9.0/10.0
+2026-07-31 17:02:23 | INFO     | ThreadPoolExecutor-1_2 | utils.budget_manager | [ProviderBudgetManager] Starting provider 'brightdata' with budget limit of 5.0s.
+2026-07-31 17:02:25 | INFO     | ThreadPoolExecutor-1_3 | network_client_project.network.middleware.throttle | [AutoThrottle] High latency (2.57s) on api.brightdata.com. Reducing rate: 0.32 rps -> 0.26 rps.
+2026-07-31 17:02:25 | INFO     | ThreadPoolExecutor-1_3 | utils.budget_manager | [ProviderBudgetManager] Starting provider 'duckduckgo' with budget limit of 7.0s.
+2026-07-31 17:02:25 | INFO     | ThreadPoolExecutor-1_3 | search.manager | [SearchManager] duckduckgo recorded 3.0 failure points (Reason: Unavailable (DuckDuckGo cooling down for 57)). Total: 12.0/10.0
+2026-07-31 17:02:25 | WARNING  | ThreadPoolExecutor-1_3 | search.manager | [SearchManager] duckduckgo failure score reached 12.0. Tripping breaker to OPEN.
+2026-07-31 17:02:25 | INFO     | ThreadPoolExecutor-1_3 | search.manager | [SearchManager] duckduckgo entered cooldown for 300s (until 1785497845) | Breaker state is OPEN
+2026-07-31 17:02:25 | INFO     | ThreadPoolExecutor-1_3 | utils.budget_manager | [ProviderBudgetManager] Starting provider 'brightdata' with budget limit of 5.0s.
+2026-07-31 17:02:25 | INFO     | ThreadPoolExecutor-1_3 | utils.budget_manager | [ProviderBudgetManager] Starting provider 'bing' with budget limit of 7.0s.
+2026-07-31 17:02:25 | INFO     | ThreadPoolExecutor-1_3 | utils.budget_manager | [ProviderBudgetManager] Starting provider 'brightdata' with budget limit of 5.0s.
+2026-07-31 17:02:25 | INFO     | ThreadPoolExecutor-1_3 | utils.budget_manager | [ProviderBudgetManager] Starting provider 'bing' with budget limit of 7.0s.
+2026-07-31 17:02:27 | INFO     | ThreadPoolExecutor-1_4 | network_client_project.network.middleware.throttle | [AutoThrottle] High latency (3.08s) on api.brightdata.com. Reducing rate: 0.26 rps -> 0.20 rps.
+2026-07-31 17:02:27 | INFO     | ThreadPoolExecutor-1_4 | search.manager | [SearchManager] brightdata recorded 1.0 failure points (Reason: VALID_ZERO_RESULTS for high expectation query (0.60)). Total: 1.0/10.0
+2026-07-31 17:02:27 | INFO     | ThreadPoolExecutor-1_4 | utils.budget_manager | [ProviderBudgetManager] Starting provider 'brightdata' with budget limit of 5.0s.
+2026-07-31 17:02:27 | INFO     | ThreadPoolExecutor-1_4 | utils.budget_manager | [ProviderBudgetManager] Starting provider 'bing' with budget limit of 7.0s.
+2026-07-31 17:02:27 | INFO     | ThreadPoolExecutor-1_4 | utils.budget_manager | [ProviderBudgetManager] Starting provider 'brightdata' with budget limit of 5.0s.
+2026-07-31 17:02:27 | INFO     | ThreadPoolExecutor-1_4 | utils.budget_manager | [ProviderBudgetManager] Starting provider 'bing' with budget limit of 7.0s.
+2026-07-31 17:02:27 | INFO     | ThreadPoolExecutor-1_4 | utils.budget_manager | [ProviderBudgetManager] Starting provider 'brightdata' with budget limit of 5.0s.
+2026-07-31 17:02:27 | INFO     | ThreadPoolExecutor-1_4 | utils.budget_manager | [ProviderBudgetManager] Starting provider 'bing' with budget limit of 7.0s.
+2026-07-31 17:02:27 | INFO     | ThreadPoolExecutor-1_4 | utils.budget_manager | [ProviderBudgetManager] Starting provider 'brightdata' with budget limit of 5.0s.
+2026-07-31 17:02:27 | INFO     | ThreadPoolExecutor-1_4 | utils.budget_manager | [ProviderBudgetManager] Starting provider 'bing' with budget limit of 7.0s.
+2026-07-31 17:02:27 | INFO     | ThreadPoolExecutor-1_4 | utils.budget_manager | [ProviderBudgetManager] Starting provider 'brightdata' with budget limit of 5.0s.
+2026-07-31 17:02:27 | INFO     | ThreadPoolExecutor-1_4 | utils.budget_manager | [ProviderBudgetManager] Starting provider 'bing' with budget limit of 7.0s.
+2026-07-31 17:02:27 | INFO     | ThreadPoolExecutor-1_4 | utils.budget_manager | [ProviderBudgetManager] Starting provider 'brightdata' with budget limit of 5.0s.
+2026-07-31 17:02:27 | INFO     | ThreadPoolExecutor-1_4 | utils.budget_manager | [ProviderBudgetManager] Starting provider 'bing' with budget limit of 7.0s.
+2026-07-31 17:02:31 | INFO     | ThreadPoolExecutor-1_2 | network_client_project.network.middleware.throttle | [AutoThrottle] High latency (5.75s) on api.brightdata.com. Reducing rate: 0.20 rps -> 0.16 rps.
+2026-07-31 17:02:55 | INFO     | MainThread | search.base_registry | Scanning for plugins in C:\Users\yasha\Downloads\pillar1\pillar_4_pipeline\exporters...
+2026-07-31 17:02:55 | INFO     | MainThread | pillar_4_pipeline.exporters.json_exporter | [JsonExporter] Successfully exported 6 records to JSON file: cleaned_data.json
+2026-07-31 17:02:56 | INFO     | MainThread | network_client_project.network.logger | Network Logging System Initialized.
+2026-07-31 17:02:56 | INFO     | MainThread | query.expansion | Loaded persistent query feedback from data\query_feedback_semantic.json
+2026-07-31 17:02:56 | INFO     | MainThread | search.base_registry | Scanning for plugins in C:\Users\yasha\Downloads\pillar1\pillar_4_pipeline\exporters...
+2026-07-31 17:02:56 | INFO     | MainThread | pillar_4_pipeline.exporters.sqlite_exporter | [SQLiteExporter] Successfully exported 6 records to SQLite database: leads.db
+2026-07-31 18:26:39 | INFO     | MainThread | network_client_project.network.logger | Network Logging System Initialized.
+2026-07-31 18:26:39 | INFO     | MainThread | query.expansion | Loaded persistent query feedback from data\query_feedback_semantic.json
+2026-07-31 18:26:39 | INFO     | MainThread | search.base_registry | Scanning for plugins in C:\Users\yasha\Downloads\pillar1\pillar1\search\providers...
+2026-07-31 18:26:39 | INFO     | MainThread | network_client_project.network.proxy_manager | Loaded 6 proxies into the manager.
+2026-07-31 18:26:39 | INFO     | MainThread | network_client_project.network.proxy_manager | Loaded proxy state from proxy_state.json
+2026-07-31 18:26:39 | INFO     | MainThread | network_client_project.network.proxy_manager | [ProxyManager] Loaded proxy state
+2026-07-31 18:26:39 | INFO     | MainThread | network_client_project.network.proxy_manager |   Total non-zero: 6 | Average score: 92.3
+2026-07-31 18:26:39 | INFO     | MainThread | network_client_project.network.proxy_manager |   Top 5 by score:
+2026-07-31 18:26:39 | INFO     | MainThread | network_client_project.network.proxy_manager |     47.81.56.193:8888 = 98.0
+2026-07-31 18:26:39 | INFO     | MainThread | network_client_project.network.proxy_manager |     34.87.80.221:30000 = 95.0
+2026-07-31 18:26:39 | INFO     | MainThread | network_client_project.network.proxy_manager |     52.67.38.58:3128 = 95.0
+2026-07-31 18:26:39 | INFO     | MainThread | network_client_project.network.proxy_manager |     217.182.203.184:8888 = 94.0
+2026-07-31 18:26:39 | INFO     | MainThread | network_client_project.network.proxy_manager |     34.134.231.117:3129 = 90.0
+2026-07-31 18:26:39 | INFO     | MainThread | network_client_project.network.proxy_manager |   Bottom 5 by score:
+2026-07-31 18:26:39 | INFO     | MainThread | network_client_project.network.proxy_manager |     34.87.80.221:30000 = 95.0
+2026-07-31 18:26:39 | INFO     | MainThread | network_client_project.network.proxy_manager |     52.67.38.58:3128 = 95.0
+2026-07-31 18:26:39 | INFO     | MainThread | network_client_project.network.proxy_manager |     217.182.203.184:8888 = 94.0
+2026-07-31 18:26:39 | INFO     | MainThread | network_client_project.network.proxy_manager |     34.134.231.117:3129 = 90.0
+2026-07-31 18:26:39 | INFO     | MainThread | network_client_project.network.proxy_manager |     181.39.25.196:8118 = 82.0
+2026-07-31 18:26:39 | INFO     | ProxyManager-StartupValidator | network_client_project.network.proxy_manager | [ProxyManager] Starting background proxy validation thread...
+2026-07-31 18:26:39 | WARNING  | ThreadPoolExecutor-0_0 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 34.87.80.221:30000 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-31 18:26:39 | WARNING  | ThreadPoolExecutor-0_2 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 217.182.203.184:8888 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-31 18:26:39 | WARNING  | ThreadPoolExecutor-0_4 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 52.67.38.58:3128 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-31 18:26:39 | WARNING  | ThreadPoolExecutor-0_1 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 47.81.56.193:8888 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-31 18:26:39 | WARNING  | ThreadPoolExecutor-0_3 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 181.39.25.196:8118 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-31 18:26:39 | WARNING  | ThreadPoolExecutor-0_5 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 34.134.231.117:3129 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-31 18:26:39 | INFO     | ProxyManager-StartupValidator | network_client_project.network.proxy_manager | [ProxyManager] Background proxy validation complete. Alive: 0/6, Google-capable: 0/6
+2026-07-31 18:26:39 | INFO     | MainThread | search.base_registry | Scanning for plugins in C:\Users\yasha\Downloads\pillar1\network_client_project\network\middleware...
+2026-07-31 18:26:39 | INFO     | MainThread | network_client_project.network.client | NetworkClient initialized with decoupled Downloader Middleware stack.
+2026-07-31 18:36:55 | ERROR    | MainThread | whois.whois | Error trying to connect to socket: closing socket - [Errno 11001] getaddrinfo failed
+2026-07-31 18:36:55 | ERROR    | MainThread | whois.whois | Error trying to connect to socket: closing socket - [Errno 11001] getaddrinfo failed
+2026-07-31 18:36:56 | INFO     | ThreadPoolExecutor-1_2 | network_client_project.network.client | NetworkClient initialized with decoupled Downloader Middleware stack.
+2026-07-31 18:36:56 | INFO     | ThreadPoolExecutor-1_1 | network_client_project.network.client | NetworkClient initialized with decoupled Downloader Middleware stack.
+2026-07-31 18:36:56 | INFO     | ThreadPoolExecutor-1_0 | network_client_project.network.client | NetworkClient initialized with decoupled Downloader Middleware stack.
+2026-07-31 18:36:56 | INFO     | ThreadPoolExecutor-1_3 | network_client_project.network.client | NetworkClient initialized with decoupled Downloader Middleware stack.
+2026-07-31 18:36:57 | INFO     | ThreadPoolExecutor-1_3 | network_client_project.network.client | NetworkClient initialized with decoupled Downloader Middleware stack.
+2026-07-31 18:36:57 | INFO     | ThreadPoolExecutor-1_3 | network_client_project.network.client | NetworkClient initialized with decoupled Downloader Middleware stack.
+2026-07-31 18:36:58 | INFO     | ThreadPoolExecutor-1_3 | network_client_project.network.client | NetworkClient initialized with decoupled Downloader Middleware stack.
+2026-07-31 18:36:58 | INFO     | ThreadPoolExecutor-1_3 | utils.budget_manager | [ProviderBudgetManager] Starting provider 'playwright_google' with budget limit of 15.0s.
+2026-07-31 18:36:58 | INFO     | ThreadPoolExecutor-1_3 | pillar1.search.playwright_google | [PlaywrightGoogleProvider] Current thread: ThreadPoolExecutor-1_3
+2026-07-31 18:36:58 | INFO     | ThreadPoolExecutor-1_2 | utils.budget_manager | [ProviderBudgetManager] Starting provider 'playwright_google' with budget limit of 15.0s.
+2026-07-31 18:36:58 | INFO     | ThreadPoolExecutor-1_3 | pillar1.search.playwright_google | [PlaywrightGoogleProvider] No running event loop detected in this thread.
+2026-07-31 18:36:58 | INFO     | ThreadPoolExecutor-1_3 | pillar1.browser | [BrowserManager] Lazy-initializing Playwright driver (sync)...
+2026-07-31 18:36:58 | INFO     | ThreadPoolExecutor-1_2 | pillar1.search.playwright_google | [PlaywrightGoogleProvider] Current thread: ThreadPoolExecutor-1_2
+2026-07-31 18:36:58 | INFO     | ThreadPoolExecutor-1_2 | pillar1.search.playwright_google | [PlaywrightGoogleProvider] No running event loop detected in this thread.
+2026-07-31 18:36:58 | INFO     | ThreadPoolExecutor-1_0 | utils.budget_manager | [ProviderBudgetManager] Starting provider 'linkedin_playwright' with budget limit of 15.0s.
+2026-07-31 18:36:59 | INFO     | ThreadPoolExecutor-1_1 | utils.budget_manager | [ProviderBudgetManager] Starting provider 'playwright_google' with budget limit of 15.0s.
+2026-07-31 18:36:59 | INFO     | ThreadPoolExecutor-1_1 | pillar1.search.playwright_google | [PlaywrightGoogleProvider] Current thread: ThreadPoolExecutor-1_1
+2026-07-31 18:36:59 | INFO     | ThreadPoolExecutor-1_1 | pillar1.search.playwright_google | [PlaywrightGoogleProvider] No running event loop detected in this thread.
+2026-07-31 18:37:04 | INFO     | ThreadPoolExecutor-1_3 | pillar1.browser | [BrowserPool] Initializing pool (CPU cores: 8, Healthy proxies: 1, Config limit: 3) -> Pool Size: 1
+2026-07-31 18:37:04 | INFO     | ThreadPoolExecutor-1_3 | pillar1.browser | [BrowserPool] Lazy initialization configured. Pool capacity: 1. Instances will launch on-demand.
+2026-07-31 18:37:04 | INFO     | ThreadPoolExecutor-1_3 | pillar1.browser | [BrowserPool] No eligible browser instances for provider 'google'. Creating on-demand instance.
+2026-07-31 18:37:04 | WARNING  | ThreadPoolExecutor-1_3 | pillar1.browser | [BrowserPool] Connection policy is 'proxy_only' for provider 'google', but no healthy proxies are available. Aborting browser launch to prevent direct connection.
+2026-07-31 18:37:04 | WARNING  | ThreadPoolExecutor-1_3 | pillar1.browser | [BrowserPool] All active instances are currently blocked for 'google'.
+2026-07-31 18:37:04 | INFO     | ThreadPoolExecutor-1_3 | pillar1.browser | [BrowserPool] Attempting to create rescue instance for provider 'google'...
+2026-07-31 18:37:04 | WARNING  | ThreadPoolExecutor-1_3 | pillar1.browser | [BrowserPool] Connection policy is 'proxy_only' for provider 'google', but no healthy proxies are available. Aborting browser launch to prevent direct connection.
+2026-07-31 18:37:04 | WARNING  | ThreadPoolExecutor-1_3 | pillar1.search.playwright_google | [PlaywrightGoogleProvider] BrowserPool exhausted or unavailable: All browser instances in the pool are currently blocked for provider 'google'.. Tripping circuit breaker.
+2026-07-31 18:37:04 | INFO     | ThreadPoolExecutor-1_2 | pillar1.browser | [BrowserPool] No eligible browser instances for provider 'google'. Creating on-demand instance.
+2026-07-31 18:37:04 | WARNING  | ThreadPoolExecutor-1_2 | pillar1.browser | [BrowserPool] Connection policy is 'proxy_only' for provider 'google', but no healthy proxies are available. Aborting browser launch to prevent direct connection.
+2026-07-31 18:37:04 | WARNING  | ThreadPoolExecutor-1_2 | pillar1.browser | [BrowserPool] All active instances are currently blocked for 'google'.
+2026-07-31 18:37:04 | INFO     | ThreadPoolExecutor-1_2 | pillar1.browser | [BrowserPool] Attempting to create rescue instance for provider 'google'...
+2026-07-31 18:37:04 | WARNING  | ThreadPoolExecutor-1_2 | pillar1.browser | [BrowserPool] Connection policy is 'proxy_only' for provider 'google', but no healthy proxies are available. Aborting browser launch to prevent direct connection.
+2026-07-31 18:37:04 | WARNING  | ThreadPoolExecutor-1_2 | pillar1.search.playwright_google | [PlaywrightGoogleProvider] BrowserPool exhausted or unavailable: All browser instances in the pool are currently blocked for provider 'google'.. Tripping circuit breaker.
+2026-07-31 18:37:04 | INFO     | ThreadPoolExecutor-1_0 | pillar1.browser | [BrowserPool] No active browser instances. Creating on-demand instance.
+2026-07-31 18:37:04 | INFO     | ThreadPoolExecutor-1_3 | search.manager | [SearchManager] playwright_google recorded 3.0 failure points (Reason: Captcha/Block). Total: 3.0/10.0
+2026-07-31 18:37:04 | WARNING  | ThreadPoolExecutor-1_0 | pillar1.browser | [BrowserPool] Connection policy is 'proxy_only' for provider 'playwright_google', but no healthy proxies are available. Aborting browser launch to prevent direct connection.
+2026-07-31 18:37:04 | WARNING  | ThreadPoolExecutor-1_0 | pillar1.browser | [BrowserPool] No active browser instances available. Creating rescue instance...
+2026-07-31 18:37:04 | INFO     | ThreadPoolExecutor-1_3 | utils.budget_manager | [ProviderBudgetManager] Starting provider 'google_html' with budget limit of 8.0s.
+2026-07-31 18:37:04 | WARNING  | ThreadPoolExecutor-1_0 | pillar1.browser | [BrowserPool] Connection policy is 'proxy_only' for provider 'playwright_google', but no healthy proxies are available. Aborting browser launch to prevent direct connection.
+2026-07-31 18:37:04 | ERROR    | ThreadPoolExecutor-1_0 | search.manager | [SearchManager] Unexpected provider 'linkedin_playwright' error: BrowserPool exhausted and failed to spin up any active browser instances.
+2026-07-31 18:37:04 | INFO     | ThreadPoolExecutor-1_1 | pillar1.browser | [BrowserPool] No eligible browser instances for provider 'google'. Creating on-demand instance.
+2026-07-31 18:37:04 | INFO     | ThreadPoolExecutor-1_2 | search.manager | [SearchManager] playwright_google recorded 3.0 failure points (Reason: Captcha/Block). Total: 6.0/10.0
+2026-07-31 18:37:04 | INFO     | ThreadPoolExecutor-1_0 | search.manager | [SearchManager] linkedin_playwright recorded 3.0 failure points (Reason: Unexpected Error (BrowserPool exhausted and fail)). Total: 3.0/10.0
+2026-07-31 18:37:04 | WARNING  | ThreadPoolExecutor-1_1 | pillar1.browser | [BrowserPool] Connection policy is 'proxy_only' for provider 'google', but no healthy proxies are available. Aborting browser launch to prevent direct connection.
+2026-07-31 18:37:04 | WARNING  | ThreadPoolExecutor-1_1 | pillar1.browser | [BrowserPool] All active instances are currently blocked for 'google'.
+2026-07-31 18:37:04 | INFO     | ThreadPoolExecutor-1_2 | utils.budget_manager | [ProviderBudgetManager] Starting provider 'google_html' with budget limit of 8.0s.
+2026-07-31 18:37:04 | INFO     | ThreadPoolExecutor-1_3 | search.google_scheduler | [GoogleScheduler] Initialized with max_workers=2, circuit breaker window=20, threshold=80%
+2026-07-31 18:37:04 | INFO     | ThreadPoolExecutor-1_0 | utils.budget_manager | [ProviderBudgetManager] Starting provider 'playwright_google' with budget limit of 15.0s.
+2026-07-31 18:37:04 | INFO     | ThreadPoolExecutor-1_1 | pillar1.browser | [BrowserPool] Attempting to create rescue instance for provider 'google'...
+2026-07-31 18:37:04 | INFO     | ThreadPoolExecutor-1_3 | search.google_scheduler | [GoogleScheduler] Resized max_workers to 1 (Healthy proxies: 0)
+2026-07-31 18:37:04 | WARNING  | ThreadPoolExecutor-1_2 | search.google_scheduler | [GoogleScheduler] No healthy proxies with budget. Aborting Google search.
+2026-07-31 18:37:04 | INFO     | ThreadPoolExecutor-1_0 | pillar1.search.playwright_google | [PlaywrightGoogleProvider] Current thread: ThreadPoolExecutor-1_0
+2026-07-31 18:37:04 | WARNING  | ThreadPoolExecutor-1_3 | search.google_scheduler | [GoogleScheduler] No healthy proxies with budget. Aborting Google search.
+2026-07-31 18:37:04 | WARNING  | ThreadPoolExecutor-1_1 | pillar1.browser | [BrowserPool] Connection policy is 'proxy_only' for provider 'google', but no healthy proxies are available. Aborting browser launch to prevent direct connection.
+2026-07-31 18:37:04 | INFO     | ThreadPoolExecutor-1_0 | pillar1.search.playwright_google | [PlaywrightGoogleProvider] No running event loop detected in this thread.
+2026-07-31 18:37:04 | WARNING  | ThreadPoolExecutor-1_1 | pillar1.search.playwright_google | [PlaywrightGoogleProvider] BrowserPool exhausted or unavailable: All browser instances in the pool are currently blocked for provider 'google'.. Tripping circuit breaker.
+2026-07-31 18:37:04 | INFO     | ThreadPoolExecutor-1_0 | pillar1.browser | [BrowserPool] No eligible browser instances for provider 'google'. Creating on-demand instance.
+2026-07-31 18:37:04 | WARNING  | ThreadPoolExecutor-1_1 | pillar1.browser | [BrowserCircuitBreaker] CAPTCHA threshold reached for 'playwright_google'. Tripping circuit breaker. Cooldown active for 600.0s.
+2026-07-31 18:37:04 | WARNING  | ThreadPoolExecutor-1_0 | pillar1.browser | [BrowserPool] Connection policy is 'proxy_only' for provider 'google', but no healthy proxies are available. Aborting browser launch to prevent direct connection.
+2026-07-31 18:37:04 | WARNING  | ThreadPoolExecutor-1_0 | pillar1.browser | [BrowserPool] All active instances are currently blocked for 'google'.
+2026-07-31 18:37:04 | INFO     | ThreadPoolExecutor-1_0 | pillar1.browser | [BrowserPool] Attempting to create rescue instance for provider 'google'...
+2026-07-31 18:37:04 | INFO     | ThreadPoolExecutor-1_3 | search.manager | [SearchManager] google_html recorded 3.0 failure points (Reason: Unavailable (No healthy Google proxies with)). Total: 3.0/10.0
+2026-07-31 18:37:04 | INFO     | ThreadPoolExecutor-1_2 | search.manager | [SearchManager] google_html recorded 3.0 failure points (Reason: Unavailable (No healthy Google proxies with)). Total: 6.0/10.0
+2026-07-31 18:37:04 | INFO     | ThreadPoolExecutor-1_1 | search.manager | [SearchManager] playwright_google recorded 3.0 failure points (Reason: Captcha/Block). Total: 9.0/10.0
+2026-07-31 18:37:04 | WARNING  | ThreadPoolExecutor-1_0 | pillar1.browser | [BrowserPool] Connection policy is 'proxy_only' for provider 'google', but no healthy proxies are available. Aborting browser launch to prevent direct connection.
+2026-07-31 18:37:04 | INFO     | ThreadPoolExecutor-1_3 | utils.budget_manager | [ProviderBudgetManager] Starting provider 'duckduckgo' with budget limit of 7.0s.
+2026-07-31 18:37:04 | WARNING  | ThreadPoolExecutor-1_0 | pillar1.search.playwright_google | [PlaywrightGoogleProvider] BrowserPool exhausted or unavailable: All browser instances in the pool are currently blocked for provider 'google'.. Tripping circuit breaker.
+2026-07-31 18:37:04 | WARNING  | ThreadPoolExecutor-1_0 | pillar1.browser | [BrowserCircuitBreaker] CAPTCHA threshold reached for 'playwright_google'. Tripping circuit breaker. Cooldown active for 600.0s.
+2026-07-31 18:37:04 | INFO     | ThreadPoolExecutor-1_2 | utils.budget_manager | [ProviderBudgetManager] Starting provider 'duckduckgo' with budget limit of 7.0s.
+2026-07-31 18:37:04 | INFO     | ThreadPoolExecutor-1_1 | utils.budget_manager | [ProviderBudgetManager] Starting provider 'duckduckgo' with budget limit of 7.0s.
+2026-07-31 18:37:04 | INFO     | ThreadPoolExecutor-1_0 | search.manager | [SearchManager] playwright_google recorded 3.0 failure points (Reason: Captcha/Block). Total: 12.0/10.0
+2026-07-31 18:37:04 | WARNING  | ThreadPoolExecutor-1_0 | search.manager | [SearchManager] playwright_google failure score reached 12.0. Tripping breaker to OPEN.
+2026-07-31 18:37:04 | INFO     | ThreadPoolExecutor-1_0 | search.manager | [SearchManager] playwright_google entered cooldown for 300s (until 1785503524) | Breaker state is OPEN
+2026-07-31 18:37:04 | INFO     | ThreadPoolExecutor-1_0 | utils.budget_manager | [ProviderBudgetManager] Starting provider 'duckduckgo' with budget limit of 7.0s.
+2026-07-31 18:37:09 | INFO     | ThreadPoolExecutor-1_2 | search.manager | [SearchManager] duckduckgo recorded 3.0 failure points (Reason: Unavailable (Failed to perform, curl: (6) C)). Total: 3.0/10.0
+2026-07-31 18:37:09 | INFO     | ThreadPoolExecutor-1_2 | utils.budget_manager | [ProviderBudgetManager] Starting provider 'brave' with budget limit of 7.0s.
+2026-07-31 18:37:09 | INFO     | ThreadPoolExecutor-1_1 | search.manager | [SearchManager] duckduckgo recorded 3.0 failure points (Reason: Unavailable (Failed to perform, curl: (6) C)). Total: 6.0/10.0
+2026-07-31 18:37:09 | INFO     | ThreadPoolExecutor-1_1 | utils.budget_manager | [ProviderBudgetManager] Starting provider 'brave' with budget limit of 7.0s.
+2026-07-31 18:37:10 | INFO     | ThreadPoolExecutor-1_3 | search.manager | [SearchManager] duckduckgo recorded 3.0 failure points (Reason: Unavailable (Failed to perform, curl: (6) C)). Total: 9.0/10.0
+2026-07-31 18:37:10 | INFO     | ThreadPoolExecutor-1_3 | utils.budget_manager | [ProviderBudgetManager] Starting provider 'brave' with budget limit of 7.0s.
+2026-07-31 18:37:10 | INFO     | ThreadPoolExecutor-1_0 | search.manager | [SearchManager] duckduckgo recorded 3.0 failure points (Reason: Unavailable (Failed to perform, curl: (6) C)). Total: 12.0/10.0
+2026-07-31 18:37:10 | WARNING  | ThreadPoolExecutor-1_0 | search.manager | [SearchManager] duckduckgo failure score reached 12.0. Tripping breaker to OPEN.
+2026-07-31 18:37:10 | INFO     | ThreadPoolExecutor-1_0 | search.manager | [SearchManager] duckduckgo entered cooldown for 300s (until 1785503530) | Breaker state is OPEN
+2026-07-31 18:37:10 | INFO     | ThreadPoolExecutor-1_0 | utils.budget_manager | [ProviderBudgetManager] Starting provider 'brave' with budget limit of 7.0s.
+2026-07-31 18:37:13 | INFO     | ThreadPoolExecutor-1_2 | search.manager | [SearchManager] brave recorded 3.0 failure points (Reason: Unavailable (Failed to perform, Failed to p)). Total: 3.0/10.0
+2026-07-31 18:37:13 | INFO     | ThreadPoolExecutor-1_2 | utils.budget_manager | [ProviderBudgetManager] Starting provider 'bing' with budget limit of 7.0s.
+2026-07-31 18:37:13 | INFO     | ThreadPoolExecutor-1_3 | search.manager | [SearchManager] brave recorded 3.0 failure points (Reason: Unavailable (Failed to perform, Failed to p)). Total: 6.0/10.0
+2026-07-31 18:37:13 | INFO     | ThreadPoolExecutor-1_3 | utils.budget_manager | [ProviderBudgetManager] Starting provider 'bing' with budget limit of 7.0s.
+2026-07-31 18:37:14 | INFO     | ThreadPoolExecutor-1_1 | search.manager | [SearchManager] brave recorded 3.0 failure points (Reason: Unavailable (Failed to perform, Failed to p)). Total: 9.0/10.0
+2026-07-31 18:37:14 | INFO     | ThreadPoolExecutor-1_1 | utils.budget_manager | [ProviderBudgetManager] Starting provider 'bing' with budget limit of 7.0s.
+2026-07-31 18:37:15 | INFO     | ThreadPoolExecutor-1_2 | search.manager | [SearchManager] bing recorded 3.0 failure points (Reason: Unavailable (No healthy proxies available f)). Total: 3.0/10.0
+2026-07-31 18:37:15 | INFO     | ThreadPoolExecutor-1_2 | utils.budget_manager | [ProviderBudgetManager] Starting provider 'brightdata' with budget limit of 45.7s.
+2026-07-31 18:37:16 | INFO     | ThreadPoolExecutor-1_2 | utils.budget_manager | [ProviderBudgetManager] Starting provider 'linkedin_playwright' with budget limit of 15.0s.
+2026-07-31 18:37:16 | INFO     | ThreadPoolExecutor-1_2 | pillar1.browser | [BrowserPool] No active browser instances. Creating on-demand instance.
+2026-07-31 18:37:16 | WARNING  | ThreadPoolExecutor-1_2 | pillar1.browser | [BrowserPool] Connection policy is 'proxy_only' for provider 'playwright_google', but no healthy proxies are available. Aborting browser launch to prevent direct connection.
+2026-07-31 18:37:16 | WARNING  | ThreadPoolExecutor-1_2 | pillar1.browser | [BrowserPool] No active browser instances available. Creating rescue instance...
+2026-07-31 18:37:16 | WARNING  | ThreadPoolExecutor-1_2 | pillar1.browser | [BrowserPool] Connection policy is 'proxy_only' for provider 'playwright_google', but no healthy proxies are available. Aborting browser launch to prevent direct connection.
+2026-07-31 18:37:16 | ERROR    | ThreadPoolExecutor-1_2 | search.manager | [SearchManager] Unexpected provider 'linkedin_playwright' error: BrowserPool exhausted and failed to spin up any active browser instances.
+2026-07-31 18:37:16 | INFO     | ThreadPoolExecutor-1_2 | search.manager | [SearchManager] linkedin_playwright recorded 3.0 failure points (Reason: Unexpected Error (BrowserPool exhausted and fail)). Total: 6.0/10.0
+2026-07-31 18:37:16 | INFO     | ThreadPoolExecutor-1_2 | utils.budget_manager | [ProviderBudgetManager] Starting provider 'brave' with budget limit of 7.0s.
+2026-07-31 18:37:16 | INFO     | ThreadPoolExecutor-1_0 | search.manager | [SearchManager] brave recorded 3.0 failure points (Reason: Unavailable (Failed to perform, Failed to p)). Total: 12.0/10.0
+2026-07-31 18:37:16 | WARNING  | ThreadPoolExecutor-1_0 | search.manager | [SearchManager] brave failure score reached 12.0. Tripping breaker to OPEN.
+2026-07-31 18:37:16 | INFO     | ThreadPoolExecutor-1_0 | search.manager | [SearchManager] brave entered cooldown for 300s (until 1785503536) | Breaker state is OPEN
+2026-07-31 18:37:16 | INFO     | ThreadPoolExecutor-1_0 | utils.budget_manager | [ProviderBudgetManager] Starting provider 'brightdata' with budget limit of 44.4s.
+2026-07-31 18:37:16 | INFO     | ThreadPoolExecutor-1_1 | search.manager | [SearchManager] bing recorded 3.0 failure points (Reason: Unavailable (No healthy proxies available f)). Total: 6.0/10.0
+2026-07-31 18:37:16 | INFO     | ThreadPoolExecutor-1_1 | utils.budget_manager | [ProviderBudgetManager] Starting provider 'brightdata' with budget limit of 44.3s.
+2026-07-31 18:37:16 | INFO     | ThreadPoolExecutor-1_3 | search.manager | [SearchManager] bing recorded 3.0 failure points (Reason: Unavailable (No healthy proxies available f)). Total: 9.0/10.0
+2026-07-31 18:37:16 | INFO     | ThreadPoolExecutor-1_3 | utils.budget_manager | [ProviderBudgetManager] Starting provider 'brightdata' with budget limit of 44.2s.
+2026-07-31 18:37:17 | INFO     | ThreadPoolExecutor-1_0 | utils.budget_manager | [ProviderBudgetManager] Starting provider 'brightdata' with budget limit of 43.3s.
+2026-07-31 18:37:18 | INFO     | ThreadPoolExecutor-1_3 | utils.budget_manager | [ProviderBudgetManager] Starting provider 'linkedin_playwright' with budget limit of 15.0s.
+2026-07-31 18:37:18 | INFO     | ThreadPoolExecutor-1_3 | pillar1.browser | [BrowserPool] No active browser instances. Creating on-demand instance.
+2026-07-31 18:37:18 | WARNING  | ThreadPoolExecutor-1_3 | pillar1.browser | [BrowserPool] Connection policy is 'proxy_only' for provider 'playwright_google', but no healthy proxies are available. Aborting browser launch to prevent direct connection.
+2026-07-31 18:37:18 | WARNING  | ThreadPoolExecutor-1_3 | pillar1.browser | [BrowserPool] No active browser instances available. Creating rescue instance...
+2026-07-31 18:37:18 | WARNING  | ThreadPoolExecutor-1_3 | pillar1.browser | [BrowserPool] Connection policy is 'proxy_only' for provider 'playwright_google', but no healthy proxies are available. Aborting browser launch to prevent direct connection.
+2026-07-31 18:37:18 | ERROR    | ThreadPoolExecutor-1_3 | search.manager | [SearchManager] Unexpected provider 'linkedin_playwright' error: BrowserPool exhausted and failed to spin up any active browser instances.
+2026-07-31 18:37:18 | INFO     | ThreadPoolExecutor-1_3 | search.manager | [SearchManager] linkedin_playwright recorded 3.0 failure points (Reason: Unexpected Error (BrowserPool exhausted and fail)). Total: 9.0/10.0
+2026-07-31 18:37:18 | INFO     | ThreadPoolExecutor-1_3 | utils.budget_manager | [ProviderBudgetManager] Starting provider 'brightdata' with budget limit of 42.4s.
+2026-07-31 18:37:18 | INFO     | ThreadPoolExecutor-1_3 | utils.budget_manager | [ProviderBudgetManager] Starting provider 'linkedin_playwright' with budget limit of 15.0s.
+2026-07-31 18:37:18 | INFO     | ThreadPoolExecutor-1_3 | pillar1.browser | [BrowserPool] No active browser instances. Creating on-demand instance.
+2026-07-31 18:37:18 | WARNING  | ThreadPoolExecutor-1_3 | pillar1.browser | [BrowserPool] Connection policy is 'proxy_only' for provider 'playwright_google', but no healthy proxies are available. Aborting browser launch to prevent direct connection.
+2026-07-31 18:37:18 | WARNING  | ThreadPoolExecutor-1_3 | pillar1.browser | [BrowserPool] No active browser instances available. Creating rescue instance...
+2026-07-31 18:37:18 | WARNING  | ThreadPoolExecutor-1_3 | pillar1.browser | [BrowserPool] Connection policy is 'proxy_only' for provider 'playwright_google', but no healthy proxies are available. Aborting browser launch to prevent direct connection.
+2026-07-31 18:37:18 | ERROR    | ThreadPoolExecutor-1_3 | search.manager | [SearchManager] Unexpected provider 'linkedin_playwright' error: BrowserPool exhausted and failed to spin up any active browser instances.
+2026-07-31 18:37:18 | INFO     | ThreadPoolExecutor-1_3 | search.manager | [SearchManager] linkedin_playwright recorded 3.0 failure points (Reason: Unexpected Error (BrowserPool exhausted and fail)). Total: 12.0/10.0
+2026-07-31 18:37:18 | WARNING  | ThreadPoolExecutor-1_3 | search.manager | [SearchManager] linkedin_playwright failure score reached 12.0. Tripping breaker to OPEN.
+2026-07-31 18:37:18 | INFO     | ThreadPoolExecutor-1_3 | search.manager | [SearchManager] linkedin_playwright entered cooldown for 300s (until 1785503538) | Breaker state is OPEN
+2026-07-31 18:37:18 | INFO     | ThreadPoolExecutor-1_3 | utils.budget_manager | [ProviderBudgetManager] Starting provider 'brightdata' with budget limit of 42.4s.
+2026-07-31 18:37:18 | INFO     | ThreadPoolExecutor-1_1 | search.manager | [SearchManager] brightdata recorded 1.0 failure points (Reason: VALID_ZERO_RESULTS for high expectation query (0.60)). Total: 1.0/10.0
+2026-07-31 18:37:18 | INFO     | ThreadPoolExecutor-1_1 | utils.budget_manager | [ProviderBudgetManager] Starting provider 'brightdata' with budget limit of 42.2s.
+2026-07-31 18:37:18 | INFO     | ThreadPoolExecutor-1_1 | utils.budget_manager | [ProviderBudgetManager] Starting provider 'brightdata' with budget limit of 42.2s.
+2026-07-31 18:37:18 | INFO     | ThreadPoolExecutor-1_1 | utils.budget_manager | [ProviderBudgetManager] Starting provider 'brightdata' with budget limit of 42.2s.
+2026-07-31 18:37:18 | INFO     | ThreadPoolExecutor-1_1 | utils.budget_manager | [ProviderBudgetManager] Starting provider 'brightdata' with budget limit of 42.2s.
+2026-07-31 18:37:18 | INFO     | ThreadPoolExecutor-1_1 | utils.budget_manager | [ProviderBudgetManager] Starting provider 'brightdata' with budget limit of 42.2s.
+2026-07-31 18:37:19 | INFO     | ThreadPoolExecutor-1_0 | utils.budget_manager | [ProviderBudgetManager] Starting provider 'brightdata' with budget limit of 41.8s.
+2026-07-31 18:37:22 | INFO     | ThreadPoolExecutor-1_2 | utils.budget_manager | [ProviderBudgetManager] Starting provider 'brightdata' with budget limit of 38.9s.
+2026-07-31 18:37:22 | INFO     | ThreadPoolExecutor-1_2 | utils.budget_manager | [ProviderBudgetManager] Starting provider 'brightdata' with budget limit of 38.9s.
+2026-07-31 18:37:23 | INFO     | MainThread | search.base_registry | Scanning for plugins in C:\Users\yasha\Downloads\pillar1\pillar_4_pipeline\exporters...
+2026-07-31 18:37:24 | INFO     | MainThread | pillar_4_pipeline.exporters.json_exporter | [JsonExporter] Successfully exported 6 records to JSON file: cleaned_data.json
+2026-07-31 18:37:24 | INFO     | MainThread | network_client_project.network.logger | Network Logging System Initialized.
+2026-07-31 18:37:25 | INFO     | MainThread | query.expansion | Loaded persistent query feedback from data\query_feedback_semantic.json
+2026-07-31 18:37:25 | INFO     | MainThread | search.base_registry | Scanning for plugins in C:\Users\yasha\Downloads\pillar1\pillar_4_pipeline\exporters...
+2026-07-31 18:37:25 | INFO     | MainThread | pillar_4_pipeline.exporters.sqlite_exporter | [SQLiteExporter] Successfully exported 6 records to SQLite database: leads.db
+2026-07-31 18:37:25 | INFO     | MainThread | pillar1.browser | [BrowserManager] Shutting down BrowserManager pool...
+2026-07-31 18:37:25 | INFO     | MainThread | pillar1.browser | [BrowserPool] Stopping all browser instances...
+2026-07-31 18:37:25 | ERROR    | MainThread | pillar1.browser | [BrowserManager] Error stopping Playwright: cannot switch to a different thread (which happens to have exited)
+2026-07-31 18:40:34 | INFO     | MainThread | network_client_project.network.logger | Network Logging System Initialized.
+2026-07-31 18:40:34 | INFO     | MainThread | query.expansion | Loaded persistent query feedback from data\query_feedback_semantic.json
+2026-07-31 18:40:34 | INFO     | MainThread | search.base_registry | Scanning for plugins in C:\Users\yasha\Downloads\pillar1\pillar1\search\providers...
+2026-07-31 18:40:34 | INFO     | MainThread | network_client_project.network.proxy_manager | Loaded 6 proxies into the manager.
+2026-07-31 18:40:34 | INFO     | MainThread | network_client_project.network.proxy_manager | Loaded proxy state from proxy_state.json
+2026-07-31 18:40:34 | INFO     | MainThread | network_client_project.network.proxy_manager | [ProxyManager] Loaded proxy state
+2026-07-31 18:40:34 | INFO     | MainThread | network_client_project.network.proxy_manager |   Total non-zero: 6 | Average score: 92.3
+2026-07-31 18:40:34 | INFO     | MainThread | network_client_project.network.proxy_manager |   Top 5 by score:
+2026-07-31 18:40:34 | INFO     | MainThread | network_client_project.network.proxy_manager |     47.81.56.193:8888 = 98.0
+2026-07-31 18:40:34 | INFO     | MainThread | network_client_project.network.proxy_manager |     34.87.80.221:30000 = 95.0
+2026-07-31 18:40:34 | INFO     | MainThread | network_client_project.network.proxy_manager |     52.67.38.58:3128 = 95.0
+2026-07-31 18:40:34 | INFO     | MainThread | network_client_project.network.proxy_manager |     217.182.203.184:8888 = 94.0
+2026-07-31 18:40:34 | INFO     | MainThread | network_client_project.network.proxy_manager |     34.134.231.117:3129 = 90.0
+2026-07-31 18:40:34 | INFO     | MainThread | network_client_project.network.proxy_manager |   Bottom 5 by score:
+2026-07-31 18:40:34 | INFO     | MainThread | network_client_project.network.proxy_manager |     34.87.80.221:30000 = 95.0
+2026-07-31 18:40:34 | INFO     | MainThread | network_client_project.network.proxy_manager |     52.67.38.58:3128 = 95.0
+2026-07-31 18:40:34 | INFO     | MainThread | network_client_project.network.proxy_manager |     217.182.203.184:8888 = 94.0
+2026-07-31 18:40:34 | INFO     | MainThread | network_client_project.network.proxy_manager |     34.134.231.117:3129 = 90.0
+2026-07-31 18:40:34 | INFO     | MainThread | network_client_project.network.proxy_manager |     181.39.25.196:8118 = 82.0
+2026-07-31 18:40:34 | INFO     | ProxyManager-StartupValidator | network_client_project.network.proxy_manager | [ProxyManager] Starting background proxy validation thread...
+2026-07-31 18:40:34 | WARNING  | ThreadPoolExecutor-0_1 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 47.81.56.193:8888 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-31 18:40:34 | WARNING  | ThreadPoolExecutor-0_0 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 34.87.80.221:30000 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-31 18:40:34 | WARNING  | ThreadPoolExecutor-0_5 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 34.134.231.117:3129 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-31 18:40:34 | WARNING  | ThreadPoolExecutor-0_2 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 217.182.203.184:8888 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-31 18:40:34 | WARNING  | ThreadPoolExecutor-0_4 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 52.67.38.58:3128 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-31 18:40:34 | INFO     | MainThread | search.base_registry | Scanning for plugins in C:\Users\yasha\Downloads\pillar1\network_client_project\network\middleware...
+2026-07-31 18:40:34 | WARNING  | ThreadPoolExecutor-0_3 | network_client_project.network.proxy_manager | [ProxyManager] Proxy 181.39.25.196:8118 -> DEAD (all 3 general HTTPS tests failed)
+2026-07-31 18:40:34 | INFO     | ProxyManager-StartupValidator | network_client_project.network.proxy_manager | [ProxyManager] Background proxy validation complete. Alive: 0/6, Google-capable: 0/6
+2026-07-31 18:40:34 | INFO     | MainThread | network_client_project.network.client | NetworkClient initialized with decoupled Downloader Middleware stack.
+2026-07-31 18:40:34 | INFO     | MainThread | network_client_project.network.client | NetworkClient initialized with decoupled Downloader Middleware stack.
+2026-07-31 18:40:34 | INFO     | MainThread | network_client_project.network.client | NetworkClient initialized with decoupled Downloader Middleware stack.
+2026-07-31 18:40:34 | INFO     | MainThread | utils.budget_manager | [ProviderBudgetManager] Starting provider 'playwright_google' with budget limit of 15.0s.
+2026-07-31 18:40:34 | INFO     | MainThread | pillar1.search.playwright_google | [PlaywrightGoogleProvider] Current thread: MainThread
+2026-07-31 18:40:34 | INFO     | MainThread | pillar1.search.playwright_google | [PlaywrightGoogleProvider] No running event loop detected in this thread.
+2026-07-31 18:40:34 | INFO     | MainThread | pillar1.browser | [BrowserManager] Lazy-initializing Playwright driver (sync)...
+2026-07-31 18:40:35 | INFO     | MainThread | pillar1.browser | [BrowserPool] Initializing pool (CPU cores: 8, Healthy proxies: 1, Config limit: 3) -> Pool Size: 1
+2026-07-31 18:40:35 | INFO     | MainThread | pillar1.browser | [BrowserPool] Lazy initialization configured. Pool capacity: 1. Instances will launch on-demand.
+2026-07-31 18:40:35 | INFO     | MainThread | pillar1.browser | [BrowserPool] No eligible browser instances for provider 'google'. Creating on-demand instance.
+2026-07-31 18:40:35 | WARNING  | MainThread | pillar1.browser | [BrowserPool] Connection policy is 'proxy_only' for provider 'google', but no healthy proxies are available. Aborting browser launch to prevent direct connection.
+2026-07-31 18:40:35 | WARNING  | MainThread | pillar1.browser | [BrowserPool] All active instances are currently blocked for 'google'.
+2026-07-31 18:40:35 | INFO     | MainThread | pillar1.browser | [BrowserPool] Attempting to create rescue instance for provider 'google'...
+2026-07-31 18:40:35 | WARNING  | MainThread | pillar1.browser | [BrowserPool] Connection policy is 'proxy_only' for provider 'google', but no healthy proxies are available. Aborting browser launch to prevent direct connection.
+2026-07-31 18:40:35 | WARNING  | MainThread | pillar1.search.playwright_google | [PlaywrightGoogleProvider] BrowserPool exhausted or unavailable: All browser instances in the pool are currently blocked for provider 'google'.. Tripping circuit breaker.
+2026-07-31 18:40:35 | INFO     | MainThread | search.manager | [SearchManager] playwright_google recorded 3.0 failure points (Reason: Captcha/Block). Total: 3.0/10.0
+2026-07-31 18:40:35 | INFO     | MainThread | utils.budget_manager | [ProviderBudgetManager] Starting provider 'google_html' with budget limit of 8.0s.
+2026-07-31 18:40:35 | INFO     | MainThread | search.google_scheduler | [GoogleScheduler] Initialized with max_workers=2, circuit breaker window=20, threshold=80%
+2026-07-31 18:40:35 | INFO     | MainThread | search.google_scheduler | [GoogleScheduler] Resized max_workers to 1 (Healthy proxies: 0)
+2026-07-31 18:40:35 | WARNING  | MainThread | search.google_scheduler | [GoogleScheduler] No healthy proxies with budget. Aborting Google search.
+2026-07-31 18:40:35 | INFO     | MainThread | search.manager | [SearchManager] google_html recorded 3.0 failure points (Reason: Unavailable (No healthy Google proxies with)). Total: 3.0/10.0
+2026-07-31 18:40:35 | INFO     | MainThread | utils.budget_manager | [ProviderBudgetManager] Starting provider 'duckduckgo' with budget limit of 7.0s.
+2026-07-31 18:40:40 | INFO     | MainThread | search.manager | [SearchManager] duckduckgo recorded 3.0 failure points (Reason: Unavailable (Failed to perform, curl: (6) C)). Total: 3.0/10.0
+2026-07-31 18:40:40 | INFO     | MainThread | utils.budget_manager | [ProviderBudgetManager] Starting provider 'brave' with budget limit of 7.0s.
+2026-07-31 18:40:44 | INFO     | MainThread | search.manager | [SearchManager] brave recorded 3.0 failure points (Reason: Unavailable (Failed to perform, Failed to p)). Total: 3.0/10.0
+2026-07-31 18:40:44 | INFO     | MainThread | utils.budget_manager | [ProviderBudgetManager] Starting provider 'bing' with budget limit of 7.0s.
+2026-07-31 18:40:46 | INFO     | MainThread | search.manager | [SearchManager] bing recorded 3.0 failure points (Reason: Unavailable (No healthy proxies available f)). Total: 3.0/10.0
+2026-07-31 18:40:46 | INFO     | MainThread | utils.budget_manager | [ProviderBudgetManager] Starting provider 'brightdata' with budget limit of 27.3s.
+2026-07-31 18:40:49 | INFO     | MainThread | search.manager | [SearchManager] brightdata recorded 1.0 failure points (Reason: VALID_ZERO_RESULTS for high expectation query (1.00)). Total: 1.0/10.0
+2026-07-31 18:40:51 | INFO     | MainThread | search.base_registry | Scanning for plugins in C:\Users\yasha\Downloads\pillar1\pillar_4_pipeline\exporters...
+2026-07-31 18:40:51 | INFO     | MainThread | pillar_4_pipeline.exporters.json_exporter | [JsonExporter] Successfully exported 6 records to JSON file: cleaned_data.json
+2026-07-31 18:40:52 | INFO     | MainThread | network_client_project.network.logger | Network Logging System Initialized.
+2026-07-31 18:40:52 | INFO     | MainThread | query.expansion | Loaded persistent query feedback from data\query_feedback_semantic.json
+2026-07-31 18:40:52 | INFO     | MainThread | search.base_registry | Scanning for plugins in C:\Users\yasha\Downloads\pillar1\pillar_4_pipeline\exporters...
+2026-07-31 18:40:52 | INFO     | MainThread | pillar_4_pipeline.exporters.sqlite_exporter | [SQLiteExporter] Successfully exported 6 records to SQLite database: leads.db
+2026-07-31 18:40:52 | INFO     | MainThread | pillar1.browser | [BrowserManager] Shutting down BrowserManager pool...
+2026-07-31 18:40:52 | INFO     | MainThread | pillar1.browser | [BrowserPool] Stopping all browser instances...

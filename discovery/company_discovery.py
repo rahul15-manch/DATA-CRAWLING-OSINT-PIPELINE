@@ -1471,6 +1471,26 @@ def discover_companies(keyword: str) -> list:
     result = dedupe_companies(normalized)
     stats.set_value("validated_companies", len(result))
 
+    # ── Phase 1 Advanced Enrichment (Lead Score, Domain Intel, Org Graph) ──
+    from utils.lead_scorer import compute_lead_score
+    from utils.domain_intel import get_domain_intel
+    from utils.org_graph import build_org_graph
+
+    for record in result:
+        try:
+            domain = record.get("domain") or ""
+            if not domain and record.get("website"):
+                from urllib.parse import urlparse
+                domain = urlparse(record["website"]).netloc.lower().lstrip("www.")
+
+            if domain:
+                record["domain_intel"] = get_domain_intel(domain)
+
+            record["lead_score"] = compute_lead_score(record)
+            record["org_graph"]  = build_org_graph(record)
+        except Exception as exc:
+            print(f"[company_discovery] Enrichment warning for {record.get('company')}: {exc}")
+
     if hasattr(manager, "_client") and hasattr(manager._client, "proxy_manager"):
         manager._client.proxy_manager.is_crawling = False
 

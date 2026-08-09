@@ -269,5 +269,15 @@
       "last_seen": "2026-07-26",
       "target_field": "concepts"
     }
+  },
+  "runo ai": {
+    "Runo": {
+      "seen": 10,
+      "accepted": 8,
+      "confidence": 0.8,
+      "first_seen": "2026-07-31",
+      "last_seen": "2026-07-31",
+      "target_field": "concepts"
+    }
   }
 }

@@ -13,60 +13,13 @@
       "ontology_version": "1.0.0"
     }
   },
-  "semantic::ai": {
-    "ontology_version": "1.0.0",
-    "intent_profile": {
-      "primary_domain": "Ai",
-      "concepts": [
-        "Nlp",
-        "Rag",
-        "Ml",
-        "Generative AI",
-        "Transformers",
-        "Vector DB",
-        "Deep Learning",
-        "Ai",
-        "Computer Vision",
-        "NLP",
-        "Gpt",
-        "Neural Network",
-        "Llm"
-      ],
-      "positions": [
-        "Ml Engineer",
-        "Nlp Engineer",
-        "Data Scientist",
-        "Ai Engineer",
-        "Computer Vision Specialist",
-        "Machine Learning Engineer"
-      ],
-      "services": [
-        "Ai Consulting",
-        "Machine Learning Solutions",
-        "Generative Ai Development",
-        "Llm Fine-Tuning"
-      ],
-      "products": [
-        "Openai",
-        "Gemini",
-        "Claude",
-        "Ollama",
-        "Chatgpt",
-        "Crewai",
-        "Dspy",
-        "Langchain"
-      ],
-      "confidence": 1.0,
-      "ontology_version": "1.0.0"
-    }
-  },
   "semantic::automobile": {
     "ontology_version": "1.0.0",
     "intent_profile": {
       "primary_domain": "Automobile",
       "concepts": [
-        "Automobile",
-        "automobile"
+        "automobile",
+        "Automobile"
       ],
       "positions": [
         "Automobile Specialist",
@@ -74,10 +27,35 @@
         "Automobile Engineer"
       ],
       "services": [
+        "Automobile Services",
         "Automobile Consulting",
         "Automobile Solutions",
-        "Automobile Development",
-        "Automobile Services"
+        "Automobile Development"
+      ],
+      "products": [],
+      "confidence": 0.4,
+      "ontology_version": "1.0.0"
+    }
+  },
+  "semantic::runo ai": {
+    "ontology_version": "1.0.0",
+    "intent_profile": {
+      "primary_domain": "Runo Ai",
+      "concepts": [
+        "runo",
+        "Runo Ai",
+        "Runo"
+      ],
+      "positions": [
+        "Runo Ai Developer",
+        "Runo Ai Specialist",
+        "Runo Ai Engineer"
+      ],
+      "services": [
+        "Runo Ai Development",
+        "Runo Ai Services",
+        "Runo Ai Consulting",
+        "Runo Ai Solutions"
       ],
       "products": [],
       "confidence": 0.4,

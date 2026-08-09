@@ -7085,5 +7085,729 @@
         "timestamp": 1785079556.5396037
       }
     ]
+  },
+  "default||automobile startups||20||0": {
+    "query": "automobile startups",
+    "provider": "brave",
+    "timestamp": 1785128520.2092352,
+    "result_count": 4,
+    "kind": "success",
+    "results": [
+      {
+        "title": "Y Combinatorycombinator.com› companies  › industry  › automotiveAutomotive Startups funded by Y Combinator (YC) 2026 | Y Combinator",
+        "url": "https://www.ycombinator.com/companies/industry/automotive",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 6,
+        "query": "automobile startups",
+        "page": 0,
+        "timestamp": 1785128520.1840665
+      },
+      {
+        "title": "Cutshortcutshort.io› home  › companies by category  › automotive companies/startups in indiaAutomotive Companies/Startups in India",
+        "url": "https://cutshort.io/companies/automotive",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 7,
+        "query": "automobile startups",
+        "page": 0,
+        "timestamp": 1785128520.1840665
+      },
+      {
+        "title": "Startup Indiastartupindia.gov.in› content  › sih  › en  › profile.Startup.5953a42ce4b0bcdc8b670bd0.htmlProfile",
+        "url": "https://www.startupindia.gov.in/content/sih/en/profile.Startup.5953a42ce4b0bcdc8b670bd0.html",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 14,
+        "query": "automobile startups",
+        "page": 0,
+        "timestamp": 1785128520.1890678
+      },
+      {
+        "title": "Failoryfailory.com› startups  › automotive-unicornsThe Full List of 64 Automotive Unicorn Startups (2026)",
+        "url": "https://www.failory.com/startups/automotive-unicorns",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 19,
+        "query": "automobile startups",
+        "page": 0,
+        "timestamp": 1785128520.1900666
+      }
+    ]
+  },
+  "default||runo ai||20||0": {
+    "query": "runo ai",
+    "provider": "duckduckgo",
+    "timestamp": 1785497291.696435,
+    "result_count": 7,
+    "kind": "success",
+    "results": [
+      {
+        "title": "AI-Powered SIM Based Call Management CRM | Runo",
+        "url": "https://runo.ai/",
+        "snippet": "Runois anAI-powered, SIM Based Call Management CRM that auto-logs calls, tracks leads, generatesAIsummaries, and streamlines your mobile-first sales workflow.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1785497291.6203346
+      },
+      {
+        "title": "Runo Call Management CRM",
+        "url": "https://web.runo.in/",
+        "snippet": "RunoCall Management CRM ...Runo",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1785497291.621337
+      },
+      {
+        "title": "AI-powered Call CRM Apps for Sales Teams - runo.ai",
+        "url": "https://runo.ai/product/",
+        "snippet": "Explore our suite of SIM-based andAI-powered tools including CRM software, auto dialers, telecaller apps, and call center solutions built to track, manage, and close leads faster.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1785497291.621337
+      },
+      {
+        "title": "Runo | LinkedIn",
+        "url": "https://in.linkedin.com/company/runo-crm",
+        "snippet": "Runo| 26,002 followers on LinkedIn. Calling tech was broken. We re-engineered it. | In the world of outbound sales, traditional cloud telephony systems often demand heavy infrastructure, complex setups, and significant investment, creating barriers for SMBs and friction for enterprises. Consumers, too, have grown wary of calls from spammy virtual or toll-free numbers, leading to painfully low ...",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1785497291.621337
+      },
+      {
+        "title": "Runo - 2026 Company Profile & Team - Tracxn",
+        "url": "https://tracxn.com/d/companies/runo/__O9aMOMVuRfRQqGbRjpN3P0loMxaaYQhBprZSKfdykVY",
+        "snippet": "ExploreRuno'sin-depth company profile, including funding details, key investors, leadership, competitors, and shareholding structure.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1785497291.621337
+      },
+      {
+        "title": "Suno",
+        "url": "https://suno.com/about",
+        "snippet": "Suno is a music company built to amplify imagination. From shower-singers to aspiring songwriters to seasoned artists, Suno empowers a global community to create, share, and discover music—unlocking the joy of musical expression for all.",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1785497291.621337
+      },
+      {
+        "title": "Runo - The Local AI Dictionary",
+        "url": "https://heyruno.com/",
+        "snippet": "A private, offline-firstAIdictionary for children that adapts to their age and learning level",
+        "provider": "unknown",
+        "source": "",
+        "rank": 0,
+        "provider_rank": 0,
+        "query": "",
+        "page": 0,
+        "timestamp": 1785497291.6223347
+      }
+    ]
+  },
+  "default||site:tracxn.com email||3||0": {
+    "query": "site:tracxn.com email",
+    "provider": "brave",
+    "timestamp": 1785497334.900433,
+    "result_count": 3,
+    "kind": "success",
+    "results": [
+      {
+        "title": "Tracxntracxn.com› discover  › companies  › googlemail.comGooglemail.com - 2026 Company Profile, Team & Competitors - Tracxn",
+        "url": "https://tracxn.com/d/companies/googlemailcom/__LZzLJPiRoMJXXbpY8lmbNtdZsJC4BXa4L7vjnnKluq8",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 1,
+        "query": "site:tracxn.com email",
+        "page": 0,
+        "timestamp": 1785497334.8964138
+      },
+      {
+        "title": "Login",
+        "url": "https://tracxn.com/login",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 2,
+        "query": "site:tracxn.com email",
+        "page": 0,
+        "timestamp": 1785497334.8964138
+      },
+      {
+        "title": "Get Started. It’s FREE",
+        "url": "https://tracxn.com/signup",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 3,
+        "query": "site:tracxn.com email",
+        "page": 0,
+        "timestamp": 1785497334.8964138
+      }
+    ]
+  },
+  "default||site:runo.ai email||3||0": {
+    "query": "site:runo.ai email",
+    "provider": "brave",
+    "timestamp": 1785497337.5538995,
+    "result_count": 3,
+    "kind": "success",
+    "results": [
+      {
+        "title": "Runoruno.aiAI-Powered SIM Based Call Management CRM | Runo",
+        "url": "https://runo.ai/",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 1,
+        "query": "site:runo.ai email",
+        "page": 0,
+        "timestamp": 1785497337.5515084
+      },
+      {
+        "title": "Integrations",
+        "url": "https://runo.ai/integrations",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 2,
+        "query": "site:runo.ai email",
+        "page": 0,
+        "timestamp": 1785497337.5515084
+      },
+      {
+        "title": "Telecaller App",
+        "url": "https://runo.ai/features/telecaller-app",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 3,
+        "query": "site:runo.ai email",
+        "page": 0,
+        "timestamp": 1785497337.5515084
+      }
+    ]
+  },
+  "default||site:tracxn.com contact||3||0": {
+    "query": "site:tracxn.com contact",
+    "provider": "brave",
+    "timestamp": 1785497341.4775934,
+    "result_count": 3,
+    "kind": "success",
+    "results": [
+      {
+        "title": "Tracxntracxn.com› contactusContact Us | Tracxn",
+        "url": "https://tracxn.com/contactus",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 1,
+        "query": "site:tracxn.com contact",
+        "page": 0,
+        "timestamp": 1785497341.450655
+      },
+      {
+        "title": "Login",
+        "url": "https://tracxn.com/login",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 2,
+        "query": "site:tracxn.com contact",
+        "page": 0,
+        "timestamp": 1785497341.450655
+      },
+      {
+        "title": "Sign Up for Free",
+        "url": "https://tracxn.com/signup",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 3,
+        "query": "site:tracxn.com contact",
+        "page": 0,
+        "timestamp": 1785497341.450655
+      }
+    ]
+  },
+  "default||site:runo.ai contact||3||0": {
+    "query": "site:runo.ai contact",
+    "provider": "brave",
+    "timestamp": 1785497342.1806238,
+    "result_count": 3,
+    "kind": "success",
+    "results": [
+      {
+        "title": "Runoruno.ai› contactContact Us - Runo",
+        "url": "https://runo.ai/contact",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 1,
+        "query": "site:runo.ai contact",
+        "page": 0,
+        "timestamp": 1785497342.176557
+      },
+      {
+        "title": "Integrations",
+        "url": "https://runo.ai/integrations",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 2,
+        "query": "site:runo.ai contact",
+        "page": 0,
+        "timestamp": 1785497342.176557
+      },
+      {
+        "title": "Telecaller App",
+        "url": "https://runo.ai/features/telecaller-app",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 3,
+        "query": "site:runo.ai contact",
+        "page": 0,
+        "timestamp": 1785497342.176557
+      }
+    ]
+  },
+  "default||site:tracxn.com phone||3||0": {
+    "query": "site:tracxn.com phone",
+    "provider": "brave",
+    "timestamp": 1785497346.4495137,
+    "result_count": 3,
+    "kind": "success",
+    "results": [
+      {
+        "title": "Tracxntracxn.com› discover  › companies  › lephoneLephone - 2026 Company Profile, Competitors & Financials - Tracxn",
+        "url": "https://tracxn.com/d/companies/lephone/__aPzRpjNwbm5CBfQ-YMdIuYebwPgfA0VdvZLR18mv7Mg",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 1,
+        "query": "site:tracxn.com phone",
+        "page": 0,
+        "timestamp": 1785497346.445312
+      },
+      {
+        "title": "Tracxntracxn.com› discover  › companies  › heyoHeyo - 2025 Company Profile, Team, Funding, Competitors & Financials - Tracxn",
+        "url": "https://tracxn.com/d/companies/heyo/__-bXSeXz8rsV1bgYkYvm4pFohaOUFJfOaocLNDay3q5k",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 2,
+        "query": "site:tracxn.com phone",
+        "page": 0,
+        "timestamp": 1785497346.445312
+      },
+      {
+        "title": "Tracxntracxn.com› discover  › legal entities  › united kingdom  › top phone uk ltdTOP PHONE UK LTD - 2026 Company Profile - Tracxn",
+        "url": "https://tracxn.com/d/legal-entities/united-kingdom/top-phone-uk-ltd/__FD57aH_jQLy3N6KeYK3RDkLEuHsYojS2jhUxrfzBCT8",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 3,
+        "query": "site:tracxn.com phone",
+        "page": 0,
+        "timestamp": 1785497346.445312
+      }
+    ]
+  },
+  "default||site:runo.ai phone||3||0": {
+    "query": "site:runo.ai phone",
+    "provider": "brave",
+    "timestamp": 1785497348.4498994,
+    "result_count": 3,
+    "kind": "success",
+    "results": [
+      {
+        "title": "Runoruno.ai› home  › product  › call management appSIM-Based Call Management App & Software | Runo",
+        "url": "https://runo.ai/product/call-management-app",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 1,
+        "query": "site:runo.ai phone",
+        "page": 0,
+        "timestamp": 1785497348.4459126
+      },
+      {
+        "title": "Integrations",
+        "url": "https://runo.ai/integrations",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 2,
+        "query": "site:runo.ai phone",
+        "page": 0,
+        "timestamp": 1785497348.4459126
+      },
+      {
+        "title": "Telecaller App",
+        "url": "https://runo.ai/features/telecaller-app",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 3,
+        "query": "site:runo.ai phone",
+        "page": 0,
+        "timestamp": 1785497348.4459126
+      }
+    ]
+  },
+  "default||site:web.runo.in email||3||0": {
+    "query": "site:web.runo.in email",
+    "provider": "brave",
+    "timestamp": 1785497348.6431086,
+    "result_count": 1,
+    "kind": "success",
+    "results": [
+      {
+        "title": "Runoweb.runo.inRuno Call Management CRM",
+        "url": "https://web.runo.in/",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 1,
+        "query": "site:web.runo.in email",
+        "page": 0,
+        "timestamp": 1785497348.638616
+      }
+    ]
+  },
+  "default||custom runo ai development||20||0": {
+    "query": "custom runo ai development",
+    "provider": "brave",
+    "timestamp": 1785497473.8342257,
+    "result_count": 10,
+    "kind": "success",
+    "results": [
+      {
+        "title": "Runoruno.aiAI-Powered SIM Based Call Management CRM | Runo",
+        "url": "https://runo.ai/",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 1,
+        "query": "custom runo ai development",
+        "page": 0,
+        "timestamp": 1785497473.8258116
+      },
+      {
+        "title": "Integrations",
+        "url": "https://runo.ai/integrations",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 2,
+        "query": "custom runo ai development",
+        "page": 0,
+        "timestamp": 1785497473.8258116
+      },
+      {
+        "title": "Telecaller App",
+        "url": "https://runo.ai/features/telecaller-app",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 3,
+        "query": "custom runo ai development",
+        "page": 0,
+        "timestamp": 1785497473.8258116
+      },
+      {
+        "title": "Call Management App",
+        "url": "https://runo.ai/product/call-management-app",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 4,
+        "query": "custom runo ai development",
+        "page": 0,
+        "timestamp": 1785497473.8258116
+      },
+      {
+        "title": "Runoruno.ai› runo-updatesRuno Updates - What’s New in Runo",
+        "url": "https://runo.ai/runo-updates",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 9,
+        "query": "custom runo ai development",
+        "page": 0,
+        "timestamp": 1785497473.827314
+      },
+      {
+        "title": "Runotechrunotech.comRuno Technologies | AI-Powered App Development",
+        "url": "https://runotech.com/",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 10,
+        "query": "custom runo ai development",
+        "page": 0,
+        "timestamp": 1785497473.8278236
+      },
+      {
+        "title": "Runoruno.ai› features  › call-center-appCall Center App for Sales Calling with CRM & Tracking",
+        "url": "https://runo.ai/features/call-center-app",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 12,
+        "query": "custom runo ai development",
+        "page": 0,
+        "timestamp": 1785497473.8278236
+      },
+      {
+        "title": "Runoruno.ai› home  › productsRuno: AI-Powered CRM & Call Management Platform for Sales Teams",
+        "url": "https://runo.ai/features/",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 15,
+        "query": "custom runo ai development",
+        "page": 0,
+        "timestamp": 1785497473.8278236
+      },
+      {
+        "title": "LinkedInin.linkedin.com› company  › runo-crmRuno | LinkedIn",
+        "url": "https://in.linkedin.com/company/runo-crm",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 17,
+        "query": "custom runo ai development",
+        "page": 0,
+        "timestamp": 1785497473.8278236
+      },
+      {
+        "title": "Runoruno.ai› pricingRuno Pricing – Choose Your Plan & Start Free Trial",
+        "url": "https://runo.ai/pricing",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 18,
+        "query": "custom runo ai development",
+        "page": 0,
+        "timestamp": 1785497473.8278236
+      }
+    ]
+  },
+  "default||site:tracxn.com team||3||0": {
+    "query": "site:tracxn.com team",
+    "provider": "brave",
+    "timestamp": 1785497505.8734138,
+    "result_count": 3,
+    "kind": "success",
+    "results": [
+      {
+        "title": "Tracxntracxn.com› discover  › companies  › teamteamTeamteam - 2026 Company Profile, Team & Competitors - Tracxn",
+        "url": "https://tracxn.com/d/companies/teamteam/__ODBMHGljc6Y-SspmPCq1zr3pllL6UJEXK2F7Jo0cBtM",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 1,
+        "query": "site:tracxn.com team",
+        "page": 0,
+        "timestamp": 1785497505.869014
+      },
+      {
+        "title": "Tracxntracxn.com› discover  › companies  › eteameTeam - 2026 Company Profile, Team & Competitors - Tracxn",
+        "url": "https://tracxn.com/d/companies/eteam/__fD1JUC1dVMHlmVsNL8Aq79TsdL8FQReIWQSEeC3uAHQ",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 2,
+        "query": "site:tracxn.com team",
+        "page": 0,
+        "timestamp": 1785497505.8701108
+      },
+      {
+        "title": "Tracxntracxn.com› discover  › companies  › team technologiesTEAM Technologies - 2026 Company Profile, Funding & Competitors - Tracxn",
+        "url": "https://tracxn.com/d/companies/team-technologies/__1dQSSc7l051YVzMy9EercTHxYjiT_5h_dwbviOdZgto",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 3,
+        "query": "site:tracxn.com team",
+        "page": 0,
+        "timestamp": 1785497505.8701108
+      }
+    ]
+  },
+  "default||site:runo.ai team||3||0": {
+    "query": "site:runo.ai team",
+    "provider": "brave",
+    "timestamp": 1785497518.3751543,
+    "result_count": 3,
+    "kind": "success",
+    "results": [
+      {
+        "title": "Runoruno.ai› home  › product  › call management appSIM-Based Call Management App & Software | Runo",
+        "url": "https://runo.ai/product/call-management-app",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 1,
+        "query": "site:runo.ai team",
+        "page": 0,
+        "timestamp": 1785497518.3714306
+      },
+      {
+        "title": "Integrations",
+        "url": "https://runo.ai/integrations",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 2,
+        "query": "site:runo.ai team",
+        "page": 0,
+        "timestamp": 1785497518.3724406
+      },
+      {
+        "title": "Telecaller App",
+        "url": "https://runo.ai/features/telecaller-app",
+        "snippet": "",
+        "provider": "brave",
+        "source": "Brave HTML",
+        "rank": 0,
+        "provider_rank": 3,
+        "query": "site:runo.ai team",
+        "page": 0,
+        "timestamp": 1785497518.3724406
+      }
+    ]
+  },
+  "default||site:linkedin.com/in \"Whats New in Runo\" founder OR CEO OR director||5||0": {
+    "query": "site:linkedin.com/in \"Whats New in Runo\" founder OR CEO OR director",
+    "provider": "brightdata",
+    "timestamp": 1785497545.6535044,
+    "result_count": 0,
+    "kind": "zero_result",
+    "results": []
+  },
+  "default||site:runotech.com email||3||0": {
+    "query": "site:runotech.com email",
+    "provider": "brightdata",
+    "timestamp": 1785497547.530382,
+    "result_count": 0,
+    "kind": "zero_result",
+    "results": []
+  },
+  "default||site:linkedin.com/in \"runoai\" founder OR CEO OR director||5||0": {
+    "query": "site:linkedin.com/in \"runoai\" founder OR CEO OR director",
+    "provider": "brightdata",
+    "timestamp": 1785503236.455937,
+    "result_count": 0,
+    "kind": "zero_result",
+    "results": []
+  },
+  "default||site:linkedin.com/in \"Runo\" founder OR CEO OR director||5||0": {
+    "query": "site:linkedin.com/in \"Runo\" founder OR CEO OR director",
+    "provider": "brightdata",
+    "timestamp": 1785503237.5622869,
+    "result_count": 0,
+    "kind": "zero_result",
+    "results": []
+  },
+  "default||site:linkedin.com/in \"Tracxn\" founder OR CEO OR director||5||0": {
+    "query": "site:linkedin.com/in \"Tracxn\" founder OR CEO OR director",
+    "provider": "brightdata",
+    "timestamp": 1785503238.4214556,
+    "result_count": 0,
+    "kind": "zero_result",
+    "results": []
+  },
+  "default||site:web.runo.in contact||3||0": {
+    "query": "site:web.runo.in contact",
+    "provider": "brightdata",
+    "timestamp": 1785503238.6346662,
+    "result_count": 0,
+    "kind": "zero_result",
+    "results": []
+  },
+  "default||site:linkedin.com/in \"Runo\" \"co-founder\"||5||0": {
+    "query": "site:linkedin.com/in \"Runo\" \"co-founder\"",
+    "provider": "brightdata",
+    "timestamp": 1785503239.0788453,
+    "result_count": 0,
+    "kind": "zero_result",
+    "results": []
+  },
+  "default||piet services||20||0": {
+    "query": "piet services",
+    "provider": "brightdata",
+    "timestamp": 1785503449.1883602,
+    "result_count": 0,
+    "kind": "zero_result",
+    "results": []
   }
 }

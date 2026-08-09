@@ -678,3 +678,19 @@ ARTICLE_AUTHOR_PREFIXES = (
     "author ",
     "by ",
 )
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Disposable Email Domains
+# ─────────────────────────────────────────────────────────────────────────────
+
+DISPOSABLE_EMAIL_DOMAINS = frozenset({
+    "mailinator.com", "tempmail.com", "10minutemail.com", "guerrillamail.com",
+    "sharklasers.com", "trashmail.com", "getairmail.com", "dispostable.com",
+    "yopmail.com", "temp-mail.org", "throwawaymail.com", "maildrop.cc",
+    "crazymailing.com", "nada.ltd", "getnada.com", "mohmal.com", "binkmail.com",
+    "safetymail.info", "filzmail.com", "trashmail.net", "burnermail.io",
+    "byom.de", "dayrep.com", "einrot.com", "fleckens.hu", "gustr.com",
+    "jourrapide.com", "rhyta.com", "teleworm.us", "superrito.com",
+})
+
