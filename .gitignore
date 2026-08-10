@@ -5,6 +5,15 @@
 
 # Logs and Debug files
 debug_html/
+
+# Runtime-generated data files
+output/
+data/*.json
+cookies/google.com/session_cookies.json
+cleaned_data.json
+proxy_state.json
+search_cache.json
+
 data/rejection_stats.json
 
 # Output JSONs and reports
