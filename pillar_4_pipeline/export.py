@@ -31,9 +31,36 @@ def setup_database(cursor):
             emails TEXT,
             phones TEXT,
             social_links TEXT,
-            people TEXT
+            people TEXT,
+            tech_stack TEXT,
+            lead_score INTEGER,
+            description TEXT,
+            employees TEXT,
+            founded TEXT,
+            country TEXT,
+            domain_intel TEXT,
+            org_graph TEXT
         )
     ''')
+
+    # Auto-migrate missing columns if table already existed with an older schema
+    cursor.execute("PRAGMA table_info(flowiz_leads)")
+    existing_cols = {row[1] for row in cursor.fetchall()}
+
+    new_cols = [
+        ("tech_stack", "TEXT"),
+        ("lead_score", "INTEGER"),
+        ("description", "TEXT"),
+        ("employees", "TEXT"),
+        ("founded", "TEXT"),
+        ("country", "TEXT"),
+        ("domain_intel", "TEXT"),
+        ("org_graph", "TEXT"),
+    ]
+
+    for col_name, col_type in new_cols:
+        if col_name not in existing_cols:
+            cursor.execute(f"ALTER TABLE flowiz_leads ADD COLUMN {col_name} {col_type}")
 
 def export_data():
     if not os.path.exists(INPUT_FILE):

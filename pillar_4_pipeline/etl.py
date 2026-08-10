@@ -1,5 +1,5 @@
 from pydantic import BaseModel, Field, field_validator, model_validator, ConfigDict
-from typing import List, Optional, Dict
+from typing import List, Optional, Dict, Any
 from urllib.parse import urlparse
 import json
 import os
@@ -39,6 +39,16 @@ class LeadSchema(BaseModel):
     social_links: Dict[str, str] = {}
     people: List[Person] = []
     source: Optional[str] = None
+    description: Optional[str] = None
+    employees: Optional[str] = None
+    founded: Optional[str] = None
+    country: Optional[str] = None
+    lead_score: Optional[int] = None
+    confidence: Optional[float] = None
+    tech_stack: List[str] = []
+    emails_scored: List[Dict[str, Any]] = []
+    domain_intel: Optional[Dict[str, Any]] = None
+    org_graph: Optional[Dict[str, Any]] = None
 
     @field_validator('industry')
     @classmethod

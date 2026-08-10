@@ -31,12 +31,17 @@ class SQLiteExporter(BaseExporter):
                 phones = json.dumps(record.get('phones', []))
                 social_links = json.dumps(record.get('social_links', {}))
                 people = json.dumps(record.get('people', []))
+                tech_stack = json.dumps(record.get('tech_stack', []))
+                domain_intel = json.dumps(record.get('domain_intel') or {})
+                org_graph = json.dumps(record.get('org_graph') or {})
 
                 cursor.execute('''
                     INSERT OR REPLACE INTO flowiz_leads (
                         domain, company_name, website, industry, location, 
-                        contact_page, about_page, emails, phones, social_links, people
-                    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                        contact_page, about_page, emails, phones, social_links, people,
+                        tech_stack, lead_score, description, employees, founded, country,
+                        domain_intel, org_graph
+                    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
                 ''', (
                     record.get('domain'),
                     record.get('company_name'),
@@ -48,7 +53,15 @@ class SQLiteExporter(BaseExporter):
                     emails,
                     phones,
                     social_links,
-                    people
+                    people,
+                    tech_stack,
+                    record.get('lead_score'),
+                    record.get('description'),
+                    record.get('employees'),
+                    record.get('founded'),
+                    record.get('country'),
+                    domain_intel,
+                    org_graph
                 ))
                 success_count += 1
             except Exception as e:

@@ -6,6 +6,7 @@ import asyncio
 import aiohttp
 import logging
 from bs4 import BeautifulSoup
+import phonenumbers
 
 try:
     import whois
@@ -24,7 +25,6 @@ HUNTER_API_KEY = os.getenv("HUNTER_API_KEY", "")
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 
 def check_domain_mx(domain: str) -> bool:
-    """Check if the domain has at least one valid MX record."""
     try:
         import dns.resolver
         answers = dns.resolver.resolve(domain, "MX", lifetime=4)
@@ -32,15 +32,12 @@ def check_domain_mx(domain: str) -> bool:
     except Exception:
         return False
 
-
 def guess_emails_from_domain(domain: str) -> list:
-    """Generate common email prefixes for the domain if it has MX records."""
     if not check_domain_mx(domain):
         return []
     
     prefixes = ["info", "hello", "contact", "sales", "support", "admin"]
     return [f"{p}@{domain}" for p in prefixes]
-
 
 def slugify_company_name(name: str) -> str:
     if not name: return ""
@@ -66,7 +63,6 @@ async def guess_domain(session: aiohttp.ClientSession, company_name: str):
             async with session.get(url, timeout=REQUEST_TIMEOUT, allow_redirects=True, headers=headers) as resp:
                 if resp.status < 400 and resp.status != 202:
                     return candidate, tried
-                
                 elif resp.status == 202:
                     await asyncio.sleep(1.5)
                     async with session.get(url, timeout=REQUEST_TIMEOUT, allow_redirects=True, headers=headers) as retry_resp:
@@ -90,12 +86,14 @@ def whois_lookup(domain: str) -> dict:
     except Exception as e:
         return {"error": f"{type(e).__name__}: {e}"}
 
-async def extract_emails_from_web_page(session: aiohttp.ClientSession, domain: str) -> list:
+async def extract_contacts_from_web_page(session: aiohttp.ClientSession, domain: str) -> tuple:
     emails = set()
+    phones = set()
     headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) LeadEnricher/2.0"}
     paths = ["", "/contact", "/about", "/contact-us", "/about-us"]
     
     email_pattern = re.compile(r'[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}')
+    phone_pattern = re.compile(r'(?:\+?\d{1,3}[\s\-]?)?(?:\(?\d{2,5}\)?[\s\-]?)?\d{3,5}[\s\-]?\d{4,6}')
 
     for path in paths:
         url = f"https://{domain}{path}"
@@ -103,48 +101,75 @@ async def extract_emails_from_web_page(session: aiohttp.ClientSession, domain: s
             async with session.get(url, timeout=4, allow_redirects=True, headers=headers) as resp:
                 if resp.status == 200:
                     html = await resp.text()
-                    matches = email_pattern.findall(html)
+                    soup = BeautifulSoup(html, 'html.parser')
+                    
+                    for tag in soup(["script", "style", "nav", "footer", "header", "noscript"]):
+                        tag.decompose()
+                    clean_text = soup.get_text(separator=' ')
+                    
+                    matches = email_pattern.findall(clean_text)
                     for email in matches:
-                        if not any(email.lower().endswith(ext) for ext in ['.png', '.jpg', '.jpeg', '.svg', '.gif', '.webp']):
+                        if not any(email.lower().endswith(ext) for ext in ['.png', '.jpg', '.jpeg', '.svg', '.gif', '.webp', '.js', '.css']):
                             emails.add(email.lower())
-                if len(emails) >= 3:
-                    break
+                            
+                    raw_phones = phone_pattern.findall(clean_text)
+                    for raw_phone in raw_phones:
+                        cleaned_num = raw_phone.strip()
+                        if len(cleaned_num) >= 8:
+                            for region in ["IN", "US", "GB"]:
+                                try:
+                                    parsed_number = phonenumbers.parse(cleaned_num, region)
+                                    if phonenumbers.is_valid_number(parsed_number):
+                                        formatted_num = phonenumbers.format_number(parsed_number, phonenumbers.PhoneNumberFormat.E164)
+                                        phones.add(formatted_num)
+                                        break
+                                except Exception:
+                                    continue
+                                    
         except Exception:
             continue
             
-    return list(emails)
+    return list(emails), list(phones)
 
-async def find_emails_via_api(session: aiohttp.ClientSession, domain: str) -> list:
-    if HUNTER_API_KEY and "YOUR_HUNTER_API_KEY" not in HUNTER_API_KEY:
-        url = "https://api.hunter.io/v2/domain-search"
-        params = {"domain": domain, "api_key": HUNTER_API_KEY}
-        
-        try:
-            async with session.get(url, params=params, timeout=REQUEST_TIMEOUT) as resp:
-                if resp.status == 200:
-                    data = await resp.json()
-                    emails = [e["value"] for e in data.get("data", {}).get("emails", [])]
-                    if emails:
-                        return emails
+async def fetch_osint_fallbacks(session: aiohttp.ClientSession, company_name: str) -> tuple:
+    emails = set()
+    phones = set()
+    search_query = f"{company_name} contact phone number email address"
+    url = "https://html.duckduckgo.com/html/"
+    headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"}
+    
+    email_pattern = re.compile(r'[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}')
+    phone_pattern = re.compile(r'(?:\+?\d{1,3}[\s\-]?)?(?:\(?\d{2,5}\)?[\s\-]?)?\d{3,5}[\s\-]?\d{4,6}')
+
+    try:
+        async with session.post(url, data={'q': search_query}, headers=headers, timeout=8) as resp:
+            if resp.status == 200:
+                html = await resp.text()
+                soup = BeautifulSoup(html, 'html.parser')
+                snippets = soup.find_all('a', class_='result__snippet')
                 
-                elif resp.status == 202:
-                    logging.info(f"Hunter.io returned 202 for {domain}. Waiting 2s for completion...")
-                    await asyncio.sleep(2)
-                    async with session.get(url, params=params, timeout=REQUEST_TIMEOUT) as retry_resp:
-                        if retry_resp.status == 200:
-                            data = await retry_resp.json()
-                            emails = [e["value"] for e in data.get("data", {}).get("emails", [])]
-                            if emails:
-                                return emails
-                
-                elif resp.status in (429, 401, 403):
-                    logging.warning(f"Hunter API limit/error hit ({resp.status}) for {domain}. Switching to Web Scraping...")
+                for snippet in snippets:
+                    snippet_text = snippet.get_text()
                     
-        except Exception as e:
-            logging.debug(f"Hunter API Exception for {domain}: {e}")
-
-    scraped_emails = await extract_emails_from_web_page(session, domain)
-    return scraped_emails
+                    for email in email_pattern.findall(snippet_text):
+                        emails.add(email.lower())
+                        
+                    for raw_phone in phone_pattern.findall(snippet_text):
+                        cleaned_num = raw_phone.strip()
+                        if len(cleaned_num) >= 8:
+                            for region in ["IN", "US", "GB"]:
+                                try:
+                                    parsed_number = phonenumbers.parse(cleaned_num, region)
+                                    if phonenumbers.is_valid_number(parsed_number):
+                                        formatted_num = phonenumbers.format_number(parsed_number, phonenumbers.PhoneNumberFormat.E164)
+                                        phones.add(formatted_num)
+                                        break
+                                except Exception:
+                                    continue
+    except Exception:
+        pass
+        
+    return list(emails), list(phones)
 
 async def fetch_social_profiles(session: aiohttp.ClientSession, company_name: str) -> dict:
     profiles = {"linkedin": None, "crunchbase": None}
@@ -153,7 +178,7 @@ async def fetch_social_profiles(session: aiohttp.ClientSession, company_name: st
         
     search_query = f"{company_name} LinkedIn Crunchbase"
     url = "https://html.duckduckgo.com/html/"
-    headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36"}
+    headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"}
     
     try:
         async with session.post(url, data={'q': search_query}, headers=headers, timeout=10) as resp:
@@ -168,11 +193,8 @@ async def fetch_social_profiles(session: aiohttp.ClientSession, company_name: st
                         profiles["linkedin"] = href
                     if "crunchbase.com/organization/" in href and not profiles["crunchbase"]:
                         profiles["crunchbase"] = href
-            else:
-                logging.warning(f"Got status {resp.status} for {company_name}")
-                await asyncio.sleep(2)
     except Exception:
-        return {"linkedin": None, "crunchbase": None}
+        pass
         
     return profiles
 
@@ -216,11 +238,41 @@ async def enrich_record(session: aiohttp.ClientSession, semaphore: asyncio.Semap
                 enrichment["domain_source"] = "guessed_and_verified"
                 enrichment["discovered_website"] = f"https://{guessed}"
 
+        all_emails = set()
+        all_phones = set()
+
         if domain:
             enrichment["whois"] = await asyncio.to_thread(whois_lookup, domain)
-            api_emails = await find_emails_via_api(session, domain)
-            if api_emails:
-                enrichment["discovered_emails"] = api_emails
+            
+            web_emails, web_phones = await extract_contacts_from_web_page(session, domain)
+            all_emails.update(web_emails)
+            all_phones.update(web_phones)
+            
+            guessed_domain_emails = guess_emails_from_domain(domain)
+            all_emails.update(guessed_domain_emails)
+            
+            if HUNTER_API_KEY and "YOUR_HUNTER_API_KEY" not in HUNTER_API_KEY:
+                try:
+                    url = "https://api.hunter.io/v2/domain-search"
+                    params = {"domain": domain, "api_key": HUNTER_API_KEY}
+                    async with session.get(url, params=params, timeout=REQUEST_TIMEOUT) as resp:
+                        if resp.status == 200:
+                            data = await resp.json()
+                            api_emails = [e["value"] for e in data.get("data", {}).get("emails", [])]
+                            all_emails.update(api_emails)
+                except Exception:
+                    pass
+
+        if not all_phones or not all_emails:
+            osint_emails, osint_phones = await fetch_osint_fallbacks(session, company_name)
+            all_emails.update(osint_emails)
+            all_phones.update(osint_phones)
+
+        if not all_emails and domain:
+            all_emails.update([f"info@{domain}", f"support@{domain}"])
+
+        enrichment["discovered_emails"] = list(all_emails)
+        enrichment["discovered_phones"] = list(all_phones)
 
         registry_data = await corporate_registry_match(session, company_name)
         enrichment["corporate_registry"] = registry_data
@@ -258,7 +310,7 @@ async def process_bulk_leads():
         logging.warning("Empty records context received. Pre-seeding structure for pipeline continuum.")
         enriched = []
     else:
-        print(f"Enriching {len(records)} records (Multi-threaded async network pools initialized)...")
+        print(f"Enriching {len(records)} records (Multi-threaded async network pools with Deep Contact Scraping initialized)...")
         semaphore = asyncio.Semaphore(5)
         async with aiohttp.ClientSession() as session:
             tasks = [enrich_record(session, semaphore, rec) for rec in records]

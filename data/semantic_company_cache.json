@@ -1,0 +1,35 @@
+{
+  "https://linkedin.com/company/bmwkrishnaautomobiles": {
+    "ontology_version": "1.0.0",
+    "timestamp": 1785128034.3612373,
+    "company_profile": {
+      "is_snippet": false,
+      "description": {
+        "value": "",
+        "source": "meta_description"
+      },
+      "services": [],
+      "technologies": [],
+      "products": [],
+      "positions": [],
+      "industries": [],
+      "locations": [],
+      "certifications": [],
+      "partners": [],
+      "company_type": "B2B Software",
+      "profile_confidence": 0.3,
+      "sections": {
+        "homepage": "secureweb secureweb Please enter your Windows Login Credentials: Username Password Domain AuthenticationAuthentication successful. You are securely connected.AuthenticationAuthentication successful. You are securely connected.",
+        "about": "",
+        "services": "",
+        "careers": "",
+        "blog": "",
+        "products": ""
+      },
+      "last_crawled": "2026-07-27",
+      "ontology_version": "1.0.0",
+      "website": "",
+      "website_source": ""
+    }
+  }
+}
