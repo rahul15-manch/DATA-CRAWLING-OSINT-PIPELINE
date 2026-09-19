@@ -1,6 +1,8 @@
+import pytest
 from curl_cffi import requests
 import time
 
+@pytest.mark.skip(reason="Live network scratch test")
 def test_raw_cffi():
     url = "https://www.google.com/search?q=automation+company&num=5"
     

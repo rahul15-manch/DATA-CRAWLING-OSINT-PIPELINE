@@ -32,11 +32,18 @@ class LinkedinPlaywrightProvider(SearchProvider):
         request_or_query: Request | str,
         max_results: int = 1,
         page: int = 0,
+        deadline = None,
     ) -> list[SearchResult]:
         if isinstance(request_or_query, Request):
             query = request_or_query.query or ""
         else:
             query = request_or_query
+
+        if deadline:
+            rem = deadline.remaining()
+            if rem <= 0.0 or deadline.is_exceeded():
+                from utils.deadline import DeadlineExceeded
+                raise DeadlineExceeded("LinkedIn Playwright deadline budget exhausted")
 
         if time.time() < self._cooldown_until:
             remaining = int(self._cooldown_until - time.time())
@@ -63,14 +70,14 @@ class LinkedinPlaywrightProvider(SearchProvider):
             return []
 
         bm = get_browser_manager()
-        instance = bm.get_browser()
+        instance = bm.get_browser("linkedin", deadline=deadline)
         
         # Adaptive recycle limit of 20 requests for LinkedIn
         if instance.requests_count >= 20:
             logger.info(f"[LinkedinPlaywrightProvider] BrowserInstance #{instance.index} reached LinkedIn request limit (20). Draining.")
             import threading
             threading.Thread(target=bm.pool.recycle_instance, args=(instance,), daemon=True).start()
-            instance = bm.get_browser()
+            instance = bm.get_browser("linkedin", deadline=deadline)
 
         instance.active_pages += 1
         instance.requests_count += 1

@@ -372,5 +372,769 @@
     "social_links": {},
     "people": [],
     "source": "Google"
+  },
+  {
+    "company_name": "Vtestcorp",
+    "website": "https://vtestcorp.com/",
+    "domain": "vtestcorp.com",
+    "industry": "Artificial Intelligence",
+    "contact_page": "https://vtestcorp.com/contact-us/",
+    "about_page": "https://vtestcorp.com/about-us/",
+    "emails": [
+      "admin@vtestcorp.com",
+      "contact@vtestcorp.com",
+      "hello@vtestcorp.com",
+      "info@vtestcorp.com",
+      "sales@vtestcorp.com",
+      "support@vtestcorp.com"
+    ],
+    "phones": [],
+    "social_links": {
+      "linkedin": "https://www.linkedin.com/company/vtest/",
+      "twitter": "https://twitter.com/vtestcorp",
+      "facebook": "https://www.facebook.com/vtestcorp/",
+      "instagram": "https://www.instagram.com/vtest_software/"
+    },
+    "people": [],
+    "source": "Google",
+    "tech_stack": [],
+    "emails_scored": []
+  },
+  {
+    "company_name": "Deviqa",
+    "website": "https://www.deviqa.com/",
+    "domain": "deviqa.com",
+    "industry": "Artificial Intelligence",
+    "contact_page": "https://www.deviqa.com/contact-us/",
+    "about_page": "https://www.deviqa.com/case-studies/tipalti/",
+    "emails": [
+      "admin@deviqa.com",
+      "contact@deviqa.com",
+      "hello@deviqa.com",
+      "info@deviqa.com",
+      "sales@deviqa.com",
+      "support@deviqa.com"
+    ],
+    "phones": [
+      "+18054919331",
+      "+18054919331"
+    ],
+    "social_links": {
+      "facebook": "https://www.facebook.com/deviQASolutions/",
+      "linkedin": "https://www.linkedin.com/company/deviqa/",
+      "github": "https://github.com/DeviQA",
+      "twitter": "https://x.com/i/grok?text=I’m+researching+QA+and+testing+service+providers+and+want+to+understand+how+DeviQA+combines+verified+testing+expertise,+AI-assisted+quality+processes,+and+flexible+delivery+models+to+drive+better+product+outcomes+and+faster+releases.+Can+you+summarize+the+key+value+propositions+and+highlights+from+DeviQA’s+service+offerings?"
+    },
+    "people": [],
+    "source": "Google",
+    "tech_stack": [],
+    "emails_scored": []
+  },
+  {
+    "company_name": "Impactqa",
+    "website": "https://www.impactqa.com/",
+    "domain": "impactqa.com",
+    "industry": "Automation",
+    "emails": [
+      "admin@impactqa.com",
+      "contact@impactqa.com",
+      "hello@impactqa.com",
+      "info@impactqa.com",
+      "sales@impactqa.com",
+      "support@impactqa.com"
+    ],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "tech_stack": [],
+    "emails_scored": []
+  },
+  {
+    "company_name": "Cybernauts",
+    "website": "https://www.cybernauts.in/",
+    "domain": "cybernauts.in",
+    "industry": "Software Development",
+    "contact_page": "https://www.cybernauts.in/contact",
+    "about_page": "https://www.cybernauts.in/about",
+    "emails": [
+      "admin@cybernauts.in",
+      "contact@cybernauts.in",
+      "hello@cybernauts.in",
+      "info@cybernauts.in",
+      "info@cybernauts.it",
+      "sales@cybernauts.in",
+      "support@cybernauts.in"
+    ],
+    "phones": [
+      "919990861759"
+    ],
+    "social_links": {
+      "linkedin": "https://www.linkedin.com/company/cybernautshq",
+      "facebook": "https://www.facebook.com/cybernauts.it",
+      "instagram": "https://www.instagram.com/cybernauts.it"
+    },
+    "people": [],
+    "source": "Google",
+    "tech_stack": [],
+    "emails_scored": []
+  },
+  {
+    "company_name": "Thecybernauts",
+    "website": "https://www.thecybernauts.net/",
+    "domain": "thecybernauts.net",
+    "industry": "Cybernauts",
+    "contact_page": "https://www.thecybernauts.net/contact",
+    "about_page": "https://www.thecybernauts.net/about",
+    "emails": [
+      "admin@thecybernauts.net",
+      "contact@thecybernauts.net",
+      "hello@thecybernauts.net",
+      "info@thecybernauts.net",
+      "sales@thecybernauts.net",
+      "support@thecybernauts.net",
+      "user@domain.com"
+    ],
+    "phones": [],
+    "social_links": {
+      "linktree": "https://linktr.ee/thecybernauts?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAcGRvZgJleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA85MzY2MTk3NDMzOTI0NTkAAaeUglUgPcC_nHAamfB-7daN_SLQ7LyXcSswrzVb_PY_qkbh2ZJvcon00pHM6Q_aem_qJ-GUL9tQi8OmPW_rX0mxQ"
+    },
+    "people": [],
+    "source": "Google",
+    "tech_stack": [],
+    "emails_scored": []
+  },
+  {
+    "company_name": "Imdb",
+    "website": "https://www.imdb.com/title/tt0516899/",
+    "domain": "imdb.com",
+    "industry": "Automation",
+    "emails": [
+      "admin@imdb.com",
+      "contact@imdb.com",
+      "hello@imdb.com",
+      "info@imdb.com",
+      "sales@imdb.com",
+      "support@imdb.com"
+    ],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "tech_stack": [],
+    "emails_scored": []
+  },
+  {
+    "company_name": "Fandom",
+    "website": "https://theavengers.fandom.com/wiki/The_Cybernauts",
+    "domain": "theavengers.fandom.com",
+    "industry": "Cybernauts",
+    "emails": [
+      "admin@theavengers.fandom.com",
+      "contact@theavengers.fandom.com",
+      "hello@theavengers.fandom.com",
+      "info@theavengers.fandom.com",
+      "sales@theavengers.fandom.com",
+      "support@theavengers.fandom.com"
+    ],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "tech_stack": [],
+    "emails_scored": []
+  },
+  {
+    "company_name": "Archiveorg",
+    "website": "https://archive.org/details/theavengerss04e03.the.cybernauts",
+    "domain": "archive.org",
+    "industry": "Cybernauts",
+    "contact_page": "https://archive.org/contact",
+    "about_page": "https://archive.org/about",
+    "emails": [
+      "admin@archive.org",
+      "contact@archive.org",
+      "hello@archive.org",
+      "info@archive.org",
+      "sales@archive.org",
+      "support@archive.org"
+    ],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "tech_stack": [],
+    "emails_scored": []
+  },
+  {
+    "company_name": "Los Angeles Public Library",
+    "website": "https://www.lapl.org/cybernauts",
+    "domain": "lapl.org",
+    "industry": "Hardware_Industrial",
+    "contact_page": "https://www.lapl.org/contact-us",
+    "about_page": "https://www.lapl.org/cybernauts#paragraph-ceeab757-bbe5-4eda-9170-6f27edee280a",
+    "emails": [
+      "admin@lapl.org",
+      "contact@lapl.org",
+      "hello@lapl.org",
+      "info@lapl.org",
+      "lapl-tech-help@chat.libraryh3lp.com",
+      "sales@lapl.org",
+      "support@lapl.org"
+    ],
+    "phones": [
+      "2132287000",
+      "2132287160"
+    ],
+    "social_links": {
+      "facebook": "https://www.facebook.com/pages/Los%20Angeles%20Public%20Library/104080916296358/",
+      "instagram": "https://www.instagram.com/lapubliclibrary/",
+      "youtube": "https://www.youtube.com/losangeleslibrary"
+    },
+    "people": [],
+    "source": "Google",
+    "tech_stack": [],
+    "emails_scored": []
+  },
+  {
+    "company_name": "Sharescart",
+    "website": "https://www.sharescart.com/industry/it-hardware/",
+    "domain": "sharescart.com",
+    "industry": "Hardware_Development",
+    "contact_page": "https://www.sharescart.com/contact",
+    "about_page": "https://www.sharescart.com/about",
+    "emails": [
+      "admin@sharescart.com",
+      "contact@sharescart.com",
+      "hello@sharescart.com",
+      "info@sharescart.com",
+      "sales@sharescart.com",
+      "support@sharescart.com"
+    ],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "description": "",
+    "employees": "",
+    "founded": "",
+    "country": "",
+    "tech_stack": [],
+    "emails_scored": []
+  },
+  {
+    "company_name": "Easyleadz",
+    "website": "https://www.easyleadz.com/lists/List-of-Computer-Hardware-companies-in-India",
+    "domain": "easyleadz.com",
+    "industry": "Hardware_Development",
+    "emails": [
+      "admin@easyleadz.com",
+      "contact@easyleadz.com",
+      "hello@easyleadz.com",
+      "info@easyleadz.com",
+      "sales@easyleadz.com",
+      "support@easyleadz.com"
+    ],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "description": "",
+    "employees": "",
+    "founded": "",
+    "country": "",
+    "tech_stack": [],
+    "emails_scored": []
+  },
+  {
+    "company_name": "Finologytickerfinologyin finology ticker sector it-hardwareList of IT Hardware Sector Stocks with Industry Classification",
+    "website": "https://ticker.finology.in/sector/it-hardware",
+    "domain": "ticker.finology.in",
+    "industry": "Hardware_Development",
+    "emails": [
+      "info@ticker.finology.in",
+      "support@ticker.finology.in"
+    ],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "description": "",
+    "employees": "",
+    "founded": "",
+    "country": "",
+    "tech_stack": [],
+    "emails_scored": []
+  },
+  {
+    "company_name": "Builtin",
+    "website": "https://builtin.com/hardware/hardware-companies",
+    "domain": "builtin.com",
+    "industry": "Hardware_Development",
+    "emails": [
+      "admin@builtin.com",
+      "contact@builtin.com",
+      "hello@builtin.com",
+      "info@builtin.com",
+      "sales@builtin.com",
+      "support@builtin.com"
+    ],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "description": "",
+    "employees": "",
+    "founded": "",
+    "country": "",
+    "tech_stack": [],
+    "emails_scored": []
+  },
+  {
+    "company_name": "Cnc System",
+    "website": "https://www.cnc-system.com/computer-hardware-solution.php",
+    "domain": "cnc-system.com",
+    "industry": "Hardware_Development",
+    "emails": [
+      "admin@cnc-system.com",
+      "contact@cnc-system.com",
+      "hello@cnc-system.com",
+      "info@cnc-system.com",
+      "sales@cnc-system.com",
+      "support@cnc-system.com"
+    ],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "description": "",
+    "employees": "",
+    "founded": "",
+    "country": "",
+    "tech_stack": [],
+    "emails_scored": []
+  },
+  {
+    "company_name": "Craft",
+    "website": "https://craft.co/artesian-software-technologies",
+    "domain": "craft.co",
+    "industry": "Devops_Cloud",
+    "contact_page": "https://craft.co/contact",
+    "about_page": "https://craft.co/about",
+    "emails": [
+      "admin@craft.co",
+      "contact@craft.co",
+      "hello@craft.co",
+      "info@craft.co",
+      "sales@craft.co",
+      "support@craft.co"
+    ],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "description": "",
+    "employees": "",
+    "founded": "",
+    "country": "",
+    "tech_stack": [],
+    "emails_scored": []
+  },
+  {
+    "company_name": "Zaubacorp",
+    "website": "https://www.zaubacorp.com/ARTESIAN-SOFTWARE-TECHNOLOGIES-LLP-AAB-0585",
+    "domain": "zaubacorp.com",
+    "industry": "Artesian Software",
+    "emails": [
+      "admin@zaubacorp.com",
+      "contact@zaubacorp.com",
+      "eccspl2017@yahoo.com",
+      "hello@zaubacorp.com",
+      "info@zaubacorp.com",
+      "sales@zaubacorp.com",
+      "support@zaubacorp.com"
+    ],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "description": "",
+    "employees": "",
+    "founded": "",
+    "country": "",
+    "tech_stack": [],
+    "emails_scored": []
+  },
+  {
+    "company_name": "Artesian",
+    "website": "https://www.artesian.io/",
+    "domain": "artesian.io",
+    "industry": "Software_Development",
+    "emails": [
+      "admin@artesian.io",
+      "contact@artesian.io",
+      "hello@artesian.io",
+      "info@artesian.io",
+      "sales@artesian.io",
+      "support@artesian.io"
+    ],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "description": "",
+    "employees": "",
+    "founded": "",
+    "country": "",
+    "tech_stack": [],
+    "emails_scored": []
+  },
+  {
+    "company_name": "Datanyze",
+    "website": "https://www.datanyze.com/companies/artesian-software/468335068",
+    "domain": "datanyze.com",
+    "industry": "Artesian Software",
+    "emails": [
+      "admin@datanyze.com",
+      "contact@datanyze.com",
+      "hello@datanyze.com",
+      "info@datanyze.com",
+      "sales@datanyze.com",
+      "support@datanyze.com"
+    ],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "description": "",
+    "employees": "",
+    "founded": "",
+    "country": "",
+    "tech_stack": [],
+    "emails_scored": []
+  },
+  {
+    "company_name": "Topstartups",
+    "website": "https://topstartups.io/?industries=Cybersecurity",
+    "domain": "topstartups.io",
+    "industry": "Artificial Intelligence",
+    "contact_page": "https://topstartups.io/contact",
+    "about_page": "https://topstartups.io/?company_size=1-10+employees&company_size=11-50+employees",
+    "emails": [
+      "admin@topstartups.io",
+      "contact@topstartups.io",
+      "hello@topstartups.io",
+      "info@topstartups.io",
+      "sales@topstartups.io",
+      "support@topstartups.io"
+    ],
+    "phones": [],
+    "social_links": {
+      "linkedin": "https://www.linkedin.com/company/joinpogo/"
+    },
+    "people": [
+      {
+        "name": "Josh Buckley",
+        "designation": "Founder"
+      },
+      {
+        "name": "Khosla Ventures",
+        "designation": "Partner"
+      },
+      {
+        "name": "Village Global",
+        "designation": "Partner"
+      },
+      {
+        "name": "Correlation Ventures",
+        "designation": "Founder"
+      },
+      {
+        "name": "Show more",
+        "designation": "Founder"
+      }
+    ],
+    "source": "Google",
+    "description": "Top Startups 2026 — Sequoia, Y Combinator, A16Z, Accel List of the world's best startups to work for. All startup companies hiring and recently funded by top investors. Sort by new startups. Filter by funding stage, industry, HQ. The world's top startups and startup jobs in one place. The world's top startups and startup jobs in one place. Find Top Startups Track new startups funded by top investors. Powerful filters. Updates daily.",
+    "employees": "1-10",
+    "founded": "2021",
+    "country": "",
+    "tech_stack": [
+      "AWS CloudFront",
+      "Bootstrap",
+      "Cloudflare",
+      "Crisp",
+      "Google Analytics",
+      "Google Tag Manager",
+      "Magento",
+      "jQuery"
+    ],
+    "emails_scored": []
+  },
+  {
+    "company_name": "Startupsavant",
+    "website": "https://startupsavant.com/startups-to-watch/cybersecurity",
+    "domain": "startupsavant.com",
+    "industry": "Cybersecurity",
+    "contact_page": "https://startupsavant.com/contact",
+    "about_page": "https://startupsavant.com/startup-center/company-profiles",
+    "emails": [
+      "admin@startupsavant.com",
+      "contact@startupsavant.com",
+      "hello@startupsavant.com",
+      "info@startupsavant.com",
+      "sales@startupsavant.com",
+      "support@startupsavant.com"
+    ],
+    "phones": [],
+    "social_links": {
+      "facebook": "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fstartupsavant.com%2Fstartups-to-watch%2Fcybersecurity",
+      "linkedin": "https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fstartupsavant.com%2Fstartups-to-watch%2Fcybersecurity",
+      "twitter": "https://x.com/intent/post?url=https%3A%2F%2Fstartupsavant.com%2Fstartups-to-watch%2Fcybersecurity&text=12%20Top%20Cybersecurity%20Startups%20to%20Follow%20in%202026",
+      "instagram": "https://www.instagram.com/startupsavant/",
+      "youtube": "https://www.youtube.com/channel/UCFU51ISkkROy-Pl81ue4YTw"
+    },
+    "people": [],
+    "source": "Google",
+    "description": "12 Top Cybersecurity Startups 2026 | TRUiC We’ve curated a list of the top cybersecurity startups for investors, startup lovers, and aspiring entrepreneurs to watch in 2026. We’ve curated a list of the top cybersecurity startups for investors, startup lovers, and aspiring entrepreneurs to watch in 2026. We’ve curated a list of the top cybersecurity startups for investors, startup lovers, and aspiring entrepreneurs to watch in 2026. 12 Top Cybersecurity Startups to Follow in 2026 Hottest Cybersecurity Startups to Watch Final Thoughts Frequently Asked Questions",
+    "employees": "",
+    "founded": "",
+    "country": "",
+    "tech_stack": [
+      "Google Tag Manager",
+      "Magento"
+    ],
+    "emails_scored": []
+  },
+  {
+    "company_name": "Esecurityplanet",
+    "website": "https://www.esecurityplanet.com/products/hot-cybersecurity-startups/",
+    "domain": "esecurityplanet.com",
+    "industry": "Cybersecurity",
+    "emails": [
+      "admin@esecurityplanet.com",
+      "contact@esecurityplanet.com",
+      "hello@esecurityplanet.com",
+      "info@esecurityplanet.com",
+      "sales@esecurityplanet.com",
+      "support@esecurityplanet.com"
+    ],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "description": "",
+    "employees": "",
+    "founded": "",
+    "country": "",
+    "tech_stack": [],
+    "emails_scored": []
+  },
+  {
+    "company_name": "Growthlist",
+    "website": "https://growthlist.co/cyber-security-startups/",
+    "domain": "growthlist.co",
+    "industry": "Cybersecurity",
+    "location": "Netherlands",
+    "contact_page": "https://growthlist.co/cyber-security-startups/#get-a-sample-report",
+    "about_page": "https://growthlist.co/about/",
+    "emails": [
+      "admin@growthlist.co",
+      "contact@growthlist.co",
+      "hello@growthlist.co",
+      "info@growthlist.co",
+      "sales@growthlist.co",
+      "support@growthlist.co"
+    ],
+    "phones": [],
+    "social_links": {
+      "twitter": "https://twitter.com/GrowthLists",
+      "linkedin": "https://www.linkedin.com/company/growthlist-co",
+      "facebook": "https://www.facebook.com/GrowthListHQ"
+    },
+    "people": [],
+    "source": "Google",
+    "description": "1,600+ Funded Cybersecurity Startups 2026 | Get Contacts - Growth List Cybersecurity startups database with 1,600+ funded companies, verified decision-maker contacts, and funding intelligence. Best B2B lead source for sales teams. Updated weekly. Cybersecurity startups database with 1,600+ funded companies, verified decision-maker contacts, and funding intelligence. Best B2B lead source for sales teams. Updated weekly. Cybersecurity startups database with 1,600+ funded companies, verified decision-maker contacts, and funding intelligence. Best B2B lead source for sales teams. Updated weekly. 1,600+ Funded Cybersecurity Startups 2026 | Get Contacts Table of Contents Recently Funded Cybersecurity Startups Cybersecurity Startups at a Glance The Cybersecurity Startup Ecosystem in 2026",
+    "employees": "",
+    "founded": "2023",
+    "country": "Netherlands",
+    "tech_stack": [
+      "Google Analytics",
+      "Google Tag Manager",
+      "Hotjar",
+      "Magento",
+      "Stripe",
+      "WooCommerce",
+      "WordPress",
+      "jQuery"
+    ],
+    "emails_scored": []
+  },
+  {
+    "company_name": "Vcbacked",
+    "website": "https://www.vcbacked.co/cybersecurity-startups",
+    "domain": "vcbacked.co",
+    "industry": "Cybersecurity",
+    "contact_page": "https://www.vcbacked.co/startup-founder-contacts",
+    "about_page": "https://www.vcbacked.co/company/nucleon-security",
+    "emails": [
+      "admin@vcbacked.co",
+      "contact@vcbacked.co",
+      "hello@vcbacked.co",
+      "info@vcbacked.co",
+      "sales@vcbacked.co",
+      "support@vcbacked.co"
+    ],
+    "phones": [],
+    "social_links": {
+      "twitter": "https://www.armorblox.com"
+    },
+    "people": [],
+    "source": "Google",
+    "description": "2,680+ Funded Cybersecurity Startups (2026) - Complete Database | VCBacked Browse 2,680 venture-funded cybersecurity startups with verified founder contacts, funding data, and company details. Filter by location, stage, and team size. Updated monthly. Browse 2,680 venture-funded cybersecurity startups with verified founder contacts, funding data, and company details. Filter by location, stage, and team size. Updated monthly. Database of venture-backed startups with funding rounds, lead investors, and founders. Free Crunchbase alternative. 2,680+ Funded Cybersecurity Startups (2026) Recently Funded Companies The Cybersecurity Startup Ecosystem Frequently Asked Questions Explore More Startup Data",
+    "employees": "",
+    "founded": "",
+    "country": "",
+    "tech_stack": [
+      "Google Analytics",
+      "Magento",
+      "Next.js",
+      "React",
+      "Tailwind CSS"
+    ],
+    "emails_scored": []
+  },
+  {
+    "company_name": "Zmenu",
+    "website": "https://www.zmenu.com/delhi-pizza-company-delhi-online-menu/",
+    "domain": "zmenu.com",
+    "industry": "Pizza",
+    "emails": [
+      "admin@zmenu.com",
+      "contact@zmenu.com",
+      "hello@zmenu.com",
+      "info@zmenu.com",
+      "sales@zmenu.com",
+      "support@zmenu.com"
+    ],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "description": "",
+    "employees": "",
+    "founded": "",
+    "country": "",
+    "tech_stack": [],
+    "emails_scored": []
+  },
+  {
+    "company_name": "1112",
+    "website": "https://www.1112.com/en?lang=th",
+    "domain": "1112.com",
+    "industry": "Pizza",
+    "emails": [
+      "admin@1112.com",
+      "contact@1112.com",
+      "hello@1112.com",
+      "info@1112.com",
+      "sales@1112.com",
+      "support@1112.com"
+    ],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "description": "",
+    "employees": "",
+    "founded": "",
+    "country": "",
+    "tech_stack": [],
+    "emails_scored": []
+  },
+  {
+    "company_name": "Zomato",
+    "website": "https://www.zomato.com/ncr/the-pizza-company-sector-5-dwarka-new-delhi",
+    "domain": "zomato.com",
+    "industry": "Pizza",
+    "location": "Shop S-1 And S-2, Plot 10, 2nd Floor, Plaza-2, MLU, Manish Link Road, Sector 5, Dwarka, New Delhi, Sector 5, Dwarka, New Delhi, New Delhi, India",
+    "contact_page": "https://www.zomato.com/contact",
+    "about_page": "https://www.zomato.com/ncr/the-pizza-company-sector-5-dwarka-new-delhi/order",
+    "emails": [
+      "admin@zomato.com",
+      "contact@zomato.com",
+      "hello@zomato.com",
+      "info@zomato.com",
+      "sales@zomato.com",
+      "support@zomato.com"
+    ],
+    "phones": [
+      "911145603421"
+    ],
+    "social_links": {
+      "linkedin": "https://in.linkedin.com/company/zomato",
+      "instagram": "https://www.instagram.com/zomato/",
+      "twitter": "https://twitter.com/zomato",
+      "youtube": "https://www.youtube.com/zomato",
+      "facebook": "https://www.facebook.com/zomato"
+    },
+    "people": [
+      {
+        "name": "Fast Food",
+        "designation": "CTO"
+      },
+      {
+        "name": "Report now",
+        "designation": "CTO"
+      },
+      {
+        "name": "Weather Union",
+        "designation": "Partner"
+      }
+    ],
+    "source": "Google",
+    "description": "The Pizza Company, Sector 5, Dwarka, New Delhi | Zomato The Pizza Company New Delhi, Sector 5, Dwarka; View reviews, menu, contact, location, and more for The Pizza Company Restaurant. The Pizza Company New Delhi, Sector 5, Dwarka; View reviews, menu, contact, location, and more for The Pizza Company Restaurant. The Pizza Company Overview Order Online Photos Menu",
+    "employees": "",
+    "founded": "",
+    "country": "India",
+    "tech_stack": [
+      "Google Analytics",
+      "Google Tag Manager",
+      "Magento",
+      "React",
+      "Segment"
+    ],
+    "emails_scored": []
+  },
+  {
+    "company_name": "Get 2 Regular Pizza 99 Each",
+    "website": "https://www.dominos.co.in/",
+    "domain": "dominos.co.in",
+    "industry": "Pizza",
+    "location": "India",
+    "contact_page": "https://www.dominos.co.in/contact",
+    "about_page": "https://www.dominos.co.in/about",
+    "emails": [
+      "admin@dominos.co.in",
+      "contact@dominos.co.in",
+      "dominos.franchise@jublfood.com",
+      "hello@dominos.co.in",
+      "info@dominos.co.in",
+      "sales@dominos.co.in",
+      "support@dominos.co.in"
+    ],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "description": "Domino’s Pizza – Order Online | Get 2 Regular Pizza @99 Each Order Pizza online from Domino's and Get home delivery of 2 Medium Pizzas worth Just 199/each. ZERO Contact Delivery. Baked at 465 'F. 100% Sanitised Stores.`",
+    "employees": "",
+    "founded": "",
+    "country": "India",
+    "tech_stack": [
+      "Amplitude",
+      "Magento"
+    ],
+    "emails_scored": []
   }
 ]

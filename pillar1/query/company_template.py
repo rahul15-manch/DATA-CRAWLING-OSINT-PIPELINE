@@ -96,11 +96,14 @@ INDUSTRY_SEMANTIC_TEMPLATES = {
         "{concept} ledger technology"
     ],
     "ai": [
-        "{concept} AI startup",
-        "{concept} machine learning lab",
-        "{concept} LLM solutions provider",
-        "{concept} computer vision company",
-        "{concept} generative AI company"
+        "generative AI company",
+        "artificial intelligence startup",
+        "machine learning company",
+        "LLM solutions provider",
+        "computer vision company",
+        "AI platform company",
+        "{concept} AI company",
+        "{concept} machine learning",
     ],
     "logistics": [
         "{concept} freight forwarding",

@@ -27,6 +27,14 @@ except ValueError:
 
 LITERAL_MATCH_BONUS = int(os.getenv("LITERAL_MATCH_BONUS", "40"))
 
+# Points awarded when a result URL domain directly matches the entity keyword
+# (e.g. "swiggy" → swiggy.com gets +60).  Overrideable via env var.
+ENTITY_IDENTITY_BONUS = int(os.getenv("ENTITY_IDENTITY_BONUS", "60"))
+
+# Max DIRECT lane tasks for entity queries (count cap only — time deadline
+# in the scheduler loop is the universal safety valve).
+MAX_DIRECT_QUERIES_BUDGET = int(os.getenv("MAX_DIRECT_QUERIES_BUDGET", "10"))
+
 
 # Ordered list of providers to try (env: comma-separated string)
 # Free providers first, paid rescue provider (BrightData) last.
@@ -161,8 +169,26 @@ MIN_REUSE_INTERVALS = {
 TARGET_COMPANIES        = int(os.getenv("TARGET_COMPANIES",   "50"))
 # Stop discovery when we have this many high-confidence ('ALLOW') companies.
 TARGET_HIGH_CONFIDENCE  = int(os.getenv("TARGET_HIGH_CONFIDENCE", "10"))
-# Base runtime threshold (seconds) before stopping query loops.
-MAX_RUNTIME             = int(os.getenv("MAX_RUNTIME", "120"))
+# Base runtime threshold (seconds) before stopping query loops / pipeline total budget.
+MAX_RUNTIME: int = int(os.getenv("MAX_RUNTIME", "120"))
+
+# Discovery phase budget (child of run deadline).
+DISCOVERY_DEADLINE_SECONDS: float = float(os.getenv("DISCOVERY_DEADLINE_SECONDS", "55.0"))
+
+# Maximum time (seconds) the search phase may use within a discovery budget.
+# This is a phase-level intent limit — the actual child deadline is bounded
+# by min(SEARCH_MAX_RUNTIME, discovery_deadline.remaining()), so it always
+# respects the parent deadline.  Env-overrideable for tuning.
+SEARCH_MAX_RUNTIME: float = float(os.getenv("SEARCH_MAX_RUNTIME", "25.0"))
+
+# Per-company enrichment budget (child of run deadline, bounded by parent expiry).
+COMPANY_DEADLINE_SECONDS: float = float(os.getenv("COMPANY_DEADLINE_SECONDS", "40.0"))
+
+# DEPRECATED — formula cap (20 + 2*providers) replaced by Deadline hierarchy.
+# Kept for backward-compat env var reads only; no new code should use this.
+_disc_timeout_env = os.getenv("DISCOVERY_TIMEOUT_SECONDS")
+DISCOVERY_TIMEOUT_SECONDS: "float | None" = float(_disc_timeout_env) if _disc_timeout_env else None
+
 # SRE relevance thresholds
 RELEVANCE_THRESHOLD_LOW = int(os.getenv("RELEVANCE_THRESHOLD_LOW", "30"))
 RELEVANCE_THRESHOLD_MEDIUM = int(os.getenv("RELEVANCE_THRESHOLD_MEDIUM", "60"))

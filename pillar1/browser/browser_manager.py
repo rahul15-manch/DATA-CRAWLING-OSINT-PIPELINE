@@ -47,11 +47,11 @@ class BrowserManager:
             # Register a cleanup hook on process exit
             atexit.register(self.shutdown)
 
-    def get_browser(self, provider: str = None):
+    def get_browser(self, provider: str = None, deadline=None):
         """Fetches the healthiest proxy-bound BrowserInstance from the pool."""
         if not self._initialized:
             self.initialize()
-        return self.pool.get_browser(provider)
+        return self.pool.get_browser(provider, deadline=deadline)
 
     def shutdown(self):
         """Gracefully shuts down all pools and terminates Playwright session."""

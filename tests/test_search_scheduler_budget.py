@@ -11,29 +11,26 @@ from search.result import SearchResult
 def test_provider_budget_manager_brightdata():
     bm = ProviderBudgetManager()
     
-    # Initialize Deadline
-    Deadline.set_timeout(35.0)
-    
-    # BrightData budget should be dynamically allocated: max(remaining_global, 5.0)
-    budget = bm.get_provider_budget("brightdata")
+    dl = Deadline(35.0)
+    budget = bm.get_provider_budget("brightdata", deadline=dl)
     assert budget >= 5.0
 
 def test_provider_budget_manager_google_fallback():
     bm = ProviderBudgetManager()
     
-    # If remaining budget is less than GOOGLE_MIN_FALLBACK_BUDGET (e.g. 18s), google is not allowed
-    Deadline.set_timeout(10.0) # remaining is < 18
-    assert bm.can_execute("google_html") is False
+    # If remaining budget is exhausted (<1.0s), provider is not allowed
+    dl_exhausted = Deadline(0.0)
+    assert bm.can_execute("google_html", deadline=dl_exhausted) is False
     
-    # If remaining budget is high, google is allowed
-    Deadline.set_timeout(30.0)
-    assert bm.can_execute("google_html") is True
+    # If deadline has time remaining, provider is allowed
+    dl_valid = Deadline(10.0)
+    assert bm.can_execute("google_html", deadline=dl_valid) is True
 
 def test_google_block_cooldown_logic(monkeypatch):
     manager = SearchManager()
     
     # Mock budget manager can_execute to return True
-    monkeypatch.setattr(manager.budget_manager, "can_execute", lambda pname: True)
+    monkeypatch.setattr(manager.budget_manager, "can_execute", lambda pname, *args, **kwargs: True)
     
     # Initially Google is not disabled
     assert manager._consecutive_blocks["google_html"] == 0

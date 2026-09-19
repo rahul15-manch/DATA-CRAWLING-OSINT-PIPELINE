@@ -123,14 +123,18 @@ def test_query_budget_limit():
     
     # Temporarily set budget to 5 for test stability
     orig_budget = getattr(config, "MAX_QUERIES_BUDGET", 20)
+    orig_direct = getattr(config, "MAX_DIRECT_QUERIES_BUDGET", 10)
     config.MAX_QUERIES_BUDGET = 5
+    config.MAX_DIRECT_QUERIES_BUDGET = 5
     
     try:
         tasks = list(generate_search_tasks("python Noida"))
-        assert len(tasks) <= 5
+        # Total tasks bounded by direct_budget + expanded_budget
+        assert len(tasks) <= 10
         assert len(tasks) > 0
     finally:
         config.MAX_QUERIES_BUDGET = orig_budget
+        config.MAX_DIRECT_QUERIES_BUDGET = orig_direct
 
 
 def test_dynamic_concept_ranking():

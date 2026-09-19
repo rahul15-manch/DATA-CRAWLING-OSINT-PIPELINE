@@ -34,6 +34,7 @@ class BrightDataProvider(GoogleHtmlProvider):
         request_or_query: Request | str,
         max_results: int = 10,
         page: int = 0,
+        deadline = None,
     ) -> list[SearchResult]:
         if isinstance(request_or_query, Request):
             query = request_or_query.query or ""
@@ -41,6 +42,12 @@ class BrightDataProvider(GoogleHtmlProvider):
             max_results = request_or_query.meta.get("max_results", 10)
         else:
             query = request_or_query
+
+        if deadline:
+            rem = deadline.remaining()
+            if rem <= 0.0 or deadline.is_exceeded():
+                from utils.deadline import DeadlineExceeded
+                raise DeadlineExceeded("BrightData deadline budget exhausted")
 
         results, _ = self._execute_search_query(query, max_results, page)
         return results

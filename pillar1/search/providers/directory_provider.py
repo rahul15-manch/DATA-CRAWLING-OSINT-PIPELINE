@@ -279,11 +279,17 @@ class DirectoryProvider(SearchProvider):
     def is_available(self) -> bool:
         return True
 
-    def search(self, request_or_query: Request | str, max_results: int = 10, page: int = 0) -> list[SearchResult]:
+    def search(self, request_or_query: Request | str, max_results: int = 10, page: int = 0, deadline = None) -> list[SearchResult]:
         if isinstance(request_or_query, Request):
             query = request_or_query.query or ""
         else:
             query = request_or_query
+
+        if deadline:
+            rem = deadline.remaining()
+            if rem <= 0.0 or deadline.is_exceeded():
+                from utils.deadline import DeadlineExceeded
+                raise DeadlineExceeded("DirectoryProvider deadline budget exhausted")
 
         from network_client_project.network.client import get_network_client
         client = get_network_client()

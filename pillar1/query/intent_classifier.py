@@ -453,6 +453,73 @@ def expand_to_company_keywords(keyword: str) -> list[str]:
 
 
 # ─────────────────────────────────────────────────────────────────────────────
+# Entity query detection
+# ─────────────────────────────────────────────────────────────────────────────
+
+# Words that clearly mark a TOPIC query, not a bare entity name.
+_TOPIC_MARKER_WORDS = (
+    _COMPANY_WORDS | _JOB_ROLE_WORDS | _PRODUCT_WORDS | _SERVICE_WORDS | _TECHNOLOGY_WORDS
+)
+
+def is_entity_query(keyword: str) -> bool:
+    """
+    Return True when the keyword looks like a bare entity/company name rather
+    than a topic, industry, or technology search.
+
+    Heuristics
+    ----------
+    - 1–3 words
+    - No word belongs to known topic/company/role/tech vocabulary
+    - No location suffix (handled by query_planner already)
+    - Not purely numeric
+
+    Examples
+    --------
+        "swiggy"       → True   (entity — direct company)
+        "zomato"       → True
+        "flipkart"     → True
+        "microsoft"    → True
+        "AI companies" → False  (topic — has company word)
+        "fintech"      → False  (topic — single-word industry term)
+        "python"       → False  (technology word)
+    """
+    lower = keyword.lower().strip()
+    if not lower:
+        return False
+
+    words = lower.split()
+
+    # Must be short (1–3 words)
+    if len(words) > 3:
+        return False
+
+    # Reject if any word is a known topic/tech/role signal
+    for w in words:
+        if w in _TOPIC_MARKER_WORDS:
+            return False
+
+    # Reject if any word is a known technology keyword
+    if any(w in _TECHNOLOGY_WORDS for w in words) or lower in _TECHNOLOGY_WORDS:
+        return False
+
+    # Reject known industry category keywords
+    for cat_key in _INDUSTRY_CATEGORIES:
+        if cat_key in lower:
+            return False
+
+    # Reject service / product keywords
+    if lower in _SERVICE_WORDS or lower in _PRODUCT_WORDS:
+        return False
+
+    # Reject if purely numeric or very short (< 3 chars)
+    if lower.isdigit() or len(lower) < 3:
+        return False
+
+    # Likely a bare entity name
+    return True
+
+
+# ─────────────────────────────────────────────────────────────────────────────
 # Helpers
 # ─────────────────────────────────────────────────────────────────────────────
 

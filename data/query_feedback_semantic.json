@@ -4,10 +4,10 @@
         "zero": 0,
         "parser": 0,
         "unavailable": 0,
-        "failures": 300,
-        "last_updated": 1784718087.5573418,
-        "score": -300,
-        "queries_run": 300
+        "failures": 1710,
+        "last_updated": 1789816916.488417,
+        "score": -1710,
+        "queries_run": 1710
     },
     "test query": {
         "success": 0,
@@ -15,30 +15,30 @@
         "parser": 0,
         "unavailable": 0,
         "failures": 0,
-        "last_updated": 1784718087.7133932,
-        "score": 50,
-        "queries_run": 10,
-        "leads_found": 10
+        "last_updated": 1789816919.0357153,
+        "score": 270,
+        "queries_run": 54,
+        "leads_found": 54
     },
     "test query 2": {
         "success": 0,
         "zero": 0,
         "parser": 0,
         "unavailable": 0,
-        "failures": 10,
-        "last_updated": 1784718087.7160823,
-        "score": -10,
-        "queries_run": 10
+        "failures": 54,
+        "last_updated": 1789816919.0409794,
+        "score": -54,
+        "queries_run": 54
     },
     "python company": {
         "success": 0,
         "zero": 0,
         "parser": 0,
         "unavailable": 0,
-        "failures": 10,
-        "last_updated": 1784718087.9419026,
-        "score": -11,
-        "queries_run": 19
+        "failures": 51,
+        "last_updated": 1789816919.5670848,
+        "score": -52,
+        "queries_run": 103
     },
     "source:bing": {
         "success": 0,
@@ -47,18 +47,18 @@
         "unavailable": 0,
         "failures": 0,
         "last_updated": 0.0,
-        "score": 23,
-        "queries_run": 29
+        "score": 12,
+        "queries_run": 95
     },
     "software developer company 1": {
         "success": 0,
         "zero": 0,
         "parser": 0,
         "unavailable": 0,
-        "failures": 9,
-        "last_updated": 1784718088.0015204,
-        "score": -18,
-        "queries_run": 9
+        "failures": 52,
+        "last_updated": 1789816919.6408489,
+        "score": -104,
+        "queries_run": 52
     },
     "source:google_html": {
         "success": 0,
@@ -67,8 +67,8 @@
         "unavailable": 0,
         "failures": 0,
         "last_updated": 0.0,
-        "score": 114,
-        "queries_run": 118
+        "score": 139,
+        "queries_run": 238
     },
     "software developer company 2": {
         "success": 0,
@@ -107,8 +107,8 @@
         "unavailable": 0,
         "failures": 0,
         "last_updated": 0.0,
-        "score": 57,
-        "queries_run": 56
+        "score": 91,
+        "queries_run": 115
     },
     "technology": {
         "success": 0,
@@ -135,10 +135,10 @@
         "zero": 0,
         "parser": 0,
         "unavailable": 0,
-        "failures": 1,
-        "last_updated": 1784609696.4569273,
-        "score": 8,
-        "queries_run": 2
+        "failures": 5,
+        "last_updated": 1789665130.5559769,
+        "score": 11,
+        "queries_run": 7
     },
     "python": {
         "success": 0,
@@ -267,8 +267,8 @@
         "unavailable": 0,
         "failures": 0,
         "last_updated": 0.0,
-        "score": 23,
-        "queries_run": 15
+        "score": 61,
+        "queries_run": 43
     },
     "site:linkedin.com/in \"ventureradar\" \"co-founder\"": {
         "success": 0,
@@ -385,10 +385,10 @@
         "zero": 0,
         "parser": 0,
         "unavailable": 0,
-        "failures": 1,
-        "last_updated": 1784629980.9958975,
-        "score": -2,
-        "queries_run": 1
+        "failures": 3,
+        "last_updated": 1786342739.3705313,
+        "score": -6,
+        "queries_run": 3
     },
     "custom software development company": {
         "success": 0,
@@ -477,8 +477,8 @@
         "unavailable": 0,
         "failures": 0,
         "last_updated": 0.0,
-        "score": -28,
-        "queries_run": 14
+        "score": -87,
+        "queries_run": 44
     },
     "custom python solutions": {
         "success": 0,
@@ -717,8 +717,8 @@
         "unavailable": 0,
         "failures": 0,
         "last_updated": 0.0,
-        "score": 8,
-        "queries_run": 4
+        "score": 12,
+        "queries_run": 6
     },
     "site:companiesmarketcap.com email": {
         "success": 0,
@@ -810,16 +810,6 @@
         "score": -2,
         "queries_run": 1
     },
-    "source:brave": {
-        "success": 0,
-        "zero": 0,
-        "parser": 0,
-        "unavailable": 0,
-        "failures": 0,
-        "last_updated": 0.0,
-        "score": 116,
-        "queries_run": 49
-    },
     "generative ai ai startup": {
         "success": 0,
         "zero": 0,
@@ -836,9 +826,9 @@
         "parser": 0,
         "unavailable": 0,
         "failures": 2,
-        "last_updated": 1784795474.8916752,
-        "score": -1,
-        "queries_run": 3
+        "last_updated": 1786435290.0793772,
+        "score": 2,
+        "queries_run": 4
     },
     "site:ycombinator.com email": {
         "success": 0,
@@ -856,9 +846,9 @@
         "parser": 0,
         "unavailable": 0,
         "failures": 0,
-        "last_updated": 1784795480.2905667,
-        "score": 3,
-        "queries_run": 1
+        "last_updated": 1786435296.2031832,
+        "score": 6,
+        "queries_run": 2
     },
     "site:ycombinator.com contact": {
         "success": 0,
@@ -875,10 +865,10 @@
         "zero": 0,
         "parser": 0,
         "unavailable": 0,
-        "failures": 0,
-        "last_updated": 1784795485.701124,
-        "score": 3,
-        "queries_run": 1
+        "failures": 1,
+        "last_updated": 1786435309.45688,
+        "score": 1,
+        "queries_run": 2
     },
     "site:ycombinator.com phone": {
         "success": 0,
@@ -985,10 +975,10 @@
         "zero": 0,
         "parser": 0,
         "unavailable": 0,
-        "failures": 1,
-        "last_updated": 1785143892.234643,
-        "score": 8,
-        "queries_run": 2
+        "failures": 4,
+        "last_updated": 1786418254.0172977,
+        "score": 2,
+        "queries_run": 5
     },
     "site:craft.co email": {
         "success": 0,
@@ -1035,10 +1025,10 @@
         "zero": 0,
         "parser": 0,
         "unavailable": 0,
-        "failures": 0,
-        "last_updated": 1785145302.171548,
-        "score": 45,
-        "queries_run": 15
+        "failures": 3,
+        "last_updated": 1789813755.125828,
+        "score": 55,
+        "queries_run": 23
     },
     "custom pizza development": {
         "success": 0,
@@ -1095,10 +1085,10 @@
         "zero": 0,
         "parser": 0,
         "unavailable": 0,
-        "failures": 0,
-        "last_updated": 1785144954.5023835,
-        "score": 3,
-        "queries_run": 1
+        "failures": 2,
+        "last_updated": 1789751221.7655032,
+        "score": 2,
+        "queries_run": 4
     },
     "site:wppizzatime.com email": {
         "success": 0,
@@ -1146,9 +1136,9 @@
         "parser": 0,
         "unavailable": 0,
         "failures": 1,
-        "last_updated": 1785144966.5162473,
-        "score": -2,
-        "queries_run": 1
+        "last_updated": 1789813149.1397245,
+        "score": 1,
+        "queries_run": 2
     },
     "pizza startups": {
         "success": 0,
@@ -1255,10 +1245,10 @@
         "zero": 0,
         "parser": 0,
         "unavailable": 0,
-        "failures": 1,
-        "last_updated": 1786004128.5278811,
-        "score": 1,
-        "queries_run": 2
+        "failures": 5,
+        "last_updated": 1789815586.6435525,
+        "score": -5,
+        "queries_run": 6
     },
     "site:f6s.com contact": {
         "success": 0,
@@ -1266,9 +1256,9 @@
         "parser": 0,
         "unavailable": 0,
         "failures": 0,
-        "last_updated": 1786004133.881702,
-        "score": 3,
-        "queries_run": 1
+        "last_updated": 1789815543.5691109,
+        "score": 6,
+        "queries_run": 2
     },
     "site:f6s.com phone": {
         "success": 0,
@@ -1409,5 +1399,945 @@
         "last_updated": 1786004749.7325585,
         "score": 3,
         "queries_run": 1
+    },
+    "test software company": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1786342483.1997836,
+        "score": 8,
+        "queries_run": 2
+    },
+    "test": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1786342632.4995642,
+        "score": 6,
+        "queries_run": 2
+    },
+    "cybernauts": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1786370643.6939242,
+        "score": 28,
+        "queries_run": 7
+    },
+    "site:theavengers.fandom.com email": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 3,
+        "last_updated": 1786370550.6073961,
+        "score": -3,
+        "queries_run": 4
+    },
+    "site:imdb.com email": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 3,
+        "last_updated": 1786370551.3886564,
+        "score": -3,
+        "queries_run": 4
+    },
+    "site:theavengers.fandom.com contact": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1786370555.648872,
+        "score": 3,
+        "queries_run": 1
+    },
+    "site:imdb.com contact": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1786370555.8476532,
+        "score": 3,
+        "queries_run": 1
+    },
+    "site:theavengers.fandom.com phone": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1786370560.1674256,
+        "score": 3,
+        "queries_run": 1
+    },
+    "site:imdb.com phone": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1786370561.1278777,
+        "score": 3,
+        "queries_run": 1
+    },
+    "site:theavengers.fandom.com team": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1786370565.9697385,
+        "score": 3,
+        "queries_run": 1
+    },
+    "runo ai outsourcing": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 2,
+        "last_updated": 1786372559.8561976,
+        "score": 6,
+        "queries_run": 3
+    },
+    "hardware systems company": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 2,
+        "last_updated": 1786378144.0168293,
+        "score": 6,
+        "queries_run": 3
+    },
+    "hardware": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1786378261.0340202,
+        "score": 19,
+        "queries_run": 7
+    },
+    "site:builtin.com email": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1786378200.112763,
+        "score": 0,
+        "queries_run": 2
+    },
+    "site:ticker.finology.in email": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 3,
+        "last_updated": 1786378235.5401065,
+        "score": -3,
+        "queries_run": 4
+    },
+    "site:cnc-system.com email": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1786378198.8040373,
+        "score": 3,
+        "queries_run": 1
+    },
+    "site:cnc-system.com contact": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 3,
+        "last_updated": 1786378258.964542,
+        "score": -5,
+        "queries_run": 3
+    },
+    "site:builtin.com contact": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 2,
+        "last_updated": 1786378257.9177353,
+        "score": -1,
+        "queries_run": 3
+    },
+    "site:easyleadz.com email": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1786378247.4010262,
+        "score": 1,
+        "queries_run": 2
+    },
+    "intelligence": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 3,
+        "last_updated": 1786379617.2671778,
+        "score": -6,
+        "queries_run": 3
+    },
+    "custom software startups": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 8,
+        "last_updated": 1789665901.165501,
+        "score": -5,
+        "queries_run": 9
+    },
+    "software outsourcing startups": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 2,
+        "last_updated": 1786417369.3347347,
+        "score": 6,
+        "queries_run": 3
+    },
+    "artesian software company": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 2,
+        "last_updated": 1786417734.865446,
+        "score": 6,
+        "queries_run": 3
+    },
+    "site:artesian.io email": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1786417799.5362282,
+        "score": 1,
+        "queries_run": 2
+    },
+    "site:artesian.io contact": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1786417805.8262343,
+        "score": 3,
+        "queries_run": 1
+    },
+    "site:artesian.io phone": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 7,
+        "last_updated": 1786418846.7031589,
+        "score": -13,
+        "queries_run": 7
+    },
+    "artesian software": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1786418954.5869398,
+        "score": 21,
+        "queries_run": 7
+    },
+    "site:datanyze.com email": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 5,
+        "last_updated": 1786418843.0963697,
+        "score": -7,
+        "queries_run": 6
+    },
+    "site:zaubacorp.com email": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 4,
+        "last_updated": 1786418849.260496,
+        "score": -5,
+        "queries_run": 5
+    },
+    "site:datanyze.com contact": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1786418854.2300956,
+        "score": 3,
+        "queries_run": 1
+    },
+    "site:zaubacorp.com contact": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1786418854.4615397,
+        "score": 3,
+        "queries_run": 1
+    },
+    "site:artesian.io team": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1786418856.9895344,
+        "score": 3,
+        "queries_run": 1
+    },
+    "site:zaubacorp.com phone": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1786418867.411913,
+        "score": 3,
+        "queries_run": 1
+    },
+    "site:linkedin.com/in \"artesian\" founder or ceo or director": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 3,
+        "last_updated": 1786418883.5182679,
+        "score": -5,
+        "queries_run": 3
+    },
+    "site:datanyze.com phone": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1786418868.9629087,
+        "score": 3,
+        "queries_run": 1
+    },
+    "site:datanyze.com team": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1786418896.8747847,
+        "score": 1,
+        "queries_run": 2
+    },
+    "site:zaubacorp.com team": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1786418887.4100902,
+        "score": 3,
+        "queries_run": 1
+    },
+    "site:linkedin.com/in \"artesian\" \"co-founder\"": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1786418887.4630184,
+        "score": -1,
+        "queries_run": 1
+    },
+    "\"artesian\" site:linkedin.com": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1786418893.8181038,
+        "score": 5,
+        "queries_run": 1
+    },
+    "site:linkedin.com/in \"datanyze\" founder or ceo or director": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1786418907.951921,
+        "score": -1,
+        "queries_run": 1
+    },
+    "site:linkedin.com/in \"datanyze\" \"co-founder\"": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1786418928.334659,
+        "score": -1,
+        "queries_run": 1
+    },
+    "\"datanyze\" site:linkedin.com": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1786418945.8834567,
+        "score": 5,
+        "queries_run": 1
+    },
+    "\"datanyze\" \"our team\" or \"meet the team\" or \"leadership\"": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1786418952.536871,
+        "score": 5,
+        "queries_run": 1
+    },
+    "cyber startups": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1786435216.307408,
+        "score": 8,
+        "queries_run": 2
+    },
+    "cyber": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1786435339.2569199,
+        "score": 15,
+        "queries_run": 5
+    },
+    "site:esecurityplanet.com email": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1786435309.725609,
+        "score": 0,
+        "queries_run": 2
+    },
+    "site:growthlist.co email": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1786435309.727809,
+        "score": -2,
+        "queries_run": 1
+    },
+    "pizza company": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1786436317.2975914,
+        "score": 8,
+        "queries_run": 2
+    },
+    "site:1112.com email": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1786436409.2781742,
+        "score": -2,
+        "queries_run": 1
+    },
+    "telemedicine digital health company": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 2,
+        "last_updated": 1788625739.603095,
+        "score": 6,
+        "queries_run": 3
+    },
+    "ai consultant": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1788625880.9555616,
+        "score": 3,
+        "queries_run": 1
+    },
+    "cloud consultant": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1788627850.392388,
+        "score": 19,
+        "queries_run": 4
+    },
+    "site:turing.com email": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 2,
+        "last_updated": 1788627800.699213,
+        "score": -1,
+        "queries_run": 3
+    },
+    "site:turing.com contact": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1788627805.5169141,
+        "score": 3,
+        "queries_run": 1
+    },
+    "custom zomato development": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1789659885.234259,
+        "score": 10,
+        "queries_run": 1
+    },
+    "zomato": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1789751064.704515,
+        "score": 29,
+        "queries_run": 5
+    },
+    "site:zomato.com email": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 3,
+        "last_updated": 1789660983.3466098,
+        "score": -3,
+        "queries_run": 4
+    },
+    "site:zomato.com contact": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1789660988.0993066,
+        "score": 3,
+        "queries_run": 1
+    },
+    "site:zomato.com phone": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1789660992.2666795,
+        "score": 3,
+        "queries_run": 1
+    },
+    "site:zomato.com team": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1789660997.1391075,
+        "score": 3,
+        "queries_run": 1
+    },
+    "site:linkedin.com/in \"zomato\" founder or ceo or director": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1789661006.9075265,
+        "score": -1,
+        "queries_run": 1
+    },
+    "fintech development banking platform": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1789664311.8571615,
+        "score": 8,
+        "queries_run": 2
+    },
+    "fintech banking platform": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1789664516.507904,
+        "score": 8,
+        "queries_run": 2
+    },
+    "custom custom zomato development solutions": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1789664569.2578757,
+        "score": 10,
+        "queries_run": 1
+    },
+    "swiggy startups": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 3,
+        "last_updated": 1789664792.8752685,
+        "score": 4,
+        "queries_run": 4
+    },
+    "site:tracxn.com email": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 4,
+        "last_updated": 1789664869.2799664,
+        "score": -6,
+        "queries_run": 4
+    },
+    "swiggy": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 2,
+        "last_updated": 1789813299.9723966,
+        "score": 83,
+        "queries_run": 27
+    },
+    "banking ledger technology": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 4,
+        "last_updated": 1789665063.4265528,
+        "score": -7,
+        "queries_run": 4
+    },
+    "cloud consulting": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 3,
+        "last_updated": 1789665266.0137792,
+        "score": 5,
+        "queries_run": 4
+    },
+    "fintech development payment gateway": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 2,
+        "last_updated": 1789665840.3923476,
+        "score": 6,
+        "queries_run": 3
+    },
+    "cloud consulting ai startup": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 3,
+        "last_updated": 1789665982.8374465,
+        "score": -5,
+        "queries_run": 3
+    },
+    "swiggy consulting": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1789730439.2373397,
+        "score": 10,
+        "queries_run": 1
+    },
+    "site:linkedin.com/company/swiggy": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 2,
+        "last_updated": 1789736462.7582438,
+        "score": -3,
+        "queries_run": 3
+    },
+    "\"swiggy\"": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1789751043.3612723,
+        "score": 10,
+        "queries_run": 1
+    },
+    "site:swiggy.com": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1789751048.2783446,
+        "score": 10,
+        "queries_run": 1
+    },
+    "site:linkedin.com/company/zomato": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1789751059.0409753,
+        "score": 10,
+        "queries_run": 1
+    },
+    "swiggy official website": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1789751130.5837657,
+        "score": 10,
+        "queries_run": 1
+    },
+    "swiggy linkedin company": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 4,
+        "last_updated": 1789811912.2157452,
+        "score": 2,
+        "queries_run": 5
+    },
+    "site:linkedin.com/company/pizzahut": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 5,
+        "last_updated": 1789813349.9959671,
+        "score": 0,
+        "queries_run": 6
+    },
+    "source:linkedin": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 0.0,
+        "score": 15,
+        "queries_run": 5
+    },
+    "intitle:\"swiggy\"": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 2,
+        "last_updated": 1789812087.2891953,
+        "score": 6,
+        "queries_run": 3
+    },
+    "site:clutch.co swiggy": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1789812099.5429964,
+        "score": 8,
+        "queries_run": 2
+    },
+    "swiggy official site": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1789812511.5835917,
+        "score": 8,
+        "queries_run": 2
+    },
+    "swiggy company headquarters": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 3,
+        "last_updated": 1789813055.0769582,
+        "score": 4,
+        "queries_run": 4
+    },
+    "swiggy support email": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1789812828.508408,
+        "score": 3,
+        "queries_run": 2
+    },
+    "pizza hut": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 4,
+        "last_updated": 1789813679.2197578,
+        "score": -7,
+        "queries_run": 4
+    },
+    "site:linkedin.com/company/pizza": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 3,
+        "last_updated": 1789813573.0642762,
+        "score": 4,
+        "queries_run": 4
+    },
+    "\"pizza\"": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 2,
+        "last_updated": 1789814027.8567145,
+        "score": 6,
+        "queries_run": 3
+    },
+    "site:pizza.com": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1789814035.712318,
+        "score": 10,
+        "queries_run": 1
+    },
+    "\"pizza hut\"": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 5,
+        "last_updated": 1789815327.3365653,
+        "score": -10,
+        "queries_run": 5
+    },
+    "ai generative ai company": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1789815520.538634,
+        "score": 3,
+        "queries_run": 1
+    },
+    "ml ai startup": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1789815529.6076233,
+        "score": -2,
+        "queries_run": 1
+    },
+    "source:brave": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 0.0,
+        "score": 14,
+        "queries_run": 3
+    },
+    "site:linkedin.com/company \"ai\"": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 3,
+        "last_updated": 1789817147.2142446,
+        "score": 5,
+        "queries_run": 4
     }
 }

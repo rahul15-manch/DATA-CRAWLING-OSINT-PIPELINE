@@ -33,13 +33,19 @@ class BraveProvider(SearchProvider):
     def is_available(self) -> bool:
         return getattr(config, "ENABLE_BRAVE", True)
 
-    def search(self, request_or_query: Request | str, max_results: int = 10, page: int = 0) -> list[SearchResult]:
+    def search(self, request_or_query: Request | str, max_results: int = 10, page: int = 0, deadline = None) -> list[SearchResult]:
         if isinstance(request_or_query, Request):
             query = request_or_query.query or ""
             page = request_or_query.meta.get("page", 0)
             max_results = request_or_query.meta.get("max_results", 10)
         else:
             query = request_or_query
+
+        if deadline:
+            rem = deadline.remaining()
+            if rem <= 0.0 or deadline.is_exceeded():
+                from utils.deadline import DeadlineExceeded
+                raise DeadlineExceeded("Brave deadline budget exhausted")
 
         if not self.is_available():
             raise ProviderUnavailable(self.name, "ENABLE_BRAVE is False")
@@ -110,19 +116,23 @@ class BraveProvider(SearchProvider):
         client = get_network_client()
 
         for attempt in range(1, 3):
-            from utils.deadline import Deadline
-            if attempt > 1 and Deadline.is_exceeded():
-                logger.warning("[BraveProvider] Global deadline exceeded. Aborting Brave search retries.")
-                break
 
             try:
                 if attempt == 1:
-                    time.sleep(random.uniform(1.5, 3.0))
+                    pre_sleep = random.uniform(1.0, 2.0)
+                    if deadline:
+                        pre_sleep = min(pre_sleep, max(0.0, deadline.remaining() - 0.5))
+                    if pre_sleep > 0:
+                        time.sleep(pre_sleep)
+                
+                req_timeout = min(8.0, deadline.remaining()) if deadline else 8.0
                 resp = client.get(
                     url,
                     session_id=self._cookie_session_id,
                     provider="brave",
-                    timeout=15.0,
+                    require_proxy=(attempt > 1),
+                    timeout=req_timeout,
+                    deadline=deadline,
                     headers={
                         "Accept-Language": "en-US,en;q=0.9",
                         "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
@@ -135,10 +145,9 @@ class BraveProvider(SearchProvider):
                 raise ProviderUnavailable(self.name, f"Failed to perform, {e}")
 
             if resp.status_code == 429:
-                wait_for = self._next_backoff()
-                self._cooldown_until = time.time() + wait_for
+                self._cookie_session_id = f"brave_session_{int(time.time()*1000)}"
                 if attempt < 2:
-                    time.sleep(wait_for + random.uniform(0.5, 1.5))
+                    time.sleep(random.uniform(1.0, 2.0))
                     continue
                 raise ProviderUnavailable(self.name, "Brave Scraper HTTP 429 rate limit")
 
@@ -179,3 +188,6 @@ class BraveProvider(SearchProvider):
 
             self._reset_backoff()
             return results
+
+        # If loop finishes without returning (e.g., attempts exhausted), return empty list
+        return []

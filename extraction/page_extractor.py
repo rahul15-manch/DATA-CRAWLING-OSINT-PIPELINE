@@ -10,8 +10,23 @@ from bs4 import BeautifulSoup
 
 import config
 from utils.constants import DESIGNATION_KEYWORDS, DESIGNATION_ACRONYMS
-from utils.validators import is_valid_phone, is_valid_person_record, rank_emails
+from utils.validators import is_valid_phone, is_valid_person_record, rank_emails, is_valid_email_candidate
 from utils.enrichment import detect_company_type, detect_industry
+from utils.provenance import (
+    make_fact,
+    SRC_HOMEPAGE_MAILTO,
+    SRC_HOMEPAGE_TEXT,
+    SRC_HOMEPAGE_STRUCTURED,
+    SRC_CONTACT_PAGE_TEXT,
+    SRC_CONTACT_PAGE_STRUCTURED,
+    SRC_ABOUT_PAGE_TEXT,
+    SRC_ABOUT_PAGE_STRUCTURED,
+    SRC_TEAM_PAGE_TEXT,
+    SRC_SEARCH_RESULT_SNIPPET,
+    SRC_JSON_LD_HOMEPAGE,
+    SRC_JSON_LD_SUBPAGE,
+    SRC_META_GEO_TAG,
+)
 
 # Domain Crawl Circuit Breaker state
 _domain_consecutive_blocks = {}
@@ -91,6 +106,61 @@ PAGE_KEYWORDS = {
     ],
 }
 
+_DISALLOWED_SUBPAGE_SEGMENTS = frozenset({
+    "checkout", "cart", "basket", "login", "signin", "signup", "register",
+    "account", "payment", "payments", "pay", "order", "orders", "track", "tracking",
+    "refund", "refunds", "disclaimer", "cookie", "cookies", "legal", "faq", "faqs",
+    "terms", "terms-of-service", "terms-and-conditions",
+    "auth", "oauth", "password", "reset-password", "forgot-password",
+    "download", "app", "ios", "android", "cart.php", "checkout.php",
+    "login.php", "cart.html", "checkout.html"
+})
+
+_HIGH_VALUE_SUBPAGE_KEYWORDS = frozenset({
+    "about", "contact", "team", "leadership", "company", "people", "careers",
+    "services", "products", "management", "executives", "founders"
+})
+
+
+def is_disallowed_subpage_url(url: str, text: str = "") -> bool:
+    """
+    Return True if url or link text targets transactional, auth, cart, or noise pages.
+    """
+    if not url:
+        return True
+    try:
+        from urllib.parse import urlparse
+        import re
+        parsed = urlparse(url)
+        path = parsed.path.lower()
+        query = parsed.query.lower()
+        text_lower = (text or "").lower().strip()
+
+        # Reject disallowed file extensions
+        if any(path.endswith(ext) for ext in (
+            ".pdf", ".jpg", ".jpeg", ".png", ".gif", ".svg", ".css", ".js",
+            ".zip", ".tar", ".gz", ".apk", ".ipa", ".exe"
+        )):
+            return True
+
+        # Split path & query into tokens
+        tokens = set(re.findall(r"[a-z0-9]+", f"{path} {query}"))
+        if any(seg in _DISALLOWED_SUBPAGE_SEGMENTS or seg.rstrip("s") in _DISALLOWED_SUBPAGE_SEGMENTS for seg in tokens):
+            return True
+
+        # Check strong transactional text phrases
+        if text_lower:
+            disallowed_text_phrases = (
+                "order now", "cart", "checkout", "log in", "sign in", "sign up",
+                "track order", "my account", "place order", "terms of use",
+                "terms & conditions", "cookie policy"
+            )
+            if any(phrase in text_lower for phrase in disallowed_text_phrases):
+                return True
+    except Exception:
+        return True
+    return False
+
 _HTML_CONTENT_TYPES = ("text/html", "application/xhtml")
 
 
@@ -129,14 +199,95 @@ def _penalise_proxy(proxy_url: str, canonical_url: str):
         pass
 
 
-def fetch_page(url: str):
+def has_useful_company_content(html: str) -> bool:
+    """
+    Check if the fetched HTML has rich company signals or if it's a minimal JS shell / captcha block.
+    """
+    if not html:
+        return False
+    
+    # Very small HTML payloads are almost certainly JS shells or redirects
+    if len(html) < 5000:
+        return False
+
+    # Check for strong structured data
+    if "application/ld+json" in html.lower():
+        return True
+    
+    # Check for meta description
+    html_lower = html.lower()
+    if "<meta" in html_lower and ("name=\"description\"" in html_lower or "property=\"og:description\"" in html_lower):
+        return True
+
+    # Check body text length
+    try:
+        from bs4 import BeautifulSoup
+        soup = BeautifulSoup(html, "html.parser")
+        body_text = soup.get_text(" ", strip=True)
+        if len(body_text) > 300:
+            return True
+    except Exception:
+        pass
+
+    return False
+
+
+from utils.deadline import Deadline, DeadlineExceeded
+
+
+def _playwright_fetch(url: str, deadline: Deadline | None = None) -> str | None:
+    """
+    Fallback browser fetch using Playwright to execute JavaScript and render client-side pages.
+    """
+    if deadline:
+        if deadline.is_exceeded() or deadline.bounded_timeout(15.0) < 1.0:
+            raise DeadlineExceeded(f"Deadline exceeded before Playwright fetch for {url}")
+        pw_timeout = int(deadline.bounded_timeout(15.0) * 1000)
+    else:
+        pw_timeout = 15000
+
+    try:
+        from playwright.sync_api import sync_playwright
+        with sync_playwright() as p:
+            browser = p.chromium.launch(
+                headless=True,
+                args=["--no-sandbox", "--disable-setuid-sandbox", "--disable-dev-shm-usage"]
+            )
+            context = browser.new_context(
+                user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
+                viewport={"width": 1280, "height": 800}
+            )
+            page = context.new_page()
+            page.goto(url, timeout=pw_timeout, wait_until="domcontentloaded")
+            page.wait_for_timeout(1000)
+            rendered_html = page.content()
+            browser.close()
+            if rendered_html and len(rendered_html) > 5000:
+                print(f"[page_extractor] Playwright successfully rendered {url} ({len(rendered_html)} bytes)")
+                return rendered_html
+    except DeadlineExceeded:
+        raise
+    except Exception as exc:
+        print(f"[page_extractor] Playwright fallback failed for {url}: {exc}")
+    return None
+
+
+def fetch_page(url: str, deadline: Deadline | None = None):
     """
     Fetch a page's public HTML via a plain GET using NetworkClient.
     Applies RobotsChecker compliance, canonicalization, crawl budget, and duplicate content hashing.
+    If plain HTTP returns a minimal JS shell, falls back to Playwright rendering.
     """
     from network_client_project.network import NetworkClient
     from network_client_project.network.robots import RobotsChecker
     from network_client_project.network.frontier import get_frontier
+
+    if deadline:
+        if deadline.is_exceeded() or deadline.bounded_timeout(config.REQUEST_TIMEOUT) == 0.0:
+            raise DeadlineExceeded(f"Deadline exceeded before fetching {url}")
+        req_timeout = deadline.bounded_timeout(config.REQUEST_TIMEOUT)
+    else:
+        req_timeout = config.REQUEST_TIMEOUT
 
     frontier = get_frontier()
     robots_checker = RobotsChecker()
@@ -147,11 +298,6 @@ def fetch_page(url: str):
 
     if not robots_checker.allowed(canonical_url):
         print(f"[Robots] Crawl of {canonical_url} disallowed by robots.txt")
-        return None
-
-    from utils.deadline import Deadline
-    if Deadline.is_exceeded():
-        print(f"[page_extractor] Global deadline exceeded for {canonical_url}. Skipping.")
         return None
 
     from urllib.parse import urlparse
@@ -174,7 +320,14 @@ def fetch_page(url: str):
     if state["bytes_downloaded"] >= 2 * 1024 * 1024:
         print(f"[CrawlBudget] Aborted {canonical_url} - hit max 2 MB download limit.")
         return None
-    if time.time() - state["start_time"] >= 20.0:
+    # Time-budget check: prefer deadline-aware check over independent wall clock.
+    if deadline:
+        try:
+            deadline.require(1.0)
+        except Exception:
+            print(f"[CrawlBudget] Aborted {canonical_url} - deadline exhausted (< 1s remaining).")
+            return None
+    elif time.time() - state["start_time"] >= 20.0:
         print(f"[CrawlBudget] Aborted {canonical_url} - hit max 20s time budget limit.")
         return None
 
@@ -187,7 +340,7 @@ def fetch_page(url: str):
 
     try:
         # Try direct connection first
-        resp = client.get(canonical_url, require_proxy=False, timeout=config.REQUEST_TIMEOUT)
+        resp = client.get(canonical_url, require_proxy=False, timeout=req_timeout, deadline=deadline)
         if resp.status_code == 404:
             print(f"[page_extractor] 404 Not Found for {canonical_url}. Direct fail, no retry.")
             return None
@@ -205,9 +358,8 @@ def fetch_page(url: str):
         # Try up to 3 different unique proxies
         exclude_urls = set()
         for attempt in range(1, 4):
-            if Deadline.is_exceeded():
-                print(f"[page_extractor] Global deadline exceeded for {canonical_url} before attempt {attempt}. Aborting.")
-                break
+            if deadline and deadline.is_exceeded():
+                raise DeadlineExceeded(f"Deadline exceeded for {canonical_url} before proxy attempt {attempt}")
 
             session_id = f"enrichment_{domain_key}_{attempt}"
             try:
@@ -216,8 +368,9 @@ def fetch_page(url: str):
                     canonical_url,
                     require_proxy=True,
                     session_id=session_id,
-                    timeout=config.REQUEST_TIMEOUT,
-                    exclude_urls=exclude_urls
+                    timeout=req_timeout,
+                    exclude_urls=exclude_urls,
+                    deadline=deadline,
                 )
                 if resp.status_code == 404:
                     print(f"[page_extractor] 404 Not Found for {canonical_url} via proxy. Fail fast, no retry.")
@@ -262,6 +415,13 @@ def fetch_page(url: str):
         state["bytes_downloaded"] += downloaded_bytes
 
         html = resp.text
+
+        # Evaluate if plain HTTP returned sufficient content, or if we need Playwright rendering
+        if not (len(html) >= 15000 or has_useful_company_content(html)):
+            print(f"[page_extractor] Insufficient HTML ({len(html)} bytes) for {canonical_url}. Falling back to Playwright render...")
+            rendered = _playwright_fetch(canonical_url, deadline=deadline)
+            if rendered:
+                html = rendered
 
         if not frontier.record_crawl(canonical_url, html):
             return None
@@ -344,32 +504,79 @@ def extract_emails(html: str) -> list:
     except Exception as exc:
         print(f"[page_extractor] Error parsing mailto links: {exc}")
         
-    return list(set(emails))
+    return [e for e in set(emails) if is_valid_email_candidate(e)]
+
+
+# Prefix noise stripped before phonenumbers.parse (e.g. "Phone: ", "Tel: ")
+_PHONE_LABEL_RE = re.compile(
+    r"^(?:phone|tel(?:ephone)?|call(?:\s*us)?|mob(?:ile)?|fax|contact|ph|\+?\s*)\s*[:\-]?\s*",
+    re.IGNORECASE,
+)
+
+# Minimum digit count after stripping non-digits
+_PHONE_MIN_DIGITS = 7
+_PHONE_MAX_DIGITS = 15
+
+
+def _normalize_phone(raw: str) -> str:
+    """Strip label noise and collapse internal whitespace for a raw phone candidate."""
+    cleaned = _PHONE_LABEL_RE.sub("", raw.strip())
+    # Collapse multiple spaces/tabs to a single space
+    cleaned = re.sub(r"[\t ]{2,}", " ", cleaned).strip()
+    return cleaned
 
 
 def extract_phone_numbers(html: str) -> list:
     """
-    Extract and validate phone numbers from page text.
+    Extract and validate phone numbers from page HTML.
 
-    Each candidate is passed through is_valid_phone(), which rejects
-    dates (01.04.2026), year ranges (2025-2026), multi-line table values,
-    and time strings (10.30-12.00).
+    4-stage pipeline
+    ----------------
+    1. Extract  — <a href="tel:..."> links (highest confidence) + regex on page text
+    2. Normalize — strip label prefixes ("Phone:", "Tel:"), collapse spaces
+    3. Validate  — reject dates, version strings, short/long digit runs via is_valid_phone()
+    4. Deduplicate — return ordered unique list
     """
     if not html:
         return []
     try:
         soup = BeautifulSoup(html, "html.parser")
-        text = soup.get_text(" ")
     except Exception as exc:  # noqa: BLE001
         print(f"[page_extractor] HTML parse error in phone extraction: {exc}")
         return []
 
-    candidates = PHONE_CAPTURE_PATTERN.findall(text)
-    validated = []
-    for raw in candidates:
-        cleaned = raw.strip()
-        if is_valid_phone(cleaned) and cleaned not in validated:
-            validated.append(cleaned)
+    raw_candidates: list[str] = []
+
+    # ── Stage 1a: tel: href links (most reliable source) ─────────────────
+    for a in soup.find_all("a", href=True):
+        href = a["href"].strip()
+        if href.lower().startswith("tel:"):
+            # e.g.  tel:+919876543210  or  tel:011-23456789
+            num = href[4:].strip().replace("%20", " ")
+            if num:
+                raw_candidates.append(num)
+
+    # ── Stage 1b: regex scan over visible text ────────────────────────────
+    try:
+        page_text = soup.get_text(" ")
+    except Exception:
+        page_text = ""
+    raw_candidates.extend(PHONE_CAPTURE_PATTERN.findall(page_text))
+
+    # ── Stages 2-4: normalize → validate → dedup ─────────────────────────
+    seen: set[str] = set()
+    validated: list[str] = []
+    for raw in raw_candidates:
+        normalized = _normalize_phone(raw)
+        if not normalized:
+            continue
+        # Quick digit-count guard before calling is_valid_phone (cheap)
+        digits = re.sub(r"\D", "", normalized)
+        if len(digits) < _PHONE_MIN_DIGITS or len(digits) > _PHONE_MAX_DIGITS:
+            continue
+        if is_valid_phone(normalized) and normalized not in seen:
+            seen.add(normalized)
+            validated.append(normalized)
     return validated
 
 
@@ -400,20 +607,35 @@ def extract_social_links(html: str, base_url: str) -> dict:
     return links
 
 
+def _build_postal_address(addr: dict) -> str:
+    """Build a human-readable address string from a schema.org PostalAddress dict."""
+    parts = []
+    for field in ("streetAddress", "addressLocality", "addressRegion", "postalCode", "addressCountry"):
+        val = addr.get(field)
+        if isinstance(val, dict):
+            val = val.get("name") or val.get("@id") or ""
+        if val and str(val).strip():
+            parts.append(str(val).strip())
+    return ", ".join(parts)
+
+
 def extract_structured_contact_info(html: str) -> dict:
     """
     Parse JSON-LD and microdata (schema.org) from HTML.
-    Returns a dict with extracted {"emails": [...], "phones": [...]}
+    Returns a dict with extracted:
+      emails   : list[str]
+      phones   : list[str]
+      location : str   — full address built from PostalAddress fields
     """
-    extracted = {"emails": [], "phones": []}
+    extracted: dict = {"emails": [], "phones": [], "location": ""}
     if not html:
         return extracted
-    
+
     import json
     try:
         soup = BeautifulSoup(html, "html.parser")
-        
-        # 1. Parse JSON-LD blocks
+
+        # ── 1. JSON-LD blocks ────────────────────────────────────────────────
         for script in soup.find_all("script", type="application/ld+json"):
             try:
                 content = script.string
@@ -422,46 +644,71 @@ def extract_structured_contact_info(html: str) -> dict:
                 content = content.strip()
                 if content.startswith("/*<![CDATA[*/"):
                     content = content.replace("/*<![CDATA[*/", "").replace("/*]]>*/", "")
-                
+
                 data = json.loads(content)
-                
-                # Traverse JSON to find "email" or "telephone" keys recursively
-                def traverse(node):
+
+                def traverse(node):  # noqa: C901
                     if isinstance(node, dict):
                         for k, v in node.items():
-                            if k.lower() == "email" and isinstance(v, str):
-                                clean_email = v.replace("mailto:", "").strip()
-                                if "@" in clean_email:
-                                    extracted["emails"].append(clean_email)
-                            elif k.lower() == "telephone" and isinstance(v, str):
-                                extracted["phones"].append(v.strip())
+                            kl = k.lower()
+                            # email
+                            if kl == "email" and isinstance(v, str):
+                                clean = v.replace("mailto:", "").strip()
+                                if "@" in clean:
+                                    extracted["emails"].append(clean)
+                            # telephone — can be string or list
+                            elif kl == "telephone":
+                                for item in ([v] if isinstance(v, str) else (v if isinstance(v, list) else [])):
+                                    if isinstance(item, str) and item.strip():
+                                        extracted["phones"].append(item.strip())
+                            # address / location → PostalAddress
+                            elif kl in ("address", "location", "contactpoint") and isinstance(v, dict):
+                                if not extracted["location"]:
+                                    built = _build_postal_address(v)
+                                    if built:
+                                        extracted["location"] = built
+                                traverse(v)
                             else:
                                 traverse(v)
                     elif isinstance(node, list):
                         for item in node:
                             traverse(item)
-                
+
                 traverse(data)
             except Exception:
                 continue
-                
-        # 2. Parse standard schema.org microdata (itemprop="email", itemprop="telephone")
+
+        # ── 2. schema.org microdata (itemprop) ───────────────────────────────
+        # Build postal address from itemprop fields
+        addr_parts: dict[str, str] = {}
         for elem in soup.find_all(itemprop=True):
             prop = elem["itemprop"].lower()
+            val = (elem.get("content") or elem.get_text()).strip()
             if prop == "email":
-                text = elem.get_text().strip() or elem.get("content", "").strip()
-                text = text.replace("mailto:", "").strip()
-                if "@" in text:
-                    extracted["emails"].append(text)
+                clean = val.replace("mailto:", "").strip()
+                if "@" in clean:
+                    extracted["emails"].append(clean)
             elif prop == "telephone":
-                text = elem.get_text().strip() or elem.get("content", "").strip()
-                if text:
-                    extracted["phones"].append(text)
-                    
+                if val:
+                    extracted["phones"].append(val)
+            elif prop in ("streetaddress", "addresslocality", "addressregion",
+                          "postalcode", "addresscountry"):
+                addr_parts[prop] = val
+
+        if addr_parts and not extracted["location"]:
+            ordered = [
+                addr_parts.get("streetaddress", ""),
+                addr_parts.get("addresslocality", ""),
+                addr_parts.get("addressregion", ""),
+                addr_parts.get("postalcode", ""),
+                addr_parts.get("addresscountry", ""),
+            ]
+            extracted["location"] = ", ".join(p for p in ordered if p)
+
     except Exception as exc:
         print(f"[page_extractor] Error parsing structured contact info: {exc}")
-        
-    extracted["emails"] = list(set(extracted["emails"]))
+
+    extracted["emails"] = [e for e in set(extracted["emails"]) if is_valid_email_candidate(e)]
     extracted["phones"] = list(set(extracted["phones"]))
     return extracted
 
@@ -497,6 +744,9 @@ def find_footer_links(html: str, base_url: str) -> list:
                     text = (a.get_text() or "").lower()
                     href_lower = href.lower()
                     
+                    if is_disallowed_subpage_url(abs_url, text):
+                        continue
+
                     is_contact_link = any(kw in text or kw in href_lower for kw in [
                         "contact", "about", "team", "support", "help", "info", "reach"
                     ])
@@ -536,6 +786,11 @@ def find_subpages(html: str, base_url: str) -> dict:
             if urlparse(abs_url).netloc.lower() != base_netloc:
                 continue
             if abs_url.rstrip("/") == base_url.rstrip("/"):
+                continue
+
+            if is_disallowed_subpage_url(abs_url, text):
+                if "privacy" in text or "privacy" in href_lower:
+                    found["privacy_page"] = abs_url
                 continue
 
             for page_type, keywords in PAGE_KEYWORDS.items():
@@ -708,32 +963,90 @@ def extract_people(html: str) -> list:
 # Company profile field helpers
 # ─────────────────────────────────────────────────────────────────────────────
 
+# Matches "100 employees", "50-200 staff", "team of 50+", "over 100 professionals"
 _EMPLOYEES_PATTERN = re.compile(
     r"(\d[\d,]*)\s*[-–+]?\s*(\d[\d,]*)?\s*"
-    r"(employees|team members|professionals|people|staff|headcount|workforce)",
+    r"(?:employees|team\s+members|professionals|staff|headcount|workforce|consultants|experts)",
     re.IGNORECASE,
 )
+_EMPLOYEES_TEAM_OF = re.compile(
+    r"(?:team|group|company|workforce|staff)\s+(?:of|strength\s+of)\s+(\d[\d,]*)\+?",
+    re.IGNORECASE,
+)
+_EMPLOYEES_OVER = re.compile(
+    r"(?:over|more\s+than|\+)\s*(\d[\d,]*)\s+"
+    r"(?:employees|professionals|people|staff|team\s+members|consultants|experts|specialists|engineers)",
+    re.IGNORECASE,
+)
+# "1000+ experts / 500+ certified professionals" — number first, then qualifier
+_EMPLOYEES_N_PLUS = re.compile(
+    r"(\d[\d,]*)[\+]\s+(?:certified\s+)?(?:employees|professionals|experts|consultants|engineers|specialists|people|staff|team\s+members)",
+    re.IGNORECASE,
+)
+# "Our 300 consultants" / "200 certified cloud professionals"
+_EMPLOYEES_PRECEDED = re.compile(
+    r"(?:our|with|has|have|of)\s+(\d[\d,]*)\+?\s+(?:certified\s+)?(?:employees|professionals|experts|consultants|engineers|staff|people)",
+    re.IGNORECASE,
+)
+# "1000 strong" / "1000-strong team"
+_EMPLOYEES_STRONG = re.compile(
+    r"(\d[\d,]*)\s*[-–]?strong",
+    re.IGNORECASE,
+)
+# LinkedIn-style badge: "51-200 employees" or "1,001-5,000 employees"
+_EMPLOYEES_RANGE_BADGE = re.compile(
+    r"(\d[\d,]*[-–]\d[\d,]*)\s+employees",
+    re.IGNORECASE,
+)
+
 _FOUNDED_PATTERN = re.compile(
-    r"(?:founded|established|incorporated|since|est\.?)\s+(?:in\s+)?(\d{4})",
+    r"(?:founded|established|incorporated|since|est\.?|building\s+since)\s+(?:in\s+)?(\d{4})",
+    re.IGNORECASE,
+)
+_COPYRIGHT_YEAR = re.compile(
+    r"[©\(c\)]+\s*(\d{4})\s*[-–]",  # © 2014–2024 Company
     re.IGNORECASE,
 )
 
 
 def _extract_employees(text: str) -> str:
-    """Extract employee count/range from page text."""
-    m = _EMPLOYEES_PATTERN.search(text or "")
-    if not m:
-        return ""
-    lo = m.group(1).replace(",", "")
-    hi = m.group(2)
-    if hi:
-        return f"{lo}-{hi.replace(',', '')}"
-    return lo
+    """Extract employee count/range from page text using multiple patterns."""
+    t = text or ""
+    # 1. LinkedIn-style range badge: "51-200 employees" (most reliable when present)
+    m = _EMPLOYEES_RANGE_BADGE.search(t)
+    if m:
+        return m.group(1).replace(",", "")
+    # 2. "500-1000 employees", "50-200 staff", "100+ consultants"
+    m = _EMPLOYEES_PATTERN.search(t)
+    if m:
+        lo = m.group(1).replace(",", "")
+        hi = m.group(2)
+        return f"{lo}-{hi.replace(',', '')}" if hi else lo
+    # 3. "1000+ experts / 500+ certified professionals"
+    m = _EMPLOYEES_N_PLUS.search(t)
+    if m:
+        return m.group(1).replace(",", "") + "+"
+    # 4. "team of 50+" / "team strength of 500"
+    m = _EMPLOYEES_TEAM_OF.search(t)
+    if m:
+        return m.group(1).replace(",", "") + "+"
+    # 5. "over 100 employees" / "more than 500 experts"
+    m = _EMPLOYEES_OVER.search(t)
+    if m:
+        return m.group(1).replace(",", "") + "+"
+    # 6. "Our 300 consultants" / "200 certified cloud professionals"
+    m = _EMPLOYEES_PRECEDED.search(t)
+    if m:
+        return m.group(1).replace(",", "")
+    # 7. "1000 strong" / "1000-strong team"
+    m = _EMPLOYEES_STRONG.search(t)
+    if m:
+        return m.group(1).replace(",", "")
+    return None
 
 
-def _extract_founded(html: str) -> str:
-    """Extract founding year from JSON-LD or visible text."""
-    # 1. Try JSON-LD first
+def _extract_employees_from_jsonld(html: str) -> str | None:
+    """Parse JSON-LD numberOfEmployees (integer, string, or QuantitativeValue)."""
     try:
         import json as _json
         from bs4 import BeautifulSoup as _BS
@@ -741,11 +1054,64 @@ def _extract_founded(html: str) -> str:
         for script in soup.find_all("script", type="application/ld+json"):
             try:
                 data = _json.loads(script.string or "")
-                def _seek(node):
+
+                def _seek_emp(node):
+                    if isinstance(node, dict):
+                        val = node.get("numberOfEmployees")
+                        if val is not None:
+                            if isinstance(val, (int, float)):
+                                return str(int(val))
+                            if isinstance(val, str) and val.strip():
+                                return val.strip()
+                            if isinstance(val, dict):  # QuantitativeValue
+                                v = val.get("value") or val.get("minValue")
+                                max_v = val.get("maxValue")
+                                if v and max_v:
+                                    return f"{v}-{max_v}"
+                                if v:
+                                    return str(v)
+                        for v in node.values():
+                            r = _seek_emp(v)
+                            if r:
+                                return r
+                    elif isinstance(node, list):
+                        for item in node:
+                            r = _seek_emp(item)
+                            if r:
+                                return r
+                    return None
+
+                found = _seek_emp(data)
+                if found:
+                    return found
+            except Exception:
+                continue
+    except Exception:
+        pass
+    return None
+
+
+def _extract_founded(html: str) -> str:
+    """Extract founding year from JSON-LD, visible text, or footer copyright."""
+    # 1. JSON-LD: foundingYear / foundingDate / establishmentDate / copyrightYear
+    try:
+        import json as _json
+        from bs4 import BeautifulSoup as _BS
+        soup = _BS(html, "html.parser")
+        for script in soup.find_all("script", type="application/ld+json"):
+            try:
+                data = _json.loads(script.string or "")
+
+                def _seek(node):  # noqa: C901
                     if isinstance(node, dict):
                         for k, v in node.items():
-                            if k.lower() in ("foundingyear", "foundingdate") and v:
-                                return str(v)[:4]
+                            if k.lower() in (
+                                "foundingyear", "foundingdate",
+                                "establishmentdate", "copyrightyear",
+                            ) and v:
+                                year = str(v)[:4]
+                                if year.isdigit() and 1800 <= int(year) <= 2100:
+                                    return year
                             r = _seek(v)
                             if r:
                                 return r
@@ -755,42 +1121,85 @@ def _extract_founded(html: str) -> str:
                             if r:
                                 return r
                     return None
+
                 found = _seek(data)
-                if found and found.isdigit():
+                if found:
                     return found
             except Exception:
                 continue
     except Exception:
         pass
-    # 2. Regex on plain text
+    # 2. Regex on plain text ("founded in 2012", "Est. 2015", "since 2018")
     try:
         from bs4 import BeautifulSoup as _BS
         text = _BS(html, "html.parser").get_text(" ")
         m = _FOUNDED_PATTERN.search(text)
         if m:
-            return m.group(1)
+            yr = m.group(1)
+            if 1800 <= int(yr) <= 2100:
+                return yr
     except Exception:
         pass
-    return ""
+    # 3. Footer copyright year: "© 2014–2024" → founded 2014
+    try:
+        from bs4 import BeautifulSoup as _BS
+        soup = _BS(html, "html.parser")
+        footer_elems = soup.find_all(["footer", "div"], limit=20)
+        for elem in footer_elems:
+            cls = " ".join(elem.get("class") or [])
+            if any(k in cls.lower() for k in ("footer", "bottom", "copyright")):
+                ft = elem.get_text(" ")
+                m = _COPYRIGHT_YEAR.search(ft)
+                if m:
+                    yr = m.group(1)
+                    if 1800 <= int(yr) <= 2100:
+                        return yr
+    except Exception:
+        pass
+    return None
 
 
-def _extract_country(html: str) -> str:
-    """Extract country from JSON-LD address or <address> tags."""
+# Common country name / code keywords for footer address scanning
+_COUNTRY_KEYWORDS = {
+    "india": "India", "usa": "USA", "united states": "USA",
+    "united kingdom": "UK", "uk": "UK", "germany": "Germany",
+    "canada": "Canada", "australia": "Australia", "singapore": "Singapore",
+    "netherlands": "Netherlands", "france": "France", "spain": "Spain",
+    "italy": "Italy", "brazil": "Brazil", "japan": "Japan",
+    "china": "China", "south africa": "South Africa", "uae": "UAE",
+    "united arab emirates": "UAE",
+}
+# TLD → country fallback
+_TLD_COUNTRY = {
+    ".in": "India", ".co.in": "India", ".co.uk": "UK", ".uk": "UK",
+    ".de": "Germany", ".ca": "Canada", ".au": "Australia",
+    ".sg": "Singapore", ".nl": "Netherlands", ".fr": "France",
+    ".es": "Spain", ".it": "Italy", ".br": "Brazil", ".jp": "Japan",
+    ".cn": "China", ".ae": "UAE", ".za": "South Africa",
+}
+
+
+def _extract_country(html: str, page_url: str = "") -> str:
+    """Extract country from JSON-LD, meta geo-tags, itemprop, footer address, or TLD."""
     try:
         import json as _json
         from bs4 import BeautifulSoup as _BS
         soup = _BS(html, "html.parser")
-        # JSON-LD
+
+        # 1. JSON-LD addressCountry
         for script in soup.find_all("script", type="application/ld+json"):
             try:
                 data = _json.loads(script.string or "")
-                def _seek_country(node):
+
+                def _seek_country(node):  # noqa: C901
                     if isinstance(node, dict):
                         addr = node.get("address") or {}
                         if isinstance(addr, dict):
                             country = addr.get("addressCountry") or addr.get("country")
                             if country:
-                                return str(country)
+                                if isinstance(country, dict):
+                                    country = country.get("name") or country.get("@id") or ""
+                                return str(country).strip()
                         for v in node.values():
                             r = _seek_country(v)
                             if r:
@@ -801,51 +1210,68 @@ def _extract_country(html: str) -> str:
                             if r:
                                 return r
                     return None
+
                 found = _seek_country(data)
                 if found:
                     return found
             except Exception:
                 continue
-        # itemprop="addressCountry"
+
+        # 2. Meta geo tags: <meta name="geo.country" content="IN">
+        for meta in soup.find_all("meta"):
+            name = (meta.get("name") or meta.get("property") or "").lower()
+            if name in ("geo.country", "geo.region", "og:country-name",
+                        "country", "dc.coverage"):
+                val = (meta.get("content") or "").strip()
+                if val:
+                    return val
+
+        # 3. itemprop="addressCountry"
         for elem in soup.find_all(itemprop="addressCountry"):
             v = (elem.get("content") or elem.get_text()).strip()
             if v:
                 return v
+
+        # 4. Footer address text scan for known country names
+        page_text = soup.get_text(" ").lower()
+        for kw, label in _COUNTRY_KEYWORDS.items():
+            # Look for country near address-like context
+            idx = page_text.find(kw)
+            if idx != -1:
+                context = page_text[max(0, idx - 80): idx + len(kw) + 80]
+                if any(c in context for c in (
+                    "address", "office", "headquarter", "located",
+                    "phone", "contact", "street", "avenue", "road", "pin", "zip",
+                )):
+                    return label
+
     except Exception:
         pass
-    return ""
+
+    # 5. TLD fallback (cheapest — no parsing needed)
+    if page_url:
+        from urllib.parse import urlparse as _up
+        netloc = _up(page_url).netloc.lower()
+        for tld, label in sorted(_TLD_COUNTRY.items(), key=lambda x: -len(x[0])):
+            if netloc.endswith(tld):
+                return label
+
+    return None
 
 
 # ─────────────────────────────────────────────────────────────────────────────
 # Main extraction entry-point  (Tasks 5, 6, 7 + new profile fields)
 # ─────────────────────────────────────────────────────────────────────────────
 
-def extract_from_website(homepage_url: str, homepage_html: str | None = None) -> dict:
+def extract_from_website(homepage_url: str, homepage_html: str | None = None, deadline: Deadline | None = None) -> dict:
     """
     Full public-data extraction pass:
     homepage → contact/about/team/services/products subpages
              → emails, phones, socials, people.
-
-    New fields added in this revision
-    ----------------------------------
-    tech_stack        : detected frontend/backend technologies (list)
-    services_page     : URL of the services page if discovered
-    products_page     : URL of the products page if discovered
-    employees         : employee count/range string if found on site
-    founded           : founding year string if found
-    country           : country from structured data / address tags
-    description       : rich description (meta + about text, 800 chars)
-    emails_scored     : list of {email, confidence} dicts (after scoring)
-
-    company_type      (Task 6): Software Company / Consultancy / Agency / …
-    industry_detected (Task 7): Artificial Intelligence / Cloud Computing / …
-    meta_description  : raw meta description text for downstream use
-
-    Task 5: All fetch failures are caught; pipeline never crashes for one URL.
-    Task 6: Emails are ranked and deduplicated via rank_emails().
-    Task 7: Phones are validated; dates / year-ranges are excluded.
-    Task 8: People are filtered through is_valid_person_record().
     """
+    if deadline and deadline.is_exceeded():
+        raise DeadlineExceeded(f"Deadline exceeded before extract_from_website for {homepage_url}")
+
     result = {
         "contact_page":      None,
         "about_page":        None,
@@ -853,18 +1279,25 @@ def extract_from_website(homepage_url: str, homepage_html: str | None = None) ->
         "services_page":     None,
         "products_page":     None,
         "emails":            [],
+        "emails_provenance": [],
         "emails_scored":     [],
         "phones":            [],
+        "phones_provenance": [],
         "social_links":      {},
         "people":            [],
         "company_type":      "Unknown",
         "industry_detected": "Unknown",
         "meta_description":  "",
         "tech_stack":        [],
-        "employees":         "",
-        "founded":           "",
-        "country":           "",
-        "description":       "",
+        "employees":         None,
+        "employees_provenance": None,
+        "founded":           None,
+        "founded_provenance":   None,
+        "country":           None,
+        "country_provenance":   None,
+        "location":          None,   # full postal address string (new)
+        "location_provenance":  None,
+        "description":       None,
     }
 
     from urllib.parse import urlparse
@@ -875,7 +1308,11 @@ def extract_from_website(homepage_url: str, homepage_html: str | None = None) ->
     state["start_time"] = time.time()
 
     if not homepage_html:
-        homepage_html = fetch_page(homepage_url)
+        try:
+            homepage_html = fetch_page(homepage_url, deadline=deadline)
+        except DeadlineExceeded:
+            print(f"[page_extractor] Deadline exceeded fetching homepage {homepage_url}")
+            return result
     else:
         # Pre-fetched homepage: record it as 1 page and estimate size
         state["pages_crawled"] = 1
@@ -886,13 +1323,30 @@ def extract_from_website(homepage_url: str, homepage_html: str | None = None) ->
 
     # ── Homepage pass ─────────────────────────────────────────────────────
     result["social_links"] = extract_social_links(homepage_html, homepage_url)
-    result["emails"].extend(extract_emails(homepage_html))
-    result["phones"].extend(extract_phone_numbers(homepage_html))
+    
+    hp_emails = extract_emails(homepage_html)
+    result["emails"].extend(hp_emails)
+    for em in hp_emails:
+        result["emails_provenance"].append(make_fact(em, SRC_HOMEPAGE_TEXT, source_url=homepage_url))
 
-    # Extract structured contact info from homepage
+    hp_phones = extract_phone_numbers(homepage_html)
+    result["phones"].extend(hp_phones)
+    for ph in hp_phones:
+        result["phones_provenance"].append(make_fact(ph, SRC_HOMEPAGE_TEXT, source_url=homepage_url))
+
+    # Extract structured contact info from homepage (emails, phones, location)
     struct_info = extract_structured_contact_info(homepage_html)
     result["emails"].extend(struct_info["emails"])
+    for em in struct_info["emails"]:
+        result["emails_provenance"].append(make_fact(em, SRC_HOMEPAGE_STRUCTURED, source_url=homepage_url))
+
     result["phones"].extend(struct_info["phones"])
+    for ph in struct_info["phones"]:
+        result["phones_provenance"].append(make_fact(ph, SRC_HOMEPAGE_STRUCTURED, source_url=homepage_url))
+
+    if struct_info.get("location") and not result["location"]:
+        result["location"] = struct_info["location"]
+        result["location_provenance"] = make_fact(struct_info["location"], SRC_JSON_LD_HOMEPAGE, source_url=homepage_url)
 
     # ── Tech stack detection ──────────────────────────────────────────────
     try:
@@ -913,10 +1367,43 @@ def extract_from_website(homepage_url: str, homepage_html: str | None = None) ->
         hp_text = _BS(homepage_html, "html.parser").get_text(" ")
     except Exception:
         hp_text = ""
-    result["employees"] = _extract_employees(hp_text)
-    result["founded"]   = _extract_founded(homepage_html)
-    result["country"]   = _extract_country(homepage_html)
-    result["description"] = meta_text[:800] if meta_text else ""
+    # Employees: JSON-LD first (most reliable), then text regex
+    _emp_ld = _extract_employees_from_jsonld(homepage_html)
+    if _emp_ld:
+        result["employees"] = _emp_ld
+        result["employees_provenance"] = make_fact(_emp_ld, SRC_JSON_LD_HOMEPAGE, source_url=homepage_url)
+    else:
+        _emp_txt = _extract_employees(hp_text)
+        if _emp_txt:
+            result["employees"] = _emp_txt
+            result["employees_provenance"] = make_fact(_emp_txt, SRC_HOMEPAGE_TEXT, source_url=homepage_url)
+
+    _fnd = _extract_founded(homepage_html)
+    if _fnd:
+        result["founded"] = _fnd
+        result["founded_provenance"] = make_fact(_fnd, SRC_HOMEPAGE_STRUCTURED, source_url=homepage_url)
+
+    _cntry = _extract_country(homepage_html, homepage_url)
+    if _cntry:
+        result["country"] = _cntry
+        result["country_provenance"] = make_fact(_cntry, SRC_META_GEO_TAG, source_url=homepage_url)
+    # Description: prefer meta text; fall back to first substantial <p> on the page
+    if meta_text and len(meta_text.strip()) > 40:
+        result["description"] = meta_text[:800]
+    else:
+        try:
+            from bs4 import BeautifulSoup as _BS
+            _soup = _BS(homepage_html, "html.parser")
+            for p in _soup.find_all("p"):
+                txt = p.get_text(" ", strip=True)
+                if len(txt) > 80:
+                    result["description"] = txt[:800]
+                    break
+        except Exception:
+            pass
+
+    # ── People from homepage (founders, CEOs listed on homepage) ─────────
+    result["people"].extend(extract_people(homepage_html))
 
     # ── Discover sub-pages via link scanning ─────────────────────────────
     subpages = find_subpages(homepage_html, homepage_url)
@@ -938,16 +1425,24 @@ def extract_from_website(homepage_url: str, homepage_html: str | None = None) ->
 
     # ── Hard fallback paths for critical pages ────────────────────────────
     if not result["contact_page"]:
-        result["contact_page"] = urljoin(homepage_url, "/contact")
+        for cand in ("/corporate/contact-us/", "/contact-us/", "/contact/"):
+            cand_url = urljoin(homepage_url, cand)
+            if not is_disallowed_subpage_url(cand_url):
+                result["contact_page"] = cand_url
+                break
     if not result["about_page"]:
-        result["about_page"] = urljoin(homepage_url, "/about")
+        for cand in ("/corporate/", "/about-us/", "/about/"):
+            cand_url = urljoin(homepage_url, cand)
+            if not is_disallowed_subpage_url(cand_url):
+                result["about_page"] = cand_url
+                break
 
     # ── Consolidate pages to crawl ────────────────────────────────────────
     pages_to_scrape: dict[str, str] = {}
     for page_type in ("contact_page", "about_page", "team_page",
                       "services_page", "products_page"):
         url = result[page_type]
-        if url:
+        if url and not is_disallowed_subpage_url(url):
             pages_to_scrape[url] = page_type
 
     # Follow footer contact/about links (limit to 2 extra)
@@ -955,23 +1450,56 @@ def extract_from_website(homepage_url: str, homepage_html: str | None = None) ->
     extra_crawled = 0
     for link in footer_links:
         if link not in pages_to_scrape and extra_crawled < 2:
-            pages_to_scrape[link] = "footer_link"
-            extra_crawled += 1
+            if not is_disallowed_subpage_url(link):
+                pages_to_scrape[link] = "footer_link"
+                extra_crawled += 1
 
     # ── Sub-page passes ───────────────────────────────────────────────────
     for url, page_type in pages_to_scrape.items():
-        html = fetch_page(url)
+        if deadline and deadline.is_exceeded():
+            break
+        try:
+            html = fetch_page(url, deadline=deadline)
+        except DeadlineExceeded:
+            break
         if not html:
             continue
 
         # 1. Standard text-based extraction
-        result["emails"].extend(extract_emails(html))
-        result["phones"].extend(extract_phone_numbers(html))
+        txt_src = SRC_CONTACT_PAGE_TEXT if page_type == "contact_page" else (
+            SRC_ABOUT_PAGE_TEXT if page_type == "about_page" else f"{page_type}_text"
+        )
+        sub_emails = extract_emails(html)
+        result["emails"].extend(sub_emails)
+        for em in sub_emails:
+            result["emails_provenance"].append(make_fact(em, txt_src, source_url=url))
+
+        sub_phones = extract_phone_numbers(html)
+        result["phones"].extend(sub_phones)
+        for ph in sub_phones:
+            result["phones_provenance"].append(make_fact(ph, txt_src, source_url=url))
 
         # 2. Structured JSON-LD / microdata extraction
+        st_src = SRC_CONTACT_PAGE_STRUCTURED if page_type == "contact_page" else (
+            SRC_ABOUT_PAGE_STRUCTURED if page_type == "about_page" else SRC_JSON_LD_SUBPAGE
+        )
         sub_struct = extract_structured_contact_info(html)
         result["emails"].extend(sub_struct["emails"])
+        for em in sub_struct["emails"]:
+            result["emails_provenance"].append(make_fact(em, st_src, source_url=url))
+
         result["phones"].extend(sub_struct["phones"])
+        for ph in sub_struct["phones"]:
+            result["phones_provenance"].append(make_fact(ph, st_src, source_url=url))
+
+        # Merge location (first non-empty wins)
+        if sub_struct.get("location") and not result["location"]:
+            result["location"] = sub_struct["location"]
+            result["location_provenance"] = make_fact(sub_struct["location"], SRC_JSON_LD_SUBPAGE, source_url=url)
+        # Also merge social links from sub-pages
+        for platform, purl in extract_social_links(html, homepage_url).items():
+            if platform not in result["social_links"]:
+                result["social_links"][platform] = purl
 
         # Improve enrichment if about/services page has more content
         if page_type in ("about_page", "services_page", "products_page"):
@@ -982,26 +1510,90 @@ def extract_from_website(homepage_url: str, homepage_html: str | None = None) ->
                 result["company_type"] = detect_company_type(page_meta)
             # Richer description from about page
             if page_type == "about_page" and not result["description"]:
-                result["description"] = page_meta[:800]
-            # Profile fields from about page (override blanks)
+                if page_meta and len(page_meta.strip()) > 40:
+                    result["description"] = page_meta[:800]
+                else:
+                    try:
+                        from bs4 import BeautifulSoup as _BS
+                        _asoup = _BS(html, "html.parser")
+                        for p in _asoup.find_all("p"):
+                            txt = p.get_text(" ", strip=True)
+                            if len(txt) > 80:
+                                result["description"] = txt[:800]
+                                break
+                    except Exception:
+                        pass
+            # Profile fields from about page (override blanks) — JSON-LD first
+            if not result["employees"]:
+                sub_emp_ld = _extract_employees_from_jsonld(html)
+                if sub_emp_ld:
+                    result["employees"] = sub_emp_ld
+                    result["employees_provenance"] = make_fact(sub_emp_ld, SRC_JSON_LD_SUBPAGE, source_url=url)
             if not result["employees"]:
                 try:
                     from bs4 import BeautifulSoup as _BS
                     pg_text = _BS(html, "html.parser").get_text(" ")
-                    result["employees"] = _extract_employees(pg_text)
+                    sub_emp_txt = _extract_employees(pg_text)
+                    if sub_emp_txt:
+                        result["employees"] = sub_emp_txt
+                        result["employees_provenance"] = make_fact(sub_emp_txt, SRC_ABOUT_PAGE_TEXT, source_url=url)
                 except Exception:
                     pass
             if not result["founded"]:
-                result["founded"] = _extract_founded(html)
+                sub_fnd = _extract_founded(html)
+                if sub_fnd:
+                    result["founded"] = sub_fnd
+                    result["founded_provenance"] = make_fact(sub_fnd, SRC_ABOUT_PAGE_STRUCTURED, source_url=url)
             if not result["country"]:
-                result["country"] = _extract_country(html)
+                sub_cntry = _extract_country(html, url)
+                if sub_cntry:
+                    result["country"] = sub_cntry
+                    result["country_provenance"] = make_fact(sub_cntry, SRC_META_GEO_TAG, source_url=url)
 
-        if page_type == "team_page":
+        # People: run on about_page AND team_page (many companies list founders on /about)
+        if page_type in ("team_page", "about_page"):
             result["people"].extend(extract_people(html))
 
     # ── Final dedup + ranking ─────────────────────────────────────────────
     result["emails"] = rank_emails(result["emails"])
-    result["phones"] = sorted(set(result["phones"]))
+    seen_em_prov = set()
+    deduped_em_prov = []
+    for ep in result["emails_provenance"]:
+        val = ep.get("value")
+        if val and val in result["emails"] and val not in seen_em_prov:
+            seen_em_prov.add(val)
+            deduped_em_prov.append(ep)
+    result["emails_provenance"] = deduped_em_prov
+
+    # Deduplicate phones: also run through normalize+validate again to catch
+    # raw JSON-LD strings that bypassed the 4-stage pipeline in extract_phone_numbers
+    seen_phones: set[str] = set()
+    clean_phones: list[str] = []
+    for ph in result["phones"]:
+        n = _normalize_phone(ph)
+        digits = re.sub(r"\D", "", n)
+        if len(digits) < _PHONE_MIN_DIGITS or len(digits) > _PHONE_MAX_DIGITS:
+            continue
+        if is_valid_phone(n) and n not in seen_phones:
+            seen_phones.add(n)
+            clean_phones.append(n)
+    result["phones"] = sorted(clean_phones)
+
+    seen_ph_prov = set()
+    deduped_ph_prov = []
+    for pp in result["phones_provenance"]:
+        n_val = _normalize_phone(pp.get("value", ""))
+        if n_val in result["phones"] and n_val not in seen_ph_prov:
+            seen_ph_prov.add(n_val)
+            pp_copy = dict(pp)
+            pp_copy["value"] = n_val
+            deduped_ph_prov.append(pp_copy)
+    result["phones_provenance"] = deduped_ph_prov
+
+    # Fallback: if location still empty, use country field
+    if not result["location"] and result["country"]:
+        result["location"] = result["country"]
+        result["location_provenance"] = result.get("country_provenance")
 
     # ── Email confidence scoring ──────────────────────────────────────────
     try:

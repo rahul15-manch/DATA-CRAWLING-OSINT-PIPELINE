@@ -1,11 +1,13 @@
 from pydantic import BaseModel, Field, field_validator, model_validator, ConfigDict
 from typing import List, Optional, Dict, Any
 from urllib.parse import urlparse
+import argparse
+import importlib.util
 import json
 import os
 import re
-import argparse
 import sys
+import types
 
 # Ensure project root and pillar1 subdirectory are in sys.path when run directly
 proj_root = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))

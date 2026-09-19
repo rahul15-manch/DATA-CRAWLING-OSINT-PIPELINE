@@ -77,6 +77,7 @@ class GoogleHtmlProvider(SearchProvider):
         request_or_query: Request | str,
         max_results: int = 10,
         page: int = 0,
+        deadline = None,
     ) -> list[SearchResult]:
         if isinstance(request_or_query, Request):
             query = request_or_query.query or ""
@@ -85,9 +86,15 @@ class GoogleHtmlProvider(SearchProvider):
         else:
             query = request_or_query
 
+        if deadline:
+            rem = deadline.remaining()
+            if rem <= 0.0 or deadline.is_exceeded():
+                from utils.deadline import DeadlineExceeded
+                raise DeadlineExceeded("Google HTML deadline budget exhausted")
+
         from search.google_scheduler import GoogleRequestScheduler
         scheduler = GoogleRequestScheduler()
-        return scheduler.schedule_search(query, max_results, page, self)
+        return scheduler.schedule_search(query, max_results, page, self, deadline=deadline)
 
     def _execute_search_query(
         self,
@@ -95,6 +102,7 @@ class GoogleHtmlProvider(SearchProvider):
         max_results: int,
         page: int,
         session_id: str = "google_html",
+        deadline = None,
     ) -> tuple[list[SearchResult], SearchValidationResult]:
         from search.search_validator import validate_search_response, SearchValidationResult
 
@@ -103,8 +111,13 @@ class GoogleHtmlProvider(SearchProvider):
             params += f"&start={page * min(max_results, 10)}"
         url = f"{self._SEARCH_URL}?{params}"
 
+        http_timeout = min(8.0, deadline.remaining()) if deadline else 8.0
+        if http_timeout <= 0.0:
+            from utils.deadline import DeadlineExceeded
+            raise DeadlineExceeded("Google HTML request deadline exhausted")
+
         try:
-            resp = self._client.get(url, session_id=session_id, require_proxy=True, auto_score=False, timeout=8.0, provider="google_html")
+            resp = self._client.get(url, session_id=session_id, require_proxy=True, auto_score=False, timeout=http_timeout, provider="google_html")
             resp.raise_for_status()
         except CaptchaDetectedError as exc:
             return [], SearchValidationResult("CAPTCHA", 0, "CAPTCHA_PAGE", str(exc))

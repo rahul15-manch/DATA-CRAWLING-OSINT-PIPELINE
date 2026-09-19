@@ -5,7 +5,30 @@ import time
 import math
 from abc import ABC, abstractmethod
 
+import sys
 import utils.stats_tracker as stats
+
+_p1_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "pillar1"))
+if _p1_path not in sys.path:
+    sys.path.insert(0, _p1_path)
+
+try:
+    from query.intent_classifier import is_entity_query
+except ImportError:
+    try:
+        from pillar1.query.intent_classifier import is_entity_query
+    except ImportError:
+        def is_entity_query(k: str) -> bool:
+            return bool(k and len(k.split()) <= 3)
+
+try:
+    from query.query_planner import LOCATIONS
+except ImportError:
+    try:
+        from pillar1.query.query_planner import LOCATIONS
+    except ImportError:
+        LOCATIONS = set()
+
 from semantic.semantic_profile import IntentProfile, CompanyProfile
 from semantic.ontology_manager import OntologyManager, ONTOLOGY_VERSION
 from semantic.semantic_intent_resolver import SemanticIntentResolver
@@ -120,7 +143,6 @@ class SemanticRanker(BaseRanker):
         
         kw_clean = keyword.lower().strip()
         words = kw_clean.split()
-        from query.query_planner import LOCATIONS
         if len(words) > 1 and words[-1] in LOCATIONS:
             kw_clean = " ".join(words[:-1])
 
@@ -247,19 +269,118 @@ class SemanticRanker(BaseRanker):
             "technologies": [t.get("value", "") for t in company.technologies] if hasattr(company, "technologies") else [],
         }
         
+        # Derivative detection for entity queries (e.g. "Swiggy Clone Dev")
+        is_derivative = False
+        is_entity_domain_match = False
+        is_entity_path_match = False
+        url_domain_token = ""
+        kw_entity = keyword.lower().strip()
+        try:
+            from urllib.parse import urlparse
+            kw_words = kw_entity.split()
+            if len(kw_words) > 1 and kw_words[-1] in LOCATIONS:
+                kw_entity = " ".join(kw_words[:-1])
+            if is_entity_query(kw_entity):
+                title_snippet_text = f"{title or ''} {snippet or ''}".lower()
+                derivative_pattern = r'\b(clone|replica|alternative|alternatives|script|template|app like|apps like|similar to|how to build|build a)\b'
+                if re.search(derivative_pattern, title_snippet_text):
+                    is_derivative = True
+
+                if url:
+                    kw_slug = re.sub(r"[^a-z0-9]", "", kw_entity)
+                    url_lower = url.lower()
+                    parsed_netloc = urlparse(url_lower).netloc.lstrip("www.")
+                    url_domain_token = parsed_netloc.split(".")[0]
+                    url_slug = re.sub(r"[^a-z0-9]", "", url_domain_token)
+                    url_slug_full = re.sub(r"[^a-z0-9]", "", url_lower)
+
+                    if url_slug and kw_slug and url_slug == kw_slug:
+                        is_entity_domain_match = True
+                    elif kw_slug and (
+                        f"/company/{kw_slug}" in url_lower
+                        or f"/company/{kw_slug.replace(' ', '-')}" in url_lower
+                        or re.search(r'/company/' + re.escape(kw_slug) + r'(/|\b)', url_lower)
+                        or f"company{kw_slug}" in url_slug_full
+                    ):
+                        is_entity_path_match = True
+        except Exception:
+            pass
+
         literal_matched = self._is_literal_match(company_data, keyword)
         score = res["score"]
-        
-        if literal_matched:
+
+        # Exact entity identity signals force literal_matched = True (unless derivative)
+        if (is_entity_domain_match or is_entity_path_match) and not is_derivative:
+            literal_matched = True
+
+        if literal_matched and not is_derivative:
             bonus = getattr(config, "LITERAL_MATCH_BONUS", 40)
             score = min(100, score + bonus)
             stats.increment("literal_matches")
             stats.increment("literal_bonus_applied")
+        elif is_derivative:
+            score = max(0, score - 20)  # Penalize derivative/clone sites on entity queries
+            stats.increment("rejected_literal_matches")
         else:
             stats.increment("rejected_literal_matches")
+
+        # ── Entity Identity Bonus ────────────────────────────────────────────
+        # When the search keyword is a bare entity name (e.g. "swiggy") and the
+        # result URL's domain or URL path matches the entity name, award a large
+        # bonus so the actual company homepage / LinkedIn profile clears threshold.
+        entity_identity_bonus = 0
+        try:
+            kw_entity_bonus = keyword.lower().strip()
+            kw_words = kw_entity_bonus.split()
+            if len(kw_words) > 1 and kw_words[-1] in LOCATIONS:
+                kw_entity_bonus = " ".join(kw_words[:-1])
             
-        tier = self.get_tier(score)
+            if is_entity_query(kw_entity_bonus) and url and not is_derivative:
+                if is_entity_domain_match:
+                    entity_identity_bonus = getattr(config, "ENTITY_IDENTITY_BONUS", 60)
+                    print(f"[SemanticRanker] Entity domain identity bonus (+{entity_identity_bonus}) applied: domain='{url_domain_token}', kw='{kw_entity_bonus}'")
+                elif is_entity_path_match:
+                    entity_identity_bonus = getattr(config, "ENTITY_IDENTITY_BONUS", 60)
+                    print(f"[SemanticRanker] Entity URL path identity bonus (+{entity_identity_bonus}) applied: url='{url}', kw='{kw_entity_bonus}'")
+                # Title identity match: entity name appears as a whole word in the title
+                elif kw_entity_bonus and re.search(r'\b' + re.escape(kw_entity_bonus) + r'\b', (title or "").lower()):
+                    entity_identity_bonus = getattr(config, "ENTITY_IDENTITY_BONUS", 60) // 2
+                    print(f"[SemanticRanker] Entity title bonus (+{entity_identity_bonus}) applied: title='{(title or '')[:60]}', kw='{kw_entity_bonus}'")
+            elif is_derivative:
+                print(f"[SemanticRanker] Entity bonus suppressed (derivative detected): title='{(title or '')[:60]}'")
+        except Exception:
+            pass  # Never let entity detection crash the scorer
+            pass  # Never let entity detection crash the scorer
         
+        if entity_identity_bonus:
+            score = min(100, score + entity_identity_bonus)
+            stats.increment("entity_identity_bonuses")
+
+        # ── .ai TLD Discrimination ────────────────────────────────────────────
+        # A domain ending in .ai does NOT automatically make a company an AI company.
+        # If the keyword is a category query (e.g. "AI") and the result's domain
+        # ends in .ai, but there are no corroborating AI signals in the content,
+        # remove any score inflation to prevent false positives.
+        try:
+            from urllib.parse import urlparse as _urlparse
+            _tld = url.lower().rsplit(".", 1)[-1].split("/")[0] if url else ""
+            if _tld == "ai" and not is_entity_query(keyword):
+                _ai_corroborate_terms = {
+                    "artificial intelligence", "machine learning", "deep learning",
+                    "generative ai", "llm", "neural network", "nlp",
+                    "computer vision", "ai company", "ai startup", "ai platform",
+                }
+                _combined_text = f"{title or ''} {snippet or ''}".lower()
+                _has_ai_signal = any(t in _combined_text for t in _ai_corroborate_terms)
+                if not _has_ai_signal:
+                    # Suppress up to 20 pts of score inflation from .ai TLD alone
+                    score = max(0, score - 20)
+                    stats.increment("ai_tld_penalty_applied")
+        except Exception:
+            pass
+
+        tier = self.get_tier(score)
+
         if search_mode == SearchMode.EXACT and not literal_matched:
             score = 0
             tier = "REJECT"
@@ -278,7 +399,8 @@ class SemanticRanker(BaseRanker):
             "technologies": [t["value"] for t in company.technologies],
             "products": [p["value"] for p in company.products],
             "website": getattr(company, "website", ""),
-            "website_source": getattr(company, "website_source", "")
+            "website_source": getattr(company, "website_source", ""),
+            "entity_identity_bonus": entity_identity_bonus,
         }
 
     def score_html(self, html: str, keyword: str, snippet_res: dict, url: str = "") -> dict:

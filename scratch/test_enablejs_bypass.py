@@ -1,8 +1,10 @@
+import pytest
 import re
 import sys
 sys.path.insert(0, ".")
 from network_client_project.network.client import NetworkClient
 
+@pytest.mark.skip(reason="Live network scratch test")
 def test_enablejs_bypass():
     client = NetworkClient()
     url = "https://www.google.com/search?q=automation+company&num=5&hl=en&gl=us"

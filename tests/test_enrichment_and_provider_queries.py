@@ -48,3 +48,31 @@ def test_query_feedback_penalizes_repeated_zero_results():
         record_query_outcome(query, "zero_result", 0)
 
     assert get_query_feedback_weight(query) < baseline
+
+
+def test_subpage_filtering_rejects_transactional_and_auth_urls():
+    from extraction.page_extractor import is_disallowed_subpage_url, find_subpages
+    assert is_disallowed_subpage_url("https://swiggy.com/checkout")
+    assert is_disallowed_subpage_url("https://swiggy.com/cart")
+    assert is_disallowed_subpage_url("https://swiggy.com/auth")
+    assert is_disallowed_subpage_url("https://swiggy.com/my-account/orders")
+    assert is_disallowed_subpage_url("https://pizzahut.com/order/deal")
+    assert not is_disallowed_subpage_url("https://swiggy.com/about")
+    assert not is_disallowed_subpage_url("https://swiggy.com/contact-us")
+    assert not is_disallowed_subpage_url("https://swiggy.com/leadership-team")
+
+    html = """
+    <html><body>
+      <a href="/checkout">Checkout</a>
+      <a href="/cart">Cart</a>
+      <a href="/contact">Contact</a>
+      <a href="/about">About Us</a>
+      <a href="/auth/login">Login</a>
+    </body></html>
+    """
+    subpages = find_subpages(html, "https://swiggy.com")
+    assert "checkout" not in str(subpages)
+    assert "cart" not in str(subpages)
+    assert "auth" not in str(subpages)
+    assert subpages.get("contact_page") == "https://swiggy.com/contact"
+    assert subpages.get("about_page") == "https://swiggy.com/about"

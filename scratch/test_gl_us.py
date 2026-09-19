@@ -1,7 +1,9 @@
+import pytest
 import sys
 sys.path.insert(0, ".")
 from network_client_project.network.client import NetworkClient
 
+@pytest.mark.skip(reason="Live network scratch test")
 def test():
     client = NetworkClient()
     

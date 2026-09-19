@@ -67,3 +67,14 @@ def test_classify_company_page_labels_directory_profiles():
     assert classify_company_page("https://www.clutch.co/profile/vinove") == "DIRECTORY_COMPANY"
     assert classify_company_page("https://www.clutch.co/search?q=python") == "DIRECTORY_LIST"
     assert classify_company_page("https://vinove.com") == "DIRECT_COMPANY"
+
+
+def test_is_rejected_lead_domain_blocks_aggregators():
+    from discovery.company_discovery import is_rejected_lead_domain
+    assert is_rejected_lead_domain("https://www.screener.in/company/SWIGGY/")
+    assert is_rejected_lead_domain("https://www.storyboard18.com/how-swiggy-scaled")
+    assert is_rejected_lead_domain("https://www.moneycontrol.com/india/stockpricequote/food/swiggy/S01")
+    assert is_rejected_lead_domain("https://www.livemint.com/market/swiggy-ipo")
+    assert is_rejected_lead_domain("https://tracxn.com/d/companies/swiggy")
+    assert not is_rejected_lead_domain("https://www.swiggy.com/")
+    assert not is_rejected_lead_domain("https://pizzahut.com/")

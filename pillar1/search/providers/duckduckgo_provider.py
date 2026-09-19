@@ -1,4 +1,5 @@
 import time
+import random
 from bs4 import BeautifulSoup
 from search.provider_base import SearchProvider, Capabilities
 from search.result import SearchResult
@@ -19,11 +20,17 @@ class DuckDuckGoProvider(SearchProvider):
     def is_available(self) -> bool:
         return True
 
-    def search(self, request_or_query: Request | str, max_results: int = 10, page: int = 0) -> list[SearchResult]:
+    def search(self, request_or_query: Request | str, max_results: int = 10, page: int = 0, deadline = None) -> list[SearchResult]:
         if isinstance(request_or_query, Request):
             query = request_or_query.query or ""
         else:
             query = request_or_query
+
+        if deadline:
+            rem = deadline.remaining()
+            if rem <= 0.0 or deadline.is_exceeded():
+                from utils.deadline import DeadlineExceeded
+                raise DeadlineExceeded("DuckDuckGo deadline budget exhausted")
 
         if time.time() < self._cooldown_until:
             remaining = int(self._cooldown_until - time.time())
@@ -34,20 +41,32 @@ class DuckDuckGoProvider(SearchProvider):
         client = get_network_client()
         
         for attempt in range(2):
-            try:
-                import random
+            if deadline:
+                rem = deadline.remaining()
+                if rem <= 0.5 or deadline.is_exceeded():
+                    from utils.deadline import DeadlineExceeded
+                    raise DeadlineExceeded("DuckDuckGo deadline budget exhausted before request attempt")
+                # Scale sleep to not exceed remaining deadline
+                sleep_dur = min(random.uniform(0.5, 1.5), max(0.0, rem - 0.5))
+                if sleep_dur > 0:
+                    time.sleep(sleep_dur)
+                req_timeout = max(1.0, min(15.0, rem))
+            else:
                 if attempt == 0:
                     time.sleep(random.uniform(2.0, 4.0))
                 else:
-                    # Rotate session and add longer delay on retry
                     self._cookie_session_id = f"duckduckgo:search:{time.time()}"
                     time.sleep(random.uniform(3.0, 6.0))
+                req_timeout = 15.0
+
+            try:
                 resp = client.post(
                     url,
                     session_id=self._cookie_session_id,
                     data={"q": query},
                     provider="duckduckgo",
-                    timeout=15.0,
+                    timeout=req_timeout,
+                    deadline=deadline,
                     headers={
                         "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
                         "Accept-Language": "en-US,en;q=0.9",

@@ -3,6 +3,23 @@ query/query_planner.py
 ======================
 Generates B2B dork queries optimized for specific search engines 
 by leveraging resolved IntentProfile domains rather than generic templates.
+
+Dual-lane discovery (entity queries)
+--------------------------------------
+When the user types a bare entity name (e.g. "swiggy"), the planner emits
+two lanes of tasks:
+
+  DIRECT lane   — identity-focused queries that point straight at the entity:
+                    "swiggy", "swiggy official website",
+                    "site:linkedin.com/company/swiggy", …
+                  These are tagged discovery_mode="direct".
+
+  EXPANDED lane — semantic expansion queries that find companies in the same
+                  space: "swiggy company", "swiggy services", …
+                  These are tagged discovery_mode="expanded" (default).
+
+For topic/industry queries (e.g. "AI companies", "software companies Noida")
+only the EXPANDED lane runs, which is unchanged from previous behaviour.
 """
 
 import re
@@ -10,8 +27,48 @@ import config
 from semantic.semantic_intent_resolver import SemanticIntentResolver
 from semantic.semantic_profile import IntentProfile
 from models.search_task import SearchTask
+from query.intent_classifier import is_entity_query
 
 LOCATIONS = {"noida", "gurugram", "gurgaon", "chandigarh", "delhi", "ncr", "mumbai", "bangalore", "bengaluru", "pune", "hyderabad", "chennai", "kolkata", "jaipur", "ahmedabad"}
+
+# ── Canonical expansions for common short-form category keywords ──────────────
+# Used to generate high-signal direct queries without stuttering.
+CATEGORY_ACRONYM_EXPANSIONS = {
+    "ai":             ["artificial intelligence", "generative AI", "machine learning"],
+    "ml":             ["machine learning", "deep learning"],
+    "nlp":            ["natural language processing"],
+    "cv":             ["computer vision"],
+    "iot":            ["internet of things"],
+    "rpa":            ["robotic process automation"],
+    "saas":           ["SaaS", "software as a service"],
+    "fintech":        ["financial technology", "fintech"],
+    "cybersecurity":  ["cybersecurity", "information security", "infosec"],
+    "cyber security": ["cybersecurity", "information security"],
+    "blockchain":     ["blockchain", "distributed ledger"],
+    "ar":             ["augmented reality"],
+    "vr":             ["virtual reality"],
+    "xr":             ["extended reality"],
+    "edtech":         ["education technology", "e-learning"],
+    "healthtech":     ["health technology", "digital health"],
+    "medtech":        ["medical technology"],
+    "cleantech":      ["clean technology", "cleantech"],
+    "agritech":       ["agriculture technology"],
+    "proptech":       ["property technology", "real estate technology"],
+    "legaltech":      ["legal technology"],
+    "hrtech":         ["HR technology", "human resources technology"],
+    "martech":        ["marketing technology"],
+    "adtech":         ["advertising technology"],
+    "regtech":        ["regulatory technology"],
+    "insurtech":      ["insurance technology"],
+    "logistics":      ["logistics", "supply chain"],
+    "ecommerce":      ["ecommerce", "e-commerce", "online retail"],
+    "b2b":            ["B2B", "business-to-business"],
+    "b2c":            ["B2C", "business-to-consumer"],
+    "cloud":          ["cloud computing", "cloud services"],
+    "devops":         ["DevOps", "continuous integration"],
+    "defi":           ["decentralized finance", "DeFi"],
+}
+
 
 class QueryPlanner:
     def __init__(self, resolver: SemanticIntentResolver = None):
@@ -38,7 +95,8 @@ class QueryPlanner:
         seen_queries = set()
         priority = 1
 
-        def add_task(source: str, query: str, prepend: bool = False):
+        def add_task(source: str, query: str, prepend: bool = False,
+                     discovery_mode: str = "expanded"):
             nonlocal priority
             q_clean = " ".join(query.split()).strip()
             if not q_clean:
@@ -51,7 +109,9 @@ class QueryPlanner:
                 source=source,
                 query=q_clean,
                 priority=priority,
-                category="company"
+                category="company",
+                discovery_mode=discovery_mode,
+                original_keyword=keyword,
             )
             if prepend:
                 tasks.insert(0, task)
@@ -59,7 +119,33 @@ class QueryPlanner:
                 tasks.append(task)
             priority += 1
 
-        # Helper to generate literal exact queries
+        # ── DIRECT lane: entity-identity queries ───────────────────────────────
+        # Only activated for bare entity/company name queries (e.g. "swiggy").
+        # These queries are unambiguous and point straight at the entity,
+        # bypassing the semantic matching pipeline (scored by entity_identity_bonus
+        # in SemanticRanker).
+        def generate_direct_entity_queries():
+            """Emit high-signal identity-focused queries tagged discovery_mode='direct' in 3 strict tiers."""
+            kw_slug = re.sub(r"[^a-z0-9]", "", kw_no_loc)
+            
+            # ── Tier 1: Core Identity Queries (Highest Priority) ──────────────
+            add_task("google", f"{kw_no_loc}", discovery_mode="direct")
+            add_task("google", f"\"{kw_no_loc}\"", discovery_mode="direct")
+            add_task("google", f"site:{kw_slug}.com", discovery_mode="direct")
+            add_task("linkedin", f"site:linkedin.com/company/{kw_slug}", discovery_mode="direct")
+
+            # ── Tier 2: Official Site & LinkedIn Variants ─────────────────────
+            add_task("google", f"{kw_no_loc} official website", discovery_mode="direct")
+            add_task("brave", f"{kw_no_loc} official site", discovery_mode="direct")
+            add_task("google", f"{kw_no_loc} linkedin company", discovery_mode="direct")
+            add_task("google", f"intitle:\"{kw_no_loc}\"", discovery_mode="direct")
+            add_task("bing", f"{kw_no_loc} company headquarters{loc_suffix}", discovery_mode="direct")
+
+            # ── Tier 3: Industry Directories ─────────────────────────────────
+            add_task("clutch", f"site:clutch.co {kw_no_loc}", discovery_mode="direct")
+            add_task("goodfirms", f"site:goodfirms.co {kw_no_loc}", discovery_mode="direct")
+
+        # Helper to generate literal exact queries (EXPANDED lane)
         def generate_exact_queries():
             add_task("google", f"{kw_no_loc}{loc_suffix}")
             add_task("google", f"{kw_no_loc} company{loc_suffix}")
@@ -75,6 +161,47 @@ class QueryPlanner:
             add_task("goodfirms", f"site:goodfirms.co {kw_no_loc}{loc_suffix}")
             add_task("github", f"site:github.com {kw_no_loc} development{loc_suffix}")
 
+        # ── Detect entity query and emit DIRECT lane first ─────────────────────
+        entity_query = is_entity_query(kw_no_loc)
+        if entity_query:
+            print(f"[QueryPlanner] Entity query detected: '{kw_no_loc}' — enabling DIRECT+EXPANDED dual-lane")
+            generate_direct_entity_queries()
+        else:
+            # ── CATEGORY direct lane ──────────────────────────────────────────
+            # For broad category queries (e.g. "AI", "cybersecurity", "fintech"),
+            # emit direct logical queries tagged discovery_mode="direct" so they
+            # run before ANY semantic expansion and before LinkedIn tasks get
+            # starved by 15+ general Google queries.
+            print(f"[QueryPlanner] Category query detected: '{kw_no_loc}' — enabling DIRECT category lane")
+
+            def generate_direct_category_queries():
+                cat = kw_no_loc.strip()
+                cat_lower = cat.lower()
+
+                # Core direct Google queries for the raw category
+                add_task("google", f"{cat} companies{loc_suffix}", discovery_mode="direct")
+                add_task("google", f"{cat} startups{loc_suffix}", discovery_mode="direct")
+                add_task("google", f"top {cat} companies{loc_suffix}", discovery_mode="direct")
+                add_task("brave",  f"{cat} companies{loc_suffix}", discovery_mode="direct")
+
+                # LinkedIn direct discovery — run in the priority lane
+                add_task("linkedin", f'site:linkedin.com/company "{cat}"{loc_suffix}', discovery_mode="direct")
+                add_task("linkedin", f'site:linkedin.com/company "{cat} company"{loc_suffix}', discovery_mode="direct")
+
+                # Acronym / canonical expansions (e.g. "AI" → "artificial intelligence companies")
+                expansions = CATEGORY_ACRONYM_EXPANSIONS.get(cat_lower, [])
+                for expansion in expansions[:3]:  # cap at 3 expansions to stay inside budget
+                    add_task("google",   f"{expansion} companies{loc_suffix}", discovery_mode="direct")
+                    add_task("google",   f"{expansion} startups{loc_suffix}", discovery_mode="direct")
+                    add_task("linkedin", f'site:linkedin.com/company "{expansion}"{loc_suffix}', discovery_mode="direct")
+                    add_task("brave",    f"{expansion} companies{loc_suffix}", discovery_mode="direct")
+
+                # Clutch / GoodFirms direct category page
+                add_task("clutch",    f"site:clutch.co {cat} companies{loc_suffix}", discovery_mode="direct")
+                add_task("goodfirms", f"site:goodfirms.co {cat} companies{loc_suffix}", discovery_mode="direct")
+
+            generate_direct_category_queries()
+
         if search_mode == SearchMode.EXACT:
             generate_exact_queries()
             return tasks
@@ -83,10 +210,11 @@ class QueryPlanner:
         if search_mode == SearchMode.HYBRID:
             generate_exact_queries()
 
-        # --- Semantic query planning ---
+        # --- Semantic query planning (EXPANDED lane) ---
+
         intent = self.resolver.resolve(kw_no_loc)
         
-        # Split composite domains if any (e.g. "Ai + Automation" -> ["ai", "automation"])
+        # Split composite domains if any (e.g. "Ai + Automation" -> [["ai", "automation"])
         domains = [d.strip().lower().replace(" ", "_") for d in intent.primary_domain.split("+")]
         
         # Fetch ranked concepts dynamically with relevance scoring threshold
@@ -125,7 +253,15 @@ class QueryPlanner:
 
             if applied_industry_templates:
                 for tmpl in applied_industry_templates[:5]:
-                    query_str = tmpl.format(concept=concept) + loc_suffix
+                    raw_query = tmpl.format(concept=concept) + loc_suffix
+                    # Sanitize: collapse consecutive duplicate words (case-insensitive)
+                    # e.g. "ai AI company" → "AI company"
+                    words_out = raw_query.split()
+                    deduped = []
+                    for w in words_out:
+                        if not deduped or w.lower() != deduped[-1].lower():
+                            deduped.append(w)
+                    query_str = " ".join(deduped)
                     add_task("google", query_str)
                     add_task("brave", query_str)
             else:
@@ -170,3 +306,4 @@ class QueryPlanner:
         add_task("google", keyword, prepend=True)
 
         return tasks
+

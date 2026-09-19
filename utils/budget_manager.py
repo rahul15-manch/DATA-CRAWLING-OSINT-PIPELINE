@@ -1,91 +1,43 @@
-import time
 import logging
 from utils.deadline import Deadline
-import config
 
 logger = logging.getLogger(__name__)
 
 class ProviderBudgetManager:
     """
-    Centralized Provider Budget Manager responsible for:
-    - Allocating time budgets per search provider.
-    - Tracking active provider elapsed time.
-    - Enforcing budget caps and deadline checks.
-    - Ensuring no provider starves fallback providers.
+    ProviderBudgetManager: timing responsibilities removed.
+    The single authority for time is the parent Deadline hierarchy.
+    No independent wall-clock state, no hardcoded per-provider budgets.
     """
     def __init__(self):
-        # Default budgets matching user preferences: Google (8s), DDG/Brave/Bing (7s)
-        self.provider_budgets = getattr(config, "PROVIDER_EXECUTION_BUDGETS", {
-            "google_html": 8.0,
-            "duckduckgo": 7.0,
-            "brave": 7.0,
-            "bing": 7.0,
-        })
-        self.active_provider = None
-        self.active_provider_start = None
+        pass
 
     def start_provider(self, pname: str):
-        """Set the active provider and mark the start time."""
-        self.active_provider = pname
-        self.active_provider_start = time.time()
-        logger.info(f"[ProviderBudgetManager] Starting provider '{pname}' with budget limit of {self.get_provider_budget(pname):.1f}s.")
+        """No-op: provider independent clocks have been removed."""
+        pass
 
-    def get_provider_budget(self, pname: str) -> float:
-        """Return the maximum allowed time budget for a provider."""
-        if pname == "brightdata":
-            # BrightData budget should be dynamic: max(remaining_budget, 5s)
-            return max(Deadline.remaining(), 5.0)
-        return self.provider_budgets.get(pname, 15.0)
+    def get_provider_budget(self, pname: str, deadline: Deadline | None = None) -> float:
+        """Return remaining time on parent deadline or fallback budget."""
+        if deadline:
+            return deadline.remaining()
+        return 8.0
 
-    def remaining_provider_time(self, pname: str) -> float:
-        """Calculate the remaining budget for the active provider."""
-        budget = self.get_provider_budget(pname)
-        if self.active_provider != pname or self.active_provider_start is None:
-            return budget
-        
-        elapsed = time.time() - self.active_provider_start
-        return max(0.0, budget - elapsed)
-
-    def can_execute(self, pname: str) -> bool:
+    def can_execute(self, pname: str, deadline: Deadline | None = None) -> bool:
         """
         Check if the provider is allowed to start or continue retrying.
-        Returns False if the global deadline or provider budget is exhausted.
+        Returns False only if the deadline is exhausted (<1.0s remaining).
         """
-        # 1. Check global deadline
-        if Deadline.is_exceeded():
-            logger.warning(f"[ProviderBudgetManager] Blocked '{pname}': global deadline exceeded.")
+        if deadline and (deadline.is_exceeded() or deadline.remaining() < 1.0):
+            logger.warning(f"[ProviderBudgetManager] Blocked '{pname}': deadline exceeded.")
             return False
-
-        # 2. Check provider-specific execution budget
-        if self.active_provider == pname and self.active_provider_start is not None:
-            elapsed = time.time() - self.active_provider_start
-            budget = self.get_provider_budget(pname)
-            if elapsed >= budget:
-                logger.warning(
-                    f"[ProviderBudgetManager] Blocked '{pname}': provider execution budget exhausted "
-                    f"({elapsed:.1f}s elapsed, limit was {budget:.1f}s)."
-                )
-                return False
-
-        # 3. Check Google low-budget fallback constraint
-        if pname == "google_html":
-            min_fallback = getattr(config, "GOOGLE_MIN_FALLBACK_BUDGET", 18.0)
-            remaining_global = Deadline.remaining()
-            if remaining_global < min_fallback:
-                logger.warning(
-                    f"[ProviderBudgetManager] Blocked Google Search: remaining budget too low ({remaining_global:.1f}s remaining), "
-                    f"minimum required fallback budget is {min_fallback:.1f}s."
-                )
-                return False
-
         return True
 
-    def get_dynamic_timeout(self, pname: str, default_timeout: float = 8.0) -> float:
-        """
-        Calculate the maximum allowed timeout for an HTTP request to enforce budgets as hard limits.
-        """
-        remaining_provider = self.remaining_provider_time(pname)
-        remaining_global = Deadline.remaining()
-        # Leave a 0.2s safety buffer to avoid hitting strict deadline exceed in main logic
-        timeout = min(default_timeout, remaining_provider, remaining_global - 0.2)
-        return max(0.5, timeout)
+    def remaining_provider_time(self, pname: str, deadline: Deadline | None = None) -> float:
+        """Return remaining time on parent deadline."""
+        return deadline.remaining() if deadline else 999.0
+
+    def get_dynamic_timeout(self, pname: str, default_timeout: float = 8.0, deadline: Deadline | None = None) -> float:
+        """Calculate timeout strictly bounded by parent deadline."""
+        if deadline:
+            return deadline.bounded_timeout(default_timeout)
+        return default_timeout

@@ -82,6 +82,7 @@ class GoogleCseProvider(SearchProvider):
         request_or_query: Request | str,
         max_results: int = 10,
         page: int = 0,
+        deadline = None,
     ) -> list[SearchResult]:
         if isinstance(request_or_query, Request):
             query = request_or_query.query or ""
@@ -89,6 +90,12 @@ class GoogleCseProvider(SearchProvider):
             max_results = request_or_query.meta.get("max_results", 10)
         else:
             query = request_or_query
+
+        if deadline:
+            rem = deadline.remaining()
+            if rem <= 0.0 or deadline.is_exceeded():
+                from utils.deadline import DeadlineExceeded
+                raise DeadlineExceeded("Google CSE deadline budget exhausted")
 
         if not self.is_available():
             raise ProviderUnavailable(

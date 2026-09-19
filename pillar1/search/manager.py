@@ -11,6 +11,7 @@ from urllib.parse import parse_qs, urlparse, urlunparse
 
 import config
 from search.exceptions import AllProvidersExhausted, ProviderParseError, ProviderUnavailable
+from utils.deadline import Deadline, DeadlineExceeded
 from search.provider_base import SearchProvider
 from search.registry import DEFAULT_PRIORITY, PROVIDER_REGISTRY, ProviderRegistry
 from search.result import SearchResult
@@ -232,6 +233,14 @@ def _classify_query_intent(query: str) -> str:
     # Directory sources
     if any(d in q_lower for d in _DIRECTORY_TERMS):
         score += _SCORE_DIRECTORY
+
+    # Entity query check — direct company lookups are high value
+    try:
+        from query.intent_classifier import is_entity_query
+        if is_entity_query(query):
+            score += _SCORE_COMPANY_NOUN + 2
+    except Exception:
+        pass
 
     # Informational / low-value signals
     if any(t in q_lower for t in _INFORMATIONAL_TERMS):
@@ -498,6 +507,7 @@ class SearchManager:
         max_results: int = 10,
         page: int = 0,
         family: str = "unknown",
+        deadline: Deadline | None = None,
     ) -> list[SearchResult]:
         self.total_queries += 1
         debug_mode = os.getenv("DISCOVERY_DEBUG", "false").lower() == "true"
@@ -576,15 +586,26 @@ class SearchManager:
 
         all_results:   list[SearchResult] = []
         providers_used: list[str]         = []
+        attempted_providers: list[str] = []
         seen_canonical: set[str]          = set()
         query_start_t = time.time()
 
         for provider in ordered:
-            from utils.deadline import Deadline
-            if Deadline.is_exceeded():
-                print(f"[SearchManager] Global deadline exceeded. Returning {len(all_results)} partial results.")
-                break
+            if deadline:
+                rem_s = deadline.remaining()
+                if deadline.is_exceeded() or rem_s <= 0.0:
+                    print(f"[SearchManager] Deadline exhausted ({rem_s:.1f}s remaining). Halting provider chain.")
+                    break
+                try:
+                    deadline.require(1.0)
+                except DeadlineExceeded:
+                    if not all_results and (len(attempted_providers) >= len(ordered) or not self.providers_available()):
+                        print(f"[SearchManager] Deadline exhausted (<1.0s remaining) and no providers available/attempted. Signalling AllProvidersExhausted.")
+                        raise AllProvidersExhausted("No providers available or all providers exhausted during deadline")
+                    print(f"[SearchManager] Deadline exhausted (<1.0s remaining). Halting provider fallback chain. Returning {len(all_results)} partial results.")
+                    break
             pname = provider.name
+            attempted_providers.append(pname)
 
             # Skip providers that are in cooldown
             if not self.provider_health.get(pname, True):
@@ -604,11 +625,12 @@ class SearchManager:
                     else:
                         self._consecutive_blocks[pname] = 0
 
-            # Provider budget check via ProviderBudgetManager
-            self.budget_manager.start_provider(pname)
-            if not self.budget_manager.can_execute(pname):
-                print(f"[SearchManager] Skipping {pname} (Budget or deadline check failed)")
-                continue
+            # Provider deadline check via ProviderBudgetManager
+            if deadline and deadline.is_exceeded():
+                break
+            if not self.budget_manager.can_execute(pname, deadline=deadline):
+                print(f"[SearchManager] Halting provider search (Deadline exhausted)")
+                break
 
             # 2. Bing Captcha Early Stop
             if pname == "bing" and self._consecutive_captchas["bing"] >= 2:
@@ -632,6 +654,10 @@ class SearchManager:
                     print(f"[SearchManager] Skipping {pname!r} for family {family} (Early stopping: >= 3 consecutive zero results)")
                     continue
 
+            if deadline and (deadline.is_exceeded() or deadline.remaining() <= 0.0):
+                print(f"[SearchManager] Deadline exhausted before calling {pname}. Halting provider chain.")
+                break
+
             self._keyword_queries[pname] += 1
             self._provider_live_query_count[pname] += 1  # feeds round-robin rotation
 
@@ -651,138 +677,15 @@ class SearchManager:
                     f"[SearchManager] [{pname}] query='{query}'"
                     f" max_results={max_results} page={page}"
                 )
-                raw = provider.search(query, max_results=max_results, page=page)
-                latency = time.time() - t0
-                self.stats[pname].total_latency_s += latency
-                self.stats[pname].latencies.append(latency)
-                self.stats[pname].results_returned += len(raw)
-
-                from discovery.company_discovery import classify_result, should_ignore_result
-
-                # Merge into all_results, deduplicating by canonical URL
-                accepted = 0
-                rejected_reasons: dict[str, int] = defaultdict(int)
-                for r in raw:
-                    if not r.url or not is_valid_company_url(r.url):
-                        print(f"[SearchManager Reject] URL: {r.url} | Title: {r.title} | Reason: Invalid company URL pattern")
-                        continue
-                    result_dict = {"title": r.title or "", "url": r.url or "", "snippet": r.snippet or ""}
-                    classification, reason = classify_result(result_dict)
-                    if should_ignore_result(result_dict):
-                        rejected_reasons[reason or classification or "UNKNOWN"] += 1
-                        print(f"[SearchManager Reject] URL: {r.url} | Title: {r.title} | Reason: Ignored by classification ({classification} - {reason})")
-                        continue
-
-                    canon = _canonicalize_url(r.url)
-                    if canon in seen_canonical:
-                        self.total_duplicates_removed += 1
-                        print(f"[SearchManager Reject] URL: {r.url} | Title: {r.title} | Reason: Duplicate canonical URL ({canon})")
-                        continue
-                    seen_canonical.add(canon)
-                    all_results.append(r)
-                    accepted += 1
-                    self._track_source(r.url)
-
-                providers_used.append(pname)
-
-                top_rejection = max(rejected_reasons.items(), key=lambda item: item[1], default=("NONE", 0))[0]
-                query_dur = time.time() - query_start_t
-                if debug_mode:
-                    print(f"[SearchManager] Query: {query}")
-                    print(f"[SearchManager] Provider: {pname}")
-                    print(f"[SearchManager] Results Parsed: {len(raw)}")
-                    print(f"[SearchManager] Accepted: {accepted}")
-                    print(f"[SearchManager] Rejected: {len(raw) - accepted}")
-                    print(f"[SearchManager] Top rejection: {top_rejection}")
-                    print(f"[SearchManager] Execution time: {latency:.2f}s")
-                status_code = getattr(self._last_diag, "status_code", None) or 200
-                proxy_used = getattr(self._last_diag, "proxy", None) or "direct"
-                session_id = getattr(self._last_diag, "session_id", None) or "default"
-                retry_count = getattr(self._last_diag, "retry_count", None) or 0
-                is_cache_served = False
-                retry_reasons = getattr(self._last_diag, "retry_reasons", [])
-                reasons_str = ", ".join(retry_reasons) if retry_reasons else "None"
-                from utils.deadline import Deadline
-                print(
-                    f"[QUERY DETAIL] Provider: {pname} | Query: '{query}' | Latency: {latency:.2f}s "
-                    f"| Retry count: {retry_count} | Reason for retry: {reasons_str} "
-                    f"| Reason for rejection: {top_rejection} | Switch reason: None (Success) "
-                    f"| Remaining budget: {Deadline.remaining():.1f}s"
-                )
-
-                try:
-                    from query.expansion import get_query_feedback_weight
-                    roi_weight = get_query_feedback_weight(query)
-                except Exception:
-                    roi_weight = 1.0
-
-                print(
-                    f"[SearchManager] DIAG | provider={pname} | query='{query}' | latency={latency:.2f}s "
-                    f"| http_status={status_code} | parsed={len(raw)} | accepted={accepted} "
-                    f"| rejection_reason={top_rejection} | proxy={proxy_used} | session_id={session_id} "
-                    f"| cache_hit={is_cache_served} | retry_count={retry_count} | roi_weight={roi_weight:.4f}"
-                )
-
-                self.stats[pname].business_accepted += accepted
-
-                from stats.provider_stats import provider_stats
-
-                if accepted == 0:
-                    self.queries_zero_results += 1
-                    self._consecutive_zero_results[(pname, family)] += 1
-                    self._keyword_results[(pname, family)] += len(raw)
-                    record_query_outcome(query, "zero_result", 0, provider=pname)
-                    provider_stats.record_search_outcome(pname, zero_results=True)
-                    if pname in ("google_html", "playwright_google"):
-                        if pname == "google_html":
-                            self.google_zero_result_queries += 1
-                        self._consecutive_blocks[pname] = 0
-                        print(f"[SearchManager] {pname} valid zero results.")
-                    if not all_results:
-                        self.cache.set(query, max_results, page, pname, [], kind="zero_result")
-
-                    # Score suspicious zero results (expectation >= 0.5)
-                    try:
-                        from search.google_scheduler import get_query_expectation_score
-                        exp_score = get_query_expectation_score(query)
-                    except Exception:
-                        exp_score = 0.5
-
-                    if exp_score >= 0.5:
-                        self._record_provider_failure_score(pname, 1.0, f"VALID_ZERO_RESULTS for high expectation query ({exp_score:.2f})")
+                import inspect
+                p_sig = inspect.signature(provider.search)
+                if "deadline" in p_sig.parameters:
+                    raw = provider.search(query, max_results=max_results, page=page, deadline=deadline)
                 else:
-                    self.stats[pname].successful_queries += 1
-                    self._consecutive_zero_results[(pname, family)] = 0
-                    if pname in ("google_html", "playwright_google"):
-                        self._consecutive_blocks[pname] = 0
-                    self._keyword_accepted[(pname, family)] += accepted
-                    self._keyword_results[(pname, family)] += len(raw)
-                    record_query_outcome(query, "search_hit", len(raw), provider=pname)
-                    provider_stats.record_search_outcome(pname, organic_results=len(raw), accepted_companies=accepted)
-                    self.cache.set(query, max_results, page, pname, all_results, kind="success")
-
-                    # Handle success transition for circuit breaker
-                    breaker_state = self._provider_breaker_states.get(pname, "CLOSED")
-                    if breaker_state == "HALF_OPEN":
-                        self._provider_breaker_states[pname] = "CLOSED"
-                        self._provider_failure_scores[pname] = 0.0
-                        logger.info(f"[SearchManager] Probe query succeeded. {pname} breaker is now CLOSED (healthy).")
-                        print(f"[SearchManager] Probe query succeeded. {pname} breaker is now CLOSED (restored).")
-                    elif breaker_state == "CLOSED":
-                        self._provider_failure_scores[pname] = max(0.0, self._provider_failure_scores[pname] - 1.0)
-
-                if pname == "bing":
-                    self.bing_successes += 1
-                    self._bing_cooldown_step = 0
-
-                # In auto mode: one successful provider with results is enough
-                if self._mode == "auto" and accepted > 0:
-                    break
-
-                # If we have enough results, stop
-                if len(all_results) >= max_results:
-                    break
-
+                    raw = provider.search(query, max_results=max_results, page=page)
+            except DeadlineExceeded:
+                print(f"[SearchManager] Provider {pname} raised DeadlineExceeded. Halting search chain.")
+                break
             except ProviderUnavailable as exc:
                 latency = time.time() - t0
                 if pname == "google_html" and "Circuit Breaker is OPEN" in exc.reason:
@@ -794,8 +697,7 @@ class SearchManager:
                     retry_count = getattr(self._last_diag, "retry_count", 0) or 0
                     retry_reasons = getattr(self._last_diag, "retry_reasons", [])
                     reasons_str = ", ".join(retry_reasons) if retry_reasons else "None"
-                    from utils.deadline import Deadline
-
+                    rem_s = deadline.remaining() if deadline else 999.0
                     is_permanent = exc.reason in ("ENABLE_JS", "CAPTCHA", "CONSENT_PAGE", "FORBIDDEN")
                     decision = "Permanent failure" if is_permanent else "Transient failure"
                     current_idx = ordered.index(provider) if provider in ordered else -1
@@ -803,7 +705,7 @@ class SearchManager:
 
                     print(
                         f"[QUERY DETAIL] Provider: {pname} | Failure: {exc.reason} | Decision: {decision} "
-                        f"| Fallback: {fallback_p} | Remaining budget: {Deadline.remaining():.1f}s | Latency: {latency:.2f}s"
+                        f"| Fallback: {fallback_p} | Remaining budget: {rem_s:.1f}s | Latency: {latency:.2f}s"
                     )
 
                     self.stats[pname].total_latency_s += latency
@@ -819,14 +721,19 @@ class SearchManager:
                         if pname == "google_html":
                             self.google_fallbacks += 1
                         self.queries_google_blocked += 1
-                        is_block = any(term in exc.reason for term in ("ENABLE_JS", "CAPTCHA", "CONSENT_PAGE", "FORBIDDEN", "RATE_LIMIT", "429", "sorry", "unusual traffic"))
+                        is_block = any(term in exc.reason.upper() for term in ("ENABLE_JS", "CAPTCHA", "CONSENT_PAGE", "FORBIDDEN", "RATE_LIMIT", "429", "SORRY", "UNUSUAL TRAFFIC", "TIMEOUT", "EXHAUSTED", "FAILED"))
                         if is_block:
-                            # Instant block failover: trigger 10 min cooldown immediately
+                            # Instant block failover: trigger 10 min cooldown for Google provider family immediately
                             self._consecutive_blocks[pname] = 3
                             self._provider_disabled_until[pname] = time.time() + 600.0
-                            if pname == "google_html":
+                            if pname == "playwright_google":
+                                # Also disable google_html so failing Google proxies don't burn remaining budget
+                                self._consecutive_blocks["google_html"] = 3
+                                self._provider_disabled_until["google_html"] = time.time() + 600.0
+                                self._google_disabled_until = time.time() + 600.0
+                            elif pname == "google_html":
                                 self._google_disabled_until = self._provider_disabled_until[pname]
-                            print(f"[SearchManager] {pname} hit block/ENABLE_JS ({exc.reason}). Instantly disabling globally for 10 minutes and failing over to Brave/Bing.")
+                            print(f"[SearchManager] {pname} failed/blocked ({exc.reason}). Disabling Google family globally and failing over to DuckDuckGo/Brave/Bing.")
                     elif pname == "bing":
                         self.bing_failures += 1
                         self.queries_bing_blocked += 1
@@ -852,6 +759,10 @@ class SearchManager:
                         print("[SearchManager] Bing hit a consent wall. Skipping failure score penalty.")
                     else:
                         self._record_provider_failure_score(pname, points, reason_lbl)
+
+                if deadline and (deadline.is_exceeded() or deadline.remaining() <= 0.0):
+                    print(f"[SearchManager] Deadline exhausted after {pname} failure. Halting provider fallback chain.")
+                    break
 
                 current_idx = self._priority.index(pname) if pname in self._priority else -1
                 next_pname = "None (Exhausted)"
@@ -895,6 +806,10 @@ class SearchManager:
                 else:
                     self._record_provider_failure_score(pname, 3.0, f"Parser Failure ({exc.reason[:30]})")
 
+                if deadline and (deadline.is_exceeded() or deadline.remaining() <= 0.0):
+                    print(f"[SearchManager] Deadline exhausted after {pname} parser error. Halting provider fallback chain.")
+                    break
+
                 current_idx = self._priority.index(pname) if pname in self._priority else -1
                 next_pname = "None (Exhausted)"
                 if current_idx != -1 and current_idx + 1 < len(self._priority):
@@ -916,7 +831,146 @@ class SearchManager:
                 self.stats[pname].total_latency_s += latency
                 self.stats[pname].failures += 1
                 self._record_provider_failure_score(pname, 3.0, f"Unexpected Error ({str(exc)[:30]})")
+                if deadline and (deadline.is_exceeded() or deadline.remaining() <= 0.0):
+                    print(f"[SearchManager] Deadline exhausted after {pname} unexpected error. Halting provider fallback chain.")
+                    break
                 continue
+
+            # Defensive: ensure provider returned iterable results
+            if raw is None:
+                print(f"[SearchManager] Warning: provider {pname!r} returned None; treating as empty list.")
+                raw = []
+            latency = time.time() - t0
+            self.stats[pname].total_latency_s += latency
+            self.stats[pname].latencies.append(latency)
+            self.stats[pname].results_returned += len(raw)
+
+            from discovery.company_discovery import classify_result, should_ignore_result
+
+            # Merge into all_results, deduplicating by canonical URL
+            accepted = 0
+            rejected_reasons: dict[str, int] = defaultdict(int)
+            for r in raw:
+                if not r.url or not is_valid_company_url(r.url):
+                    print(f"[SearchManager Reject] URL: {r.url} | Title: {r.title} | Reason: Invalid company URL pattern")
+                    continue
+                result_dict = {"title": r.title or "", "url": r.url or "", "snippet": r.snippet or ""}
+                classification, reason = classify_result(result_dict)
+                if should_ignore_result(result_dict):
+                    rejected_reasons[reason or classification or "UNKNOWN"] += 1
+                    print(f"[SearchManager Reject] URL: {r.url} | Title: {r.title} | Reason: Ignored by classification ({classification} - {reason})")
+                    continue
+
+                canon = _canonicalize_url(r.url)
+                if canon in seen_canonical:
+                    self.total_duplicates_removed += 1
+                    print(f"[SearchManager Reject] URL: {r.url} | Title: {r.title} | Reason: Duplicate canonical URL ({canon})")
+                    continue
+                seen_canonical.add(canon)
+                all_results.append(r)
+                accepted += 1
+                self._track_source(r.url)
+
+            providers_used.append(pname)
+
+            top_rejection = max(rejected_reasons.items(), key=lambda item: item[1], default=("NONE", 0))[0]
+            query_dur = time.time() - query_start_t
+            if debug_mode:
+                print(f"[SearchManager] Query: {query}")
+                print(f"[SearchManager] Provider: {pname}")
+                print(f"[SearchManager] Results Parsed: {len(raw)}")
+                print(f"[SearchManager] Accepted: {accepted}")
+                print(f"[SearchManager] Rejected: {len(raw) - accepted}")
+                print(f"[SearchManager] Top rejection: {top_rejection}")
+                print(f"[SearchManager] Execution time: {latency:.2f}s")
+            status_code = getattr(self._last_diag, "status_code", None) or 200
+            proxy_used = getattr(self._last_diag, "proxy", None) or "direct"
+            session_id = getattr(self._last_diag, "session_id", None) or "default"
+            retry_count = getattr(self._last_diag, "retry_count", None) or 0
+            is_cache_served = False
+            retry_reasons = getattr(self._last_diag, "retry_reasons", [])
+            reasons_str = ", ".join(retry_reasons) if retry_reasons else "None"
+            rem_s = deadline.remaining() if deadline else 0.0
+            print(
+                f"[QUERY DETAIL] Provider: {pname} | Query: '{query}' | Latency: {latency:.2f}s "
+                f"| Retry count: {retry_count} | Reason for retry: {reasons_str} "
+                f"| Reason for rejection: {top_rejection} | Switch reason: None (Success) "
+                f"| Remaining budget: {rem_s:.1f}s"
+            )
+
+            try:
+                from query.expansion import get_query_feedback_weight
+                roi_weight = get_query_feedback_weight(query)
+            except Exception:
+                roi_weight = 1.0
+
+            print(
+                f"[SearchManager] DIAG | provider={pname} | query='{query}' | latency={latency:.2f}s "
+                f"| http_status={status_code} | parsed={len(raw)} | accepted={accepted} "
+                f"| rejection_reason={top_rejection} | proxy={proxy_used} | session_id={session_id} "
+                f"| cache_hit={is_cache_served} | retry_count={retry_count} | roi_weight={roi_weight:.4f}"
+            )
+
+            self.stats[pname].business_accepted += accepted
+
+            from stats.provider_stats import provider_stats
+
+            if accepted == 0:
+                self.queries_zero_results += 1
+                self._consecutive_zero_results[(pname, family)] += 1
+                self._keyword_results[(pname, family)] += len(raw)
+                record_query_outcome(query, "zero_result", 0, provider=pname)
+                provider_stats.record_search_outcome(pname, zero_results=True)
+                if pname in ("google_html", "playwright_google"):
+                    if pname == "google_html":
+                        self.google_zero_result_queries += 1
+                    self._consecutive_blocks[pname] = 0
+                    print(f"[SearchManager] {pname} valid zero results.")
+                if not all_results:
+                    self.cache.set(query, max_results, page, pname, [], kind="zero_result")
+
+                # Score suspicious zero results (expectation >= 0.5)
+                try:
+                    from search.google_scheduler import get_query_expectation_score
+                    exp_score = get_query_expectation_score(query)
+                except Exception:
+                    exp_score = 0.5
+
+                if exp_score >= 0.5:
+                    self._record_provider_failure_score(pname, 1.0, f"VALID_ZERO_RESULTS for high expectation query ({exp_score:.2f})")
+            else:
+                self.stats[pname].successful_queries += 1
+                self._consecutive_zero_results[(pname, family)] = 0
+                if pname in ("google_html", "playwright_google"):
+                    self._consecutive_blocks[pname] = 0
+                self._keyword_accepted[(pname, family)] += accepted
+                self._keyword_results[(pname, family)] += len(raw)
+                record_query_outcome(query, "search_hit", len(raw), provider=pname)
+                provider_stats.record_search_outcome(pname, organic_results=len(raw), accepted_companies=accepted)
+                self.cache.set(query, max_results, page, pname, all_results, kind="success")
+
+                # Handle success transition for circuit breaker
+                breaker_state = self._provider_breaker_states.get(pname, "CLOSED")
+                if breaker_state == "HALF_OPEN":
+                    self._provider_breaker_states[pname] = "CLOSED"
+                    self._provider_failure_scores[pname] = 0.0
+                    logger.info(f"[SearchManager] Probe query succeeded. {pname} breaker is now CLOSED (healthy).")
+                    print(f"[SearchManager] Probe query succeeded. {pname} breaker is now CLOSED (restored).")
+                elif breaker_state == "CLOSED":
+                    self._provider_failure_scores[pname] = max(0.0, self._provider_failure_scores[pname] - 1.0)
+
+            if pname == "bing":
+                self.bing_successes += 1
+                self._bing_cooldown_step = 0
+
+            # In auto mode: one successful provider with results is enough
+            if self._mode == "auto" and accepted > 0:
+                break
+
+            # If we have enough results, stop
+            if len(all_results) >= max_results:
+                break
+
         for global_rank, r in enumerate(all_results, start=1):
             r.rank = global_rank
         self.total_results += len(all_results)
@@ -1387,10 +1441,6 @@ class SearchManager:
         else:
             timeout = max(6.0, min(20.0, timeout))
 
-        if hasattr(self, "budget_manager"):
-            remaining = self.budget_manager.remaining_provider_time(pname)
-            timeout = min(timeout, max(1.0, remaining))
-
         return timeout
 
     def _is_provider_eligible(self, provider_name: str, query: str) -> bool:
@@ -1509,6 +1559,7 @@ def run_search(
     max_results: int | None = None,
     start: int = 0,
     family: str = "unknown",
+    deadline: Deadline | None = None,
 ) -> list[dict]:
     """
     Backward-compatibility shim.
@@ -1523,9 +1574,10 @@ def run_search(
     max_results : Maximum results (defaults to config.MAX_RESULTS_PER_QUERY)
     start       : Result offset → converted to page index
     family      : The template family of this query
+    deadline    : Optional Deadline instance to cap search operations
     """
     max_r  = max_results or getattr(config, "MAX_RESULTS_PER_QUERY", 10)
     page   = start // max_r if max_r else 0
     manager = get_search_manager()
-    results = manager.search(query, max_results=max_r, page=page, family=family)
+    results = manager.search(query, max_results=max_r, page=page, family=family, deadline=deadline)
     return [r.to_dict() for r in results]

@@ -59,6 +59,9 @@ def canonical_company_name(name: str) -> str:
     if not name:
         return name
 
+    # Strip trailing possessive/plural 's (e.g. Swiggy's -> Swiggy)
+    name = re.sub(r"['’]s$", "", name, flags=re.IGNORECASE).strip()
+
     # Remove non-word characters except hyphen
     name = _PUNCTUATION.sub("", name).strip()
     name = re.sub(r"\s+", " ", name)
@@ -67,6 +70,7 @@ def canonical_company_name(name: str) -> str:
     words = _strip_suffixes(words)
     words = _strip_qualifiers(words)
     words = _strip_suffixes(words)  # second pass catches "Pvt. Ltd."
+    words = _strip_qualifiers(words)
 
     result = " ".join(words)
 

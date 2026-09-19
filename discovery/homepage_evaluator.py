@@ -11,6 +11,7 @@ from bs4 import BeautifulSoup
 from network_client_project.network.client import NetworkClient
 from network_client_project.network.middleware.base import Request
 from curl_cffi.requests.exceptions import RequestException
+from utils.deadline import Deadline
 
 # Initialize a separate client instance if needed, or use a global one
 # For simplicity, we just instantiate one
@@ -55,7 +56,7 @@ _eval_domain_consecutive_blocks = {}
 _eval_domain_cooldowns = {}
 _eval_cb_lock = threading.Lock()
 
-def _fetch_homepage(url: str) -> str:
+def _fetch_homepage(url: str, deadline: Deadline | None = None) -> str:
     """Fetch homepage HTML. Tries direct first, then 1 proxy retry."""
     if not url.startswith("http"):
         url = "https://" + url
@@ -64,8 +65,8 @@ def _fetch_homepage(url: str) -> str:
     domain_key = urlparse(url).netloc.lower().lstrip("www.")
 
     from utils.deadline import Deadline
-    if Deadline.is_exceeded():
-        print(f"[_fetch_homepage] Global deadline exceeded for {url}. Skipping.")
+    if deadline and deadline.is_exceeded():
+        print(f"[_fetch_homepage] Deadline exceeded for {url}. Skipping.")
         return ""
 
     # Check circuit breaker
@@ -81,7 +82,7 @@ def _fetch_homepage(url: str) -> str:
     direct_req = Request(
         url=url,
         method="GET",
-        timeout=8.0,
+        timeout=deadline.bounded_timeout(8.0) if deadline else 8.0,
         meta={"proxy_strategy": "direct", "bypass_proxy": True, "provider": "homepage_evaluator"}
     )
 
@@ -103,8 +104,8 @@ def _fetch_homepage(url: str) -> str:
         exclude_urls = set()
         
         for attempt in range(1, 4):
-            if Deadline.is_exceeded():
-                print(f"[_fetch_homepage] Global deadline exceeded for {url} before attempt {attempt}. Aborting.")
+            if deadline and deadline.is_exceeded():
+                print(f"[_fetch_homepage] Deadline exceeded for {url} before attempt {attempt}. Aborting.")
                 break
 
             session_id = f"homepage_fetch_{domain_key}_{attempt}"
@@ -150,7 +151,7 @@ def _fetch_homepage(url: str) -> str:
 
     return html_content
 
-def evaluate_homepage(html: str, url: str = None, default_class: str = "UNKNOWN", keyword: str = "", mode: str = "semantic") -> str:
+def evaluate_homepage(html: str, url: str = None, default_class: str = "UNKNOWN", keyword: str = "", mode: str = "semantic", deadline: Deadline | None = None) -> str:
     """
     Score a homepage based on business signals.
     >= 80: ALLOW
@@ -158,7 +159,7 @@ def evaluate_homepage(html: str, url: str = None, default_class: str = "UNKNOWN"
     < 50: REJECT
     """
     if not html and url:
-        html = _fetch_homepage(url)
+        html = _fetch_homepage(url, deadline=deadline)
         
     if not html:
         return "REJECT"

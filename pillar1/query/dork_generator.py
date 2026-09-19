@@ -47,32 +47,46 @@ def generate_search_tasks(keyword: str):
     import random
     import config
     
-    general_tasks = []
-    dork_tasks = []
+    direct_tasks = []   # DIRECT lane: entity identity queries — run first
+    general_tasks = []  # EXPANDED lane, no site: operator
+    dork_tasks = []     # EXPANDED lane, with site: operator
     
     for idx, t in enumerate(tasks):
+        # DIRECT lane tasks bypass MAB weighting — identity-critical order
+        if getattr(t, "discovery_mode", "expanded") == "direct":
+            direct_tasks.append((10.0, idx, t))
+            continue
+            
         if random.random() < 0.15:
             weight = 1.0 + (1.0 / (idx + 1.0))
         else:
             weight = rank_query_candidate(t.query)
             
-        # Group tasks based on whether they contain 'site:'
+        # Group expanded tasks based on whether they contain 'site:'
         if "site:" in t.query.lower():
             dork_tasks.append((weight, idx, t))
         else:
             general_tasks.append((weight, idx, t))
             
-    # Sort both groups independently using Multi-Armed Bandit weights
+    # Sort both expanded groups independently using Multi-Armed Bandit weights
     general_tasks.sort(key=lambda x: (-x[0], x[1]))
     dork_tasks.sort(key=lambda x: (-x[0], x[1]))
     
-    # Concatenate to ensure general company queries are attempted first
-    combined_tasks = general_tasks + dork_tasks
-    
-    # Enforce budget limit
-    budget = getattr(config, "MAX_QUERIES_BUDGET", 20)
-    for _, _, task in combined_tasks[:budget]:
+    # DIRECT tasks get priority ordering but are capped by their own count budget
+    # (not the shared expanded budget).  The global time deadline in the scheduler
+    # loop is the universal safety valve — these caps are count-only guards.
+    direct_budget = getattr(config, "MAX_DIRECT_QUERIES_BUDGET", 10)
+    expanded_budget = getattr(config, "MAX_QUERIES_BUDGET", 20)
+    combined_expanded = general_tasks + dork_tasks
+
+    # Yield DIRECT tasks first (bounded by direct_budget)
+    for _, _, task in direct_tasks[:direct_budget]:
         yield task
+        
+    # Yield EXPANDED tasks up to expanded_budget
+    for _, _, task in combined_expanded[:expanded_budget]:
+        yield task
+
 
 
 # ─────────────────────────────────────────────────────────────────────────────

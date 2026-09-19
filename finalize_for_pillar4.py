@@ -72,13 +72,34 @@ def clean_people(people):
 def finalize_record(rec: dict) -> dict:
     enrichment = rec.get("_enrichment", {})
     discovered_emails = enrichment.get("discovered_emails", [])
-    rec["emails"] = sorted(list(set(rec.get("_verified_emails", []) + discovered_emails)))
-    rec["phones"] = rec.get("_verified_phones", [])
+    verified_emails = rec.get("_verified_emails", [])
+    if verified_emails or discovered_emails:
+        rec["emails"] = sorted(list(set(verified_emails + discovered_emails)))
+    
+    verified_phones = rec.get("_verified_phones", [])
+    if verified_phones:
+        rec["phones"] = verified_phones
     
     if not rec.get("website") and enrichment.get("discovered_website"):
         rec["website"] = enrichment["discovered_website"]
         
     rec["people"] = clean_people(rec.get("people"))
+
+    # Ensure profile enrichment and provenance fields are preserved with sensible defaults
+    rec.setdefault("tech_stack",           [])
+    rec.setdefault("description",          None)
+    rec.setdefault("employees",            None)
+    rec.setdefault("founded",              None)
+    rec.setdefault("country",              None)
+    rec.setdefault("emails_provenance",    [])
+    rec.setdefault("phones_provenance",    [])
+    rec.setdefault("employees_provenance", None)
+    rec.setdefault("founded_provenance",   None)
+    rec.setdefault("location_provenance",  None)
+    rec.setdefault("country_provenance",   None)
+    rec.setdefault("data_quality",         {})
+    rec.setdefault("missing_fields",       [])
+    rec.setdefault("domain",               None)
 
     # Strip all debug/internal fields
     for field in list(rec.keys()):

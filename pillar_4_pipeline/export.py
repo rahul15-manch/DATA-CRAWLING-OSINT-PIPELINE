@@ -1,7 +1,9 @@
-import sqlite3
+import importlib.util
 import json
 import os
+import sqlite3
 import sys
+import types
 
 # Ensure project root and pillar1 subdirectory are in sys.path when run directly
 proj_root = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))

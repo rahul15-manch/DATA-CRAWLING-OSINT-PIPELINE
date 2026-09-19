@@ -1,6 +1,9 @@
+import importlib.util
 import os
 import sys
-# Add the 'pillar1' subdirectory to sys.path so packages like 'search' and 'query' can be found
+import types
+
+# Ensure pillar1 is in sys.path
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "pillar1")))
 
 import pathlib

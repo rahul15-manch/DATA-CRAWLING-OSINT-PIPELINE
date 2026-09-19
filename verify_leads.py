@@ -53,8 +53,18 @@ def verify_email_domain(email: str) -> tuple[bool, str]:
 
 def verify_phone(raw_phone: str) -> tuple[bool, str]:
     """Validate a phone number using Google's libphonenumber rules."""
+    # Strip common label prefixes that can slip through from page text
+    import re as _re
+    _label = _re.sub(
+        r"^(?:phone|tel(?:ephone)?|call(?:\s*us)?|mob(?:ile)?|fax|contact|ph)\s*[:\-]?\s*",
+        "",
+        raw_phone.strip(),
+        flags=_re.IGNORECASE,
+    ).strip()
+    if not _label:
+        return False, "empty_after_strip"
     try:
-        parsed = phonenumbers.parse(raw_phone, DEFAULT_REGION)
+        parsed = phonenumbers.parse(_label, DEFAULT_REGION)
     except phonenumbers.NumberParseException as e:
         return False, f"parse_error:{e.error_type}"
 

@@ -34,6 +34,7 @@ class PlaywrightGoogleProvider(SearchProvider):
         request_or_query: Request | str,
         max_results: int = 10,
         page: int = 0,
+        deadline = None,
     ) -> list[SearchResult]:
         start_time = time.time()
         if isinstance(request_or_query, Request):
@@ -42,6 +43,15 @@ class PlaywrightGoogleProvider(SearchProvider):
             max_results = request_or_query.meta.get("max_results", 10)
         else:
             query = request_or_query
+
+        if deadline:
+            rem = deadline.remaining()
+            if rem <= 0.0 or deadline.is_exceeded():
+                from utils.deadline import DeadlineExceeded
+                raise DeadlineExceeded("Playwright Google deadline budget exhausted")
+            nav_timeout_ms = max(1000, min(8000, int(rem * 1000)))
+        else:
+            nav_timeout_ms = 8000
 
         if time.time() < self._cooldown_until:
             remaining = int(self._cooldown_until - time.time())
@@ -64,7 +74,7 @@ class PlaywrightGoogleProvider(SearchProvider):
         bm = get_browser_manager()
         try:
             # Retrieve the healthiest browser from the pool specifically for Google queries
-            instance = bm.get_browser("google")
+            instance = bm.get_browser("google", deadline=deadline)
         except Exception as e:
             # Trip the circuit breaker for playwright_google and raise ProviderUnavailable
             logger.warning(f"[PlaywrightGoogleProvider] BrowserPool exhausted or unavailable: {e}. Tripping circuit breaker.")
@@ -79,7 +89,7 @@ class PlaywrightGoogleProvider(SearchProvider):
             threading.Thread(target=bm.pool.recycle_instance, args=(instance,), daemon=True).start()
             try:
                 # Request a fresh browser from pool
-                instance = bm.get_browser("google")
+                instance = bm.get_browser("google", deadline=deadline)
             except Exception as e:
                 logger.warning(f"[PlaywrightGoogleProvider] BrowserPool exhausted during recycling: {e}. Tripping circuit breaker.")
                 breaker.record_failure(self.name)
@@ -123,16 +133,21 @@ class PlaywrightGoogleProvider(SearchProvider):
                 params += f"&start={page * min(max_results, 10)}"
             url = f"https://www.google.com/search?{params}"
 
-            # 3. Load page
-            logger.info(f"[PlaywrightGoogleProvider] Fetching search page: {url}")
-            response = page_obj.goto(url, timeout=8000, wait_until="domcontentloaded")
+            # 3. Load page using bounded timeout derived from parent deadline
+            logger.info(f"[PlaywrightGoogleProvider] Fetching search page (timeout={nav_timeout_ms}ms): {url}")
+            response = page_obj.goto(url, timeout=nav_timeout_ms, wait_until="domcontentloaded")
             
             # Handle cookie consent walls if we get redirected or blocked
             if "consent.google.com" in page_obj.url or page_obj.locator("form[action*='consent']").count() > 0:
+                if deadline and (deadline.is_exceeded() or deadline.remaining() <= 0.0):
+                    from utils.deadline import DeadlineExceeded
+                    raise DeadlineExceeded("Playwright Google deadline budget exhausted before consent handling")
                 logger.info("[PlaywrightGoogleProvider] Consent popup/redirect detected on search page. Handling...")
                 self._handle_consent(page_obj)
+                rem_after_consent = deadline.remaining() if deadline else 8.0
+                nav_timeout_ms_consent = max(1000, min(8000, int(rem_after_consent * 1000)))
                 # Re-load search page after consent accepted
-                response = page_obj.goto(url, timeout=8000, wait_until="domcontentloaded")
+                response = page_obj.goto(url, timeout=nav_timeout_ms_consent, wait_until="domcontentloaded")
 
             if not response:
                 instance.failure_count += 1

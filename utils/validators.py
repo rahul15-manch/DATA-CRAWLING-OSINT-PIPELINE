@@ -83,6 +83,10 @@ def is_valid_phone(text: str) -> bool:
     if len(digits_only) < _MIN_PHONE_DIGITS or len(digits_only) > _MAX_PHONE_DIGITS:
         return False
 
+    # Unbroken string of > 11 digits without a leading '+' is almost certainly an internal ID or barcode
+    if text.isdigit() and len(text) > 11:
+        return False
+
     # Ensure the string has a phone-like shape
     if not _PHONE_SHAPE.match(text):
         return False
@@ -157,6 +161,33 @@ def is_lead_url_valid(url: str) -> bool:
 # Email validation and ranking  (Task 6)
 # ─────────────────────────────────────────────────────────────────────────────
 
+_DISALLOWED_EMAIL_TLDS = frozenset({
+    "mjs", "js", "cjs", "css", "scss", "less",
+    "png", "jpg", "jpeg", "gif", "svg", "webp", "ico", "bmp", "tiff", "avif",
+    "map", "ts", "tsx", "jsx", "vue", "svelte",
+    "woff", "woff2", "ttf", "eot", "otf",
+    "json", "xml", "yaml", "yml", "toml", "csv",
+    "html", "htm", "php", "asp", "aspx", "jsp",
+    "pdf", "doc", "docx", "zip", "tar", "gz", "rar", "7z",
+    "exe", "bin", "apk", "ipa", "iso", "dmg",
+    "mp3", "mp4", "wav", "webm", "ogg", "mov", "avi",
+})
+
+_DUMMY_EMAIL_LOCALS = frozenset({
+    "username", "user", "name", "email", "yourname", "your-name", "your_name",
+    "sample", "test", "example", "someone", "placeholder", "first.last",
+    "firstname.lastname", "first_last", "john.doe", "jane.doe", "johndoe", "janedoe",
+    "testuser", "demo",
+})
+
+_DUMMY_EMAIL_DOMAINS = frozenset({
+    "example.com", "example.org", "example.net",
+    "company.com", "domain.com", "yourdomain.com", "yoursite.com",
+    "mycompany.com", "website.com", "test.com", "sample.com",
+    "site.com", "email.com", "placeholder.com",
+})
+
+
 def _email_priority(email: str) -> int:
     """Lower index = higher priority in output list."""
     local = email.split("@")[0].lower()
@@ -172,6 +203,64 @@ def _is_ignored_email(email: str) -> bool:
     return any(pat in local for pat in EMAIL_IGNORE_PATTERNS)
 
 
+def is_valid_email_candidate(email: str) -> bool:
+    """
+    Validate that an email candidate is a genuine contact address.
+
+    Rejection rules:
+      1. Structural invalidity (missing or multiple @, missing domain, missing dot).
+      2. Domain starts with a digit (e.g. '@19.1.0.mjs' or '@2x.png').
+      3. TLD is a code, asset, or media file extension (e.g. mjs, js, png, css, map).
+      4. TLD is non-alphabetic or < 2 chars.
+      5. Dummy / placeholder emails (e.g. username@company.com, name@company.com, user@example.com).
+      6. System / automated ignore patterns (_is_ignored_email).
+      7. Known disposable domains.
+    """
+    if not email or not isinstance(email, str):
+        return False
+    email = email.strip().lower()
+    if "@" not in email or email.count("@") != 1:
+        return False
+
+    local, domain = email.split("@", 1)
+    local = local.strip()
+    domain = domain.strip().strip(".")
+    if not local or not domain or "." not in domain:
+        return False
+
+    # Structural / valid character check
+    if not re.match(r"^[a-zA-Z0-9._%+-]+$", local):
+        return False
+    if not re.match(r"^[a-zA-Z0-9.-]+$", domain):
+        return False
+
+    # 1. Reject if domain starts with a digit (e.g. @19.1.0.mjs, @2x.png)
+    if domain[0].isdigit():
+        return False
+
+    # 2. Reject if TLD is code/media extension or non-alphabetic
+    tld = domain.split(".")[-1].lower()
+    if not tld.isalpha() or len(tld) < 2 or tld in _DISALLOWED_EMAIL_TLDS:
+        return False
+
+    # 3. Reject dummy / placeholder emails
+    if local in _DUMMY_EMAIL_LOCALS or local.startswith("sample") or local.startswith("test"):
+        return False
+    if domain in _DUMMY_EMAIL_DOMAINS or domain.endswith(".example.com") or domain.endswith(".example.org"):
+        return False
+
+    # 4. Reject disposable email domains
+    from utils.constants import DISPOSABLE_EMAIL_DOMAINS
+    if domain in DISPOSABLE_EMAIL_DOMAINS:
+        return False
+
+    # 5. Reject system / automated ignore patterns (noreply, bounce, unsubscribe, etc.)
+    if _is_ignored_email(email):
+        return False
+
+    return True
+
+
 def score_email(email: str, company_domain: str = "") -> dict:
     """
     Score an email's confidence (0-100) based on:
@@ -182,7 +271,7 @@ def score_email(email: str, company_domain: str = "") -> dict:
 
     Returns dict: {"email": str, "confidence": int, "reasons": list[str]}
     """
-    if not email or "@" not in email:
+    if not email or "@" not in email or not is_valid_email_candidate(email):
         return {"email": email, "confidence": 0, "reasons": ["invalid_format"]}
 
     local, domain = email.lower().split("@", 1)
@@ -243,7 +332,7 @@ def rank_emails(emails: list, company_domain: str = "") -> list:
 
     Returns a deduplicated, sorted list of email strings. Input is not mutated.
     """
-    cleaned = [e for e in emails if e and not _is_ignored_email(e)]
+    cleaned = [e for e in emails if e and is_valid_email_candidate(e)]
     if not cleaned:
         return []
 
@@ -333,18 +422,53 @@ def is_valid_person_record(person: dict) -> bool:
 
 def is_valid_company_name(name: str) -> bool:
     """
-    Return True if the company name is valid, rejecting common placeholders like 'About Us'.
+    Return True if the company name is valid, rejecting common placeholders like 'About Us'
+    and malformed URL-fragment / domain-concatenation artifacts.
     """
+    import re
     from utils.constants import COMPANY_NAME_NOISE_WORDS
     if not name:
         return False
     name = name.strip()
     if not name or len(name) < 2:
         return False
-    
+    if len(name) > 60:
+        return False
+
     # Fast reject if it exactly matches a noise word
     lowered = name.lower()
     if lowered in COMPANY_NAME_NOISE_WORDS:
         return False
-        
+
+    # Reject strings containing explicit URL structures
+    _url_indicators = [
+        "http://", "https://", "www.", "authhttps", "httpswww", "://",
+    ]
+    for indicator in _url_indicators:
+        if indicator in lowered:
+            return False
+
+    # Reject if a URL-like path suffix is present (e.g. ".com/auth", ".orglogin")
+    if re.search(r"\.(com|org|net|io|co)\s*/", lowered):
+        return False
+    if re.search(r"\.(com|org|net|io|co)[a-z]", lowered):
+        # Matches .comhttps, .comauth, .orglogin etc.  (but not "Telecom", "Icom", etc.)
+        # Only reject when the TLD is followed directly by more alpha chars (URL concat)
+        if re.search(r"(?<![a-z])(com|org|net|io)(?=[a-z])", lowered):
+            return False
+
+    # Reject un-spaced domain-like concatenations: e.g. swiggycom, googlecom, swiggyorg
+    # Pattern: word directly followed by com/org/net/io with no space or dot before it
+    # Reject promotional marketing slogans / CTA sentences
+    cta_starters = (
+        "join us", "become a", "partner with", "sign up", "learn more",
+        "click here", "get started", "how to", "welcome to", "discover how",
+        "boost your", "grow your", "order food", "order now"
+    )
+    if any(lowered.startswith(cta) for cta in cta_starters):
+        return False
+
+    if len(name.split()) > 5 and any(verb in lowered.split() for verb in ("and", "your", "with", "for", "boost", "join", "unlock")):
+        return False
+
     return True

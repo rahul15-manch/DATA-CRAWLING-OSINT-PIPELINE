@@ -28,6 +28,7 @@ import sys
 import re
 from collections import defaultdict
 from urllib.parse import urlparse
+from utils.deadline import Deadline
 from concurrent.futures import ThreadPoolExecutor
 
 DEBUG = os.getenv("DISCOVERY_DEBUG", "false").lower() == "true"
@@ -35,6 +36,10 @@ DEBUG = os.getenv("DISCOVERY_DEBUG", "false").lower() == "true"
 # Force UTF-8 output on Windows to prevent UnicodeEncodeError
 if sys.platform == "win32":
     sys.stdout.reconfigure(encoding="utf-8")
+
+_p1_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "pillar1"))
+if _p1_path not in sys.path:
+    sys.path.insert(0, _p1_path)
 
 import config
 from discovery.search_backend import run_search
@@ -296,6 +301,17 @@ def _url_path_looks_like_listing(url: str) -> bool:
     if "crunchbase.com" in host and "/discover/" in full_path:
         return True
 
+    # F6S and other aggregators: any path with /companies/ is a listing
+    aggregator_domains = {
+        "f6s.com", "angel.co", "angellist.com", "wellfound.com",
+        "dealroom.co", "tracxn.com", "producthunt.com", "growjo.com",
+        "topstartups.io", "startupranking.com", "ventureradar.com",
+        "cbinsights.com", "owler.com", "g2.com", "capterra.com",
+        "getapp.com", "trustpilot.com",
+    }
+    if any(ag in host for ag in aggregator_domains):
+        return True  # All pages on aggregators are listing/research pages, not company homepages
+
     listing_signals = (
         "/search",
         "/search/",
@@ -306,6 +322,13 @@ def _url_path_looks_like_listing(url: str) -> bool:
         "/best",
         "/top",
         "/profiles",
+        "/companies/",     # Universal: any site's /companies/X path = listing
+        "/startups/",      # Universal: /startups/X = listing
+        "/lists/",
+        "/rankings/",
+        "/explore/",
+        "/discover/",
+        "/collection/",
     )
     return any(signal in full_path for signal in listing_signals)
 
@@ -383,8 +406,28 @@ def classify_page_type_with_confidence(url: str, title: str = "") -> tuple[str, 
         return "DIRECTORY_LIST", 0.97
     if "crunchbase.com" in domain and "/discover/" in path:
         return "DIRECTORY_LIST", 0.97
+
+    # Aggregator / VC directory platforms → always DIRECTORY_LIST
+    _aggregator_domains = {
+        "f6s.com", "angel.co", "angellist.com", "wellfound.com",
+        "dealroom.co", "tracxn.com", "producthunt.com", "growjo.com",
+        "topstartups.io", "startupranking.com", "eu-startups.com",
+        "ventureradar.com", "cbinsights.com", "owler.com",
+        "g2.com", "capterra.com", "getapp.com", "trustpilot.com",
+    }
+    if any(ag in domain for ag in _aggregator_domains):
+        return "DIRECTORY_LIST", 0.97
+
     if _url_path_looks_like_listing(lowered_url):
         return "DIRECTORY_LIST", 0.95
+
+    # Regex-based title matching for listicle / ranking page patterns
+    _listing_title_re = re.compile(
+        r'\b(top|best|leading|list of|top \d+|best \d+)\b.*\b(companies|startups|agencies|firms|tools|platforms|software|solutions)\b',
+        re.IGNORECASE
+    )
+    if _listing_title_re.search(lowered_title):
+        return "DIRECTORY_LIST", 0.92
     if any(term in lowered_title for term in ("top companies", "best companies", "top software", "best software", "directories", "directory list", "list of best")):
         return "DIRECTORY_LIST", 0.92
 
@@ -489,7 +532,11 @@ def should_ignore_result(result: dict) -> bool:
     url = result.get("url", "")
     if "crunchbase.com" in url:
         return True
-        
+
+    from extraction.page_extractor import is_disallowed_subpage_url
+    if is_disallowed_subpage_url(url, result.get("title", "")):
+        return True
+
     classification, reason = classify_result(result)
     
     if classification in {"ALLOW", "LIKELY_COMPANY", "UNKNOWN", "DIRECTORY_LIST"}:
@@ -503,9 +550,9 @@ def should_ignore_result(result: dict) -> bool:
     return True
 
 
-def evaluate_direct_homepage(homepage_url: str, title: str, snippet: str, query_or_keyword: str, provider: str, ranker) -> dict | None:
+def evaluate_direct_homepage(homepage_url: str, title: str, snippet: str, query_or_keyword: str, provider: str, ranker, deadline: Deadline | None = None) -> dict | None:
     from discovery.homepage_evaluator import _fetch_homepage
-    html = _fetch_homepage(homepage_url)
+    html = _fetch_homepage(homepage_url, deadline=deadline)
     if html:
         from query.expansion import record_query_outcome
         record_query_outcome(query_or_keyword, "homepage_crawled", provider=provider)
@@ -536,7 +583,7 @@ def score_html_content(html: str, url: str, title: str, snippet: str, query_or_k
     return None
 
 
-def evaluate_url(url: str, title: str, snippet: str, query_or_keyword: str, provider: str) -> dict | None:
+def evaluate_url(url: str, title: str, snippet: str, query_or_keyword: str, provider: str, deadline: Deadline | None = None) -> dict | None:
     from discovery.semantic_ranking_engine import SemanticRanker
     ranker = SemanticRanker()
 
@@ -560,13 +607,13 @@ def evaluate_url(url: str, title: str, snippet: str, query_or_keyword: str, prov
     # 3. COMPANY_PROFILE -> Homepage Extraction & Evaluation with profile fallback
     if page_type == "COMPANY_PROFILE":
         from discovery.homepage_evaluator import _fetch_homepage
-        profile_html = _fetch_homepage(url)
+        profile_html = _fetch_homepage(url, deadline=deadline)
         if profile_html:
             from bs4 import BeautifulSoup
             soup = BeautifulSoup(profile_html, "html.parser")
             homepage_url, _ = ranker.extractor._extract_website(soup, profile_html, url)
             if homepage_url and homepage_url.strip() and not _is_platform_domain(homepage_url):
-                homepage_res = evaluate_direct_homepage(homepage_url, title, snippet, query_or_keyword, provider, ranker)
+                homepage_res = evaluate_direct_homepage(homepage_url, title, snippet, query_or_keyword, provider, ranker, deadline=deadline)
                 if homepage_res:
                     return homepage_res
             profile_res = score_html_content(profile_html, url, title, snippet, query_or_keyword, provider, ranker)
@@ -595,7 +642,7 @@ def evaluate_url(url: str, title: str, snippet: str, query_or_keyword: str, prov
             }
         else:
             from discovery.homepage_evaluator import _fetch_homepage
-            html = _fetch_homepage(url)
+            html = _fetch_homepage(url, deadline=deadline)
             if html:
                 from query.expansion import record_query_outcome
                 record_query_outcome(query_or_keyword, "homepage_crawled", provider=provider)
@@ -630,7 +677,7 @@ def evaluate_url(url: str, title: str, snippet: str, query_or_keyword: str, prov
                 }
     elif relevance_score >= config.RELEVANCE_THRESHOLD_LOW:
         from discovery.homepage_evaluator import _fetch_homepage
-        html = _fetch_homepage(url)
+        html = _fetch_homepage(url, deadline=deadline)
         if html:
             from query.expansion import record_query_outcome
             record_query_outcome(query_or_keyword, "homepage_crawled", provider=provider)
@@ -840,27 +887,19 @@ def interleave_urls_by_domain(candidate_tuples: list) -> list:
 # Main discovery function  (Tasks 2, 4, 5, 11, 12)
 # ─────────────────────────────────────────────────────────────────────────────
 
-def discover_companies(keyword: str) -> list:
+from utils.deadline import Deadline, DeadlineExceeded
+
+
+def discover_companies(keyword: str, deadline: "Deadline | None" = None) -> list:
     """
     Run paginated search across all tasks for a keyword, qualify companies,
     and return a validated, normalized, deduplicated list of company dicts.
-
-    Steps
-    -----
-    1. Generate search tasks from keyword.
-    2. For each page (up to MAX_SEARCH_PAGES):
-         a. Run every search task at the given page offset.
-         b. Filter raw results (should_ignore_result).
-         c. Extract company name + metadata.
-         d. When the same company appears from multiple sources, keep the
-            higher-confidence record (source_ranker.best_company_record).
-         e. Stop early if TARGET_COMPANIES already collected.
-    3. Apply quality_penalty → hard-reject high-penalty records.
-    4. Validate each company record.
-    5. Normalize company names (merge IBM India / IBM Corp → IBM).
-    6. Deduplicate by normalised name.
-    7. Update stats_tracker throughout.
     """
+    from utils.deadline import Deadline
+    if deadline and deadline.is_exceeded():
+        print(f"[company_discovery] Deadline exceeded before discovery start.")
+        return []
+
     # ── Priority Queue Scheduler Integration ──────────────────────────────────
     from network_client_project.network.scheduler import Scheduler
     from network_client_project.network.middleware.base import Request
@@ -896,7 +935,14 @@ def discover_companies(keyword: str) -> list:
                     query=t.query,
                     provider=t.source,
                     priority=source_priorities.get(t.source, 20),
-                    meta={"page": 0, "max_results": 10, "source": t.source, "depth": 1}
+                    meta={
+                        "page": 0,
+                        "max_results": 10,
+                        "source": t.source,
+                        "depth": 1,
+                        "discovery_mode": getattr(t, "discovery_mode", "expanded"),
+                        "original_keyword": getattr(t, "original_keyword", keyword),
+                    }
                 )
                 scheduler.enqueue(req)
                 stats.increment("queries_generated")
@@ -931,33 +977,22 @@ def discover_companies(keyword: str) -> list:
     # Configurable limits
     target_companies = getattr(config, "TARGET_COMPANIES", 50)
     target_high_confidence = getattr(config, "TARGET_HIGH_CONFIDENCE", 10)
-    max_runtime = getattr(config, "MAX_RUNTIME", 30)
-    
-    # Dynamic timeout formula: base + 2s * active providers + 1s * active template families
-    active_providers = sum(1 for pname in manager._priority if manager.provider_health.get(pname, False))
-    from query.company_template import COMPANY_TEMPLATES
-    active_families = len(COMPANY_TEMPLATES)
-    timeout_cap = min(float(max_runtime), 20.0 + 2.0 * active_providers + 1.0 * active_families)
-    
-    from utils.deadline import Deadline
-    Deadline.set_timeout(timeout_cap)
+    discovery_deadline = deadline if deadline else Deadline(getattr(config, "DISCOVERY_DEADLINE_SECONDS", 55.0))
+    # search_deadline is a phase-bounded child: uses at most SEARCH_MAX_RUNTIME seconds
+    # but is also capped by whatever discovery time remains — no independent clock.
+    search_deadline = discovery_deadline.child(
+        min(getattr(config, "SEARCH_MAX_RUNTIME", 45.0), discovery_deadline.remaining())
+    )
+
     if hasattr(manager, "_client") and hasattr(manager._client, "proxy_manager"):
         manager._client.proxy_manager.is_crawling = True
     
-    # 4-Way Granular Budget Allocation (30% Search, 20% Directory, 35% Homepage, 15% Verification)
-    search_budget_s = timeout_cap * 0.30
-    directory_budget_s = timeout_cap * 0.20
-    homepage_budget_s = timeout_cap * 0.35
-    verification_budget_s = timeout_cap * 0.15
-    
     exit_reason = "All enqueued tasks completed"
 
-    search_phase_start_time = time.time()
     while not scheduler.is_empty():
-        # Check if Search Phase budget (30%) is exhausted
-        if (time.time() - search_phase_start_time) >= search_budget_s:
-            print(f"[company_discovery] Search phase budget ({search_budget_s:.1f}s) exhausted. Transitioning to directory & homepage crawling.")
-            exit_reason = f"Search phase budget ({search_budget_s:.1f}s) completed"
+        if search_deadline.is_exceeded() or (deadline and deadline.remaining() < 1.0):
+            print(f"[company_discovery] Search phase deadline completed ({discovery_deadline.remaining():.1f}s remaining). Transitioning to directory & homepage crawling.")
+            exit_reason = "Search phase deadline completed"
             break
 
         req = scheduler.next()
@@ -970,6 +1005,7 @@ def discover_companies(keyword: str) -> list:
         page_offset = page * max_results
 
         family = req.meta.get("source", "unknown")
+        task_discovery_mode = req.meta.get("discovery_mode", "expanded")
         
         # Check provider exhaustion for this keyword + family
         if not manager.providers_available_for_keyword(family):
@@ -995,8 +1031,8 @@ def discover_companies(keyword: str) -> list:
         stats.increment("funnel_requests_sent")
 
         try:
-            # Execute search
-            raw_results = run_search(req.query, start=page_offset, family=family)
+            # Execute search with bounded deadline
+            raw_results = run_search(req.query, start=page_offset, family=family, deadline=search_deadline)
             from search.manager import get_search_manager
             manager = get_search_manager()
             is_cache_served = manager.last_provider_used == "cache"
@@ -1007,6 +1043,13 @@ def discover_companies(keyword: str) -> list:
                 stats.increment("funnel_http_success")
 
         except Exception as e:
+            # If the search layer signalled that all providers are exhausted,
+            # bubble this up so the top-level pipeline can abort with a clear
+            # DISCOVERY_UNAVAILABLE message instead of continuing silently.
+            from search.exceptions import AllProvidersExhausted
+            if isinstance(e, AllProvidersExhausted):
+                print(f"[company_discovery] Discovery unavailable: {e}")
+                raise
             print(f"[company_discovery] search failed for query '{req.query}': {e}")
             # Adaptive priority feedback loop: decrease on failure
             source_priorities[family] = max(10, source_priorities.get(family, 50) - 20)
@@ -1045,8 +1088,8 @@ def discover_companies(keyword: str) -> list:
             from discovery.semantic_ranking_engine import SemanticRanker
             ranker = SemanticRanker()
 
-            # Step 1: Snippet-level scoring
-            sre_res = ranker.score_snippet(result.get("title", ""), result.get("snippet", ""), keyword)
+            # Step 1: Snippet-level scoring (pass url for entity identity signals)
+            sre_res = ranker.score_snippet(result.get("title", ""), result.get("snippet", ""), keyword, url=url)
             relevance_score = sre_res["score"]
             tier = sre_res["tier"]
 
@@ -1069,7 +1112,7 @@ def discover_companies(keyword: str) -> list:
                     homepage_evals += 1
                     
                     from discovery.homepage_evaluator import _fetch_homepage
-                    html = _fetch_homepage(url)
+                    html = _fetch_homepage(url, deadline=deadline)
                     
                     if html:
                         # Full HTML score
@@ -1146,13 +1189,25 @@ def discover_companies(keyword: str) -> list:
                 "relevance_tier": tier,
                 "relevance_info": sre_res,
                 "industry_detected": sre_res.get("industry", "Unknown"),
+                "discovery_mode": task_discovery_mode,
             }
 
             # Attach URL to the right slot
             if "linkedin.com" in url:
                 new_record["linkedin"] = url
-            elif not _is_platform_domain(url):
-                new_record["website"] = url
+            elif not _is_platform_domain(url) and not is_rejected_lead_domain(url):
+                # For entity queries, verify domain token matches entity query or company name
+                from query.intent_classifier import is_entity_query
+                if is_entity_query(keyword):
+                    dtok = _domain_token(url)
+                    kw_slug = re.sub(r"[^a-z0-9]", "", keyword.lower())
+                    comp_slug = re.sub(r"[^a-z0-9]", "", company_name.lower())
+                    if dtok and (dtok in kw_slug or kw_slug in dtok or dtok in comp_slug or comp_slug in dtok):
+                        new_record["website"] = get_root_company_url(url)
+                    else:
+                        print(f"[company_discovery] Rejected candidate website {url} for entity query '{keyword}' (domain token '{dtok}' does not match entity/company)")
+                else:
+                    new_record["website"] = get_root_company_url(url)
 
             if key not in accumulator:
                 accumulator[key] = new_record
@@ -1171,7 +1226,14 @@ def discover_companies(keyword: str) -> list:
                 query=req.query,
                 provider=pname,
                 priority=source_priorities.get(pname, 20),
-                meta={"page": page + 1, "max_results": max_results, "source": pname, "depth": 1}
+                meta={
+                    "page": page + 1,
+                    "max_results": max_results,
+                    "source": pname,
+                    "depth": 1,
+                    "discovery_mode": req.meta.get("discovery_mode", "expanded"),
+                    "original_keyword": req.meta.get("original_keyword", keyword),
+                }
             )
             scheduler.enqueue(next_req)
 
@@ -1190,7 +1252,8 @@ def discover_companies(keyword: str) -> list:
         recent_yields.append(accepted_count)
             
         time_taken = time.time() - start_time
-        print(f"[Discovery Stats] Source: {provider_name:<20} | Query: '{req.query}' | Parsed: {parsed_count_total} | Accepted: {accepted_count_total} | Rejected: {rejected_count_total} | Time: {time_taken:.2f}s")
+        actual_provider = manager.last_provider_used if (hasattr(manager, "last_provider_used") and manager.last_provider_used) else provider_name
+        print(f"[Discovery Stats] Source: {actual_provider:<20} | Query: '{req.query}' | Parsed: {parsed_count_total} | Accepted: {accepted_count_total} | Rejected: {rejected_count_total} | Time: {time_taken:.2f}s")
         
         if task_yielded:
             consecutive_zero_queries = 0
@@ -1222,11 +1285,10 @@ def discover_companies(keyword: str) -> list:
                 exit_reason = "ROI too low"
                 break
 
-        # Check total run time (dynamic cap)
-        elapsed = time.time() - discovery_start_time
-        if elapsed >= timeout_cap:
-            print(f"[company_discovery] Stopping: Maximum adaptive runtime cap ({timeout_cap:.1f}s) exceeded (Elapsed: {elapsed:.1f}s).")
-            exit_reason = "Adaptive runtime cap exceeded"
+        # Check discovery phase deadline
+        if discovery_deadline.is_exceeded() or (deadline and deadline.remaining() < 1.0):
+            print(f"[company_discovery] Stopping: Discovery phase deadline completed ({discovery_deadline.remaining():.1f}s remaining).")
+            exit_reason = "Discovery deadline completed"
             break
 
         # Check productivity (no new accepted companies for 10 consecutive seconds)
@@ -1257,14 +1319,20 @@ def discover_companies(keyword: str) -> list:
             enqueue_next_batch(5)
 
     # ── Process Directory Queue (Secondary Queue) ──────────────────────────────
+    from query.intent_classifier import is_entity_query
+    if is_entity_query(keyword):
+        if directory_urls_to_mine:
+            print(f"\n[Discovery] Skipping directory queue for entity query '{keyword}' ({len(directory_urls_to_mine)} directory URLs skipped)")
+            directory_urls_to_mine.clear()
+
     if directory_urls_to_mine:
         dir_count = len(directory_urls_to_mine)
         # Workload-scaled adaptive directory budget (10 dirs -> 15s, 40 dirs -> 30s, 100 dirs -> 45s)
         dir_budget_s = min(45.0, max(15.0, dir_count * 1.5))
         print(f"\n[Discovery] Processing directory queue: {dir_count} directories collected (Adaptive Budget: {dir_budget_s:.1f}s)")
         
-        # Reset deadline timer for directory phase
-        Deadline.set_timeout(dir_budget_s)
+        # Create sub-deadline timer for directory phase
+        dir_deadline = Deadline(min(dir_budget_s, deadline.remaining() if deadline else dir_budget_s))
         
         from discovery.directory_extractor import extract_company_links
         from discovery.homepage_evaluator import _fetch_homepage
@@ -1273,9 +1341,11 @@ def discover_companies(keyword: str) -> list:
         all_candidate_profiles = []
         
         def _mine_single_directory(item):
+            if (dir_deadline and dir_deadline.is_exceeded()) or (deadline and deadline.is_exceeded()):
+                return []
             dir_url, dir_title, dir_family = item
             print(f"[Discovery] Mining directory: {dir_url}")
-            dir_html = _fetch_homepage(dir_url)
+            dir_html = _fetch_homepage(dir_url, deadline=dir_deadline)
             if not dir_html:
                 print(f"[Discovery] Failed to fetch directory page: {dir_url}")
                 return []
@@ -1284,10 +1354,21 @@ def discover_companies(keyword: str) -> list:
             stats.increment("directory_mined", len(extracted_links))
             return [(ext_url, dir_title, dir_family) for ext_url in extracted_links if ext_url not in processed_company_urls]
 
-        with ThreadPoolExecutor(max_workers=5) as executor:
-            results_list = list(executor.map(_mine_single_directory, directory_urls_to_mine))
-            for res in results_list:
-                all_candidate_profiles.extend(res)
+        mine_executor = ThreadPoolExecutor(max_workers=5)
+        try:
+            futures = [mine_executor.submit(_mine_single_directory, item) for item in directory_urls_to_mine]
+            for f in futures:
+                if (dir_deadline and dir_deadline.is_exceeded()) or (deadline and deadline.is_exceeded()):
+                    print("[Discovery] Directory mining deadline reached, aborting remaining directory fetches.")
+                    break
+                try:
+                    res = f.result(timeout=min(8.0, dir_deadline.remaining() if dir_deadline else 8.0))
+                    if res:
+                        all_candidate_profiles.extend(res)
+                except Exception:
+                    continue
+        finally:
+            mine_executor.shutdown(wait=False, cancel_futures=True)
                     
         # Interleave candidates by domain and prioritize High-confidence / relevant candidates first
         interleaved_candidates = interleave_urls_by_domain(all_candidate_profiles)
@@ -1319,6 +1400,8 @@ def discover_companies(keyword: str) -> list:
         domain_time_lock = threading.Lock()
         
         def evaluate_candidate(cand):
+            if (dir_deadline and dir_deadline.is_exceeded()) or (deadline and deadline.is_exceeded()):
+                return None
             ext_url, dir_title, dir_family = cand
             if "crunchbase.com" in ext_url:
                 return None
@@ -1340,19 +1423,26 @@ def discover_companies(keyword: str) -> list:
                 
             try:
                 # Evaluate company profile or direct URL
-                eval_res = evaluate_url(ext_url, "", "", keyword, dir_family)
+                eval_res = evaluate_url(ext_url, "", "", keyword, dir_family, deadline=dir_deadline)
                 if eval_res:
                     return (cand, eval_res)
             except Exception as e:
                 print(f"[Discovery] Error evaluating candidate {ext_url}: {e}")
             return None
 
-        # Execute thread pool
-        with ThreadPoolExecutor(max_workers=num_workers) as executor:
+        # Execute thread pool with non-blocking shutdown
+        executor = ThreadPoolExecutor(max_workers=num_workers)
+        try:
             futures = [executor.submit(evaluate_candidate, cand) for cand in candidates_to_process]
             
             for future in futures:
-                res = future.result()
+                if (dir_deadline and dir_deadline.is_exceeded()) or (deadline and deadline.is_exceeded()):
+                    print("[Discovery] Directory evaluation deadline reached, aborting remaining directory candidates.")
+                    break
+                try:
+                    res = future.result(timeout=min(10.0, dir_deadline.remaining() if dir_deadline else 10.0))
+                except Exception:
+                    continue
                 if not res:
                     continue
                 
@@ -1413,6 +1503,8 @@ def discover_companies(keyword: str) -> list:
                     else:
                         accumulator[key] = new_record
                         unique_sources.add(source)
+        finally:
+            executor.shutdown(wait=False, cancel_futures=True)
 
     # ── Task Preservation ──────────────────────────────────────────────────
     remaining = []
@@ -1436,6 +1528,30 @@ def discover_companies(keyword: str) -> list:
                 "remaining_count": len(remaining) + rest_count,
                 "next_tasks": remaining
             }) + "\n")
+
+    # ── Partial results snapshot (preserve work done so far) ───────────────
+    try:
+        import json as _json
+        from datetime import datetime as _dt
+        if accumulator or directory_urls_to_mine:
+            os.makedirs("output", exist_ok=True)
+            ts = _dt.now().strftime("%Y%m%d_%H%M%S")
+            safe = keyword.replace(" ", "_").replace("/", "_").replace("\\", "_").lower().strip("_") or "partial"
+            partial_path = os.path.join("output", f"partial_{safe}_{ts}.json")
+            snapshot = {
+                "keyword": keyword,
+                "exit_reason": exit_reason,
+                "accumulator_count": len(accumulator),
+                "accumulator": list(accumulator.values())[:200],
+                "directory_candidates": directory_urls_to_mine[:200],
+                "remaining_tasks_preview": remaining[:20],
+            }
+            with open(partial_path, "w", encoding="utf-8") as _f:
+                _json.dump(snapshot, _f, indent=2, ensure_ascii=False)
+            print(f"[company_discovery] Partial results saved: {partial_path}")
+    except Exception:
+        # Do not let snapshot failures block discovery finalization
+        pass
 
     # ── Apply quality penalty + structural validation ─────────────────────
     validated = []
@@ -1469,6 +1585,73 @@ def discover_companies(keyword: str) -> list:
 
     # ── Deduplicate by normalised name ────────────────────────────────────
     result = dedupe_companies(normalized)
+
+    # For entity queries (e.g. "swiggy", "pizza hut"), consolidate onto the primary canonical entity
+    from query.intent_classifier import is_entity_query
+    if is_entity_query(keyword):
+        kw_slug = re.sub(r"[^a-z0-9]", "", keyword.lower())
+        entity_matches = [
+            c for c in result
+            if kw_slug == re.sub(r"[^a-z0-9]", "", (c.get("company") or "").lower())
+            or kw_slug in re.sub(r"[^a-z0-9]", "", (c.get("company") or "").lower())
+        ]
+        if entity_matches:
+            with_website = [c for c in entity_matches if c.get("website")]
+            if with_website:
+                # Merge any linkedin URL from other entity matches if missing
+                for cand in entity_matches:
+                    if cand.get("linkedin") and not with_website[0].get("linkedin"):
+                        with_website[0]["linkedin"] = cand.get("linkedin")
+                result = with_website[:1]
+            else:
+                result = entity_matches[:1]
+
+            # If the canonical entity record has no website, resolve it via quick HTTP probe
+            if result and not result[0].get("website"):
+                cand = result[0]
+                slugs = []
+                if cand.get("linkedin"):
+                    m = re.search(r"linkedin\.com/company/([a-z0-9\-]+)", cand["linkedin"].lower())
+                    if m:
+                        slugs.append(m.group(1).replace("-", ""))
+                if kw_slug and kw_slug not in slugs:
+                    slugs.append(kw_slug)
+                
+                import requests
+                for s in slugs:
+                    for host in (f"https://www.{s}.com", f"https://{s}.com"):
+                        try:
+                            probe = requests.get(
+                                host,
+                                timeout=3.5,
+                                allow_redirects=True,
+                                stream=True,
+                                headers={"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"}
+                            )
+                            if probe.status_code < 400:
+                                final_url = probe.url
+                                from urllib.parse import urlparse
+                                p_dom = urlparse(final_url).netloc.lower()
+                                if p_dom.startswith("www."):
+                                    p_dom = p_dom[4:]
+                                if s in p_dom:
+                                    cand["website"] = final_url
+                                    cand["domain"] = p_dom
+                                    cand["relevance_tier"] = "HIGH"
+                                    cand["source"] = "entity_resolution"
+                                    print(f"[company_discovery] Resolved canonical domain for {keyword}: {final_url}")
+                                    break
+                        except Exception:
+                            continue
+                    if cand.get("website"):
+                        break
+
+        # Standardize entity company name to title casing if slug matches
+        if result and is_entity_query(keyword):
+            cand_name = result[0].get("company") or ""
+            if kw_slug == re.sub(r"[^a-z0-9]", "", cand_name.lower()):
+                result[0]["company"] = keyword.strip().title()
+
     stats.set_value("validated_companies", len(result))
 
     # ── Phase 1 Advanced Enrichment (Lead Score, Domain Intel, Org Graph) ──

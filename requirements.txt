@@ -1,10 +1,54 @@
-aiohttp
-beautifulsoup4
-python-whois
-requests
-dotenv
-curl_cffi
-pydantic_settings
-tenacity
-numpy
-pandas
+# Core HTTP & scraping
+aiohttp>=3.9
+beautifulsoup4>=4.12
+curl_cffi>=0.7
+httpx>=0.27
+lxml>=5.0
+requests>=2.31
+
+# Browser automation (REQUIRED — many sites block plain HTTP)
+playwright>=1.44
+# After install, run: playwright install chromium
+
+# Web framework & server
+fastapi>=0.111
+uvicorn[standard]>=0.29
+
+# Data & config
+numpy>=1.26
+pandas>=2.2
+pydantic>=2.6
+pydantic-settings>=2.2
+python-dotenv>=1.0
+python-whois>=0.9
+tenacity>=8.2
+
+# Scraping helpers
+fake-useragent>=1.4
+
+# DNS (for email MX verification — Phase 5)
+dnspython>=2.6
+
+# Testing
+pytest>=8.0
+pytest-asyncio>=0.23
+Faker>=24.0
+
+# ── Install instructions ───────────────────────────────────────────────────
+# 1. Create and activate a virtual environment:
+#      python -m venv .venv
+#      .venv\Scripts\activate          (Windows)
+#      source .venv/bin/activate        (Linux/Mac)
+#
+# 2. Install all dependencies:
+#      pip install -r requirements.txt
+#
+# 3. Install Playwright browser (one-time, ~200 MB):
+#      playwright install chromium
+#
+# 4. Run the API server:
+#      python api.py
+#
+# IMPORTANT: Always run commands via .venv\Scripts\python or .venv\Scripts\pytest
+# NOT via the system Python. The system Python does not have playwright installed
+# and all extraction will silently degrade to empty results.

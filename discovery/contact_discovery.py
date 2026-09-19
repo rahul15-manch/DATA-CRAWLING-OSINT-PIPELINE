@@ -18,6 +18,7 @@ from query.query_generator import generate_contact_queries
 from discovery.search_backend import run_search, get_search_manager
 from utils.constants import DESIGNATION_KEYWORDS, DESIGNATION_ACRONYMS
 from utils.validators import is_valid_person_name
+from utils.deadline import Deadline, DeadlineExceeded
 
 EMAIL_PATTERN = re.compile(r"[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}")
 
@@ -52,7 +53,7 @@ def _extract_name_from_linkedin_title(title: str) -> str:
     return parts[0].strip() if parts else ""
 
 
-def discover_contact(company: str) -> dict:
+def discover_contact(company: str, deadline: Deadline | None = None) -> dict:
     """
     Returns a single best-guess contact dict for the given company:
     {contact_name, designation, email, linkedin, source}
@@ -62,6 +63,15 @@ def discover_contact(company: str) -> dict:
     designation are present. Bare designations without a realistic name
     are silently skipped.
     """
+    from utils.deadline import Deadline, DeadlineExceeded
+
+    if deadline:
+        try:
+            deadline.require(1.0)
+        except DeadlineExceeded:
+            print(f"[contact_discovery] Deadline exceeded — skipping contact discovery for '{company}'")
+            return {}
+
     sm = get_search_manager()
     if not sm.providers_available():
         print(f"[contact_discovery] Search providers exhausted — skipping discovery for '{company}'")
@@ -71,12 +81,19 @@ def discover_contact(company: str) -> dict:
     consecutive_zeroes = 0
 
     for q in queries:
+        if deadline:
+            try:
+                deadline.require(1.0)
+            except DeadlineExceeded:
+                print(f"[contact_discovery] Deadline exceeded during queries for '{company}'")
+                break
+
         if not sm.providers_available():
             print(f"[contact_discovery] Search providers exhausted/cooldown during discovery. Stopping.")
             break
 
         print(f"[contact_discovery] running query: {q}")
-        raw_results = run_search(q, max_results=5)
+        raw_results = run_search(q, max_results=5, deadline=deadline)
         print(f"[contact_discovery]   -> {len(raw_results)} raw results")
         
         if not raw_results:

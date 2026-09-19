@@ -62,6 +62,7 @@ class BingProvider(SearchProvider):
         request_or_query: Request | str,
         max_results: int = 10,
         page: int = 0,
+        deadline = None,
     ) -> list[SearchResult]:
         from search.search_validator import validate_search_response, SearchValidationResult
 
@@ -71,6 +72,12 @@ class BingProvider(SearchProvider):
             max_results = request_or_query.meta.get("max_results", 10)
         else:
             query = request_or_query
+
+        if deadline:
+            rem = deadline.remaining()
+            if rem <= 0.0 or deadline.is_exceeded():
+                from utils.deadline import DeadlineExceeded
+                raise DeadlineExceeded("Bing deadline budget exhausted")
 
         if not self.is_available():
             raise ProviderUnavailable(self.name, "ENABLE_BING is False")
@@ -99,13 +106,13 @@ class BingProvider(SearchProvider):
         q_session_id = f"bing:{abs(hash(query)) % 10000}"
 
         for attempt in range(1, 3):
-            from utils.deadline import Deadline
-            if attempt > 1 and Deadline.is_exceeded():
-                logger.warning("[BingProvider] Global deadline exceeded. Aborting Bing search retries.")
-                break
             # Pre-request delay to prevent aggressive bot flagging
             if attempt == 1:
-                time.sleep(random.uniform(1.5, 3.5))
+                pre_sleep = random.uniform(1.0, 2.0)
+                if deadline:
+                    pre_sleep = min(pre_sleep, max(0.0, deadline.remaining() - 0.5))
+                if pre_sleep > 0:
+                    time.sleep(pre_sleep)
             
             html = ""
             status_code = 200
@@ -115,13 +122,15 @@ class BingProvider(SearchProvider):
             try:
                 # ProxyMiddleware handles direct_first policy via provider tag
                 print(f"[BingProvider] Attempt {attempt}/2")
+                req_timeout = min(8.0, deadline.remaining()) if deadline else 8.0
                 resp = self._client.get(
                     url,
                     session_id=q_session_id,
                     headers=headers,
                     auto_score=False,
                     provider="bing",
-                    timeout=15.0,
+                    timeout=req_timeout,
+                    deadline=deadline,
                 )
                 status_code = resp.status_code
                 url_actual = resp.url
@@ -153,7 +162,11 @@ class BingProvider(SearchProvider):
             if val_result.status in ["CAPTCHA", "RATE_LIMIT"]:
                 if attempt < 2:
                     # Rotate session and retry once quickly
-                    time.sleep(random.uniform(2.5, 4.5))
+                    retry_sleep = random.uniform(1.0, 2.0)
+                    if deadline:
+                        retry_sleep = min(retry_sleep, max(0.0, deadline.remaining() - 0.5))
+                    if retry_sleep > 0:
+                        time.sleep(retry_sleep)
                     continue
                 else:
                     # Final attempt failed, now we cooldown

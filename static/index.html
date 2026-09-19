@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OSINT Lead Discovery & Extraction Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-950 text-gray-100 min-h-screen font-sans">
+  <div class="max-w-7xl mx-auto p-6">
+    
+    <!-- Top Header -->
+    <header class="mb-8 border-b border-gray-800 pb-6 flex flex-col md:flex-row md:items-center justify-between gap-4">
+      <div>
+        <div class="flex items-center gap-3">
+          <div class="p-2.5 bg-indigo-600/20 border border-indigo-500/30 rounded-xl text-indigo-400">
+            <i class="fa-solid fa-radar text-2xl"></i>
+          </div>
+          <div>
+            <h1 class="text-2xl font-bold text-white tracking-tight">OSINT Lead Intelligence</h1>
+            <p class="text-sm text-gray-400">Autonomous Company Discovery & Rich Field Extraction Engine</p>
+          </div>
+        </div>
+      </div>
+      <div id="dbBadge" class="text-xs bg-gray-900 border border-gray-800 px-3 py-1.5 rounded-lg text-gray-400 flex items-center gap-2">
+        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span> SQLite Database Connected
+      </div>
+    </header>
+
+    <!-- Search Box -->
+    <div class="bg-gray-900 border border-gray-800 rounded-2xl p-4 mb-8 shadow-xl">
+      <div class="flex flex-col sm:flex-row gap-3">
+        <div class="relative flex-1">
+          <i class="fa-solid fa-magnifying-glass absolute left-4 top-3.5 text-gray-500"></i>
+          <input id="keywordInput" type="text" placeholder="e.g. AI software companies, Cloud consultants in India" 
+                 class="w-full bg-gray-950 border border-gray-800 text-white rounded-xl pl-11 pr-4 py-3 text-sm focus:outline-none focus:border-indigo-500 transition"
+                 onkeypress="if(event.key==='Enter') triggerSearch()">
+        </div>
+        <button onclick="triggerSearch()" id="searchBtn"
+                class="bg-indigo-600 hover:bg-indigo-500 active:bg-indigo-700 text-white font-medium px-6 py-3 rounded-xl text-sm transition flex items-center justify-center gap-2 shadow-lg shadow-indigo-600/20">
+          <i class="fa-solid fa-bolt"></i> Discover Leads
+        </button>
+      </div>
+
+      <!-- Live Multi-Stage Status Bar -->
+      <div id="statusContainer" class="mt-4 pt-4 border-t border-gray-800/60 hidden">
+        <div class="flex justify-between items-center text-xs mb-2">
+          <span id="stageLabel" class="font-medium text-indigo-400">Initializing search...</span>
+          <span id="progressPercent" class="text-gray-400">0%</span>
+        </div>
+        <div class="w-full bg-gray-950 rounded-full h-2 overflow-hidden border border-gray-800">
+          <div id="progressBar" class="bg-indigo-500 h-2 rounded-full transition-all duration-500" style="width: 0%"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Category Filter Tabs -->
+    <div class="flex items-center justify-between mb-4">
+      <h2 class="text-lg font-semibold text-white">Discovered Lead Cards</h2>
+      <div id="leadCountLabel" class="text-xs text-gray-400">0 leads loaded</div>
+    </div>
+    
+    <div id="categoryTabs" class="flex gap-2 border-b border-gray-800 pb-3 mb-6 overflow-x-auto scrollbar-none">
+      <button onclick="filterCategory(null)" class="px-4 py-2 rounded-lg bg-indigo-600 text-white text-xs font-medium transition">All Leads</button>
+    </div>
+
+    <!-- Lead Cards Grid -->
+    <div id="leadsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="col-span-full text-center text-gray-500 py-16 bg-gray-900/50 border border-gray-800/50 rounded-2xl">
+        <i class="fa-solid fa-compass-drafting text-4xl mb-3 opacity-40"></i>
+        <p class="text-sm">Enter a keyword above to trigger discovery & extraction.</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    let activeCategory = null;
+
+    async function triggerSearch() {
+      const kw = document.getElementById("keywordInput").value.trim();
+      if (!kw) return alert("Please enter a keyword");
+      
+      const btn = document.getElementById("searchBtn");
+      btn.disabled = true;
+      btn.classList.add("opacity-50");
+
+      document.getElementById("statusContainer").classList.remove("hidden");
+      
+      try {
+        const res = await fetch(`/api/search?keyword=${encodeURIComponent(kw)}`, { method: "POST" });
+        const data = await res.json();
+        if (data.error) {
+          alert(data.error);
+          btn.disabled = false;
+          btn.classList.remove("opacity-50");
+          return;
+        }
+        pollStatus();
+      } catch (err) {
+        alert("Server error: " + err);
+        btn.disabled = false;
+        btn.classList.remove("opacity-50");
+      }
+    }
+
+    function pollStatus() {
+      const interval = setInterval(async () => {
+        try {
+          const state = await fetch("/api/status").then(r => r.json());
+          
+          document.getElementById("stageLabel").innerText = state.stage || "Running...";
+          document.getElementById("progressPercent").innerText = (state.progress_pct || 0) + "%";
+          document.getElementById("progressBar").style.width = (state.progress_pct || 0) + "%";
+
+          if (state.status === "completed" || state.status === "error") {
+            clearInterval(interval);
+            const btn = document.getElementById("searchBtn");
+            btn.disabled = false;
+            btn.classList.remove("opacity-50");
+            
+            setTimeout(() => {
+              document.getElementById("statusContainer").classList.add("hidden");
+            }, 3000);
+
+            loadCategories();
+            loadLeads();
+          }
+        } catch (e) {
+          console.error(e);
+        }
+      }, 1500);
+    }
+
+    async function loadCategories() {
+      const data = await fetch("/api/categories").then(r => r.json());
+      const container = document.getElementById("categoryTabs");
+      let html = `<button onclick="filterCategory(null)" class="px-4 py-2 rounded-lg ${!activeCategory ? 'bg-indigo-600 text-white' : 'bg-gray-900 text-gray-400 hover:bg-gray-800'} text-xs font-medium transition">All</button>`;
+      
+      for (const [cat, count] of Object.entries(data.categories || {})) {
+        const isSelected = activeCategory === cat;
+        html += `
+          <button onclick="filterCategory('${cat}')" class="px-4 py-2 rounded-lg ${isSelected ? 'bg-indigo-600 text-white' : 'bg-gray-900 text-gray-400 hover:bg-gray-800'} text-xs font-medium transition whitespace-nowrap">
+            ${cat} <span class="ml-1 text-[10px] opacity-75">(${count})</span>
+          </button>`;
+      }
+      container.innerHTML = html;
+    }
+
+    async function loadLeads() {
+      const url = activeCategory ? `/api/leads?category=${encodeURIComponent(activeCategory)}` : "/api/leads";
+      const data = await fetch(url).then(r => r.json());
+      const grid = document.getElementById("leadsGrid");
+      
+      document.getElementById("leadCountLabel").innerText = `${data.count || 0} leads loaded`;
+
+      if (!data.leads || data.leads.length === 0) {
+        grid.innerHTML = `<div class="col-span-full text-center text-gray-500 py-16 bg-gray-900/50 border border-gray-800/50 rounded-2xl">No leads found in database.</div>`;
+        return;
+      }
+
+      grid.innerHTML = data.leads.map(lead => {
+        const techs = lead.tech_stack || [];
+        const emails = lead.emails || [];
+        const phones = lead.phones || [];
+        const people = lead.people || [];
+
+        return `
+          <div class="bg-gray-900 border border-gray-800 hover:border-gray-700 rounded-2xl p-5 shadow-xl flex flex-col justify-between transition">
+            <div>
+              <!-- Header & Industry Badge -->
+              <div class="flex justify-between items-start mb-2 gap-2">
+                <h3 class="text-lg font-bold text-white tracking-tight">${lead.company_name || 'Unknown Company'}</h3>
+                <span class="text-[10px] bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 px-2 py-0.5 rounded-md font-medium whitespace-nowrap">
+                  ${lead.industry || lead.company_type || 'B2B'}
+                </span>
+              </div>
+
+              ${lead.website ? `
+                <a href="${lead.website}" target="_blank" class="text-xs text-indigo-400 hover:underline inline-flex items-center gap-1 mb-3">
+                  <i class="fa-solid fa-globe text-[10px]"></i> ${lead.website.replace(/^https?:\/\//, '')}
+                </a>` : ''}
+
+              <!-- Rich Description -->
+              <p class="text-xs text-gray-400 mb-4 line-clamp-3 leading-relaxed">
+                ${lead.description || 'No description available for this company.'}
+              </p>
+
+              <!-- Profile Fields (Location, Employees, Founded) -->
+              <div class="grid grid-cols-2 gap-2 text-[11px] text-gray-300 bg-gray-950/60 p-3 rounded-xl border border-gray-800/60 mb-4">
+                <div><span class="text-gray-500">Location:</span> ${lead.location || lead.country || 'N/A'}</div>
+                <div><span class="text-gray-500">Employees:</span> ${lead.employees || 'N/A'}</div>
+                <div><span class="text-gray-500">Founded:</span> ${lead.founded || 'N/A'}</div>
+                <div><span class="text-gray-500">Quality:</span> <span class="text-emerald-400 font-semibold">${lead.lead_quality || 'High'}</span></div>
+              </div>
+
+              <!-- Tech Stack Badges -->
+              ${techs.length ? `
+                <div class="mb-4">
+                  <div class="text-[10px] text-gray-500 mb-1.5 uppercase font-semibold">Detected Tech Stack</div>
+                  <div class="flex flex-wrap gap-1">
+                    ${techs.slice(0, 6).map(t => `<span class="bg-gray-800 text-gray-200 text-[10px] px-2 py-0.5 rounded-md border border-gray-700">${t}</span>`).join('')}
+                    ${techs.length > 6 ? `<span class="text-[10px] text-gray-500 self-center">+${techs.length - 6} more</span>` : ''}
+                  </div>
+                </div>` : ''}
+
+              <!-- Key People / Founders -->
+              ${people.length ? `
+                <div class="mb-4 bg-gray-950/40 p-2.5 rounded-xl border border-gray-800/40">
+                  <div class="text-[10px] text-gray-500 mb-1 uppercase font-semibold">Leadership & Team</div>
+                  <div class="space-y-1">
+                    ${people.slice(0, 2).map(p => `
+                      <div class="text-xs text-gray-300 flex justify-between">
+                        <span class="font-medium text-gray-200">${p.name || 'Team Member'}</span>
+                        <span class="text-gray-500 text-[10px]">${p.designation || p.role || ''}</span>
+                      </div>
+                    `).join('')}
+                  </div>
+                </div>` : ''}
+            </div>
+
+            <!-- Contacts Footer -->
+            <div class="pt-3 border-t border-gray-800/80 flex flex-col gap-1.5 text-xs">
+              ${emails.length ? `
+                <div class="text-emerald-400 flex items-center gap-1.5">
+                  <i class="fa-regular fa-envelope text-[11px]"></i>
+                  <span class="truncate">${emails.join(', ')}</span>
+                </div>` : '<div class="text-gray-600 text-[11px]">No verified email</div>'}
+              ${phones.length ? `
+                <div class="text-sky-400 flex items-center gap-1.5">
+                  <i class="fa-solid fa-phone text-[10px]"></i>
+                  <span>${phones.join(', ')}</span>
+                </div>` : ''}
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    function filterCategory(cat) {
+      activeCategory = cat;
+      loadCategories();
+      loadLeads();
+    }
+
+    // Auto-load on page start
+    loadCategories();
+    loadLeads();
+  </script>
+</body>
+</html>

@@ -78,6 +78,35 @@ NON_COMPANY_DOMAINS = frozenset({
     "businessstandard",
     "thehindu",
     "livemint",
+    "financialexpress",
+    "thehindubusinessline",
+    "indiatimes",
+    "bloomberg",
+    "reuters",
+    "cnbc",
+    "marketwatch",
+    "investing",
+    "seekingalpha",
+    "fool",
+    "zeebiz",
+    "inc42",
+    "yourstory",
+    "entrackr",
+    "vccircle",
+    # Financial research / intelligence / screeners (not companies)
+    "screener",
+    "screener.in",
+    "storyboard18",
+    "storyboard18.com",
+    "moneycontrol",
+    "moneycontrol.com",
+    "tracxn",
+    "pitchbook",
+    "macrotrends",
+    "owler",
+    "cbinsights",
+    "craft",
+    "dealroom",
     # Job boards
     "glassdoor",
     "indeed",
@@ -98,6 +127,39 @@ NON_COMPANY_DOMAINS = frozenset({
     "sulekha",
     "indiamart",
     "tradeindia",
+    # Encyclopedia / Reference mirrors
+    "wikiwand",
+    "wikiwand.com",
+    # Startup / VC / aggregator directories (list companies; NOT a company themselves)
+    "f6s",
+    "f6s.com",
+    "angellist",
+    "angel.co",
+    "wellfound",
+    "dealroom",
+    "dealroom.co",
+    "ycombinator",
+    "news.ycombinator.com",
+    "producthunt",
+    "producthunt.com",
+    "topstartups",
+    "topstartups.io",
+    "startupranking",
+    "startupranking.com",
+    "eu-startups",
+    "eu-startups.com",
+    "ventureradar",
+    "ventureradar.com",
+    "tracxn",
+    "tracxn.com",
+    "pitchbook",
+    "pitchbook.com",
+    "growjo",
+    "growjo.com",
+    "clutch",
+    "clutch.co",
+    "goodfirms",
+    "goodfirms.co",
 })
 
 # ── Title terms that indicate informational / educational content ──────────────
@@ -222,6 +284,24 @@ PLATFORM_DOMAINS = frozenset({
     "play.google.com",
     "apps.apple.com",
     "workspace.google.com",
+    # Startup / VC aggregator directories
+    "f6s.com",
+    "angellist.com",
+    "dealroom.co",
+    "producthunt.com",
+    "topstartups.io",
+    "startupranking.com",
+    "eu-startups.com",
+    "ventureradar.com",
+    "tracxn.com",
+    "pitchbook.com",
+    "growjo.com",
+    "cbinsights.com",
+    "owler.com",
+    "g2.com",
+    "capterra.com",
+    "getapp.com",
+    "trustpilot.com",
 })
 
 # ── Maps platform domain → human-readable source label ───────────────────────
@@ -236,6 +316,16 @@ SOURCE_DOMAIN_MAP = {
     "angel.co":        "AngelList",
     "apollo.io":       "Apollo",
     "zoominfo.com":    "ZoomInfo",
+    # Aggregator directories
+    "f6s.com":         "F6S",
+    "dealroom.co":     "Dealroom",
+    "producthunt.com": "Product Hunt",
+    "tracxn.com":      "Tracxn",
+    "pitchbook.com":   "PitchBook",
+    "cbinsights.com":  "CB Insights",
+    "owler.com":       "Owler",
+    "g2.com":          "G2",
+    "capterra.com":    "Capterra",
 }
 
 # ── TLD whitelist for direct company websites ──────────────────────────────────
@@ -384,6 +474,9 @@ PERSON_NAME_NOISE_WORDS = frozenset({
     # Address / structural fragments
     "address", "registered", "corporate", "communications",
     "floor", "building", "street", "office",
+    # Transactional / UI noise
+    "cart", "empty", "checkout", "order", "orders", "account", "payment",
+    "payments", "login", "signin", "signup", "download", "app",
 })
 
 # Words that should never be used as a company name placeholder
@@ -392,6 +485,9 @@ COMPANY_NAME_NOISE_WORDS = frozenset({
     "products", "services", "founder", "ceo", "leadership",
     "team", "our team", "about", "portfolio", "careers",
     "privacy policy", "terms of service", "welcome", "about the company",
+    "cart", "checkout", "basket", "order", "orders", "payment", "payments",
+    "pay", "login", "signin", "sign in", "signup", "sign up", "register",
+    "account", "my account", "help", "faq", "terms", "support",
 })
 
 # ── Quality penalty weights ───────────────────────────────────────────────────
@@ -611,6 +707,10 @@ COMPANY_LEGAL_SUFFIXES = frozenset({
     "ag",
     "sa",
     "bv",
+    "official",
+    "group",
+    "brand",
+    "online",
 })
 
 COMPANY_GEOGRAPHIC_QUALIFIERS = frozenset({
@@ -622,6 +722,7 @@ COMPANY_GEOGRAPHIC_QUALIFIERS = frozenset({
     "europe", "european",
     "asia", "asian",
     "apac",
+    "in", "us", "uk", "eu", "ca", "au", "de", "fr", "sg", "ae", "nl", "jp", "uae", "nz",
 })
 
 

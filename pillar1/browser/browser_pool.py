@@ -58,8 +58,17 @@ class BrowserPool:
             # 2. Configure lazy initialization (no upfront launches)
             logger.info(f"[BrowserPool] Lazy initialization configured. Pool capacity: {self.pool_size}. Instances will launch on-demand.")
 
-    def _create_new_instance(self, index: int, provider: str = "playwright_google") -> BrowserInstance:
-        """Helper to create, launch, and warm up a single browser instance."""
+    def _create_new_instance(self, index: int, provider: str = "playwright_google", deadline=None) -> BrowserInstance:
+        """Helper to create and launch a single browser instance (no warm-up in request path)."""
+        if deadline:
+            if deadline.is_exceeded():
+                logger.warning("[BrowserPool] Deadline exceeded before browser launch.")
+                return None
+            launch_budget_s = deadline.remaining() - 2.0
+            if launch_budget_s < 3.0:
+                logger.warning(f"[BrowserPool] Insufficient time for browser launch ({deadline.remaining():.1f}s remaining).")
+                return None
+
         policy = "proxy_only"
         try:
             policy = config.PROVIDER_CONNECTION_POLICY.get(provider, "proxy_only")
@@ -90,15 +99,10 @@ class BrowserPool:
         if not launched:
             return None
             
-        warmed = instance.warm_up(
-            provider_url="https://www.google.com", 
-            test_query="software+development"
-        )
-        if not warmed:
-            logger.warning(f"[BrowserPool] BrowserInstance #{index} failed warm-up check. Closing.")
-            instance.close()
-            return None
-            
+        # DO NOT call instance.warm_up() here.
+        # Warm-up (Google navigation) must NOT happen inside the search request path.
+        # The browser is ready for use immediately after launch().
+        logger.info(f"[BrowserPool] BrowserInstance #{index} launched and ready (no warm-up in search path).")
         return instance
 
     def calculate_score(self, instance: BrowserInstance, provider: str = None) -> float:
@@ -144,7 +148,7 @@ class BrowserPool:
         )
         return score
 
-    def get_browser(self, provider: str = None) -> BrowserInstance:
+    def get_browser(self, provider: str = None, deadline=None) -> BrowserInstance:
         """Selects the healthiest, highest-scoring active BrowserInstance from the pool."""
         with self._lock:
             active_instances = [inst for inst in self.instances if not inst.draining]
@@ -159,7 +163,7 @@ class BrowserPool:
                 if not eligible and len(self.instances) < self.pool_size:
                     logger.info(f"[BrowserPool] No eligible browser instances for provider '{provider}'. Creating on-demand instance.")
                     new_idx = len(self.instances)
-                    new_inst = self._create_new_instance(new_idx, provider)
+                    new_inst = self._create_new_instance(new_idx, provider, deadline=deadline)
                     if new_inst:
                         self.instances.append(new_inst)
                         active_instances.append(new_inst)
@@ -170,7 +174,7 @@ class BrowserPool:
                     # Attempt to spin up a rescue instance
                     logger.info(f"[BrowserPool] Attempting to create rescue instance for provider '{provider}'...")
                     rescue_idx = len(self.instances)
-                    new_inst = self._create_new_instance(rescue_idx, provider)
+                    new_inst = self._create_new_instance(rescue_idx, provider, deadline=deadline)
                     if new_inst:
                         self.instances.append(new_inst)
                         if self.calculate_score(new_inst, provider) > 0.0:
@@ -184,7 +188,7 @@ class BrowserPool:
                 if not active_instances and len(self.instances) < self.pool_size:
                     logger.info("[BrowserPool] No active browser instances. Creating on-demand instance.")
                     new_idx = len(self.instances)
-                    new_inst = self._create_new_instance(new_idx, "playwright_google")
+                    new_inst = self._create_new_instance(new_idx, "playwright_google", deadline=deadline)
                     if new_inst:
                         self.instances.append(new_inst)
                         active_instances.append(new_inst)
@@ -192,7 +196,7 @@ class BrowserPool:
                 if not active_instances:
                     logger.warning("[BrowserPool] No active browser instances available. Creating rescue instance...")
                     rescue_idx = len(self.instances)
-                    new_inst = self._create_new_instance(rescue_idx, "playwright_google")
+                    new_inst = self._create_new_instance(rescue_idx, "playwright_google", deadline=deadline)
                     if new_inst:
                         self.instances.append(new_inst)
                         return new_inst

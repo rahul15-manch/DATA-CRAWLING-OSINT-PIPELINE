@@ -13,6 +13,7 @@ from search.exceptions import (
     CaptchaDetectedError, EnableJSDetectedError,
     ConsentPageDetectedError, GoogleSorryPageDetectedError
 )
+from utils.deadline import Deadline, DeadlineExceeded
 
 logger = logging.getLogger(__name__)
 
@@ -147,7 +148,10 @@ class GoogleRequestScheduler:
 
     # ── Public API ────────────────────────────────────────────────────────────
 
-    def schedule_search(self, query: str, max_results: int, page: int, provider) -> List[SearchResult]:
+    def schedule_search(self, query: str, max_results: int, page: int, provider, deadline: Deadline | None = None) -> List[SearchResult]:
+        if deadline:
+            deadline.require(1.0)
+
         if self._is_circuit_open():
             remaining = int(self._circuit_open_until - time.time())
             logger.warning(f"[GoogleScheduler] Circuit Breaker OPEN — skipping Google for {remaining}s.")
@@ -183,16 +187,22 @@ class GoogleRequestScheduler:
             raise ProviderUnavailable("google_html", "No healthy Google proxies with budget available.")
 
         logger.info(f"[GoogleScheduler] Submitting query to executor: '{query}'")
-        future = self._executor.submit(self._execute_search, query, max_results, page, provider, healthy_count)
-        return future.result()
+        future = self._executor.submit(self._execute_search, query, max_results, page, provider, healthy_count, deadline)
+        timeout = deadline.bounded_timeout(8.0) if deadline else None
+        try:
+            return future.result(timeout=timeout)
+        except Exception:
+            if deadline and deadline.is_exceeded():
+                raise DeadlineExceeded("Google search future exceeded deadline")
+            raise
 
-    def _execute_search(self, query: str, max_results: int, page: int, provider, healthy_count: int) -> List[SearchResult]:
+    def _execute_search(self, query: str, max_results: int, page: int, provider, healthy_count: int, deadline: Deadline | None = None) -> List[SearchResult]:
         proxy_manager = provider._client.proxy_manager
         exclude_urls: set = set()
         session_id = f"google_html_{threading.get_ident()}"
         
-        # Reduce Google retries to exactly 1 proxy retry (total 2 attempts)
-        max_retries = 2
+        # When under deadline constraint, fail-fast with 1 attempt so fallback providers (DDG/Brave/Bing) have budget
+        max_retries = 1 if deadline else 2
 
         attempts = 0
         zero_result_retries = 0
@@ -200,9 +210,12 @@ class GoogleRequestScheduler:
         was_block = False
 
         while attempts < max_retries:
+            if deadline:
+                deadline.require(1.0)
+
             from search.manager import get_search_manager
             sm = get_search_manager()
-            if not sm.budget_manager.can_execute("google_html"):
+            if not sm.budget_manager.can_execute("google_html", deadline=deadline):
                 logger.warning("[GoogleScheduler] Budget or fallback deadline constraint exceeded. Aborting Google search.")
                 break
 
@@ -210,7 +223,7 @@ class GoogleRequestScheduler:
                 logger.warning("[GoogleScheduler] Circuit breaker opened during retry loop.")
                 break
 
-            self._apply_delay(was_block=was_block, healthy_count=healthy_count)
+            self._apply_delay(was_block=was_block, healthy_count=healthy_count, deadline=deadline)
             was_block = False
 
             proxy = proxy_manager.get_proxy(
@@ -254,7 +267,7 @@ class GoogleRequestScheduler:
 
             try:
                 t_start = time.time()
-                results, val_result = provider._execute_search_query(query, max_results, page, session_id=session_id)
+                results, val_result = provider._execute_search_query(query, max_results, page, session_id=session_id, deadline=deadline)
                 latency_s = time.time() - t_start
                 print(f"[GoogleScheduler] Request validation status: {val_result.status} | proxy={proxy.raw_url} | latency={latency_s:.2f}s")
 
@@ -341,6 +354,8 @@ class GoogleRequestScheduler:
                 self._record_cb_failure()
                 last_error = e
                 was_block = True
+                if attempts >= max_retries:
+                    break
 
         logger.error(f"[GoogleScheduler] All {attempts} retries failed for: '{query}'")
         raise ProviderUnavailable(
@@ -348,8 +363,11 @@ class GoogleRequestScheduler:
             f"Google search failed after {attempts} proxy retries. Last error: {last_error}"
         )
 
-    def _apply_delay(self, was_block: bool = False, healthy_count: int = 10) -> None:
+    def _apply_delay(self, was_block: bool = False, healthy_count: int = 10, deadline: Deadline | None = None) -> None:
         """Apply a pacing delay between proxy attempts. Reduced delay if previous attempt was a block or proxies are scarce."""
+        if deadline:
+            deadline.require(1.0)
+
         if was_block:
             delay = random.uniform(0.5, 1.5)
         elif healthy_count <= 1:
@@ -360,8 +378,11 @@ class GoogleRequestScheduler:
                 getattr(config, "GOOGLE_DELAY_MIN", 2.0),
                 getattr(config, "GOOGLE_DELAY_MAX", 6.0)
             )
+        if deadline:
+            delay = min(delay, deadline.remaining())
         logger.info(f"[GoogleScheduler] Pacing delay: {delay:.2f}s")
-        time.sleep(delay)
+        if delay > 0:
+            time.sleep(delay)
 
     def get_circuit_breaker_stats(self) -> dict:
         """Return circuit breaker state for diagnostics."""
