@@ -83,6 +83,10 @@ def is_valid_phone(text: str) -> bool:
     if len(digits_only) < _MIN_PHONE_DIGITS or len(digits_only) > _MAX_PHONE_DIGITS:
         return False
 
+    # Consecutive dots / ellipses are pagination or table noise, never phone numbers
+    if ".." in text:
+        return False
+
     # Unbroken string of > 11 digits without a leading '+' is almost certainly an internal ID or barcode
     if text.isdigit() and len(text) > 11:
         return False

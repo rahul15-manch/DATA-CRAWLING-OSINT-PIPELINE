@@ -277,16 +277,22 @@ class SearchManager:
     """
 
     def __init__(self) -> None:
-        # ── Provider priority list (env-configurable) ─────────────────────
-        raw_priority: str = getattr(
+        raw_priority = getattr(
             config, "SEARCH_PROVIDER_PRIORITY",
-            ",".join(DEFAULT_PRIORITY),
+            DEFAULT_PRIORITY,
         )
         # Support both list (if already parsed by config.py) and raw string
         if isinstance(raw_priority, list):
             self._priority: list[str] = [p.strip() for p in raw_priority if p.strip()]
         else:
             self._priority = [p.strip() for p in raw_priority.split(",") if p.strip()]
+
+        if (
+            len(self._priority) >= 2
+            and self._priority[:2] == ["playwright_google", "google_html"]
+            and os.getenv("FORCE_LEGACY_GOOGLE_FIRST", "false").lower() != "true"
+        ):
+            self._priority = list(DEFAULT_PRIORITY)
 
         # ── Provider mode ─────────────────────────────────────────────────
         self._mode: str = getattr(config, "SEARCH_PROVIDER", "auto").strip().lower()
@@ -345,8 +351,20 @@ class SearchManager:
         self.total_duplicates_removed: int = 0
         self.total_merged:             int = 0
 
+        # SerpApi metrics
+        self.serpapi_available: bool = False
+        self.serpapi_attempted: int = 0
+        self.serpapi_success: int = 0
+        self.serpapi_failed: int = 0
+        self.serpapi_rescue_attempted: int = 0
+        self.serpapi_rescue_success: int = 0
+        self.serpapi_rescue_failed: int = 0
+        self.serpapi_results: int = 0
+        self.serpapi_latency: float = 0.0
+
         # For backward compatibility — tracks which provider(s) served last call
         self.last_provider_used: str = "none"
+        self.last_search_report: dict = {}
 
         # Search cache & stability settings
         cache_enabled = getattr(config, "CACHE_ENABLED", getattr(config, "ENABLE_SEARCH_CACHE", True))
@@ -456,6 +474,8 @@ class SearchManager:
         Check if any active provider is available (not in cooldown).
         Used by the pipeline to pause discovery instead of hammering dead proxies.
         """
+        if bool(os.getenv("SERPAPI_KEY", "") or getattr(config, "SERPAPI_KEY", "")) and getattr(config, "ENABLE_SERPAPI", True):
+            return True
         self._recover_cooled_providers() # Ensure cooldowns are current
         for name in self._priority:
             if self.provider_health.get(name, False) and name not in self._provider_cooldowns:
@@ -466,6 +486,8 @@ class SearchManager:
         """
         Check if any active provider is available and not exhausted for this keyword and family.
         """
+        if bool(os.getenv("SERPAPI_KEY", "") or getattr(config, "SERPAPI_KEY", "")) and getattr(config, "ENABLE_SERPAPI", True):
+            return True
         self._recover_cooled_providers()
         for pname in self._priority:
             if not self.provider_health.get(pname, False):
@@ -517,7 +539,9 @@ class SearchManager:
             self.cache.stats["debug_bypasses"] += 1
             self.cache.stats["bypasses"] += 1
             print(f"[SearchManager] Cache disabled for: '{query}' (Page {page})")
-        cached_dicts = self.cache.get(query, max_results, page)
+            cached_dicts = None
+        else:
+            cached_dicts = self.cache.get(query, max_results, page)
         if cached_dicts is not None:
             self.cache_hits += 1
             self.cache_zero_hits = self.cache.get_stats().get("zero_result_hits", 0)
@@ -529,6 +553,13 @@ class SearchManager:
             self.total_results += len(results)
             self.total_merged += len(results)
             self.last_provider_used = "cache"
+            self.last_search_report = {
+                "query": query,
+                "status": "SUCCESS" if results else "EMPTY",
+                "provider": "cache",
+                "providers": [{"provider": "cache", "status": "SUCCESS" if results else "EMPTY", "accepted": len(results), "rejected": 0}],
+                "results": len(results),
+            }
             return results
 
         if self.cache_enabled:
@@ -585,12 +616,41 @@ class SearchManager:
         print(f"[SearchManager] Provider order: {active_providers}")
 
         all_results:   list[SearchResult] = []
+        provider_report: list[dict] = []
         providers_used: list[str]         = []
         attempted_providers: list[str] = []
         seen_canonical: set[str]          = set()
         query_start_t = time.time()
 
-        for provider in ordered:
+        normal_providers = [p for p in ordered if p.name != "serpapi"]
+
+        # ── Primary SerpApi Routing ─────────────────────────────────────────
+        # When SERPAPI_KEY is available and configured, try SerpApi FIRST.
+        # If it returns usable results, accept them.
+        # If it fails, errors, times out, or returns 0 results, fall through to normal providers.
+        serpapi_cls = ProviderRegistry.get_provider_class("serpapi")
+        has_serpapi_key = bool(os.getenv("SERPAPI_KEY", "") or getattr(config, "SERPAPI_KEY", ""))
+        serpapi_enabled = getattr(config, "ENABLE_SERPAPI", True)
+        self.serpapi_available = bool(serpapi_cls and has_serpapi_key and serpapi_enabled)
+
+        if self.serpapi_available:
+            serp_success = self._run_serpapi_primary(
+                query=query,
+                max_results=max_results,
+                page=page,
+                deadline=deadline,
+                all_results=all_results,
+                seen_canonical=seen_canonical,
+                providers_used=providers_used,
+                provider_report=provider_report,
+            )
+            if serp_success:
+                normal_providers = []  # SerpApi primary succeeded with usable results
+        else:
+            if not getattr(config, "FALLBACK_MODE", False):
+                config.activate_fallback_mode("SERPAPI_KEY not configured or SerpApi disabled")
+
+        for provider in normal_providers:
             if deadline:
                 rem_s = deadline.remaining()
                 if deadline.is_exceeded() or rem_s <= 0.0:
@@ -599,7 +659,7 @@ class SearchManager:
                 try:
                     deadline.require(1.0)
                 except DeadlineExceeded:
-                    if not all_results and (len(attempted_providers) >= len(ordered) or not self.providers_available()):
+                    if not all_results and (len(attempted_providers) >= len(normal_providers) or not self.providers_available()):
                         print(f"[SearchManager] Deadline exhausted (<1.0s remaining) and no providers available/attempted. Signalling AllProvidersExhausted.")
                         raise AllProvidersExhausted("No providers available or all providers exhausted during deadline")
                     print(f"[SearchManager] Deadline exhausted (<1.0s remaining). Halting provider fallback chain. Returning {len(all_results)} partial results.")
@@ -673,6 +733,11 @@ class SearchManager:
                 self.bing_queries += 1
 
             try:
+                # This path is reached only after the primary SerpApi attempt did
+                # not return usable results (or when no key is configured).
+                # Keep the fallback explicit in the runtime logs so an operator can
+                # distinguish an intentional fallback from duplicate searching.
+                print(f"[SEARCH] Falling back to {pname}")
                 print(
                     f"[SearchManager] [{pname}] query='{query}'"
                     f" max_results={max_results} page={page}"
@@ -711,6 +776,13 @@ class SearchManager:
                     self.stats[pname].total_latency_s += latency
                     self.stats[pname].latencies.append(latency)
                     self.stats[pname].failures += 1
+                    provider_report.append({
+                        "provider": pname,
+                        "status": self._provider_failure_status(exc.reason),
+                        "reason": exc.reason[:160],
+                        "accepted": 0,
+                        "rejected": 0,
+                    })
                     record_query_outcome(query, "unavailable", 0, provider=pname)
 
                     if "No healthy" in exc.reason and "proxies" in exc.reason:
@@ -787,6 +859,13 @@ class SearchManager:
                 self.stats[pname].total_latency_s += latency
                 self.stats[pname].latencies.append(latency)
                 self.stats[pname].parser_failures += 1
+                provider_report.append({
+                    "provider": pname,
+                    "status": "PARSER_ERROR",
+                    "reason": exc.reason[:160],
+                    "accepted": 0,
+                    "rejected": 0,
+                })
                 record_query_outcome(query, "parser_failure", 0)
 
                 if pname == "google_html":
@@ -830,6 +909,13 @@ class SearchManager:
                 logger.error(f"[SearchManager] Unexpected provider '{pname}' error: {exc}")
                 self.stats[pname].total_latency_s += latency
                 self.stats[pname].failures += 1
+                provider_report.append({
+                    "provider": pname,
+                    "status": "NETWORK_ERROR",
+                    "reason": str(exc)[:160],
+                    "accepted": 0,
+                    "rejected": 0,
+                })
                 self._record_provider_failure_score(pname, 3.0, f"Unexpected Error ({str(exc)[:30]})")
                 if deadline and (deadline.is_exceeded() or deadline.remaining() <= 0.0):
                     print(f"[SearchManager] Deadline exhausted after {pname} unexpected error. Halting provider fallback chain.")
@@ -874,6 +960,13 @@ class SearchManager:
             providers_used.append(pname)
 
             top_rejection = max(rejected_reasons.items(), key=lambda item: item[1], default=("NONE", 0))[0]
+            provider_report.append({
+                "provider": pname,
+                "status": "SUCCESS" if accepted else "EMPTY",
+                "accepted": accepted,
+                "rejected": len(raw) - accepted,
+                "rejection_reason": top_rejection,
+            })
             query_dur = time.time() - query_start_t
             if debug_mode:
                 print(f"[SearchManager] Query: {query}")
@@ -971,6 +1064,20 @@ class SearchManager:
             if len(all_results) >= max_results:
                 break
 
+        # ── Final SerpApi Rescue Fallback ─────────────────────────────────
+        # Trigger ONLY when normal providers returned no usable results (empty or unusable result set)
+        if not all_results:
+            self._run_serpapi_rescue(
+                query=query,
+                max_results=max_results,
+                page=page,
+                deadline=deadline,
+                all_results=all_results,
+                seen_canonical=seen_canonical,
+                providers_used=providers_used,
+                provider_report=provider_report,
+            )
+
         for global_rank, r in enumerate(all_results, start=1):
             r.rank = global_rank
         self.total_results += len(all_results)
@@ -980,7 +1087,304 @@ class SearchManager:
         else:
             self.last_provider_used = "none"
 
+        if all_results:
+            overall_status = "SUCCESS"
+        elif provider_report and any(item["status"] not in {"EMPTY", "SUCCESS"} for item in provider_report):
+            overall_status = "PROVIDER_FAILURE"
+        else:
+            overall_status = "EMPTY"
+        self.last_search_report = {
+            "query": query,
+            "status": overall_status,
+            "provider": self.last_provider_used,
+            "providers": provider_report[-12:],
+            "results": len(all_results),
+        }
         return all_results
+
+    def _run_serpapi_primary(
+        self,
+        query: str,
+        max_results: int = 10,
+        page: int = 0,
+        deadline: Deadline | None = None,
+        all_results: list[SearchResult] | None = None,
+        seen_canonical: set[str] | None = None,
+        providers_used: list[str] | None = None,
+        provider_report: list[dict] | None = None,
+    ) -> bool:
+        """
+        Primary search using SerpApi when SERPAPI_KEY is available.
+        Returns True if SerpApi succeeded and produced usable results.
+        Returns False if SerpApi failed, timed out, or produced 0 usable results (allowing fallback to normal providers).
+        """
+        if all_results is None:
+            all_results = []
+        if seen_canonical is None:
+            seen_canonical = {_canonicalize_url(r.url) for r in all_results if r.url}
+        if providers_used is None:
+            providers_used = []
+        if provider_report is None:
+            provider_report = []
+
+        serpapi_cls = ProviderRegistry.get_provider_class("serpapi")
+        has_serpapi_key = bool(os.getenv("SERPAPI_KEY", "") or getattr(config, "SERPAPI_KEY", ""))
+        serpapi_enabled = getattr(config, "ENABLE_SERPAPI", True)
+        is_available = bool(serpapi_cls and has_serpapi_key and serpapi_enabled)
+
+        logger.info(f"[SearchManager] SerpApi primary available: {is_available}")
+        print(f"[SearchManager] SerpApi primary available: {is_available}")
+
+        if not is_available:
+            return False
+
+        if deadline:
+            rem_s = deadline.remaining()
+            if deadline.is_exceeded() or rem_s <= 1.0:
+                logger.warning(f"[SearchManager] Skipping SerpApi primary (Insufficient deadline: {rem_s:.2f}s remaining)")
+                print(f"[SearchManager] Skipping SerpApi primary (Insufficient deadline: {rem_s:.2f}s remaining)")
+                return False
+
+        self.serpapi_attempted += 1
+        logger.info(f"[SearchManager] Starting SerpApi primary search: '{query}'")
+        print(f"[SERPAPI] PRIMARY query={query!r}")
+
+        t0_serp = time.time()
+        try:
+            serpapi_instance = self._get_instance("serpapi")
+            import inspect
+            sig = inspect.signature(serpapi_instance.search)
+            if "deadline" in sig.parameters:
+                serp_raw = serpapi_instance.search(query, max_results=max_results, page=page, deadline=deadline)
+            else:
+                serp_raw = serpapi_instance.search(query, max_results=max_results, page=page)
+
+            serp_latency = time.time() - t0_serp
+            self.serpapi_latency += serp_latency
+            logger.info(f"[SearchManager] SerpApi returned {len(serp_raw)} results")
+            print(f"[SERPAPI] SUCCESS {len(serp_raw)} results returned")
+
+            from discovery.company_discovery import classify_result, should_ignore_result
+            serp_accepted = 0
+            for r in serp_raw:
+                if not r.url or not is_valid_company_url(r.url):
+                    continue
+                result_dict = {"title": r.title or "", "url": r.url or "", "snippet": r.snippet or ""}
+                if should_ignore_result(result_dict):
+                    continue
+                canon = _canonicalize_url(r.url)
+                if canon in seen_canonical:
+                    self.total_duplicates_removed += 1
+                    continue
+                seen_canonical.add(canon)
+                all_results.append(r)
+                serp_accepted += 1
+                self._track_source(r.url)
+                if len(all_results) >= max_results:
+                    break
+
+            print(f"[SERPAPI] DISCOVERY: accepted {serp_accepted} company candidates")
+
+            if serp_accepted > 0:
+                self.serpapi_success += 1
+                self.serpapi_results += serp_accepted
+                if "serpapi" not in providers_used:
+                    providers_used.append("serpapi")
+                logger.info("[SearchManager] SerpApi primary succeeded")
+                print("[SearchManager] SerpApi primary succeeded")
+                provider_report.append({
+                    "provider": "serpapi",
+                    "status": "SUCCESS",
+                    "accepted": serp_accepted,
+                    "rejected": len(serp_raw) - serp_accepted,
+                    "rejection_reason": "NONE",
+                })
+                if "serpapi" in self.stats:
+                    self.stats["serpapi"].successful_queries += 1
+                    self.stats["serpapi"].queries += 1
+                    self.stats["serpapi"].results_returned += len(serp_raw)
+                    self.stats["serpapi"].business_accepted += serp_accepted
+                self.cache.set(query, max_results, page, "serpapi", all_results, kind="success")
+                return True
+            else:
+                self.serpapi_failed += 1
+                print(f"[SERPAPI] EMPTY: 0 usable results returned for query={query!r} - activating FALLBACK_MODE")
+                config.activate_fallback_mode("SerpApi returned 0 usable results")
+                logger.warning("[SearchManager] SerpApi primary returned 0 usable results: continuing to normal providers")
+                print("[SearchManager] SerpApi primary returned 0 usable results: continuing to normal providers")
+                provider_report.append({
+                    "provider": "serpapi",
+                    "status": "EMPTY",
+                    "accepted": 0,
+                    "rejected": len(serp_raw),
+                    "rejection_reason": "NO_USABLE_RESULTS",
+                })
+                return False
+        except Exception as exc:
+            self.serpapi_failed += 1
+            serp_latency = time.time() - t0_serp
+            self.serpapi_latency += serp_latency
+            print(f"[SERPAPI] FAIL: {exc} - activating FALLBACK_MODE")
+            config.activate_fallback_mode(f"SerpApi failure: {exc}")
+            logger.warning(f"[SearchManager] SerpApi primary failed ({exc}): continuing to normal providers")
+            print(f"[SearchManager] SerpApi primary failed ({exc}): continuing to normal providers")
+            provider_report.append({
+                "provider": "serpapi",
+                "status": "ERROR",
+                "reason": str(exc)[:160],
+                "accepted": 0,
+                "rejected": 0,
+            })
+            return False
+
+    def _run_serpapi_rescue(
+        self,
+        query: str,
+        max_results: int = 10,
+        page: int = 0,
+        deadline: Deadline | None = None,
+        all_results: list[SearchResult] | None = None,
+        seen_canonical: set[str] | None = None,
+        providers_used: list[str] | None = None,
+        provider_report: list[dict] | None = None,
+    ) -> list[SearchResult]:
+        """
+        Final rescue fallback using SerpApi.
+        Invoked only when normal providers collectively failed or produced no usable results.
+        """
+        if all_results is None:
+            all_results = []
+        if seen_canonical is None:
+            seen_canonical = {_canonicalize_url(r.url) for r in all_results if r.url}
+        if providers_used is None:
+            providers_used = []
+        if provider_report is None:
+            provider_report = []
+
+        logger.info("[SearchManager] Normal providers exhausted")
+        print("[SearchManager] Normal providers exhausted")
+
+        serpapi_cls = ProviderRegistry.get_provider_class("serpapi")
+        has_serpapi_key = bool(os.getenv("SERPAPI_KEY", "") or getattr(config, "SERPAPI_KEY", ""))
+        serpapi_enabled = getattr(config, "ENABLE_SERPAPI", True)
+        is_rescue_available = bool(serpapi_cls and has_serpapi_key and serpapi_enabled)
+
+        logger.info(f"[SearchManager] SerpApi rescue available: {is_rescue_available}")
+        print(f"[SearchManager] SerpApi rescue available: {is_rescue_available}")
+
+        if not is_rescue_available:
+            return all_results
+
+        # Check existing deadline before calling SerpApi
+        if deadline:
+            rem_s = deadline.remaining()
+            if deadline.is_exceeded() or rem_s <= 1.0:
+                logger.warning(f"[SearchManager] Skipping SerpApi rescue (Insufficient deadline: {rem_s:.2f}s remaining)")
+                print(f"[SearchManager] Skipping SerpApi rescue (Insufficient deadline: {rem_s:.2f}s remaining)")
+                return all_results
+
+        self.serpapi_rescue_attempted += 1
+        logger.info("[SearchManager] Starting SerpApi rescue")
+        print("[SearchManager] Starting SerpApi rescue")
+
+        t0_serp = time.time()
+        try:
+            serpapi_instance = self._get_instance("serpapi")
+            import inspect
+            sig = inspect.signature(serpapi_instance.search)
+            if "deadline" in sig.parameters:
+                serp_raw = serpapi_instance.search(query, max_results=max_results, page=page, deadline=deadline)
+            else:
+                serp_raw = serpapi_instance.search(query, max_results=max_results, page=page)
+
+            serp_latency = time.time() - t0_serp
+            self.serpapi_latency += serp_latency
+            logger.info(f"[SearchManager] SerpApi returned {len(serp_raw)} results")
+            print(f"[SearchManager] SerpApi returned {len(serp_raw)} results")
+
+            from discovery.company_discovery import classify_result, should_ignore_result
+            serp_accepted = 0
+            for r in serp_raw:
+                if not r.url or not is_valid_company_url(r.url):
+                    continue
+                result_dict = {"title": r.title or "", "url": r.url or "", "snippet": r.snippet or ""}
+                if should_ignore_result(result_dict):
+                    continue
+                canon = _canonicalize_url(r.url)
+                if canon in seen_canonical:
+                    self.total_duplicates_removed += 1
+                    continue
+                seen_canonical.add(canon)
+                all_results.append(r)
+                serp_accepted += 1
+                self._track_source(r.url)
+                if len(all_results) >= max_results:
+                    break
+
+            if serp_accepted > 0:
+                self.serpapi_rescue_success += 1
+                self.serpapi_results += serp_accepted
+                if "serpapi" not in providers_used:
+                    providers_used.append("serpapi")
+                logger.info("[SearchManager] SerpApi rescue succeeded")
+                print("[SearchManager] SerpApi rescue succeeded")
+                provider_report.append({
+                    "provider": "serpapi",
+                    "status": "SUCCESS",
+                    "accepted": serp_accepted,
+                    "rejected": len(serp_raw) - serp_accepted,
+                    "rejection_reason": "NONE",
+                })
+                if "serpapi" in self.stats:
+                    self.stats["serpapi"].successful_queries += 1
+                    self.stats["serpapi"].queries += 1
+                    self.stats["serpapi"].results_returned += len(serp_raw)
+                    self.stats["serpapi"].business_accepted += serp_accepted
+                self.cache.set(query, max_results, page, "serpapi", all_results, kind="success")
+            else:
+                self.serpapi_rescue_failed += 1
+                logger.warning("[SearchManager] SerpApi rescue failed")
+                print("[SearchManager] SerpApi rescue failed")
+                provider_report.append({
+                    "provider": "serpapi",
+                    "status": "EMPTY",
+                    "accepted": 0,
+                    "rejected": len(serp_raw),
+                    "rejection_reason": "ALL_FILTERED" if serp_raw else "EMPTY_RESULTS",
+                })
+        except Exception as exc:
+            serp_latency = time.time() - t0_serp
+            self.serpapi_latency += serp_latency
+            self.serpapi_rescue_failed += 1
+            logger.warning("[SearchManager] SerpApi rescue failed")
+            print("[SearchManager] SerpApi rescue failed")
+            logger.warning(f"[SearchManager] SerpApi rescue exception: {exc}")
+            provider_report.append({
+                "provider": "serpapi",
+                "status": self._provider_failure_status(str(exc)),
+                "reason": str(exc)[:160],
+                "accepted": 0,
+                "rejected": 0,
+            })
+
+        return all_results
+
+    @staticmethod
+    def _provider_failure_status(reason: str) -> str:
+        lowered = (reason or "").lower()
+        if "401" in lowered or "auth" in lowered or "invalid api key" in lowered or "invalid or expired" in lowered:
+            return "AUTH_ERROR"
+        if "captcha" in lowered or "consent" in lowered or "enable_js" in lowered:
+            return "CAPTCHA"
+        if "429" in lowered or "rate" in lowered or "too many" in lowered or "quota" in lowered:
+            return "RATE_LIMITED"
+        if "no healthy" in lowered or ("proxy" in lowered and "exhaust" in lowered):
+            return "PROXY_EXHAUSTED"
+        if "timeout" in lowered or "timed out" in lowered:
+            return "TIMEOUT"
+        if "unavailable" in lowered or "cooling" in lowered:
+            return "UNAVAILABLE"
+        return "NETWORK_ERROR"
 
 
     def _enter_cooldown(self, pname: str) -> None:
@@ -1240,6 +1644,19 @@ class SearchManager:
                 print(f"    {name:<20}: {r['successes']:>3} ok / {r['failures']:>3} fail  ({r['success_rate']:.0%})  avg={r['avg_time_ms']:.0f}ms")
         print()
 
+        # ── SerpApi rescue metrics ────────────────────────────────────
+        if self.serpapi_rescue_attempted > 0:
+            print(div40)
+            print("SERPAPI RESCUE METRICS")
+            print(div40)
+            print(f"  Attempted            : {self.serpapi_rescue_attempted}")
+            print(f"  Succeeded            : {self.serpapi_rescue_success}")
+            print(f"  Failed               : {self.serpapi_rescue_failed}")
+            print(f"  Results accepted     : {self.serpapi_results}")
+            avg_lat = (self.serpapi_latency / self.serpapi_rescue_attempted) if self.serpapi_rescue_attempted > 0 else 0.0
+            print(f"  Average latency      : {avg_lat:.2f}s")
+            print()
+
         # ── Provider health ───────────────────────────────────────────
         print("  Provider health (end of run):")
         for name, healthy in self.provider_health.items():
@@ -1352,6 +1769,7 @@ class SearchManager:
     # Cost tiers: lower = cheaper.  Used to prevent paid providers from
     # outscoring free ones just by being reliable.
     PROVIDER_COST_TIER: dict[str, int] = {
+        "serpapi": 0,
         "google_html": 0,
         "duckduckgo": 0,
         "brave": 0,
@@ -1522,6 +1940,11 @@ class SearchManager:
             free_providers = [
                 i for i, p in enumerate(ordered)
                 if self.PROVIDER_COST_TIER.get(p.name, 0) == 0
+                and not (
+                    self.stats.get(p.name)
+                    and self.stats[p.name].queries >= 3
+                    and self.stats[p.name].success_rate < 0.2
+                )
             ]
             if len(free_providers) > 1:
                 explore_idx = random.choice(free_providers[1:])

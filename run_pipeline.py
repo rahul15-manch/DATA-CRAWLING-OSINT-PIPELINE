@@ -9,6 +9,7 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "pill
 import pathlib
 import subprocess
 import time
+import config
 
 
 def _step(n: int, total: int, label: str) -> None:
@@ -49,12 +50,35 @@ def _derive_next(current: pathlib.Path, subfolder: str) -> pathlib.Path:
     return pathlib.Path("output") / subfolder / current.name
 
 
+def _resolve_raw_file(result, keyword: str) -> pathlib.Path:
+    """Resolve either the legacy raw-file path or main.run_pipeline's lead list."""
+    if isinstance(result, (list, tuple)):
+        safe = keyword.replace(" ", "_").replace("/", "_").replace("\\", "_").lower().strip("_") or "lead"
+        candidates = sorted(
+            [p for p in pathlib.Path(config.RAW_OUTPUT_FOLDER).glob(f"{safe}_*.json") if not p.name.endswith("_discovery_report.json")],
+            key=lambda path: path.stat().st_mtime,
+            reverse=True,
+        )
+        if not candidates:
+            raise FileNotFoundError("Pillar 1 returned lead cards but no raw output file was created.")
+        return candidates[0]
+    return pathlib.Path(result)
+
+
 def run(keyword: str, disable_cache: bool = False) -> None:
     TOTAL_STEPS = 7
-    start_time = time.time()
+    start_time = time.monotonic()
+    stage_timings = {}
 
     if disable_cache:
         os.environ["ENABLE_SEARCH_CACHE"] = "False"
+        os.environ["CACHE_ENABLED"] = "False"
+        os.environ["FORCE_LIVE_SEARCH"] = "True"
+        # config is imported by this CLI module before argument parsing, so the
+        # in-memory values must be changed as well as the environment.
+        config.CACHE_ENABLED = False
+        config.ENABLE_SEARCH_CACHE = False
+        config.FORCE_LIVE_SEARCH = True
         os.environ["DISCOVERY_DEBUG"] = "true"
 
     print()
@@ -70,6 +94,7 @@ def run(keyword: str, disable_cache: bool = False) -> None:
 
     # ── Step 1: Pillar 1 ──────────────────────────────────────────────────────
     _step(1, TOTAL_STEPS, "Pillar 1 — Discover companies & build lead cards")
+    stage_started = time.monotonic()
 
     # Import Pillar 1 here only — this is the orchestrator's boundary.
     # Pillar 2 scripts are NOT imported; they run as subprocesses.
@@ -77,15 +102,18 @@ def run(keyword: str, disable_cache: bool = False) -> None:
     raw_file_str = pillar1_run(keyword)
 
     if not raw_file_str:
-        print("  Pillar 1 returned no output file. Exiting.")
-        sys.exit(1)
+        print("  NO_MATCH: Search completed successfully but no qualified companies were found.")
+        print("  No downstream cleaning, verification, enrichment, or Pillar 4 export was required.")
+        return
 
-    raw_file = pathlib.Path(raw_file_str)
+    raw_file = _resolve_raw_file(raw_file_str, keyword)
+    stage_timings["pillar1"] = round(time.monotonic() - stage_started, 3)
     _require_file(raw_file, "clean_leads.py")
     _ok("Raw lead cards created", raw_file)
 
     # ── Step 2: Clean ─────────────────────────────────────────────────────────
     _step(2, TOTAL_STEPS, "Cleaning leads — remove junk, deduplicate")
+    stage_started = time.monotonic()
 
     clean_file = _derive_next(raw_file, "clean")
     rc = _run("clean_leads.py", [sys.executable, "clean_leads.py", str(raw_file), str(clean_file)])
@@ -95,9 +123,11 @@ def run(keyword: str, disable_cache: bool = False) -> None:
 
     _require_file(clean_file, "verify_leads.py")
     _ok("Clean leads written", clean_file)
+    stage_timings["clean"] = round(time.monotonic() - stage_started, 3)
 
     # ── Step 3: Verify ────────────────────────────────────────────────────────
     _step(3, TOTAL_STEPS, "Verifying leads — DNS, phone, website reachability")
+    stage_started = time.monotonic()
 
     verified_file = _derive_next(clean_file, "verified")
     rc = _run("verify_leads.py", [sys.executable, "verify_leads.py", str(clean_file), str(verified_file)])
@@ -107,9 +137,11 @@ def run(keyword: str, disable_cache: bool = False) -> None:
 
     _require_file(verified_file, "enrichment_leads.py")
     _ok("Verified leads written", verified_file)
+    stage_timings["verify"] = round(time.monotonic() - stage_started, 3)
 
     # ── Step 4: Enrich ────────────────────────────────────────────────────────
     _step(4, TOTAL_STEPS, "Enriching leads — domain guessing, WHOIS")
+    stage_started = time.monotonic()
 
     enriched_file = _derive_next(verified_file, "enriched")
     rc = _run("enrichment_leads.py", [sys.executable, "enrichment_leads.py", str(verified_file), str(enriched_file)])
@@ -119,9 +151,11 @@ def run(keyword: str, disable_cache: bool = False) -> None:
 
     _require_file(enriched_file, "finalize_for_pillar4.py")
     _ok("Enriched leads written", enriched_file)
+    stage_timings["enrich"] = round(time.monotonic() - stage_started, 3)
 
     # ── Step 5: Finalize ──────────────────────────────────────────────────────
     _step(5, TOTAL_STEPS, "Finalizing — swap verified contacts, strip debug fields")
+    stage_started = time.monotonic()
 
     final_file = _derive_next(enriched_file, "final")
     rc = _run("finalize_for_pillar4.py", [sys.executable, "finalize_for_pillar4.py", str(enriched_file), str(final_file)])
@@ -131,9 +165,11 @@ def run(keyword: str, disable_cache: bool = False) -> None:
 
     _require_file(final_file, "output")
     _ok("Final leads written", final_file)
+    stage_timings["finalize"] = round(time.monotonic() - stage_started, 3)
 
     # ── Step 6: Pillar 4 ETL ──────────────────────────────────────────────────
     _step(6, TOTAL_STEPS, "Pillar 4 ETL — validation, schema alignment, and historical deduplication")
+    stage_started = time.monotonic()
 
     try:
         from pillar_4_pipeline.etl import process_file as run_etl
@@ -150,9 +186,11 @@ def run(keyword: str, disable_cache: bool = False) -> None:
     cleaned_data_file = pathlib.Path("cleaned_data.json")
     _require_file(cleaned_data_file, "cleaned_data.json")
     _ok("ETL Cleaned data written", cleaned_data_file)
+    stage_timings["pillar4_etl"] = round(time.monotonic() - stage_started, 3)
 
     # ── Step 7: Pillar 4 Database Export ──────────────────────────────────────
     _step(7, TOTAL_STEPS, "Pillar 4 Database Export — SQLite storage for voice/outreach synchronization")
+    stage_started = time.monotonic()
 
     rc = _run("export.py", [sys.executable, "pillar_4_pipeline/export.py"])
     if rc != 0:
@@ -162,11 +200,17 @@ def run(keyword: str, disable_cache: bool = False) -> None:
     leads_db_file = pathlib.Path("leads.db")
     _require_file(leads_db_file, "leads.db")
     _ok("SQLite leads database written", leads_db_file)
+    stage_timings["pillar4_export"] = round(time.monotonic() - stage_started, 3)
 
     # ── Summary & Dashboard ───────────────────────────────────────────────────
-    elapsed_time = time.time() - start_time
+    elapsed_time = time.monotonic() - start_time
     from stats.dashboard import render_dashboard
     render_dashboard(elapsed_time, keyword)
+    print("PIPELINE STAGE TIMINGS (seconds):")
+    print(f"  Pillar 1 / enrichment : {stage_timings.get('pillar1', 0.0):.3f}")
+    print(f"  Pillar 4 ETL           : {stage_timings.get('pillar4_etl', 0.0):.3f}")
+    print(f"  Pillar 4 export         : {stage_timings.get('pillar4_export', 0.0):.3f}")
+    print(f"  Total CLI runtime       : {elapsed_time:.3f}")
 
     print("-" * 60)
     print("  Folder map:")
@@ -195,6 +239,7 @@ if __name__ == "__main__":
     
     import config
     setattr(config, "TARGET_LEADS_LIMIT", target_leads)
+    setattr(config, "TARGET_COMPANIES", target_leads if target_leads > 0 else 999999)
     setattr(config, "TARGET_HIGH_CONFIDENCE", target_leads if target_leads > 0 else 999999)
 
     kw = " ".join(args.keyword).strip()

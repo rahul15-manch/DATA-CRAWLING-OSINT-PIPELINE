@@ -9,6 +9,7 @@ import sqlite3
 import sys
 import threading
 import time
+from contextlib import asynccontextmanager
 from typing import Optional
 
 from fastapi import BackgroundTasks, FastAPI, Query
@@ -77,15 +78,36 @@ def init_db() -> None:
 init_db()
 
 
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    """Clean startup and shutdown lifecycle management."""
+    init_db()
+    yield
+    # Clean shutdown of Playwright browser manager and pools
+    try:
+        from pillar1.browser.browser_manager import get_browser_manager
+        bm = get_browser_manager()
+        bm.shutdown()
+    except Exception as exc:
+        print(f"[API Lifespan] Browser manager shutdown notice: {exc}")
+
+
 app = FastAPI(
     title="Lead Discovery & Extraction Dashboard API",
     version="1.0.0",
+    lifespan=lifespan,
 )
 
-# Enable CORS for local development
+# Configure CORS: support comma-separated origins from environment or default to "*"
+raw_cors = os.getenv("CORS_ORIGINS", "*").strip()
+if raw_cors == "*" or not raw_cors:
+    cors_origins = ["*"]
+else:
+    cors_origins = [o.strip() for o in raw_cors.split(",") if o.strip()]
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=cors_origins,
     allow_methods=["*"],
     allow_headers=["*"],
 )
@@ -146,9 +168,11 @@ def _run_pipeline_bg(keyword: str):
         from concurrent.futures import ThreadPoolExecutor, as_completed
         import config
 
-        # ── Per-request deadline — isolated from any concurrent request ──────
-        run_deadline = Deadline(100.0)
-        discovery_deadline = run_deadline.child(40.0)
+        # ── Per-request deadline — dynamically loaded from config / env ──────
+        max_runtime = float(getattr(config, "MAX_RUNTIME", 120.0))
+        discovery_budget = float(getattr(config, "DISCOVERY_DEADLINE_SECONDS", 55.0))
+        run_deadline = Deadline(max_runtime)
+        discovery_deadline = run_deadline.child(discovery_budget)
 
         # Step 2: Company Discovery
         update_stage("DISCOVERING", "Discovering and scoring company candidates...", 40)
@@ -371,6 +395,19 @@ def get_categories():
     return {"categories": categories}
 
 
+@app.get("/health")
+def health_check():
+    """Standard lightweight health check endpoint for AWS ALB, Nginx, or uptime monitors."""
+    with status_lock:
+        current_status = pipeline_state.get("status", "idle")
+    return {
+        "status": "healthy",
+        "service": "pillar1-api",
+        "pipeline_status": current_status,
+        "timestamp": time.time(),
+    }
+
+
 # ── Static File Mount ────────────────────────────────────────────────────────
 static_dir = os.path.join(ROOT, "static")
 if os.path.exists(static_dir):
@@ -378,4 +415,8 @@ if os.path.exists(static_dir):
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run("api:app", host="127.0.0.1", port=8000, reload=True)
+    host = os.getenv("HOST", "0.0.0.0")
+    port = int(os.getenv("PORT", "8000"))
+    reload_opt = os.getenv("APP_ENV", "development").lower() != "production"
+    uvicorn.run("api:app", host=host, port=port, reload=reload_opt)
+

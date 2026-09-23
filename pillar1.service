@@ -1,0 +1,29 @@
+[Unit]
+Description=Pillar 1 Company Discovery & Lead Generation API Service
+After=network.target
+
+[Service]
+Type=simple
+User=ubuntu
+Group=ubuntu
+WorkingDirectory=/home/ubuntu/pillar1
+EnvironmentFile=/home/ubuntu/pillar1/.env
+Environment="PATH=/home/ubuntu/pillar1/.venv/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+ExecStart=/home/ubuntu/pillar1/.venv/bin/uvicorn api:app --host 127.0.0.1 --port 8000 --workers 1
+
+# Process management & restart policy
+Restart=on-failure
+RestartSec=5s
+KillSignal=SIGTERM
+TimeoutStopSec=30
+
+# File descriptor limits for concurrent socket connections & scraping
+LimitNOFILE=65535
+
+# Logging to systemd journal
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=pillar1-api
+
+[Install]
+WantedBy=multi-user.target

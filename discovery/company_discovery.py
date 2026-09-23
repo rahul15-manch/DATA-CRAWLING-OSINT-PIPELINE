@@ -224,7 +224,8 @@ def quality_penalty(company: dict) -> int:
             penalty += points
 
     # Additional penalty when the domain itself is a known non-company site
-    if is_rejected_lead_domain(company.get("website") or ""):
+    website = company.get("website")
+    if website and is_rejected_lead_domain(website):
         penalty += 30
 
     return penalty
@@ -731,6 +732,12 @@ def validate_company_record(company: dict) -> tuple:
     if _title_contains_informational_term(name):
         return False, "company name looks informational"
 
+    industry_kw = company.get("industry") or ""
+    if industry_kw:
+        from query.intent_classifier import is_entity_query
+        if is_query_as_company(name, industry_kw, not is_entity_query(industry_kw)):
+            return False, "query as company name rejected"
+
     page_kind = classify_company_page(candidate_url, name)
     if page_kind in {"ARTICLE", "BLOG", "CATEGORY", "DIRECTORY_LIST"}:
         return False, f"{page_kind.lower()} page rejected"
@@ -750,6 +757,113 @@ def validate_company_record(company: dict) -> tuple:
     return True, None
 
 
+def canonical_company_id(company: dict) -> str:
+    """Return a stable identity key from domain, LinkedIn slug, or name."""
+    website = company.get("website") or ""
+    token = _domain_token(website)
+    if token and not _is_platform_domain(website):
+        return f"domain:{token}"
+    linkedin = (company.get("linkedin") or "").lower()
+    match = re.search(r"linkedin\.com/company/([^/?#]+)", linkedin)
+    if match:
+        return f"linkedin:{match.group(1).replace('-', '')}"
+    name = re.sub(r"[^a-z0-9]", "", (company.get("company") or "").lower())
+    return f"name:{name}" if name else ""
+
+
+def minimum_evidence_gate(company: dict) -> tuple[bool, str | None]:
+    """Reject candidates lacking identity, source URL, or relevance evidence."""
+    if not (company.get("company") or "").strip():
+        return False, "missing_company_identity"
+    if not (company.get("website") or company.get("linkedin") or company.get("source_url")):
+        return False, "missing_source_evidence"
+    if float(company.get("relevance_score", 0) or 0) < config.RELEVANCE_THRESHOLD_LOW:
+        return False, "below_relevance_threshold"
+    return True, None
+
+
+def company_intent_gate(company: dict, keyword: str) -> tuple[bool, str | None]:
+    """Require company evidence in addition to topical relevance for categories."""
+    name = (company.get("company") or "").strip()
+    from query.intent_classifier import is_entity_query
+    if is_query_as_company(name, keyword, not is_entity_query(keyword)):
+        return False, "query_as_company_rejected"
+
+    relevance = float(company.get("relevance_score", 0) or 0)
+    has_official_domain = bool(company.get("website"))
+    linkedin_url = company.get("linkedin") or ""
+    has_linkedin = bool("linkedin.com/company" in linkedin_url.lower())
+    industry = (company.get("industry_detected") or "").lower()
+    info = company.get("relevance_info") or {}
+    matched = [str(signal).lower() for signal in info.get("matched_signals", [])]
+    category_terms = set(re.findall(r"[a-z0-9]+", keyword.lower()))
+    category_signal = bool(
+        category_terms.intersection(set(re.findall(r"[a-z0-9]+", industry)))
+        or any(term in " ".join(matched) for term in category_terms if len(term) > 2)
+    )
+    company_evidence = 0
+    if len(name.split()) >= 2 and len(name) >= 3:
+        company_evidence += 1
+    if company.get("description") or (isinstance(info, dict) and info.get("description")):
+        company_evidence += 1
+    if company.get("employees") or company.get("company_size"):
+        company_evidence += 1
+    if company.get("location") or company.get("country"):
+        company_evidence += 1
+    if company.get("industry_detected") and company.get("industry_detected") != "Unknown":
+        company_evidence += 1
+
+    if has_official_domain and relevance >= config.RELEVANCE_THRESHOLD_LOW:
+        return True, None
+    if has_linkedin and category_signal and company_evidence >= 2:
+        return True, None
+    if has_linkedin and not has_official_domain:
+        if len(name.split()) < 2 or _title_contains_informational_term(name):
+            return False, "topic_match_only_linkedin_without_official_domain"
+        if company_evidence >= 1:
+            return False, "linkedin_company_evidence_insufficient"
+        return False, "topic_match_only_linkedin_without_official_domain"
+    if not category_signal and not has_official_domain:
+        return False, "company_identity_without_category_evidence"
+    return False, "insufficient_company_intent_evidence"
+
+
+def partial_lead_gate(company: dict, reason: str | None) -> tuple[bool, str | None]:
+    """Retain useful incomplete company records without accepting topic pages."""
+    if not reason:
+        return True, None
+    if reason in ("topic_match_only_linkedin_without_official_domain", "query_as_company_rejected"):
+        return False, reason
+    name = (company.get("company") or "").strip()
+    linkedin_url = company.get("linkedin") or ""
+    has_linkedin = bool("linkedin.com/company" in linkedin_url.lower())
+    has_source = bool(company.get("source_url") or company.get("website") or company.get("linkedin"))
+    informational = _title_contains_informational_term(name) or bool(
+        re.search(r"^(top|best|list of|leading)\b|\bcompanies\s+(in|to|for)\b", name.lower())
+    )
+    if informational:
+        return False, "informational_page_rejected"
+
+    # Count company-level signals (industry, description, employees, location, title/name)
+    info = company.get("relevance_info") or {}
+    company_signals = 0
+    if len(name.split()) >= 2 and len(name) >= 3:
+        company_signals += 1
+    if company.get("description") or (isinstance(info, dict) and info.get("description")):
+        company_signals += 1
+    if company.get("employees") or company.get("company_size"):
+        company_signals += 1
+    if company.get("location") or company.get("country"):
+        company_signals += 1
+    if company.get("industry_detected") and company.get("industry_detected") != "Unknown":
+        company_signals += 1
+
+    # Require LinkedIn company URL + identity + at least one company-level signal
+    if has_linkedin and has_source and len(name) >= 2 and company_signals >= 1:
+        return True, reason
+    return False, reason
+
+
 # ─────────────────────────────────────────────────────────────────────────────
 # Company name extraction
 # ─────────────────────────────────────────────────────────────────────────────
@@ -766,7 +880,26 @@ def detect_source(url: str) -> str:
 def _candidate_matches_domain(candidate: str, domain_name: str) -> bool:
     norm_candidate = re.sub(r"[^a-z0-9]", "", (candidate or "").lower())
     norm_domain = re.sub(r"[^a-z0-9]", "", (domain_name or "").lower())
-    return bool(norm_candidate and norm_candidate == norm_domain)
+    if not norm_candidate or not norm_domain:
+        return False
+    return (
+        norm_candidate == norm_domain
+        or norm_domain in norm_candidate
+        or norm_candidate.startswith(norm_domain)
+    )
+
+
+def is_query_as_company(company_name: str, query: str, is_category_query: bool) -> bool:
+    """
+    Contextually rejects candidates whose name is identical to the search category.
+    Only active when query is a category query.
+    Allows real companies with extra words (e.g., 'Electronics India Pvt Ltd', 'Havells Consumer Electronics').
+    """
+    if not is_category_query or not company_name or not query:
+        return False
+    norm_name = re.sub(r"[^a-z0-9]", "", str(company_name).lower())
+    norm_query = re.sub(r"[^a-z0-9]", "", str(query).lower())
+    return bool(norm_name and norm_query and norm_name == norm_query)
 
 
 def _is_sentence_fragment(text: str) -> bool:
@@ -777,7 +910,8 @@ def _is_sentence_fragment(text: str) -> bool:
     lowered = text.lower()
     sentence_starters = (
         "what ", "how ", "why ", "when ", "where ", "which ",
-        "top ", "best ", "is ", "are ", "the ", "a ",
+        "top ", "best ", "popular ", "list of ", "leading ",
+        "is ", "are ", "the ", "a ",
     )
     if any(lowered.startswith(s) for s in sentence_starters) or "?" in text:
         return True
@@ -823,7 +957,7 @@ def guess_company_name(result: dict) -> str:
 
     # 2. Split title into candidates, strip platform noise
     candidates = _split_title_candidates(title)
-    candidates = [c for c in candidates if c.lower() not in TITLE_NOISE_PARTS]
+    candidates = [c.strip() for c in candidates if c.strip() and c.lower().strip() not in TITLE_NOISE_PARTS]
 
     title_is_informational = _title_contains_informational_term(title)
 
@@ -831,6 +965,9 @@ def guess_company_name(result: dict) -> str:
     if domain_name:
         for candidate in candidates:
             if _candidate_matches_domain(candidate, domain_name):
+                cand_clean = candidate.strip()
+                if 1 <= len(cand_clean.split()) <= 4 and not _is_sentence_fragment(cand_clean):
+                    return cand_clean
                 return domain_name
 
         # Title is informational → trust domain over title
@@ -847,13 +984,19 @@ def guess_company_name(result: dict) -> str:
 
     from utils.validators import is_valid_company_name
     
-    # 5. Use the last non-fragment candidate (typically the site name)
+    # 5. Homepage vs subpage candidate preference
     non_fragment_candidates = [c for c in candidates if not _is_sentence_fragment(c)]
     guessed_name = domain_name
-    if len(non_fragment_candidates) > 1:
-        guessed_name = non_fragment_candidates[-1]
-    elif non_fragment_candidates:
-        guessed_name = non_fragment_candidates[0]
+    if non_fragment_candidates:
+        parsed = urlparse(url)
+        path = (parsed.path or "").strip("/").lower()
+        is_homepage = not path or path in ("in", "en", "us", "home", "index.html", "default.aspx")
+        if is_homepage:
+            guessed_name = non_fragment_candidates[0]
+        elif len(non_fragment_candidates) > 1:
+            guessed_name = non_fragment_candidates[-1]
+        else:
+            guessed_name = non_fragment_candidates[0]
 
     # Validate against noise words like "About Us"
     if not is_valid_company_name(guessed_name):
@@ -913,7 +1056,7 @@ def discover_companies(keyword: str, deadline: "Deadline | None" = None) -> list
     
     # Adaptive Source Priorities
     source_priorities = {
-        "linkedin": 100,
+        "linkedin": 90,
         "clutch": 80,
         "goodfirms": 80,
         "crunchbase": 80,
@@ -921,7 +1064,10 @@ def discover_companies(keyword: str, deadline: "Deadline | None" = None) -> list
         "apollo": 80,
         "zoominfo": 80,
         "justdial": 50,
-        "google": 20,
+        "google": 70,
+        "brave": 70,
+        "duckduckgo": 70,
+        "bing": 70,
     }
 
     # Helper to enqueue next batch
@@ -930,11 +1076,25 @@ def discover_companies(keyword: str, deadline: "Deadline | None" = None) -> list
         for _ in range(batch_size):
             try:
                 t = next(task_iterator)
+                is_direct = getattr(t, "discovery_mode", "expanded") == "direct"
+                is_site_dork = "site:" in t.query.lower()
+                
+                # Direct web discovery (broad company queries without site: restrictions)
+                # gets highest priority so it runs before/alongside LinkedIn
+                if is_direct and not is_site_dork:
+                    req_priority = 100
+                elif is_direct and "linkedin" in t.query.lower():
+                    req_priority = 90
+                elif not is_site_dork:
+                    req_priority = source_priorities.get(t.source, 70)
+                else:
+                    req_priority = source_priorities.get(t.source, 50)
+
                 req = Request(
                     url="search",
                     query=t.query,
                     provider=t.source,
-                    priority=source_priorities.get(t.source, 20),
+                    priority=req_priority,
                     meta={
                         "page": 0,
                         "max_results": 10,
@@ -976,7 +1136,14 @@ def discover_companies(keyword: str, deadline: "Deadline | None" = None) -> list
     
     # Configurable limits
     target_companies = getattr(config, "TARGET_COMPANIES", 50)
+    # ``run_pipeline --target-leads`` is the user-facing cap.  Honour it in
+    # category discovery as well, rather than continuing toward the legacy
+    # TARGET_COMPANIES default after enough genuine leads were found.
+    target_leads_limit = getattr(config, "TARGET_LEADS_LIMIT", 0)
+    if target_leads_limit > 0:
+        target_companies = min(target_companies, target_leads_limit)
     target_high_confidence = getattr(config, "TARGET_HIGH_CONFIDENCE", 10)
+    serpapi_sufficient = False
     discovery_deadline = deadline if deadline else Deadline(getattr(config, "DISCOVERY_DEADLINE_SECONDS", 55.0))
     # search_deadline is a phase-bounded child: uses at most SEARCH_MAX_RUNTIME seconds
     # but is also capped by whatever discovery time remains — no independent clock.
@@ -988,6 +1155,12 @@ def discover_companies(keyword: str, deadline: "Deadline | None" = None) -> list
         manager._client.proxy_manager.is_crawling = True
     
     exit_reason = "All enqueued tasks completed"
+    discovery_report = {
+        "keyword": keyword,
+        "providers": [],
+        "candidates": [],
+        "stages": {"DISCOVERED": 0, "QUALIFIED": 0, "ENRICHABLE": 0},
+    }
 
     while not scheduler.is_empty():
         if search_deadline.is_exceeded() or (deadline and deadline.remaining() < 1.0):
@@ -1036,6 +1209,18 @@ def discover_companies(keyword: str, deadline: "Deadline | None" = None) -> list
             from search.manager import get_search_manager
             manager = get_search_manager()
             is_cache_served = manager.last_provider_used == "cache"
+            search_report = getattr(manager, "last_search_report", {}) or {}
+            serpapi_primary_succeeded = any(
+                provider.get("provider") == "serpapi" and provider.get("status") == "SUCCESS"
+                for provider in search_report.get("providers", [])
+            )
+            if getattr(manager, "last_search_report", None):
+                discovery_report["providers"].append(manager.last_search_report)
+                for provider_info in manager.last_search_report.get("providers", []):
+                    if provider_info.get("status") not in {"SUCCESS", "EMPTY"}:
+                        stats.increment("provider_failures")
+                    elif provider_info.get("status") == "EMPTY":
+                        stats.increment("provider_empty_results")
 
             if is_cache_served:
                 stats.increment("cache_served_queries")
@@ -1079,6 +1264,10 @@ def discover_companies(keyword: str, deadline: "Deadline | None" = None) -> list
 
             # Route DIRECTORY_LIST results to the secondary mining queue
             if result.get("classification") == "DIRECTORY_LIST":
+                if serpapi_primary_succeeded or getattr(config, "SERPAPI_PRIMARY_MODE", False):
+                    # SerpApi primary mode handles discovery directly via organic results
+                    print(f"[SERPAPI] Skipping directory result in SERPAPI_PRIMARY_MODE: {url}")
+                    continue
                 directory_urls_to_mine.append((url, result.get("title", ""), family))
                 stats.increment("directory_queued")
                 if DEBUG:
@@ -1107,8 +1296,21 @@ def discover_companies(keyword: str, deadline: "Deadline | None" = None) -> list
                 print(f"[REJECTED] URL: {url} | Title: {result.get('title')!r} | Snippet: {result.get('snippet')!r} | Reason: Low snippet relevance score {relevance_score} (< {config.RELEVANCE_THRESHOLD_LOW})")
                 continue
             else:
-                # Ambiguous/borderline snippet, perform HTML deep scoring
-                if homepage_evals < 10:
+                # Ambiguous/borderline snippet
+                if getattr(config, "SERPAPI_PRIMARY_MODE", False):
+                    # In SERPAPI_PRIMARY_MODE: bypass homepage HTML scraping; rely strictly on snippet scoring
+                    if relevance_score < config.RELEVANCE_THRESHOLD_LOW:
+                        stats.increment("rejected_results")
+                        rejected_count_total += 1
+                        print(f"[REJECTED] URL: {url} | Title: {result.get('title')!r} | Snippet: {result.get('snippet')!r} | Reason: Low snippet relevance score {relevance_score} (< {config.RELEVANCE_THRESHOLD_LOW})")
+                        continue
+                    result["classification"] = "ALLOW" if relevance_score >= config.RELEVANCE_THRESHOLD_HIGH else "LIKELY_COMPANY"
+                    result["relevance_score"] = relevance_score
+                    result["relevance_tier"] = tier
+                    result["relevance_info"] = sre_res
+                    if sre_res.get("industry") != "Unknown":
+                        result["industry_detected"] = sre_res["industry"]
+                elif homepage_evals < 10:
                     homepage_evals += 1
                     
                     from discovery.homepage_evaluator import _fetch_homepage
@@ -1168,6 +1370,33 @@ def discover_companies(keyword: str, deadline: "Deadline | None" = None) -> list
                 print(f"[REJECTED] URL: {url} | Title: {result.get('title')!r} | Snippet: {result.get('snippet')!r} | Reason: Could not guess company name")
                 continue
 
+            from query.intent_classifier import is_entity_query
+            is_cat = not is_entity_query(keyword)
+            if is_query_as_company(company_name, keyword, is_cat):
+                rejected_count_total += 1
+                print(f"[REJECTED] URL: {url} | Company: {company_name} | Reason: Company name identical to category query ('{keyword}')")
+                continue
+
+            # Entity searches must retain a result only when its domain or
+            # LinkedIn company profile identifies the queried entity.  This
+            # prevents titles such as "Create your Microsoft account" from
+            # becoming companies merely because the query was "microsoft".
+            if not is_cat and "linkedin.com/company/" not in url.lower():
+                domain_token = _domain_token(url)
+                entity_token = re.sub(r"[^a-z0-9]", "", keyword.lower())
+                company_token = re.sub(r"[^a-z0-9]", "", company_name.lower())
+                if not domain_token or not (
+                    domain_token in entity_token
+                    or entity_token in domain_token
+                    or domain_token in company_token
+                    or company_token in domain_token
+                ):
+                    rejected_count_total += 1
+                    print(f"[REJECTED] URL: {url} | Company: {company_name} | Reason: Entity identity is not supported by the source domain")
+                    continue
+
+            stats.increment("discovery_candidates")
+
             print(f"[SRE Debug] Company: {company_name} | Score: {relevance_score} | Tier: {tier} | Industry: {sre_res.get('industry')} | Matched: {sre_res.get('matched_signals')}")
 
             stats.increment("funnel_business_accepted")
@@ -1218,6 +1447,25 @@ def discover_companies(keyword: str, deadline: "Deadline | None" = None) -> list
                     accumulator[key], new_record
                 )
                 unique_sources.add(accumulator[key]["source"])
+            new_record["canonical_id"] = canonical_company_id(new_record)
+            discovery_report["candidates"].append({
+                "company": company_name,
+                "url": url,
+                "title": (result.get("title") or "")[:180],
+                "provider": source,
+                "classification": new_record["classification"],
+                "relevance_score": relevance_score,
+                "stage": "QUALIFIED",
+                "reason": "identity_and_relevance",
+            })
+            discovery_report["stages"]["DISCOVERED"] = len(discovery_report["candidates"])
+            discovery_report["stages"]["QUALIFIED"] = len(accumulator)
+            discovery_report["stages"]["ENRICHABLE"] = sum(
+                1 for candidate in accumulator.values()
+                if candidate.get("website") or candidate.get("linkedin") or candidate.get("source_url")
+            )
+            stats.set_value("qualified_candidates", discovery_report["stages"]["QUALIFIED"])
+            stats.set_value("enrichable_candidates", discovery_report["stages"]["ENRICHABLE"])
         
         # Enqueue next page if pagination is supported and current page yielded results
         if raw_results and page + 1 < config.MAX_SEARCH_PAGES:
@@ -1254,6 +1502,17 @@ def discover_companies(keyword: str, deadline: "Deadline | None" = None) -> list
         time_taken = time.time() - start_time
         actual_provider = manager.last_provider_used if (hasattr(manager, "last_provider_used") and manager.last_provider_used) else provider_name
         print(f"[Discovery Stats] Source: {actual_provider:<20} | Query: '{req.query}' | Parsed: {parsed_count_total} | Accepted: {accepted_count_total} | Rejected: {rejected_count_total} | Time: {time_taken:.2f}s")
+
+        # A successful SerpApi result set is the primary discovery path.  Once
+        # it supplies the requested number of real candidates, do not spend
+        # the remaining category-query budget or start directory mining.
+        used_serpapi = "serpapi" in (actual_provider or "").lower()
+        if used_serpapi and len(accumulator) >= target_companies:
+            serpapi_sufficient = True
+            directory_urls_to_mine.clear()
+            print(f"[SERPAPI] Discovery target reached ({len(accumulator)}/{target_companies}); skipping remaining category discovery and directory mining.")
+            exit_reason = f"SerpApi discovery target ({target_companies}) reached"
+            break
         
         if task_yielded:
             consecutive_zero_queries = 0
@@ -1291,11 +1550,6 @@ def discover_companies(keyword: str, deadline: "Deadline | None" = None) -> list
             exit_reason = "Discovery deadline completed"
             break
 
-        # Check productivity (no new accepted companies for 10 consecutive seconds)
-        if (time.time() - last_accepted_time >= 10.0) and len(accumulator) > 0:
-            print("[company_discovery] Stopping: No new accepted companies for 10 consecutive seconds.")
-            exit_reason = "No new accepted companies for 10s"
-            break
 
         # Coverage saturation check (stop if last 5 queries yielded 0 new unique companies)
         if len(recent_yields) >= 5 and sum(list(recent_yields)[-5:]) == 0 and len(accumulator) >= 3:
@@ -1319,7 +1573,14 @@ def discover_companies(keyword: str, deadline: "Deadline | None" = None) -> list
             enqueue_next_batch(5)
 
     # ── Process Directory Queue (Secondary Queue) ──────────────────────────────
+    if getattr(config, "SERPAPI_PRIMARY_MODE", False) and directory_urls_to_mine:
+        print(f"[Discovery] SERPAPI_PRIMARY_MODE: Bypassing directory queue ({len(directory_urls_to_mine)} directory URLs skipped)")
+        directory_urls_to_mine.clear()
     from query.intent_classifier import is_entity_query
+    if serpapi_sufficient and directory_urls_to_mine:
+        # Defensive guard for queues populated before the final SerpApi query.
+        print(f"[Discovery] Skipping directory queue after successful SerpApi discovery ({len(directory_urls_to_mine)} directory URLs skipped)")
+        directory_urls_to_mine.clear()
     if is_entity_query(keyword):
         if directory_urls_to_mine:
             print(f"\n[Discovery] Skipping directory queue for entity query '{keyword}' ({len(directory_urls_to_mine)} directory URLs skipped)")
@@ -1460,6 +1721,10 @@ def discover_companies(keyword: str, deadline: "Deadline | None" = None) -> list
                 company_name = guess_company_name(result_mock)
                 if not company_name:
                     continue
+                from query.intent_classifier import is_entity_query
+                is_cat = not is_entity_query(keyword)
+                if is_query_as_company(company_name, keyword, is_cat):
+                    continue
                     
                 sre_res = eval_res["relevance_info"]
                 relevance_score = eval_res["relevance_score"]
@@ -1567,6 +1832,32 @@ def discover_companies(keyword: str, deadline: "Deadline | None" = None) -> list
 
         is_valid, reason = validate_company_record(company)
         if is_valid:
+            evidence_ok, evidence_reason = minimum_evidence_gate(company)
+            if not evidence_ok:
+                stats.increment("rejected_results")
+                print(f"[company_discovery] evidence-gate rejected {company.get('company')!r}: {evidence_reason}")
+                continue
+            intent_ok, intent_reason = company_intent_gate(company, keyword)
+            if not intent_ok:
+                partial_ok, partial_reason = partial_lead_gate(company, intent_reason)
+                if not partial_ok:
+                    stats.increment("rejected_results")
+                    company["qualification_reason"] = intent_reason
+                    discovery_report["candidates"].append({
+                        "company": company.get("company"),
+                        "url": company.get("source_url") or company.get("website") or company.get("linkedin"),
+                        "stage": "REJECTED",
+                        "reason": intent_reason,
+                        "relevance_score": company.get("relevance_score", 0),
+                    })
+                    print(f"[company_discovery] intent-gate rejected {company.get('company')!r}: {intent_reason}")
+                    continue
+                company["qualification_reason"] = partial_reason
+                company["discovery_stage"] = "PARTIAL"
+                company["verification_status"] = "partial"
+                print(f"[company_discovery] retaining partial lead {company.get('company')!r}: {partial_reason}")
+            company["canonical_id"] = canonical_company_id(company)
+            company.setdefault("discovery_stage", "ENRICHABLE")
             stats.increment("validated_companies")
             stats.increment("funnel_leads")
             validated.append(company)
@@ -1677,6 +1968,9 @@ def discover_companies(keyword: str, deadline: "Deadline | None" = None) -> list
     if hasattr(manager, "_client") and hasattr(manager._client, "proxy_manager"):
         manager._client.proxy_manager.is_crawling = False
 
+    discovery_report["stages"]["QUALIFIED"] = len(result)
+    discovery_report["stages"]["ENRICHABLE"] = len(result)
+    stats.set_value("discovery_report", discovery_report)
     return result
 
 

@@ -4,10 +4,10 @@
         "zero": 0,
         "parser": 0,
         "unavailable": 0,
-        "failures": 1710,
-        "last_updated": 1789816916.488417,
-        "score": -1710,
-        "queries_run": 1710
+        "failures": 2910,
+        "last_updated": 1790153401.6041725,
+        "score": -2910,
+        "queries_run": 2910
     },
     "test query": {
         "success": 0,
@@ -15,30 +15,30 @@
         "parser": 0,
         "unavailable": 0,
         "failures": 0,
-        "last_updated": 1789816919.0357153,
-        "score": 270,
-        "queries_run": 54,
-        "leads_found": 54
+        "last_updated": 1790153440.0436444,
+        "score": 469,
+        "queries_run": 126,
+        "leads_found": 103
     },
     "test query 2": {
         "success": 0,
         "zero": 0,
         "parser": 0,
         "unavailable": 0,
-        "failures": 54,
-        "last_updated": 1789816919.0409794,
-        "score": -54,
-        "queries_run": 54
+        "failures": 103,
+        "last_updated": 1790153440.0754135,
+        "score": -103,
+        "queries_run": 103
     },
     "python company": {
         "success": 0,
         "zero": 0,
         "parser": 0,
         "unavailable": 0,
-        "failures": 51,
-        "last_updated": 1789816919.5670848,
-        "score": -52,
-        "queries_run": 103
+        "failures": 97,
+        "last_updated": 1790153441.0312335,
+        "score": -98,
+        "queries_run": 196
     },
     "source:bing": {
         "success": 0,
@@ -47,18 +47,18 @@
         "unavailable": 0,
         "failures": 0,
         "last_updated": 0.0,
-        "score": 12,
-        "queries_run": 95
+        "score": -125,
+        "queries_run": 414
     },
     "software developer company 1": {
         "success": 0,
         "zero": 0,
         "parser": 0,
         "unavailable": 0,
-        "failures": 52,
-        "last_updated": 1789816919.6408489,
-        "score": -104,
-        "queries_run": 52
+        "failures": 104,
+        "last_updated": 1790153441.3708,
+        "score": -208,
+        "queries_run": 104
     },
     "source:google_html": {
         "success": 0,
@@ -67,8 +67,8 @@
         "unavailable": 0,
         "failures": 0,
         "last_updated": 0.0,
-        "score": 139,
-        "queries_run": 238
+        "score": -37,
+        "queries_run": 349
     },
     "software developer company 2": {
         "success": 0,
@@ -107,8 +107,8 @@
         "unavailable": 0,
         "failures": 0,
         "last_updated": 0.0,
-        "score": 91,
-        "queries_run": 115
+        "score": -274,
+        "queries_run": 343
     },
     "technology": {
         "success": 0,
@@ -245,10 +245,10 @@
         "zero": 0,
         "parser": 0,
         "unavailable": 0,
-        "failures": 0,
-        "last_updated": 1784625637.9258478,
-        "score": 18,
-        "queries_run": 6
+        "failures": 6,
+        "last_updated": 1790071677.8419206,
+        "score": 6,
+        "queries_run": 12
     },
     "site:dragos.com email": {
         "success": 0,
@@ -267,8 +267,8 @@
         "unavailable": 0,
         "failures": 0,
         "last_updated": 0.0,
-        "score": 61,
-        "queries_run": 43
+        "score": -216,
+        "queries_run": 221
     },
     "site:linkedin.com/in \"ventureradar\" \"co-founder\"": {
         "success": 0,
@@ -477,8 +477,8 @@
         "unavailable": 0,
         "failures": 0,
         "last_updated": 0.0,
-        "score": -87,
-        "queries_run": 44
+        "score": -306,
+        "queries_run": 154
     },
     "custom python solutions": {
         "success": 0,
@@ -696,9 +696,9 @@
         "parser": 0,
         "unavailable": 0,
         "failures": 0,
-        "last_updated": 1784717898.8484628,
-        "score": 21,
-        "queries_run": 8
+        "last_updated": 1790156356.9704337,
+        "score": 39,
+        "queries_run": 14
     },
     "electronics manufacturers manufacturer": {
         "success": 0,
@@ -916,9 +916,9 @@
         "parser": 0,
         "unavailable": 0,
         "failures": 0,
-        "last_updated": 1785128034.3452814,
-        "score": 5,
-        "queries_run": 2
+        "last_updated": 1790156651.4020274,
+        "score": 8,
+        "queries_run": 3
     },
     "automobile company": {
         "success": 0,
@@ -1955,10 +1955,10 @@
         "zero": 0,
         "parser": 0,
         "unavailable": 0,
-        "failures": 0,
-        "last_updated": 1789751064.704515,
-        "score": 29,
-        "queries_run": 5
+        "failures": 4,
+        "last_updated": 1790076672.4465547,
+        "score": 34,
+        "queries_run": 11
     },
     "site:zomato.com email": {
         "success": 0,
@@ -2155,10 +2155,10 @@
         "zero": 0,
         "parser": 0,
         "unavailable": 0,
-        "failures": 0,
-        "last_updated": 1789751059.0409753,
+        "failures": 1,
+        "last_updated": 1790075509.1085982,
         "score": 10,
-        "queries_run": 1
+        "queries_run": 3
     },
     "swiggy official website": {
         "success": 0,
@@ -2185,10 +2185,10 @@
         "zero": 0,
         "parser": 0,
         "unavailable": 0,
-        "failures": 5,
-        "last_updated": 1789813349.9959671,
-        "score": 0,
-        "queries_run": 6
+        "failures": 7,
+        "last_updated": 1790061359.8566127,
+        "score": 7,
+        "queries_run": 9
     },
     "source:linkedin": {
         "success": 0,
@@ -2197,8 +2197,8 @@
         "unavailable": 0,
         "failures": 0,
         "last_updated": 0.0,
-        "score": 15,
-        "queries_run": 5
+        "score": 18,
+        "queries_run": 6
     },
     "intitle:\"swiggy\"": {
         "success": 0,
@@ -2255,10 +2255,10 @@
         "zero": 0,
         "parser": 0,
         "unavailable": 0,
-        "failures": 4,
-        "last_updated": 1789813679.2197578,
-        "score": -7,
-        "queries_run": 4
+        "failures": 6,
+        "last_updated": 1790094414.205243,
+        "score": -1,
+        "queries_run": 7
     },
     "site:linkedin.com/company/pizza": {
         "success": 0,
@@ -2320,6 +2320,1536 @@
         "score": -2,
         "queries_run": 1
     },
+    "site:linkedin.com/company \"ai\"": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 6,
+        "last_updated": 1790095379.364064,
+        "score": -1,
+        "queries_run": 7
+    },
+    "site:linkedin.com/company/cloud": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 3,
+        "last_updated": 1789999594.947365,
+        "score": -5,
+        "queries_run": 3
+    },
+    "site:pizzahut.co.in contact": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 2,
+        "last_updated": 1790061390.9874766,
+        "score": 0,
+        "queries_run": 3
+    },
+    "site:pizzahut.co.in email": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1790061395.3829048,
+        "score": 3,
+        "queries_run": 1
+    },
+    "site:linkedin.com/company \"ai companies\"": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 2,
+        "last_updated": 1790061491.3003983,
+        "score": 4,
+        "queries_run": 3
+    },
+    "site:linkedin.com/company \"ai companies company\"": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 6,
+        "last_updated": 1790095047.3207078,
+        "score": -11,
+        "queries_run": 6
+    },
+    "site:linkedin.com/company \"cybersecurity companies\"": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1790061505.1082675,
+        "score": 5,
+        "queries_run": 2
+    },
+    "site:linkedin.com/company \"cybersecurity companies company\"": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 3,
+        "last_updated": 1790095104.255776,
+        "score": -4,
+        "queries_run": 3
+    },
+    "site:linkedin.com/company/architecture": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 2,
+        "last_updated": 1790061755.3946958,
+        "score": 6,
+        "queries_run": 3
+    },
+    "site:acme.com \"employees\"": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 3,
+        "last_updated": 1790152181.045019,
+        "score": 3,
+        "queries_run": 5
+    },
+    "\"acme corp\" founded": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1790152184.7356443,
+        "score": 8,
+        "queries_run": 3
+    },
+    "\"acme corp\" headquarters": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1790152197.318962,
+        "score": 6,
+        "queries_run": 3
+    },
+    "site:pizzahut.co.in \"employees\"": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 2,
+        "last_updated": 1790062904.771756,
+        "score": 2,
+        "queries_run": 3
+    },
+    "\"pizza hut\" founded": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 2,
+        "last_updated": 1790062939.7568958,
+        "score": 2,
+        "queries_run": 3
+    },
+    "\"pizza hut\" headquarters": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1790062944.0847182,
+        "score": 4,
+        "queries_run": 1
+    },
+    "\"pizza hut\" company": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1790062950.2428725,
+        "score": 4,
+        "queries_run": 1
+    },
+    "\"pizza hut\" ceo": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 2,
+        "last_updated": 1790063001.3074012,
+        "score": 1,
+        "queries_run": 3
+    },
+    "\"pizza hut\" founder": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1790063007.2230325,
+        "score": 3,
+        "queries_run": 2
+    },
+    "\"pizza hut\" cto": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1790063014.5406373,
+        "score": 3,
+        "queries_run": 2
+    },
+    "site:pizzahut.co.in contact email": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1790063021.950889,
+        "score": 5,
+        "queries_run": 1
+    },
+    "site:pizzahut.co.in contact phone": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1790063026.4450767,
+        "score": 5,
+        "queries_run": 1
+    },
+    "\"pizza hut\" industry": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 2,
+        "last_updated": 1790065499.2817414,
+        "score": -4,
+        "queries_run": 2
+    },
+    "site:none \"employees\"": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 49,
+        "last_updated": 1790071356.7536285,
+        "score": -78,
+        "queries_run": 50
+    },
+    "\"ai investor\" founded": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 2,
+        "last_updated": 1790067672.6570723,
+        "score": -2,
+        "queries_run": 2
+    },
+    "\"global ai show\" founded": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 2,
+        "last_updated": 1790067672.3071725,
+        "score": -2,
+        "queries_run": 2
+    },
+    "\"cybersecuritybreakthrough\" founded": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 11,
+        "last_updated": 1790067731.8484478,
+        "score": -20,
+        "queries_run": 11
+    },
+    "\"cyberops infosec llp\" founded": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 8,
+        "last_updated": 1790067729.8792634,
+        "score": -14,
+        "queries_run": 8
+    },
+    "\"cybersecuritybreakthrough\" headquarters": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 3,
+        "last_updated": 1790067740.257073,
+        "score": -4,
+        "queries_run": 3
+    },
+    "\"cybersecuritybreakthrough\" company": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 3,
+        "last_updated": 1790065726.3183193,
+        "score": -6,
+        "queries_run": 3
+    },
+    "\"cyberops infosec llp\" headquarters": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 3,
+        "last_updated": 1790067735.6708868,
+        "score": -4,
+        "queries_run": 3
+    },
+    "\"aipartnershipscorp\" founded": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 3,
+        "last_updated": 1790065556.6383188,
+        "score": -1,
+        "queries_run": 4
+    },
+    "\"ai foundry ai\" founded": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 3,
+        "last_updated": 1790065567.2688627,
+        "score": -1,
+        "queries_run": 4
+    },
+    "\"ai investor\" headquarters": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 3,
+        "last_updated": 1790065578.7497773,
+        "score": -1,
+        "queries_run": 4
+    },
+    "\"visenze\" founded": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 3,
+        "last_updated": 1790065556.7117622,
+        "score": -1,
+        "queries_run": 4
+    },
+    "\"global ai show\" headquarters": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 2,
+        "last_updated": 1790065591.42426,
+        "score": -4,
+        "queries_run": 2
+    },
+    "\"visenze\" headquarters": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1790065562.4752903,
+        "score": 5,
+        "queries_run": 1
+    },
+    "\"aipartnershipscorp\" headquarters": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1790065563.7098765,
+        "score": 5,
+        "queries_run": 1
+    },
+    "\"visenze\" company": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1790065569.488138,
+        "score": 5,
+        "queries_run": 1
+    },
+    "\"aipartnershipscorp\" company": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1790065569.917938,
+        "score": 5,
+        "queries_run": 1
+    },
+    "\"visenze\" industry": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1790065578.0906878,
+        "score": -2,
+        "queries_run": 1
+    },
+    "\"aipartnershipscorp\" industry": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1790065579.7864413,
+        "score": 5,
+        "queries_run": 1
+    },
+    "\"ai foundry ai\" headquarters": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1790065582.2879295,
+        "score": 5,
+        "queries_run": 1
+    },
+    "\"aisi gt\" founded": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1790065591.959649,
+        "score": 5,
+        "queries_run": 1
+    },
+    "\"aisi gt\" headquarters": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1790065602.8294706,
+        "score": 5,
+        "queries_run": 1
+    },
+    "\"aisi gt\" company": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1790065611.3359501,
+        "score": 5,
+        "queries_run": 1
+    },
+    "\"aisi gt\" industry": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1790065617.3268805,
+        "score": 5,
+        "queries_run": 1
+    },
+    "\"cyberops infosec llp\" company": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 6,
+        "last_updated": 1790067735.6790404,
+        "score": -12,
+        "queries_run": 6
+    },
+    "empty query": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 38,
+        "last_updated": 1790153401.7601068,
+        "score": -38,
+        "queries_run": 38
+    },
+    "failed query": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 37,
+        "last_updated": 1790153401.7751284,
+        "score": -74,
+        "queries_run": 37
+    },
+    "site:linkedin.com/company/cybersecurity": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 6,
+        "last_updated": 1790069995.3662424,
+        "score": -11,
+        "queries_run": 6
+    },
+    "site:linkedin.com/company \"automobile company\"": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 3,
+        "last_updated": 1790070336.1419506,
+        "score": -6,
+        "queries_run": 3
+    },
+    "\"acme cybersecurity\" founded": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 2,
+        "last_updated": 1790071383.4974113,
+        "score": 1,
+        "queries_run": 3
+    },
+    "\"acme cybersecurity\" headquarters": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1790071388.7599514,
+        "score": 3,
+        "queries_run": 2
+    },
+    "\"acme cybersecurity\" company": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1790071398.3694592,
+        "score": 3,
+        "queries_run": 2
+    },
+    "\"acme cybersecurity\" industry": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1790071404.7339158,
+        "score": 5,
+        "queries_run": 1
+    },
+    "site:none contact email": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 7,
+        "last_updated": 1790133886.7796068,
+        "score": 16,
+        "queries_run": 12
+    },
+    "\"acme cybersecurity\" ceo": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1790071430.1329558,
+        "score": 5,
+        "queries_run": 1
+    },
+    "site:none contact phone": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1790071436.3059032,
+        "score": 5,
+        "queries_run": 1
+    },
+    "\"acme cybersecurity\" founder": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1790071443.5005462,
+        "score": 5,
+        "queries_run": 1
+    },
+    "\"acme cybersecurity\" cto": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1790071455.6668563,
+        "score": 5,
+        "queries_run": 1
+    },
+    "\"zomato\"": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1790076406.9589217,
+        "score": 10,
+        "queries_run": 1
+    },
+    "site:zomato.com \"employees\"": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1790076421.7881057,
+        "score": 5,
+        "queries_run": 1
+    },
+    "\"zomato\" founded": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1790076444.5535936,
+        "score": 3,
+        "queries_run": 2
+    },
+    "\"zomato\" headquarters": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1790076450.312382,
+        "score": -2,
+        "queries_run": 1
+    },
+    "site:zomato.com": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 3,
+        "last_updated": 1790076629.608342,
+        "score": -6,
+        "queries_run": 3
+    },
+    "\"acme cybersecurity\" email": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1790094169.8799994,
+        "score": -1,
+        "queries_run": 2
+    },
+    "\"acme cybersecurity\" contact": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1790094189.3872015,
+        "score": 3,
+        "queries_run": 2
+    },
+    "\"acme cybersecurity\" phone": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1790094193.5908492,
+        "score": 2,
+        "queries_run": 2
+    },
+    "\"pizza hut\" email": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1790094450.221859,
+        "score": 5,
+        "queries_run": 1
+    },
+    "\"pizza hut\" contact": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1790094453.85605,
+        "score": 5,
+        "queries_run": 1
+    },
+    "\"pizza hut\" phone": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1790094456.6904106,
+        "score": -2,
+        "queries_run": 1
+    },
+    "\"aipartnershipscorp\" email": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 6,
+        "last_updated": 1790094521.6534865,
+        "score": -11,
+        "queries_run": 6
+    },
+    "\"ai investor\" email": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 6,
+        "last_updated": 1790094519.9633381,
+        "score": -11,
+        "queries_run": 6
+    },
+    "\"visenze\" email": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 6,
+        "last_updated": 1790094527.4660096,
+        "score": -11,
+        "queries_run": 6
+    },
+    "\"global ai show\" email": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 2,
+        "last_updated": 1790094502.6154819,
+        "score": 1,
+        "queries_run": 3
+    },
+    "\"ai foundry ai\" email": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 5,
+        "last_updated": 1790094532.9902532,
+        "score": -9,
+        "queries_run": 5
+    },
+    "\"global ai show\" ceo": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 3,
+        "last_updated": 1790094518.904178,
+        "score": -5,
+        "queries_run": 3
+    },
+    "\"ai investor\" ceo": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1790094530.9447222,
+        "score": -1,
+        "queries_run": 1
+    },
+    "\"global ai show\" founder": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1790094535.5644696,
+        "score": -1,
+        "queries_run": 1
+    },
+    "\"cybersecuritybreakthrough\" email": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 6,
+        "last_updated": 1790094598.89157,
+        "score": -11,
+        "queries_run": 6
+    },
+    "\"cyberops infosec llp\" email": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 5,
+        "last_updated": 1790094603.1748066,
+        "score": -9,
+        "queries_run": 5
+    },
+    "\"cybersecuritybreakthrough\" ceo": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1790094607.2616987,
+        "score": -1,
+        "queries_run": 1
+    },
+    "\"cyberops infosec llp\" contact": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1790094613.5650632,
+        "score": -1,
+        "queries_run": 1
+    },
+    "site:linkedin.com/company \"automobile companies\"": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 6,
+        "last_updated": 1790095205.1219206,
+        "score": -12,
+        "queries_run": 6
+    },
+    "\"ai foundry ai\" contact": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 3,
+        "last_updated": 1790095066.5149202,
+        "score": -5,
+        "queries_run": 3
+    },
+    "\"ai investor\" contact": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 3,
+        "last_updated": 1790095065.986554,
+        "score": -5,
+        "queries_run": 3
+    },
+    "\"visenze\" contact": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 3,
+        "last_updated": 1790095066.9361532,
+        "score": -5,
+        "queries_run": 3
+    },
+    "\"global ai show\" contact": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 2,
+        "last_updated": 1790095069.6050262,
+        "score": -3,
+        "queries_run": 2
+    },
+    "\"aipartnershipscorp\" contact": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1790095076.8712082,
+        "score": 1,
+        "queries_run": 1
+    },
+    "\"aipartnershipscorp\" ceo": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1790095092.3324802,
+        "score": -1,
+        "queries_run": 1
+    },
+    "\"cyberops infosec llp\" phone": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1790095112.8429248,
+        "score": -1,
+        "queries_run": 1
+    },
+    "\"cybersecuritybreakthrough\" contact": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1790095116.7965853,
+        "score": -1,
+        "queries_run": 1
+    },
+    "\"cybersecuritybreakthrough\" founder": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1790095125.6669893,
+        "score": -1,
+        "queries_run": 1
+    },
+    "\"cyberops infosec llp\" ceo": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1790095131.7982886,
+        "score": -1,
+        "queries_run": 1
+    },
+    "ai companies": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1790137341.983127,
+        "score": 24,
+        "queries_run": 4
+    },
+    "ai startups": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1790133387.093803,
+        "score": 20,
+        "queries_run": 2
+    },
+    "site:builtin.com contact email": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1790097085.9114785,
+        "score": 5,
+        "queries_run": 1
+    },
+    "\"builtin\" ceo": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1790133465.715332,
+        "score": 2,
+        "queries_run": 2
+    },
+    "physics wallah": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1790097712.5166957,
+        "score": 10,
+        "queries_run": 1
+    },
+    "site:physicswallah.org contact email": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1790097740.8959224,
+        "score": 5,
+        "queries_run": 1
+    },
+    "\"physics wallah\" ceo": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1790097758.7866788,
+        "score": 3,
+        "queries_run": 2
+    },
+    "\"physics wallah\" email": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 2,
+        "last_updated": 1790097773.5879483,
+        "score": -4,
+        "queries_run": 2
+    },
+    "source:directory_provider": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 0.0,
+        "score": -222,
+        "queries_run": 129
+    },
+    "source:repository_provider": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 0.0,
+        "score": -222,
+        "queries_run": 121
+    },
+    "tech companies": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1790130733.7688036,
+        "score": -1,
+        "queries_run": 2
+    },
+    "obscure query": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 8,
+        "last_updated": 1790130734.7346103,
+        "score": -8,
+        "queries_run": 8
+    },
+    "test query unique a": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 204,
+        "last_updated": 1790153442.7440588,
+        "score": -408,
+        "queries_run": 204
+    },
+    "ai companies unique b": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1790136264.0914285,
+        "score": 14,
+        "queries_run": 10
+    },
+    "tech companies unique c": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 10,
+        "last_updated": 1790153443.3759933,
+        "score": 9,
+        "queries_run": 39
+    },
+    "ai companies unique d": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 64,
+        "last_updated": 1790153443.662495,
+        "score": -109,
+        "queries_run": 83
+    },
+    "obscure query unique e": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 192,
+        "last_updated": 1790153444.1631525,
+        "score": -330,
+        "queries_run": 192
+    },
+    "test query unique g": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 204,
+        "last_updated": 1790153444.4950135,
+        "score": -408,
+        "queries_run": 204
+    },
+    "test query unique i": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 54,
+        "last_updated": 1790134300.5184162,
+        "score": -108,
+        "queries_run": 54
+    },
+    "cybersecurity companies": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 8,
+        "last_updated": 1790133545.3489828,
+        "score": -3,
+        "queries_run": 10
+    },
+    "top ai companies": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1790133396.2765994,
+        "score": -2,
+        "queries_run": 1
+    },
+    "site:linkedin.com/company \"cybersecurity\"": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1790133485.5013807,
+        "score": 10,
+        "queries_run": 1
+    },
+    "site:linkedin.com/company \"cybersecurity company\"": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1790133489.704073,
+        "score": 10,
+        "queries_run": 1
+    },
+    "\"valor cybersecurity\" ceo": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1790133520.0009084,
+        "score": 5,
+        "queries_run": 1
+    },
+    "\"national cybersecurity alliance\" ceo": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1790133520.1000438,
+        "score": 5,
+        "queries_run": 1
+    },
+    "\"minorities in cybersecurity\" ceo": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 4,
+        "last_updated": 1790133549.1497996,
+        "score": -6,
+        "queries_run": 4
+    },
+    "\"national cybersecurity alliance\" email": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1790133524.587431,
+        "score": 5,
+        "queries_run": 1
+    },
+    "\"valor cybersecurity\" email": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 4,
+        "last_updated": 1790133806.8252451,
+        "score": -5,
+        "queries_run": 4
+    },
+    "\"national cybersecurity alliance\" contact": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 2,
+        "last_updated": 1790133766.1758516,
+        "score": 0,
+        "queries_run": 3
+    },
+    "\"international institute of cyber security\" email": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1790133526.4761617,
+        "score": 5,
+        "queries_run": 1
+    },
+    "\"international institute of cyber security\" ceo": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 2,
+        "last_updated": 1790133646.5882716,
+        "score": -2,
+        "queries_run": 2
+    },
+    "automobile companies": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 3,
+        "last_updated": 1790133918.3421195,
+        "score": -5,
+        "queries_run": 3
+    },
+    "\"acme cybersecurity\" email address": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1790136131.6157312,
+        "score": 4,
+        "queries_run": 1
+    },
+    "\"acme cybersecurity\" sales email": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 2,
+        "last_updated": 1790136159.3793967,
+        "score": 2,
+        "queries_run": 3
+    },
+    "\"acme cybersecurity\" contact us": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 3,
+        "last_updated": 1790136194.2822685,
+        "score": 1,
+        "queries_run": 4
+    },
+    "\"acme cybersecurity\" phone number": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 2,
+        "last_updated": 1790136235.9090652,
+        "score": 2,
+        "queries_run": 3
+    },
+    "\"acme cybersecurity\" contact phone": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1790136249.7579057,
+        "score": 5,
+        "queries_run": 1
+    },
+    "\"acme cybersecurity\" customer support": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1790136255.2675438,
+        "score": 5,
+        "queries_run": 1
+    },
+    "\"acme cybersecurity\" official website": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1790136263.815934,
+        "score": 3,
+        "queries_run": 1
+    },
+    "\"soliton systems\" email": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1790136456.752649,
+        "score": 3,
+        "queries_run": 2
+    },
+    "\"soliton systems\" email address": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1790136474.284723,
+        "score": 3,
+        "queries_run": 2
+    },
+    "\"soliton systems\" sales email": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1790136479.7471218,
+        "score": 5,
+        "queries_run": 1
+    },
+    "\"soliton systems\" contact us": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1790136485.4922159,
+        "score": 5,
+        "queries_run": 1
+    },
+    "\"soliton systems\" phone number": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1790136492.9852986,
+        "score": 5,
+        "queries_run": 1
+    },
+    "\"soliton systems\" contact phone": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1790136499.183923,
+        "score": 3,
+        "queries_run": 2
+    },
+    "\"soliton systems\" customer support": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1790136504.5725765,
+        "score": 5,
+        "queries_run": 1
+    },
+    "\"microsoft ai\" email": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 2,
+        "last_updated": 1790137329.860666,
+        "score": 1,
+        "queries_run": 3
+    },
+    "\"genai works\" email": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 2,
+        "last_updated": 1790137335.3048656,
+        "score": 1,
+        "queries_run": 3
+    },
+    "\"gnani ai\" contact us": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1790137370.4041004,
+        "score": -1,
+        "queries_run": 1
+    },
+    "\"electronics\" sales email": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1790137854.4295387,
+        "score": 5,
+        "queries_run": 1
+    },
+    "\"electronics\" contact phone": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1790137872.57642,
+        "score": 4,
+        "queries_run": 1
+    },
+    "\"electronics\" ceo": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1790137881.0887914,
+        "score": -2,
+        "queries_run": 1
+    },
+    "\"atlascopco\" contact": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 5,
+        "last_updated": 1790141689.7567854,
+        "score": -9,
+        "queries_run": 5
+    },
+    "\"arrow\" phone": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 5,
+        "last_updated": 1790141687.6117225,
+        "score": -9,
+        "queries_run": 5
+    },
+    "\"yougov\" phone": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 4,
+        "last_updated": 1790141689.2911575,
+        "score": -7,
+        "queries_run": 4
+    },
+    "smoke": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 5,
+        "last_updated": 1790141782.309094,
+        "score": -9,
+        "queries_run": 5
+    },
+    "\"futureelectronics northamerica site\" founded": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1790153181.5883083,
+        "score": 5,
+        "queries_run": 1
+    },
+    "\"futureelectronics northamerica site\" headquarters": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1790153187.2322295,
+        "score": 5,
+        "queries_run": 1
+    },
+    "\"all manufacturers\" ceo": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1790153190.853725,
+        "score": -2,
+        "queries_run": 1
+    },
     "source:brave": {
         "success": 0,
         "zero": 0,
@@ -2327,17 +3857,207 @@
         "unavailable": 0,
         "failures": 0,
         "last_updated": 0.0,
-        "score": 14,
-        "queries_run": 3
+        "score": 3,
+        "queries_run": 19
     },
-    "site:linkedin.com/company \"ai\"": {
+    "\"ghost electronics\" phone": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1790154906.305977,
+        "score": 4,
+        "queries_run": 1
+    },
+    "\"ghost electronics\" email": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1790154910.6005707,
+        "score": 5,
+        "queries_run": 1
+    },
+    "\"ghost electronics\" contact": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 0,
+        "last_updated": 1790154915.672267,
+        "score": 5,
+        "queries_run": 1
+    },
+    "\"ghost electronics\" sales": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1790154923.8446994,
+        "score": 4,
+        "queries_run": 2
+    },
+    "site:ghostelec.com phone": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 7,
+        "last_updated": 1790155012.7841084,
+        "score": -11,
+        "queries_run": 7
+    },
+    "site:ghostelec.com email": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 4,
+        "last_updated": 1790155073.1860306,
+        "score": -5,
+        "queries_run": 4
+    },
+    "site:ghostelec.com contact": {
         "success": 0,
         "zero": 0,
         "parser": 0,
         "unavailable": 0,
         "failures": 3,
-        "last_updated": 1789817147.2142446,
-        "score": 5,
+        "last_updated": 1790155152.2806406,
+        "score": -4,
+        "queries_run": 3
+    },
+    "\"ghost electronics\" ceo": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1790155152.2892182,
+        "score": -2,
+        "queries_run": 1
+    },
+    "\"acme corp\" phone": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 8,
+        "last_updated": 1790155413.0799656,
+        "score": -13,
+        "queries_run": 8
+    },
+    "\"acme corp\" email": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1790155508.3986723,
+        "score": 2,
+        "queries_run": 2
+    },
+    "\"acme corp\" contact": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 4,
+        "last_updated": 1790155562.8215528,
+        "score": -5,
         "queries_run": 4
+    },
+    "\"acme corp\" sales": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 3,
+        "last_updated": 1790155663.116722,
+        "score": -4,
+        "queries_run": 3
+    },
+    "site:acme.com phone": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 2,
+        "last_updated": 1790155761.0002005,
+        "score": -3,
+        "queries_run": 2
+    },
+    "site:acme.com email": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 8,
+        "last_updated": 1790156124.1619773,
+        "score": -13,
+        "queries_run": 8
+    },
+    "site:acme.com contact": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 4,
+        "last_updated": 1790156188.5590763,
+        "score": -5,
+        "queries_run": 4
+    },
+    "\"acme corp\" employees": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 4,
+        "last_updated": 1790156275.5030842,
+        "score": -5,
+        "queries_run": 4
+    },
+    "\"acme corp\" company size": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 1,
+        "last_updated": 1790156275.5105605,
+        "score": -2,
+        "queries_run": 1
+    },
+    "\"futureelectronics northamerica site\" phone": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 6,
+        "last_updated": 1790156401.6966422,
+        "score": -10,
+        "queries_run": 6
+    },
+    "\"car dealership\" email": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 4,
+        "last_updated": 1790156647.4006252,
+        "score": -7,
+        "queries_run": 4
+    },
+    "site:linkedin.com/in \"automobile consulting services\" ceo": {
+        "success": 0,
+        "zero": 0,
+        "parser": 0,
+        "unavailable": 0,
+        "failures": 5,
+        "last_updated": 1790156647.2059846,
+        "score": -9,
+        "queries_run": 5
     }
 }

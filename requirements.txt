@@ -8,7 +8,8 @@ requests>=2.31
 
 # Browser automation (REQUIRED — many sites block plain HTTP)
 playwright>=1.44
-# After install, run: playwright install chromium
+psutil>=5.9
+# After install, run: python -m playwright install --with-deps chromium
 
 # Web framework & server
 fastapi>=0.111
@@ -17,6 +18,7 @@ uvicorn[standard]>=0.29
 # Data & config
 numpy>=1.26
 pandas>=2.2
+phonenumbers>=9.0
 pydantic>=2.6
 pydantic-settings>=2.2
 python-dotenv>=1.0

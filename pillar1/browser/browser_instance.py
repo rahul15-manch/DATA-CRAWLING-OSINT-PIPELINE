@@ -41,11 +41,13 @@ class BrowserInstance:
             if self.proxy_url:
                 proxy_config = {"server": self.proxy_url}
             
-            # Check ignore cert errors from config
+            # Check ignore cert errors and headless from config
             ignore_certs = True
+            headless = True
             try:
                 import config
                 ignore_certs = getattr(config, "PLAYWRIGHT_IGNORE_CERTIFICATE_ERRORS", True)
+                headless = getattr(config, "PLAYWRIGHT_HEADLESS", True)
             except Exception:
                 pass
 
@@ -53,13 +55,15 @@ class BrowserInstance:
                 "--disable-blink-features=AutomationControlled",
                 "--no-sandbox",
                 "--disable-setuid-sandbox",
+                "--disable-dev-shm-usage",
+                "--disable-gpu",
                 f"--playwright-browser-id={id(self)}"
             ]
             if ignore_certs:
                 args.append("--ignore-certificate-errors")
 
             self.browser = self.playwright.chromium.launch(
-                headless=True,
+                headless=headless,
                 proxy=proxy_config,
                 args=args
             )

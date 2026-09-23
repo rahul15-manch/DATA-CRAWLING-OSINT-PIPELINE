@@ -113,8 +113,10 @@ def discover_contact(company: str, deadline: Deadline | None = None) -> dict:
             is_linkedin = "linkedin.com/in" in url
             designation = _guess_designation(combined_text)
 
-            # Require either a LinkedIn profile URL or a clear designation
-            if not (is_linkedin or designation):
+            # A search query is not evidence of employment.  Keep only a
+            # LinkedIn person result that explicitly names both the company
+            # and a designation in the returned title/snippet.
+            if not (is_linkedin and designation and company.lower() in combined_text.lower()):
                 continue
 
             # Extract and validate the contact name
@@ -125,14 +127,13 @@ def discover_contact(company: str, deadline: Deadline | None = None) -> dict:
 
             # Task 8: Skip this result if the name is not a realistic person name
             if not is_valid_person_name(contact_name or ""):
-                contact_name = None
-                if not designation:
-                    continue
+                continue
 
             return {
                 "contact_name": contact_name,
                 "designation": designation,
-                "email": _extract_public_email(combined_text),
+                # A LinkedIn snippet is never used as company email evidence.
+                "email": None,
                 "linkedin": url if is_linkedin else None,
                 "source": "LinkedIn" if is_linkedin else "Company Website",
             }

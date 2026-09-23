@@ -160,6 +160,17 @@ NON_COMPANY_DOMAINS = frozenset({
     "clutch.co",
     "goodfirms",
     "goodfirms.co",
+    # Publisher / listicle / aggregator directories
+    "builtin",
+    "builtin.com",
+    "techfunnel",
+    "techfunnel.com",
+    "pcbtok",
+    "pcbtok.com",
+    "thomasnet",
+    "thomasnet.com",
+    "companiesmarketcap",
+    "companiesmarketcap.com",
 })
 
 # ── Title terms that indicate informational / educational content ──────────────
@@ -381,6 +392,18 @@ TITLE_NOISE_PARTS = frozenset({
     "naukri",
     "trustpilot",
     "zoominfo",
+    # Common non-company title fluff segments
+    "official site",
+    "global official site",
+    "official website",
+    "home",
+    "welcome",
+    "about us",
+    "about",
+    "contact us",
+    "overview",
+    "homepage",
+    "leading",
 })
 
 # ── Email priority order (index = rank; lower is better) ──────────────────────

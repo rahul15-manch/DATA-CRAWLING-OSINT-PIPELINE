@@ -41,6 +41,24 @@ _DEFAULT: dict = {
     "funnel_leads_exported":      0,
     "cache_served_queries":       0,
     "zero_result_serps":          0,
+    "discovery_candidates":        0,
+    "qualified_candidates":        0,
+    "enrichable_candidates":       0,
+    "verified_candidates":         0,
+    "provider_failures":           0,
+    "provider_empty_results":      0,
+
+    # Coverage Metrics (Observed Leads)
+    "companies_found":             0,
+    "leads_returned":              0,
+    "leads_with_phone":            0,
+    "leads_with_email":            0,
+    "leads_with_both":             0,
+    "leads_with_decision_maker":   0,
+    "phone_coverage_pct":          0.0,
+    "email_coverage_pct":          0.0,
+    "both_coverage_pct":           0.0,
+    "decision_maker_coverage_pct": 0.0,
 }
 
 _stats: dict = {}

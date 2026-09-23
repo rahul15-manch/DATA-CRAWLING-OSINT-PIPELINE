@@ -26,9 +26,36 @@ Design rules
 
 from __future__ import annotations
 
+import re
+
 # ─────────────────────────────────────────────────────────────────────────────
 # Intent Keyword Sets
 # ─────────────────────────────────────────────────────────────────────────────
+
+CATEGORY_TERMS = frozenset({
+    "electronics", "hardware", "software", "solar", "textiles", "textile",
+    "plastics", "plastic", "pharma", "pharmaceuticals", "pharmaceutical",
+    "automotive", "automobile", "telecom", "telecommunications", "logistics",
+    "fintech", "biotech", "aerospace", "cybersecurity", "cyber security",
+    "ai", "artificial intelligence", "ml", "machine learning",
+    "robotics", "semiconductor", "semiconductors", "manufacturing",
+    "clean energy", "cleantech", "edtech", "medtech", "agritech",
+    "ecommerce", "e-commerce", "retail", "fmcg", "healthcare", "healthtech",
+    "proptech", "insurtech", "legaltech", "iot", "gaming", "energy",
+    "aviation", "chemicals", "construction", "biotechnology",
+})
+
+COLLECTION_TERMS = frozenset({
+    "companies", "manufacturers", "suppliers", "startups",
+    "firms", "dealers", "contractors", "agencies", "vendors",
+    "enterprises", "producers", "distributors", "exporters", "wholesalers",
+    "providers", "consultancies", "services",
+})
+
+ENTITY_LEGAL_SUFFIXES = frozenset({
+    "inc", "corp", "corporation", "ltd", "limited", "llc", "llp",
+    "pvt", "private", "gmbh", "co", "plc",
+})
 
 # Words that signal the user is looking for a *person / role*
 _JOB_ROLE_WORDS = frozenset({
@@ -299,6 +326,21 @@ _INDUSTRY_CATEGORIES: dict[str, list[str]] = {
     "iot": ["IoT company", "internet of things startup", "connected devices company"],
     "gaming": ["game development studio", "gaming company", "esports company"],
     "insurance": ["insurtech startup", "insurance company", "insurance brokerage"],
+    "cybersecurity": ["cybersecurity company", "infosec firm", "cyber security provider", "information security company", "managed security service provider"],
+    "cyber security": ["cybersecurity company", "infosec firm", "cyber security provider", "information security company"],
+    "infosec": ["infosec company", "cybersecurity firm"],
+    "automobile": ["automobile company", "automotive manufacturer", "auto parts company", "EV company", "vehicle manufacturer"],
+    "automotive": ["automotive company", "automobile manufacturer", "auto components company"],
+    "aerospace": ["aerospace company", "aviation company", "defense contractor"],
+    "telecom": ["telecom company", "telecommunications provider", "network infrastructure company"],
+    "biotech": ["biotech company", "biotechnology firm", "life sciences company"],
+    "cleantech": ["cleantech company", "renewable energy company", "green tech startup"],
+    "energy": ["energy company", "renewable energy company", "power solutions company"],
+    "electronics": ["electronics companies", "electronics manufacturers", "consumer electronics companies", "electronic components manufacturers"],
+    "hardware": ["hardware companies", "computer hardware manufacturers", "electronics hardware company"],
+    "solar": ["solar energy companies", "solar panel manufacturers", "solar EPC companies"],
+    "pharma": ["pharmaceutical companies", "pharma manufacturers", "biopharma companies"],
+    "semiconductor": ["semiconductor companies", "chip manufacturers", "semiconductor design firm"],
 }
 
 # Generic fallback templates for job-role / technology intents
@@ -463,48 +505,55 @@ _TOPIC_MARKER_WORDS = (
 
 def is_entity_query(keyword: str) -> bool:
     """
-    Return True when the keyword looks like a bare entity/company name rather
-    than a topic, industry, or technology search.
-
-    Heuristics
-    ----------
-    - 1–3 words
-    - No word belongs to known topic/company/role/tech vocabulary
-    - No location suffix (handled by query_planner already)
-    - Not purely numeric
-
-    Examples
-    --------
-        "swiggy"       → True   (entity — direct company)
-        "zomato"       → True
-        "flipkart"     → True
-        "microsoft"    → True
-        "AI companies" → False  (topic — has company word)
-        "fintech"      → False  (topic — single-word industry term)
-        "python"       → False  (technology word)
+    Return True when keyword looks like a specific company / entity name
+    (e.g. 'Swiggy', 'Samsung', 'Microsoft', 'Electronics India Pvt Ltd').
+    Return False when keyword is a category, industry, technology, or collection
+    (e.g. 'electronics', 'consumer electronics', 'electronics companies', 'solar').
     """
     lower = keyword.lower().strip()
-    if not lower:
+    if not lower or lower.isdigit() or len(lower) < 2:
         return False
 
-    words = lower.split()
-
-    # Must be short (1–3 words)
-    if len(words) > 3:
+    tokens = set(re.findall(r"[a-z0-9]+", lower))
+    if not tokens:
         return False
 
-    # Reject if any word is a known topic/tech/role signal
-    for w in words:
-        if w in _TOPIC_MARKER_WORDS:
-            return False
-
-    # Reject if any word is a known technology keyword
-    if any(w in _TECHNOLOGY_WORDS for w in words) or lower in _TECHNOLOGY_WORDS:
+    # Explicit collection/directory terms (e.g. 'companies', 'manufacturers', 'startups') -> Category
+    if tokens & COLLECTION_TERMS:
         return False
 
-    # Reject known industry category keywords
+    # Check for legal entity suffixes (e.g. 'pvt', 'ltd', 'inc', 'corp', 'llc')
+    has_legal_suffix = bool(tokens & ENTITY_LEGAL_SUFFIXES)
+
+    # Check if the query contains or matches an industry category term
+    has_category_term = (
+        lower in CATEGORY_TERMS
+        or bool(tokens & CATEGORY_TERMS)
+        or any(cat in lower for cat in CATEGORY_TERMS if len(cat) > 3)
+    )
+
+    if has_category_term:
+        # If it has a category term BUT has a legal entity suffix (e.g. 'Electronics India Pvt Ltd'),
+        # it is a specific company entity search.
+        if has_legal_suffix:
+            return True
+        # Otherwise, pure category discovery
+        return False
+
+    # Reject if any token is a known topic/role/product/service signal
+    if tokens & _TOPIC_MARKER_WORDS:
+        if has_legal_suffix:
+            return True
+        return False
+
+    if any(w in _TECHNOLOGY_WORDS for w in tokens) or lower in _TECHNOLOGY_WORDS:
+        return False
+
+    # Reject known industry category mappings
     for cat_key in _INDUSTRY_CATEGORIES:
         if cat_key in lower:
+            if has_legal_suffix:
+                return True
             return False
 
     # Reject service / product keywords
@@ -515,7 +564,11 @@ def is_entity_query(keyword: str) -> bool:
     if lower.isdigit() or len(lower) < 3:
         return False
 
-    # Likely a bare entity name
+    # Must be 1–4 words to be considered an entity
+    if len(tokens) > 4:
+        return False
+
+    # Default for specific proper nouns (e.g. "Samsung", "Swiggy", "Boeing", "Logitech")
     return True
 
 

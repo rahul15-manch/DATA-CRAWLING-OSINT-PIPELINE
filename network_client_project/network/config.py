@@ -1,5 +1,5 @@
 from pydantic_settings import BaseSettings, SettingsConfigDict
-from pydantic import Field, validator
+from pydantic import Field, field_validator
 from typing import List, Optional, Union
 import os
 
@@ -15,7 +15,8 @@ class NetworkConfig(BaseSettings):
     PROXY_URL: Optional[str] = Field(default=None, description="Single proxy URL")
     PROXY_FILE: Optional[str] = Field(default=None, description="Path to a file containing proxies")
 
-    @validator("PROXY_FILE", pre=True, always=True)
+    @field_validator("PROXY_FILE", mode="before")
+    @classmethod
     def default_proxy_file(cls, v):
         if not v:
             if os.path.exists("working_proxies.txt"):

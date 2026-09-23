@@ -1,81 +1,35 @@
 {
   "34.87.80.221:30000": {
-    "score": 68.0,
+    "score": 95.0,
     "google_successes": 0,
-    "google_captchas": 3,
+    "google_captchas": 4,
     "google_429s": 0,
-    "consecutive_failures": 3,
+    "consecutive_failures": 1,
     "consecutive_blocks": {
-      "google.com": 3,
-      "brave.com": 0
+      "google.com": 4,
+      "brave.com": 0,
+      "linkedin.com": 0,
+      "pizzahut.co.in": 0
     },
     "dead": true,
     "google_status": "healthy",
     "bing_status": "healthy",
     "general_status": "dead",
-    "last_success_ts": 1789814035.6890073,
-    "last_failure_ts": 1789815529.5788116,
+    "last_success_ts": 1790131293.4884214,
+    "last_failure_ts": 1790155306.0151846,
     "latency_samples": [
-      1.4079315662384033,
-      1.745640516281128,
-      0.6006569862365723,
-      0.4458599090576172,
-      3.91709303855896,
-      3.5951435565948486,
-      13.694072484970093,
-      13.288969993591309,
-      3.752620220184326,
-      0.8912832736968994
+      3.850935220718384,
+      2.136847734451294,
+      2.645829439163208,
+      1.6367814540863037,
+      1.6474785804748535,
+      2.2599103450775146,
+      1.7197937965393066,
+      2.319305181503296,
+      3.1814050674438477,
+      2.165417194366455
     ],
     "outcome_history": [
-      [
-        1784448689.5817852,
-        "TRANSPORT_CONNECTION_ERROR"
-      ],
-      [
-        1784448824.2146702,
-        "TRANSPORT_TIMEOUT"
-      ],
-      [
-        1784470009.233334,
-        "TRANSPORT_CONNECTION_ERROR"
-      ],
-      [
-        1784519983.3620532,
-        "TRANSPORT_CONNECTION_ERROR"
-      ],
-      [
-        1784520387.6300526,
-        "TRANSPORT_CONNECTION_ERROR"
-      ],
-      [
-        1784520793.1456077,
-        "TRANSPORT_CONNECTION_ERROR"
-      ],
-      [
-        1784546349.1220958,
-        "TRANSPORT_CONNECTION_ERROR"
-      ],
-      [
-        1784710613.721789,
-        "TRANSPORT_TIMEOUT"
-      ],
-      [
-        1784710619.58712,
-        "TRANSPORT_TIMEOUT"
-      ],
-      [
-        1786370484.610713,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1786370512.0530467,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1786370514.925152,
-        "TRANSPORT_SUCCESS"
-      ],
       [
         1786370515.2260435,
         "TRANSPORT_SUCCESS"
@@ -171,6 +125,110 @@
       [
         1789815529.5788116,
         "TRANSPORT_TIMEOUT"
+      ],
+      [
+        1789817135.971525,
+        "GOOGLE_CAPTCHA"
+      ],
+      [
+        1790061349.2897787,
+        "TRANSPORT_TIMEOUT"
+      ],
+      [
+        1790062486.351635,
+        "TRANSPORT_TIMEOUT"
+      ],
+      [
+        1790063216.711382,
+        "TRANSPORT_TIMEOUT"
+      ],
+      [
+        1790065498.7870524,
+        "TRANSPORT_TIMEOUT"
+      ],
+      [
+        1790065648.6339834,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1790065696.0078714,
+        "TRANSPORT_TIMEOUT"
+      ],
+      [
+        1790065726.3173287,
+        "TRANSPORT_TIMEOUT"
+      ],
+      [
+        1790068400.8733313,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1790068405.281372,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1790068409.6133566,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1790068414.4573298,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1790069229.8549035,
+        "TRANSPORT_TIMEOUT"
+      ],
+      [
+        1790069244.4975085,
+        "TRANSPORT_TIMEOUT"
+      ],
+      [
+        1790069979.513557,
+        "TRANSPORT_TIMEOUT"
+      ],
+      [
+        1790070216.1853223,
+        "TRANSPORT_TIMEOUT"
+      ],
+      [
+        1790071583.4507463,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1790071588.57041,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1790075504.8432245,
+        "TRANSPORT_TIMEOUT"
+      ],
+      [
+        1790094163.9780326,
+        "TRANSPORT_TIMEOUT"
+      ],
+      [
+        1790094491.2811246,
+        "TRANSPORT_TIMEOUT"
+      ],
+      [
+        1790094644.094112,
+        "TRANSPORT_TIMEOUT"
+      ],
+      [
+        1790095365.3717232,
+        "TRANSPORT_TIMEOUT"
+      ],
+      [
+        1790131287.3465655,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1790131293.4884214,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1790155306.0151846,
+        "TRANSPORT_TIMEOUT"
       ]
     ],
     "quarantine_until": null,
@@ -179,7 +237,7 @@
     "dead_for_google": false,
     "dead_for_bing": false,
     "consecutive_timeouts": {
-      "google.com": 8,
+      "google.com": 17,
       "slashdot.org": 1,
       "caisoft.com": 1,
       "imdb.com": 0,
@@ -189,216 +247,53 @@
       "pantheonsite.io": 1,
       "zomato.com": 1,
       "dominos.co.in": 1,
-      "pizzahut.co.in": 1,
+      "pizzahut.co.in": 0,
       "healthcarereaders.com": 2,
-      "brave.com": 1
+      "brave.com": 4,
+      "acme.ai": 1,
+      "linkedin.com": 1,
+      "duckduckgo.com": 1
     },
     "provider_capabilities": {
       "google": "TIMEOUT",
       "bing": "GOOD",
-      "duckduckgo": "GOOD",
+      "duckduckgo": "TIMEOUT",
       "brave": "TIMEOUT",
       "directory": "GOOD",
-      "general_crawl": "TLS_ERROR"
+      "general_crawl": "GOOD"
     }
   },
   "47.81.56.193:8888": {
-    "score": 44.0,
+    "score": 75.0,
     "google_successes": 0,
-    "google_captchas": 5,
+    "google_captchas": 11,
     "google_429s": 0,
-    "consecutive_failures": 3,
+    "consecutive_failures": 2,
     "consecutive_blocks": {
-      "google.com": 0,
-      "bitscale.ai": 0
+      "google.com": 2,
+      "bitscale.ai": 0,
+      "linkedin.com": 1,
+      "pizzahut.co.in": 0
     },
-    "dead": false,
+    "dead": true,
     "google_status": "healthy",
     "bing_status": "healthy",
-    "general_status": "healthy",
-    "last_success_ts": 1789813097.0634508,
-    "last_failure_ts": 1789815538.1399317,
+    "general_status": "dead",
+    "last_success_ts": 1790064191.3261492,
+    "last_failure_ts": 1790156631.5059443,
     "latency_samples": [
-      0.8215696811676025,
-      1.0463545322418213,
-      2.272386312484741,
-      0.49381184577941895,
-      0.4058563709259033,
-      0.556161642074585,
-      0.564558744430542,
-      0.3113269805908203,
-      1.0170857906341553,
-      1.6226966381072998
+      0.7808172702789307,
+      3.0333709716796875,
+      0.7875156402587891,
+      1.4937303066253662,
+      2.5119175910949707,
+      1.2595527172088623,
+      0.9708437919616699,
+      1.8358197212219238,
+      0.6067404747009277,
+      10.648035049438477
     ],
     "outcome_history": [
-      [
-        1786435260.3842742,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1786435261.9893935,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1786435264.2922368,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1786435265.7598143,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1786435267.872973,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1786435269.432814,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1786435269.8416502,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1786435272.2142203,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1786435272.4347246,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1786435276.8486867,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1786435277.2018871,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1786435279.18128,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1786435280.378637,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1786435282.804631,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1786435283.5745604,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1786435285.1925669,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1786435285.7051435,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1786435288.054995,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1786435288.976911,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1786435289.8100927,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1786435291.113119,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1786435295.0212123,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1786435296.7720704,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1786435300.397879,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1786435304.074537,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1786435306.0467072,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1786435309.5411382,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1786435313.2155292,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1786435315.9195225,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1786435321.6984382,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1786435323.9979634,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1786436331.3416562,
-        "TRANSPORT_CONNECTION_ERROR"
-      ],
-      [
-        1786436404.126111,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1786436410.5651171,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1786436414.2515714,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1786436416.853032,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1786436418.4478436,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1786436420.454106,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1786436423.5738707,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1786436425.6266012,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1789658898.1163328,
-        "TRANSPORT_CONNECTION_ERROR"
-      ],
-      [
-        1789660958.0534592,
-        "GOOGLE_CAPTCHA"
-      ],
       [
         1789664755.177025,
         "GOOGLE_CAPTCHA"
@@ -430,6 +325,174 @@
       [
         1789815538.1399317,
         "TRANSPORT_TLS_ERROR"
+      ],
+      [
+        1789817152.00606,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1789817157.335195,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1789817161.9939067,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1790061370.5630138,
+        "TRANSPORT_CONNECTION_ERROR"
+      ],
+      [
+        1790061458.0308442,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1790061460.179174,
+        "TRANSPORT_CONNECTION_ERROR"
+      ],
+      [
+        1790061477.9278142,
+        "GOOGLE_CAPTCHA"
+      ],
+      [
+        1790062970.5130985,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1790062970.8286057,
+        "TRANSPORT_CONNECTION_ERROR"
+      ],
+      [
+        1790063139.7873816,
+        "TRANSPORT_CONNECTION_ERROR"
+      ],
+      [
+        1790063168.3173523,
+        "TRANSPORT_TIMEOUT"
+      ],
+      [
+        1790063222.650962,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1790063224.7222004,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1790063994.8282275,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1790063996.9666076,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1790064037.0896668,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1790064038.1262712,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1790064081.1463068,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1790064081.7810922,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1790064124.2603362,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1790064170.277252,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1790064175.3051505,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1790064179.6128075,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1790064182.3675041,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1790064187.7929435,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1790064191.3261492,
+        "TRANSPORT_SUCCESS"
+      ],
+      [
+        1790064200.1215882,
+        "TRANSPORT_TIMEOUT"
+      ],
+      [
+        1790064232.9057386,
+        "GOOGLE_429"
+      ],
+      [
+        1790064381.3300827,
+        "GOOGLE_CAPTCHA"
+      ],
+      [
+        1790065552.4219131,
+        "TRANSPORT_CONNECTION_ERROR"
+      ],
+      [
+        1790065552.546806,
+        "TRANSPORT_CONNECTION_ERROR"
+      ],
+      [
+        1790065719.8465629,
+        "TRANSPORT_TIMEOUT"
+      ],
+      [
+        1790067654.2713437,
+        "GOOGLE_CAPTCHA"
+      ],
+      [
+        1790067714.0073383,
+        "GOOGLE_CAPTCHA"
+      ],
+      [
+        1790071377.7681682,
+        "TRANSPORT_CONNECTION_ERROR"
+      ],
+      [
+        1790094501.49877,
+        "TRANSPORT_TIMEOUT"
+      ],
+      [
+        1790094585.7006452,
+        "TRANSPORT_TLS_ERROR"
+      ],
+      [
+        1790094998.9347236,
+        "TRANSPORT_CONNECTION_ERROR"
+      ],
+      [
+        1790097773.5868065,
+        "TRANSPORT_TIMEOUT"
+      ],
+      [
+        1790133524.22427,
+        "GOOGLE_CAPTCHA"
+      ],
+      [
+        1790137334.5858033,
+        "GOOGLE_CAPTCHA"
+      ],
+      [
+        1790156017.0264769,
+        "TRANSPORT_TIMEOUT"
       ]
     ],
     "quarantine_until": null,
@@ -438,7 +501,7 @@
     "dead_for_google": false,
     "dead_for_bing": false,
     "consecutive_timeouts": {
-      "google.com": 7,
+      "google.com": 9,
       "starnexttechnologies.com": 0,
       "daffodilsw.com": 0,
       "example.com": 0,
@@ -466,30 +529,32 @@
       "dominos.co.in": 0,
       "f6s.com": 2,
       "bitscale.ai": 0,
-      "pizzahut.co.in": 1
+      "pizzahut.co.in": 0,
+      "acme.ai": 1,
+      "brave.com": 8
     },
     "provider_capabilities": {
       "google": "CAPTCHA",
       "bing": "TLS_ERROR",
       "duckduckgo": "GOOD",
-      "brave": "GOOD",
+      "brave": "TIMEOUT",
       "directory": "GOOD",
-      "general_crawl": "TLS_ERROR"
+      "general_crawl": "BLOCKED"
     }
   },
   "217.182.203.184:8888": {
-    "score": 94.0,
+    "score": 50.0,
     "google_successes": 0,
     "google_captchas": 0,
     "google_429s": 0,
-    "consecutive_failures": 2,
+    "consecutive_failures": 14,
     "consecutive_blocks": {},
     "dead": true,
     "google_status": "healthy",
     "bing_status": "healthy",
     "general_status": "dead",
     "last_success_ts": null,
-    "last_failure_ts": 1784455114.9975603,
+    "last_failure_ts": 1790156623.2365124,
     "latency_samples": [
       6.606708526611328,
       5.431594610214233
@@ -502,6 +567,14 @@
       [
         1784455114.9975603,
         "TRANSPORT_CONNECTION_ERROR"
+      ],
+      [
+        1790062616.1847146,
+        "TRANSPORT_TIMEOUT"
+      ],
+      [
+        1790063963.5173836,
+        "TRANSPORT_TIMEOUT"
       ]
     ],
     "quarantine_until": null,
@@ -509,14 +582,16 @@
     "inactive": false,
     "dead_for_google": false,
     "dead_for_bing": false,
-    "consecutive_timeouts": {},
+    "consecutive_timeouts": {
+      "acme.ai": 2
+    },
     "provider_capabilities": {
       "google": "DEAD",
       "bing": "GOOD",
       "duckduckgo": "GOOD",
       "brave": "GOOD",
       "directory": "GOOD",
-      "general_crawl": "GOOD"
+      "general_crawl": "TIMEOUT"
     }
   },
   "181.39.25.196:8118": {
@@ -524,7 +599,7 @@
     "google_successes": 2,
     "google_captchas": 2,
     "google_429s": 0,
-    "consecutive_failures": 4,
+    "consecutive_failures": 9,
     "consecutive_blocks": {
       "google.com": 0,
       "unitygroup.in": 0,
@@ -544,7 +619,7 @@
     "bing_status": "healthy",
     "general_status": "dead",
     "last_success_ts": 1786370637.58229,
-    "last_failure_ts": 1786418771.872517,
+    "last_failure_ts": 1790095205.1207957,
     "latency_samples": [
       1.694089412689209,
       1.653721570968628,
@@ -558,14 +633,6 @@
       4.869280099868774
     ],
     "outcome_history": [
-      [
-        1785145182.4538326,
-        "TRANSPORT_CONNECTION_ERROR"
-      ],
-      [
-        1785145188.7902193,
-        "TRANSPORT_SUCCESS"
-      ],
       [
         1785145197.0403378,
         "TRANSPORT_SUCCESS"
@@ -757,6 +824,14 @@
       [
         1786418771.872517,
         "TRANSPORT_CONNECTION_ERROR"
+      ],
+      [
+        1790094401.7815132,
+        "TRANSPORT_TIMEOUT"
+      ],
+      [
+        1790095205.1207957,
+        "TRANSPORT_TIMEOUT"
       ]
     ],
     "quarantine_until": null,
@@ -767,7 +842,7 @@
     "consecutive_timeouts": {
       "in.linkedin.com": 0,
       "www.linkedin.com": 0,
-      "google.com": 5,
+      "google.com": 6,
       "clutch.co": 0,
       "linkedin.com": 0,
       "empat.tech": 0,
@@ -795,23 +870,24 @@
       "fandom.com": 0,
       "lapl.org": 0,
       "pantheonsite.io": 0,
-      "archive.org": 0
+      "archive.org": 0,
+      "brave.com": 1
     },
     "provider_capabilities": {
-      "google": "DEAD",
+      "google": "TIMEOUT",
       "bing": "GOOD",
       "duckduckgo": "GOOD",
-      "brave": "GOOD",
+      "brave": "TIMEOUT",
       "directory": "GOOD",
       "general_crawl": "BLOCKED"
     }
   },
   "52.67.38.58:3128": {
-    "score": 70.0,
+    "score": 100.0,
     "google_successes": 0,
     "google_captchas": 7,
     "google_429s": 0,
-    "consecutive_failures": 1,
+    "consecutive_failures": 9,
     "consecutive_blocks": {
       "www.google.com": 1,
       "google.com": 6,
@@ -822,7 +898,7 @@
     "bing_status": "healthy",
     "general_status": "dead",
     "last_success_ts": 1784718046.9166212,
-    "last_failure_ts": 1789664751.0809245,
+    "last_failure_ts": 1790148719.0970116,
     "latency_samples": [
       28.526904821395874,
       21.026538848876953,
@@ -911,6 +987,38 @@
       [
         1788625733.115317,
         "GOOGLE_CAPTCHA"
+      ],
+      [
+        1790062894.8600292,
+        "TRANSPORT_TIMEOUT"
+      ],
+      [
+        1790065535.9851928,
+        "TRANSPORT_TIMEOUT"
+      ],
+      [
+        1790068372.008317,
+        "TRANSPORT_TIMEOUT"
+      ],
+      [
+        1790070336.1406622,
+        "TRANSPORT_TIMEOUT"
+      ],
+      [
+        1790076094.7727065,
+        "TRANSPORT_TIMEOUT"
+      ],
+      [
+        1790094568.1087165,
+        "TRANSPORT_TIMEOUT"
+      ],
+      [
+        1790139824.6377082,
+        "TRANSPORT_TIMEOUT"
+      ],
+      [
+        1790148719.0970116,
+        "TRANSPORT_TIMEOUT"
       ]
     ],
     "quarantine_until": null,
@@ -919,28 +1027,32 @@
     "dead_for_google": false,
     "dead_for_bing": false,
     "consecutive_timeouts": {
-      "google.com": 4,
+      "google.com": 5,
       "example.com": 0,
-      "imdb.com": 1
+      "imdb.com": 1,
+      "linkedin.com": 3,
+      "brave.com": 2,
+      "f6s.com": 1,
+      "yougov.com": 1
     },
     "provider_capabilities": {
-      "google": "CAPTCHA",
+      "google": "TIMEOUT",
       "bing": "GOOD",
       "duckduckgo": "GOOD",
-      "brave": "GOOD",
+      "brave": "TIMEOUT",
       "directory": "GOOD",
       "general_crawl": "TIMEOUT"
     }
   },
   "34.134.231.117:3129": {
-    "score": 90.0,
-    "google_successes": 3,
+    "score": 100.0,
+    "google_successes": 4,
     "google_captchas": 17,
     "google_429s": 0,
-    "consecutive_failures": 0,
+    "consecutive_failures": 12,
     "consecutive_blocks": {
       "www.google.com": 1,
-      "google.com": 4,
+      "google.com": 0,
       "example.com": 0,
       "arrow.com": 0,
       "linkedin.com": 0,
@@ -989,10 +1101,9 @@
     "google_status": "healthy",
     "bing_status": "healthy",
     "general_status": "dead",
-    "last_success_ts": 1789813766.784498,
-    "last_failure_ts": 1789814015.0033598,
+    "last_success_ts": 1789817128.0626786,
+    "last_failure_ts": 1790139826.1563807,
     "latency_samples": [
-      3.230661630630493,
       3.160098075866699,
       2.6951382160186768,
       1.2355573177337646,
@@ -1001,61 +1112,10 @@
       3.1365389823913574,
       3.0230541229248047,
       2.594149589538574,
-      2.607015371322632
+      2.607015371322632,
+      7.649817228317261
     ],
     "outcome_history": [
-      [
-        1789811933.400169,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1789811941.838446,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1789811942.1154332,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1789811961.8692222,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1789811962.0224257,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1789811967.8049006,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1789811972.3444934,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1789812110.0560338,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1789812118.9579592,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1789812119.8025448,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1789812121.1121018,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1789812128.5897968,
-        "TRANSPORT_SUCCESS"
-      ],
-      [
-        1789812128.7511017,
-        "TRANSPORT_SUCCESS"
-      ],
       [
         1789812128.9291787,
         "TRANSPORT_SUCCESS"
@@ -1203,6 +1263,58 @@
       [
         1789814015.0033598,
         "GOOGLE_CAPTCHA"
+      ],
+      [
+        1789817128.0626786,
+        "GOOGLE_SERP"
+      ],
+      [
+        1789999586.5208716,
+        "TRANSPORT_TIMEOUT"
+      ],
+      [
+        1790062537.6784186,
+        "TRANSPORT_TIMEOUT"
+      ],
+      [
+        1790062885.357286,
+        "TRANSPORT_TIMEOUT"
+      ],
+      [
+        1790069995.3648477,
+        "TRANSPORT_TIMEOUT"
+      ],
+      [
+        1790070234.3787565,
+        "TRANSPORT_TIMEOUT"
+      ],
+      [
+        1790076076.397944,
+        "TRANSPORT_TIMEOUT"
+      ],
+      [
+        1790094624.9883204,
+        "TRANSPORT_TIMEOUT"
+      ],
+      [
+        1790095189.4136431,
+        "TRANSPORT_TIMEOUT"
+      ],
+      [
+        1790097312.6714616,
+        "TRANSPORT_TIMEOUT"
+      ],
+      [
+        1790139819.7348068,
+        "TRANSPORT_TIMEOUT"
+      ],
+      [
+        1790139822.774712,
+        "TRANSPORT_TIMEOUT"
+      ],
+      [
+        1790139826.1563807,
+        "TRANSPORT_TIMEOUT"
       ]
     ],
     "quarantine_until": null,
@@ -1211,7 +1323,7 @@
     "dead_for_google": false,
     "dead_for_bing": false,
     "consecutive_timeouts": {
-      "google.com": 10,
+      "google.com": 5,
       "clutch.co": 1,
       "slashdot.org": 1,
       "caisoft.com": 1,
@@ -1257,16 +1369,21 @@
       "bitscale.ai": 0,
       "wikiwand.com": 0,
       "legalentityidentifier.in": 0,
-      "brave.com": 0,
-      "zhihu.com": 0
+      "brave.com": 2,
+      "zhihu.com": 0,
+      "acme.ai": 1,
+      "serpapi.com": 1,
+      "zetwerk.com": 1,
+      "pcbtok.com": 1,
+      "zoominfo.com": 1
     },
     "provider_capabilities": {
-      "google": "CAPTCHA",
+      "google": "TIMEOUT",
       "bing": "GOOD",
       "duckduckgo": "SLOW",
-      "brave": "GOOD",
+      "brave": "TIMEOUT",
       "directory": "GOOD",
-      "general_crawl": "GOOD"
+      "general_crawl": "TIMEOUT"
     }
   }
 }

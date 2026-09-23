@@ -178,27 +178,27 @@ class QueryPlanner:
                 cat = kw_no_loc.strip()
                 cat_lower = cat.lower()
 
-                # Core direct Google queries for the raw category
-                add_task("google", f"{cat} companies{loc_suffix}", discovery_mode="direct")
-                add_task("google", f"{cat} startups{loc_suffix}", discovery_mode="direct")
-                add_task("google", f"top {cat} companies{loc_suffix}", discovery_mode="direct")
-                add_task("brave",  f"{cat} companies{loc_suffix}", discovery_mode="direct")
+                # Clean base category name by stripping redundant trailing company words to prevent stuttering
+                cat_base = re.sub(r"\b(companies|company|firm|firms|startup|startups|agency|agencies|manufacturers|suppliers)\b", "", cat, flags=re.I).strip()
+                cat_base = " ".join(cat_base.split()) or cat
+                cat_base_lower = cat_base.lower()
 
-                # LinkedIn direct discovery — run in the priority lane
-                add_task("linkedin", f'site:linkedin.com/company "{cat}"{loc_suffix}', discovery_mode="direct")
-                add_task("linkedin", f'site:linkedin.com/company "{cat} company"{loc_suffix}', discovery_mode="direct")
+                # Core direct web discovery queries (run high-intent open-web company discovery)
+                add_task("google", f"{cat_base} companies{loc_suffix}", discovery_mode="direct")
+                add_task("google", f"{cat_base} manufacturers{loc_suffix}", discovery_mode="direct")
+                add_task("google", f"consumer {cat_base} companies{loc_suffix}", discovery_mode="direct")
+                add_task("google", f"top {cat_base} companies{loc_suffix}", discovery_mode="direct")
+                add_task("brave",  f"{cat_base} companies{loc_suffix}", discovery_mode="direct")
 
                 # Acronym / canonical expansions (e.g. "AI" → "artificial intelligence companies")
-                expansions = CATEGORY_ACRONYM_EXPANSIONS.get(cat_lower, [])
-                for expansion in expansions[:3]:  # cap at 3 expansions to stay inside budget
-                    add_task("google",   f"{expansion} companies{loc_suffix}", discovery_mode="direct")
-                    add_task("google",   f"{expansion} startups{loc_suffix}", discovery_mode="direct")
-                    add_task("linkedin", f'site:linkedin.com/company "{expansion}"{loc_suffix}', discovery_mode="direct")
-                    add_task("brave",    f"{expansion} companies{loc_suffix}", discovery_mode="direct")
+                expansions = CATEGORY_ACRONYM_EXPANSIONS.get(cat_base_lower, [])
+                for expansion in expansions[:2]:  # cap at 2 expansions to stay inside budget
+                    add_task("google", f"{expansion} companies{loc_suffix}", discovery_mode="direct")
+                    add_task("google", f"{expansion} manufacturers{loc_suffix}", discovery_mode="direct")
 
                 # Clutch / GoodFirms direct category page
-                add_task("clutch",    f"site:clutch.co {cat} companies{loc_suffix}", discovery_mode="direct")
-                add_task("goodfirms", f"site:goodfirms.co {cat} companies{loc_suffix}", discovery_mode="direct")
+                add_task("clutch",    f"site:clutch.co {cat_base} companies{loc_suffix}", discovery_mode="direct")
+                add_task("goodfirms", f"site:goodfirms.co {cat_base} companies{loc_suffix}", discovery_mode="direct")
 
             generate_direct_category_queries()
 

@@ -1,6 +1,7 @@
 .env
 .env.*
 !.env.example
+.env.example
 
 # Virtual Environments
 .venv/
@@ -27,6 +28,7 @@ __pycache__/
 *.db
 *.sqlite
 *.sqlite3
+leads.db
 leads.db
 
 # Logs and Debug files

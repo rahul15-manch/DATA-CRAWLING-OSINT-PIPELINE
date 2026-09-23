@@ -672,15 +672,17 @@
     "domain": "builtin.com",
     "industry": "Hardware_Development",
     "emails": [
+      "support@builtin.com",
+      "info@builtin.com",
       "admin@builtin.com",
       "contact@builtin.com",
-      "hello@builtin.com",
-      "info@builtin.com",
       "sales@builtin.com",
-      "support@builtin.com"
+      "hello@builtin.com"
     ],
     "phones": [],
-    "social_links": {},
+    "social_links": {
+      "linkedin": "https://www.linkedin.com/shareArticle?url=https%3A%2F%2Fbuiltin.com%2Farticles%2Fhow-build-internal-employer-branding-team&mini=true"
+    },
     "people": [],
     "source": "Google",
     "description": "",
@@ -688,7 +690,10 @@
     "founded": "",
     "country": "",
     "tech_stack": [],
-    "emails_scored": []
+    "emails_scored": [],
+    "location": "222 N LaSalle St, Suite 1550, Chicago, IL, 60601, US",
+    "contact_page": "https://builtin.com/articles/contact-tracing-asset-tracking-swipesense",
+    "about_page": "https://builtin.com/node/add/company"
   },
   {
     "company_name": "Cnc System",
@@ -1135,6 +1140,251 @@
       "Amplitude",
       "Magento"
     ],
+    "emails_scored": []
+  },
+  {
+    "company_name": "Companiesmarketcap",
+    "website": "https://companiesmarketcap.com",
+    "domain": "companiesmarketcap.com",
+    "industry": "Ai Companies",
+    "emails": [
+      "isabel.wang@marketwatch.com",
+      "hello@8marketcap.com",
+      "info@companiesmarketcap.com",
+      "support@companiesmarketcap.com"
+    ],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "tech_stack": [],
+    "emails_scored": []
+  },
+  {
+    "company_name": "Yougov",
+    "website": "https://yougov.com",
+    "domain": "yougov.com",
+    "industry": "Artificial Intelligence",
+    "location": "UK",
+    "contact_page": "https://yougov.com/?marketo=contact",
+    "about_page": "https://yougov.com/about",
+    "emails": [
+      "hello@yougov.com",
+      "sales@yougov.com",
+      "contact@yougov.com",
+      "governance@yougov.com",
+      "support@yougov.com",
+      "admin@yougov.com",
+      "info@yougov.com"
+    ],
+    "phones": [],
+    "social_links": {
+      "facebook": "https://facebook.com/YouGovUS",
+      "twitter": "https://twitter.com/YouGov",
+      "linkedin": "https://www.linkedin.com/company/yougov"
+    },
+    "people": [
+      {
+        "name": "Research Lead at GambleAware",
+        "designation": "Head Of"
+      },
+      {
+        "name": "Meet our experts",
+        "designation": "Head Of"
+      },
+      {
+        "name": "Andrew Farmer",
+        "designation": "Head Of"
+      }
+    ],
+    "source": "Google",
+    "description": "YouGov: Data Analytics & Market Research Services Explore YouGov's market research and data analytics services for valuable insights. Make informed business decisions with our consumer analysis & intelligence. Explore YouGov's market research and data analytics services for valuable insights. Make informed business decisions with our consumer analysis & intelligence. YouGov: what the world thinks Why YouGov Real people Accurate data Pioneering tech & AI",
+    "country": "UK",
+    "tech_stack": [
+      "AWS CloudFront",
+      "AWS S3",
+      "Angular",
+      "Google Tag Manager",
+      "Magento",
+      "Zendesk"
+    ],
+    "emails_scored": []
+  },
+  {
+    "company_name": "Arrow",
+    "website": "https://www.arrow.com",
+    "domain": "arrow.com",
+    "industry": "Electronics",
+    "emails": [
+      "investor@arrow.com",
+      "help@astfinancial.com",
+      "rburtis@arrowexterminators.com",
+      "info@arrow.com",
+      "sales@arrow.com",
+      "contact@arrow.com",
+      "hello@arrow.com",
+      "jurgis.venckus@arrow.com",
+      "martin.vohla@arrow.com",
+      "admin@arrow.com",
+      "support@arrow.com"
+    ],
+    "phones": [
+      "+18553264757",
+      "+17206549893"
+    ],
+    "social_links": {},
+    "people": [
+      {
+        "name": "Executive Team",
+        "designation": "Chief Technology Officer"
+      },
+      {
+        "name": "The team",
+        "designation": "Managing Director"
+      }
+    ],
+    "source": "Google",
+    "tech_stack": [],
+    "emails_scored": [],
+    "contact_page": "https://www.arrow.com/en/support/contact-and-support/contact-arrow.html"
+  },
+  {
+    "company_name": "Futureelectronics NorthAmerica Site",
+    "website": "https://www.futureelectronics.com",
+    "domain": "futureelectronics.com",
+    "industry": "Hardware_Development",
+    "emails": [
+      "admin@futureelectronics.com",
+      "contact@futureelectronics.com",
+      "support@futureelectronics.com",
+      "eurep@futureelectronics.com",
+      "sales@futureelectronics.com",
+      "dpoemea@futureelectronics.com",
+      "hello@futureelectronics.com",
+      "dpo@futureelectronics.com",
+      "info@futureelectronics.com"
+    ],
+    "phones": [
+      "+18007671458",
+      "+15146947710",
+      "+18006751619"
+    ],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "description": "Contact Us | Futureelectronics NorthAmerica Site Contact us to find the best way to communicate with Future Electronics by clicking one of the options below. Market Conditions Report Future Electronics offers world-class supply chain programs to mitigate market supply and demand volatility. About Future Electronics | Futureelectronics NorthAmerica ... Learn more about Future Electronics, your go-to authorized distributor of electronic components offering same-day shipping, award-winning service and more. Manufacturer Listing | Futureelectronics NorthAmerica Site Future Electronics is a leading authorized distributor of electronic components manufacturers worldwide. Browse our wide selection of parts.",
+    "tech_stack": [],
+    "emails_scored": []
+  },
+  {
+    "company_name": "All Manufacturers",
+    "website": "https://www.mouser.com",
+    "domain": "mouser.com",
+    "industry": "Electronics",
+    "emails": [
+      "admin@mouser.com",
+      "support@mouser.com",
+      "contact@mouser.com",
+      "info@mouser.com",
+      "sales@mouser.com",
+      "hello@mouser.com"
+    ],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "tech_stack": [],
+    "emails_scored": []
+  },
+  {
+    "company_name": "Automobiles",
+    "website": "https://theacsi.com",
+    "domain": "theacsi.com",
+    "industry": "Unknown",
+    "contact_page": "https://theacsi.com/contact/",
+    "emails": [
+      "admin@theacsi.com",
+      "christian@gregoryfca.com",
+      "contact@theacsi.com",
+      "dvs.motor.vehicles@state.mn.us",
+      "hello@theacsi.com",
+      "info@theacsi.com",
+      "sales@theacsi.com",
+      "support@theacsi.com"
+    ],
+    "phones": [
+      "+16102282102",
+      "+16512972126",
+      "+17349130788",
+      "+18437122690"
+    ],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "tech_stack": [],
+    "emails_scored": []
+  },
+  {
+    "company_name": "St James",
+    "website": "https://www.tripadvisor.com",
+    "domain": "tripadvisor.com",
+    "industry": "Unknown",
+    "emails": [
+      "admin@tripadvisor.com",
+      "contact@tripadvisor.com",
+      "hello@tripadvisor.com",
+      "info@tripadvisor.com",
+      "sales@tripadvisor.com",
+      "support@tripadvisor.com"
+    ],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "tech_stack": [],
+    "emails_scored": []
+  },
+  {
+    "company_name": "Cars",
+    "website": "https://www.cars.com",
+    "domain": "cars.com",
+    "industry": "Automobile",
+    "contact_page": "https://www.cars.com/contact/",
+    "emails": [
+      "admin@cars.com",
+      "contact@cars.com",
+      "hello@cars.com",
+      "info@cars.com",
+      "sales@cars.com",
+      "support@cars.com"
+    ],
+    "phones": [],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "tech_stack": [],
+    "emails_scored": []
+  },
+  {
+    "company_name": "Car Dealership",
+    "website": "https://automobileconsultingservices.com",
+    "domain": "automobileconsultingservices.com",
+    "industry": "Automobile",
+    "emails": [
+      "info@automobileconsultingservices.com",
+      "support@automobileconsultingservices.com"
+    ],
+    "phones": [
+      "+13473346040",
+      "+13473346090",
+      "+13475018047",
+      "+14108796400",
+      "+18663283333"
+    ],
+    "social_links": {},
+    "people": [],
+    "source": "Google",
+    "tech_stack": [],
     "emails_scored": []
   }
 ]

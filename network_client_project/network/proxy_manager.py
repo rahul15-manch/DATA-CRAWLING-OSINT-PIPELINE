@@ -615,7 +615,18 @@ class ProxyManager:
         if not self._state_loaded:
             self.load_state("proxy_state.json")
 
-        # Trigger real-time startup background health verification
+        # Trigger real-time startup background health verification only if not in SerpApi primary mode
+        try:
+            import config
+            if not getattr(config, "SERPAPI_PRIMARY_MODE", False):
+                self.validate_all_proxies_async()
+        except Exception:
+            self.validate_all_proxies_async()
+
+    def activate_fallback_proxies(self):
+        """Triggered when fallback mode activates to begin proxy health checks."""
+        if not self._background_validation_started:
+            self.start_background_validation()
         self.validate_all_proxies_async()
         
 
@@ -1137,7 +1148,12 @@ def get_proxy_manager() -> ProxyManager:
     global _proxy_manager
     if _proxy_manager is None:
         _proxy_manager = ProxyManager()
-        _proxy_manager.start_background_validation()
+        try:
+            import config
+            if not getattr(config, "SERPAPI_PRIMARY_MODE", False):
+                _proxy_manager.start_background_validation()
+        except Exception:
+            _proxy_manager.start_background_validation()
     return _proxy_manager
 
 # ── Signal Receivers for Decoupled Proxy Scoring ──────────────────────────────
