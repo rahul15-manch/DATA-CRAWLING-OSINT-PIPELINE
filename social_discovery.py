@@ -45,8 +45,28 @@ def fetch_page_text(url: str) -> str | None:
         return None
     if not url.startswith(("http://", "https://")):
         url = "https://" + url
+
+    from utils.validators import is_safe_url, validate_redirect_target
+    is_safe, _ = is_safe_url(url)
+    if not is_safe:
+        return None
+
     try:
         resp = requests.get(url, timeout=REQUEST_TIMEOUT, headers=HEADERS, allow_redirects=True)
+        if resp.history:
+            from urllib.parse import urljoin
+            for h in resp.history:
+                loc = h.headers.get("Location")
+                if loc:
+                    full_loc = urljoin(getattr(h, "url", url), loc)
+                    is_r_safe, _ = validate_redirect_target(full_loc)
+                    if not is_r_safe:
+                        return None
+        if resp.url and resp.url != url:
+            is_r_safe, _ = validate_redirect_target(resp.url)
+            if not is_r_safe:
+                return None
+
         if resp.status_code < 400:
             return resp.text
     except requests.exceptions.RequestException:

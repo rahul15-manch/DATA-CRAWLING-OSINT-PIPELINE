@@ -1,47 +1,58 @@
+# Environment & Secrets
 .env
 .env.*
 !.env.example
-.env.example
 
-# Virtual Environments
-.venv/
+# Virtual environments
 venv/
-ENV/
+.venv/
 env/
+ENV/
 
-# Tests
-tests/
-**/tests/
-test_*.py
-*_test.py
-
-# Pycache & Python temp files
-__pycache__/
+# Python caches & temporary files
 **/__pycache__/
+__pycache__/
 *.py[cod]
+*.pyc
+*.pyo
+*.pyd
 *$py.class
 .pytest_cache/
 *.pytest_cache/
 .cache/
-
-# Databases
-*.db
-*.sqlite
-*.sqlite3
-leads.db
-leads.db
+.coverage
+htmlcov/
 
 # Logs and Debug files
 logs/
-debug_html/
 *.log
+debug_html/
+google_debug/
+google_samples/
+google_debug_last_zero.html
+google_raw.html
+data/debug_warmup_fail.html
+
+# Runtime databases
+*.db
+*.sqlite
+*.sqlite3
+*.db-wal
+*.db-shm
+leads.db
 
 # Runtime-generated data files & caches
 output/
 data/*.json
-cookies/google.com/session_cookies.json
+data/*.html
+data/rejection_stats.json
+cookies/
 cleaned_data.json
 proxy_state.json
 search_cache.json
-data/rejection_stats.json
+benchmark_results.json
 *cache*.json
+
+# OS artifacts
+.DS_Store
+Thumbs.db

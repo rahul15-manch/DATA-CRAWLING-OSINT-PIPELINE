@@ -100,6 +100,11 @@ def finalize_record(rec: dict) -> dict:
     rec.setdefault("data_quality",         {})
     rec.setdefault("missing_fields",       [])
     rec.setdefault("domain",               None)
+    rec.setdefault("domain_intel",         None)
+    rec.setdefault("lead_score",           None)
+    rec.setdefault("org_graph",            None)
+    rec.setdefault("confidence_score",     None)
+    rec.setdefault("lead_quality",         None)
 
     # Strip all debug/internal fields
     for field in list(rec.keys()):

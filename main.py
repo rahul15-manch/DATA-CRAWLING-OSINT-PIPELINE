@@ -1,5 +1,6 @@
 import sys
 import os
+import re
 # Add the 'pillar1' subdirectory to sys.path so packages like 'search' and 'query' can be found
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "pillar1")))
 
@@ -15,6 +16,7 @@ from discovery.contact_discovery import discover_contact
 from extraction.page_extractor import extract_from_website
 from utils.deadline import Deadline, DeadlineExceeded
 from search.exceptions import AllProvidersExhausted
+from models.pipeline_result import PipelineResult
 import utils.stats_tracker as stats
 from utils.constants import (
     DECISION_MAKER_SCORES,
@@ -277,8 +279,6 @@ def verify_domain_evidence(company: dict, extracted: dict, keyword: str = "") ->
     """
     website = company.get("website")
     if not website:
-        if company.get("linkedin"):
-            return "observed", "not_found", ["linkedin_company_observed_without_domain"]
         return "not_found", "not_found", []
 
     import re
@@ -380,15 +380,10 @@ def _dq_domain(website: str | None, company: dict) -> str:
     return "not_found"
 
 
-def _build_lead_card_legacy(
-    company: dict,
-    keyword: str = "",
-    deadline: Deadline | None = None,
-    baseline_extracted: dict | None = None,
-) -> dict | None:
+def build_lead_card(company: dict, keyword: str = "", deadline: Deadline | None = None) -> dict | None:
     if deadline and deadline.is_exceeded():
-        print(f"[pipeline] Skipping build_lead_card for {company.get('company')!r} — deadline exhausted. Retaining partial card.")
-        return _build_minimal_partial_card(company, keyword, extracted=baseline_extracted)
+        print(f"[pipeline] Skipping build_lead_card for {company.get('company')!r} — deadline exhausted.")
+        return None
 
     from config import SearchMode
     search_mode = getattr(config, "SEARCH_MODE", SearchMode.SEMANTIC)
@@ -415,27 +410,6 @@ def _build_lead_card_legacy(
     website = company.get("website")
     homepage_html = None
 
-    # Non-blocking website resolution attempt for LinkedIn-only leads
-    if not website and company.get("linkedin") and company.get("company"):
-        if not deadline or deadline.remaining() > 2.0:
-            try:
-                sm = get_search_manager()
-                if sm.providers_available():
-                    comp_name = company.get("company")
-                    res = sm.search(f'"{comp_name}" official website', max_results=3, deadline=deadline)
-                    for r in res:
-                        r_url = getattr(r, "url", "") or ""
-                        if r_url and not _is_platform_domain(r_url) and not is_rejected_lead_domain(r_url):
-                            token = _domain_token_from_url(r_url)
-                            name_clean = re.sub(r"[^a-z0-9]", "", comp_name.lower())
-                            if token and (token in name_clean or name_clean in token or len(token) >= 4):
-                                website = f"{_urlparse(r_url).scheme}://{_urlparse(r_url).netloc}"
-                                company["website"] = website
-                                print(f"[pipeline] Resolved website for LinkedIn lead {comp_name!r}: {website}")
-                                break
-            except Exception as e:
-                print(f"[pipeline] Website resolution attempt failed for {company.get('company')!r}: {e}")
-
     if website:
         if deadline and deadline.is_exceeded():
             print(f"[pipeline] Deadline exhausted. Skipping homepage crawl for {company.get('company')!r}")
@@ -443,53 +417,38 @@ def _build_lead_card_legacy(
 
     if website:
         if company.get("classification") == "UNKNOWN":
-            if getattr(config, "SERPAPI_PRIMARY_MODE", False):
-                company["classification"] = "LIKELY_COMPANY"
-            else:
-                # ── Task 15: Homepage Evaluation Budget ──
-                if stats.get().get("funnel_homepage_evaluated", 0) >= getattr(config, "HOMEPAGE_EVAL_BUDGET", 10):
-                    print(f"[pipeline] Skipping homepage evaluation for {company.get('company')!r} — budget exhausted. Continuing with baseline extraction.")
-                else:
-                    stats.increment("funnel_homepage_evaluated")
-                
-                from extraction.page_extractor import fetch_page
-                try:
-                    homepage_html = fetch_page(website, deadline=deadline)
-                except DeadlineExceeded:
-                    print(f"[pipeline] DeadlineExceeded during homepage fetch for {company.get('company')!r}")
-                    return None
-                if not homepage_html:
-                    return None
-                from discovery.homepage_evaluator import evaluate_homepage
-                new_classification = evaluate_homepage(homepage_html, website, "UNKNOWN", keyword=keyword, mode=search_mode.value)
-                if new_classification == "REJECT":
-                    print(f"[pipeline] rejected UNKNOWN candidate {company.get('company')!r} after homepage evaluation.")
-                    return None
-                company["classification"] = new_classification
-                print(f"[pipeline] Upgraded UNKNOWN candidate {company.get('company')!r} to {new_classification}")
+            # ── Task 15: Homepage Evaluation Budget ──
+            if stats.get().get("funnel_homepage_evaluated", 0) >= getattr(config, "HOMEPAGE_EVAL_BUDGET", 10):
+                print(f"[pipeline] Skipping homepage evaluation for {company.get('company')!r} — budget exhausted.")
+                return None
 
-        if getattr(config, "SERPAPI_PRIMARY_MODE", False):
-            if baseline_extracted is not None:
-                extracted = baseline_extracted
-            else:
-                extracted = {
-                    "contact_page": None, "about_page": None, "team_page": None,
-                    "emails": [], "phones": [], "social_links": {}, "people": [],
-                    "company_type": "Company", "industry_detected": company.get("industry_detected", "Unknown"),
-                    "meta_description": company.get("snippet", ""),
-                }
-        elif baseline_extracted is not None:
-            extracted = baseline_extracted
-        else:
+            stats.increment("funnel_homepage_evaluated")
+            
+            from extraction.page_extractor import fetch_page
             try:
-                extracted = extract_from_website(website, homepage_html=homepage_html, deadline=deadline)
+                homepage_html = fetch_page(website, deadline=deadline)
             except DeadlineExceeded:
-                print(f"[pipeline] DeadlineExceeded extracting from website for {company.get('company')!r}")
-                extracted = {
-                    "contact_page": None, "about_page": None, "team_page": None,
-                    "emails": [], "phones": [], "social_links": {}, "people": [],
-                    "company_type": "Unknown", "industry_detected": "Unknown", "meta_description": "",
-                }
+                print(f"[pipeline] DeadlineExceeded during homepage fetch for {company.get('company')!r}")
+                return None
+            if not homepage_html:
+                return None
+            from discovery.homepage_evaluator import evaluate_homepage
+            new_classification = evaluate_homepage(homepage_html, website, "UNKNOWN", keyword=keyword, mode=search_mode.value)
+            if new_classification == "REJECT":
+                print(f"[pipeline] rejected UNKNOWN candidate {company.get('company')!r} after homepage evaluation.")
+                return None
+            company["classification"] = new_classification
+            print(f"[pipeline] Upgraded UNKNOWN candidate {company.get('company')!r} to {new_classification}")
+
+        try:
+            extracted = extract_from_website(website, homepage_html=homepage_html, deadline=deadline)
+        except DeadlineExceeded:
+            print(f"[pipeline] DeadlineExceeded extracting from website for {company.get('company')!r}")
+            extracted = {
+                "contact_page": None, "about_page": None, "team_page": None,
+                "emails": [], "phones": [], "social_links": {}, "people": [],
+                "company_type": "Unknown", "industry_detected": "Unknown", "meta_description": "",
+            }
 
         stats.increment("funnel_homepage_crawled")
 
@@ -541,8 +500,8 @@ def _build_lead_card_legacy(
                                             verified=False,
                                         ))
                                 
-                                # 2. Contact page fetch if on the same company domain (skipped in SERPAPI_PRIMARY_MODE)
-                                if not getattr(config, "SERPAPI_PRIMARY_MODE", False) and res_url and domain in res_url.lower() and not is_disallowed_subpage_url(res_url):
+                                # 2. Contact page fetch if on the same company domain
+                                if res_url and domain in res_url.lower() and not is_disallowed_subpage_url(res_url):
                                     if deadline and deadline.remaining() > 3.0:
                                         try:
                                             contact_html = fetch_page(res_url, deadline=deadline)
@@ -696,33 +655,12 @@ def _build_lead_card_legacy(
     # ── Task 10: Pre-card validation ──────────────────────────────────────
     is_valid, rejection_reason = validate_lead(company, extracted, keyword=keyword)
 
-    allow_partial = bool(
-        company.get("linkedin")
-        or company.get("verification_status") == "partial"
-        or company.get("discovery_stage") == "PARTIAL"
-        or extracted.get("emails")
-        or extracted.get("phones")
-        or website
-        or company.get("source_url")
-    )
     if not is_valid and not INCLUDE_LOW_QUALITY_LEADS:
-        is_hard_reject = (
-            len((company.get("company") or "").strip()) < 2
-            or any(t in (company.get("company") or "").lower() for t in INFORMATIONAL_TITLE_TERMS)
-            or (_domain_token_from_url(website) in NON_COMPANY_DOMAINS if website else False)
+        print(
+            f"[pipeline] rejected lead {company.get('company')!r}"
+            f": {rejection_reason}"
         )
-        if not is_hard_reject and len((company.get("company") or "").strip()) >= 2:
-            print(
-                f"[pipeline] retaining partial lead {company.get('company')!r} despite validation flag"
-                f": {rejection_reason}"
-            )
-            company["verification_status"] = "partial"
-        else:
-            print(
-                f"[pipeline] rejected lead {company.get('company')!r}"
-                f": {rejection_reason}"
-            )
-            return None
+        return None
 
     # ── Evidence-based Domain Verification ─────────────────────────────────
     identity_status, domain_status, domain_evidence = verify_domain_evidence(
@@ -759,16 +697,12 @@ def _build_lead_card_legacy(
         "website":             website,
         "domain":              _extract_domain(website),
         "linkedin":            company.get("linkedin"),
-        "company_linkedin":    company.get("linkedin"),
         # ── Contact ───────────────────────────────────────────
         "emails":              flat_emails,
         "emails_provenance":   emails_provenance,
         "email_candidates":    email_candidates,
         "phones":              flat_phones,
         "phones_provenance":   phones_provenance,
-        "phone_found":         bool(flat_phones),
-        "email_found":         bool(flat_emails),
-        "decision_maker_found": bool(any(isinstance(p, dict) and p.get("designation") for p in people)),
         # ── Company Metadata ──────────────────────────────────
         "industry":            detected_industry if (detected_industry and detected_industry != "Unknown")
                                else (company.get("industry_detected") if company.get("industry_detected") != "Unknown"
@@ -820,147 +754,22 @@ def _build_lead_card_legacy(
         ],
         # ── Search & Relevance ────────────────────────────────
         "source":              company.get("source"),
-        "source_url":          company.get("source_url") or website or "",
         "confidence_score":    calibrated_confidence,
         "lead_quality":        _lead_quality_label(calibrated_confidence),
-        "verification_status": company.get("verification_status") or ("verified" if identity_status == "verified" else "partial"),
-        "qualification_reason": company.get("qualification_reason"),
         "relevance_score":     company.get("relevance_score", 0),
         "relevance_tier":      company.get("relevance_tier", "LOW"),
         "relevance_info":      company.get("relevance_info", {}),
-        "contact_completeness": {
-            "email": 100 if flat_emails else 0,
-            "phone": 100 if flat_phones else 0,
-            "contact_page": 100 if extracted.get("contact_page") else 0,
-        },
-        "lead_actionability": {
-            "company_name": 100 if company.get("company") else 0,
-            "usable_phone": 100 if flat_phones else 0,
-            "usable_email": 100 if flat_emails else 0,
-            "decision_maker": 100 if any(p.get("designation") for p in people) else 0,
-        },
+        # ── Advanced OSINT & Graph Enrichment (Pillar 1) ──────
+        "domain_intel":        company.get("domain_intel"),
+        "lead_score":          company.get("lead_score"),
+        "org_graph":           company.get("org_graph"),
     }
 
     # Include rejection reason when the lead is kept but flagged low-quality
     if not is_valid:
         card["reason_if_rejected"] = rejection_reason
-        card["verification_status"] = "partial"
-        card["lead_quality"] = "Low"
 
     return card
-
-
-def _build_minimal_partial_card(company: dict, keyword: str = "", extracted: dict | None = None) -> dict:
-    """Return a minimal honest partial card when no enrichment time remains or after partial enrichment."""
-    website = company.get("website")
-    linkedin = company.get("linkedin")
-    name = company.get("company") or keyword or "Unknown Company"
-    ext = extracted or {}
-
-    flat_emails = sorted(list(set(ext.get("emails") or company.get("emails") or [])))
-    flat_phones = sorted(list(set(ext.get("phones") or company.get("phones") or [])))
-    people = list(ext.get("people") or company.get("people") or [])
-    employees = ext.get("employees") or company.get("employees") or None
-    contact_page = ext.get("contact_page") or company.get("contact_page") or None
-    location = ext.get("location") or company.get("location") or None
-    industry = ext.get("industry_detected") or company.get("industry") or None
-    description = ext.get("description") or company.get("description") or None
-    source_url = company.get("source_url") or website or ""
-
-    return {
-        "company_name": name,
-        "website": website,
-        "domain": _extract_domain(website),
-        "linkedin": linkedin,
-        "company_linkedin": linkedin,
-        "emails": flat_emails,
-        "email_candidates": list(ext.get("email_candidates") or []),
-        "phones": flat_phones,
-        "tech_stack": list(ext.get("tech_stack") or []),
-        "people": people,
-        "employees": employees,
-        "social_links": ext.get("social_links") or {},
-        "contact_page": contact_page,
-        "about_page": ext.get("about_page") or None,
-        "team_page": ext.get("team_page") or None,
-        "industry": industry,
-        "location": location,
-        "country": ext.get("country") or company.get("country") or None,
-        "description": description,
-        "company_type": ext.get("company_type") or company.get("company_type") or "Company",
-        "source": company.get("source"),
-        "source_url": source_url,
-        "phone_found": bool(flat_phones),
-        "email_found": bool(flat_emails),
-        "decision_maker_found": bool(any(isinstance(p, dict) and p.get("designation") for p in people)),
-        "confidence_score": 50 if (flat_emails or flat_phones or people) else 0,
-        "lead_quality": "Medium" if (flat_emails or flat_phones) else "Low",
-        "verification_status": company.get("verification_status") or "partial",
-        "qualification_reason": company.get("qualification_reason") or "partial_lead",
-        "relevance_score": company.get("relevance_score", 0),
-        "relevance_tier": company.get("relevance_tier", "LOW"),
-        "relevance_info": company.get("relevance_info", {}),
-        "data_quality": {
-            "identity": "observed" if name else "not_found",
-            "domain": "observed" if website else "not_found",
-            "email": "observed" if flat_emails else "not_found",
-            "phone": "observed" if flat_phones else "not_found",
-            "location": "observed" if location else "not_found",
-            "employees": "observed" if employees else "not_found",
-            "founded": "not_found",
-            "people": "observed" if people else "not_found",
-            "description": "observed" if description else "not_found",
-        },
-        "domain_verification": {
-            "status": "observed" if website else "not_found",
-            "domain": _extract_domain(website),
-            "evidence": ["partial_lead_retained"],
-        },
-        "missing_fields": [
-            f for f in ["email", "phone", "employees", "founded", "location", "people"]
-            if (f == "email" and not flat_emails) or (f == "phone" and not flat_phones) or (f == "people" and not people) or (f == "employees" and not employees) or (f == "location" and not location) or f == "founded"
-        ],
-        "contact_completeness": {"email": 100 if flat_emails else 0, "phone": 100 if flat_phones else 0, "contact_page": 100 if contact_page else 0},
-        "lead_actionability": {
-            "company_name": 100 if name else 0,
-            "usable_phone": 100 if flat_phones else 0,
-            "usable_email": 100 if flat_emails else 0,
-            "decision_maker": 100 if any(isinstance(p, dict) and p.get("designation") for p in people) else 0,
-        },
-    }
-
-
-def build_lead_card(company: dict, keyword: str = "", deadline: Deadline | None = None) -> dict | None:
-    """Build a lead card through the Phase 1 enrichment orchestration layer."""
-    if deadline and deadline.is_exceeded():
-        print(f"[pipeline] Deadline exhausted before enrichment for {company.get('company')!r}. Retaining partial card.")
-        return _build_minimal_partial_card(company, keyword)
-
-    from enrichment.orchestrator import EnrichmentOrchestrator
-
-    try:
-        context = EnrichmentOrchestrator.context_from_company(
-            company,
-            keyword=keyword,
-            deadline=deadline,
-        )
-        result = EnrichmentOrchestrator(
-            extractor=extract_from_website,
-            legacy_builder=_build_lead_card_legacy,
-        ).run(context)
-        if result is None:
-            return _build_minimal_partial_card(company, keyword, extracted=context.baseline_extraction)
-        return result
-    except Exception as exc:
-        print(f"[pipeline] Enrichment orchestrator failed; using legacy builder: {exc}")
-        try:
-            legacy = _build_lead_card_legacy(company, keyword, deadline)
-            if legacy is not None:
-                return legacy
-        except Exception:
-            pass
-        ext = context.baseline_extraction if "context" in locals() and hasattr(context, "baseline_extraction") else None
-        return _build_minimal_partial_card(company, keyword, extracted=ext)
 
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -976,20 +785,16 @@ def run_pipeline(keyword: str, run_deadline: Deadline | None = None):
     if not run_deadline:
         run_deadline = Deadline(float(getattr(config, "MAX_RUNTIME", 120.0)))
 
-    start_time = time.monotonic()
+    start_time = time.time()
     print(f"\nSearching for: {keyword}\n")
 
     discovery_budget_s = float(getattr(config, "DISCOVERY_DEADLINE_SECONDS", 55.0))
     discovery_deadline = run_deadline.child(discovery_budget_s)
-    discovery_started = time.monotonic()
     try:
         companies = discover_companies(keyword, deadline=discovery_deadline)
     except AllProvidersExhausted as e:
         print("DISCOVERY UNAVAILABLE: No providers available or all providers exhausted. Aborting pipeline.")
-        return []
-
-    discovery_elapsed = time.monotonic() - discovery_started
-    stats.set_value("discovery_runtime_sec", round(discovery_elapsed, 3))
+        return PipelineResult(records=[], raw_file=None, record_count=0, status="exhausted", error_message=str(e))
 
     # If discovery returned no validated companies but a partial snapshot exists,
     # surface the partial file and abort to avoid continuing the pipeline silently.
@@ -1002,21 +807,17 @@ def run_pipeline(keyword: str, run_deadline: Deadline | None = None):
                 # Prefer the newest file
                 matches.sort(key=os.path.getmtime, reverse=True)
                 print(f"DISCOVERY FINISHED WITH NO VALID COMPANIES. Partial snapshot available: {matches[0]}")
-                return []
+                return PipelineResult(records=[], raw_file=matches[0], record_count=0, status="partial")
         except Exception:
             pass
-        return []
+        return PipelineResult(records=[], raw_file=None, record_count=0, status="no_candidates")
     print(f"Companies Found: {len(companies)}")
 
     leads = []
-    max_workers = min(
-        int(config.MAX_CRAWL_WORKERS),
-        int(getattr(config, "MAX_COMPANIES_IN_FLIGHT", config.MAX_CRAWL_WORKERS)),
-    )
+    max_workers = config.MAX_CRAWL_WORKERS
 
     # Task 13: concurrent crawling of discovered company websites
     print(f"Building Lead Cards in parallel using {max_workers} workers...")
-    enrichment_started = time.monotonic()
     executor = ThreadPoolExecutor(max_workers=max_workers)
     try:
         futures = {
@@ -1075,9 +876,7 @@ def run_pipeline(keyword: str, run_deadline: Deadline | None = None):
                     f" {exc}"
                 )
     finally:
-        executor.shutdown(wait=True, cancel_futures=True)
-
-    stats.set_value("enrichment_runtime_sec", round(time.monotonic() - enrichment_started, 3))
+        executor.shutdown(wait=False, cancel_futures=True)
 
     # Apply batch weight learning exactly once at the end of the run
     from discovery.semantic_ranking_engine import apply_batch_learning
@@ -1087,9 +886,8 @@ def run_pipeline(keyword: str, run_deadline: Deadline | None = None):
 
     # ── Write output ──────────────────────────────────────────────────────
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-    # Sanitize keyword to prevent directory traversal or file path issues
-    filename = keyword.replace(" ", "_").replace("/", "_").replace("\\", "_").lower()
-    filename = filename.strip("_")
+    # Strict regex sanitization: allow only alphanumeric, underscores, and hyphens to prevent directory traversal
+    filename = re.sub(r"[^a-zA-Z0-9_-]", "_", keyword).strip("_").lower()
     if not filename:
         filename = "lead"
         
@@ -1098,103 +896,41 @@ def run_pipeline(keyword: str, run_deadline: Deadline | None = None):
         f"{filename}_{timestamp}.json",
     )
     
+    # Defense-in-depth: verify output path is strictly contained within RAW_OUTPUT_FOLDER
+    abs_base = os.path.abspath(config.RAW_OUTPUT_FOLDER)
+    abs_target = os.path.abspath(output_file)
+    if os.path.commonpath([abs_base, abs_target]) != abs_base:
+        raise ValueError(f"Path traversal detected: {output_file} is outside base folder {config.RAW_OUTPUT_FOLDER}")
+    
     # Ensure the parent directory structure of the output file exists
     os.makedirs(os.path.dirname(output_file), exist_ok=True)
 
     with open(output_file, "w", encoding="utf-8") as f:
         json.dump(leads, f, indent=4, ensure_ascii=False)
 
-    discovery_report = stats.get().get("discovery_report")
-    if discovery_report:
-        report_file = os.path.splitext(output_file)[0] + "_discovery_report.json"
-        with open(report_file, "w", encoding="utf-8") as f:
-            json.dump(discovery_report, f, indent=2, ensure_ascii=False)
-        print(f"Discovery Attribution : {report_file}")
-
     # ── Compute averages and timing ───────────────────────────────────────
     total_conf = sum(l.get("confidence_score", 0) for l in leads)
     avg_conf = (total_conf / len(leads)) if leads else 0.0
 
-    execution_time = time.monotonic() - start_time
+    execution_time = time.time() - start_time
 
     stats.set_value("avg_confidence", avg_conf)
     stats.set_value("execution_time_sec", execution_time)
 
     # Telemetry is handled centrally by run_pipeline.py -> dashboard.py
 
-    # ── Strict Coverage & Benchmark Metrics ───────────────────────────────
-    total_companies = len(companies)
-    total_leads = len(leads)
-
-    # 1. Observed Phone Coverage (must exist, pass validation/normalization, and be observed)
-    leads_with_phone = sum(
-        1 for l in leads
-        if bool(l.get("phones")) and any(
-            bool(p and len(str(p).strip()) >= 7) for p in l.get("phones", [])
-        )
-    )
-
-    # 2. Observed Email Coverage (must exist and be observed from source, excluding generated candidates)
-    leads_with_email = sum(
-        1 for l in leads
-        if bool(l.get("emails")) and any(
-            isinstance(e, str) and "@" in e for e in l.get("emails", [])
-        )
-    )
-
-    # 3. Both Phone and Email
-    leads_with_both = sum(
-        1 for l in leads
-        if bool(l.get("phones")) and bool(l.get("emails"))
-    )
-
-    # 4. Strict Decision Maker Coverage (must have name + explicit designation)
-    def _has_strict_dm(lead):
-        for p in (lead.get("people") or []):
-            if isinstance(p, dict):
-                name = (p.get("name") or "").strip()
-                desig = (p.get("designation") or "").strip()
-                if name and desig and len(name) >= 3 and len(desig) >= 2:
-                    return True
-        return False
-
-    leads_with_dm = sum(1 for l in leads if _has_strict_dm(l))
-
-    phone_pct = (leads_with_phone / total_leads * 100) if total_leads else 0.0
-    email_pct = (leads_with_email / total_leads * 100) if total_leads else 0.0
-    both_pct = (leads_with_both / total_leads * 100) if total_leads else 0.0
-    dm_pct = (leads_with_dm / total_leads * 100) if total_leads else 0.0
-
-    stats.set_value("companies_found", total_companies)
-    stats.set_value("lead_cards_created", total_leads)
-    stats.set_value("leads_returned", total_leads)
-    stats.set_value("leads_with_phone", leads_with_phone)
-    stats.set_value("leads_with_email", leads_with_email)
-    stats.set_value("leads_with_both", leads_with_both)
-    stats.set_value("leads_with_decision_maker", leads_with_dm)
-    stats.set_value("phone_coverage_pct", round(phone_pct, 1))
-    stats.set_value("email_coverage_pct", round(email_pct, 1))
-    stats.set_value("both_coverage_pct", round(both_pct, 1))
-    stats.set_value("decision_maker_coverage_pct", round(dm_pct, 1))
-
+    # Summary
     observed_id = sum(1 for l in leads if l.get("data_quality", {}).get("identity") in ("verified", "observed"))
+    has_contact = sum(1 for l in leads if l.get("emails") or l.get("phones"))
 
     print("=" * 60)
     print("FINAL PIPELINE EXECUTION REPORT")
     print("=" * 60)
-    print(f"Execution Time            : {execution_time:.2f}s")
-    print(f"Companies Found           : {total_companies}")
-    print(f"Lead Cards Created        : {total_leads}")
-    print(f"Leads with Phone          : {leads_with_phone}/{total_leads} ({phone_pct:.1f}%)")
-    print(f"Leads with Email          : {leads_with_email}/{total_leads} ({email_pct:.1f}%)")
-    print(f"Leads with Both           : {leads_with_both}/{total_leads} ({both_pct:.1f}%)")
-    print(f"Leads with Decision Maker : {leads_with_dm}/{total_leads} ({dm_pct:.1f}%)")
-    print(f"Phone Coverage %          : {phone_pct:.1f}%")
-    print(f"Email Coverage %          : {email_pct:.1f}%")
-    print(f"Both Coverage %           : {both_pct:.1f}%")
-    print(f"Decision Maker Coverage % : {dm_pct:.1f}%")
-    print(f"Identified Entities       : {observed_id}/{total_leads}")
-    print(f"Output File               : {output_file}")
+    print(f"Execution Time       : {execution_time:.2f}s")
+    print(f"Leads Discovered     : {len(leads)}")
+    print(f"Identified Entities  : {observed_id}/{len(leads)}")
+    print(f"Leads with Contacts  : {has_contact}/{len(leads)}")
+    print(f"Output File          : {output_file}")
     print("=" * 60 + "\n")
 
     # Commercial Intent Sanity Check Metric
@@ -1215,7 +951,12 @@ def run_pipeline(keyword: str, run_deadline: Deadline | None = None):
             print("  Please check if company homepages are being filtered out under 'semantic_low_score'.")
             print("!" * 60 + "\n")
 
-    return leads
+    return PipelineResult(
+        records=leads,
+        raw_file=output_file,
+        record_count=len(leads),
+        status="success" if leads else "no_candidates",
+    )
 
 
 

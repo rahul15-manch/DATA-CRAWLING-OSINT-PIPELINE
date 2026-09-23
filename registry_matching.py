@@ -22,8 +22,13 @@ def is_valid_company(name):
 
 def search_registry(company_name):
     """ZaubaCorp se Indian companies ka data fetch karta hai."""
-    # ZaubaCorp search URL
-    url = f"https://www.zaubacorp.com/company-search/search?search={company_name}"
+    from urllib.parse import quote_plus
+    from utils.validators import is_safe_url
+    safe_query = quote_plus(str(company_name or "").strip())
+    url = f"https://www.zaubacorp.com/company-search/search?search={safe_query}"
+    is_safe, _ = is_safe_url(url)
+    if not is_safe:
+        return {"matched": False, "reason": "unsafe_url"}
     try:
         resp = requests.get(url, headers=HEADERS, timeout=10)
         soup = BeautifulSoup(resp.text, "html.parser")

@@ -218,67 +218,53 @@ async def corporate_registry_match(session: aiohttp.ClientSession, company_name:
         pass
     return {"matched": False, "reason": "not_found_in_registries"}
 
+from osint import get_default_orchestrator
+from models.lead_record import LeadRecord, normalize_domain
+
+_orchestrator = None
+
+def get_orchestrator():
+    global _orchestrator
+    if _orchestrator is None:
+        _orchestrator = get_default_orchestrator()
+    return _orchestrator
+
 async def enrich_record(session: aiohttp.ClientSession, semaphore: asyncio.Semaphore, rec: dict) -> dict:
     async with semaphore:
-        enrichment = {}
-        domain = None
+        orchestrator = get_orchestrator()
+
+        # 1. Normalize domain if missing
         company_name = rec.get("company_name", "")
+        if not rec.get("domain") and rec.get("website"):
+            rec["domain"] = normalize_domain(rec["website"])
 
-        social_profiles = await fetch_social_profiles(session, company_name)
-        enrichment["corporate_social_profiles"] = social_profiles
-
-        if rec.get("website"):
-            domain = re.sub(r"^https?://(www\.)?", "", rec["website"]).split("/")[0]
-            enrichment["domain_source"] = "existing_website"
-        else:
+        if not rec.get("website") and not rec.get("domain") and company_name:
             guessed, tried = await guess_domain(session, company_name)
-            enrichment["domains_tried"] = tried
             if guessed:
-                domain = guessed
-                enrichment["domain_source"] = "guessed_and_verified"
-                enrichment["discovered_website"] = f"https://{guessed}"
+                rec["domain"] = guessed
+                rec["website"] = f"https://{guessed}"
 
-        all_emails = set()
-        all_phones = set()
+        # 2. Enrich via OSINTOrchestrator
+        lead = LeadRecord.from_dict(rec)
+        enriched_lead = await orchestrator.enrich_lead(lead)
+        out_dict = enriched_lead.to_dict()
 
-        if domain:
-            enrichment["whois"] = await asyncio.to_thread(whois_lookup, domain)
-            
-            web_emails, web_phones = await extract_contacts_from_web_page(session, domain)
-            all_emails.update(web_emails)
-            all_phones.update(web_phones)
-            
-            guessed_domain_emails = guess_emails_from_domain(domain)
-            all_emails.update(guessed_domain_emails)
-            
-            if HUNTER_API_KEY and "YOUR_HUNTER_API_KEY" not in HUNTER_API_KEY:
-                try:
-                    url = "https://api.hunter.io/v2/domain-search"
-                    params = {"domain": domain, "api_key": HUNTER_API_KEY}
-                    async with session.get(url, params=params, timeout=REQUEST_TIMEOUT) as resp:
-                        if resp.status == 200:
-                            data = await resp.json()
-                            api_emails = [e["value"] for e in data.get("data", {}).get("emails", [])]
-                            all_emails.update(api_emails)
-                except Exception:
-                    pass
+        # 3. Preserve Stage 5 backward compatibility metadata (_enrichment)
+        enrichment = {
+            "discovered_emails": list(enriched_lead.emails or []),
+            "discovered_phones": list(enriched_lead.phones or []),
+            "discovered_website": enriched_lead.website,
+            "corporate_registry": enriched_lead.extra_metadata.get("corporate_registry", {}),
+            "corporate_social_profiles": enriched_lead.social_links,
+            "whois": enriched_lead.domain_intel or {},
+        }
+        out_dict["_enrichment"] = enrichment
+        out_dict["_verified_emails"] = rec.get("_verified_emails", [])
+        out_dict["_verified_phones"] = rec.get("_verified_phones", [])
+        out_dict["_website_reachable"] = rec.get("_website_reachable", True)
 
-        if not all_phones or not all_emails:
-            osint_emails, osint_phones = await fetch_osint_fallbacks(session, company_name)
-            all_emails.update(osint_emails)
-            all_phones.update(osint_phones)
+        return out_dict
 
-        if not all_emails and domain:
-            all_emails.update([f"info@{domain}", f"support@{domain}"])
-
-        enrichment["discovered_emails"] = list(all_emails)
-        enrichment["discovered_phones"] = list(all_phones)
-
-        registry_data = await corporate_registry_match(session, company_name)
-        enrichment["corporate_registry"] = registry_data
-
-        rec["_enrichment"] = enrichment
-        return rec
 
 async def process_bulk_leads():
     import os
@@ -288,7 +274,10 @@ async def process_bulk_leads():
         target_input = sys.argv[1]
         base_name = os.path.basename(target_input)
         global OUTPUT_FILE
-        OUTPUT_FILE = os.path.join("output", "enriched", base_name)
+        if len(sys.argv) > 2:
+            OUTPUT_FILE = sys.argv[2]
+        else:
+            OUTPUT_FILE = os.path.join("output", "enriched", base_name)
     else:
         target_input = INPUT_FILE
         if not os.path.exists(target_input) and os.path.exists("output/verified"):

@@ -4,6 +4,37 @@ import os
 from pathlib import Path
 from typing import Optional
 
+import re
+
+class RedactingFormatter(logging.Formatter):
+    """
+    Production-grade log formatter that automatically redacts sensitive data
+    such as API keys, tokens, passwords, bearer tokens, and credentials in URLs.
+    """
+    # Regex patterns for sensitive keys and tokens
+    _PATTERNS = [
+        # Query parameter tokens: api_key=..., token=..., secret=..., password=...
+        (re.compile(r'(?i)(api[_-]?key|token|secret|password|credentials|access[_-]?token)=([a-zA-Z0-9_\-\.~]+)'), r'\1=[REDACTED]'),
+        # Authorization headers
+        (re.compile(r'(?i)(Authorization:\s*(?:Bearer|Basic)\s+)[a-zA-Z0-9_\-\.~+/=]+'), r'\1[REDACTED]'),
+        (re.compile(r'(?i)\b(Bearer\s+)[a-zA-Z0-9_\-\.~]+'), r'\1[REDACTED]'),
+        (re.compile(r'(?i)\b(Basic\s+)[a-zA-Z0-9+/=]+'), r'\1[REDACTED]'),
+        # Inline URL credentials: https://user:pass@host
+        (re.compile(r'://([^:]+):([^@]+)@'), r'://***:***@'),
+    ]
+
+    def format(self, record: logging.LogRecord) -> str:
+        formatted = super().format(record)
+        for pattern, replacement in self._PATTERNS:
+            formatted = pattern.sub(replacement, formatted)
+        # Redact any configured active environment secrets if present
+        for env_var in ("SERPAPI_KEY", "BRAVE_SEARCH_API_KEY", "HUNTER_API_KEY"):
+            val = os.getenv(env_var, "").strip()
+            if val and len(val) >= 6:
+                formatted = formatted.replace(val, "[REDACTED]")
+        return formatted
+
+
 class SafeStreamHandler(logging.StreamHandler):
     def emit(self, record):
         try:
@@ -42,8 +73,8 @@ class NetworkLogger:
             
         Path(log_dir).mkdir(parents=True, exist_ok=True)
         
-        # 1. Base format: Time | Level | Thread | Component | Message
-        log_format = logging.Formatter(
+        # 1. Base format with RedactingFormatter
+        log_format = RedactingFormatter(
             fmt='%(asctime)s | %(levelname)-8s | %(threadName)-10s | %(name)s | %(message)s',
             datefmt='%Y-%m-%d %H:%M:%S'
         )

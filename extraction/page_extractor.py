@@ -242,9 +242,13 @@ def _playwright_fetch(url: str, deadline: Deadline | None = None) -> str | None:
     if deadline:
         if deadline.is_exceeded() or deadline.bounded_timeout(15.0) < 1.0:
             raise DeadlineExceeded(f"Deadline exceeded before Playwright fetch for {url}")
-        pw_timeout = int(deadline.bounded_timeout(15.0) * 1000)
-    else:
-        pw_timeout = 15000
+        pw_timeout = int(deadline.bounded_timeout(15.0) * 1000) if deadline else 15000
+
+    from utils.validators import is_safe_url
+    is_safe, reason = is_safe_url(url)
+    if not is_safe:
+        print(f"[page_extractor] SSRF defense rejected Playwright navigation to {url}: {reason}")
+        return None
 
     try:
         from playwright.sync_api import sync_playwright
@@ -278,6 +282,12 @@ def fetch_page(url: str, deadline: Deadline | None = None):
     Applies RobotsChecker compliance, canonicalization, crawl budget, and duplicate content hashing.
     If plain HTTP returns a minimal JS shell, falls back to Playwright rendering.
     """
+    from utils.validators import is_safe_url
+    is_safe, reason = is_safe_url(url)
+    if not is_safe:
+        print(f"[page_extractor] SSRF defense rejected crawl to {url}: {reason}")
+        return None
+
     from network_client_project.network import NetworkClient
     from network_client_project.network.robots import RobotsChecker
     from network_client_project.network.frontier import get_frontier

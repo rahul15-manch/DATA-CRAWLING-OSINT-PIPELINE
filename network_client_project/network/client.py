@@ -82,6 +82,13 @@ class NetworkClient:
                 request = res
                 continue
 
+            # SSRF Defense Gate: validate URL before dispatch
+            from utils.validators import is_safe_url, validate_redirect_target
+            is_safe, reason = is_safe_url(request.url)
+            if not is_safe:
+                logger.warning(f"[NetworkClient] SSRF gate blocked request to {request.url}: {reason}")
+                raise ValueError(f"Unsafe URL blocked by SSRF defense layer: {reason}")
+
             from urllib.parse import urlparse
             domain = urlparse(request.url).netloc
             session_id = request.meta.get("session_id")
@@ -128,6 +135,24 @@ class NetworkClient:
                     verify=request.verify if request.verify is not None else config.VERIFY_SSL
                 )
                 latency = (time.time() - start_time) * 1000
+
+                # Redirect SSRF Gate: inspect redirect history and final destination URL
+                if hasattr(curl_response, "history") and curl_response.history:
+                    from urllib.parse import urljoin
+                    for hist in curl_response.history:
+                        loc = hist.headers.get("Location")
+                        if loc:
+                            full_loc = urljoin(getattr(hist, "url", request.url), loc)
+                            is_r_safe, r_reason = validate_redirect_target(full_loc)
+                            if not is_r_safe:
+                                logger.warning(f"[NetworkClient] Blocked unsafe redirect target {full_loc}: {r_reason}")
+                                raise ValueError(f"Unsafe redirect blocked by SSRF defense layer: {r_reason}")
+
+                if hasattr(curl_response, "url") and curl_response.url and curl_response.url != request.url:
+                    is_r_safe, r_reason = validate_redirect_target(curl_response.url)
+                    if not is_r_safe:
+                        logger.warning(f"[NetworkClient] Blocked unsafe redirected URL {curl_response.url}: {r_reason}")
+                        raise ValueError(f"Unsafe redirect blocked by SSRF defense layer: {r_reason}")
                 
                 # Wrap in custom Response
                 response = Response(

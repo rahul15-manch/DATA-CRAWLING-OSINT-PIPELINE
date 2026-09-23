@@ -4,99 +4,56 @@ import json
 import os
 import sys
 
-if sys.platform == "win32":
-    sys.stdout.reconfigure(encoding="utf-8")
+ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+if ROOT not in sys.path:
+    sys.path.insert(0, ROOT)
 
-DB_FILE = 'leads.db'
+from database.repository import LeadRepository, normalize_industry
+from database.connection import get_default_db_path
 
 
-def get_db_connection():
+DB_FILE = get_default_db_path()
+
+
+def get_repo() -> LeadRepository:
     if not os.path.exists(DB_FILE):
         print(f"[ERROR] Database {DB_FILE} not found. Run export_to_db.py first.")
-        exit(1)
-    conn = sqlite3.connect(DB_FILE)
-    # This allows us to access columns by name (returns dictionaries instead of tuples)
-    conn.row_factory = sqlite3.Row
-    return conn
-
-
-def normalize_industry(value: str) -> str:
-    """FIX #1: must mirror the exact normalization used when the data was
-    stored (format_industry in the ETL script): short codes get uppercased
-    ('ai' -> 'AI'), longer names get title-cased ('fintech' -> 'Fintech').
-    The old version always did .upper(), so any industry longer than 3
-    characters could never match what's actually in the DB."""
-    if not value:
-        return value
-    return value.upper() if len(value) <= 3 else value.title()
-
-
-def safe_json_load(value, default):
-    """FIX #2: some rows may have NULL instead of a JSON string (partial
-    imports, manual edits, future export scripts that don't guarantee
-    '[]'/'{}'). Instead of crashing the whole query for every row, fall
-    back to a safe default for just that field."""
-    if value is None:
-        return default
-    if isinstance(value, (list, dict)):
-        return value
-    try:
-        return json.loads(value)
-    except (json.JSONDecodeError, TypeError):
-        return default
-
-
-def format_output(rows):
-    """Converts SQLite rows back into clean JSON for Team B"""
-    results = []
-    for row in rows:
-        record = dict(row)
-        record['emails'] = safe_json_load(record.get('emails'), [])
-        record['phones'] = safe_json_load(record.get('phones'), [])
-        record['social_links'] = safe_json_load(record.get('social_links'), {})
-        record['people'] = safe_json_load(record.get('people'), [])
-        results.append(record)
-
-    print(json.dumps(results, indent=2))
-    return results
+        sys.exit(1)
+    return LeadRepository(DB_FILE)
 
 
 def search_leads(domain=None, industry=None):
-    """Integration Hook: Allows Team B to search the DB dynamically"""
-    conn = get_db_connection()
-    cursor = conn.cursor()
-    query = "SELECT * FROM flowiz_leads WHERE 1=1"
-    params = []
+    """Integration Hook: Allows Team B to search the DB dynamically via LeadRepository"""
+    repo = get_repo()
+    results = []
+
     if domain:
-        query += " AND domain = ?"
-        params.append(domain)
-    if industry:
-        query += " AND industry = ?"
-        params.append(normalize_industry(industry))
-    cursor.execute(query, params)
-    rows = cursor.fetchall()
-    conn.close()
-    if not rows:
-        print(f"[] \n# No leads found matching criteria.")
+        rec = repo.get_lead_by_domain(domain)
+        if rec:
+            norm_ind = normalize_industry(industry) if industry else None
+            if not norm_ind or (rec.industry and rec.industry.lower() == norm_ind.lower()):
+                results.append(rec.to_dict())
+    else:
+        norm_ind = normalize_industry(industry) if industry else None
+        records = repo.get_leads(industry=norm_ind)
+        results = [r.to_dict() for r in records]
+
+    if not results:
+        print("[] \n# No leads found matching criteria.")
         return []
     else:
-        return format_output(rows)
+        print(json.dumps(results, indent=2))
+        return results
 
 
 def generate_quality_matrix():
-    """Data Quality Matrix: Generates the DoD Benchmarking Report"""
-    conn = get_db_connection()
-    cursor = conn.cursor()
-    cursor.execute("SELECT COUNT(*) FROM flowiz_leads")
-    total_leads = cursor.fetchone()[0]
+    """Data Quality Matrix: Generates the DoD Benchmarking Report using LeadRepository"""
+    repo = get_repo()
+    stats = repo.get_stats()
 
-    # FIX: also treat NULL as "no email/phone", not just the literal '[]' string,
-    # since some rows may have NULL instead of an empty JSON array.
-    cursor.execute("SELECT COUNT(*) FROM flowiz_leads WHERE emails IS NOT NULL AND emails != '[]'")
-    leads_with_email = cursor.fetchone()[0]
-    cursor.execute("SELECT COUNT(*) FROM flowiz_leads WHERE phones IS NOT NULL AND phones != '[]'")
-    leads_with_phone = cursor.fetchone()[0]
-    conn.close()
+    total_leads = stats["total_leads"]
+    leads_with_email = stats["leads_with_email"]
+    leads_with_phone = stats["leads_with_phone"]
 
     print("\n" + "=" * 40)
     print(" 📊 FLOWIZ DATA QUALITY MATRIX")
@@ -111,6 +68,7 @@ def generate_quality_matrix():
     else:
         print(f"⚠️ DoD PENDING: Need {1000 - total_leads} more leads to hit 1,000 target.")
     print("=" * 40 + "\n")
+
 
 
 if __name__ == "__main__":

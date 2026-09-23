@@ -70,13 +70,48 @@ CATEGORY_ACRONYM_EXPANSIONS = {
 }
 
 
+def _detect_operators(query: str) -> list[str]:
+    ops = []
+    q_lower = query.lower()
+    for op in ("site:", "inurl:", "intitle:", "filetype:", "intext:"):
+        if op in q_lower:
+            ops.append(op)
+    if '"' in query:
+        ops.append('""')
+    if " OR " in query:
+        ops.append("OR")
+    if " -" in query:
+        ops.append("-")
+    return ops
+
+
+def _infer_query_family(query: str, default: str = "COMPANY") -> str:
+    q_lower = query.lower()
+    if "filetype:" in q_lower or ".pdf" in q_lower or "pdf" in q_lower:
+        return "DOCUMENT"
+    if "inurl:contact" in q_lower or "intitle:contact" in q_lower or "contact" in q_lower:
+        return "CONTACT"
+    if "inurl:about" in q_lower or "inurl:team" in q_lower or "intitle:leadership" in q_lower or "leadership" in q_lower or "team" in q_lower:
+        return "ABOUT_TEAM"
+    if "inurl:careers" in q_lower or "inurl:jobs" in q_lower or "careers" in q_lower:
+        return "CAREERS"
+    if "site:clutch.co" in q_lower or "site:goodfirms.co" in q_lower:
+        return "REGISTRY"
+    if "site:linkedin.com" in q_lower:
+        return "SOCIAL"
+    return default
+
+
 class QueryPlanner:
     def __init__(self, resolver: SemanticIntentResolver = None):
         self.resolver = resolver or SemanticIntentResolver()
 
     def plan_queries(self, keyword: str) -> list[SearchTask]:
         """Convert a user keyword into structured provider-specific SearchTasks based on its IntentProfile."""
-        kw_clean = keyword.lower().strip()
+        if not keyword or not str(keyword).strip():
+            return []
+
+        kw_clean = str(keyword).lower().strip()
         
         # Load search mode from config
         from config import SearchMode
@@ -95,8 +130,15 @@ class QueryPlanner:
         seen_queries = set()
         priority = 1
 
-        def add_task(source: str, query: str, prepend: bool = False,
-                     discovery_mode: str = "expanded"):
+        def add_task(
+            source: str,
+            query: str,
+            prepend: bool = False,
+            discovery_mode: str = "expanded",
+            family: str = None,
+            intent: str = "discovery",
+            expected_information: str = "",
+        ):
             nonlocal priority
             q_clean = " ".join(query.split()).strip()
             if not q_clean:
@@ -105,6 +147,8 @@ class QueryPlanner:
             if q_key in seen_queries:
                 return
             seen_queries.add(q_key)
+            task_family = family or _infer_query_family(q_clean)
+            ops = _detect_operators(q_clean)
             task = SearchTask(
                 source=source,
                 query=q_clean,
@@ -112,6 +156,10 @@ class QueryPlanner:
                 category="company",
                 discovery_mode=discovery_mode,
                 original_keyword=keyword,
+                family=task_family,
+                operator_set=ops,
+                intent=intent,
+                expected_information=expected_information,
             )
             if prepend:
                 tasks.insert(0, task)
@@ -119,47 +167,64 @@ class QueryPlanner:
                 tasks.append(task)
             priority += 1
 
+        # Preserve user-provided query with advanced operators directly
+        user_ops = _detect_operators(keyword)
+        if user_ops:
+            add_task("google", keyword, prepend=True, discovery_mode="direct",
+                     family=_infer_query_family(keyword), intent="user_explicit",
+                     expected_information="user_specified_operator_query")
+
         # ── DIRECT lane: entity-identity queries ───────────────────────────────
-        # Only activated for bare entity/company name queries (e.g. "swiggy").
-        # These queries are unambiguous and point straight at the entity,
-        # bypassing the semantic matching pipeline (scored by entity_identity_bonus
-        # in SemanticRanker).
         def generate_direct_entity_queries():
-            """Emit high-signal identity-focused queries tagged discovery_mode='direct' in 3 strict tiers."""
+            """Emit high-signal identity-focused queries tagged discovery_mode='direct' in controlled query families."""
             kw_slug = re.sub(r"[^a-z0-9]", "", kw_no_loc)
             
             # ── Tier 1: Core Identity Queries (Highest Priority) ──────────────
-            add_task("google", f"{kw_no_loc}", discovery_mode="direct")
-            add_task("google", f"\"{kw_no_loc}\"", discovery_mode="direct")
-            add_task("google", f"site:{kw_slug}.com", discovery_mode="direct")
-            add_task("linkedin", f"site:linkedin.com/company/{kw_slug}", discovery_mode="direct")
+            add_task("google", f"{kw_no_loc}", discovery_mode="direct", family="COMPANY", expected_information="primary_entity_name")
+            add_task("google", f"\"{kw_no_loc}\"", discovery_mode="direct", family="COMPANY", expected_information="quoted_entity_name")
+            if kw_slug:
+                add_task("google", f"site:{kw_slug}.com", discovery_mode="direct", family="COMPANY", expected_information="official_domain")
+                add_task("linkedin", f"site:linkedin.com/company/{kw_slug}", discovery_mode="direct", family="SOCIAL", expected_information="linkedin_company_profile")
 
-            # ── Tier 2: Official Site & LinkedIn Variants ─────────────────────
-            add_task("google", f"{kw_no_loc} official website", discovery_mode="direct")
-            add_task("brave", f"{kw_no_loc} official site", discovery_mode="direct")
-            add_task("google", f"{kw_no_loc} linkedin company", discovery_mode="direct")
-            add_task("google", f"intitle:\"{kw_no_loc}\"", discovery_mode="direct")
-            add_task("bing", f"{kw_no_loc} company headquarters{loc_suffix}", discovery_mode="direct")
+            # ── Tier 2: Official Site & Leadership / Contact Footprinting ────
+            add_task("google", f"{kw_no_loc} official website", discovery_mode="direct", family="COMPANY", expected_information="official_website")
+            add_task("brave", f"{kw_no_loc} official site", discovery_mode="direct", family="COMPANY", expected_information="official_site")
+            add_task("google", f"{kw_no_loc} linkedin company", discovery_mode="direct", family="SOCIAL", expected_information="linkedin_search")
+            add_task("google", f"{kw_no_loc} inurl:contact", discovery_mode="direct", family="CONTACT", expected_information="contact_page")
+            if kw_slug:
+                add_task("google", f"site:{kw_slug}.com inurl:contact", discovery_mode="direct", family="CONTACT", expected_information="domain_contact_page")
+                add_task("google", f"site:{kw_slug}.com intitle:contact", discovery_mode="direct", family="CONTACT", expected_information="contact_title")
+            add_task("google", f"{kw_no_loc} inurl:about", discovery_mode="direct", family="ABOUT_TEAM", expected_information="about_page")
+            add_task("google", f"\"{kw_no_loc}\" intitle:leadership", discovery_mode="direct", family="ABOUT_TEAM", expected_information="leadership_page")
+            add_task("google", f"intitle:\"{kw_no_loc}\"", discovery_mode="direct", family="ABOUT_TEAM", expected_information="title_entity_match")
+            add_task("bing", f"{kw_no_loc} company headquarters{loc_suffix}", discovery_mode="direct", family="COMPANY", expected_information="headquarters")
 
-            # ── Tier 3: Industry Directories ─────────────────────────────────
-            add_task("clutch", f"site:clutch.co {kw_no_loc}", discovery_mode="direct")
-            add_task("goodfirms", f"site:goodfirms.co {kw_no_loc}", discovery_mode="direct")
+            # ── Tier 3: Careers & Document Discovery ─────────────────────────
+            add_task("google", f"{kw_no_loc} inurl:careers", discovery_mode="direct", family="CAREERS", expected_information="careers_page")
+            add_task("google", f"\"{kw_no_loc}\" filetype:pdf", discovery_mode="direct", family="DOCUMENT", expected_information="corporate_pdf")
+            if kw_slug:
+                add_task("google", f"site:{kw_slug}.com filetype:pdf", discovery_mode="direct", family="DOCUMENT", expected_information="domain_pdf_document")
+
+            # ── Tier 4: Industry Directories (Registries) ────────────────────
+            add_task("clutch", f"site:clutch.co {kw_no_loc}", discovery_mode="direct", family="REGISTRY", expected_information="clutch_directory")
+            add_task("goodfirms", f"site:goodfirms.co {kw_no_loc}", discovery_mode="direct", family="REGISTRY", expected_information="goodfirms_directory")
 
         # Helper to generate literal exact queries (EXPANDED lane)
         def generate_exact_queries():
-            add_task("google", f"{kw_no_loc}{loc_suffix}")
-            add_task("google", f"{kw_no_loc} company{loc_suffix}")
-            add_task("google", f"{kw_no_loc} services{loc_suffix}")
-            add_task("google", f"{kw_no_loc} solutions{loc_suffix}")
-            add_task("google", f"{kw_no_loc} consulting{loc_suffix}")
-            add_task("brave", f"{kw_no_loc} company{loc_suffix}")
-            add_task("duckduckgo", f"{kw_no_loc} services{loc_suffix}")
-            add_task("bing", f"{kw_no_loc} solutions{loc_suffix}")
-            add_task("google", f"intitle:{kw_no_loc}{loc_suffix}")
-            add_task("linkedin", f"site:linkedin.com/company {kw_no_loc}{loc_suffix}")
-            add_task("clutch", f"site:clutch.co {kw_no_loc}{loc_suffix}")
-            add_task("goodfirms", f"site:goodfirms.co {kw_no_loc}{loc_suffix}")
-            add_task("github", f"site:github.com {kw_no_loc} development{loc_suffix}")
+            add_task("google", f"{kw_no_loc}{loc_suffix}", family="COMPANY")
+            add_task("google", f"{kw_no_loc} company{loc_suffix}", family="COMPANY")
+            add_task("google", f"{kw_no_loc} services{loc_suffix}", family="COMPANY")
+            add_task("google", f"{kw_no_loc} solutions{loc_suffix}", family="COMPANY")
+            add_task("google", f"{kw_no_loc} consulting{loc_suffix}", family="COMPANY")
+            add_task("brave", f"{kw_no_loc} company{loc_suffix}", family="COMPANY")
+            add_task("duckduckgo", f"{kw_no_loc} services{loc_suffix}", family="COMPANY")
+            add_task("bing", f"{kw_no_loc} solutions{loc_suffix}", family="COMPANY")
+            add_task("google", f"intitle:{kw_no_loc}{loc_suffix}", family="ABOUT_TEAM")
+            add_task("google", f"{kw_no_loc} inurl:contact{loc_suffix}", family="CONTACT")
+            add_task("linkedin", f"site:linkedin.com/company {kw_no_loc}{loc_suffix}", family="SOCIAL")
+            add_task("clutch", f"site:clutch.co {kw_no_loc}{loc_suffix}", family="REGISTRY")
+            add_task("goodfirms", f"site:goodfirms.co {kw_no_loc}{loc_suffix}", family="REGISTRY")
+            add_task("github", f"site:github.com {kw_no_loc} development{loc_suffix}", family="COMPANY")
 
         # ── Detect entity query and emit DIRECT lane first ─────────────────────
         entity_query = is_entity_query(kw_no_loc)
@@ -167,40 +232,52 @@ class QueryPlanner:
             print(f"[QueryPlanner] Entity query detected: '{kw_no_loc}' — enabling DIRECT+EXPANDED dual-lane")
             generate_direct_entity_queries()
         else:
-            # ── CATEGORY direct lane ──────────────────────────────────────────
-            # For broad category queries (e.g. "AI", "cybersecurity", "fintech"),
-            # emit direct logical queries tagged discovery_mode="direct" so they
-            # run before ANY semantic expansion and before LinkedIn tasks get
-            # starved by 15+ general Google queries.
             print(f"[QueryPlanner] Category query detected: '{kw_no_loc}' — enabling DIRECT category lane")
 
             def generate_direct_category_queries():
                 cat = kw_no_loc.strip()
                 cat_lower = cat.lower()
 
-                # Clean base category name by stripping redundant trailing company words to prevent stuttering
-                cat_base = re.sub(r"\b(companies|company|firm|firms|startup|startups|agency|agencies|manufacturers|suppliers)\b", "", cat, flags=re.I).strip()
-                cat_base = " ".join(cat_base.split()) or cat
-                cat_base_lower = cat_base.lower()
+                # Core direct Google queries for the raw category
+                add_task("google", f"{cat} companies{loc_suffix}", discovery_mode="direct", family="COMPANY")
+                add_task("google", f"{cat} startups{loc_suffix}", discovery_mode="direct", family="COMPANY")
+                add_task("google", f"top {cat} companies{loc_suffix}", discovery_mode="direct", family="COMPANY")
+                add_task("brave",  f"{cat} companies{loc_suffix}", discovery_mode="direct", family="COMPANY")
 
-                # Core direct web discovery queries (run high-intent open-web company discovery)
-                add_task("google", f"{cat_base} companies{loc_suffix}", discovery_mode="direct")
-                add_task("google", f"{cat_base} manufacturers{loc_suffix}", discovery_mode="direct")
-                add_task("google", f"consumer {cat_base} companies{loc_suffix}", discovery_mode="direct")
-                add_task("google", f"top {cat_base} companies{loc_suffix}", discovery_mode="direct")
-                add_task("brave",  f"{cat_base} companies{loc_suffix}", discovery_mode="direct")
+                # LinkedIn direct discovery — run in the priority lane
+                add_task("linkedin", f'site:linkedin.com/company "{cat}"{loc_suffix}', discovery_mode="direct", family="SOCIAL")
+                add_task("linkedin", f'site:linkedin.com/company "{cat} company"{loc_suffix}', discovery_mode="direct", family="SOCIAL")
 
                 # Acronym / canonical expansions (e.g. "AI" → "artificial intelligence companies")
-                expansions = CATEGORY_ACRONYM_EXPANSIONS.get(cat_base_lower, [])
-                for expansion in expansions[:2]:  # cap at 2 expansions to stay inside budget
-                    add_task("google", f"{expansion} companies{loc_suffix}", discovery_mode="direct")
-                    add_task("google", f"{expansion} manufacturers{loc_suffix}", discovery_mode="direct")
+                expansions = CATEGORY_ACRONYM_EXPANSIONS.get(cat_lower, [])
+                for expansion in expansions[:3]:  # cap at 3 expansions to stay inside budget
+                    add_task("google",   f"{expansion} companies{loc_suffix}", discovery_mode="direct", family="COMPANY")
+                    add_task("google",   f"{expansion} startups{loc_suffix}", discovery_mode="direct", family="COMPANY")
+                    add_task("linkedin", f'site:linkedin.com/company "{expansion}"{loc_suffix}', discovery_mode="direct", family="SOCIAL")
+                    add_task("brave",    f"{expansion} companies{loc_suffix}", discovery_mode="direct", family="COMPANY")
 
                 # Clutch / GoodFirms direct category page
-                add_task("clutch",    f"site:clutch.co {cat_base} companies{loc_suffix}", discovery_mode="direct")
-                add_task("goodfirms", f"site:goodfirms.co {cat_base} companies{loc_suffix}", discovery_mode="direct")
+                add_task("clutch",    f"site:clutch.co {cat} companies{loc_suffix}", discovery_mode="direct", family="REGISTRY")
+                add_task("goodfirms", f"site:goodfirms.co {cat} companies{loc_suffix}", discovery_mode="direct", family="REGISTRY")
+
+                # Controlled Footprinting for Category (Contact, Leadership, Documents)
+                add_task("google", f'"{cat} company" inurl:contact{loc_suffix}', discovery_mode="direct", family="CONTACT", expected_information="category_contact_pages")
+                add_task("google", f'"{cat} company" intitle:leadership{loc_suffix}', discovery_mode="direct", family="ABOUT_TEAM", expected_information="category_leadership_pages")
+                add_task("google", f'"{cat} companies" filetype:pdf{loc_suffix}', discovery_mode="direct", family="DOCUMENT", expected_information="industry_reports_pdf")
 
             generate_direct_category_queries()
+
+        # Explicit Intent-Driven Prioritization (only when user did not supply explicit operators)
+        if not user_ops:
+            if "contact" in kw_clean:
+                add_task("google", f'"{kw_no_loc}" inurl:contact{loc_suffix}', prepend=True, discovery_mode="direct", family="CONTACT")
+                add_task("google", f'"{kw_no_loc}" intitle:contact{loc_suffix}', prepend=True, discovery_mode="direct", family="CONTACT")
+            elif "leadership" in kw_clean or "team" in kw_clean:
+                add_task("google", f'"{kw_no_loc}" intitle:leadership{loc_suffix}', prepend=True, discovery_mode="direct", family="ABOUT_TEAM")
+                add_task("google", f'"{kw_no_loc}" inurl:team{loc_suffix}', prepend=True, discovery_mode="direct", family="ABOUT_TEAM")
+                add_task("google", f'"{kw_no_loc}" inurl:about{loc_suffix}', prepend=True, discovery_mode="direct", family="ABOUT_TEAM")
+            elif "pdf" in kw_clean or "filetype:pdf" in kw_clean or "document" in kw_clean:
+                add_task("google", f'"{kw_no_loc}" filetype:pdf{loc_suffix}', prepend=True, discovery_mode="direct", family="DOCUMENT")
 
         if search_mode == SearchMode.EXACT:
             generate_exact_queries()

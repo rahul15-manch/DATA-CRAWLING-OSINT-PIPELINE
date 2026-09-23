@@ -1102,6 +1102,10 @@ def discover_companies(keyword: str, deadline: "Deadline | None" = None) -> list
                         "depth": 1,
                         "discovery_mode": getattr(t, "discovery_mode", "expanded"),
                         "original_keyword": getattr(t, "original_keyword", keyword),
+                        "family": getattr(t, "family", "COMPANY"),
+                        "operator_set": getattr(t, "operator_set", []),
+                        "intent": getattr(t, "intent", "discovery"),
+                        "expected_information": getattr(t, "expected_information", ""),
                     }
                 )
                 scheduler.enqueue(req)
