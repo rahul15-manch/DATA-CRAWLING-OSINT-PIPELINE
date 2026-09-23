@@ -21,76 +21,17 @@ if sys.platform == "win32":
     sys.stdout.reconfigure(encoding="utf-8")
 
 # 1. Define the Schema (The Rules)
-class Person(BaseModel):
-    name: Optional[str] = None
-    designation: Optional[str] = None
-    linkedin: Optional[str] = None
+from models.lead_record import LeadRecord, PersonRecord
 
-class LeadSchema(BaseModel):
+Person = PersonRecord
+
+class LeadSchema(LeadRecord):
+    """
+    LeadSchema for Pillar 4 ETL.
+    Inherits from the canonical LeadRecord to guarantee single source of truth
+    while preserving backward compatibility with ETL callers.
+    """
     model_config = ConfigDict(extra='ignore')
-
-    company_name: str = Field(..., min_length=1)
-    website: str
-    domain: str = ""
-    industry: Optional[str] = None
-    location: Optional[str] = None
-    contact_page: Optional[str] = None
-    about_page: Optional[str] = None
-    emails: List[str] = []
-    phones: List[str] = []
-    social_links: Dict[str, str] = {}
-    people: List[Person] = []
-    source: Optional[str] = None
-    description: Optional[str] = None
-    employees: Optional[str] = None
-    founded: Optional[str] = None
-    country: Optional[str] = None
-    lead_score: Optional[int] = None
-    confidence: Optional[float] = None
-    tech_stack: List[str] = []
-    emails_scored: List[Dict[str, Any]] = []
-    domain_intel: Optional[Dict[str, Any]] = None
-    org_graph: Optional[Dict[str, Any]] = None
-
-    @field_validator('industry')
-    @classmethod
-    def format_industry(cls, v):
-        if v:
-            return v.upper() if len(v) <= 3 else v.title()
-        return v
-
-    @field_validator('emails')
-    @classmethod
-    def validate_emails(cls, v):
-        valid_emails = []
-        email_regex = re.compile(r"^[\w\.-]+@[\w\.-]+\.\w+$")
-        for email in v:
-            clean_email = email.strip().lower()
-            if email_regex.match(clean_email):
-                valid_emails.append(clean_email)
-        return valid_emails
-
-    @field_validator('phones')
-    @classmethod
-    def validate_phones(cls, v):
-        valid_phones = []
-        digit_count_regex = re.compile(r"^\+?\d{7,15}$")
-        for phone in v:
-            clean_phone = re.sub(r"[\s\-\(\)]", "", phone.strip())
-            if digit_count_regex.match(clean_phone):
-                valid_phones.append(clean_phone)
-        return valid_phones
-
-    @model_validator(mode='after')
-    def extract_domain(self):
-        if self.website:
-            website = self.website.strip()
-            parsed = urlparse(website)
-            if not parsed.netloc:
-                parsed = urlparse(f"https://{website}")
-            netloc = parsed.netloc.replace('www.', '').lower()
-            self.domain = netloc
-        return self
 
 OUTPUT_FILE = 'cleaned_data.json'
 
@@ -127,28 +68,52 @@ class DeduplicationPipeline:
             self.duplicates_merged += 1
             existing = self.master_db[domain_key]
 
-            for field in ['company_name', 'industry', 'location', 'contact_page', 'about_page', 'source']:
-                if field in item and field not in existing:
+            # Merge scalar fields
+            for field in [
+                'company_name', 'website', 'industry', 'location', 'country', 'employees',
+                'founded', 'description', 'contact_page', 'about_page', 'team_page',
+                'source', 'source_url', 'lead_score', 'confidence_score', 'confidence',
+                'lead_quality', 'relevance_score', 'relevance_tier', 'reason_if_rejected',
+            ]:
+                if item.get(field) is not None and existing.get(field) is None:
                     existing[field] = item[field]
 
             if 'emails' in item:
-                existing['emails'] = list(set(existing.get('emails', []) + item['emails']))
+                existing['emails'] = list(set(existing.get('emails', []) + item.get('emails', [])))
 
             if 'phones' in item:
-                existing['phones'] = list(set(existing.get('phones', []) + item['phones']))
+                existing['phones'] = list(set(existing.get('phones', []) + item.get('phones', [])))
 
-            if 'social_links' in item:
+            if 'social_links' in item and isinstance(item.get('social_links'), dict):
                 existing.setdefault('social_links', {}).update(item['social_links'])
 
-            if 'people' in item:
+            if 'people' in item and isinstance(item.get('people'), list):
                 existing_people = {
-                    p.get('name') or f"__unnamed_{i}": p
+                    (p.get('name') or f"__unnamed_{i}").strip().lower(): p
                     for i, p in enumerate(existing.get('people', []))
+                    if isinstance(p, dict)
                 }
                 for i, person in enumerate(item['people']):
-                    key = person.get('name') or f"__unnamed_new_{i}"
-                    existing_people[key] = person
+                    if isinstance(person, dict):
+                        key = (person.get('name') or f"__unnamed_new_{i}").strip().lower()
+                        if key not in existing_people:
+                            existing_people[key] = person
                 existing['people'] = list(existing_people.values())
+
+            # Merge complex dictionaries
+            for dict_field in ['domain_intel', 'org_graph', 'data_quality', 'domain_verification', 'evidence', 'extra_metadata']:
+                if item.get(dict_field) and isinstance(item[dict_field], dict):
+                    existing.setdefault(dict_field, {}).update(item[dict_field])
+
+            # Merge lists
+            if 'tech_stack' in item and isinstance(item.get('tech_stack'), list):
+                existing['tech_stack'] = list(set(existing.get('tech_stack', []) + item['tech_stack']))
+
+            if 'emails_provenance' in item and isinstance(item.get('emails_provenance'), list):
+                existing.setdefault('emails_provenance', []).extend(item['emails_provenance'])
+
+            if 'phones_provenance' in item and isinstance(item.get('phones_provenance'), list):
+                existing.setdefault('phones_provenance', []).extend(item['phones_provenance'])
 
             # Update the item content to be the merged master entry
             item.clear()

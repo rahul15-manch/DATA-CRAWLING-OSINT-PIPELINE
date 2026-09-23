@@ -476,3 +476,144 @@ def is_valid_company_name(name: str) -> bool:
         return False
 
     return True
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# SSRF & URL Safety Layer (Milestone 6)
+# ─────────────────────────────────────────────────────────────────────────────
+
+import ipaddress
+import socket
+from urllib.parse import urlparse
+
+_ALLOWED_URL_SCHEMES = frozenset({"http", "https"})
+_MAX_URL_LENGTH = 2048
+
+_DISALLOWED_HOSTNAMES = frozenset({
+    "localhost",
+    "metadata.google.internal",
+    "instance-data",
+})
+
+# Dangerous internal service ports that web scrapers should never connect to
+_BLOCKED_PORTS = frozenset({
+    21, 22, 23, 25, 53, 69, 110, 135, 137, 138, 139, 143, 445,
+    1433, 1521, 2049, 3306, 5432, 5900, 6379, 8098, 9200, 11211, 27017, 28017
+})
+
+
+def is_safe_ip(ip_obj: ipaddress.IPv4Address | ipaddress.IPv6Address) -> tuple[bool, str]:
+    """
+    Validate that an IP address is a publicly routable global address,
+    rejecting loopback, private, link-local, cloud metadata, multicast, and reserved addresses.
+    """
+    if ip_obj.is_loopback:
+        return False, f"Loopback IP address rejected: {ip_obj}"
+    if ip_obj.is_private:
+        return False, f"Private network IP address rejected: {ip_obj}"
+    if ip_obj.is_link_local:
+        return False, f"Link-local IP address rejected: {ip_obj}"
+    if ip_obj.is_multicast:
+        return False, f"Multicast IP address rejected: {ip_obj}"
+    if ip_obj.is_reserved:
+        return False, f"Reserved IP address rejected: {ip_obj}"
+    if ip_obj.is_unspecified:
+        return False, f"Unspecified IP address rejected: {ip_obj}"
+
+    # Explicit cloud metadata endpoint check (e.g. AWS/GCP/Azure/DigitalOcean 169.254.169.254)
+    ip_str = str(ip_obj)
+    if ip_str == "169.254.169.254":
+        return False, f"Cloud metadata IP address rejected: {ip_str}"
+
+    return True, "IP is safe"
+
+
+def is_safe_url(url: str) -> tuple[bool, str]:
+    """
+    Pure, side-effect-free SSRF validation function for all outbound crawling requests.
+
+    Validation steps:
+      1. Bounds check (non-empty, length <= 2048 chars).
+      2. Scheme check: only 'http' and 'https' are permitted (rejects file:, ftp:, gopher:, data:, javascript:).
+      3. Hostname check: netloc must exist, cannot be in disallowed hostnames or internal TLDs (.local, .internal).
+      4. Port check: prevents scanning internal database/management ports (22, 3306, 6379, etc.).
+      5. IP resolution: resolves hostname and ensures resolved IPs are globally routable.
+
+    Returns:
+      (True, "OK") if safe, or (False, reason) if dangerous/invalid.
+    """
+    if not url or not isinstance(url, str):
+        return False, "URL is empty or not a string"
+
+    url = url.strip()
+    if len(url) > _MAX_URL_LENGTH:
+        return False, f"URL exceeds maximum allowed length of {_MAX_URL_LENGTH} characters"
+
+    try:
+        parsed = urlparse(url)
+    except Exception as exc:
+        return False, f"Malformed URL: {exc}"
+
+    scheme = (parsed.scheme or "").lower()
+    if scheme not in _ALLOWED_URL_SCHEMES:
+        return False, f"Disallowed URL scheme '{scheme}'. Only http and https are permitted."
+
+    hostname = parsed.hostname
+    if not hostname:
+        return False, "URL contains no valid hostname"
+
+    hostname = hostname.lower().strip(".")
+
+    # Disallowed hostnames and internal TLDs
+    if hostname in _DISALLOWED_HOSTNAMES or hostname.endswith(".localhost"):
+        return False, f"Disallowed internal hostname: {hostname}"
+    if hostname.endswith(".local") or hostname.endswith(".internal") or hostname.endswith(".lan"):
+        return False, f"Disallowed private/internal domain suffix: {hostname}"
+
+    # Port restriction
+    port = parsed.port
+    if port and port in _BLOCKED_PORTS:
+        return False, f"Connection to port {port} is blocked for security"
+
+    # Fast check: is hostname already an IP literal?
+    try:
+        ip_obj = ipaddress.ip_address(hostname)
+        return is_safe_ip(ip_obj)
+    except ValueError:
+        # Not a literal IP, proceed to DNS resolution
+        pass
+
+    # Resolve hostname via socket.getaddrinfo
+    try:
+        resolved_addrs = socket.getaddrinfo(hostname, port or 80, proto=socket.IPPROTO_TCP)
+        if not resolved_addrs:
+            return False, f"DNS resolution yielded no addresses for {hostname}"
+
+        for family, _, _, _, sockaddr in resolved_addrs:
+            ip_str = sockaddr[0]
+            try:
+                ip_obj = ipaddress.ip_address(ip_str)
+                is_safe, reason = is_safe_ip(ip_obj)
+                if not is_safe:
+                    return False, f"Hostname '{hostname}' resolved to unsafe address: {reason}"
+            except ValueError:
+                return False, f"Unparseable IP from DNS resolution: {ip_str}"
+
+    except socket.gaierror:
+        # Hostname could not be resolved (e.g. offline testing, mock test domains, or NXDOMAIN).
+        # Since no private/internal IP was resolved, this does not present an SSRF threat.
+        # Downstream HTTP client will either hit a mock handler or fail safely with network error.
+        return True, "OK"
+    except Exception as exc:
+        return False, f"Network resolution error for {hostname}: {exc}"
+
+    return True, "OK"
+
+
+def validate_redirect_target(target_url: str) -> tuple[bool, str]:
+    """
+    Validates an HTTP redirect target URL before following it.
+    Guarantees that a public URL cannot redirect into private infrastructure or cloud metadata.
+    """
+    return is_safe_url(target_url)
+

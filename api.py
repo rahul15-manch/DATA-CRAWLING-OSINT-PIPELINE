@@ -9,7 +9,6 @@ import sqlite3
 import sys
 import threading
 import time
-from contextlib import asynccontextmanager
 from typing import Optional
 
 from fastapi import BackgroundTasks, FastAPI, Query
@@ -27,21 +26,17 @@ if os.path.exists(PILLAR1_PATH) and PILLAR1_PATH not in sys.path:
 DB_PATH = os.path.join(ROOT, "leads.db")
 
 
+from database.connection import setup_database
+from database.repository import LeadRepository
+
 def init_db() -> None:
     """
-    Ensure the `leads` table exists in leads.db at startup.
-
-    This runs once when the module is imported so that GET /api/leads never
-    raises "no such table: leads" on a cold start (i.e. before any pipeline
-    run has called _save_leads_to_db).
-
-    The schema here intentionally matches _save_leads_to_db's INSERT columns.
-    We use CREATE TABLE IF NOT EXISTS so existing data is never touched.
-    Note: flowiz_leads (written by the Pillar-4 SQLiteExporter) lives in the
-    same file but is a completely separate table — we do not touch it here.
+    Ensure the canonical `flowiz_leads` table and legacy `leads` table exist in leads.db.
     """
     conn = sqlite3.connect(DB_PATH)
     try:
+        cursor = conn.cursor()
+        setup_database(cursor)
         conn.execute("""
             CREATE TABLE IF NOT EXISTS leads (
                 id               INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -66,7 +61,12 @@ def init_db() -> None:
                 confidence_score REAL,
                 lead_quality     TEXT,
                 keyword          TEXT,
-                created_at       TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+                created_at       TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                email_candidates TEXT,
+                domain           TEXT,
+                domain_intel     TEXT,
+                lead_score       INTEGER,
+                org_graph        TEXT
             )
         """)
         conn.commit()
@@ -78,36 +78,16 @@ def init_db() -> None:
 init_db()
 
 
-@asynccontextmanager
-async def lifespan(app: FastAPI):
-    """Clean startup and shutdown lifecycle management."""
-    init_db()
-    yield
-    # Clean shutdown of Playwright browser manager and pools
-    try:
-        from pillar1.browser.browser_manager import get_browser_manager
-        bm = get_browser_manager()
-        bm.shutdown()
-    except Exception as exc:
-        print(f"[API Lifespan] Browser manager shutdown notice: {exc}")
-
 
 app = FastAPI(
     title="Lead Discovery & Extraction Dashboard API",
     version="1.0.0",
-    lifespan=lifespan,
 )
 
-# Configure CORS: support comma-separated origins from environment or default to "*"
-raw_cors = os.getenv("CORS_ORIGINS", "*").strip()
-if raw_cors == "*" or not raw_cors:
-    cors_origins = ["*"]
-else:
-    cors_origins = [o.strip() for o in raw_cors.split(",") if o.strip()]
-
+# Enable CORS for local development
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=cors_origins,
+    allow_origins=["*"],
     allow_methods=["*"],
     allow_headers=["*"],
 )
@@ -168,11 +148,9 @@ def _run_pipeline_bg(keyword: str):
         from concurrent.futures import ThreadPoolExecutor, as_completed
         import config
 
-        # ── Per-request deadline — dynamically loaded from config / env ──────
-        max_runtime = float(getattr(config, "MAX_RUNTIME", 120.0))
-        discovery_budget = float(getattr(config, "DISCOVERY_DEADLINE_SECONDS", 55.0))
-        run_deadline = Deadline(max_runtime)
-        discovery_deadline = run_deadline.child(discovery_budget)
+        # ── Per-request deadline — isolated from any concurrent request ──────
+        run_deadline = Deadline(100.0)
+        discovery_deadline = run_deadline.child(40.0)
 
         # Step 2: Company Discovery
         update_stage("DISCOVERING", "Discovering and scoring company candidates...", 40)
@@ -238,31 +216,44 @@ def _run_pipeline_bg(keyword: str):
 
 
 def _save_leads_to_db(leads: list[dict], keyword: str):
-    """Save finalized leads into the `leads` table in leads.db.
-
-    The table is guaranteed to exist because init_db() is called at module
-    import time.  This function only INSERTs — it never creates or alters
-    the schema.
-    """
+    """Save finalized leads into canonical flowiz_leads via LeadRepository and legacy leads table."""
     try:
+        # 1. Authoritative write to flowiz_leads via LeadRepository
+        repo = LeadRepository(DB_PATH)
+        processed_leads = []
+        for l in leads:
+            card = dict(l)
+            if not card.get("keyword"):
+                card["keyword"] = keyword
+            processed_leads.append(card)
+        repo.bulk_upsert_leads(processed_leads)
+
+        # 2. Legacy table write for complete backward compatibility
         conn = sqlite3.connect(DB_PATH)
         cursor = conn.cursor()
 
-        # Ensure email_candidates column exists
-        try:
-            cursor.execute("ALTER TABLE leads ADD COLUMN email_candidates TEXT")
-            conn.commit()
-        except Exception:
-            pass
+        for col_name, col_type in [
+            ("email_candidates", "TEXT"),
+            ("domain", "TEXT"),
+            ("domain_intel", "TEXT"),
+            ("lead_score", "INTEGER"),
+            ("org_graph", "TEXT"),
+        ]:
+            try:
+                cursor.execute(f"ALTER TABLE leads ADD COLUMN {col_name} {col_type}")
+                conn.commit()
+            except Exception:
+                pass
 
-        for l in leads:
+        for l in processed_leads:
             cursor.execute("""
                 INSERT INTO leads (
                     company_name, website, linkedin, industry, location,
                     contact_page, about_page, team_page, emails, email_candidates, phones,
                     social_links, people, company_type, tech_stack, description,
-                    employees, founded, country, confidence_score, lead_quality, keyword
-                ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                    employees, founded, country, confidence_score, lead_quality, keyword,
+                    domain, domain_intel, lead_score, org_graph
+                ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
             """, (
                 l.get("company_name"),
                 l.get("website"),
@@ -285,7 +276,11 @@ def _save_leads_to_db(leads: list[dict], keyword: str):
                 l.get("country"),
                 l.get("confidence_score", 0.0),
                 l.get("lead_quality", "Low"),
-                keyword
+                keyword,
+                l.get("domain"),
+                json.dumps(l.get("domain_intel") or {}),
+                l.get("lead_score"),
+                json.dumps(l.get("org_graph") or {}),
             ))
         conn.commit()
         conn.close()
@@ -299,7 +294,7 @@ def _save_leads_to_db(leads: list[dict], keyword: str):
 # ── API Endpoints ─────────────────────────────────────────────────────────────
 
 @app.post("/api/search")
-def start_search(keyword: str = Query(..., min_length=2), bg_tasks: BackgroundTasks = None):
+def start_search(keyword: str = Query(..., min_length=2, max_length=200), bg_tasks: BackgroundTasks = None):
     """Trigger lead discovery and extraction in the background."""
     with status_lock:
         if pipeline_state["status"] == "running":
@@ -319,38 +314,84 @@ def get_status():
         return state_copy
 
 
+@app.get("/api/leads/all", summary="Bulk Fetch All Leads")
+def get_all_leads():
+    """
+    Bulk dumps all verified leads from canonical storage flowiz_leads.
+    Unified across root API and Pillar 4 API for startup bulk sync.
+    """
+    repo = LeadRepository(DB_PATH)
+    records = repo.get_all_leads()
+    data = [r.to_dict() for r in records]
+    return {"status": "success", "count": len(data), "data": data}
+
+
 @app.get("/api/leads")
-def get_leads(category: Optional[str] = None, keyword: Optional[str] = None):
-    """Fetch lead cards from SQLite leads.db (with JSON fallback)."""
+def get_leads(
+    category: Optional[str] = Query(None, max_length=100),
+    keyword: Optional[str] = Query(None, max_length=200),
+    domain: Optional[str] = Query(None, max_length=253),
+    industry: Optional[str] = Query(None, max_length=100),
+    limit: int = Query(100, ge=1, le=1000),
+    offset: int = Query(0, ge=0),
+):
+    """Fetch lead cards from canonical flowiz_leads via LeadRepository (with legacy fallback)."""
+    # Normalize parameters if invoked directly as Python function with default Query objects
+    category = category if isinstance(category, str) else None
+    keyword = keyword if isinstance(keyword, str) else None
+    domain = domain if isinstance(domain, str) else None
+    industry = industry if isinstance(industry, str) else None
+    limit = limit if isinstance(limit, int) else 100
+    offset = offset if isinstance(offset, int) else 0
+
     leads = []
 
-    # 1. Query SQLite leads.db
+    # 1. Query canonical flowiz_leads via repository
     if os.path.exists(DB_PATH):
+        try:
+            repo = LeadRepository(DB_PATH)
+            if domain:
+                rec = repo.get_lead_by_domain(domain)
+                if rec:
+                    if (not category or (rec.industry or rec.company_type or "").lower() == category.lower()) and \
+                       (not keyword or keyword.lower() in (rec.keyword or "").lower()):
+                        leads = [rec.to_dict()]
+            else:
+                cat_filter = category or industry
+                records = repo.get_leads(category=cat_filter, keyword=keyword, limit=limit, offset=offset)
+                leads = [r.to_dict() for r in records]
+        except Exception as e:
+            print(f"[API DB Read Error] {e}")
+
+    # 2. Fallback to legacy `leads` table if flowiz_leads had no matching rows
+    if not leads and os.path.exists(DB_PATH):
         try:
             conn = sqlite3.connect(DB_PATH)
             conn.row_factory = sqlite3.Row
             query = "SELECT * FROM leads"
             params = []
-
             conditions = []
-            
+
+            if domain:
+                conditions.append("LOWER(domain) = LOWER(?)")
+                params.append(domain)
             if category:
                 conditions.append("(LOWER(industry) = LOWER(?) OR LOWER(company_type) = LOWER(?))")
                 params.extend([category, category])
             if keyword:
                 conditions.append("LOWER(keyword) = LOWER(?)")
                 params.append(keyword)
-                
+
             if conditions:
                 query += " WHERE " + " AND ".join(conditions)
-                
-            query += " ORDER BY id DESC LIMIT 100"
+
+            query += " ORDER BY id DESC LIMIT ? OFFSET ?"
+            params.extend([limit, offset])
             rows = conn.execute(query, params).fetchall()
-            
+
             for r in rows:
                 d = dict(r)
-                # Deserialize JSON fields
-                for jf in ("emails", "email_candidates", "phones", "social_links", "people", "tech_stack"):
+                for jf in ("emails", "email_candidates", "phones", "social_links", "people", "tech_stack", "domain_intel", "org_graph"):
                     if d.get(jf):
                         try:
                             d[jf] = json.loads(d[jf])
@@ -359,9 +400,9 @@ def get_leads(category: Optional[str] = None, keyword: Optional[str] = None):
                 leads.append(d)
             conn.close()
         except Exception as e:
-            print(f"[API DB Read Error] {e}")
+            print(f"[API DB Legacy Read Error] {e}")
 
-    # 2. Fallback to newest JSON output file if SQLite returned nothing
+    # 3. Fallback to newest JSON output file if SQLite returned nothing
     if not leads:
         final_dir = os.path.join(ROOT, "output", "final")
         if os.path.exists(final_dir):
@@ -373,7 +414,7 @@ def get_leads(category: Optional[str] = None, keyword: Optional[str] = None):
                         leads = json.load(f)
                     if category:
                         leads = [
-                            l for l in leads 
+                            l for l in leads
                             if (l.get("industry") or l.get("company_type") or "Unknown").lower() == category.lower()
                         ]
                 except Exception:
@@ -385,27 +426,17 @@ def get_leads(category: Optional[str] = None, keyword: Optional[str] = None):
 @app.get("/api/categories")
 def get_categories():
     """Get category and industry counts for frontend filter tabs."""
-    leads_resp = get_leads()
-    leads = leads_resp.get("leads", [])
-    categories = {}
-    for l in leads:
-        cat = l.get("industry") or l.get("company_type") or "Unknown"
-        if cat and cat != "Unknown":
-            categories[cat] = categories.get(cat, 0) + 1
+    repo = LeadRepository(DB_PATH)
+    categories = repo.get_categories()
+    if not categories:
+        leads_resp = get_leads()
+        leads = leads_resp.get("leads", [])
+        for l in leads:
+            cat = l.get("industry") or l.get("company_type") or "Unknown"
+            if cat and cat != "Unknown":
+                categories[cat] = categories.get(cat, 0) + 1
     return {"categories": categories}
 
-
-@app.get("/health")
-def health_check():
-    """Standard lightweight health check endpoint for AWS ALB, Nginx, or uptime monitors."""
-    with status_lock:
-        current_status = pipeline_state.get("status", "idle")
-    return {
-        "status": "healthy",
-        "service": "pillar1-api",
-        "pipeline_status": current_status,
-        "timestamp": time.time(),
-    }
 
 
 # ── Static File Mount ────────────────────────────────────────────────────────
@@ -415,8 +446,4 @@ if os.path.exists(static_dir):
 
 if __name__ == "__main__":
     import uvicorn
-    host = os.getenv("HOST", "0.0.0.0")
-    port = int(os.getenv("PORT", "8000"))
-    reload_opt = os.getenv("APP_ENV", "development").lower() != "production"
-    uvicorn.run("api:app", host=host, port=port, reload=reload_opt)
-
+    uvicorn.run("api:app", host="127.0.0.1", port=8000, reload=True)

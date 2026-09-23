@@ -1,0 +1,128 @@
+/**
+ * Flowiz Intelligence Platform — Reference-Based Theme & Design Tokens
+ * Target: Light, soft, pastel, futuristic AI aesthetic (flowiz.biz)
+ */
+
+:root {
+  /* Flowiz Reference Color Tokens */
+  --flowiz-primary-purple: #A855F7;
+  --flowiz-primary-purple-dark: #7F3EDB;
+  --flowiz-primary-pink: #FF6BDB;
+  --flowiz-primary-orange: #FFA86B;
+  --flowiz-primary-blue: #60A5FA;
+
+  /* Surfaces & Canvas */
+  --flowiz-bg: #F8FAFF;
+  --flowiz-bg-secondary: #FAF5FF;
+  --flowiz-bg-surface: #FFFFFF;
+  --flowiz-bg-surface-elevated: #FFFFFF;
+  --flowiz-bg-hover: #F1F5F9;
+
+  /* Text Hierarchy */
+  --flowiz-text-primary: #0F172A;
+  --flowiz-text-secondary: #475569;
+  --flowiz-text-muted: #94A3B8;
+
+  /* Borders & Dividers */
+  --flowiz-border: #E2E8F0;
+  --flowiz-border-subtle: #F1F5F9;
+  --flowiz-border-accent: rgba(168, 85, 247, 0.25);
+  --flowiz-border-focus: #A855F7;
+
+  /* Brand Gradients */
+  --flowiz-gradient-primary: linear-gradient(135deg, #A855F7 0%, #FF6BDB 100%);
+  --flowiz-gradient-accent: linear-gradient(135deg, #A855F7 0%, #FFA86B 100%);
+  --flowiz-gradient-text: linear-gradient(90deg, #A855F7 0%, #FF6BDB 50%, #FFA86B 100%);
+  --flowiz-gradient-soft: linear-gradient(135deg, rgba(168, 85, 247, 0.06) 0%, rgba(255, 107, 219, 0.06) 100%);
+  --flowiz-gradient-hero: radial-gradient(circle at 10% 20%, rgba(255, 107, 219, 0.08) 0%, transparent 40%),
+                         radial-gradient(circle at 90% 80%, rgba(168, 85, 247, 0.08) 0%, transparent 40%);
+
+  /* Semantic Status Colors (Pastel) */
+  --flowiz-success: #10B981;
+  --flowiz-success-bg: #ECFDF5;
+  --flowiz-success-border: #A7F3D0;
+  --flowiz-success-text: #065F46;
+
+  --flowiz-warning: #F59E0B;
+  --flowiz-warning-bg: #FFFBEB;
+  --flowiz-warning-border: #FDE68A;
+  --flowiz-warning-text: #92400E;
+
+  --flowiz-danger: #EF4444;
+  --flowiz-danger-bg: #FEF2F2;
+  --flowiz-danger-border: #FECACA;
+  --flowiz-danger-text: #991B1B;
+
+  --flowiz-info: #0284C7;
+  --flowiz-info-bg: #F0F9FF;
+  --flowiz-info-border: #BAE6FD;
+  --flowiz-info-text: #075985;
+
+  --flowiz-purple-badge-bg: #F5F3FF;
+  --flowiz-purple-badge-border: #DDD6FE;
+  --flowiz-purple-badge-text: #6D28D9;
+
+  /* Typography */
+  --font-sans: 'Plus Jakarta Sans', 'Manrope', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+  /* Border Radii */
+  --radius-xs: 6px;
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 22px;
+  --radius-xl: 30px;
+  --radius-pill: 9999px;
+
+  /* Elevation & Shadows */
+  --shadow-xs: 0 1px 3px rgba(0, 0, 0, 0.05);
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 8px 24px -4px rgba(168, 85, 247, 0.08), 0 2px 6px -1px rgba(0, 0, 0, 0.03);
+  --shadow-lg: 0 16px 36px -6px rgba(168, 85, 247, 0.12), 0 4px 12px -2px rgba(0, 0, 0, 0.03);
+  --shadow-hover: 0 20px 40px -8px rgba(168, 85, 247, 0.18), 0 6px 14px -2px rgba(0, 0, 0, 0.04);
+  --shadow-glow: 0 0 20px rgba(168, 85, 247, 0.35);
+
+  /* Transitions */
+  --transition-fast: 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Global Reset & Base */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--flowiz-bg);
+  background-image: var(--flowiz-gradient-hero);
+  background-attachment: fixed;
+  color: var(--flowiz-text-primary);
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Font helpers */
+.font-mono {
+  font-family: var(--font-mono);
+}
+
+.text-gradient {
+  background: var(--flowiz-gradient-text);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-primary { color: var(--flowiz-text-primary); }
+.text-secondary { color: var(--flowiz-text-secondary); }
+.text-muted { color: var(--flowiz-text-muted); }
+.text-accent { color: var(--flowiz-primary-purple); }
+.text-success { color: var(--flowiz-success); }
+.text-warning { color: var(--flowiz-warning); }
+.text-danger { color: var(--flowiz-danger); }
+.text-info { color: var(--flowiz-info); }

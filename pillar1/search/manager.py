@@ -212,7 +212,7 @@ def _classify_query_intent(query: str) -> str:
     # Search operators — strongest signal
     if "site:" in q_lower:
         score += _SCORE_OPERATOR_SITE
-    if any(op in q_lower for op in ("inurl:", "intitle:", "intext:")):
+    if any(op in q_lower for op in ("inurl:", "intitle:", "intext:", "filetype:")):
         score += _SCORE_OPERATOR_OTHER
     # Exact phrase operator
     if '"' in query:

@@ -39,29 +39,8 @@ MAX_DIRECT_QUERIES_BUDGET = int(os.getenv("MAX_DIRECT_QUERIES_BUDGET", "10"))
 # Ordered list of providers to try (env: comma-separated string)
 # Free providers first, paid rescue provider (BrightData) last.
 # BrightData only fires after free engines fail, return zero, or hit rate limits.
-try:
-    from search.registry import DEFAULT_PRIORITY
-except Exception:
-    DEFAULT_PRIORITY = [
-        "brave", "duckduckgo", "bing", "playwright_google",
-        "google_html", "brightdata", "directory_provider",
-        "repository_provider", "linkedin_playwright"
-    ]
-
-_raw_priority = os.getenv("SEARCH_PROVIDER_PRIORITY")
-if _raw_priority:
-    parsed_priority = [p.strip() for p in _raw_priority.split(",") if p.strip()]
-    # Check if this matches the legacy Google-first default from stale .env files
-    if (
-        len(parsed_priority) >= 2
-        and parsed_priority[:2] == ["playwright_google", "google_html"]
-        and os.getenv("FORCE_LEGACY_GOOGLE_FIRST", "false").lower() != "true"
-    ):
-        SEARCH_PROVIDER_PRIORITY: list[str] = list(DEFAULT_PRIORITY)
-    else:
-        SEARCH_PROVIDER_PRIORITY: list[str] = parsed_priority
-else:
-    SEARCH_PROVIDER_PRIORITY: list[str] = list(DEFAULT_PRIORITY)
+_raw_priority   = os.getenv("SEARCH_PROVIDER_PRIORITY", "playwright_google,brave,google_html,duckduckgo,bing,brightdata,linkedin_playwright")
+SEARCH_PROVIDER_PRIORITY: list[str] = [p.strip() for p in _raw_priority.split(",") if p.strip()]
 
 # Playwright Browser Automation Pool Settings
 PLAYWRIGHT_POOL_SIZE = int(os.getenv("PLAYWRIGHT_POOL_SIZE", "3"))
@@ -75,7 +54,6 @@ PLAYWRIGHT_IGNORE_CERTIFICATE_ERRORS = os.getenv("PLAYWRIGHT_IGNORE_CERTIFICATE_
 # proxy_only   → always route through proxy pool (Google needs this)
 # direct_first → try direct IP; on failure (timeout/403/429), retry via proxy
 PROVIDER_CONNECTION_POLICY: dict[str, str] = {
-    "serpapi":             "direct_first",
     "google_html":         "proxy_only",
     "playwright_google":   "proxy_only",
     "linkedin_playwright": "proxy_only",
@@ -92,7 +70,7 @@ GOOGLE_MAX_CONCURRENT = int(os.getenv("GOOGLE_MAX_CONCURRENT", "2"))
 # Provider enable / disable flags
 # ─────────────────────────────────────────────────────────────────────────────
 
-ENABLE_SERPAPI          = os.getenv("ENABLE_SERPAPI", "true").lower() == "true" and bool(os.getenv("SERPAPI_KEY", ""))
+ENABLE_SERPAPI          = os.getenv("ENABLE_SERPAPI",          "true").lower()  == "true"
 ENABLE_GOOGLE_CSE       = os.getenv("ENABLE_GOOGLE_CSE",       "true").lower()  == "true"
 #ENABLE_CUSTOM_PROVIDER  = os.getenv("ENABLE_CUSTOM_PROVIDER",  "false").lower() == "true"
 ENABLE_GOOGLE_HTML      = os.getenv("ENABLE_GOOGLE_HTML",      "false").lower()  == "true"  # experimental
@@ -104,34 +82,6 @@ ENABLE_BING             = os.getenv("ENABLE_BING",             "true").lower()  
 
 # SerpAPI
 SERPAPI_KEY             = os.getenv("SERPAPI_KEY", "")
-
-def is_serpapi_primary_mode() -> bool:
-    """Return True if SerpApi is configured and enabled, making it the primary and only network data source."""
-    key = os.getenv("SERPAPI_KEY") or globals().get("SERPAPI_KEY", "")
-    enabled = str(os.getenv("ENABLE_SERPAPI", globals().get("ENABLE_SERPAPI", True))).lower() in ("true", "1")
-    return bool(key and enabled)
-
-def activate_fallback_mode(reason: str = "") -> None:
-    """Activate fallback mode when SerpApi fails or is unavailable."""
-    global FALLBACK_MODE, SERPAPI_PRIMARY_MODE
-    FALLBACK_MODE = True
-    SERPAPI_PRIMARY_MODE = False
-    print(f"[FALLBACK_MODE] Fallback activated: {reason}")
-    try:
-        from network_client_project.network.proxy_manager import get_proxy_manager
-        pm = get_proxy_manager()
-        pm.activate_fallback_proxies()
-    except Exception:
-        pass
-
-def reset_serpapi_mode() -> None:
-    """Reset to default mode based on SerpApi availability."""
-    global FALLBACK_MODE, SERPAPI_PRIMARY_MODE
-    SERPAPI_PRIMARY_MODE = is_serpapi_primary_mode()
-    FALLBACK_MODE = not SERPAPI_PRIMARY_MODE
-
-SERPAPI_PRIMARY_MODE    = is_serpapi_primary_mode()
-FALLBACK_MODE           = not SERPAPI_PRIMARY_MODE
 
 # Bright Data
 ENABLE_BRIGHTDATA       = os.getenv("ENABLE_BRIGHTDATA",       "true").lower()  == "true"
@@ -296,31 +246,10 @@ PROVIDER_EXECUTION_BUDGETS = {
     "bing": float(os.getenv("BUDGET_BING", "7.0")),
 }
 
-# ─────────────────────────────────────────────────────────────────────────────
-# Server & Environment settings (Production deployment)
-# ─────────────────────────────────────────────────────────────────────────────
-APP_ENV = os.getenv("APP_ENV", "development").strip().lower()
-HOST = os.getenv("HOST", "0.0.0.0").strip()
-PORT = int(os.getenv("PORT", "8000"))
-CORS_ORIGINS = os.getenv("CORS_ORIGINS", "*").strip()
-LOG_LEVEL = os.getenv("LOG_LEVEL", "INFO").strip().upper()
-LOG_DIR = os.getenv("LOG_DIR", "logs").strip()
+# Hunter.io integration toggle (M5: DEFERRED - API credentials unavailable)
+HUNTER_ENABLED = os.getenv("HUNTER_ENABLED", "false").lower() in ("true", "1")
 
-# ─────────────────────────────────────────────────────────────────────────────
-# Auto-create runtime directories if missing (ensures clean start on fresh EC2)
-# ─────────────────────────────────────────────────────────────────────────────
-for _dir in [
-    OUTPUT_FOLDER,
-    RAW_OUTPUT_FOLDER,
-    os.path.join(OUTPUT_FOLDER, "final"),
-    os.path.join(OUTPUT_FOLDER, "clean"),
-    DATA_FOLDER,
-    LOG_DIR,
-    "debug_html",
-    "cookies",
-]:
-    try:
-        os.makedirs(_dir, exist_ok=True)
-    except Exception:
-        pass
+# Max total search tasks budget across all lanes
+MAX_TOTAL_SEARCH_BUDGET = int(os.getenv("MAX_TOTAL_SEARCH_BUDGET", "25"))
+
 

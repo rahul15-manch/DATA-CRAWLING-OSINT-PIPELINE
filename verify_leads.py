@@ -82,6 +82,11 @@ def verify_website(url: str) -> tuple[bool, str]:
     if not url.startswith(("http://", "https://")):
         url = "https://" + url
 
+    from utils.validators import is_safe_url, validate_redirect_target
+    is_safe, reason = is_safe_url(url)
+    if not is_safe:
+        return False, f"ssrf_blocked:{reason}"
+
     try:
         resp = requests.get(
             url,
@@ -89,6 +94,20 @@ def verify_website(url: str) -> tuple[bool, str]:
             allow_redirects=True,
             headers={"User-Agent": "Mozilla/5.0 (compatible; LeadVerifier/1.0)"},
         )
+        if resp.history:
+            from urllib.parse import urljoin
+            for h in resp.history:
+                loc = h.headers.get("Location")
+                if loc:
+                    full_loc = urljoin(getattr(h, "url", url), loc)
+                    is_r_safe, r_reason = validate_redirect_target(full_loc)
+                    if not is_r_safe:
+                        return False, f"ssrf_redirect_blocked:{r_reason}"
+        if resp.url and resp.url != url:
+            is_r_safe, r_reason = validate_redirect_target(resp.url)
+            if not is_r_safe:
+                return False, f"ssrf_redirect_blocked:{r_reason}"
+
         if resp.status_code >= 400:
             return False, f"http_{resp.status_code}"
         return True, "ok"

@@ -25,8 +25,10 @@ python-dotenv>=1.0
 python-whois>=0.9
 tenacity>=8.2
 
-# Scraping helpers
+# Scraping & parsing helpers
 fake-useragent>=1.4
+phonenumbers>=8.13
+psutil>=5.9
 
 # DNS (for email MX verification — Phase 5)
 dnspython>=2.6

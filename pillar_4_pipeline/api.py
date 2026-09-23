@@ -1,64 +1,24 @@
 from fastapi import FastAPI, HTTPException, Query
 from typing import Optional
-import sqlite3
-import json
 import os
+
+from database.repository import LeadRepository, normalize_industry
+from database.connection import get_default_db_path
 
 # Initialize the API
 app = FastAPI(
     title="Flowiz Data Pipeline API",
     description="Internal API for querying and bulk-syncing verified B2B/B2C corporate leads.",
-    version="1.1.1"
+    version="1.2.0"
 )
 
-DB_FILE = 'leads.db'
+DB_FILE = get_default_db_path()
 
 
-def get_db_connection():
+def get_repo() -> LeadRepository:
     if not os.path.exists(DB_FILE):
         raise HTTPException(status_code=500, detail=f"Database {DB_FILE} not found. Run the ETL exporter first.")
-    conn = sqlite3.connect(DB_FILE)
-    conn.row_factory = sqlite3.Row
-    return conn
-
-
-def normalize_industry(value: str) -> str:
-    """FIX: mirrors the ETL's format_industry validator exactly - short
-    codes get uppercased ('ai' -> 'AI'), longer names get title-cased
-    ('fintech' -> 'Fintech'). The old version always did .upper(), so any
-    industry name longer than 3 characters could never be found."""
-    if not value:
-        return value
-    return value.upper() if len(value) <= 3 else value.title()
-
-
-def safe_json_load(value, default):
-    """FIX: some rows have NULL instead of a JSON string (e.g. rows
-    ingested before the ETL's source/JSON-column fixes were applied).
-    Previously a single such row crashed the ENTIRE request, including
-    /api/leads/all - meaning one bad row could take down Team B's whole
-    startup sync. Now it falls back to a safe empty default per-field."""
-    if value is None:
-        return default
-    if isinstance(value, (list, dict)):
-        return value
-    try:
-        return json.loads(value)
-    except (json.JSONDecodeError, TypeError):
-        return default
-
-
-def parse_lead_rows(rows):
-    """Helper function to convert SQLite text arrays back into clean JSON structures"""
-    results = []
-    for row in rows:
-        record = dict(row)
-        record['emails'] = safe_json_load(record.get('emails'), [])
-        record['phones'] = safe_json_load(record.get('phones'), [])
-        record['social_links'] = safe_json_load(record.get('social_links'), {})
-        record['people'] = safe_json_load(record.get('people'), [])
-        results.append(record)
-    return results
+    return LeadRepository(DB_FILE)
 
 
 @app.get("/", summary="API Root")
@@ -81,17 +41,9 @@ def get_all_leads():
     Team B should use this endpoint at startup to sync all data into memory
     to ensure zero-latency lookups during live voice operations.
     """
-    conn = get_db_connection()
-    cursor = conn.cursor()
-
-    cursor.execute("SELECT * FROM flowiz_leads")
-    rows = cursor.fetchall()
-    conn.close()
-
-    if not rows:
-        return {"status": "success", "count": 0, "data": []}
-
-    processed_data = parse_lead_rows(rows)
+    repo = get_repo()
+    records = repo.get_all_leads()
+    processed_data = [r.to_dict() for r in records]
     return {"status": "success", "count": len(processed_data), "data": processed_data}
 
 
@@ -101,25 +53,25 @@ def get_leads(
     industry: Optional[str] = Query(None, description="Filter by industry (e.g., AI)")
 ):
     """Search endpoint for targeted single-record lookups."""
-    conn = get_db_connection()
-    cursor = conn.cursor()
+    repo = get_repo()
+    results = []
 
-    query = "SELECT * FROM flowiz_leads WHERE 1=1"
-    params = []
+    domain_val = domain if isinstance(domain, str) and domain.strip() else None
+    industry_val = industry if isinstance(industry, str) and industry.strip() else None
 
-    if domain:
-        query += " AND domain = ?"
-        params.append(domain)
-    if industry:
-        query += " AND industry = ?"
-        params.append(normalize_industry(industry))
+    if domain_val:
+        rec = repo.get_lead_by_domain(domain_val)
+        if rec:
+            norm_ind = normalize_industry(industry_val) if industry_val else None
+            if not norm_ind or (rec.industry and rec.industry.lower() == norm_ind.lower()):
+                results.append(rec.to_dict())
+    else:
+        norm_ind = normalize_industry(industry_val) if industry_val else None
+        records = repo.get_leads(industry=norm_ind)
+        results = [r.to_dict() for r in records]
 
-    cursor.execute(query, params)
-    rows = cursor.fetchall()
-    conn.close()
 
-    if not rows:
+    if not results:
         raise HTTPException(status_code=404, detail="No leads found matching your criteria.")
 
-    processed_data = parse_lead_rows(rows)
-    return {"status": "success", "count": len(processed_data), "data": processed_data}
+    return {"status": "success", "count": len(results), "data": results}

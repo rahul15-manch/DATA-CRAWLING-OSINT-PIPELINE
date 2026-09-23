@@ -22,7 +22,7 @@ from models.search_task import SearchTask
 
 from query.query_planner import QueryPlanner
 
-def generate_search_tasks(keyword: str):
+def generate_search_tasks(keyword: str, deterministic: bool = False, max_budget: int = None):
     """
     Generate SearchTask objects for a given keyword using Intent Expansion.
 
@@ -30,6 +30,10 @@ def generate_search_tasks(keyword: str):
     ----------
     keyword : str
         Raw user input, e.g. "data engineer", "python", "AI startup", "engineering"
+    deterministic : bool
+        If True, disables stochastic multi-armed bandit exploration for deterministic prioritization.
+    max_budget : int, optional
+        Maximum total queries to yield across all lanes.
 
     Yields
     ------
@@ -37,7 +41,7 @@ def generate_search_tasks(keyword: str):
         Ordered search tasks, highest-priority first.
         Category is always "company" — person discovery is Pillar 2.
     """
-    keyword = keyword.strip()
+    keyword = (keyword or "").strip()
     if not keyword:
         return
 
@@ -45,11 +49,14 @@ def generate_search_tasks(keyword: str):
     tasks = list(planner.plan_queries(keyword))
     
     import random
+    import os
     import config
     
+    is_deterministic = deterministic or os.getenv("DETERMINISTIC_SEARCH_TASKS", "false").lower() in ("true", "1")
+    
     direct_tasks = []   # DIRECT lane: entity identity queries — run first
-    general_tasks = []  # EXPANDED lane, no site: operator
-    dork_tasks = []     # EXPANDED lane, with site: operator
+    general_tasks = []  # EXPANDED lane, no advanced operators
+    dork_tasks = []     # EXPANDED lane, with site:, inurl:, intitle:, filetype:
     
     for idx, t in enumerate(tasks):
         # DIRECT lane tasks bypass MAB weighting — identity-critical order
@@ -57,13 +64,14 @@ def generate_search_tasks(keyword: str):
             direct_tasks.append((10.0, idx, t))
             continue
             
-        if random.random() < 0.15:
+        if not is_deterministic and random.random() < 0.15:
             weight = 1.0 + (1.0 / (idx + 1.0))
         else:
             weight = rank_query_candidate(t.query)
             
-        # Group expanded tasks based on whether they contain 'site:'
-        if "site:" in t.query.lower():
+        # Group expanded tasks based on whether they contain advanced operators
+        has_operator = any(op in t.query.lower() for op in ("site:", "inurl:", "intitle:", "filetype:"))
+        if has_operator:
             dork_tasks.append((weight, idx, t))
         else:
             general_tasks.append((weight, idx, t))
@@ -72,20 +80,35 @@ def generate_search_tasks(keyword: str):
     general_tasks.sort(key=lambda x: (-x[0], x[1]))
     dork_tasks.sort(key=lambda x: (-x[0], x[1]))
     
-    # DIRECT tasks get priority ordering but are capped by their own count budget
-    # (not the shared expanded budget).  The global time deadline in the scheduler
-    # loop is the universal safety valve — these caps are count-only guards.
     direct_budget = getattr(config, "MAX_DIRECT_QUERIES_BUDGET", 10)
     expanded_budget = getattr(config, "MAX_QUERIES_BUDGET", 20)
+    total_budget = max_budget if max_budget is not None else getattr(config, "MAX_TOTAL_SEARCH_BUDGET", 25)
+    
     combined_expanded = general_tasks + dork_tasks
+    yielded_seen = set()
+    yielded_count = 0
 
-    # Yield DIRECT tasks first (bounded by direct_budget)
+    # Yield DIRECT tasks first (bounded by direct_budget & total_budget)
     for _, _, task in direct_tasks[:direct_budget]:
+        q_norm = task.query.lower().strip()
+        if q_norm in yielded_seen:
+            continue
+        yielded_seen.add(q_norm)
         yield task
+        yielded_count += 1
+        if yielded_count >= total_budget:
+            return
         
-    # Yield EXPANDED tasks up to expanded_budget
+    # Yield EXPANDED tasks up to expanded_budget & total_budget
     for _, _, task in combined_expanded[:expanded_budget]:
+        q_norm = task.query.lower().strip()
+        if q_norm in yielded_seen:
+            continue
+        yielded_seen.add(q_norm)
         yield task
+        yielded_count += 1
+        if yielded_count >= total_budget:
+            return
 
 
 

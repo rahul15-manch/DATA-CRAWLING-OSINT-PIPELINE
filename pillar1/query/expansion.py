@@ -140,7 +140,7 @@ def get_query_base_weight(query: str) -> float:
     weights = getattr(config, "QUERY_EXPANSION_WEIGHTS", {}) or {}
     q_lower = query.lower()
 
-    if "site:" in q_lower:
+    if any(op in q_lower for op in ("site:", "inurl:", "intitle:", "filetype:")):
         return float(weights.get("source_specific", 0.65))
     if q_lower.startswith('"'):
         return float(weights.get("quoted", 0.95))
