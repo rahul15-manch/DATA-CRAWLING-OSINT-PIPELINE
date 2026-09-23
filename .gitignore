@@ -1,20 +1,45 @@
 .env
+.env.*
+!.env.example
+
+# Virtual Environments
+.venv/
+venv/
+ENV/
+env/
+
+# Tests
+tests/
+**/tests/
+test_*.py
+*_test.py
+
 # Pycache & Python temp files
+__pycache__/
 **/__pycache__/
-*.pyc
+*.py[cod]
+*$py.class
+.pytest_cache/
+*.pytest_cache/
+.cache/
+
+# Databases
+*.db
+*.sqlite
+*.sqlite3
+leads.db
 
 # Logs and Debug files
+logs/
 debug_html/
+*.log
 
-# Runtime-generated data files
+# Runtime-generated data files & caches
 output/
 data/*.json
 cookies/google.com/session_cookies.json
 cleaned_data.json
 proxy_state.json
 search_cache.json
-
 data/rejection_stats.json
-
-# Output JSONs and reports
-output/
+*cache*.json
